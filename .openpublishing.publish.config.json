@@ -7,7 +7,7 @@
       "locale": "en-us",
       "monikers": [
         "msteams-sdk-python-latest"
-		],
+      ],
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content"
@@ -20,7 +20,8 @@
       "customized_tasks": {
         "docset_prebuild": [
           "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
-        ],
+        ]
+      },
       "dependent_packages": [
         {
           "id": "Microsoft.OpenPublishing.CommonPlugins",
