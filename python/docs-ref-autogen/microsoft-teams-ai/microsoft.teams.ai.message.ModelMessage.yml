@@ -1,0 +1,36 @@
+### YamlMime:PythonClass
+uid: microsoft.teams.ai.message.ModelMessage
+name: ModelMessage
+fullName: microsoft.teams.ai.message.ModelMessage
+module: microsoft.teams.ai.message
+summary: 'Represents a response from an AI model.
+
+
+  Can contain either text content, function calls to be executed,
+
+  or both. When function_calls is present, the content may be None.'
+constructor:
+  syntax: 'ModelMessage(content: str | None, function_calls: list[microsoft.teams.ai.function.FunctionCall]
+    | None, id: str | None = None, role: Literal[''model''] = ''model'')'
+  parameters:
+  - name: content
+    isRequired: true
+  - name: function_calls
+    isRequired: true
+  - name: id
+    defaultValue: None
+  - name: role
+    defaultValue: model
+attributes:
+- uid: microsoft.teams.ai.message.ModelMessage.content
+  name: content
+  signature: 'content: str | None'
+- uid: microsoft.teams.ai.message.ModelMessage.function_calls
+  name: function_calls
+  signature: 'function_calls: list[microsoft.teams.ai.function.FunctionCall] | None'
+- uid: microsoft.teams.ai.message.ModelMessage.id
+  name: id
+  signature: 'id: str | None = None'
+- uid: microsoft.teams.ai.message.ModelMessage.role
+  name: role
+  signature: 'role: Literal[''model''] = ''model'''

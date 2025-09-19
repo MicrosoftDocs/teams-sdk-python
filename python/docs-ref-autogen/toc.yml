@@ -1,4 +1,160 @@
-- name: Sample
-  items:
-    - uid: azure.batch.BatchServiceClient
-      name: azure.batch.BatchServiceClient
+- items:
+  - name: Overview
+    uid: microsoft.teams.ai
+  - items:
+    - name: Overview
+      uid: microsoft.teams.ai.agent
+    - name: Agent
+      no-loc:
+      - Agent
+      uid: microsoft.teams.ai.agent.Agent
+    name: agent
+    no-loc:
+    - agent
+  - items:
+    - name: Overview
+      uid: microsoft.teams.ai.ai_model
+    - name: AIModel
+      no-loc:
+      - AIModel
+      uid: microsoft.teams.ai.ai_model.AIModel
+    name: ai_model
+    no-loc:
+    - ai_model
+  - items:
+    - name: Overview
+      uid: microsoft.teams.ai.chat_prompt
+    - name: ChatPrompt
+      no-loc:
+      - ChatPrompt
+      uid: microsoft.teams.ai.chat_prompt.ChatPrompt
+    - name: ChatSendResult
+      no-loc:
+      - ChatSendResult
+      uid: microsoft.teams.ai.chat_prompt.ChatSendResult
+    name: chat_prompt
+    no-loc:
+    - chat_prompt
+  - items:
+    - name: Overview
+      uid: microsoft.teams.ai.function
+    - name: Function
+      no-loc:
+      - Function
+      uid: microsoft.teams.ai.function.Function
+    - name: FunctionCall
+      no-loc:
+      - FunctionCall
+      uid: microsoft.teams.ai.function.FunctionCall
+    - name: FunctionHandler
+      no-loc:
+      - FunctionHandler
+      uid: microsoft.teams.ai.function.FunctionHandler
+    - name: Params
+      no-loc:
+      - Params
+      uid: microsoft.teams.ai.function.Params
+    name: function
+    no-loc:
+    - function
+  - items:
+    - name: Overview
+      uid: microsoft.teams.ai.memory
+    - name: ListMemory
+      no-loc:
+      - ListMemory
+      uid: microsoft.teams.ai.memory.ListMemory
+    - name: Memory
+      no-loc:
+      - Memory
+      uid: microsoft.teams.ai.memory.Memory
+    name: memory
+    no-loc:
+    - memory
+  - items:
+    - name: Overview
+      uid: microsoft.teams.ai.message
+    - name: FunctionMessage
+      no-loc:
+      - FunctionMessage
+      uid: microsoft.teams.ai.message.FunctionMessage
+    - name: ModelMessage
+      no-loc:
+      - ModelMessage
+      uid: microsoft.teams.ai.message.ModelMessage
+    - name: SystemMessage
+      no-loc:
+      - SystemMessage
+      uid: microsoft.teams.ai.message.SystemMessage
+    - name: UserMessage
+      no-loc:
+      - UserMessage
+      uid: microsoft.teams.ai.message.UserMessage
+    name: message
+    no-loc:
+    - message
+  - items:
+    - name: Overview
+      uid: microsoft.teams.ai.plugin
+    - name: AIPluginProtocol
+      no-loc:
+      - AIPluginProtocol
+      uid: microsoft.teams.ai.plugin.AIPluginProtocol
+    - name: BaseAIPlugin
+      no-loc:
+      - BaseAIPlugin
+      uid: microsoft.teams.ai.plugin.BaseAIPlugin
+    name: plugin
+    no-loc:
+    - plugin
+  - name: AIModel
+    no-loc:
+    - AIModel
+    uid: microsoft.teams.ai.AIModel
+  - name: Agent
+    no-loc:
+    - Agent
+    uid: microsoft.teams.ai.Agent
+  - name: ChatPrompt
+    no-loc:
+    - ChatPrompt
+    uid: microsoft.teams.ai.ChatPrompt
+  - name: ChatSendResult
+    no-loc:
+    - ChatSendResult
+    uid: microsoft.teams.ai.ChatSendResult
+  - name: Function
+    no-loc:
+    - Function
+    uid: microsoft.teams.ai.Function
+  - name: FunctionCall
+    no-loc:
+    - FunctionCall
+    uid: microsoft.teams.ai.FunctionCall
+  - name: FunctionMessage
+    no-loc:
+    - FunctionMessage
+    uid: microsoft.teams.ai.FunctionMessage
+  - name: ListMemory
+    no-loc:
+    - ListMemory
+    uid: microsoft.teams.ai.ListMemory
+  - name: Memory
+    no-loc:
+    - Memory
+    uid: microsoft.teams.ai.Memory
+  - name: ModelMessage
+    no-loc:
+    - ModelMessage
+    uid: microsoft.teams.ai.ModelMessage
+  - name: SystemMessage
+    no-loc:
+    - SystemMessage
+    uid: microsoft.teams.ai.SystemMessage
+  - name: UserMessage
+    no-loc:
+    - UserMessage
+    uid: microsoft.teams.ai.UserMessage
+  name: microsoft.teams.ai
+  no-loc:
+  - microsoft.teams.ai

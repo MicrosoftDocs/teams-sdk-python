@@ -1,0 +1,30 @@
+### YamlMime:PythonClass
+uid: microsoft.teams.ai.function.FunctionCall
+name: FunctionCall
+fullName: microsoft.teams.ai.function.FunctionCall
+module: microsoft.teams.ai.function
+summary: 'Represents a function call request from an AI model.
+
+
+  Contains the function name, unique call ID, and parsed arguments
+
+  that will be passed to the function handler.'
+constructor:
+  syntax: 'FunctionCall(id: str, name: str, arguments: dict[str, Any])'
+  parameters:
+  - name: id
+    isRequired: true
+  - name: name
+    isRequired: true
+  - name: arguments
+    isRequired: true
+attributes:
+- uid: microsoft.teams.ai.function.FunctionCall.arguments
+  name: arguments
+  signature: 'arguments: dict[str, Any]'
+- uid: microsoft.teams.ai.function.FunctionCall.id
+  name: id
+  signature: 'id: str'
+- uid: microsoft.teams.ai.function.FunctionCall.name
+  name: name
+  signature: 'name: str'

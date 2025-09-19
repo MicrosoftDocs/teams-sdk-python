@@ -1,0 +1,83 @@
+### YamlMime:PythonClass
+uid: microsoft.teams.ai.ChatPrompt
+name: ChatPrompt
+fullName: microsoft.teams.ai.ChatPrompt
+module: microsoft.teams.ai
+summary: 'Core class for interacting with AI models through a prompt-based interface.
+
+
+  Handles message processing, function calling, and plugin execution.
+
+  Provides a flexible framework for building AI-powered applications.
+
+
+  Initialize ChatPrompt with model and optional functions/plugins.'
+constructor:
+  syntax: 'ChatPrompt(model: AIModel, *, functions: list[microsoft.teams.ai.function.Function[Any]]
+    | None = None, plugins: list[microsoft.teams.ai.plugin.AIPluginProtocol] | None
+    = None)'
+  parameters:
+  - name: model
+    description: AI model implementation for text generation
+    isRequired: true
+  - name: functions
+    description: Optional list of functions the model can call
+    isRequired: true
+  - name: plugins
+    description: Optional list of plugins for extending functionality
+    isRequired: true
+  keywordOnlyParameters:
+  - name: functions
+    defaultValue: None
+  - name: plugins
+    defaultValue: None
+methods:
+- uid: microsoft.teams.ai.ChatPrompt.send
+  name: send
+  summary: Send a message to the AI model and get a response.
+  signature: 'async send(input: str | UserMessage | ModelMessage | SystemMessage |
+    FunctionMessage, *, memory: Memory | None = None, on_chunk: Callable[[str], Awaitable[None]]
+    | Callable[[str], None] | None = None, instructions: str | SystemMessage | None
+    = None) -> ChatSendResult'
+  parameters:
+  - name: input
+    description: Message to send (string will be converted to UserMessage)
+    isRequired: true
+  - name: memory
+    description: Optional memory for conversation context
+    isRequired: true
+  - name: on_chunk
+    description: Optional callback for streaming response chunks
+    isRequired: true
+  - name: instructions
+    description: Optional system message to guide model behavior
+    isRequired: true
+  keywordOnlyParameters:
+  - name: memory
+    defaultValue: None
+  - name: on_chunk
+    defaultValue: None
+  - name: instructions
+    defaultValue: None
+  return:
+    description: ChatSendResult containing the final model response
+- uid: microsoft.teams.ai.ChatPrompt.with_function
+  name: with_function
+  summary: Add a function to the available functions for this prompt.
+  signature: 'with_function(function: Function[T]) -> Self'
+  parameters:
+  - name: function
+    description: Function to add to the available functions
+    isRequired: true
+  return:
+    description: Self for method chaining
+- uid: microsoft.teams.ai.ChatPrompt.with_plugin
+  name: with_plugin
+  summary: Add a plugin to the chat prompt.
+  signature: 'with_plugin(plugin: AIPluginProtocol) -> Self'
+  parameters:
+  - name: plugin
+    description: Plugin to add for extending functionality
+    isRequired: true
+  return:
+    description: Self for method chaining

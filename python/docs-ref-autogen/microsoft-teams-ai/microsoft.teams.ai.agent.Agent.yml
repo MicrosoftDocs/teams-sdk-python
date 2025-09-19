@@ -1,0 +1,81 @@
+### YamlMime:PythonClass
+uid: microsoft.teams.ai.agent.Agent
+name: Agent
+fullName: microsoft.teams.ai.agent.Agent
+module: microsoft.teams.ai.agent
+summary: 'A stateful implementation of ChatPrompt with persistent memory.
+
+
+  Agent extends ChatPrompt by providing default memory management,
+
+  making it easier to maintain conversation context across multiple
+
+  interactions without manually passing memory each time.
+
+
+  Initialize Agent with model and persistent memory.'
+constructor:
+  syntax: 'Agent(model: AIModel, *, memory: Memory | None = None, functions: list[microsoft.teams.ai.function.Function[Any]]
+    | None = None, plugins: list[microsoft.teams.ai.plugin.AIPluginProtocol] | None
+    = None)'
+  parameters:
+  - name: model
+    description: AI model implementation for text generation
+    isRequired: true
+  - name: memory
+    description: Memory for conversation persistence. Defaults to InMemory ListMemory
+    isRequired: true
+  - name: functions
+    description: Optional list of functions the model can call
+    isRequired: true
+  - name: plugins
+    description: Optional list of plugins for extending functionality
+    isRequired: true
+  keywordOnlyParameters:
+  - name: memory
+    defaultValue: None
+  - name: functions
+    defaultValue: None
+  - name: plugins
+    defaultValue: None
+methods:
+- uid: microsoft.teams.ai.agent.Agent.send
+  name: send
+  summary: 'Send a message using the agent''s persistent memory.
+
+
+    > [!NOTE]
+
+    > If no memory is provided, uses the agent''s default memory,
+
+    >
+
+    > making conversation state persistent across calls.
+
+    >'
+  signature: 'async send(input: str | UserMessage | ModelMessage | SystemMessage |
+    FunctionMessage, *, instructions: str | SystemMessage | None = None, memory: Memory
+    | None = None, on_chunk: Callable[[str], Awaitable[None]] | Callable[[str], None]
+    | None = None) -> ChatSendResult'
+  parameters:
+  - name: input
+    description: Message to send (string will be converted to UserMessage)
+    isRequired: true
+  - name: instructions
+    description: Optional system message to guide model behavior
+    isRequired: true
+  - name: memory
+    description: Optional memory override. Defaults to agent's persistent memory
+    isRequired: true
+  - name: on_chunk
+    description: Optional callback for streaming response chunks
+    isRequired: true
+  keywordOnlyParameters:
+  - name: instructions
+    defaultValue: None
+  - name: memory
+    defaultValue: None
+  - name: on_chunk
+    defaultValue: None
+  return:
+    description: ChatSendResult containing the final model response
