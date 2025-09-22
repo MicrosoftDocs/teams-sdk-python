@@ -1,0 +1,25 @@
+### YamlMime:PythonClass
+uid: microsoft.teams.ai.message.SystemMessage
+name: SystemMessage
+fullName: microsoft.teams.ai.message.SystemMessage
+module: microsoft.teams.ai.message
+summary: 'Represents system instructions or context for the AI model.
+
+
+  Used to guide model behavior, provide context, or set up the
+
+  conversation parameters without being part of the user dialogue.'
+constructor:
+  syntax: 'SystemMessage(content: str, role: Literal[''system''] = ''system'')'
+  parameters:
+  - name: content
+    isRequired: true
+  - name: role
+    defaultValue: system
+attributes:
+- uid: microsoft.teams.ai.message.SystemMessage.content
+  name: content
+  signature: 'content: str'
+- uid: microsoft.teams.ai.message.SystemMessage.role
+  name: role
+  signature: 'role: Literal[''system''] = ''system'''

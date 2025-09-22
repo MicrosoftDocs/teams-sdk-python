@@ -1,0 +1,45 @@
+### YamlMime:PythonClass
+uid: microsoft.teams.ai.memory.ListMemory
+name: ListMemory
+fullName: microsoft.teams.ai.memory.ListMemory
+module: microsoft.teams.ai.memory
+summary: 'Default implementation of Memory using list-based storage.
+
+
+  Provides in-memory storage for conversation messages with optional
+
+  persistent storage backend support.
+
+
+  Initialize list-based memory.'
+constructor:
+  syntax: 'ListMemory(storage: ListStorage[UserMessage | ModelMessage | SystemMessage
+    | FunctionMessage] | None = None)'
+  parameters:
+  - name: storage
+    description: Optional storage backend. Defaults to in-memory ListLocalStorage
+    defaultValue: None
+methods:
+- uid: microsoft.teams.ai.memory.ListMemory.get_all
+  name: get_all
+  summary: Retrieve all messages from the storage backend.
+  signature: async get_all() -> list[Union[microsoft.teams.ai.message.UserMessage,
+    microsoft.teams.ai.message.ModelMessage, microsoft.teams.ai.message.SystemMessage,
+    microsoft.teams.ai.message.FunctionMessage]]
+- uid: microsoft.teams.ai.memory.ListMemory.push
+  name: push
+  summary: Add a message to the storage backend.
+  signature: 'async push(message: UserMessage | ModelMessage | SystemMessage | FunctionMessage)
+    -> None'
+  parameters:
+  - name: message
+    isRequired: true
+- uid: microsoft.teams.ai.memory.ListMemory.set_all
+  name: set_all
+  summary: Replace all messages in the storage backend.
+  signature: 'async set_all(messages: list[Union[microsoft.teams.ai.message.UserMessage,
+    microsoft.teams.ai.message.ModelMessage, microsoft.teams.ai.message.SystemMessage,
+    microsoft.teams.ai.message.FunctionMessage]]) -> None'
+  parameters:
+  - name: messages
+    isRequired: true

@@ -1,0 +1,25 @@
+### YamlMime:PythonClass
+uid: microsoft.teams.ai.message.UserMessage
+name: UserMessage
+fullName: microsoft.teams.ai.message.UserMessage
+module: microsoft.teams.ai.message
+summary: 'Represents a message from a user in the conversation.
+
+
+  Contains the user''s input text and is typically used as the starting
+
+  point for AI model interactions.'
+constructor:
+  syntax: 'UserMessage(content: str, role: Literal[''user''] = ''user'')'
+  parameters:
+  - name: content
+    isRequired: true
+  - name: role
+    defaultValue: user
+attributes:
+- uid: microsoft.teams.ai.message.UserMessage.content
+  name: content
+  signature: 'content: str'
+- uid: microsoft.teams.ai.message.UserMessage.role
+  name: role
+  signature: 'role: Literal[''user''] = ''user'''

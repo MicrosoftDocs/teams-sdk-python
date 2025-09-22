@@ -1,0 +1,10 @@
+### YamlMime:PythonModule
+uid: microsoft.teams.ai.memory
+name: memory
+fullName: microsoft.teams.ai.memory
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft.teams.ai.memory.ListMemory
+- microsoft.teams.ai.memory.Memory

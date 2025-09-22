@@ -1,0 +1,13 @@
+### YamlMime:PythonClass
+uid: microsoft.teams.ai.function.FunctionHandler
+name: FunctionHandler
+fullName: microsoft.teams.ai.function.FunctionHandler
+module: microsoft.teams.ai.function
+summary: 'Protocol for function handlers that can be called by AI models.
+
+
+  Function handlers can be either synchronous or asynchronous and should
+
+  return a string result that will be passed back to the AI model.'
+constructor:
+  syntax: FunctionHandler(*args, **kwargs)

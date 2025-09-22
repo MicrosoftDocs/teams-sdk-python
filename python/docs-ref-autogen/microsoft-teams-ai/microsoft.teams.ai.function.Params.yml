@@ -1,0 +1,16 @@
+### YamlMime:PythonClass
+uid: microsoft.teams.ai.function.Params
+name: Params
+fullName: microsoft.teams.ai.function.Params
+module: microsoft.teams.ai.function
+summary: 'Type variable for function parameter schemas.
+
+
+  Must be bound to BaseModel to ensure proper validation and serialization.
+
+  Contravariant to allow handlers to accept more general parameter types.
+
+
+  alias of TypeVar(''Params'', bound=<xref:pydantic.main.BaseModel>, contravariant=True)'
+constructor:
+  syntax: Params()

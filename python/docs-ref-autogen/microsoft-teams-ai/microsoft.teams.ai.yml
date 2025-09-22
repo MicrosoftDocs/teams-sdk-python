@@ -1,0 +1,29 @@
+### YamlMime:PythonPackage
+uid: microsoft.teams.ai
+name: ai
+fullName: microsoft.teams.ai
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: rootImport
+classes:
+- microsoft.teams.ai.AIModel
+- microsoft.teams.ai.Agent
+- microsoft.teams.ai.ChatPrompt
+- microsoft.teams.ai.ChatSendResult
+- microsoft.teams.ai.Function
+- microsoft.teams.ai.FunctionCall
+- microsoft.teams.ai.FunctionMessage
+- microsoft.teams.ai.ListMemory
+- microsoft.teams.ai.Memory
+- microsoft.teams.ai.ModelMessage
+- microsoft.teams.ai.SystemMessage
+- microsoft.teams.ai.UserMessage
+modules:
+- microsoft.teams.ai.agent
+- microsoft.teams.ai.ai_model
+- microsoft.teams.ai.chat_prompt
+- microsoft.teams.ai.function
+- microsoft.teams.ai.memory
+- microsoft.teams.ai.message
+- microsoft.teams.ai.plugin

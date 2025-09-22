@@ -1,0 +1,20 @@
+### YamlMime:PythonClass
+uid: microsoft.teams.ai.chat_prompt.ChatSendResult
+name: ChatSendResult
+fullName: microsoft.teams.ai.chat_prompt.ChatSendResult
+module: microsoft.teams.ai.chat_prompt
+summary: 'Result of sending a message through ChatPrompt.
+
+
+  Contains the final response from the AI model after all function
+
+  calls and plugin processing have been completed.'
+constructor:
+  syntax: 'ChatSendResult(response: ModelMessage)'
+  parameters:
+  - name: response
+    isRequired: true
+attributes:
+- uid: microsoft.teams.ai.chat_prompt.ChatSendResult.response
+  name: response
+  signature: 'response: ModelMessage'
