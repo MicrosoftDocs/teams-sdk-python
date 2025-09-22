@@ -1,0 +1,10 @@
+### YamlMime:PythonModule
+uid: microsoft.teams.ai.chat_prompt
+name: chat_prompt
+fullName: microsoft.teams.ai.chat_prompt
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft.teams.ai.chat_prompt.ChatPrompt
+- microsoft.teams.ai.chat_prompt.ChatSendResult

@@ -1,0 +1,26 @@
+### YamlMime:PythonModule
+uid: microsoft.teams.ai.message
+name: message
+fullName: microsoft.teams.ai.message
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft.teams.ai.message.FunctionMessage
+- microsoft.teams.ai.message.ModelMessage
+- microsoft.teams.ai.message.SystemMessage
+- microsoft.teams.ai.message.UserMessage
+data:
+- uid: microsoft.teams.ai.message.Message
+  name: Message
+  summary: 'Union type representing any message in a conversation.
+
+
+    Can be a user input, model response, system instruction, or function result.
+
+    Used throughout the AI framework for type-safe message handling.
+
+
+    alias of <xref:typing.Union>[<xref:microsoft.teams.ai.message.UserMessage>, <xref:microsoft.teams.ai.message.ModelMessage>,
+    <xref:microsoft.teams.ai.message.SystemMessage>, <xref:microsoft.teams.ai.message.FunctionMessage>]'
+  signature: Message

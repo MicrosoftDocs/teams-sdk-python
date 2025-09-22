@@ -1,0 +1,66 @@
+### YamlMime:PythonClass
+uid: microsoft.teams.ai.ai_model.AIModel
+name: AIModel
+fullName: microsoft.teams.ai.ai_model.AIModel
+module: microsoft.teams.ai.ai_model
+summary: 'Protocol defining the interface for AI models that can generate text responses.
+
+
+  This protocol standardizes how different AI providers (OpenAI, Azure OpenAI, etc.)
+
+  integrate with the Teams AI framework. Implementations should handle message
+
+  processing, function calling, and optional streaming.'
+constructor:
+  syntax: AIModel(*args, **kwargs)
+methods:
+- uid: microsoft.teams.ai.ai_model.AIModel.generate_text
+  name: generate_text
+  summary: 'Generate a text response from the AI model.
+
+
+    > [!NOTE]
+
+    > Implementations should handle function calling recursively - if the returned
+
+    >
+
+    > ModelMessage contains function_calls, they should be executed and the results
+
+    >
+
+    > fed back into the model for a final response.
+
+    >'
+  signature: 'async generate_text(input: UserMessage | ModelMessage | SystemMessage
+    | FunctionMessage, *, system: SystemMessage | None = None, memory: Memory | None
+    = None, functions: dict[str, microsoft.teams.ai.function.Function[pydantic.main.BaseModel]]
+    | None = None, on_chunk: Callable[[str], Awaitable[None]] | None = None) -> ModelMessage'
+  parameters:
+  - name: input
+    description: The input message to process (user, model, function, or system message)
+    isRequired: true
+  - name: system
+    description: Optional system message to guide model behavior
+    isRequired: true
+  - name: memory
+    description: Optional memory storage for conversation history
+    isRequired: true
+  - name: functions
+    description: Optional dictionary of available functions the model can call
+    isRequired: true
+  - name: on_chunk
+    description: Optional callback for streaming text chunks as they arrive
+    isRequired: true
+  keywordOnlyParameters:
+  - name: system
+    defaultValue: None
+  - name: memory
+    defaultValue: None
+  - name: functions
+    defaultValue: None
+  - name: on_chunk
+    defaultValue: None
+  return:
+    description: ModelMessage containing the generated response, potentially with
+      function calls

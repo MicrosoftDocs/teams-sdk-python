@@ -1,0 +1,83 @@
+### YamlMime:PythonClass
+uid: microsoft.teams.ai.plugin.BaseAIPlugin
+name: BaseAIPlugin
+fullName: microsoft.teams.ai.plugin.BaseAIPlugin
+module: microsoft.teams.ai.plugin
+summary: 'Base implementation of AIPlugin with no-op methods.
+
+
+  Provides default implementations for all plugin hooks that return
+
+  the original values unchanged. Extend this class and override only
+
+  the hooks you need to customize.
+
+
+  Initialize base plugin with a name.'
+constructor:
+  syntax: 'BaseAIPlugin(name: str)'
+  parameters:
+  - name: name
+    description: Unique identifier for this plugin
+    isRequired: true
+methods:
+- uid: microsoft.teams.ai.plugin.BaseAIPlugin.on_after_function_call
+  name: on_after_function_call
+  summary: Called after a function is executed.
+  signature: 'async on_after_function_call(function_name: str, args: BaseModel, result:
+    str) -> str | None'
+  parameters:
+  - name: function_name
+    isRequired: true
+  - name: args
+    isRequired: true
+  - name: result
+    isRequired: true
+- uid: microsoft.teams.ai.plugin.BaseAIPlugin.on_after_send
+  name: on_after_send
+  summary: Modify response after receiving from model.
+  signature: 'async on_after_send(response: ModelMessage) -> ModelMessage | None'
+  parameters:
+  - name: response
+    isRequired: true
+- uid: microsoft.teams.ai.plugin.BaseAIPlugin.on_before_function_call
+  name: on_before_function_call
+  summary: Called before a function is executed.
+  signature: 'async on_before_function_call(function_name: str, args: BaseModel) ->
+    None'
+  parameters:
+  - name: function_name
+    isRequired: true
+  - name: args
+    isRequired: true
+- uid: microsoft.teams.ai.plugin.BaseAIPlugin.on_before_send
+  name: on_before_send
+  summary: Modify input before sending to model.
+  signature: 'async on_before_send(input: UserMessage | ModelMessage | SystemMessage
+    | FunctionMessage) -> UserMessage | ModelMessage | SystemMessage | FunctionMessage
+    | None'
+  parameters:
+  - name: input
+    isRequired: true
+- uid: microsoft.teams.ai.plugin.BaseAIPlugin.on_build_functions
+  name: on_build_functions
+  summary: Modify the functions array passed to the model.
+  signature: 'async on_build_functions(functions: list[microsoft.teams.ai.function.Function[pydantic.main.BaseModel]])
+    -> list[microsoft.teams.ai.function.Function[pydantic.main.BaseModel]] | None'
+  parameters:
+  - name: functions
+    isRequired: true
+- uid: microsoft.teams.ai.plugin.BaseAIPlugin.on_build_instructions
+  name: on_build_instructions
+  summary: Modify the system message before sending to model.
+  signature: 'async on_build_instructions(instructions: SystemMessage | None) -> SystemMessage
+    | None'
+  parameters:
+  - name: instructions
+    isRequired: true
+attributes:
+- uid: microsoft.teams.ai.plugin.BaseAIPlugin.name
+  name: name
+  summary: Unique name of the plugin.
+  return:
+    description: String identifier for this plugin

@@ -1,0 +1,10 @@
+### YamlMime:PythonModule
+uid: microsoft.teams.ai.plugin
+name: plugin
+fullName: microsoft.teams.ai.plugin
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft.teams.ai.plugin.AIPluginProtocol
+- microsoft.teams.ai.plugin.BaseAIPlugin

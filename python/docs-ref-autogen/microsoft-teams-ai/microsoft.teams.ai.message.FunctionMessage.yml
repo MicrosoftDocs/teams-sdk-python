@@ -1,0 +1,31 @@
+### YamlMime:PythonClass
+uid: microsoft.teams.ai.message.FunctionMessage
+name: FunctionMessage
+fullName: microsoft.teams.ai.message.FunctionMessage
+module: microsoft.teams.ai.message
+summary: 'Represents the result of a function call execution.
+
+
+  Contains the output from executing a function that was requested
+
+  by the AI model, along with the function call ID for correlation.'
+constructor:
+  syntax: 'FunctionMessage(content: str | None, function_id: str, role: Literal[''function'']
+    = ''function'')'
+  parameters:
+  - name: content
+    isRequired: true
+  - name: function_id
+    isRequired: true
+  - name: role
+    defaultValue: function
+attributes:
+- uid: microsoft.teams.ai.message.FunctionMessage.content
+  name: content
+  signature: 'content: str | None'
+- uid: microsoft.teams.ai.message.FunctionMessage.function_id
+  name: function_id
+  signature: 'function_id: str'
+- uid: microsoft.teams.ai.message.FunctionMessage.role
+  name: role
+  signature: 'role: Literal[''function''] = ''function'''

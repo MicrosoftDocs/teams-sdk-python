@@ -4,10 +4,28 @@
     "content": [
       {
         "files": [
+          "**/toc.yml",
+          "**/toc.md"
+        ],
+        "src": "docs-ref-autogen",
+        "dest": "api/msteams-sdk-py-toc",
+        "version": "msteams-sdk-python-latest"
+      },
+      {
+        "files": [
           "**/*.md",
           "**/*.yml"
         ],
-	"src": "docs-ref-autogen",
+        "src": "docs-ref-conceptual",
+        "dest": "api/msteams-sdk-python",
+        "version": "msteams-sdk-python-latest"
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "src": "docs-ref-autogen",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -15,14 +33,17 @@
           "LICENSE",
           "LICENSE-CODE",
           "ThirdPartyNotices"
-        ]
+        ],
+        "dest": "api",
+        "version": "msteams-sdk-python-latest"
       },
-	  {
+      {
         "files": [
           "**/*.yml"
         ],
         "src": "breadcrumb",
-        "dest": "breadcrumb",
+        "dest": "api/msteams-sdk-py-breadcrumb",
+        "version": "msteams-sdk-python-latest",
         "exclude": [
           "**/obj/**",
           "**/includes/**"
@@ -38,14 +59,31 @@
         "exclude": [
           "**/obj/**",
           "**/includes/**"
-        ]
+        ],
+        "version": "msteams-sdk-python-latest"
       }
     ],
+    "versions": {
+      "msteams-sdk-python-latest": {
+        "dest": "msteams-sdk-python"
+      }
+    },
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "~/breadcrumb/toc.yml",
-      "feedback_system": "Standard"
+      "feedback_system": "Standard",
+      "ms.topic": "reference",
+      "author": "charlesprakash",
+      "ms.author": "o365devx",
+      "manager": "billbl",
+      "ms.service": "msteams",
+      "uhfHeaderId": "MSDocsHeader-MicrosoftTeams",
+      "apiPlatform": "python",
+      "breadcrumb_path": "/python/api/msteams-sdk-py-breadcrumb/toc.json",
+	  "searchScope": [
+        "Teams"
+      ],
+      "titleSuffix": "Teams"
     },
     "fileMetadata": {},
     "template": [],

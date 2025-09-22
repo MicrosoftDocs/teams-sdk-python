@@ -1,0 +1,12 @@
+### YamlMime:PythonModule
+uid: microsoft.teams.ai.function
+name: function
+fullName: microsoft.teams.ai.function
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft.teams.ai.function.Function
+- microsoft.teams.ai.function.FunctionCall
+- microsoft.teams.ai.function.FunctionHandler
+- microsoft.teams.ai.function.Params

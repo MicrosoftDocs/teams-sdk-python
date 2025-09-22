@@ -1,0 +1,34 @@
+### YamlMime:PythonClass
+uid: microsoft.teams.ai.Function
+name: Function
+fullName: microsoft.teams.ai.Function
+module: microsoft.teams.ai
+summary: "Represents a function that can be called by AI models.\n\nFunctions define\
+  \ the interface between AI models and external functionality,\nproviding structured\
+  \ parameter validation and execution.\n\nType Parameters:\n   Params: Pydantic model\
+  \ class defining the function's parameter schema"
+constructor:
+  syntax: 'Function(name: str, description: str, parameter_schema: type[-Params] |
+    ~typing.Dict[str, ~typing.Any], handler: FunctionHandler[Params])'
+  parameters:
+  - name: name
+    isRequired: true
+  - name: description
+    isRequired: true
+  - name: parameter_schema
+    isRequired: true
+  - name: handler
+    isRequired: true
+attributes:
+- uid: microsoft.teams.ai.Function.description
+  name: description
+  signature: 'description: str'
+- uid: microsoft.teams.ai.Function.handler
+  name: handler
+  signature: 'handler: FunctionHandler[Params]'
+- uid: microsoft.teams.ai.Function.name
+  name: name
+  signature: 'name: str'
+- uid: microsoft.teams.ai.Function.parameter_schema
+  name: parameter_schema
+  signature: 'parameter_schema: type[-Params] | ~typing.Dict[str, ~typing.Any]'

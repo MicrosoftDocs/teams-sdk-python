@@ -1,0 +1,9 @@
+### YamlMime:PythonModule
+uid: microsoft.teams.ai.agent
+name: agent
+fullName: microsoft.teams.ai.agent
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft.teams.ai.agent.Agent
