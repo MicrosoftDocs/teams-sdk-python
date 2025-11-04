@@ -9,4 +9,5 @@ classes:
 - microsoft.teams.ai.function.Function
 - microsoft.teams.ai.function.FunctionCall
 - microsoft.teams.ai.function.FunctionHandler
+- microsoft.teams.ai.function.FunctionHandlerWithNoParams
 - microsoft.teams.ai.function.Params

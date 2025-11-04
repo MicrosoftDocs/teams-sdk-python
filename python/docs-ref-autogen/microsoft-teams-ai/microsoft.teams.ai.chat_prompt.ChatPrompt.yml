@@ -63,12 +63,43 @@ methods:
     description: ChatSendResult containing the final model response
 - uid: microsoft.teams.ai.chat_prompt.ChatPrompt.with_function
   name: with_function
-  summary: Add a function to the available functions for this prompt.
+  summary: 'Add a function to the available functions for this prompt.
+
+
+    Can be called in three ways:
+
+    1. with_function(function=Function(...))
+
+    2. with_function(name=..., description=..., parameter_schema=..., handler=...)
+
+    3. with_function(name=..., description=..., handler=...) - for functions with
+    no parameters'
   signature: 'with_function(function: Function[T]) -> Self'
   parameters:
   - name: function
-    description: Function to add to the available functions
+    description: Function object to add (first overload)
+    defaultValue: None
+  - name: name
+    description: Function name (second and third overload)
     isRequired: true
+  - name: description
+    description: Function description (second and third overload)
+    isRequired: true
+  - name: parameter_schema
+    description: Function parameter schema (second overload, optional)
+    isRequired: true
+  - name: handler
+    description: Function handler (second and third overload)
+    isRequired: true
+  keywordOnlyParameters:
+  - name: name
+    defaultValue: None
+  - name: description
+    defaultValue: None
+  - name: parameter_schema
+    defaultValue: None
+  - name: handler
+    defaultValue: None
   return:
     description: Self for method chaining
 - uid: microsoft.teams.ai.chat_prompt.ChatPrompt.with_plugin
