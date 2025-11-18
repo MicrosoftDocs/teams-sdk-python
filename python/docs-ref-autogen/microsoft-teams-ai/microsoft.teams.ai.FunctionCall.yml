@@ -8,16 +8,16 @@ summary: 'Represents a function call request from an AI model.
 
   Contains the function name, unique call ID, and parsed arguments
 
-  that will be passed to the function handler.'
+  that will be passed to the function handler if any.'
 constructor:
-  syntax: 'FunctionCall(id: str, name: str, arguments: dict[str, Any])'
+  syntax: 'FunctionCall(id: str, name: str, arguments: dict[str, typing.Any] = <factory>)'
   parameters:
   - name: id
     isRequired: true
   - name: name
     isRequired: true
   - name: arguments
-    isRequired: true
+    defaultValue: <factory>
 attributes:
 - uid: microsoft.teams.ai.FunctionCall.arguments
   name: arguments

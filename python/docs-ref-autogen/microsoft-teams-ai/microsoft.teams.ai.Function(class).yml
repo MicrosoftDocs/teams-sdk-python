@@ -6,10 +6,14 @@ module: microsoft.teams.ai
 summary: "Represents a function that can be called by AI models.\n\nFunctions define\
   \ the interface between AI models and external functionality,\nproviding structured\
   \ parameter validation and execution.\n\nType Parameters:\n   Params: Pydantic model\
-  \ class defining the function's parameter schema"
+  \ class defining the function's parameter schema, if any.\n\n> [!NOTE]\n> For best\
+  \ type safety, use explicit type parameters when creating Function objects:\n>\n\
+  > Function[SearchPokemonParams](name=..., parameter_schema=SearchPokemonParams,\
+  \ handler=...)\n>\n> \n>\n> This ensures the handler parameter type matches the\
+  \ parameter_schema at compile time.\n>"
 constructor:
   syntax: 'Function(name: str, description: str, parameter_schema: type[-Params] |
-    ~typing.Dict[str, ~typing.Any], handler: FunctionHandler[Params])'
+    ~typing.Dict[str, ~typing.Any] | None, handler: FunctionHandler[Params] | FunctionHandlerWithNoParams)'
   parameters:
   - name: name
     isRequired: true
@@ -25,10 +29,10 @@ attributes:
   signature: 'description: str'
 - uid: microsoft.teams.ai.Function.handler
   name: handler
-  signature: 'handler: FunctionHandler[Params]'
+  signature: 'handler: FunctionHandler[Params] | FunctionHandlerWithNoParams'
 - uid: microsoft.teams.ai.Function.name
   name: name
   signature: 'name: str'
 - uid: microsoft.teams.ai.Function.parameter_schema
   name: parameter_schema
-  signature: 'parameter_schema: type[-Params] | ~typing.Dict[str, ~typing.Any]'
+  signature: 'parameter_schema: type[-Params] | ~typing.Dict[str, ~typing.Any] | None'

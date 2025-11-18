@@ -13,6 +13,8 @@ classes:
 - microsoft.teams.ai.ChatSendResult
 - microsoft.teams.ai.Function
 - microsoft.teams.ai.FunctionCall
+- microsoft.teams.ai.FunctionHandler
+- microsoft.teams.ai.FunctionHandlerWithNoParams
 - microsoft.teams.ai.FunctionMessage
 - microsoft.teams.ai.ListMemory
 - microsoft.teams.ai.Memory
