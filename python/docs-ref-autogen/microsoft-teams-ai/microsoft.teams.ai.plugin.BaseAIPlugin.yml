@@ -24,15 +24,15 @@ methods:
 - uid: microsoft.teams.ai.plugin.BaseAIPlugin.on_after_function_call
   name: on_after_function_call
   summary: Called after a function is executed.
-  signature: 'async on_after_function_call(function_name: str, args: BaseModel, result:
-    str) -> str | None'
+  signature: 'async on_after_function_call(function_name: str, result: str, args:
+    BaseModel | None = None) -> str | None'
   parameters:
   - name: function_name
     isRequired: true
-  - name: args
-    isRequired: true
   - name: result
     isRequired: true
+  - name: args
+    defaultValue: None
 - uid: microsoft.teams.ai.plugin.BaseAIPlugin.on_after_send
   name: on_after_send
   summary: Modify response after receiving from model.
@@ -43,13 +43,13 @@ methods:
 - uid: microsoft.teams.ai.plugin.BaseAIPlugin.on_before_function_call
   name: on_before_function_call
   summary: Called before a function is executed.
-  signature: 'async on_before_function_call(function_name: str, args: BaseModel) ->
-    None'
+  signature: 'async on_before_function_call(function_name: str, args: BaseModel |
+    None = None) -> None'
   parameters:
   - name: function_name
     isRequired: true
   - name: args
-    isRequired: true
+    defaultValue: None
 - uid: microsoft.teams.ai.plugin.BaseAIPlugin.on_before_send
   name: on_before_send
   summary: Modify input before sending to model.

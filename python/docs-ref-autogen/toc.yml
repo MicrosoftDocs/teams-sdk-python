@@ -50,6 +50,10 @@
       no-loc:
       - FunctionHandler
       uid: microsoft.teams.ai.function.FunctionHandler
+    - name: FunctionHandlerWithNoParams
+      no-loc:
+      - FunctionHandlerWithNoParams
+      uid: microsoft.teams.ai.function.FunctionHandlerWithNoParams
     - name: Params
       no-loc:
       - Params
@@ -131,6 +135,14 @@
     no-loc:
     - FunctionCall
     uid: microsoft.teams.ai.FunctionCall
+  - name: FunctionHandler
+    no-loc:
+    - FunctionHandler
+    uid: microsoft.teams.ai.FunctionHandler
+  - name: FunctionHandlerWithNoParams
+    no-loc:
+    - FunctionHandlerWithNoParams
+    uid: microsoft.teams.ai.FunctionHandlerWithNoParams
   - name: FunctionMessage
     no-loc:
     - FunctionMessage

@@ -17,15 +17,15 @@ methods:
 - uid: microsoft.teams.ai.plugin.AIPluginProtocol.on_after_function_call
   name: on_after_function_call
   summary: Called after a function is executed.
-  signature: 'async on_after_function_call(function_name: str, args: BaseModel, result:
-    str) -> str | None'
+  signature: 'async on_after_function_call(function_name: str, result: str, args:
+    BaseModel | None = None) -> str | None'
   parameters:
   - name: function_name
     description: Name of the function that was called
     isRequired: true
   - name: args
-    description: Function arguments that were used
-    isRequired: true
+    description: Function arguments that were used, if any.
+    defaultValue: None
   - name: result
     description: Function execution result
     isRequired: true
@@ -44,15 +44,15 @@ methods:
 - uid: microsoft.teams.ai.plugin.AIPluginProtocol.on_before_function_call
   name: on_before_function_call
   summary: Called before a function is executed.
-  signature: 'async on_before_function_call(function_name: str, args: BaseModel) ->
-    None'
+  signature: 'async on_before_function_call(function_name: str, args: BaseModel |
+    None = None) -> None'
   parameters:
   - name: function_name
     description: Name of the function being called
     isRequired: true
   - name: args
-    description: Validated function arguments
-    isRequired: true
+    description: Validated function arguments, if any.
+    defaultValue: None
 - uid: microsoft.teams.ai.plugin.AIPluginProtocol.on_before_send
   name: on_before_send
   summary: Modify input before sending to model.
@@ -90,3 +90,10 @@ methods:
 attributes:
 - uid: microsoft.teams.ai.plugin.AIPluginProtocol.name
   name: name
+  summary: 'Unique name of the plugin.
+
+
+    Used for identification and debugging purposes.'
+  signature: 'abstract property name: str'
+  return:
+    description: String identifier for this plugin

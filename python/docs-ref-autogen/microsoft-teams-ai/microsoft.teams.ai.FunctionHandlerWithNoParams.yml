@@ -1,0 +1,16 @@
+### YamlMime:PythonClass
+uid: microsoft.teams.ai.FunctionHandlerWithNoParams
+name: FunctionHandlerWithNoParams
+fullName: microsoft.teams.ai.FunctionHandlerWithNoParams
+module: microsoft.teams.ai
+summary: 'Protocol for function handlers that can be called by AI models.
+
+
+  This handler does not have any parameters.
+
+
+  Function handlers can be either synchronous or asynchronous and should
+
+  return a string result that will be passed back to the AI model.'
+constructor:
+  syntax: FunctionHandlerWithNoParams(*args, **kwargs)
