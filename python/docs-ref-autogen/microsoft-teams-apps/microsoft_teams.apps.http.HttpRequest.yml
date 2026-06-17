@@ -1,0 +1,14 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.http.HttpRequest
+name: HttpRequest
+fullName: microsoft_teams.apps.http.HttpRequest
+module: microsoft_teams.apps.http
+constructor:
+  syntax: HttpRequest()
+attributes:
+- uid: microsoft_teams.apps.http.HttpRequest.body
+  name: body
+  signature: 'body: Dict[str, object]'
+- uid: microsoft_teams.apps.http.HttpRequest.headers
+  name: headers
+  signature: 'headers: Dict[str, str]'

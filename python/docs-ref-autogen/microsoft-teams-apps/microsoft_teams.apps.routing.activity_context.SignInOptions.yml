@@ -1,0 +1,36 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.routing.activity_context.SignInOptions
+name: SignInOptions
+fullName: microsoft_teams.apps.routing.activity_context.SignInOptions
+module: microsoft_teams.apps.routing.activity_context
+summary: Options for the signin method.
+constructor:
+  syntax: 'SignInOptions(oauth_card_text: str = ''Please Sign In...'', sign_in_button_text:
+    str = ''Sign In'', connection_name: str | None = None, override_sign_in_activity:
+    Callable[[TokenExchangeResource | None, TokenPostResource | None, str | None],
+    MessageActivityInput | MessageReactionActivityInput | TypingActivityInput] | None
+    = None)'
+  parameters:
+  - name: oauth_card_text
+    defaultValue: Please Sign In...
+  - name: sign_in_button_text
+    defaultValue: Sign In
+  - name: connection_name
+    defaultValue: None
+  - name: override_sign_in_activity
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.apps.routing.activity_context.SignInOptions.connection_name
+  name: connection_name
+  signature: 'connection_name: str | None = None'
+- uid: microsoft_teams.apps.routing.activity_context.SignInOptions.oauth_card_text
+  name: oauth_card_text
+  signature: 'oauth_card_text: str = ''Please Sign In...'''
+- uid: microsoft_teams.apps.routing.activity_context.SignInOptions.override_sign_in_activity
+  name: override_sign_in_activity
+  signature: 'override_sign_in_activity: Callable[[TokenExchangeResource | None, TokenPostResource
+    | None, str | None], MessageActivityInput | MessageReactionActivityInput | TypingActivityInput]
+    | None = None'
+- uid: microsoft_teams.apps.routing.activity_context.SignInOptions.sign_in_button_text
+  name: sign_in_button_text
+  signature: 'sign_in_button_text: str = ''Sign In'''

@@ -1,0 +1,88 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.common.events.EventEmitter
+name: EventEmitter
+fullName: microsoft_teams.common.events.EventEmitter
+module: microsoft_teams.common.events
+summary: 'Event emitter implementation inspired by TypeScript/Node.js EventEmitter.
+
+
+  Provides both synchronous and asynchronous event emission capabilities.
+
+  Thread-safe for single-threaded use cases.'
+constructor:
+  syntax: EventEmitter()
+methods:
+- uid: microsoft_teams.common.events.EventEmitter.emit
+  name: emit
+  summary: 'Emit an event synchronously to all registered handlers.
+
+
+    Async handlers are run using asyncio.run() in a separate event loop.'
+  signature: 'emit(event: EventTypeT, value: Any = None) -> None'
+  parameters:
+  - name: event
+    description: Event name to emit
+    isRequired: true
+  - name: value
+    description: Data to pass to event handlers
+    defaultValue: None
+- uid: microsoft_teams.common.events.EventEmitter.event_names
+  name: event_names
+  summary: Get list of event names that have listeners.
+  signature: event_names() -> List[str]
+  return:
+    description: List of event names
+- uid: microsoft_teams.common.events.EventEmitter.listener_count
+  name: listener_count
+  summary: Get the number of listeners for an event.
+  signature: 'listener_count(event: str) -> int'
+  parameters:
+  - name: event
+    description: Event name
+    isRequired: true
+  return:
+    description: Number of registered listeners
+- uid: microsoft_teams.common.events.EventEmitter.off
+  name: 'off'
+  summary: Remove an event handler by subscription ID.
+  signature: 'off(subscription_id: int) -> None'
+  parameters:
+  - name: subscription_id
+    description: ID returned from on() or once()
+    isRequired: true
+- uid: microsoft_teams.common.events.EventEmitter.on
+  name: 'on'
+  summary: Register an event handler.
+  signature: 'on(event: EventTypeT, handler: Callable[[Any], None] | Callable[[Any],
+    Awaitable[Any]]) -> int'
+  parameters:
+  - name: event
+    description: Event name to listen for
+    isRequired: true
+  - name: handler
+    description: Function to call when event is emitted
+    isRequired: true
+  return:
+    description: Subscription ID for removing the handler later
+- uid: microsoft_teams.common.events.EventEmitter.once
+  name: once
+  summary: Register a one-time event handler that will be removed after first execution.
+  signature: 'once(event: EventTypeT, handler: Callable[[Any], None] | Callable[[Any],
+    Awaitable[Any]]) -> int'
+  parameters:
+  - name: event
+    description: Event name to listen for
+    isRequired: true
+  - name: handler
+    description: Function to call when event is emitted
+    isRequired: true
+  return:
+    description: Subscription ID for removing the handler later
+- uid: microsoft_teams.common.events.EventEmitter.remove_all_listeners
+  name: remove_all_listeners
+  summary: Remove all listeners for a specific event or all events.
+  signature: 'remove_all_listeners(event: str | None = None) -> None'
+  parameters:
+  - name: event
+    description: Event name to clear. If None, clears all events.
+    defaultValue: None

@@ -1,0 +1,302 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.core.Rating
+name: Rating
+fullName: microsoft_teams.cards.core.Rating
+module: microsoft_teams.cards.core
+summary: 'A read-only star rating element, to display the rating of something.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'Rating(*, key: str | None = None, type: ~typing.Literal[''Rating''] = ''Rating'',
+    id: str | None = None, requires: ~microsoft_teams.cards.core.HostCapabilities
+    | ~typing.Dict[str, ~typing.Any] | None = <factory>, lang: str | None = None,
+    isVisible: bool | None = True, separator: bool | None = False, height: ~typing.Literal[''auto'',
+    ''stretch''] | None = ''auto'', horizontalAlignment: ~typing.Literal[''Left'',
+    ''Center'', ''Right''] | None = None, spacing: ~typing.Literal[''None'', ''ExtraSmall'',
+    ''Small'', ''Default'', ''Medium'', ''Large'', ''ExtraLarge'', ''Padding''] |
+    None = ''Default'', targetWidth: ~typing.Literal[''VeryNarrow'', ''Narrow'', ''Standard'',
+    ''Wide'', ''atLeast:VeryNarrow'', ''atMost:VeryNarrow'', ''atLeast:Narrow'', ''atMost:Narrow'',
+    ''atLeast:Standard'', ''atMost:Standard'', ''atLeast:Wide'', ''atMost:Wide'']
+    | None = None, isSortKey: bool | None = False, value: float | None = None, count:
+    float | None = None, max: float | None = 5, size: ~typing.Literal[''Medium'',
+    ''Large''] | None = ''Large'', color: ~typing.Literal[''Neutral'', ''Marigold'']
+    | None = ''Neutral'', style: ~typing.Literal[''Default'', ''Compact''] | None
+    = ''Default'', gridArea: str | None = None, fallback: ~microsoft_teams.cards.core.CardElement
+    | ~typing.Literal[''drop''] | None = None, **extra_data: ~typing.Any)'
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: type
+    defaultValue: Rating
+  - name: id
+    defaultValue: None
+  - name: requires
+    defaultValue: <factory>
+  - name: lang
+    defaultValue: None
+  - name: isVisible
+    defaultValue: 'True'
+  - name: separator
+    defaultValue: 'False'
+  - name: height
+    defaultValue: auto
+  - name: horizontalAlignment
+    defaultValue: None
+  - name: spacing
+    defaultValue: Default
+  - name: targetWidth
+    defaultValue: None
+  - name: isSortKey
+    defaultValue: 'False'
+  - name: value
+    defaultValue: None
+  - name: count
+    defaultValue: None
+  - name: max
+    defaultValue: '5'
+  - name: size
+    defaultValue: Large
+  - name: color
+    defaultValue: Neutral
+  - name: style
+    defaultValue: Default
+  - name: gridArea
+    defaultValue: None
+  - name: fallback
+    defaultValue: None
+methods:
+- uid: microsoft_teams.cards.core.Rating.with_color
+  name: with_color
+  signature: 'with_color(value: Literal[''Neutral'', ''Marigold'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_count
+  name: with_count
+  signature: 'with_count(value: float) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_fallback
+  name: with_fallback
+  signature: 'with_fallback(value: CardElement | Literal[''drop'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_grid_area
+  name: with_grid_area
+  signature: 'with_grid_area(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_height
+  name: with_height
+  signature: 'with_height(value: Literal[''auto'', ''stretch'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_horizontal_alignment
+  name: with_horizontal_alignment
+  signature: 'with_horizontal_alignment(value: Literal[''Left'', ''Center'', ''Right''])
+    -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_id
+  name: with_id
+  signature: 'with_id(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_is_sort_key
+  name: with_is_sort_key
+  signature: 'with_is_sort_key(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_is_visible
+  name: with_is_visible
+  signature: 'with_is_visible(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_key
+  name: with_key
+  signature: 'with_key(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_lang
+  name: with_lang
+  signature: 'with_lang(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_max
+  name: with_max
+  signature: 'with_max(value: float) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_requires
+  name: with_requires
+  signature: 'with_requires(value: HostCapabilities | Dict[str, Any]) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_separator
+  name: with_separator
+  signature: 'with_separator(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_size
+  name: with_size
+  signature: 'with_size(value: Literal[''Medium'', ''Large'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_spacing
+  name: with_spacing
+  signature: 'with_spacing(value: Literal[''None'', ''ExtraSmall'', ''Small'', ''Default'',
+    ''Medium'', ''Large'', ''ExtraLarge'', ''Padding'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_style
+  name: with_style
+  signature: 'with_style(value: Literal[''Default'', ''Compact'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_target_width
+  name: with_target_width
+  signature: 'with_target_width(value: Literal[''VeryNarrow'', ''Narrow'', ''Standard'',
+    ''Wide'', ''atLeast:VeryNarrow'', ''atMost:VeryNarrow'', ''atLeast:Narrow'', ''atMost:Narrow'',
+    ''atLeast:Standard'', ''atMost:Standard'', ''atLeast:Wide'', ''atMost:Wide''])
+    -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.Rating.with_value
+  name: with_value
+  signature: 'with_value(value: float) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.cards.core.Rating.color
+  name: color
+  summary: The color of the stars.
+  signature: 'color: Literal[''Neutral'', ''Marigold''] | None'
+- uid: microsoft_teams.cards.core.Rating.count
+  name: count
+  summary: The number of "votes" associated with the rating.
+  signature: 'count: float | None'
+- uid: microsoft_teams.cards.core.Rating.fallback
+  name: fallback
+  summary: An alternate element to render if the type of this one is unsupported or
+    if the host application doesn't support all the capabilities specified in the
+    requires property.
+  signature: 'fallback: CardElement | Literal[''drop''] | None'
+- uid: microsoft_teams.cards.core.Rating.grid_area
+  name: grid_area
+  summary: The area of a Layout.AreaGrid layout in which an element should be displayed.
+  signature: 'grid_area: str | None'
+- uid: microsoft_teams.cards.core.Rating.height
+  name: height
+  summary: The height of the element. When set to stretch, the element will use the
+    remaining vertical space in its container.
+  signature: 'height: Literal[''auto'', ''stretch''] | None'
+- uid: microsoft_teams.cards.core.Rating.horizontal_alignment
+  name: horizontal_alignment
+  summary: Controls how the element should be horizontally aligned.
+  signature: 'horizontal_alignment: Literal[''Left'', ''Center'', ''Right''] | None'
+- uid: microsoft_teams.cards.core.Rating.id
+  name: id
+  summary: A unique identifier for the element or action. Input elements must have
+    an id, otherwise they will not be validated and their values will not be sent
+    to the Bot.
+  signature: 'id: str | None'
+- uid: microsoft_teams.cards.core.Rating.is_sort_key
+  name: is_sort_key
+  summary: Controls whether the element should be used as a sort key by elements that
+    allow sorting across a collection of elements.
+  signature: 'is_sort_key: bool | None'
+- uid: microsoft_teams.cards.core.Rating.is_visible
+  name: is_visible
+  summary: Controls the visibility of the element.
+  signature: 'is_visible: bool | None'
+- uid: microsoft_teams.cards.core.Rating.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.core.Rating.lang
+  name: lang
+  summary: The locale associated with the element.
+  signature: 'lang: str | None'
+- uid: microsoft_teams.cards.core.Rating.max
+  name: max
+  summary: The number of stars to display.
+  signature: 'max: float | None'
+- uid: microsoft_teams.cards.core.Rating.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.core.Rating.requires
+  name: requires
+  summary: A list of capabilities the element requires the host application to support.
+    If the host application doesn't support at least one of the listed capabilities,
+    the element is not rendered (or its fallback is rendered if provided).
+  signature: 'requires: HostCapabilities | Dict[str, Any] | None'
+- uid: microsoft_teams.cards.core.Rating.separator
+  name: separator
+  summary: Controls whether a separator line should be displayed above the element
+    to visually separate it from the previous element. No separator will be displayed
+    for the first element in a container, even if this property is set to true.
+  signature: 'separator: bool | None'
+- uid: microsoft_teams.cards.core.Rating.size
+  name: size
+  summary: The size of the stars.
+  signature: 'size: Literal[''Medium'', ''Large''] | None'
+- uid: microsoft_teams.cards.core.Rating.spacing
+  name: spacing
+  summary: Controls the amount of space between this element and the previous one.
+    No space will be added for the first element in a container.
+  signature: 'spacing: Literal[''None'', ''ExtraSmall'', ''Small'', ''Default'', ''Medium'',
+    ''Large'', ''ExtraLarge'', ''Padding''] | None'
+- uid: microsoft_teams.cards.core.Rating.style
+  name: style
+  summary: The style of the stars.
+  signature: 'style: Literal[''Default'', ''Compact''] | None'
+- uid: microsoft_teams.cards.core.Rating.target_width
+  name: target_width
+  summary: responsive-layout).
+  signature: 'target_width: Literal[''VeryNarrow'', ''Narrow'', ''Standard'', ''Wide'',
+    ''atLeast:VeryNarrow'', ''atMost:VeryNarrow'', ''atLeast:Narrow'', ''atMost:Narrow'',
+    ''atLeast:Standard'', ''atMost:Standard'', ''atLeast:Wide'', ''atMost:Wide'']
+    | None'
+- uid: microsoft_teams.cards.core.Rating.type
+  name: type
+  summary: Must be **Rating**.
+  signature: 'type: Literal[''Rating'']'
+- uid: microsoft_teams.cards.core.Rating.value
+  name: value
+  summary: The value of the rating. Must be between 0 and max.
+  signature: 'value: float | None'

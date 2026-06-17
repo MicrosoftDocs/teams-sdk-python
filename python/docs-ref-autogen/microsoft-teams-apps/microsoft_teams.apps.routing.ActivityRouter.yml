@@ -1,0 +1,27 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.routing.ActivityRouter
+name: ActivityRouter
+fullName: microsoft_teams.apps.routing.ActivityRouter
+module: microsoft_teams.apps.routing
+summary: Routes incoming activities to registered handlers using selector functions.
+constructor:
+  syntax: ActivityRouter()
+methods:
+- uid: microsoft_teams.apps.routing.ActivityRouter.add_handler
+  name: add_handler
+  summary: Add a handler for a specific activity configuration.
+  signature: 'add_handler(selector: Callable[[Activity], bool], handler: Callable[[ActivityContext[Activity]],
+    Awaitable[Any | None]]) -> None'
+  parameters:
+  - name: selector
+    isRequired: true
+  - name: handler
+    isRequired: true
+- uid: microsoft_teams.apps.routing.ActivityRouter.select_handlers
+  name: select_handlers
+  summary: Select all handlers that match the given activity using selector functions.
+  signature: 'select_handlers(activity: Activity) -> List[Callable[[ActivityContext[Activity]],
+    Awaitable[Any | None]]]'
+  parameters:
+  - name: activity
+    isRequired: true

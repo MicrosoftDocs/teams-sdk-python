@@ -1,0 +1,10 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.common.http.InterceptorRequestContext
+name: InterceptorRequestContext
+fullName: microsoft_teams.common.http.InterceptorRequestContext
+module: microsoft_teams.common.http
+constructor:
+  syntax: 'InterceptorRequestContext(request: Request)'
+  parameters:
+  - name: request
+    isRequired: true

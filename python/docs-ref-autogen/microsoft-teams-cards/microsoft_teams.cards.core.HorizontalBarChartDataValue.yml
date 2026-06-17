@@ -1,0 +1,122 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.core.HorizontalBarChartDataValue
+name: HorizontalBarChartDataValue
+fullName: microsoft_teams.cards.core.HorizontalBarChartDataValue
+module: microsoft_teams.cards.core
+summary: 'Represents a single data point in a horizontal bar chart.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'HorizontalBarChartDataValue(*, key: str | None = None, x: str | None =
+    None, y: float | None = 0, color: Literal[''good'', ''warning'', ''attention'',
+    ''neutral'', ''categoricalRed'', ''categoricalPurple'', ''categoricalLavender'',
+    ''categoricalBlue'', ''categoricalLightBlue'', ''categoricalTeal'', ''categoricalGreen'',
+    ''categoricalLime'', ''categoricalMarigold'', ''sequential1'', ''sequential2'',
+    ''sequential3'', ''sequential4'', ''sequential5'', ''sequential6'', ''sequential7'',
+    ''sequential8'', ''divergingBlue'', ''divergingLightBlue'', ''divergingCyan'',
+    ''divergingTeal'', ''divergingYellow'', ''divergingPeach'', ''divergingLightRed'',
+    ''divergingRed'', ''divergingMaroon'', ''divergingGray'', ''sequentialRed1'',
+    ''sequentialRed2'', ''sequentialRed3'', ''sequentialRed4'', ''sequentialRed5'',
+    ''sequentialRed6'', ''sequentialRed7'', ''sequentialRed8'', ''sequentialGreen1'',
+    ''sequentialGreen2'', ''sequentialGreen3'', ''sequentialGreen4'', ''sequentialGreen5'',
+    ''sequentialGreen6'', ''sequentialGreen7'', ''sequentialGreen8'', ''sequentialYellow1'',
+    ''sequentialYellow2'', ''sequentialYellow3'', ''sequentialYellow4'', ''sequentialYellow5'',
+    ''sequentialYellow6'', ''sequentialYellow7'', ''sequentialYellow8''] | None =
+    None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: x
+    defaultValue: None
+  - name: y
+    defaultValue: '0'
+  - name: color
+    defaultValue: None
+methods:
+- uid: microsoft_teams.cards.core.HorizontalBarChartDataValue.with_color
+  name: with_color
+  signature: 'with_color(value: Literal[''good'', ''warning'', ''attention'', ''neutral'',
+    ''categoricalRed'', ''categoricalPurple'', ''categoricalLavender'', ''categoricalBlue'',
+    ''categoricalLightBlue'', ''categoricalTeal'', ''categoricalGreen'', ''categoricalLime'',
+    ''categoricalMarigold'', ''sequential1'', ''sequential2'', ''sequential3'', ''sequential4'',
+    ''sequential5'', ''sequential6'', ''sequential7'', ''sequential8'', ''divergingBlue'',
+    ''divergingLightBlue'', ''divergingCyan'', ''divergingTeal'', ''divergingYellow'',
+    ''divergingPeach'', ''divergingLightRed'', ''divergingRed'', ''divergingMaroon'',
+    ''divergingGray'', ''sequentialRed1'', ''sequentialRed2'', ''sequentialRed3'',
+    ''sequentialRed4'', ''sequentialRed5'', ''sequentialRed6'', ''sequentialRed7'',
+    ''sequentialRed8'', ''sequentialGreen1'', ''sequentialGreen2'', ''sequentialGreen3'',
+    ''sequentialGreen4'', ''sequentialGreen5'', ''sequentialGreen6'', ''sequentialGreen7'',
+    ''sequentialGreen8'', ''sequentialYellow1'', ''sequentialYellow2'', ''sequentialYellow3'',
+    ''sequentialYellow4'', ''sequentialYellow5'', ''sequentialYellow6'', ''sequentialYellow7'',
+    ''sequentialYellow8'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.HorizontalBarChartDataValue.with_key
+  name: with_key
+  signature: 'with_key(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.HorizontalBarChartDataValue.with_x
+  name: with_x
+  signature: 'with_x(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.HorizontalBarChartDataValue.with_y
+  name: with_y
+  signature: 'with_y(value: float) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.cards.core.HorizontalBarChartDataValue.color
+  name: color
+  summary: chart-colors-reference).
+  signature: 'color: Literal[''good'', ''warning'', ''attention'', ''neutral'', ''categoricalRed'',
+    ''categoricalPurple'', ''categoricalLavender'', ''categoricalBlue'', ''categoricalLightBlue'',
+    ''categoricalTeal'', ''categoricalGreen'', ''categoricalLime'', ''categoricalMarigold'',
+    ''sequential1'', ''sequential2'', ''sequential3'', ''sequential4'', ''sequential5'',
+    ''sequential6'', ''sequential7'', ''sequential8'', ''divergingBlue'', ''divergingLightBlue'',
+    ''divergingCyan'', ''divergingTeal'', ''divergingYellow'', ''divergingPeach'',
+    ''divergingLightRed'', ''divergingRed'', ''divergingMaroon'', ''divergingGray'',
+    ''sequentialRed1'', ''sequentialRed2'', ''sequentialRed3'', ''sequentialRed4'',
+    ''sequentialRed5'', ''sequentialRed6'', ''sequentialRed7'', ''sequentialRed8'',
+    ''sequentialGreen1'', ''sequentialGreen2'', ''sequentialGreen3'', ''sequentialGreen4'',
+    ''sequentialGreen5'', ''sequentialGreen6'', ''sequentialGreen7'', ''sequentialGreen8'',
+    ''sequentialYellow1'', ''sequentialYellow2'', ''sequentialYellow3'', ''sequentialYellow4'',
+    ''sequentialYellow5'', ''sequentialYellow6'', ''sequentialYellow7'', ''sequentialYellow8'']
+    | None'
+- uid: microsoft_teams.cards.core.HorizontalBarChartDataValue.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.core.HorizontalBarChartDataValue.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.core.HorizontalBarChartDataValue.x
+  name: x
+  summary: The x axis value of the data point.
+  signature: 'x: str | None'
+- uid: microsoft_teams.cards.core.HorizontalBarChartDataValue.y
+  name: y
+  summary: The y axis value of the data point.
+  signature: 'y: float | None'

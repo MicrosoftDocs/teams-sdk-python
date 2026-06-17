@@ -1,0 +1,71 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.core.MediaSource
+name: MediaSource
+fullName: microsoft_teams.cards.core.MediaSource
+module: microsoft_teams.cards.core
+summary: 'Defines the source URL of a media stream. YouTube, Dailymotion, Vimeo and
+  Microsoft Stream URLs are supported.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'MediaSource(*, key: str | None = None, mimeType: str | None = None, url:
+    str | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: mimeType
+    defaultValue: None
+  - name: url
+    defaultValue: None
+methods:
+- uid: microsoft_teams.cards.core.MediaSource.with_key
+  name: with_key
+  signature: 'with_key(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.MediaSource.with_mime_type
+  name: with_mime_type
+  signature: 'with_mime_type(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.MediaSource.with_url
+  name: with_url
+  signature: 'with_url(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.cards.core.MediaSource.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.core.MediaSource.mime_type
+  name: mime_type
+  summary: The MIME type of the source.
+  signature: 'mime_type: str | None'
+- uid: microsoft_teams.cards.core.MediaSource.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.core.MediaSource.url
+  name: url
+  summary: The URL of the source.
+  signature: 'url: str | None'

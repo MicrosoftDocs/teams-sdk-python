@@ -1,0 +1,188 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.core.FlowLayout
+name: FlowLayout
+fullName: microsoft_teams.cards.core.FlowLayout
+module: microsoft_teams.cards.core
+summary: 'A layout that spreads elements horizontally and wraps them across multiple
+  rows, as needed.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'FlowLayout(*, key: str | None = None, type: Literal[''Layout.Flow''] =
+    ''Layout.Flow'', targetWidth: Literal[''VeryNarrow'', ''Narrow'', ''Standard'',
+    ''Wide'', ''atLeast:VeryNarrow'', ''atMost:VeryNarrow'', ''atLeast:Narrow'', ''atMost:Narrow'',
+    ''atLeast:Standard'', ''atMost:Standard'', ''atLeast:Wide'', ''atMost:Wide'']
+    | None = None, horizontalItemsAlignment: Literal[''Left'', ''Center'', ''Right'']
+    | None = ''Center'', verticalItemsAlignment: Literal[''Top'', ''Center'', ''Bottom'']
+    | None = ''Top'', itemFit: Literal[''Fit'', ''Fill''] | None = ''Fit'', minItemWidth:
+    str | None = None, maxItemWidth: str | None = None, itemWidth: str | None = None,
+    columnSpacing: Literal[''None'', ''ExtraSmall'', ''Small'', ''Default'', ''Medium'',
+    ''Large'', ''ExtraLarge'', ''Padding''] | None = ''Default'', rowSpacing: Literal[''None'',
+    ''ExtraSmall'', ''Small'', ''Default'', ''Medium'', ''Large'', ''ExtraLarge'',
+    ''Padding''] | None = ''Default'', **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: type
+    defaultValue: Layout.Flow
+  - name: targetWidth
+    defaultValue: None
+  - name: horizontalItemsAlignment
+    defaultValue: Center
+  - name: verticalItemsAlignment
+    defaultValue: Top
+  - name: itemFit
+    defaultValue: Fit
+  - name: minItemWidth
+    defaultValue: None
+  - name: maxItemWidth
+    defaultValue: None
+  - name: itemWidth
+    defaultValue: None
+  - name: columnSpacing
+    defaultValue: Default
+  - name: rowSpacing
+    defaultValue: Default
+methods:
+- uid: microsoft_teams.cards.core.FlowLayout.with_column_spacing
+  name: with_column_spacing
+  signature: 'with_column_spacing(value: Literal[''None'', ''ExtraSmall'', ''Small'',
+    ''Default'', ''Medium'', ''Large'', ''ExtraLarge'', ''Padding'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.FlowLayout.with_horizontal_items_alignment
+  name: with_horizontal_items_alignment
+  signature: 'with_horizontal_items_alignment(value: Literal[''Left'', ''Center'',
+    ''Right'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.FlowLayout.with_item_fit
+  name: with_item_fit
+  signature: 'with_item_fit(value: Literal[''Fit'', ''Fill'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.FlowLayout.with_item_width
+  name: with_item_width
+  signature: 'with_item_width(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.FlowLayout.with_key
+  name: with_key
+  signature: 'with_key(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.FlowLayout.with_max_item_width
+  name: with_max_item_width
+  signature: 'with_max_item_width(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.FlowLayout.with_min_item_width
+  name: with_min_item_width
+  signature: 'with_min_item_width(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.FlowLayout.with_row_spacing
+  name: with_row_spacing
+  signature: 'with_row_spacing(value: Literal[''None'', ''ExtraSmall'', ''Small'',
+    ''Default'', ''Medium'', ''Large'', ''ExtraLarge'', ''Padding'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.FlowLayout.with_target_width
+  name: with_target_width
+  signature: 'with_target_width(value: Literal[''VeryNarrow'', ''Narrow'', ''Standard'',
+    ''Wide'', ''atLeast:VeryNarrow'', ''atMost:VeryNarrow'', ''atLeast:Narrow'', ''atMost:Narrow'',
+    ''atLeast:Standard'', ''atMost:Standard'', ''atLeast:Wide'', ''atMost:Wide''])
+    -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.FlowLayout.with_vertical_items_alignment
+  name: with_vertical_items_alignment
+  signature: 'with_vertical_items_alignment(value: Literal[''Top'', ''Center'', ''Bottom''])
+    -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.cards.core.FlowLayout.column_spacing
+  name: column_spacing
+  summary: The space between items.
+  signature: 'column_spacing: Literal[''None'', ''ExtraSmall'', ''Small'', ''Default'',
+    ''Medium'', ''Large'', ''ExtraLarge'', ''Padding''] | None'
+- uid: microsoft_teams.cards.core.FlowLayout.horizontal_items_alignment
+  name: horizontal_items_alignment
+  summary: Controls how the content of the container should be horizontally aligned.
+  signature: 'horizontal_items_alignment: Literal[''Left'', ''Center'', ''Right'']
+    | None'
+- uid: microsoft_teams.cards.core.FlowLayout.item_fit
+  name: item_fit
+  summary: Controls how item should fit inside the container.
+  signature: 'item_fit: Literal[''Fit'', ''Fill''] | None'
+- uid: microsoft_teams.cards.core.FlowLayout.item_width
+  name: item_width
+  summary: The width, in pixels, of each item, in the *<number>px* format. Should
+    not be used if maxItemWidth and/or minItemWidth are set.
+  signature: 'item_width: str | None'
+- uid: microsoft_teams.cards.core.FlowLayout.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.core.FlowLayout.max_item_width
+  name: max_item_width
+  summary: The maximum width, in pixels, of each item, in the *<number>px* format.
+    Should not be used if itemWidth is set.
+  signature: 'max_item_width: str | None'
+- uid: microsoft_teams.cards.core.FlowLayout.min_item_width
+  name: min_item_width
+  summary: The minimum width, in pixels, of each item, in the *<number>px* format.
+    Should not be used if itemWidth is set.
+  signature: 'min_item_width: str | None'
+- uid: microsoft_teams.cards.core.FlowLayout.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.core.FlowLayout.row_spacing
+  name: row_spacing
+  summary: The space between rows of items.
+  signature: 'row_spacing: Literal[''None'', ''ExtraSmall'', ''Small'', ''Default'',
+    ''Medium'', ''Large'', ''ExtraLarge'', ''Padding''] | None'
+- uid: microsoft_teams.cards.core.FlowLayout.target_width
+  name: target_width
+  summary: Controls for which card width the layout should be used.
+  signature: 'target_width: Literal[''VeryNarrow'', ''Narrow'', ''Standard'', ''Wide'',
+    ''atLeast:VeryNarrow'', ''atMost:VeryNarrow'', ''atLeast:Narrow'', ''atMost:Narrow'',
+    ''atLeast:Standard'', ''atMost:Standard'', ''atLeast:Wide'', ''atMost:Wide'']
+    | None'
+- uid: microsoft_teams.cards.core.FlowLayout.type
+  name: type
+  summary: Must be **Layout.Flow**.
+  signature: 'type: Literal[''Layout.Flow'']'
+- uid: microsoft_teams.cards.core.FlowLayout.vertical_items_alignment
+  name: vertical_items_alignment
+  summary: Controls how the content of the container should be vertically aligned.
+  signature: 'vertical_items_alignment: Literal[''Top'', ''Center'', ''Bottom''] |
+    None'

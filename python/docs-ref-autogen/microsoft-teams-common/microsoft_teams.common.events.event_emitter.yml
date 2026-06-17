@@ -1,0 +1,11 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.common.events.event_emitter
+name: event_emitter
+fullName: microsoft_teams.common.events.event_emitter
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.common.events.event_emitter.EventEmitter
+- microsoft_teams.common.events.event_emitter.EventEmitterProtocol
+- microsoft_teams.common.events.event_emitter.Subscription

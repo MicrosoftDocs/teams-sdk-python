@@ -1,0 +1,100 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.common.storage.ListLocalStorage
+name: ListLocalStorage
+fullName: microsoft_teams.common.storage.ListLocalStorage
+module: microsoft_teams.common.storage
+summary: A local storage implementation for a list of items.
+constructor:
+  syntax: 'ListLocalStorage(items: List[V] | None = None)'
+  parameters:
+  - name: items
+    defaultValue: None
+methods:
+- uid: microsoft_teams.common.storage.ListLocalStorage.append
+  name: append
+  signature: 'append(value: V) -> None'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.common.storage.ListLocalStorage.async_append
+  name: async_append
+  signature: 'async async_append(value: V) -> None'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.common.storage.ListLocalStorage.async_clear
+  name: async_clear
+  signature: async async_clear() -> None
+- uid: microsoft_teams.common.storage.ListLocalStorage.async_delete
+  name: async_delete
+  signature: 'async async_delete(key: int) -> None'
+  parameters:
+  - name: key
+    isRequired: true
+- uid: microsoft_teams.common.storage.ListLocalStorage.async_filter
+  name: async_filter
+  signature: 'async async_filter(predicate: Callable[[V, int], bool]) -> List[V]'
+  parameters:
+  - name: predicate
+    isRequired: true
+- uid: microsoft_teams.common.storage.ListLocalStorage.async_get
+  name: async_get
+  signature: 'async async_get(key: int) -> V | None'
+  parameters:
+  - name: key
+    isRequired: true
+- uid: microsoft_teams.common.storage.ListLocalStorage.async_items
+  name: async_items
+  signature: async async_items() -> List[V]
+- uid: microsoft_teams.common.storage.ListLocalStorage.async_length
+  name: async_length
+  signature: async async_length() -> int
+- uid: microsoft_teams.common.storage.ListLocalStorage.async_pop
+  name: async_pop
+  signature: async async_pop() -> V | None
+- uid: microsoft_teams.common.storage.ListLocalStorage.async_set
+  name: async_set
+  signature: 'async async_set(key: int, value: V) -> None'
+  parameters:
+  - name: key
+    isRequired: true
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.common.storage.ListLocalStorage.clear
+  name: clear
+  signature: clear() -> None
+- uid: microsoft_teams.common.storage.ListLocalStorage.delete
+  name: delete
+  signature: 'delete(key: int) -> None'
+  parameters:
+  - name: key
+    isRequired: true
+- uid: microsoft_teams.common.storage.ListLocalStorage.filter
+  name: filter
+  signature: 'filter(predicate: Callable[[V, int], bool]) -> List[V]'
+  parameters:
+  - name: predicate
+    isRequired: true
+- uid: microsoft_teams.common.storage.ListLocalStorage.get
+  name: get
+  signature: 'get(key: int) -> V | None'
+  parameters:
+  - name: key
+    isRequired: true
+- uid: microsoft_teams.common.storage.ListLocalStorage.items
+  name: items
+  signature: items() -> List[V]
+- uid: microsoft_teams.common.storage.ListLocalStorage.length
+  name: length
+  signature: length() -> int
+- uid: microsoft_teams.common.storage.ListLocalStorage.pop
+  name: pop
+  signature: pop() -> V | None
+- uid: microsoft_teams.common.storage.ListLocalStorage.set
+  name: set
+  signature: 'set(key: int, value: V) -> None'
+  parameters:
+  - name: key
+    isRequired: true
+  - name: value
+    isRequired: true

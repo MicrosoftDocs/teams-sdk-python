@@ -1,0 +1,45 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.app_events.EventManager
+name: EventManager
+fullName: microsoft_teams.apps.app_events.EventManager
+module: microsoft_teams.apps.app_events
+constructor:
+  syntax: 'EventManager(event_emitter: EventEmitter[Literal[''activity'', ''error'',
+    ''start'', ''stop'', ''sign_in'', ''activity_response'', ''activity_sent''] |
+    str])'
+  parameters:
+  - name: event_emitter
+    isRequired: true
+methods:
+- uid: microsoft_teams.apps.app_events.EventManager.on_activity
+  name: on_activity
+  signature: 'async on_activity(event: ActivityEvent) -> None'
+  parameters:
+  - name: event
+    isRequired: true
+- uid: microsoft_teams.apps.app_events.EventManager.on_activity_response
+  name: on_activity_response
+  signature: 'async on_activity_response(event: ActivityResponseEvent, plugins: List[PluginBase])
+    -> None'
+  parameters:
+  - name: event
+    isRequired: true
+  - name: plugins
+    isRequired: true
+- uid: microsoft_teams.apps.app_events.EventManager.on_activity_sent
+  name: on_activity_sent
+  signature: 'async on_activity_sent(event: ActivitySentEvent, plugins: List[PluginBase])
+    -> None'
+  parameters:
+  - name: event
+    isRequired: true
+  - name: plugins
+    isRequired: true
+- uid: microsoft_teams.apps.app_events.EventManager.on_error
+  name: on_error
+  signature: 'async on_error(event: ErrorEvent, plugins: List[PluginBase]) -> None'
+  parameters:
+  - name: event
+    isRequired: true
+  - name: plugins
+    isRequired: true

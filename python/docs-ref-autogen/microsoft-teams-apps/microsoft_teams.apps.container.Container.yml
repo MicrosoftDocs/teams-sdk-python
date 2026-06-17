@@ -1,0 +1,27 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.container.Container
+name: Container
+fullName: microsoft_teams.apps.container.Container
+module: microsoft_teams.apps.container
+summary: Constructor.
+constructor:
+  syntax: Container(**overriding_providers)
+attributes:
+- uid: microsoft_teams.apps.container.Container.cls_providers
+  name: cls_providers
+  signature: 'cls_providers = {''config'': <dependency_injector.providers.Configuration(''config'')>}'
+- uid: microsoft_teams.apps.container.Container.config
+  name: config
+  signature: config = <dependency_injector.providers.Configuration('config')>
+- uid: microsoft_teams.apps.container.Container.containers
+  name: containers
+  signature: containers = {}
+- uid: microsoft_teams.apps.container.Container.inherited_providers
+  name: inherited_providers
+  signature: inherited_providers = {}
+- uid: microsoft_teams.apps.container.Container.providers
+  name: providers
+  signature: 'providers = {''config'': <dependency_injector.providers.Configuration(''config'')>}'
+- uid: microsoft_teams.apps.container.Container.wiring_config
+  name: wiring_config
+  signature: wiring_config = <dependency_injector.containers.WiringConfiguration object>

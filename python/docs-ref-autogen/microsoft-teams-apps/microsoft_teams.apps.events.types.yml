@@ -1,0 +1,16 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.apps.events.types
+name: types
+fullName: microsoft_teams.apps.events.types
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.apps.events.types.ActivityEvent
+- microsoft_teams.apps.events.types.ActivityResponseEvent
+- microsoft_teams.apps.events.types.ActivitySentEvent
+- microsoft_teams.apps.events.types.CoreActivity
+- microsoft_teams.apps.events.types.ErrorEvent
+- microsoft_teams.apps.events.types.SignInEvent
+- microsoft_teams.apps.events.types.StartEvent
+- microsoft_teams.apps.events.types.StopEvent

@@ -1,0 +1,330 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.core.RatingInput
+name: RatingInput
+fullName: microsoft_teams.cards.core.RatingInput
+module: microsoft_teams.cards.core
+summary: 'An input to allow the user to rate something using stars.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'RatingInput(*, key: str | None = None, type: ~typing.Literal[''Input.Rating'']
+    = ''Input.Rating'', id: str | None = None, requires: ~microsoft_teams.cards.core.HostCapabilities
+    | ~typing.Dict[str, ~typing.Any] | None = <factory>, lang: str | None = None,
+    isVisible: bool | None = True, separator: bool | None = False, height: ~typing.Literal[''auto'',
+    ''stretch''] | None = ''auto'', spacing: ~typing.Literal[''None'', ''ExtraSmall'',
+    ''Small'', ''Default'', ''Medium'', ''Large'', ''ExtraLarge'', ''Padding''] |
+    None = ''Default'', targetWidth: ~typing.Literal[''VeryNarrow'', ''Narrow'', ''Standard'',
+    ''Wide'', ''atLeast:VeryNarrow'', ''atMost:VeryNarrow'', ''atLeast:Narrow'', ''atMost:Narrow'',
+    ''atLeast:Standard'', ''atMost:Standard'', ''atLeast:Wide'', ''atMost:Wide'']
+    | None = None, isSortKey: bool | None = False, label: str | None = None, isRequired:
+    bool | None = False, errorMessage: str | None = None, valueChangedAction: ~microsoft_teams.cards.core.Action
+    | None = None, value: float | None = None, max: float | None = 5, allowHalfSteps:
+    bool | None = False, size: ~typing.Literal[''Medium'', ''Large''] | None = ''Large'',
+    color: ~typing.Literal[''Neutral'', ''Marigold''] | None = ''Neutral'', gridArea:
+    str | None = None, fallback: ~microsoft_teams.cards.core.CardElement | ~typing.Literal[''drop'']
+    | None = None, **extra_data: ~typing.Any)'
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: type
+    defaultValue: Input.Rating
+  - name: id
+    defaultValue: None
+  - name: requires
+    defaultValue: <factory>
+  - name: lang
+    defaultValue: None
+  - name: isVisible
+    defaultValue: 'True'
+  - name: separator
+    defaultValue: 'False'
+  - name: height
+    defaultValue: auto
+  - name: spacing
+    defaultValue: Default
+  - name: targetWidth
+    defaultValue: None
+  - name: isSortKey
+    defaultValue: 'False'
+  - name: label
+    defaultValue: None
+  - name: isRequired
+    defaultValue: 'False'
+  - name: errorMessage
+    defaultValue: None
+  - name: valueChangedAction
+    defaultValue: None
+  - name: value
+    defaultValue: None
+  - name: max
+    defaultValue: '5'
+  - name: allowHalfSteps
+    defaultValue: 'False'
+  - name: size
+    defaultValue: Large
+  - name: color
+    defaultValue: Neutral
+  - name: gridArea
+    defaultValue: None
+  - name: fallback
+    defaultValue: None
+methods:
+- uid: microsoft_teams.cards.core.RatingInput.with_allow_half_steps
+  name: with_allow_half_steps
+  signature: 'with_allow_half_steps(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_color
+  name: with_color
+  signature: 'with_color(value: Literal[''Neutral'', ''Marigold'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_error_message
+  name: with_error_message
+  signature: 'with_error_message(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_fallback
+  name: with_fallback
+  signature: 'with_fallback(value: CardElement | Literal[''drop'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_grid_area
+  name: with_grid_area
+  signature: 'with_grid_area(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_height
+  name: with_height
+  signature: 'with_height(value: Literal[''auto'', ''stretch'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_id
+  name: with_id
+  signature: 'with_id(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_is_required
+  name: with_is_required
+  signature: 'with_is_required(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_is_sort_key
+  name: with_is_sort_key
+  signature: 'with_is_sort_key(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_is_visible
+  name: with_is_visible
+  signature: 'with_is_visible(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_key
+  name: with_key
+  signature: 'with_key(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_label
+  name: with_label
+  signature: 'with_label(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_lang
+  name: with_lang
+  signature: 'with_lang(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_max
+  name: with_max
+  signature: 'with_max(value: float) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_requires
+  name: with_requires
+  signature: 'with_requires(value: HostCapabilities | Dict[str, Any]) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_separator
+  name: with_separator
+  signature: 'with_separator(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_size
+  name: with_size
+  signature: 'with_size(value: Literal[''Medium'', ''Large'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_spacing
+  name: with_spacing
+  signature: 'with_spacing(value: Literal[''None'', ''ExtraSmall'', ''Small'', ''Default'',
+    ''Medium'', ''Large'', ''ExtraLarge'', ''Padding'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_target_width
+  name: with_target_width
+  signature: 'with_target_width(value: Literal[''VeryNarrow'', ''Narrow'', ''Standard'',
+    ''Wide'', ''atLeast:VeryNarrow'', ''atMost:VeryNarrow'', ''atLeast:Narrow'', ''atMost:Narrow'',
+    ''atLeast:Standard'', ''atMost:Standard'', ''atLeast:Wide'', ''atMost:Wide''])
+    -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_value
+  name: with_value
+  signature: 'with_value(value: float) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RatingInput.with_value_changed_action
+  name: with_value_changed_action
+  signature: 'with_value_changed_action(value: Action) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.cards.core.RatingInput.allow_half_steps
+  name: allow_half_steps
+  summary: Controls if the user can select half stars.
+  signature: 'allow_half_steps: bool | None'
+- uid: microsoft_teams.cards.core.RatingInput.color
+  name: color
+  summary: The color of the stars.
+  signature: 'color: Literal[''Neutral'', ''Marigold''] | None'
+- uid: microsoft_teams.cards.core.RatingInput.error_message
+  name: error_message
+  summary: input-validation) for more details.
+  signature: 'error_message: str | None'
+- uid: microsoft_teams.cards.core.RatingInput.fallback
+  name: fallback
+  summary: An alternate element to render if the type of this one is unsupported or
+    if the host application doesn't support all the capabilities specified in the
+    requires property.
+  signature: 'fallback: CardElement | Literal[''drop''] | None'
+- uid: microsoft_teams.cards.core.RatingInput.grid_area
+  name: grid_area
+  summary: The area of a Layout.AreaGrid layout in which an element should be displayed.
+  signature: 'grid_area: str | None'
+- uid: microsoft_teams.cards.core.RatingInput.height
+  name: height
+  summary: The height of the element. When set to stretch, the element will use the
+    remaining vertical space in its container.
+  signature: 'height: Literal[''auto'', ''stretch''] | None'
+- uid: microsoft_teams.cards.core.RatingInput.id
+  name: id
+  summary: A unique identifier for the element or action. Input elements must have
+    an id, otherwise they will not be validated and their values will not be sent
+    to the Bot.
+  signature: 'id: str | None'
+- uid: microsoft_teams.cards.core.RatingInput.is_required
+  name: is_required
+  summary: input-validation) for more details.
+  signature: 'is_required: bool | None'
+- uid: microsoft_teams.cards.core.RatingInput.is_sort_key
+  name: is_sort_key
+  summary: Controls whether the element should be used as a sort key by elements that
+    allow sorting across a collection of elements.
+  signature: 'is_sort_key: bool | None'
+- uid: microsoft_teams.cards.core.RatingInput.is_visible
+  name: is_visible
+  summary: Controls the visibility of the element.
+  signature: 'is_visible: bool | None'
+- uid: microsoft_teams.cards.core.RatingInput.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.core.RatingInput.label
+  name: label
+  summary: 'The label of the input.
+
+
+    A label should **always** be provided to ensure the best user experience especially
+    for users of assistive technology.'
+  signature: 'label: str | None'
+- uid: microsoft_teams.cards.core.RatingInput.lang
+  name: lang
+  summary: The locale associated with the element.
+  signature: 'lang: str | None'
+- uid: microsoft_teams.cards.core.RatingInput.max
+  name: max
+  summary: The number of stars to display.
+  signature: 'max: float | None'
+- uid: microsoft_teams.cards.core.RatingInput.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.core.RatingInput.requires
+  name: requires
+  summary: A list of capabilities the element requires the host application to support.
+    If the host application doesn't support at least one of the listed capabilities,
+    the element is not rendered (or its fallback is rendered if provided).
+  signature: 'requires: HostCapabilities | Dict[str, Any] | None'
+- uid: microsoft_teams.cards.core.RatingInput.separator
+  name: separator
+  summary: Controls whether a separator line should be displayed above the element
+    to visually separate it from the previous element. No separator will be displayed
+    for the first element in a container, even if this property is set to true.
+  signature: 'separator: bool | None'
+- uid: microsoft_teams.cards.core.RatingInput.size
+  name: size
+  summary: The size of the stars.
+  signature: 'size: Literal[''Medium'', ''Large''] | None'
+- uid: microsoft_teams.cards.core.RatingInput.spacing
+  name: spacing
+  summary: Controls the amount of space between this element and the previous one.
+    No space will be added for the first element in a container.
+  signature: 'spacing: Literal[''None'', ''ExtraSmall'', ''Small'', ''Default'', ''Medium'',
+    ''Large'', ''ExtraLarge'', ''Padding''] | None'
+- uid: microsoft_teams.cards.core.RatingInput.target_width
+  name: target_width
+  summary: responsive-layout).
+  signature: 'target_width: Literal[''VeryNarrow'', ''Narrow'', ''Standard'', ''Wide'',
+    ''atLeast:VeryNarrow'', ''atMost:VeryNarrow'', ''atLeast:Narrow'', ''atMost:Narrow'',
+    ''atLeast:Standard'', ''atMost:Standard'', ''atLeast:Wide'', ''atMost:Wide'']
+    | None'
+- uid: microsoft_teams.cards.core.RatingInput.type
+  name: type
+  summary: Must be **Input.Rating**.
+  signature: 'type: Literal[''Input.Rating'']'
+- uid: microsoft_teams.cards.core.RatingInput.value
+  name: value
+  summary: The default value of the input.
+  signature: 'value: float | None'
+- uid: microsoft_teams.cards.core.RatingInput.value_changed_action
+  name: value_changed_action
+  summary: An Action.ResetInputs action that will be executed when the value of the
+    input changes.
+  signature: 'value_changed_action: Action | None'

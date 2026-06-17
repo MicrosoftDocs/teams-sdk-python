@@ -1,0 +1,60 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.plugins.plugin_activity_response_event.PluginActivityResponseEvent
+name: PluginActivityResponseEvent
+fullName: microsoft_teams.apps.plugins.plugin_activity_response_event.PluginActivityResponseEvent
+module: microsoft_teams.apps.plugins.plugin_activity_response_event
+summary: 'Event emitted before an activity response is sent
+
+
+  Create new instance of PluginActivityResponseEvent(activity, conversation_ref, response)'
+constructor:
+  syntax: 'PluginActivityResponseEvent(activity: TypingActivity | CommandSendActivity
+    | CommandResultActivity | ConversationUpdateActivity | MessageActivity | MessageDeleteActivity
+    | MessageReactionActivity | MessageUpdateActivity | ReadReceiptEventActivity |
+    MeetingStartEventActivity | MeetingEndEventActivity | MeetingParticipantJoinEventActivity
+    | MeetingParticipantLeaveEventActivity | FileConsentInvokeActivity | ExecuteActionInvokeActivity
+    | MessageExtensionAnonQueryLinkInvokeActivity | MessageExtensionCardButtonClickedInvokeActivity
+    | MessageExtensionFetchTaskInvokeActivity | MessageExtensionQueryInvokeActivity
+    | MessageExtensionQueryLinkInvokeActivity | MessageExtensionQuerySettingUrlInvokeActivity
+    | MessageExtensionSelectItemInvokeActivity | MessageExtensionSettingInvokeActivity
+    | MessageExtensionSubmitActionInvokeActivity | ConfigFetchInvokeActivity | ConfigSubmitInvokeActivity
+    | TabFetchInvokeActivity | TabSubmitInvokeActivity | TaskFetchInvokeActivity |
+    TaskSubmitInvokeActivity | MessageFetchTaskInvokeActivity | MessageSubmitActionInvokeActivity
+    | HandoffActionInvokeActivity | SignInTokenExchangeInvokeActivity | SignInVerifyStateInvokeActivity
+    | SignInFailureInvokeActivity | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity
+    | InstalledActivity | UninstalledActivity, conversation_ref: ConversationReference,
+    response: InvokeResponse[Any] | None)'
+  parameters:
+  - name: activity
+    isRequired: true
+  - name: conversation_ref
+    isRequired: true
+  - name: response
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.plugins.plugin_activity_response_event.PluginActivityResponseEvent.activity
+  name: activity
+  summary: The inbound request activity payload
+  signature: 'activity: TypingActivity | CommandSendActivity | CommandResultActivity
+    | ConversationUpdateActivity | MessageActivity | MessageDeleteActivity | MessageReactionActivity
+    | MessageUpdateActivity | ReadReceiptEventActivity | MeetingStartEventActivity
+    | MeetingEndEventActivity | MeetingParticipantJoinEventActivity | MeetingParticipantLeaveEventActivity
+    | FileConsentInvokeActivity | ExecuteActionInvokeActivity | MessageExtensionAnonQueryLinkInvokeActivity
+    | MessageExtensionCardButtonClickedInvokeActivity | MessageExtensionFetchTaskInvokeActivity
+    | MessageExtensionQueryInvokeActivity | MessageExtensionQueryLinkInvokeActivity
+    | MessageExtensionQuerySettingUrlInvokeActivity | MessageExtensionSelectItemInvokeActivity
+    | MessageExtensionSettingInvokeActivity | MessageExtensionSubmitActionInvokeActivity
+    | ConfigFetchInvokeActivity | ConfigSubmitInvokeActivity | TabFetchInvokeActivity
+    | TabSubmitInvokeActivity | TaskFetchInvokeActivity | TaskSubmitInvokeActivity
+    | MessageFetchTaskInvokeActivity | MessageSubmitActionInvokeActivity | HandoffActionInvokeActivity
+    | SignInTokenExchangeInvokeActivity | SignInVerifyStateInvokeActivity | SignInFailureInvokeActivity
+    | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity | InstalledActivity
+    | UninstalledActivity'
+- uid: microsoft_teams.apps.plugins.plugin_activity_response_event.PluginActivityResponseEvent.conversation_ref
+  name: conversation_ref
+  summary: The conversation reference for the activity
+  signature: 'conversation_ref: ConversationReference'
+- uid: microsoft_teams.apps.plugins.plugin_activity_response_event.PluginActivityResponseEvent.response
+  name: response
+  summary: The response
+  signature: 'response: InvokeResponse[Any] | None'

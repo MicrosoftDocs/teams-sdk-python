@@ -1,0 +1,101 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.core.IconInfo
+name: IconInfo
+fullName: microsoft_teams.cards.core.IconInfo
+module: microsoft_teams.cards.core
+summary: 'Defines information about a Fluent icon and how it should be rendered.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'IconInfo(*, key: str | None = None, name: str | None = None, size: Literal[''xxSmall'',
+    ''xSmall'', ''Small'', ''Standard'', ''Medium'', ''Large'', ''xLarge'', ''xxLarge'']
+    | None = ''xSmall'', style: Literal[''Regular'', ''Filled''] | None = ''Regular'',
+    color: Literal[''Default'', ''Dark'', ''Light'', ''Accent'', ''Good'', ''Warning'',
+    ''Attention''] | None = ''Default'', **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: name
+    defaultValue: None
+  - name: size
+    defaultValue: xSmall
+  - name: style
+    defaultValue: Regular
+  - name: color
+    defaultValue: Default
+methods:
+- uid: microsoft_teams.cards.core.IconInfo.with_color
+  name: with_color
+  signature: 'with_color(value: Literal[''Default'', ''Dark'', ''Light'', ''Accent'',
+    ''Good'', ''Warning'', ''Attention'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.IconInfo.with_key
+  name: with_key
+  signature: 'with_key(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.IconInfo.with_name
+  name: with_name
+  signature: 'with_name(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.IconInfo.with_size
+  name: with_size
+  signature: 'with_size(value: Literal[''xxSmall'', ''xSmall'', ''Small'', ''Standard'',
+    ''Medium'', ''Large'', ''xLarge'', ''xxLarge'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.IconInfo.with_style
+  name: with_style
+  signature: 'with_style(value: Literal[''Regular'', ''Filled'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.cards.core.IconInfo.color
+  name: color
+  summary: The color of the icon.
+  signature: 'color: Literal[''Default'', ''Dark'', ''Light'', ''Accent'', ''Good'',
+    ''Warning'', ''Attention''] | None'
+- uid: microsoft_teams.cards.core.IconInfo.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.core.IconInfo.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.core.IconInfo.name
+  name: name
+  summary: The name of the icon to display.
+  signature: 'name: str | None'
+- uid: microsoft_teams.cards.core.IconInfo.size
+  name: size
+  summary: The size of the icon.
+  signature: 'size: Literal[''xxSmall'', ''xSmall'', ''Small'', ''Standard'', ''Medium'',
+    ''Large'', ''xLarge'', ''xxLarge''] | None'
+- uid: microsoft_teams.cards.core.IconInfo.style
+  name: style
+  summary: The style of the icon.
+  signature: 'style: Literal[''Regular'', ''Filled''] | None'

@@ -1,0 +1,15 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.StartEvent
+name: StartEvent
+fullName: microsoft_teams.apps.StartEvent
+module: microsoft_teams.apps
+summary: Event emitted when the app starts.
+constructor:
+  syntax: 'StartEvent(port: int)'
+  parameters:
+  - name: port
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.StartEvent.port
+  name: port
+  signature: 'port: int'

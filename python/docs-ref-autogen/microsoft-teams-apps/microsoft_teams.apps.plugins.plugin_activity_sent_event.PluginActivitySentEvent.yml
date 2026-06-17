@@ -1,0 +1,25 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.plugins.plugin_activity_sent_event.PluginActivitySentEvent
+name: PluginActivitySentEvent
+fullName: microsoft_teams.apps.plugins.plugin_activity_sent_event.PluginActivitySentEvent
+module: microsoft_teams.apps.plugins.plugin_activity_sent_event
+summary: 'Event emitted when an activity is sent.
+
+
+  Create new instance of PluginActivitySentEvent(activity, conversation_ref)'
+constructor:
+  syntax: 'PluginActivitySentEvent(activity: SentActivity, conversation_ref: ConversationReference)'
+  parameters:
+  - name: activity
+    isRequired: true
+  - name: conversation_ref
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.plugins.plugin_activity_sent_event.PluginActivitySentEvent.activity
+  name: activity
+  summary: The sent activity
+  signature: 'activity: SentActivity'
+- uid: microsoft_teams.apps.plugins.plugin_activity_sent_event.PluginActivitySentEvent.conversation_ref
+  name: conversation_ref
+  summary: The conversation reference for the activity
+  signature: 'conversation_ref: ConversationReference'

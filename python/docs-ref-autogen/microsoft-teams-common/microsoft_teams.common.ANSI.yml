@@ -1,0 +1,66 @@
+### YamlMime:PythonEnum
+uid: microsoft_teams.common.ANSI
+name: ANSI
+fullName: microsoft_teams.common.ANSI
+module: microsoft_teams.common
+fields:
+- name: BACKGROUND_BLACK
+  uid: microsoft_teams.common.ANSI.BACKGROUND_BLACK
+- name: BACKGROUND_BLUE
+  uid: microsoft_teams.common.ANSI.BACKGROUND_BLUE
+- name: BACKGROUND_CYAN
+  uid: microsoft_teams.common.ANSI.BACKGROUND_CYAN
+- name: BACKGROUND_DEFAULT
+  uid: microsoft_teams.common.ANSI.BACKGROUND_DEFAULT
+- name: BACKGROUND_GREEN
+  uid: microsoft_teams.common.ANSI.BACKGROUND_GREEN
+- name: BACKGROUND_MAGENTA
+  uid: microsoft_teams.common.ANSI.BACKGROUND_MAGENTA
+- name: BACKGROUND_RED
+  uid: microsoft_teams.common.ANSI.BACKGROUND_RED
+- name: BACKGROUND_RESET
+  uid: microsoft_teams.common.ANSI.BACKGROUND_RESET
+- name: BACKGROUND_WHITE
+  uid: microsoft_teams.common.ANSI.BACKGROUND_WHITE
+- name: BACKGROUND_YELLOW
+  uid: microsoft_teams.common.ANSI.BACKGROUND_YELLOW
+- name: BOLD
+  uid: microsoft_teams.common.ANSI.BOLD
+- name: BOLD_RESET
+  uid: microsoft_teams.common.ANSI.BOLD_RESET
+- name: FOREGROUND_BLACK
+  uid: microsoft_teams.common.ANSI.FOREGROUND_BLACK
+- name: FOREGROUND_BLUE
+  uid: microsoft_teams.common.ANSI.FOREGROUND_BLUE
+- name: FOREGROUND_CYAN
+  uid: microsoft_teams.common.ANSI.FOREGROUND_CYAN
+- name: FOREGROUND_DEFAULT
+  uid: microsoft_teams.common.ANSI.FOREGROUND_DEFAULT
+- name: FOREGROUND_GRAY
+  uid: microsoft_teams.common.ANSI.FOREGROUND_GRAY
+- name: FOREGROUND_GREEN
+  uid: microsoft_teams.common.ANSI.FOREGROUND_GREEN
+- name: FOREGROUND_MAGENTA
+  uid: microsoft_teams.common.ANSI.FOREGROUND_MAGENTA
+- name: FOREGROUND_RED
+  uid: microsoft_teams.common.ANSI.FOREGROUND_RED
+- name: FOREGROUND_RESET
+  uid: microsoft_teams.common.ANSI.FOREGROUND_RESET
+- name: FOREGROUND_WHITE
+  uid: microsoft_teams.common.ANSI.FOREGROUND_WHITE
+- name: FOREGROUND_YELLOW
+  uid: microsoft_teams.common.ANSI.FOREGROUND_YELLOW
+- name: ITALIC
+  uid: microsoft_teams.common.ANSI.ITALIC
+- name: ITALIC_RESET
+  uid: microsoft_teams.common.ANSI.ITALIC_RESET
+- name: RESET
+  uid: microsoft_teams.common.ANSI.RESET
+- name: STRIKE
+  uid: microsoft_teams.common.ANSI.STRIKE
+- name: STRIKE_RESET
+  uid: microsoft_teams.common.ANSI.STRIKE_RESET
+- name: UNDERLINE
+  uid: microsoft_teams.common.ANSI.UNDERLINE
+- name: UNDERLINE_RESET
+  uid: microsoft_teams.common.ANSI.UNDERLINE_RESET

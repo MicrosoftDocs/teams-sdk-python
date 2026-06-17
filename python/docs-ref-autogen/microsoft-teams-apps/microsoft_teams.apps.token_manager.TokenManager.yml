@@ -1,0 +1,33 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.token_manager.TokenManager
+name: TokenManager
+fullName: microsoft_teams.apps.token_manager.TokenManager
+module: microsoft_teams.apps.token_manager
+summary: Manages authentication tokens for the Teams application.
+constructor:
+  syntax: 'TokenManager(credentials: ClientCredentials | TokenCredentials | ManagedIdentityCredentials
+    | FederatedIdentityCredentials | None, cloud: CloudEnvironment | None = None)'
+  parameters:
+  - name: credentials
+    isRequired: true
+  - name: cloud
+    defaultValue: None
+methods:
+- uid: microsoft_teams.apps.token_manager.TokenManager.get_bot_token
+  name: get_bot_token
+  summary: Refresh the bot authentication token.
+  signature: async get_bot_token() -> TokenProtocol | None
+- uid: microsoft_teams.apps.token_manager.TokenManager.get_graph_token
+  name: get_graph_token
+  summary: Get or refresh a Graph API token.
+  signature: 'async get_graph_token(tenant_id: str | None = None) -> TokenProtocol
+    | None'
+  parameters:
+  - name: tenant_id
+    description: If provided, gets a tenant-specific token. Otherwise uses app's default.
+    defaultValue: None
+  - name: force
+    description: Force refresh even if token is not expired
+    isRequired: true
+  return:
+    description: The graph token or None if not available

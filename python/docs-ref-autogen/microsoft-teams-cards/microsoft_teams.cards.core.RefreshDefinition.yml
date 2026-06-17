@@ -1,0 +1,74 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.core.RefreshDefinition
+name: RefreshDefinition
+fullName: microsoft_teams.cards.core.RefreshDefinition
+module: microsoft_teams.cards.core
+summary: 'Defines how a card can be refreshed by making a request to the target Bot.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'RefreshDefinition(*, key: str | None = None, action: ExecuteAction | None
+    = None, userIds: List[str] | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: action
+    defaultValue: None
+  - name: userIds
+    defaultValue: None
+methods:
+- uid: microsoft_teams.cards.core.RefreshDefinition.with_action
+  name: with_action
+  signature: 'with_action(value: ExecuteAction) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RefreshDefinition.with_key
+  name: with_key
+  signature: 'with_key(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.RefreshDefinition.with_user_ids
+  name: with_user_ids
+  signature: 'with_user_ids(value: List[str]) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.cards.core.RefreshDefinition.action
+  name: action
+  summary: The Action.Execute action to invoke to refresh the card.
+  signature: 'action: ExecuteAction | None'
+- uid: microsoft_teams.cards.core.RefreshDefinition.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.core.RefreshDefinition.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.core.RefreshDefinition.user_ids
+  name: user_ids
+  summary: The list of user Ids for which the card will be automatically refreshed.
+    In Teams, in chats or channels with more than 60 users, the card will automatically
+    refresh only for users specified in the userIds list. Other users will have to
+    manually click on a "refresh" button. In contexts with fewer than 60 users, the
+    card will automatically refresh for all users.
+  signature: 'user_ids: List[str] | None'

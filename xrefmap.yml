@@ -379,10 +379,6 @@ references:
   href: https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.interpreter.BrokenInterpreterPool
   name: BrokenInterpreterPool
   uid: concurrent.futures.interpreter.BrokenInterpreterPool
-- fullName: concurrent.futures.interpreter.ExecutionFailed
-  href: https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.interpreter.ExecutionFailed
-  name: ExecutionFailed
-  uid: concurrent.futures.interpreter.ExecutionFailed
 - fullName: concurrent.futures.process.BrokenProcessPool
   href: https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.process.BrokenProcessPool
   name: BrokenProcessPool
@@ -2059,6 +2055,14 @@ references:
   href: https://docs.python.org/3/library/ctypes.html#ctypes.Array._type_
   name: _type_
   uid: ctypes.Array._type_
+- fullName: ctypes.CDLL._handle
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.CDLL._handle
+  name: _handle
+  uid: ctypes.CDLL._handle
+- fullName: ctypes.CDLL._name
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.CDLL._name
+  name: _name
+  uid: ctypes.CDLL._name
 - fullName: ctypes.CField.bit_offset
   href: https://docs.python.org/3/library/ctypes.html#ctypes.CField.bit_offset
   name: bit_offset
@@ -2111,14 +2115,6 @@ references:
   href: https://docs.python.org/3/library/ctypes.html#ctypes.COMError.text
   name: text
   uid: ctypes.COMError.text
-- fullName: ctypes.PyDLL._handle
-  href: https://docs.python.org/3/library/ctypes.html#ctypes.PyDLL._handle
-  name: _handle
-  uid: ctypes.PyDLL._handle
-- fullName: ctypes.PyDLL._name
-  href: https://docs.python.org/3/library/ctypes.html#ctypes.PyDLL._name
-  name: _name
-  uid: ctypes.PyDLL._name
 - fullName: ctypes.Structure._align_
   href: https://docs.python.org/3/library/ctypes.html#ctypes.Structure._align_
   name: _align_
@@ -2175,6 +2171,10 @@ references:
   href: https://docs.python.org/3/library/ctypes.html#ctypes._Pointer.contents
   name: contents
   uid: ctypes._Pointer.contents
+- fullName: ctypes._SimpleCData._type_
+  href: https://docs.python.org/3/library/ctypes.html#ctypes._SimpleCData._type_
+  name: _type_
+  uid: ctypes._SimpleCData._type_
 - fullName: ctypes._SimpleCData.value
   href: https://docs.python.org/3/library/ctypes.html#ctypes._SimpleCData.value
   name: value
@@ -2835,6 +2835,10 @@ references:
   href: https://docs.python.org/3/reference/datamodel.html#function.__annotations__
   name: __annotations__
   uid: function.__annotations__
+- fullName: function.__builtins__
+  href: https://docs.python.org/3/reference/datamodel.html#function.__builtins__
+  name: __builtins__
+  uid: function.__builtins__
 - fullName: function.__closure__
   href: https://docs.python.org/3/reference/datamodel.html#function.__closure__
   name: __closure__
@@ -3247,10 +3251,6 @@ references:
   href: https://docs.python.org/3/library/importlib.html#importlib.abc.FileLoader.path
   name: path
   uid: importlib.abc.FileLoader.path
-- fullName: importlib.abc.Traversable.name
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.Traversable.name
-  name: name
-  uid: importlib.abc.Traversable.name
 - fullName: importlib.machinery.AppleFrameworkLoader.name
   href: https://docs.python.org/3/library/importlib.html#importlib.machinery.AppleFrameworkLoader.name
   name: name
@@ -5459,6 +5459,10 @@ references:
   href: https://docs.python.org/3/library/sys.html#sys.hash_info.algorithm
   name: algorithm
   uid: sys.hash_info.algorithm
+- fullName: sys.hash_info.cutoff
+  href: https://docs.python.org/3/library/sys.html#sys.hash_info.cutoff
+  name: cutoff
+  uid: sys.hash_info.cutoff
 - fullName: sys.hash_info.hash_bits
   href: https://docs.python.org/3/library/sys.html#sys.hash_info.hash_bits
   name: hash_bits
@@ -6851,18 +6855,18 @@ references:
   href: https://docs.python.org/3/library/__future__.html#future__._Feature.getOptionalRelease
   name: getOptionalRelease
   uid: __future__._Feature.getOptionalRelease
-- fullName: _thread.lock.acquire
-  href: https://docs.python.org/3/library/_thread.html#thread.lock.acquire
+- fullName: _thread.LockType.acquire
+  href: https://docs.python.org/3/library/_thread.html#thread.LockType.acquire
   name: acquire
-  uid: _thread.lock.acquire
-- fullName: _thread.lock.locked
-  href: https://docs.python.org/3/library/_thread.html#thread.lock.locked
+  uid: _thread.LockType.acquire
+- fullName: _thread.LockType.locked
+  href: https://docs.python.org/3/library/_thread.html#thread.LockType.locked
   name: locked
-  uid: _thread.lock.locked
-- fullName: _thread.lock.release
-  href: https://docs.python.org/3/library/_thread.html#thread.lock.release
+  uid: _thread.LockType.locked
+- fullName: _thread.LockType.release
+  href: https://docs.python.org/3/library/_thread.html#thread.LockType.release
   name: release
-  uid: _thread.lock.release
+  uid: _thread.LockType.release
 - fullName: _tkinter.Widget.tk.createfilehandler
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Widget.tk.createfilehandler
   name: createfilehandler
@@ -7919,10 +7923,10 @@ references:
   href: https://docs.python.org/3/library/bdb.html#bdb.Bdb.get_stack
   name: get_stack
   uid: bdb.Bdb.get_stack
-- fullName: bdb.Bdb.is_skipped_line
-  href: https://docs.python.org/3/library/bdb.html#bdb.Bdb.is_skipped_line
-  name: is_skipped_line
-  uid: bdb.Bdb.is_skipped_line
+- fullName: bdb.Bdb.is_skipped_module
+  href: https://docs.python.org/3/library/bdb.html#bdb.Bdb.is_skipped_module
+  name: is_skipped_module
+  uid: bdb.Bdb.is_skipped_module
 - fullName: bdb.Bdb.reset
   href: https://docs.python.org/3/library/bdb.html#bdb.Bdb.reset
   name: reset
@@ -11123,10 +11127,26 @@ references:
   href: https://docs.python.org/3/library/enum.html#enum.Flag.__and__
   name: __and__
   uid: enum.Flag.__and__
+- fullName: enum.Flag.__bool__
+  href: https://docs.python.org/3/library/enum.html#enum.Flag.__bool__
+  name: __bool__
+  uid: enum.Flag.__bool__
 - fullName: enum.Flag.__contains__
   href: https://docs.python.org/3/library/enum.html#enum.Flag.__contains__
   name: __contains__
   uid: enum.Flag.__contains__
+- fullName: enum.Flag.__invert__
+  href: https://docs.python.org/3/library/enum.html#enum.Flag.__invert__
+  name: __invert__
+  uid: enum.Flag.__invert__
+- fullName: enum.Flag.__iter__
+  href: https://docs.python.org/3/library/enum.html#enum.Flag.__iter__
+  name: __iter__
+  uid: enum.Flag.__iter__
+- fullName: enum.Flag.__len__
+  href: https://docs.python.org/3/library/enum.html#enum.Flag.__len__
+  name: __len__
+  uid: enum.Flag.__len__
 - fullName: enum.Flag.__or__
   href: https://docs.python.org/3/library/enum.html#enum.Flag.__or__
   name: __or__
@@ -11139,6 +11159,18 @@ references:
   href: https://docs.python.org/3/library/enum.html#enum.Flag._numeric_repr_
   name: _numeric_repr_
   uid: enum.Flag._numeric_repr_
+- fullName: file.close
+  href: https://docs.python.org/3/reference/datamodel.html#file.close
+  name: close
+  uid: file.close
+- fullName: file.read
+  href: https://docs.python.org/3/reference/datamodel.html#file.read
+  name: read
+  uid: file.read
+- fullName: file.write
+  href: https://docs.python.org/3/reference/datamodel.html#file.write
+  name: write
+  uid: file.write
 - fullName: filecmp.dircmp.report
   href: https://docs.python.org/3/library/filecmp.html#filecmp.dircmp.report
   name: report
@@ -11215,14 +11247,6 @@ references:
   href: https://docs.python.org/3/reference/datamodel.html#frame.clear
   name: clear
   uid: frame.clear
-- fullName: frozenset.add
-  href: https://docs.python.org/3/library/stdtypes.html#frozenset.add
-  name: add
-  uid: frozenset.add
-- fullName: frozenset.clear
-  href: https://docs.python.org/3/library/stdtypes.html#frozenset.clear
-  name: clear
-  uid: frozenset.clear
 - fullName: frozenset.copy
   href: https://docs.python.org/3/library/stdtypes.html#frozenset.copy
   name: copy
@@ -11231,22 +11255,10 @@ references:
   href: https://docs.python.org/3/library/stdtypes.html#frozenset.difference
   name: difference
   uid: frozenset.difference
-- fullName: frozenset.difference_update
-  href: https://docs.python.org/3/library/stdtypes.html#frozenset.difference_update
-  name: difference_update
-  uid: frozenset.difference_update
-- fullName: frozenset.discard
-  href: https://docs.python.org/3/library/stdtypes.html#frozenset.discard
-  name: discard
-  uid: frozenset.discard
 - fullName: frozenset.intersection
   href: https://docs.python.org/3/library/stdtypes.html#frozenset.intersection
   name: intersection
   uid: frozenset.intersection
-- fullName: frozenset.intersection_update
-  href: https://docs.python.org/3/library/stdtypes.html#frozenset.intersection_update
-  name: intersection_update
-  uid: frozenset.intersection_update
 - fullName: frozenset.isdisjoint
   href: https://docs.python.org/3/library/stdtypes.html#frozenset.isdisjoint
   name: isdisjoint
@@ -11259,30 +11271,14 @@ references:
   href: https://docs.python.org/3/library/stdtypes.html#frozenset.issuperset
   name: issuperset
   uid: frozenset.issuperset
-- fullName: frozenset.pop
-  href: https://docs.python.org/3/library/stdtypes.html#frozenset.pop
-  name: pop
-  uid: frozenset.pop
-- fullName: frozenset.remove
-  href: https://docs.python.org/3/library/stdtypes.html#frozenset.remove
-  name: remove
-  uid: frozenset.remove
 - fullName: frozenset.symmetric_difference
   href: https://docs.python.org/3/library/stdtypes.html#frozenset.symmetric_difference
   name: symmetric_difference
   uid: frozenset.symmetric_difference
-- fullName: frozenset.symmetric_difference_update
-  href: https://docs.python.org/3/library/stdtypes.html#frozenset.symmetric_difference_update
-  name: symmetric_difference_update
-  uid: frozenset.symmetric_difference_update
 - fullName: frozenset.union
   href: https://docs.python.org/3/library/stdtypes.html#frozenset.union
   name: union
   uid: frozenset.union
-- fullName: frozenset.update
-  href: https://docs.python.org/3/library/stdtypes.html#frozenset.update
-  name: update
-  uid: frozenset.update
 - fullName: ftplib.FTP.abort
   href: https://docs.python.org/3/library/ftplib.html#ftplib.FTP.abort
   name: abort
@@ -12191,22 +12187,6 @@ references:
   href: https://docs.python.org/3/library/importlib.html#importlib.abc.ResourceLoader.get_data
   name: get_data
   uid: importlib.abc.ResourceLoader.get_data
-- fullName: importlib.abc.ResourceReader.contents
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.ResourceReader.contents
-  name: contents
-  uid: importlib.abc.ResourceReader.contents
-- fullName: importlib.abc.ResourceReader.is_resource
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.ResourceReader.is_resource
-  name: is_resource
-  uid: importlib.abc.ResourceReader.is_resource
-- fullName: importlib.abc.ResourceReader.open_resource
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.ResourceReader.open_resource
-  name: open_resource
-  uid: importlib.abc.ResourceReader.open_resource
-- fullName: importlib.abc.ResourceReader.resource_path
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.ResourceReader.resource_path
-  name: resource_path
-  uid: importlib.abc.ResourceReader.resource_path
 - fullName: importlib.abc.SourceLoader.exec_module
   href: https://docs.python.org/3/library/importlib.html#importlib.abc.SourceLoader.exec_module
   name: exec_module
@@ -12239,42 +12219,6 @@ references:
   href: https://docs.python.org/3/library/importlib.html#importlib.abc.SourceLoader.set_data
   name: set_data
   uid: importlib.abc.SourceLoader.set_data
-- fullName: importlib.abc.Traversable.__truediv__
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.Traversable.__truediv__
-  name: __truediv__
-  uid: importlib.abc.Traversable.__truediv__
-- fullName: importlib.abc.Traversable.is_dir
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.Traversable.is_dir
-  name: is_dir
-  uid: importlib.abc.Traversable.is_dir
-- fullName: importlib.abc.Traversable.is_file
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.Traversable.is_file
-  name: is_file
-  uid: importlib.abc.Traversable.is_file
-- fullName: importlib.abc.Traversable.iterdir
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.Traversable.iterdir
-  name: iterdir
-  uid: importlib.abc.Traversable.iterdir
-- fullName: importlib.abc.Traversable.joinpath
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.Traversable.joinpath
-  name: joinpath
-  uid: importlib.abc.Traversable.joinpath
-- fullName: importlib.abc.Traversable.open
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.Traversable.open
-  name: open
-  uid: importlib.abc.Traversable.open
-- fullName: importlib.abc.Traversable.read_bytes
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.Traversable.read_bytes
-  name: read_bytes
-  uid: importlib.abc.Traversable.read_bytes
-- fullName: importlib.abc.Traversable.read_text
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.Traversable.read_text
-  name: read_text
-  uid: importlib.abc.Traversable.read_text
-- fullName: importlib.abc.TraversableResources.files
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.TraversableResources.files
-  name: files
-  uid: importlib.abc.TraversableResources.files
 - fullName: importlib.machinery.ExtensionFileLoader.create_module
   href: https://docs.python.org/3/library/importlib.html#importlib.machinery.ExtensionFileLoader.create_module
   name: create_module
@@ -13807,6 +13751,10 @@ references:
   href: https://docs.python.org/3/library/modulefinder.html#modulefinder.ModuleFinder.run_script
   name: run_script
   uid: modulefinder.ModuleFinder.run_script
+- fullName: multiprocessing.BoundedSemaphore.locked
+  href: https://docs.python.org/3/library/multiprocessing.html#multiprocessing.BoundedSemaphore.locked
+  name: locked
+  uid: multiprocessing.BoundedSemaphore.locked
 - fullName: multiprocessing.JoinableQueue.join
   href: https://docs.python.org/3/library/multiprocessing.html#multiprocessing.JoinableQueue.join
   name: join
@@ -13911,6 +13859,14 @@ references:
   href: https://docs.python.org/3/library/multiprocessing.html#multiprocessing.RLock.release
   name: release
   uid: multiprocessing.RLock.release
+- fullName: multiprocessing.Semaphore.get_value
+  href: https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Semaphore.get_value
+  name: get_value
+  uid: multiprocessing.Semaphore.get_value
+- fullName: multiprocessing.Semaphore.locked
+  href: https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Semaphore.locked
+  name: locked
+  uid: multiprocessing.Semaphore.locked
 - fullName: multiprocessing.SimpleQueue.close
   href: https://docs.python.org/3/library/multiprocessing.html#multiprocessing.SimpleQueue.close
   name: close
@@ -15495,6 +15451,74 @@ references:
   href: https://docs.python.org/3/library/stdtypes.html#sequence.reverse
   name: reverse
   uid: sequence.reverse
+- fullName: set.add
+  href: https://docs.python.org/3/library/stdtypes.html#set.add
+  name: add
+  uid: set.add
+- fullName: set.clear
+  href: https://docs.python.org/3/library/stdtypes.html#set.clear
+  name: clear
+  uid: set.clear
+- fullName: set.copy
+  href: https://docs.python.org/3/library/stdtypes.html#set.copy
+  name: copy
+  uid: set.copy
+- fullName: set.difference
+  href: https://docs.python.org/3/library/stdtypes.html#set.difference
+  name: difference
+  uid: set.difference
+- fullName: set.difference_update
+  href: https://docs.python.org/3/library/stdtypes.html#set.difference_update
+  name: difference_update
+  uid: set.difference_update
+- fullName: set.discard
+  href: https://docs.python.org/3/library/stdtypes.html#set.discard
+  name: discard
+  uid: set.discard
+- fullName: set.intersection
+  href: https://docs.python.org/3/library/stdtypes.html#set.intersection
+  name: intersection
+  uid: set.intersection
+- fullName: set.intersection_update
+  href: https://docs.python.org/3/library/stdtypes.html#set.intersection_update
+  name: intersection_update
+  uid: set.intersection_update
+- fullName: set.isdisjoint
+  href: https://docs.python.org/3/library/stdtypes.html#set.isdisjoint
+  name: isdisjoint
+  uid: set.isdisjoint
+- fullName: set.issubset
+  href: https://docs.python.org/3/library/stdtypes.html#set.issubset
+  name: issubset
+  uid: set.issubset
+- fullName: set.issuperset
+  href: https://docs.python.org/3/library/stdtypes.html#set.issuperset
+  name: issuperset
+  uid: set.issuperset
+- fullName: set.pop
+  href: https://docs.python.org/3/library/stdtypes.html#set.pop
+  name: pop
+  uid: set.pop
+- fullName: set.remove
+  href: https://docs.python.org/3/library/stdtypes.html#set.remove
+  name: remove
+  uid: set.remove
+- fullName: set.symmetric_difference
+  href: https://docs.python.org/3/library/stdtypes.html#set.symmetric_difference
+  name: symmetric_difference
+  uid: set.symmetric_difference
+- fullName: set.symmetric_difference_update
+  href: https://docs.python.org/3/library/stdtypes.html#set.symmetric_difference_update
+  name: symmetric_difference_update
+  uid: set.symmetric_difference_update
+- fullName: set.union
+  href: https://docs.python.org/3/library/stdtypes.html#set.union
+  name: union
+  uid: set.union
+- fullName: set.update
+  href: https://docs.python.org/3/library/stdtypes.html#set.update
+  name: update
+  uid: set.update
 - fullName: shelve.Shelf.close
   href: https://docs.python.org/3/library/shelve.html#shelve.Shelf.close
   name: close
@@ -18219,6 +18243,34 @@ references:
   href: https://docs.python.org/3/library/wave.html#wave.Wave_write.close
   name: close
   uid: wave.Wave_write.close
+- fullName: wave.Wave_write.getcompname
+  href: https://docs.python.org/3/library/wave.html#wave.Wave_write.getcompname
+  name: getcompname
+  uid: wave.Wave_write.getcompname
+- fullName: wave.Wave_write.getcomptype
+  href: https://docs.python.org/3/library/wave.html#wave.Wave_write.getcomptype
+  name: getcomptype
+  uid: wave.Wave_write.getcomptype
+- fullName: wave.Wave_write.getframerate
+  href: https://docs.python.org/3/library/wave.html#wave.Wave_write.getframerate
+  name: getframerate
+  uid: wave.Wave_write.getframerate
+- fullName: wave.Wave_write.getnchannels
+  href: https://docs.python.org/3/library/wave.html#wave.Wave_write.getnchannels
+  name: getnchannels
+  uid: wave.Wave_write.getnchannels
+- fullName: wave.Wave_write.getnframes
+  href: https://docs.python.org/3/library/wave.html#wave.Wave_write.getnframes
+  name: getnframes
+  uid: wave.Wave_write.getnframes
+- fullName: wave.Wave_write.getparams
+  href: https://docs.python.org/3/library/wave.html#wave.Wave_write.getparams
+  name: getparams
+  uid: wave.Wave_write.getparams
+- fullName: wave.Wave_write.getsampwidth
+  href: https://docs.python.org/3/library/wave.html#wave.Wave_write.getsampwidth
+  name: getsampwidth
+  uid: wave.Wave_write.getsampwidth
 - fullName: wave.Wave_write.setcomptype
   href: https://docs.python.org/3/library/wave.html#wave.Wave_write.setcomptype
   name: setcomptype
@@ -18815,6 +18867,14 @@ references:
   href: https://docs.python.org/3/library/pyexpat.html#xml.parsers.expat.xmlparser.SetBase
   name: SetBase
   uid: xml.parsers.expat.xmlparser.SetBase
+- fullName: xml.parsers.expat.xmlparser.SetBillionLaughsAttackProtectionActivationThreshold
+  href: https://docs.python.org/3/library/pyexpat.html#xml.parsers.expat.xmlparser.SetBillionLaughsAttackProtectionActivationThreshold
+  name: SetBillionLaughsAttackProtectionActivationThreshold
+  uid: xml.parsers.expat.xmlparser.SetBillionLaughsAttackProtectionActivationThreshold
+- fullName: xml.parsers.expat.xmlparser.SetBillionLaughsAttackProtectionMaximumAmplification
+  href: https://docs.python.org/3/library/pyexpat.html#xml.parsers.expat.xmlparser.SetBillionLaughsAttackProtectionMaximumAmplification
+  name: SetBillionLaughsAttackProtectionMaximumAmplification
+  uid: xml.parsers.expat.xmlparser.SetBillionLaughsAttackProtectionMaximumAmplification
 - fullName: xml.parsers.expat.xmlparser.SetParamEntityParsing
   href: https://docs.python.org/3/library/pyexpat.html#xml.parsers.expat.xmlparser.SetParamEntityParsing
   name: SetParamEntityParsing
@@ -19443,10 +19503,6 @@ references:
   href: https://docs.python.org/3/library/__future__.html#future__.with_statement
   name: with_statement
   uid: __future__.with_statement
-- fullName: _thread.LockType
-  href: https://docs.python.org/3/library/_thread.html#thread.LockType
-  name: LockType
-  uid: _thread.LockType
 - fullName: _thread.TIMEOUT_MAX
   href: https://docs.python.org/3/library/_thread.html#thread.TIMEOUT_MAX
   name: TIMEOUT_MAX
@@ -19719,6 +19775,38 @@ references:
   href: https://docs.python.org/3/library/csv.html#csv.QUOTE_STRINGS
   name: QUOTE_STRINGS
   uid: csv.QUOTE_STRINGS
+- fullName: ctypes.DEFAULT_MODE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.DEFAULT_MODE
+  name: DEFAULT_MODE
+  uid: ctypes.DEFAULT_MODE
+- fullName: ctypes.RTLD_GLOBAL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.RTLD_GLOBAL
+  name: RTLD_GLOBAL
+  uid: ctypes.RTLD_GLOBAL
+- fullName: ctypes.RTLD_LOCAL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.RTLD_LOCAL
+  name: RTLD_LOCAL
+  uid: ctypes.RTLD_LOCAL
+- fullName: ctypes.cdll
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.cdll
+  name: cdll
+  uid: ctypes.cdll
+- fullName: ctypes.oledll
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.oledll
+  name: oledll
+  uid: ctypes.oledll
+- fullName: ctypes.pydll
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.pydll
+  name: pydll
+  uid: ctypes.pydll
+- fullName: ctypes.pythonapi
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.pythonapi
+  name: pythonapi
+  uid: ctypes.pythonapi
+- fullName: ctypes.windll
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.windll
+  name: windll
+  uid: ctypes.windll
 - fullName: curses.ACS_BBSS
   href: https://docs.python.org/3/library/curses.html#curses.ACS_BBSS
   name: ACS_BBSS
@@ -20435,10 +20523,6 @@ references:
   href: https://docs.python.org/3/library/curses.html#curses.OK
   name: OK
   uid: curses.OK
-- fullName: curses.__version__
-  href: https://docs.python.org/3/library/curses.html#curses.__version__
-  name: __version__
-  uid: curses.__version__
 - fullName: curses.ascii.ACK
   href: https://docs.python.org/3/library/curses.ascii.html#curses.ascii.ACK
   name: ACK
@@ -23339,6 +23423,10 @@ references:
   href: https://docs.python.org/3/library/resource.html#resource.RUSAGE_THREAD
   name: RUSAGE_THREAD
   uid: resource.RUSAGE_THREAD
+- fullName: secrets.DEFAULT_ENTROPY
+  href: https://docs.python.org/3/library/secrets.html#secrets.DEFAULT_ENTROPY
+  name: DEFAULT_ENTROPY
+  uid: secrets.DEFAULT_ENTROPY
 - fullName: select.PIPE_BUF
   href: https://docs.python.org/3/library/select.html#select.PIPE_BUF
   name: PIPE_BUF
@@ -23855,10 +23943,6 @@ references:
   href: https://docs.python.org/3/library/socket.html#socket.SO_REUSEPORT_LB
   name: SO_REUSEPORT_LB
   uid: socket.SO_REUSEPORT_LB
-- fullName: socket.SocketType
-  href: https://docs.python.org/3/library/socket.html#socket.SocketType
-  name: SocketType
-  uid: socket.SocketType
 - fullName: socket.has_ipv6
   href: https://docs.python.org/3/library/socket.html#socket.has_ipv6
   name: has_ipv6
@@ -25747,10 +25831,6 @@ references:
   href: https://docs.python.org/3/library/types.html#types.CoroutineType
   name: CoroutineType
   uid: types.CoroutineType
-- fullName: types.EllipsisType
-  href: https://docs.python.org/3/library/types.html#types.EllipsisType
-  name: EllipsisType
-  uid: types.EllipsisType
 - fullName: types.FrameType
   href: https://docs.python.org/3/library/types.html#types.FrameType
   name: FrameType
@@ -25787,14 +25867,6 @@ references:
   href: https://docs.python.org/3/library/types.html#types.MethodWrapperType
   name: MethodWrapperType
   uid: types.MethodWrapperType
-- fullName: types.NoneType
-  href: https://docs.python.org/3/library/types.html#types.NoneType
-  name: NoneType
-  uid: types.NoneType
-- fullName: types.NotImplementedType
-  href: https://docs.python.org/3/library/types.html#types.NotImplementedType
-  name: NotImplementedType
-  uid: types.NotImplementedType
 - fullName: types.WrapperDescriptorType
   href: https://docs.python.org/3/library/types.html#types.WrapperDescriptorType
   name: WrapperDescriptorType
@@ -25855,14 +25927,6 @@ references:
   href: https://docs.python.org/3/library/typing.html#typing.Optional
   name: Optional
   uid: typing.Optional
-- fullName: typing.ParamSpecArgs
-  href: https://docs.python.org/3/library/typing.html#typing.ParamSpecArgs
-  name: ParamSpecArgs
-  uid: typing.ParamSpecArgs
-- fullName: typing.ParamSpecKwargs
-  href: https://docs.python.org/3/library/typing.html#typing.ParamSpecKwargs
-  name: ParamSpecKwargs
-  uid: typing.ParamSpecKwargs
 - fullName: typing.ReadOnly
   href: https://docs.python.org/3/library/typing.html#typing.ReadOnly
   name: ReadOnly
@@ -25967,22 +26031,10 @@ references:
   href: https://docs.python.org/3/library/uuid.html#uuid.RFC_4122
   name: RFC_4122
   uid: uuid.RFC_4122
-- fullName: weakref.CallableProxyType
-  href: https://docs.python.org/3/library/weakref.html#weakref.CallableProxyType
-  name: CallableProxyType
-  uid: weakref.CallableProxyType
-- fullName: weakref.ProxyType
-  href: https://docs.python.org/3/library/weakref.html#weakref.ProxyType
-  name: ProxyType
-  uid: weakref.ProxyType
 - fullName: weakref.ProxyTypes
   href: https://docs.python.org/3/library/weakref.html#weakref.ProxyTypes
   name: ProxyTypes
   uid: weakref.ProxyTypes
-- fullName: weakref.ReferenceType
-  href: https://docs.python.org/3/library/weakref.html#weakref.ReferenceType
-  name: ReferenceType
-  uid: weakref.ReferenceType
 - fullName: winreg.HKEY_CLASSES_ROOT
   href: https://docs.python.org/3/library/winreg.html#winreg.HKEY_CLASSES_ROOT
   name: HKEY_CLASSES_ROOT
@@ -27859,6 +27911,10 @@ references:
   href: https://docs.python.org/3/library/__future__.html#future__._Feature
   name: _Feature
   uid: __future__._Feature
+- fullName: _thread.LockType
+  href: https://docs.python.org/3/library/_thread.html#thread.LockType
+  name: LockType
+  uid: _thread.LockType
 - fullName: abc.ABC
   href: https://docs.python.org/3/library/abc.html#abc.ABC
   name: ABC
@@ -29675,22 +29731,10 @@ references:
   href: https://docs.python.org/3/library/importlib.html#importlib.abc.ResourceLoader
   name: ResourceLoader
   uid: importlib.abc.ResourceLoader
-- fullName: importlib.abc.ResourceReader
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.ResourceReader
-  name: ResourceReader
-  uid: importlib.abc.ResourceReader
 - fullName: importlib.abc.SourceLoader
   href: https://docs.python.org/3/library/importlib.html#importlib.abc.SourceLoader
   name: SourceLoader
   uid: importlib.abc.SourceLoader
-- fullName: importlib.abc.Traversable
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.Traversable
-  name: Traversable
-  uid: importlib.abc.Traversable
-- fullName: importlib.abc.TraversableResources
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.TraversableResources
-  name: TraversableResources
-  uid: importlib.abc.TraversableResources
 - fullName: importlib.machinery.AppleFrameworkLoader
   href: https://docs.python.org/3/library/importlib.html#importlib.machinery.AppleFrameworkLoader
   name: AppleFrameworkLoader
@@ -30451,6 +30495,10 @@ references:
   href: https://docs.python.org/3/library/smtplib.html#smtplib.SMTP_SSL
   name: SMTP_SSL
   uid: smtplib.SMTP_SSL
+- fullName: socket.SocketType
+  href: https://docs.python.org/3/library/socket.html#socket.SocketType
+  name: SocketType
+  uid: socket.SocketType
 - fullName: socket.socket
   href: https://docs.python.org/3/library/socket.html#socket.socket
   name: socket
@@ -30943,6 +30991,10 @@ references:
   href: https://docs.python.org/3/library/types.html#types.CodeType
   name: CodeType
   uid: types.CodeType
+- fullName: types.EllipsisType
+  href: https://docs.python.org/3/library/types.html#types.EllipsisType
+  name: EllipsisType
+  uid: types.EllipsisType
 - fullName: types.GenericAlias
   href: https://docs.python.org/3/library/types.html#types.GenericAlias
   name: GenericAlias
@@ -30955,6 +31007,14 @@ references:
   href: https://docs.python.org/3/library/types.html#types.ModuleType
   name: ModuleType
   uid: types.ModuleType
+- fullName: types.NoneType
+  href: https://docs.python.org/3/library/types.html#types.NoneType
+  name: NoneType
+  uid: types.NoneType
+- fullName: types.NotImplementedType
+  href: https://docs.python.org/3/library/types.html#types.NotImplementedType
+  name: NotImplementedType
+  uid: types.NotImplementedType
 - fullName: types.SimpleNamespace
   href: https://docs.python.org/3/library/types.html#types.SimpleNamespace
   name: SimpleNamespace
@@ -31119,6 +31179,14 @@ references:
   href: https://docs.python.org/3/library/typing.html#typing.ParamSpec
   name: ParamSpec
   uid: typing.ParamSpec
+- fullName: typing.ParamSpecArgs
+  href: https://docs.python.org/3/library/typing.html#typing.ParamSpecArgs
+  name: ParamSpecArgs
+  uid: typing.ParamSpecArgs
+- fullName: typing.ParamSpecKwargs
+  href: https://docs.python.org/3/library/typing.html#typing.ParamSpecKwargs
+  name: ParamSpecKwargs
+  uid: typing.ParamSpecKwargs
 - fullName: typing.Pattern
   href: https://docs.python.org/3/library/typing.html#typing.Pattern
   name: Pattern
@@ -31419,6 +31487,18 @@ references:
   href: https://docs.python.org/3/library/wave.html#wave.Wave_write
   name: Wave_write
   uid: wave.Wave_write
+- fullName: weakref.CallableProxyType
+  href: https://docs.python.org/3/library/weakref.html#weakref.CallableProxyType
+  name: CallableProxyType
+  uid: weakref.CallableProxyType
+- fullName: weakref.ProxyType
+  href: https://docs.python.org/3/library/weakref.html#weakref.ProxyType
+  name: ProxyType
+  uid: weakref.ProxyType
+- fullName: weakref.ReferenceType
+  href: https://docs.python.org/3/library/weakref.html#weakref.ReferenceType
+  name: ReferenceType
+  uid: weakref.ReferenceType
 - fullName: weakref.WeakKeyDictionary
   href: https://docs.python.org/3/library/weakref.html#weakref.WeakKeyDictionary
   name: WeakKeyDictionary
@@ -31499,10 +31579,10 @@ references:
   href: https://docs.python.org/3/library/xml.dom.pulldom.html#xml.dom.pulldom.DOMEventStream
   name: DOMEventStream
   uid: xml.dom.pulldom.DOMEventStream
-- fullName: xml.dom.pulldom.PullDom
-  href: https://docs.python.org/3/library/xml.dom.pulldom.html#xml.dom.pulldom.PullDom
-  name: PullDom
-  uid: xml.dom.pulldom.PullDom
+- fullName: xml.dom.pulldom.PullDOM
+  href: https://docs.python.org/3/library/xml.dom.pulldom.html#xml.dom.pulldom.PullDOM
+  name: PullDOM
+  uid: xml.dom.pulldom.PullDOM
 - fullName: xml.dom.pulldom.SAX2DOM
   href: https://docs.python.org/3/library/xml.dom.pulldom.html#xml.dom.pulldom.SAX2DOM
   name: SAX2DOM
@@ -33555,6 +33635,10 @@ references:
   href: https://docs.python.org/3/library/ensurepip.html#ensurepip.version
   name: version
   uid: ensurepip.version
+- fullName: enum.bin
+  href: https://docs.python.org/3/library/enum.html#enum.bin
+  name: bin
+  uid: enum.bin
 - fullName: enum.global_enum
   href: https://docs.python.org/3/library/enum.html#enum.global_enum
   name: global_enum
@@ -38683,6 +38767,10 @@ references:
   href: https://docs.python.org/3/library/test.html#test.support.get_pagesize
   name: get_pagesize
   uid: test.support.get_pagesize
+- fullName: test.support.get_resource_value
+  href: https://docs.python.org/3/library/test.html#test.support.get_resource_value
+  name: get_resource_value
+  uid: test.support.get_resource_value
 - fullName: test.support.impl_detail
   href: https://docs.python.org/3/library/test.html#test.support.impl_detail
   name: impl_detail

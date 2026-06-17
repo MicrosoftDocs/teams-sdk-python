@@ -1,0 +1,7 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.http.HttpRouteHandler
+name: HttpRouteHandler
+fullName: microsoft_teams.apps.http.HttpRouteHandler
+module: microsoft_teams.apps.http
+constructor:
+  syntax: HttpRouteHandler(*args, **kwargs)

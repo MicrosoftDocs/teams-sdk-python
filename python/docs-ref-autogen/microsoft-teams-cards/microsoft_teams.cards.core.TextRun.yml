@@ -1,0 +1,277 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.core.TextRun
+name: TextRun
+fullName: microsoft_teams.cards.core.TextRun
+module: microsoft_teams.cards.core
+summary: 'A block of text inside a RichTextBlock element.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'TextRun(*, key: str | None = None, type: Literal[''TextRun''] = ''TextRun'',
+    id: str | None = None, lang: str | None = None, isVisible: bool | None = True,
+    isSortKey: bool | None = False, text: str | None = None, size: Literal[''Small'',
+    ''Default'', ''Medium'', ''Large'', ''ExtraLarge''] | None = None, weight: Literal[''Lighter'',
+    ''Default'', ''Bolder''] | None = None, color: Literal[''Default'', ''Dark'',
+    ''Light'', ''Accent'', ''Good'', ''Warning'', ''Attention''] | None = None, isSubtle:
+    bool | None = None, fontType: Literal[''Default'', ''Monospace''] | None = None,
+    italic: bool | None = False, strikethrough: bool | None = False, highlight: bool
+    | None = False, underline: bool | None = False, selectAction: Action | None =
+    None, gridArea: str | None = None, fallback: CardElement | Literal[''drop''] |
+    None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: type
+    defaultValue: TextRun
+  - name: id
+    defaultValue: None
+  - name: lang
+    defaultValue: None
+  - name: isVisible
+    defaultValue: 'True'
+  - name: isSortKey
+    defaultValue: 'False'
+  - name: text
+    defaultValue: None
+  - name: size
+    defaultValue: None
+  - name: weight
+    defaultValue: None
+  - name: color
+    defaultValue: None
+  - name: isSubtle
+    defaultValue: None
+  - name: fontType
+    defaultValue: None
+  - name: italic
+    defaultValue: 'False'
+  - name: strikethrough
+    defaultValue: 'False'
+  - name: highlight
+    defaultValue: 'False'
+  - name: underline
+    defaultValue: 'False'
+  - name: selectAction
+    defaultValue: None
+  - name: gridArea
+    defaultValue: None
+  - name: fallback
+    defaultValue: None
+methods:
+- uid: microsoft_teams.cards.core.TextRun.with_color
+  name: with_color
+  signature: 'with_color(value: Literal[''Default'', ''Dark'', ''Light'', ''Accent'',
+    ''Good'', ''Warning'', ''Attention'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_fallback
+  name: with_fallback
+  signature: 'with_fallback(value: CardElement | Literal[''drop'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_font_type
+  name: with_font_type
+  signature: 'with_font_type(value: Literal[''Default'', ''Monospace'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_grid_area
+  name: with_grid_area
+  signature: 'with_grid_area(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_highlight
+  name: with_highlight
+  signature: 'with_highlight(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_id
+  name: with_id
+  signature: 'with_id(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_is_sort_key
+  name: with_is_sort_key
+  signature: 'with_is_sort_key(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_is_subtle
+  name: with_is_subtle
+  signature: 'with_is_subtle(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_is_visible
+  name: with_is_visible
+  signature: 'with_is_visible(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_italic
+  name: with_italic
+  signature: 'with_italic(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_key
+  name: with_key
+  signature: 'with_key(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_lang
+  name: with_lang
+  signature: 'with_lang(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_select_action
+  name: with_select_action
+  signature: 'with_select_action(value: Action) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_size
+  name: with_size
+  signature: 'with_size(value: Literal[''Small'', ''Default'', ''Medium'', ''Large'',
+    ''ExtraLarge'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_strikethrough
+  name: with_strikethrough
+  signature: 'with_strikethrough(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_text
+  name: with_text
+  signature: 'with_text(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_underline
+  name: with_underline
+  signature: 'with_underline(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.TextRun.with_weight
+  name: with_weight
+  signature: 'with_weight(value: Literal[''Lighter'', ''Default'', ''Bolder'']) ->
+    Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.cards.core.TextRun.color
+  name: color
+  summary: The color of the text.
+  signature: 'color: Literal[''Default'', ''Dark'', ''Light'', ''Accent'', ''Good'',
+    ''Warning'', ''Attention''] | None'
+- uid: microsoft_teams.cards.core.TextRun.fallback
+  name: fallback
+  summary: An alternate element to render if the type of this one is unsupported or
+    if the host application doesn't support all the capabilities specified in the
+    requires property.
+  signature: 'fallback: CardElement | Literal[''drop''] | None'
+- uid: microsoft_teams.cards.core.TextRun.font_type
+  name: font_type
+  summary: The type of font to use for rendering.
+  signature: 'font_type: Literal[''Default'', ''Monospace''] | None'
+- uid: microsoft_teams.cards.core.TextRun.grid_area
+  name: grid_area
+  summary: The area of a Layout.AreaGrid layout in which an element should be displayed.
+  signature: 'grid_area: str | None'
+- uid: microsoft_teams.cards.core.TextRun.highlight
+  name: highlight
+  summary: Controls if the text should be highlighted.
+  signature: 'highlight: bool | None'
+- uid: microsoft_teams.cards.core.TextRun.id
+  name: id
+  summary: A unique identifier for the element or action. Input elements must have
+    an id, otherwise they will not be validated and their values will not be sent
+    to the Bot.
+  signature: 'id: str | None'
+- uid: microsoft_teams.cards.core.TextRun.is_sort_key
+  name: is_sort_key
+  summary: Controls whether the element should be used as a sort key by elements that
+    allow sorting across a collection of elements.
+  signature: 'is_sort_key: bool | None'
+- uid: microsoft_teams.cards.core.TextRun.is_subtle
+  name: is_subtle
+  summary: Controls whether the text should be renderer using a subtler variant of
+    the select color.
+  signature: 'is_subtle: bool | None'
+- uid: microsoft_teams.cards.core.TextRun.is_visible
+  name: is_visible
+  summary: Controls the visibility of the element.
+  signature: 'is_visible: bool | None'
+- uid: microsoft_teams.cards.core.TextRun.italic
+  name: italic
+  summary: Controls if the text should be italicized.
+  signature: 'italic: bool | None'
+- uid: microsoft_teams.cards.core.TextRun.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.core.TextRun.lang
+  name: lang
+  summary: The locale associated with the element.
+  signature: 'lang: str | None'
+- uid: microsoft_teams.cards.core.TextRun.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.core.TextRun.select_action
+  name: select_action
+  summary: An Action that will be invoked when the text is tapped or clicked. Action.ShowCard
+    is not supported.
+  signature: 'select_action: Action | None'
+- uid: microsoft_teams.cards.core.TextRun.size
+  name: size
+  summary: The size of the text.
+  signature: 'size: Literal[''Small'', ''Default'', ''Medium'', ''Large'', ''ExtraLarge'']
+    | None'
+- uid: microsoft_teams.cards.core.TextRun.strikethrough
+  name: strikethrough
+  summary: Controls if the text should be struck through.
+  signature: 'strikethrough: bool | None'
+- uid: microsoft_teams.cards.core.TextRun.text
+  name: text
+  summary: The text to display. A subset of markdown is supported.
+  signature: 'text: str | None'
+- uid: microsoft_teams.cards.core.TextRun.type
+  name: type
+  summary: Must be **TextRun**.
+  signature: 'type: Literal[''TextRun'']'
+- uid: microsoft_teams.cards.core.TextRun.underline
+  name: underline
+  summary: Controls if the text should be underlined.
+  signature: 'underline: bool | None'
+- uid: microsoft_teams.cards.core.TextRun.weight
+  name: weight
+  summary: The weight of the text.
+  signature: 'weight: Literal[''Lighter'', ''Default'', ''Bolder''] | None'

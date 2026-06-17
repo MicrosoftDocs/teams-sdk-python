@@ -1,0 +1,7 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.common.http.client_token.StringLike
+name: StringLike
+fullName: microsoft_teams.common.http.client_token.StringLike
+module: microsoft_teams.common.http.client_token
+constructor:
+  syntax: StringLike(*args, **kwargs)

@@ -1,0 +1,8 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.events.base.EventProtocol
+name: EventProtocol
+fullName: microsoft_teams.apps.events.base.EventProtocol
+module: microsoft_teams.apps.events.base
+summary: Protocol for event objects in the Teams app system.
+constructor:
+  syntax: EventProtocol(*args, **kwargs)

@@ -1,0 +1,64 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.utilities.submit_data.SubmitData
+name: SubmitData
+fullName: microsoft_teams.cards.utilities.submit_data.SubmitData
+module: microsoft_teams.cards.utilities.submit_data
+summary: 'Utility class for creating submit data with action-based routing.
+
+
+  This class extends the base `SubmitActionData` (`microsoft_teams.cards.core.SubmitActionData`)
+
+  with a convenience constructor that accepts an `action` identifier, which is used
+  by
+
+  `@app.on_dialog_submit("action")` for routing. The base class is a plain data container
+
+  with no routing support.'
+constructor:
+  syntax: 'SubmitData(action: str | None = None, data: Dict[str, Any] | None = None,
+    *, key: str | None = None, msteams: Dict[str, Any] | None = None, **kwargs: Any)'
+  parameters:
+  - name: action
+    description: The action identifier that determines which handler processes the
+      submission.
+    defaultValue: None
+  - name: data
+    description: Optional additional data to include with the submission.
+    defaultValue: None
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: msteams
+    defaultValue: None
+examples:
+- '
+
+  ```
+
+
+  >>> submit_data = SubmitData(action="submit_user_form", data={"user_id": "123"})
+
+  >>> submit_action = SubmitAction(title="Submit").with_data(submit_data)
+
+  ```
+
+  '
+attributes:
+- uid: microsoft_teams.cards.utilities.submit_data.SubmitData.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.utilities.submit_data.SubmitData.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.utilities.submit_data.SubmitData.msteams
+  name: msteams
+  summary: Defines the optional Teams-specific portion of the action's data.
+  signature: 'msteams: Dict[str, Any] | None'

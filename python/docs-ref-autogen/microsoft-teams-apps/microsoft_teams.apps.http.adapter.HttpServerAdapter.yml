@@ -1,0 +1,49 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.http.adapter.HttpServerAdapter
+name: HttpServerAdapter
+fullName: microsoft_teams.apps.http.adapter.HttpServerAdapter
+module: microsoft_teams.apps.http.adapter
+summary: 'Protocol for framework-specific HTTP server adapters.
+
+
+  Implement this adapter to plug in any HTTP framework (FastAPI, Starlette, Flask,
+  etc.).
+
+  The SDK calls these methods with framework-agnostic `HttpRequest`/`HttpResponse`
+
+  objects so the adapter can translate to/from the underlying framework.'
+constructor:
+  syntax: HttpServerAdapter(*args, **kwargs)
+methods:
+- uid: microsoft_teams.apps.http.adapter.HttpServerAdapter.register_route
+  name: register_route
+  summary: Register a route handler. Required.
+  signature: 'register_route(method: Literal[''POST''], path: str, handler: HttpRouteHandler)
+    -> None'
+  parameters:
+  - name: method
+    isRequired: true
+  - name: path
+    isRequired: true
+  - name: handler
+    isRequired: true
+- uid: microsoft_teams.apps.http.adapter.HttpServerAdapter.serve_static
+  name: serve_static
+  summary: "Serve static files from a directory. Optional \u2014 no-op by default."
+  signature: 'serve_static(path: str, directory: str) -> None'
+  parameters:
+  - name: path
+    isRequired: true
+  - name: directory
+    isRequired: true
+- uid: microsoft_teams.apps.http.adapter.HttpServerAdapter.start
+  name: start
+  summary: "Start the server. Optional \u2014 raises if not implemented."
+  signature: 'async start(port: int) -> None'
+  parameters:
+  - name: port
+    isRequired: true
+- uid: microsoft_teams.apps.http.adapter.HttpServerAdapter.stop
+  name: stop
+  summary: "Stop the server. Optional \u2014 no-op by default."
+  signature: async stop() -> None

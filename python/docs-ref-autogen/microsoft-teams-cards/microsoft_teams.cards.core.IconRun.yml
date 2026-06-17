@@ -1,0 +1,200 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.core.IconRun
+name: IconRun
+fullName: microsoft_teams.cards.core.IconRun
+module: microsoft_teams.cards.core
+summary: 'An inline icon inside a RichTextBlock element.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'IconRun(*, key: str | None = None, type: Literal[''IconRun''] = ''IconRun'',
+    id: str | None = None, lang: str | None = None, isVisible: bool | None = True,
+    isSortKey: bool | None = False, name: str | None = None, size: Literal[''Small'',
+    ''Default'', ''Medium'', ''Large'', ''ExtraLarge''] | None = ''Default'', style:
+    Literal[''Regular'', ''Filled''] | None = ''Regular'', color: Literal[''Default'',
+    ''Dark'', ''Light'', ''Accent'', ''Good'', ''Warning'', ''Attention''] | None
+    = ''Default'', selectAction: Action | None = None, gridArea: str | None = None,
+    fallback: CardElement | Literal[''drop''] | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: type
+    defaultValue: IconRun
+  - name: id
+    defaultValue: None
+  - name: lang
+    defaultValue: None
+  - name: isVisible
+    defaultValue: 'True'
+  - name: isSortKey
+    defaultValue: 'False'
+  - name: name
+    defaultValue: None
+  - name: size
+    defaultValue: Default
+  - name: style
+    defaultValue: Regular
+  - name: color
+    defaultValue: Default
+  - name: selectAction
+    defaultValue: None
+  - name: gridArea
+    defaultValue: None
+  - name: fallback
+    defaultValue: None
+methods:
+- uid: microsoft_teams.cards.core.IconRun.with_color
+  name: with_color
+  signature: 'with_color(value: Literal[''Default'', ''Dark'', ''Light'', ''Accent'',
+    ''Good'', ''Warning'', ''Attention'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.IconRun.with_fallback
+  name: with_fallback
+  signature: 'with_fallback(value: CardElement | Literal[''drop'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.IconRun.with_grid_area
+  name: with_grid_area
+  signature: 'with_grid_area(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.IconRun.with_id
+  name: with_id
+  signature: 'with_id(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.IconRun.with_is_sort_key
+  name: with_is_sort_key
+  signature: 'with_is_sort_key(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.IconRun.with_is_visible
+  name: with_is_visible
+  signature: 'with_is_visible(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.IconRun.with_key
+  name: with_key
+  signature: 'with_key(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.IconRun.with_lang
+  name: with_lang
+  signature: 'with_lang(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.IconRun.with_name
+  name: with_name
+  signature: 'with_name(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.IconRun.with_select_action
+  name: with_select_action
+  signature: 'with_select_action(value: Action) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.IconRun.with_size
+  name: with_size
+  signature: 'with_size(value: Literal[''Small'', ''Default'', ''Medium'', ''Large'',
+    ''ExtraLarge'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.IconRun.with_style
+  name: with_style
+  signature: 'with_style(value: Literal[''Regular'', ''Filled'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.cards.core.IconRun.color
+  name: color
+  summary: The color of the inline icon.
+  signature: 'color: Literal[''Default'', ''Dark'', ''Light'', ''Accent'', ''Good'',
+    ''Warning'', ''Attention''] | None'
+- uid: microsoft_teams.cards.core.IconRun.fallback
+  name: fallback
+  summary: An alternate element to render if the type of this one is unsupported or
+    if the host application doesn't support all the capabilities specified in the
+    requires property.
+  signature: 'fallback: CardElement | Literal[''drop''] | None'
+- uid: microsoft_teams.cards.core.IconRun.grid_area
+  name: grid_area
+  summary: The area of a Layout.AreaGrid layout in which an element should be displayed.
+  signature: 'grid_area: str | None'
+- uid: microsoft_teams.cards.core.IconRun.id
+  name: id
+  summary: A unique identifier for the element or action. Input elements must have
+    an id, otherwise they will not be validated and their values will not be sent
+    to the Bot.
+  signature: 'id: str | None'
+- uid: microsoft_teams.cards.core.IconRun.is_sort_key
+  name: is_sort_key
+  summary: Controls whether the element should be used as a sort key by elements that
+    allow sorting across a collection of elements.
+  signature: 'is_sort_key: bool | None'
+- uid: microsoft_teams.cards.core.IconRun.is_visible
+  name: is_visible
+  summary: Controls the visibility of the element.
+  signature: 'is_visible: bool | None'
+- uid: microsoft_teams.cards.core.IconRun.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.core.IconRun.lang
+  name: lang
+  summary: The locale associated with the element.
+  signature: 'lang: str | None'
+- uid: microsoft_teams.cards.core.IconRun.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.core.IconRun.name
+  name: name
+  summary: The name of the inline icon to display.
+  signature: 'name: str | None'
+- uid: microsoft_teams.cards.core.IconRun.select_action
+  name: select_action
+  summary: An Action that will be invoked when the inline icon is tapped or clicked.
+    Action.ShowCard is not supported.
+  signature: 'select_action: Action | None'
+- uid: microsoft_teams.cards.core.IconRun.size
+  name: size
+  summary: The size of the inline icon.
+  signature: 'size: Literal[''Small'', ''Default'', ''Medium'', ''Large'', ''ExtraLarge'']
+    | None'
+- uid: microsoft_teams.cards.core.IconRun.style
+  name: style
+  summary: The style of the inline icon.
+  signature: 'style: Literal[''Regular'', ''Filled''] | None'
+- uid: microsoft_teams.cards.core.IconRun.type
+  name: type
+  summary: Must be **IconRun**.
+  signature: 'type: Literal[''IconRun'']'

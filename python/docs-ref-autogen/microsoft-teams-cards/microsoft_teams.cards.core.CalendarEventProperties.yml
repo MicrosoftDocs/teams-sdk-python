@@ -1,0 +1,194 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.core.CalendarEventProperties
+name: CalendarEventProperties
+fullName: microsoft_teams.cards.core.CalendarEventProperties
+module: microsoft_teams.cards.core
+summary: 'The properties of a calendar event.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'CalendarEventProperties(*, key: str | None = None, id: str | None = None,
+    title: str | None = None, start: str | None = None, end: str | None = None, status:
+    str | None = None, locations: List[str] | None = None, onlineMeetingUrl: str |
+    None = None, isAllDay: bool | None = None, extension: str | None = None, url:
+    str | None = None, attendees: List[CalendarEventAttendee] | None = None, organizer:
+    CalendarEventAttendee | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: id
+    defaultValue: None
+  - name: title
+    defaultValue: None
+  - name: start
+    defaultValue: None
+  - name: end
+    defaultValue: None
+  - name: status
+    defaultValue: None
+  - name: locations
+    defaultValue: None
+  - name: onlineMeetingUrl
+    defaultValue: None
+  - name: isAllDay
+    defaultValue: None
+  - name: extension
+    defaultValue: None
+  - name: url
+    defaultValue: None
+  - name: attendees
+    defaultValue: None
+  - name: organizer
+    defaultValue: None
+methods:
+- uid: microsoft_teams.cards.core.CalendarEventProperties.with_attendees
+  name: with_attendees
+  signature: 'with_attendees(value: List[CalendarEventAttendee]) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventProperties.with_end
+  name: with_end
+  signature: 'with_end(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventProperties.with_extension
+  name: with_extension
+  signature: 'with_extension(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventProperties.with_id
+  name: with_id
+  signature: 'with_id(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventProperties.with_is_all_day
+  name: with_is_all_day
+  signature: 'with_is_all_day(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventProperties.with_key
+  name: with_key
+  signature: 'with_key(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventProperties.with_locations
+  name: with_locations
+  signature: 'with_locations(value: List[str]) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventProperties.with_online_meeting_url
+  name: with_online_meeting_url
+  signature: 'with_online_meeting_url(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventProperties.with_organizer
+  name: with_organizer
+  signature: 'with_organizer(value: CalendarEventAttendee) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventProperties.with_start
+  name: with_start
+  signature: 'with_start(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventProperties.with_status
+  name: with_status
+  signature: 'with_status(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventProperties.with_title
+  name: with_title
+  signature: 'with_title(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventProperties.with_url
+  name: with_url
+  signature: 'with_url(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.cards.core.CalendarEventProperties.attendees
+  name: attendees
+  summary: The attendees of the event.
+  signature: 'attendees: List[CalendarEventAttendee] | None'
+- uid: microsoft_teams.cards.core.CalendarEventProperties.end
+  name: end
+  summary: The end date and time of the event.
+  signature: 'end: str | None'
+- uid: microsoft_teams.cards.core.CalendarEventProperties.extension
+  name: extension
+  summary: The extension of the event.
+  signature: 'extension: str | None'
+- uid: microsoft_teams.cards.core.CalendarEventProperties.id
+  name: id
+  summary: The ID of the event.
+  signature: 'id: str | None'
+- uid: microsoft_teams.cards.core.CalendarEventProperties.is_all_day
+  name: is_all_day
+  summary: Indicates if the event is all day.
+  signature: 'is_all_day: bool | None'
+- uid: microsoft_teams.cards.core.CalendarEventProperties.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.core.CalendarEventProperties.locations
+  name: locations
+  summary: The locations of the event.
+  signature: 'locations: List[str] | None'
+- uid: microsoft_teams.cards.core.CalendarEventProperties.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.core.CalendarEventProperties.online_meeting_url
+  name: online_meeting_url
+  summary: The URL of the online meeting.
+  signature: 'online_meeting_url: str | None'
+- uid: microsoft_teams.cards.core.CalendarEventProperties.organizer
+  name: organizer
+  summary: The organizer of the event.
+  signature: 'organizer: CalendarEventAttendee | None'
+- uid: microsoft_teams.cards.core.CalendarEventProperties.start
+  name: start
+  summary: The start date and time of the event.
+  signature: 'start: str | None'
+- uid: microsoft_teams.cards.core.CalendarEventProperties.status
+  name: status
+  summary: The status of the event.
+  signature: 'status: str | None'
+- uid: microsoft_teams.cards.core.CalendarEventProperties.title
+  name: title
+  summary: The title of the event.
+  signature: 'title: str | None'
+- uid: microsoft_teams.cards.core.CalendarEventProperties.url
+  name: url
+  summary: The URL of the event.
+  signature: 'url: str | None'

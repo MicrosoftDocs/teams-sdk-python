@@ -1,0 +1,59 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.http.fastapi_adapter.FastAPIAdapter
+name: FastAPIAdapter
+fullName: microsoft_teams.apps.http.fastapi_adapter.FastAPIAdapter
+module: microsoft_teams.apps.http.fastapi_adapter
+summary: Default HttpServerAdapter implementation wrapping FastAPI + uvicorn.
+constructor:
+  syntax: 'FastAPIAdapter(app: FastAPI | None = None, server_factory: Callable[[FastAPI],
+    Server] | None = None)'
+  parameters:
+  - name: app
+    defaultValue: None
+  - name: server_factory
+    defaultValue: None
+methods:
+- uid: microsoft_teams.apps.http.fastapi_adapter.FastAPIAdapter.register_route
+  name: register_route
+  summary: Register a route handler on the FastAPI app.
+  signature: 'register_route(method: Literal[''POST''], path: str, handler: HttpRouteHandler)
+    -> None'
+  parameters:
+  - name: method
+    isRequired: true
+  - name: path
+    isRequired: true
+  - name: handler
+    isRequired: true
+- uid: microsoft_teams.apps.http.fastapi_adapter.FastAPIAdapter.serve_static
+  name: serve_static
+  summary: Mount a static files directory.
+  signature: 'serve_static(path: str, directory: str) -> None'
+  parameters:
+  - name: path
+    isRequired: true
+  - name: directory
+    isRequired: true
+- uid: microsoft_teams.apps.http.fastapi_adapter.FastAPIAdapter.start
+  name: start
+  summary: Start the uvicorn server. Blocks until stopped.
+  signature: 'async start(port: int) -> None'
+  parameters:
+  - name: port
+    isRequired: true
+- uid: microsoft_teams.apps.http.fastapi_adapter.FastAPIAdapter.stop
+  name: stop
+  summary: Signal the server to stop.
+  signature: async stop() -> None
+attributes:
+- uid: microsoft_teams.apps.http.fastapi_adapter.FastAPIAdapter.app
+  name: app
+  summary: The underlying FastAPI instance.
+- uid: microsoft_teams.apps.http.fastapi_adapter.FastAPIAdapter.lifespans
+  name: lifespans
+  signature: 'lifespans: List[Callable[[Callable[[MutableMapping[str, Any], Callable[[],
+    Awaitable[MutableMapping[str, Any]]], Callable[[MutableMapping[str, Any]], Awaitable[None]]],
+    Awaitable[None]]], AbstractAsyncContextManager[None]] | Callable[[Callable[[MutableMapping[str,
+    Any], Callable[[], Awaitable[MutableMapping[str, Any]]], Callable[[MutableMapping[str,
+    Any]], Awaitable[None]]], Awaitable[None]]], AbstractAsyncContextManager[Mapping[str,
+    Any]]]]'

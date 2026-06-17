@@ -1,0 +1,45 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.common.events.event_emitter.EventEmitterProtocol
+name: EventEmitterProtocol
+fullName: microsoft_teams.common.events.event_emitter.EventEmitterProtocol
+module: microsoft_teams.common.events.event_emitter
+summary: Interface for event emitter functionality.
+constructor:
+  syntax: EventEmitterProtocol(*args, **kwargs)
+methods:
+- uid: microsoft_teams.common.events.event_emitter.EventEmitterProtocol.emit
+  name: emit
+  summary: Emit an event synchronously.
+  signature: 'emit(event: EventTypeT, value: Any = None) -> None'
+  parameters:
+  - name: event
+    isRequired: true
+  - name: value
+    defaultValue: None
+- uid: microsoft_teams.common.events.event_emitter.EventEmitterProtocol.off
+  name: 'off'
+  summary: Remove an event handler by subscription ID.
+  signature: 'off(subscription_id: int) -> None'
+  parameters:
+  - name: subscription_id
+    isRequired: true
+- uid: microsoft_teams.common.events.event_emitter.EventEmitterProtocol.on
+  name: 'on'
+  summary: Register an event handler. Returns subscription ID.
+  signature: 'on(event: EventTypeT, handler: Callable[[Any], None] | Callable[[Any],
+    Awaitable[Any]]) -> int'
+  parameters:
+  - name: event
+    isRequired: true
+  - name: handler
+    isRequired: true
+- uid: microsoft_teams.common.events.event_emitter.EventEmitterProtocol.once
+  name: once
+  summary: Register a one-time event handler. Returns subscription ID.
+  signature: 'once(event: EventTypeT, handler: Callable[[Any], None] | Callable[[Any],
+    Awaitable[Any]]) -> int'
+  parameters:
+  - name: event
+    isRequired: true
+  - name: handler
+    isRequired: true

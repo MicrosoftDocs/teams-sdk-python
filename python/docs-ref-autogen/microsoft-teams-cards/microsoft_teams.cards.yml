@@ -1,0 +1,15 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.cards
+name: cards
+fullName: microsoft_teams.cards
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: rootImport
+classes:
+- microsoft_teams.cards.OpenDialogData
+- microsoft_teams.cards.SubmitData
+packages:
+- microsoft_teams.cards.utilities
+modules:
+- microsoft_teams.cards.core

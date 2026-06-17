@@ -1,0 +1,49 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.apps.plugins
+name: plugins
+fullName: microsoft_teams.apps.plugins
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+functions:
+- uid: microsoft_teams.apps.plugins.Plugin
+  name: Plugin
+  summary: Turns any class into a plugin using the decorator pattern.
+  signature: 'Plugin(name: str | None = None, version: str | None = None, description:
+    str | None = None) -> Callable[[Type[T]], Type[T]]'
+  parameters:
+  - name: name
+    defaultValue: None
+  - name: version
+    defaultValue: None
+  - name: description
+    defaultValue: None
+- uid: microsoft_teams.apps.plugins.get_metadata
+  name: get_metadata
+  summary: Get plugin metadata from a class.
+  signature: 'get_metadata(cls: Type[PluginBase]) -> PluginOptions'
+  parameters:
+  - name: cls
+    isRequired: true
+classes:
+- microsoft_teams.apps.plugins.DependencyMetadata
+- microsoft_teams.apps.plugins.EventMetadata
+- microsoft_teams.apps.plugins.PluginActivityEvent
+- microsoft_teams.apps.plugins.PluginActivityResponseEvent
+- microsoft_teams.apps.plugins.PluginActivitySentEvent
+- microsoft_teams.apps.plugins.PluginBase
+- microsoft_teams.apps.plugins.PluginErrorEvent
+- microsoft_teams.apps.plugins.PluginOptions
+- microsoft_teams.apps.plugins.PluginStartEvent
+- microsoft_teams.apps.plugins.StreamCancelledError
+- microsoft_teams.apps.plugins.StreamerProtocol
+modules:
+- microsoft_teams.apps.plugins.metadata
+- microsoft_teams.apps.plugins.plugin_activity_event
+- microsoft_teams.apps.plugins.plugin_activity_response_event
+- microsoft_teams.apps.plugins.plugin_activity_sent_event
+- microsoft_teams.apps.plugins.plugin_base
+- microsoft_teams.apps.plugins.plugin_error_event
+- microsoft_teams.apps.plugins.plugin_start_event
+- microsoft_teams.apps.plugins.streamer

@@ -1,0 +1,17 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.common.logging
+name: logging
+fullName: microsoft_teams.common.logging
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.common.logging.ConsoleFilter
+- microsoft_teams.common.logging.ConsoleFormatter
+modules:
+- microsoft_teams.common.logging.ansi
+- microsoft_teams.common.logging.filter
+- microsoft_teams.common.logging.formatter
+enums:
+- microsoft_teams.common.logging.ANSI

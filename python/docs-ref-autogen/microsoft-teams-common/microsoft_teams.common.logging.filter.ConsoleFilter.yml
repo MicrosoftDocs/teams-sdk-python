@@ -1,0 +1,31 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.common.logging.filter.ConsoleFilter
+name: ConsoleFilter
+fullName: microsoft_teams.common.logging.filter.ConsoleFilter
+module: microsoft_teams.common.logging.filter
+summary: A logging filter that matches log records against a pattern.
+constructor:
+  syntax: 'ConsoleFilter(pattern: str = ''*'')'
+  parameters:
+  - name: pattern
+    defaultValue: '*'
+methods:
+- uid: microsoft_teams.common.logging.filter.ConsoleFilter.filter
+  name: filter
+  summary: 'Filter log records based on a pattern.
+
+    :param record: The log record to filter.
+
+    :type record: <xref:logging.LogRecord>'
+  signature: 'filter(record: LogRecord) -> bool'
+  parameters:
+  - name: record
+    isRequired: true
+  return:
+    description: True if the record matches the pattern, False otherwise.
+    types:
+    - <xref:bool>
+attributes:
+- uid: microsoft_teams.common.logging.filter.ConsoleFilter.pattern
+  name: pattern
+  summary: The pattern to match against log record names.

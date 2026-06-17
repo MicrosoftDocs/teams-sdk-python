@@ -1,0 +1,81 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.core.LineChartValue
+name: LineChartValue
+fullName: microsoft_teams.cards.core.LineChartValue
+module: microsoft_teams.cards.core
+summary: 'Represents a single data point in a line chart.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'LineChartValue(*, key: str | None = None, x: str | float | None = None,
+    y: float | None = 0, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: x
+    defaultValue: None
+  - name: y
+    defaultValue: '0'
+methods:
+- uid: microsoft_teams.cards.core.LineChartValue.with_key
+  name: with_key
+  signature: 'with_key(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.LineChartValue.with_x
+  name: with_x
+  signature: 'with_x(value: float | str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.LineChartValue.with_y
+  name: with_y
+  signature: 'with_y(value: float) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.cards.core.LineChartValue.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.core.LineChartValue.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.core.LineChartValue.x
+  name: x
+  summary: 'The x axis value of the data point.
+
+
+    If all x values of the x [Chart.Line](topic:Chart.Line) are expressed as a number,
+    or if all x values are expressed as a date string in the *YYYY-MM-DD* format,
+    the chart will be rendered as a time series chart, i.e. x axis values will span
+    across the minimum x value to maximum x value range.
+
+
+    Otherwise, if x values are represented as a mix of numbers and strings or if at
+    least one x value isn''t in the *YYYY-MM-DD* format, the chart will be rendered
+    as a categorical chart, i.e. x axis values will be displayed as categories.'
+  signature: 'x: str | float | None'
+- uid: microsoft_teams.cards.core.LineChartValue.y
+  name: y
+  summary: The y axis value of the data point.
+  signature: 'y: float | None'

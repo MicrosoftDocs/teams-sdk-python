@@ -1,0 +1,217 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.App
+name: App
+fullName: microsoft_teams.apps.App
+module: microsoft_teams.apps
+summary: 'The main Teams application orchestrator.
+
+
+  Manages plugins, tokens, and application lifecycle for Microsoft Teams apps.'
+constructor:
+  syntax: 'App(**options: Unpack[AppOptions])'
+methods:
+- uid: microsoft_teams.apps.App.event
+  name: event
+  summary: 'Decorator to register event handlers with automatic type inference.
+
+
+    Can be used in multiple ways:
+
+    - @app.event (auto-detect from type hints)
+
+    - @app.event("activity")'
+  signature: 'event(func_or_event_type: F) -> F'
+  parameters:
+  - name: func_or_event_type
+    description: Either the function to decorate or an event type string
+    defaultValue: None
+  - name: event_type
+    description: Explicit event type (keyword-only)
+    isRequired: true
+  return:
+    description: Decorated function or decorator
+  examples:
+  - ">>``<<>>`<<python\n@app.event\nasync def handle_activity(event: ActivityEvent):\n\
+    \n   print(f\"Activity: {event.activity}\")\n\n@app.event(\"error\")\nasync def\
+    \ handle_error(event: ErrorEvent):\n\n   print(f\"Error: {event.error}\")\n\n\
+    >>``<<>>`<<\n"
+- uid: microsoft_teams.apps.App.func
+  name: func
+  summary: Decorator that registers a function as a remotely callable endpoint.
+  signature: 'func(name_or_func: str | FCtx | None = None) -> FCtx | Callable[[FCtx],
+    FCtx]'
+  parameters:
+  - name: name_or_func
+    defaultValue: None
+  - name: str
+    description: explicit name for the endpoint
+    isRequired: true
+    types:
+    - <xref:<xref:->>
+  - name: Callable
+    description: directly decorating the function, endpoint name defaults to the function's
+      name
+    isRequired: true
+    types:
+    - <xref:<xref:->>
+  examples:
+  - ">>``<<>>`<<python\n@app.func\nasync def post_to_chat(ctx: FunctionContext[Any]):\n\
+    \n   await ctx.send(ctx.data[\"message\"])\n\n>>``<<>>`<<\n"
+- uid: microsoft_teams.apps.App.get_app_graph
+  name: get_app_graph
+  summary: 'Get a Microsoft Graph client configured with the app''s token.
+
+
+    This client can be used for app-only operations that don''t require user context.
+
+    For multi-tenant apps, pass a tenant_id to get a tenant-specific token.'
+  signature: 'get_app_graph(tenant_id: str | None = None) -> GraphServiceClient'
+  parameters:
+  - name: tenant_id
+    description: Optional tenant ID. If not provided, uses the app's default tenant.
+    defaultValue: None
+  exceptions:
+  - type: ImportError
+    description: If the graph dependencies are not installed.
+- uid: microsoft_teams.apps.App.initialize
+  name: initialize
+  summary: 'Initialize the Teams application without starting the HTTP server.
+
+
+    This method sets up credentials, token manager, activity sender, and plugins,
+
+    allowing you to use app.send() for proactive messaging without running a server.'
+  signature: async initialize() -> None
+- uid: microsoft_teams.apps.App.page
+  name: page
+  summary: "Register a static page to serve at a specific path.\n\n   Args:\n    \
+    \  name: Unique name for the page\n      dir_path: Directory containing the static\
+    \ files\n      page_path: Optional path to serve the page at (defaults to /pages/{name})"
+  signature: 'page(name: str, dir_path: str, page_path: str | None = None) -> None'
+  parameters:
+  - name: name
+    isRequired: true
+  - name: dir_path
+    isRequired: true
+  - name: page_path
+    defaultValue: None
+  examples:
+  - '``python
+
+    app.page("customform", os.path.join(os.path.dirname(__file__), "views", "customform"),
+    "/tabs/dialog-form")
+
+    ``
+
+    '
+- uid: microsoft_teams.apps.App.reply
+  name: reply
+  summary: 'Send an activity proactively to a conversation, optionally as a threaded
+    reply.
+
+
+    **3-arg form** `reply(conversation_id, message_id, activity)`:
+
+    Constructs a threaded conversation ID via <xref:microsoft_teams.apps.to_threaded_conversation_id>
+
+    and sends to that thread. The service determines whether threading is
+
+    supported for the given conversation type.
+
+
+    **2-arg form** `reply(conversation_id, activity)`:
+
+    Sends to the exact conversation ID provided - threaded if it contains
+
+    `;messageid=`, flat otherwise.'
+  signature: 'async reply(conversation_id: str, message_id: str, activity: str | ActivityParams
+    | AdaptiveCard) -> SentActivity'
+  parameters:
+  - name: conversation_id
+    description: The conversation ID
+    isRequired: true
+  - name: message_id
+    description: The thread root message ID (3-arg form) or the activity (2-arg form)
+    isRequired: true
+  - name: activity
+    description: The activity to send (only in 3-arg form)
+    defaultValue: None
+- uid: microsoft_teams.apps.App.send
+  name: send
+  summary: 'Send an activity proactively to a conversation.
+
+
+    Sends to the exact conversation ID provided. For channel threads,
+
+    the conversation ID must include `;messageid=` - use <xref:microsoft_teams.apps.to_threaded_conversation_id>
+
+    to construct it, or use <xref:microsoft_teams.apps.App.reply> which handles this
+    automatically.'
+  signature: 'async send(conversation_id: str, activity: str | MessageActivityInput
+    | MessageReactionActivityInput | TypingActivityInput | AdaptiveCard)'
+  parameters:
+  - name: conversation_id
+    isRequired: true
+  - name: activity
+    isRequired: true
+- uid: microsoft_teams.apps.App.start
+  name: start
+  summary: 'Start the Teams application and begin serving HTTP requests.
+
+
+    This method will block and keep the application running until stopped.
+
+    This is the main entry point for running your Teams app.'
+  signature: 'async start(port: int | None = None) -> None'
+  parameters:
+  - name: port
+    description: Port to listen on (defaults to PORT env var or 3978)
+    defaultValue: None
+- uid: microsoft_teams.apps.App.stop
+  name: stop
+  summary: Stop the Teams application.
+  signature: async stop() -> None
+- uid: microsoft_teams.apps.App.tab
+  name: tab
+  summary: 'Add/update a static tab.
+
+    The tab will be hosted at
+
+    [http://localhost](http://localhost):<PORT>/tabs/<name> or [https:/](https:/)/<BOT_DOMAIN>/tabs/<name>
+
+    Scopes default to ''personal''.'
+  signature: 'tab(name: str, path: str) -> None'
+  parameters:
+  - name: displays.
+    isRequired: true
+    types:
+    - <xref:<xref:name A unique identifier for the entity which the tab>>
+  - name: content
+    isRequired: true
+    types:
+    - <xref:<xref:path The path to the directory containing the tab's>>
+  - name: name
+    isRequired: true
+  - name: path
+    isRequired: true
+- uid: microsoft_teams.apps.App.use
+  name: use
+  summary: Add middleware to run on all activities.
+  signature: 'use(middleware: Callable[[ActivityContext[Activity]], Awaitable[None]])
+    -> None'
+  parameters:
+  - name: middleware
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.App.events
+  name: events
+  summary: The event emitter instance used by the app.
+- uid: microsoft_teams.apps.App.id
+  name: id
+  summary: The app's ID from credentials.
+- uid: microsoft_teams.apps.App.port
+  name: port
+  summary: Port the app is running on.
+- uid: microsoft_teams.apps.App.router
+  name: router
+  summary: The activity router instance.

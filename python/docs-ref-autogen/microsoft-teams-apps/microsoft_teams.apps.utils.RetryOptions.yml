@@ -1,0 +1,22 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.utils.RetryOptions
+name: RetryOptions
+fullName: microsoft_teams.apps.utils.RetryOptions
+module: microsoft_teams.apps.utils
+constructor:
+  syntax: 'RetryOptions(max_attempts: int = 5, delay: float = 0.5, max_delay: float
+    = 30.0, jitter_type: Literal[''none'', ''full'', ''equal'', ''decorrelated'']
+    = ''full'', previous_delay: float | None = None, attempt_number: int = 1)'
+  parameters:
+  - name: max_attempts
+    defaultValue: '5'
+  - name: delay
+    defaultValue: '0.5'
+  - name: max_delay
+    defaultValue: '30.0'
+  - name: jitter_type
+    defaultValue: full
+  - name: previous_delay
+    defaultValue: None
+  - name: attempt_number
+    defaultValue: '1'

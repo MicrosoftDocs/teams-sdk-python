@@ -1,0 +1,72 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.utilities.open_dialog_data.OpenDialogData
+name: OpenDialogData
+fullName: microsoft_teams.cards.utilities.open_dialog_data.OpenDialogData
+module: microsoft_teams.cards.utilities.open_dialog_data
+summary: 'Represents the data required to open a dialog in Microsoft Teams using a
+  submit action.
+
+
+  This class extends *SubmitActionData* and is used to construct the payload for opening
+  a dialog,
+
+  including a reserved dialog identifier and any additional data.
+
+
+  Initialize an OpenDialogData instance.'
+constructor:
+  syntax: 'OpenDialogData(dialog_identifier: str, extra_data: Dict[str, Any] | None
+    = None)'
+  parameters:
+  - name: dialog_identifier
+    description: The unique identifier for the dialog to open.
+    isRequired: true
+    types:
+    - <xref:str>
+  - name: extra_data
+    description: Optional additional data to include in the payload.
+    defaultValue: None
+    types:
+    - '<xref:Dict>[<xref:str>,<xref: Any>]<xref: | None>'
+  - name: dialog_identifier
+    description: The unique identifier for the dialog to open.
+    isRequired: true
+    types:
+    - <xref:str>
+  - name: extra_data
+    description: Optional additional data to include in the payload.
+    isRequired: true
+    types:
+    - '<xref:Dict>[<xref:str>,<xref: Any>]<xref: | None>'
+examples:
+- '
+
+  ```
+
+
+  >>> data = OpenDialogData("myDialogId", {"foo": "bar"})
+
+  >>> # Use `data` as the payload for a Teams card submit action to open a dialog.
+
+  ```
+
+  '
+attributes:
+- uid: microsoft_teams.cards.utilities.open_dialog_data.OpenDialogData.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.utilities.open_dialog_data.OpenDialogData.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.utilities.open_dialog_data.OpenDialogData.msteams
+  name: msteams
+  summary: Defines the optional Teams-specific portion of the action's data.
+  signature: 'msteams: Dict[str, Any] | None'

@@ -1,0 +1,58 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.common.logging.ConsoleFormatter
+name: ConsoleFormatter
+fullName: microsoft_teams.common.logging.ConsoleFormatter
+module: microsoft_teams.common.logging
+summary: 'A custom logging formatter that formats log messages with colors and prefixes.
+
+
+  Initialize the formatter with specified format strings.
+
+
+  Initialize the formatter either with the specified format string, or a
+
+  default as described above. Allow for specialized date formatting with
+
+  the optional datefmt argument. If datefmt is omitted, you get an
+
+  ISO8601-like (or RFC 3339-like) format.
+
+
+  Use a style parameter of ''%'', ''{'' or ''$'' to specify that you want to
+
+  use one of %-formatting, <xref:str.format> (`{}`) formatting or
+
+  <xref:string.Template> formatting in your format string.
+
+
+  *Changed in version 3.2:* Added the `style` parameter.'
+constructor:
+  syntax: ConsoleFormatter(fmt=None, datefmt=None, style='%', validate=True, *, defaults=None)
+  parameters:
+  - name: fmt
+    defaultValue: None
+  - name: datefmt
+    defaultValue: None
+  - name: style
+    defaultValue: '%'
+  - name: validate
+    defaultValue: 'True'
+  keywordOnlyParameters:
+  - name: defaults
+    defaultValue: None
+methods:
+- uid: microsoft_teams.common.logging.ConsoleFormatter.format
+  name: format
+  summary: 'Format the log record with colors and prefixes.
+
+    :param record: The log record to format.
+
+    :type record: <xref:logging.LogRecord>'
+  signature: 'format(record: LogRecord) -> str'
+  parameters:
+  - name: record
+    isRequired: true
+  return:
+    description: The formatted log message.
+    types:
+    - <xref:str>

@@ -1,0 +1,14 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.apps.contexts
+name: contexts
+fullName: microsoft_teams.apps.contexts
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.apps.contexts.ClientContext
+- microsoft_teams.apps.contexts.FunctionContext
+modules:
+- microsoft_teams.apps.contexts.client_context
+- microsoft_teams.apps.contexts.function_context

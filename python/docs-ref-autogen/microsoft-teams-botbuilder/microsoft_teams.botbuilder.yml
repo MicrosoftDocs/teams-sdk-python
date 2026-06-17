@@ -1,0 +1,13 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.botbuilder
+name: botbuilder
+fullName: microsoft_teams.botbuilder
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: rootImport
+classes:
+- microsoft_teams.botbuilder.BotBuilderPlugin
+- microsoft_teams.botbuilder.BotBuilderPluginOptions
+modules:
+- microsoft_teams.botbuilder.botbuilder_plugin

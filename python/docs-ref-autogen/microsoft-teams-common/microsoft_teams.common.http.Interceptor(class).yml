@@ -1,0 +1,28 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.common.http.Interceptor
+name: Interceptor
+fullName: microsoft_teams.common.http.Interceptor
+module: microsoft_teams.common.http
+summary: 'Protocol for HTTP interceptors.
+
+
+  Optionally implement any of:
+
+  - request(ctx): mutate or observe outgoing request (ctx: InterceptorRequestContext)
+
+  - response(ctx): mutate or observe incoming response (ctx: InterceptorResponseContext)'
+constructor:
+  syntax: Interceptor()
+methods:
+- uid: microsoft_teams.common.http.Interceptor.request
+  name: request
+  signature: 'request(ctx: InterceptorRequestContext) -> None | Awaitable[None]'
+  parameters:
+  - name: ctx
+    isRequired: true
+- uid: microsoft_teams.common.http.Interceptor.response
+  name: response
+  signature: 'response(ctx: InterceptorResponseContext) -> None | Awaitable[None]'
+  parameters:
+  - name: ctx
+    isRequired: true

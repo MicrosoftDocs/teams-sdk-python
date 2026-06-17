@@ -1,0 +1,29 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.apps.routing.type_validation
+name: type_validation
+fullName: microsoft_teams.apps.routing.type_validation
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+functions:
+- uid: microsoft_teams.apps.routing.type_validation.validate_handler_type
+  name: validate_handler_type
+  summary: Validate that a handler function has the correct type annotation.
+  signature: 'validate_handler_type(func: Callable[[Any], Any], expected_activity_type:
+    Any, method_name: str, expected_type_name: str | None = None) -> None'
+  parameters:
+  - name: func
+    description: The handler function to validate
+    isRequired: true
+  - name: expected_activity_type
+    description: The expected activity type (e.g., MessageActivity)
+    isRequired: true
+  - name: method_name
+    description: The name of the registration method (e.g., "onMessage")
+    isRequired: true
+  - name: expected_type_name
+    description: The display name for the expected type (e.g., "InvokeActivity")
+    defaultValue: None
+  exceptions:
+  - type: TypeError
+    description: If the handler has incorrect type annotations

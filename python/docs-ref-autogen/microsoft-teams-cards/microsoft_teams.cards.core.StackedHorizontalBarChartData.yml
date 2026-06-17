@@ -1,0 +1,72 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.core.StackedHorizontalBarChartData
+name: StackedHorizontalBarChartData
+fullName: microsoft_teams.cards.core.StackedHorizontalBarChartData
+module: microsoft_teams.cards.core
+summary: 'Defines the collection of data series to display in as a stacked horizontal
+  bar chart.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'StackedHorizontalBarChartData(*, key: str | None = None, title: str | None
+    = None, data: List[StackedHorizontalBarChartDataPoint] | None = None, **extra_data:
+    Any)'
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: title
+    defaultValue: None
+  - name: data
+    defaultValue: None
+methods:
+- uid: microsoft_teams.cards.core.StackedHorizontalBarChartData.with_data
+  name: with_data
+  signature: 'with_data(value: List[StackedHorizontalBarChartDataPoint]) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.StackedHorizontalBarChartData.with_key
+  name: with_key
+  signature: 'with_key(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.StackedHorizontalBarChartData.with_title
+  name: with_title
+  signature: 'with_title(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.cards.core.StackedHorizontalBarChartData.data
+  name: data
+  summary: The data points in the series.
+  signature: 'data: List[StackedHorizontalBarChartDataPoint] | None'
+- uid: microsoft_teams.cards.core.StackedHorizontalBarChartData.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.core.StackedHorizontalBarChartData.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.core.StackedHorizontalBarChartData.title
+  name: title
+  summary: The title of the series.
+  signature: 'title: str | None'

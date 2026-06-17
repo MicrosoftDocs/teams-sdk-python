@@ -1,0 +1,107 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.core.QueryData
+name: QueryData
+fullName: microsoft_teams.cards.core.QueryData
+module: microsoft_teams.cards.core
+summary: 'Defines a query to dynamically fetch data from a Bot.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'QueryData(*, key: str | None = None, type: Literal[''Data.Query''] = ''Data.Query'',
+    dataset: str | None = None, associatedInputs: Literal[''auto'', ''none''] | None
+    = None, count: float | None = None, skip: float | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: type
+    defaultValue: Data.Query
+  - name: dataset
+    defaultValue: None
+  - name: associatedInputs
+    defaultValue: None
+  - name: count
+    defaultValue: None
+  - name: skip
+    defaultValue: None
+methods:
+- uid: microsoft_teams.cards.core.QueryData.with_associated_inputs
+  name: with_associated_inputs
+  signature: 'with_associated_inputs(value: Literal[''auto'', ''none'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.QueryData.with_count
+  name: with_count
+  signature: 'with_count(value: float) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.QueryData.with_dataset
+  name: with_dataset
+  signature: 'with_dataset(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.QueryData.with_key
+  name: with_key
+  signature: 'with_key(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.QueryData.with_skip
+  name: with_skip
+  signature: 'with_skip(value: float) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.cards.core.QueryData.associated_inputs
+  name: associated_inputs
+  summary: Controls which inputs are associated with the Data.Query. When a Data.Query
+    is executed, the values of the associated inputs are sent to the Bot, allowing
+    it to perform filtering operations based on the user's input.
+  signature: 'associated_inputs: Literal[''auto'', ''none''] | None'
+- uid: microsoft_teams.cards.core.QueryData.count
+  name: count
+  summary: The maximum number of data items that should be returned by the query.
+    Card authors should not specify this property in their card payload. It is determined
+    by the client and sent to the Bot to enable pagination.
+  signature: 'count: float | None'
+- uid: microsoft_teams.cards.core.QueryData.dataset
+  name: dataset
+  summary: The dataset from which to fetch the data.
+  signature: 'dataset: str | None'
+- uid: microsoft_teams.cards.core.QueryData.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.core.QueryData.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.core.QueryData.skip
+  name: skip
+  summary: The number of data items to be skipped by the query. Card authors should
+    not specify this property in their card payload. It is determined by the client
+    and sent to the Bot to enable pagination.
+  signature: 'skip: float | None'
+- uid: microsoft_teams.cards.core.QueryData.type
+  name: type
+  summary: Must be **Data.Query**.
+  signature: 'type: Literal[''Data.Query'']'

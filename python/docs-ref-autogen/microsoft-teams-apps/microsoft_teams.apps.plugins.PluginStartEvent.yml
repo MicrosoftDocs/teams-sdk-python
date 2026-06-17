@@ -1,0 +1,19 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.plugins.PluginStartEvent
+name: PluginStartEvent
+fullName: microsoft_teams.apps.plugins.PluginStartEvent
+module: microsoft_teams.apps.plugins
+summary: 'Event emitted when the plugin is started.
+
+
+  Create new instance of PluginStartEvent(port,)'
+constructor:
+  syntax: 'PluginStartEvent(port: int)'
+  parameters:
+  - name: port
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.plugins.PluginStartEvent.port
+  name: port
+  summary: The port given to the app.start() method
+  signature: 'port: int'

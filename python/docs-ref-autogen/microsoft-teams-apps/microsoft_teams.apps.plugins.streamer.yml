@@ -1,0 +1,10 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.apps.plugins.streamer
+name: streamer
+fullName: microsoft_teams.apps.plugins.streamer
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.apps.plugins.streamer.StreamCancelledError
+- microsoft_teams.apps.plugins.streamer.StreamerProtocol

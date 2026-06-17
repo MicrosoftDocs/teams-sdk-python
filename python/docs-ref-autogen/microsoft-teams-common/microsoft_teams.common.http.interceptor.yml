@@ -1,0 +1,11 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.common.http.interceptor
+name: interceptor
+fullName: microsoft_teams.common.http.interceptor
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.common.http.interceptor.Interceptor
+- microsoft_teams.common.http.interceptor.InterceptorRequestContext
+- microsoft_teams.common.http.interceptor.InterceptorResponseContext

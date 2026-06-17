@@ -1,0 +1,46 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.apps.events.registry
+name: registry
+fullName: microsoft_teams.apps.events.registry
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+functions:
+- uid: microsoft_teams.apps.events.registry.get_event_name_from_type
+  name: get_event_name_from_type
+  summary: Get event name from event class type.
+  signature: 'get_event_name_from_type(event_class: Type[Any]) -> Literal[''activity'',
+    ''error'', ''start'', ''stop'', ''sign_in'', ''activity_response'', ''activity_sent'']
+    | str'
+  parameters:
+  - name: event_class
+    description: Event class type
+    isRequired: true
+  return:
+    description: Event name string
+  exceptions:
+  - type: ValueError
+    description: If event class is not registered
+- uid: microsoft_teams.apps.events.registry.get_event_type_from_signature
+  name: get_event_type_from_signature
+  summary: Extract event type from function signature by inspecting the first parameter's
+    type hint.
+  signature: 'get_event_type_from_signature(func: Callable[[...], Any]) -> Literal[''activity'',
+    ''error'', ''start'', ''stop'', ''sign_in'', ''activity_response'', ''activity_sent'']
+    | str | None'
+  parameters:
+  - name: func
+    description: Function to inspect
+    isRequired: true
+  return:
+    description: Event type string if detectable, None otherwise
+- uid: microsoft_teams.apps.events.registry.is_registered_event
+  name: is_registered_event
+  summary: Check if an event name is registered.
+  signature: 'is_registered_event(event_name: str) -> bool'
+  parameters:
+  - name: event_name
+    description: Event name to check
+    isRequired: true
+  return:
+    description: True if registered, False otherwise

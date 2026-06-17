@@ -1,0 +1,59 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.plugins.PluginActivityEvent
+name: PluginActivityEvent
+fullName: microsoft_teams.apps.plugins.PluginActivityEvent
+module: microsoft_teams.apps.plugins
+summary: 'Event emitted by a plugin when an activity is received.
+
+
+  Create new instance of PluginActivityEvent(token, activity, conversation_ref)'
+constructor:
+  syntax: 'PluginActivityEvent(token: TokenProtocol, activity: TypingActivity | CommandSendActivity
+    | CommandResultActivity | ConversationUpdateActivity | MessageActivity | MessageDeleteActivity
+    | MessageReactionActivity | MessageUpdateActivity | ReadReceiptEventActivity |
+    MeetingStartEventActivity | MeetingEndEventActivity | MeetingParticipantJoinEventActivity
+    | MeetingParticipantLeaveEventActivity | FileConsentInvokeActivity | ExecuteActionInvokeActivity
+    | MessageExtensionAnonQueryLinkInvokeActivity | MessageExtensionCardButtonClickedInvokeActivity
+    | MessageExtensionFetchTaskInvokeActivity | MessageExtensionQueryInvokeActivity
+    | MessageExtensionQueryLinkInvokeActivity | MessageExtensionQuerySettingUrlInvokeActivity
+    | MessageExtensionSelectItemInvokeActivity | MessageExtensionSettingInvokeActivity
+    | MessageExtensionSubmitActionInvokeActivity | ConfigFetchInvokeActivity | ConfigSubmitInvokeActivity
+    | TabFetchInvokeActivity | TabSubmitInvokeActivity | TaskFetchInvokeActivity |
+    TaskSubmitInvokeActivity | MessageFetchTaskInvokeActivity | MessageSubmitActionInvokeActivity
+    | HandoffActionInvokeActivity | SignInTokenExchangeInvokeActivity | SignInVerifyStateInvokeActivity
+    | SignInFailureInvokeActivity | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity
+    | InstalledActivity | UninstalledActivity, conversation_ref: ConversationReference)'
+  parameters:
+  - name: token
+    isRequired: true
+  - name: activity
+    isRequired: true
+  - name: conversation_ref
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.plugins.PluginActivityEvent.activity
+  name: activity
+  summary: Inbound request activity payload
+  signature: 'activity: TypingActivity | CommandSendActivity | CommandResultActivity
+    | ConversationUpdateActivity | MessageActivity | MessageDeleteActivity | MessageReactionActivity
+    | MessageUpdateActivity | ReadReceiptEventActivity | MeetingStartEventActivity
+    | MeetingEndEventActivity | MeetingParticipantJoinEventActivity | MeetingParticipantLeaveEventActivity
+    | FileConsentInvokeActivity | ExecuteActionInvokeActivity | MessageExtensionAnonQueryLinkInvokeActivity
+    | MessageExtensionCardButtonClickedInvokeActivity | MessageExtensionFetchTaskInvokeActivity
+    | MessageExtensionQueryInvokeActivity | MessageExtensionQueryLinkInvokeActivity
+    | MessageExtensionQuerySettingUrlInvokeActivity | MessageExtensionSelectItemInvokeActivity
+    | MessageExtensionSettingInvokeActivity | MessageExtensionSubmitActionInvokeActivity
+    | ConfigFetchInvokeActivity | ConfigSubmitInvokeActivity | TabFetchInvokeActivity
+    | TabSubmitInvokeActivity | TaskFetchInvokeActivity | TaskSubmitInvokeActivity
+    | MessageFetchTaskInvokeActivity | MessageSubmitActionInvokeActivity | HandoffActionInvokeActivity
+    | SignInTokenExchangeInvokeActivity | SignInVerifyStateInvokeActivity | SignInFailureInvokeActivity
+    | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity | InstalledActivity
+    | UninstalledActivity'
+- uid: microsoft_teams.apps.plugins.PluginActivityEvent.conversation_ref
+  name: conversation_ref
+  summary: The conversation reference for the activity
+  signature: 'conversation_ref: ConversationReference'
+- uid: microsoft_teams.apps.plugins.PluginActivityEvent.token
+  name: token
+  summary: Inbound request token
+  signature: 'token: TokenProtocol'

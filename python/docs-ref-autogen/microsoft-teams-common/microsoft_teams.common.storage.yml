@@ -1,0 +1,18 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.common.storage
+name: storage
+fullName: microsoft_teams.common.storage
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.common.storage.ListLocalStorage
+- microsoft_teams.common.storage.ListStorage
+- microsoft_teams.common.storage.LocalStorage
+- microsoft_teams.common.storage.LocalStorageOptions
+- microsoft_teams.common.storage.Storage
+modules:
+- microsoft_teams.common.storage.list_local_storage
+- microsoft_teams.common.storage.local_storage
+- microsoft_teams.common.storage.storage

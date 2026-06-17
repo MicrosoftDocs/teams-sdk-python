@@ -1,0 +1,8 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.events.StopEvent
+name: StopEvent
+fullName: microsoft_teams.apps.events.StopEvent
+module: microsoft_teams.apps.events
+summary: Event emitted when the app stops.
+constructor:
+  syntax: StopEvent()

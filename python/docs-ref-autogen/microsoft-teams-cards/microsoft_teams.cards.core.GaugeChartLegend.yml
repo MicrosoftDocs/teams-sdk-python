@@ -1,0 +1,121 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.core.GaugeChartLegend
+name: GaugeChartLegend
+fullName: microsoft_teams.cards.core.GaugeChartLegend
+module: microsoft_teams.cards.core
+summary: 'The legend of the chart.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'GaugeChartLegend(*, key: str | None = None, size: float | None = 0, legend:
+    str | None = None, color: Literal[''good'', ''warning'', ''attention'', ''neutral'',
+    ''categoricalRed'', ''categoricalPurple'', ''categoricalLavender'', ''categoricalBlue'',
+    ''categoricalLightBlue'', ''categoricalTeal'', ''categoricalGreen'', ''categoricalLime'',
+    ''categoricalMarigold'', ''sequential1'', ''sequential2'', ''sequential3'', ''sequential4'',
+    ''sequential5'', ''sequential6'', ''sequential7'', ''sequential8'', ''divergingBlue'',
+    ''divergingLightBlue'', ''divergingCyan'', ''divergingTeal'', ''divergingYellow'',
+    ''divergingPeach'', ''divergingLightRed'', ''divergingRed'', ''divergingMaroon'',
+    ''divergingGray'', ''sequentialRed1'', ''sequentialRed2'', ''sequentialRed3'',
+    ''sequentialRed4'', ''sequentialRed5'', ''sequentialRed6'', ''sequentialRed7'',
+    ''sequentialRed8'', ''sequentialGreen1'', ''sequentialGreen2'', ''sequentialGreen3'',
+    ''sequentialGreen4'', ''sequentialGreen5'', ''sequentialGreen6'', ''sequentialGreen7'',
+    ''sequentialGreen8'', ''sequentialYellow1'', ''sequentialYellow2'', ''sequentialYellow3'',
+    ''sequentialYellow4'', ''sequentialYellow5'', ''sequentialYellow6'', ''sequentialYellow7'',
+    ''sequentialYellow8''] | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: size
+    defaultValue: '0'
+  - name: legend
+    defaultValue: None
+  - name: color
+    defaultValue: None
+methods:
+- uid: microsoft_teams.cards.core.GaugeChartLegend.with_color
+  name: with_color
+  signature: 'with_color(value: Literal[''good'', ''warning'', ''attention'', ''neutral'',
+    ''categoricalRed'', ''categoricalPurple'', ''categoricalLavender'', ''categoricalBlue'',
+    ''categoricalLightBlue'', ''categoricalTeal'', ''categoricalGreen'', ''categoricalLime'',
+    ''categoricalMarigold'', ''sequential1'', ''sequential2'', ''sequential3'', ''sequential4'',
+    ''sequential5'', ''sequential6'', ''sequential7'', ''sequential8'', ''divergingBlue'',
+    ''divergingLightBlue'', ''divergingCyan'', ''divergingTeal'', ''divergingYellow'',
+    ''divergingPeach'', ''divergingLightRed'', ''divergingRed'', ''divergingMaroon'',
+    ''divergingGray'', ''sequentialRed1'', ''sequentialRed2'', ''sequentialRed3'',
+    ''sequentialRed4'', ''sequentialRed5'', ''sequentialRed6'', ''sequentialRed7'',
+    ''sequentialRed8'', ''sequentialGreen1'', ''sequentialGreen2'', ''sequentialGreen3'',
+    ''sequentialGreen4'', ''sequentialGreen5'', ''sequentialGreen6'', ''sequentialGreen7'',
+    ''sequentialGreen8'', ''sequentialYellow1'', ''sequentialYellow2'', ''sequentialYellow3'',
+    ''sequentialYellow4'', ''sequentialYellow5'', ''sequentialYellow6'', ''sequentialYellow7'',
+    ''sequentialYellow8'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.GaugeChartLegend.with_key
+  name: with_key
+  signature: 'with_key(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.GaugeChartLegend.with_legend
+  name: with_legend
+  signature: 'with_legend(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.GaugeChartLegend.with_size
+  name: with_size
+  signature: 'with_size(value: float) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.cards.core.GaugeChartLegend.color
+  name: color
+  summary: chart-colors-reference).
+  signature: 'color: Literal[''good'', ''warning'', ''attention'', ''neutral'', ''categoricalRed'',
+    ''categoricalPurple'', ''categoricalLavender'', ''categoricalBlue'', ''categoricalLightBlue'',
+    ''categoricalTeal'', ''categoricalGreen'', ''categoricalLime'', ''categoricalMarigold'',
+    ''sequential1'', ''sequential2'', ''sequential3'', ''sequential4'', ''sequential5'',
+    ''sequential6'', ''sequential7'', ''sequential8'', ''divergingBlue'', ''divergingLightBlue'',
+    ''divergingCyan'', ''divergingTeal'', ''divergingYellow'', ''divergingPeach'',
+    ''divergingLightRed'', ''divergingRed'', ''divergingMaroon'', ''divergingGray'',
+    ''sequentialRed1'', ''sequentialRed2'', ''sequentialRed3'', ''sequentialRed4'',
+    ''sequentialRed5'', ''sequentialRed6'', ''sequentialRed7'', ''sequentialRed8'',
+    ''sequentialGreen1'', ''sequentialGreen2'', ''sequentialGreen3'', ''sequentialGreen4'',
+    ''sequentialGreen5'', ''sequentialGreen6'', ''sequentialGreen7'', ''sequentialGreen8'',
+    ''sequentialYellow1'', ''sequentialYellow2'', ''sequentialYellow3'', ''sequentialYellow4'',
+    ''sequentialYellow5'', ''sequentialYellow6'', ''sequentialYellow7'', ''sequentialYellow8'']
+    | None'
+- uid: microsoft_teams.cards.core.GaugeChartLegend.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.core.GaugeChartLegend.legend
+  name: legend
+  summary: The legend text associated with the segment.
+  signature: 'legend: str | None'
+- uid: microsoft_teams.cards.core.GaugeChartLegend.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.core.GaugeChartLegend.size
+  name: size
+  summary: The size of the segment.
+  signature: 'size: float | None'

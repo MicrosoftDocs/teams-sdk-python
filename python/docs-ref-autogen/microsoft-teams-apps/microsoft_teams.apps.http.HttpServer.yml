@@ -1,0 +1,50 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.http.HttpServer
+name: HttpServer
+fullName: microsoft_teams.apps.http.HttpServer
+module: microsoft_teams.apps.http
+summary: "Core Teams HTTP server. Not a plugin \u2014 owned directly by the App.\n\
+  \nManages an HttpServerAdapter instance and handles JWT validation\nand activity\
+  \ processing for the Teams protocol."
+constructor:
+  syntax: 'HttpServer(adapter: HttpServerAdapter, messaging_endpoint: str = ''/api/messages'')'
+  parameters:
+  - name: adapter
+    isRequired: true
+  - name: messaging_endpoint
+    defaultValue: /api/messages
+methods:
+- uid: microsoft_teams.apps.http.HttpServer.handle_request
+  name: handle_request
+  summary: Handle incoming activity request. Public so plugins (e.g. BotBuilder) can
+    route through SDK auth.
+  signature: 'async handle_request(request: HttpRequest) -> HttpResponse'
+  parameters:
+  - name: request
+    isRequired: true
+- uid: microsoft_teams.apps.http.HttpServer.initialize
+  name: initialize
+  summary: Set up JWT validation and register the messaging endpoint route.
+  signature: 'initialize(credentials: ClientCredentials | TokenCredentials | ManagedIdentityCredentials
+    | FederatedIdentityCredentials | None = None, skip_auth: bool = False, cloud:
+    CloudEnvironment | None = None) -> None'
+  parameters:
+  - name: credentials
+    description: App credentials for JWT validation.
+    defaultValue: None
+  - name: skip_auth
+    description: Whether to skip JWT validation.
+    defaultValue: 'False'
+  - name: cloud
+    description: Optional cloud environment for sovereign cloud support.
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.apps.http.HttpServer.adapter
+  name: adapter
+  summary: The underlying HttpServerAdapter.
+- uid: microsoft_teams.apps.http.HttpServer.messaging_endpoint
+  name: messaging_endpoint
+  summary: The URL path for the Teams messaging endpoint.
+- uid: microsoft_teams.apps.http.HttpServer.on_request
+  name: on_request
+  summary: Callback set by App to process activities.

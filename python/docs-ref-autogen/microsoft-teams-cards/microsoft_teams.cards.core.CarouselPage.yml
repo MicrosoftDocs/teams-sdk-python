@@ -1,0 +1,331 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.core.CarouselPage
+name: CarouselPage
+fullName: microsoft_teams.cards.core.CarouselPage
+module: microsoft_teams.cards.core
+summary: 'A page inside a Carousel element.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'CarouselPage(*, key: str | None = None, type: ~typing.Literal[''CarouselPage'']
+    = ''CarouselPage'', id: str | None = None, requires: ~microsoft_teams.cards.core.HostCapabilities
+    | ~typing.Dict[str, ~typing.Any] | None = <factory>, lang: str | None = None,
+    isVisible: bool | None = True, height: ~typing.Literal[''auto'', ''stretch'']
+    | None = ''auto'', targetWidth: ~typing.Literal[''VeryNarrow'', ''Narrow'', ''Standard'',
+    ''Wide'', ''atLeast:VeryNarrow'', ''atMost:VeryNarrow'', ''atLeast:Narrow'', ''atMost:Narrow'',
+    ''atLeast:Standard'', ''atMost:Standard'', ''atLeast:Wide'', ''atMost:Wide'']
+    | None = None, isSortKey: bool | None = False, selectAction: ~microsoft_teams.cards.core.Action
+    | None = None, style: ~typing.Literal[''default'', ''emphasis'', ''accent'', ''good'',
+    ''attention'', ''warning''] | None = None, showBorder: bool | None = False, roundedCorners:
+    bool | None = False, layouts: ~typing.List[~microsoft_teams.cards.core.ContainerLayout]
+    | None = None, minHeight: str | None = None, backgroundImage: str | ~microsoft_teams.cards.core.BackgroundImage
+    | None = None, verticalContentAlignment: ~typing.Literal[''Top'', ''Center'',
+    ''Bottom''] | None = None, rtl: bool | None = None, maxHeight: str | None = None,
+    gridArea: str | None = None, fallback: ~microsoft_teams.cards.core.CardElement
+    | ~typing.Literal[''drop''] | None = None, items: ~typing.List[~microsoft_teams.cards.core.CardElement]
+    | None = None, **extra_data: ~typing.Any)'
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: type
+    defaultValue: CarouselPage
+  - name: id
+    defaultValue: None
+  - name: requires
+    defaultValue: <factory>
+  - name: lang
+    defaultValue: None
+  - name: isVisible
+    defaultValue: 'True'
+  - name: height
+    defaultValue: auto
+  - name: targetWidth
+    defaultValue: None
+  - name: isSortKey
+    defaultValue: 'False'
+  - name: selectAction
+    defaultValue: None
+  - name: style
+    defaultValue: None
+  - name: showBorder
+    defaultValue: 'False'
+  - name: roundedCorners
+    defaultValue: 'False'
+  - name: layouts
+    defaultValue: None
+  - name: minHeight
+    defaultValue: None
+  - name: backgroundImage
+    defaultValue: None
+  - name: verticalContentAlignment
+    defaultValue: None
+  - name: rtl
+    defaultValue: None
+  - name: maxHeight
+    defaultValue: None
+  - name: gridArea
+    defaultValue: None
+  - name: fallback
+    defaultValue: None
+  - name: items
+    defaultValue: None
+methods:
+- uid: microsoft_teams.cards.core.CarouselPage.with_background_image
+  name: with_background_image
+  signature: 'with_background_image(value: str | BackgroundImage) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_fallback
+  name: with_fallback
+  signature: 'with_fallback(value: CardElement | Literal[''drop'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_grid_area
+  name: with_grid_area
+  signature: 'with_grid_area(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_height
+  name: with_height
+  signature: 'with_height(value: Literal[''auto'', ''stretch'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_id
+  name: with_id
+  signature: 'with_id(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_is_sort_key
+  name: with_is_sort_key
+  signature: 'with_is_sort_key(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_is_visible
+  name: with_is_visible
+  signature: 'with_is_visible(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_items
+  name: with_items
+  signature: 'with_items(value: List[CardElement]) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_key
+  name: with_key
+  signature: 'with_key(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_lang
+  name: with_lang
+  signature: 'with_lang(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_layouts
+  name: with_layouts
+  signature: 'with_layouts(value: List[ContainerLayout]) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_max_height
+  name: with_max_height
+  signature: 'with_max_height(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_min_height
+  name: with_min_height
+  signature: 'with_min_height(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_requires
+  name: with_requires
+  signature: 'with_requires(value: HostCapabilities | Dict[str, Any]) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_rounded_corners
+  name: with_rounded_corners
+  signature: 'with_rounded_corners(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_rtl
+  name: with_rtl
+  signature: 'with_rtl(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_select_action
+  name: with_select_action
+  signature: 'with_select_action(value: Action) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_show_border
+  name: with_show_border
+  signature: 'with_show_border(value: bool) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_style
+  name: with_style
+  signature: 'with_style(value: Literal[''default'', ''emphasis'', ''accent'', ''good'',
+    ''attention'', ''warning'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_target_width
+  name: with_target_width
+  signature: 'with_target_width(value: Literal[''VeryNarrow'', ''Narrow'', ''Standard'',
+    ''Wide'', ''atLeast:VeryNarrow'', ''atMost:VeryNarrow'', ''atLeast:Narrow'', ''atMost:Narrow'',
+    ''atLeast:Standard'', ''atMost:Standard'', ''atLeast:Wide'', ''atMost:Wide''])
+    -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CarouselPage.with_vertical_content_alignment
+  name: with_vertical_content_alignment
+  signature: 'with_vertical_content_alignment(value: Literal[''Top'', ''Center'',
+    ''Bottom'']) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.cards.core.CarouselPage.background_image
+  name: background_image
+  summary: Defines the container's background image.
+  signature: 'background_image: str | BackgroundImage | None'
+- uid: microsoft_teams.cards.core.CarouselPage.fallback
+  name: fallback
+  summary: An alternate element to render if the type of this one is unsupported or
+    if the host application doesn't support all the capabilities specified in the
+    requires property.
+  signature: 'fallback: CardElement | Literal[''drop''] | None'
+- uid: microsoft_teams.cards.core.CarouselPage.grid_area
+  name: grid_area
+  summary: The area of a Layout.AreaGrid layout in which an element should be displayed.
+  signature: 'grid_area: str | None'
+- uid: microsoft_teams.cards.core.CarouselPage.height
+  name: height
+  summary: The height of the element. When set to stretch, the element will use the
+    remaining vertical space in its container.
+  signature: 'height: Literal[''auto'', ''stretch''] | None'
+- uid: microsoft_teams.cards.core.CarouselPage.id
+  name: id
+  summary: A unique identifier for the element or action. Input elements must have
+    an id, otherwise they will not be validated and their values will not be sent
+    to the Bot.
+  signature: 'id: str | None'
+- uid: microsoft_teams.cards.core.CarouselPage.is_sort_key
+  name: is_sort_key
+  summary: Controls whether the element should be used as a sort key by elements that
+    allow sorting across a collection of elements.
+  signature: 'is_sort_key: bool | None'
+- uid: microsoft_teams.cards.core.CarouselPage.is_visible
+  name: is_visible
+  summary: Controls the visibility of the element.
+  signature: 'is_visible: bool | None'
+- uid: microsoft_teams.cards.core.CarouselPage.items
+  name: items
+  summary: The elements in the page.
+  signature: 'items: List[CardElement] | None'
+- uid: microsoft_teams.cards.core.CarouselPage.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.core.CarouselPage.lang
+  name: lang
+  summary: The locale associated with the element.
+  signature: 'lang: str | None'
+- uid: microsoft_teams.cards.core.CarouselPage.layouts
+  name: layouts
+  summary: container-layouts) for more details.
+  signature: 'layouts: List[ContainerLayout] | None'
+- uid: microsoft_teams.cards.core.CarouselPage.max_height
+  name: max_height
+  summary: The maximum height, in pixels, of the container, in the *<number>px* format.
+    When the content of a container exceeds the container's maximum height, a vertical
+    scrollbar is displayed.
+  signature: 'max_height: str | None'
+- uid: microsoft_teams.cards.core.CarouselPage.min_height
+  name: min_height
+  summary: The minimum height, in pixels, of the container, in the *<number>px* format.
+  signature: 'min_height: str | None'
+- uid: microsoft_teams.cards.core.CarouselPage.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.core.CarouselPage.requires
+  name: requires
+  summary: A list of capabilities the element requires the host application to support.
+    If the host application doesn't support at least one of the listed capabilities,
+    the element is not rendered (or its fallback is rendered if provided).
+  signature: 'requires: HostCapabilities | Dict[str, Any] | None'
+- uid: microsoft_teams.cards.core.CarouselPage.rounded_corners
+  name: rounded_corners
+  summary: Controls if the container should have rounded corners.
+  signature: 'rounded_corners: bool | None'
+- uid: microsoft_teams.cards.core.CarouselPage.rtl
+  name: rtl
+  summary: Controls if the content of the card is to be rendered left-to-right or
+    right-to-left.
+  signature: 'rtl: bool | None'
+- uid: microsoft_teams.cards.core.CarouselPage.select_action
+  name: select_action
+  summary: An Action that will be invoked when the element is tapped or clicked. Action.ShowCard
+    is not supported.
+  signature: 'select_action: Action | None'
+- uid: microsoft_teams.cards.core.CarouselPage.show_border
+  name: show_border
+  summary: Controls if a border should be displayed around the container.
+  signature: 'show_border: bool | None'
+- uid: microsoft_teams.cards.core.CarouselPage.style
+  name: style
+  summary: The style of the container. Container styles control the colors of the
+    background, border and text inside the container, in such a way that contrast
+    requirements are always met.
+  signature: 'style: Literal[''default'', ''emphasis'', ''accent'', ''good'', ''attention'',
+    ''warning''] | None'
+- uid: microsoft_teams.cards.core.CarouselPage.target_width
+  name: target_width
+  summary: responsive-layout).
+  signature: 'target_width: Literal[''VeryNarrow'', ''Narrow'', ''Standard'', ''Wide'',
+    ''atLeast:VeryNarrow'', ''atMost:VeryNarrow'', ''atLeast:Narrow'', ''atMost:Narrow'',
+    ''atLeast:Standard'', ''atMost:Standard'', ''atLeast:Wide'', ''atMost:Wide'']
+    | None'
+- uid: microsoft_teams.cards.core.CarouselPage.type
+  name: type
+  summary: Must be **CarouselPage**.
+  signature: 'type: Literal[''CarouselPage'']'
+- uid: microsoft_teams.cards.core.CarouselPage.vertical_content_alignment
+  name: vertical_content_alignment
+  summary: Controls how the container's content should be vertically aligned.
+  signature: 'vertical_content_alignment: Literal[''Top'', ''Center'', ''Bottom'']
+    | None'

@@ -1,0 +1,107 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.cards.core.CalendarEventAttendee
+name: CalendarEventAttendee
+fullName: microsoft_teams.cards.core.CalendarEventAttendee
+module: microsoft_teams.cards.core
+summary: 'Represents a calendar event attendee.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'CalendarEventAttendee(*, key: str | None = None, name: str | None = None,
+    email: str | None = None, title: str | None = None, type: str | None = None, status:
+    str | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: key
+    defaultValue: None
+  - name: name
+    defaultValue: None
+  - name: email
+    defaultValue: None
+  - name: title
+    defaultValue: None
+  - name: type
+    defaultValue: None
+  - name: status
+    defaultValue: None
+methods:
+- uid: microsoft_teams.cards.core.CalendarEventAttendee.with_email
+  name: with_email
+  signature: 'with_email(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventAttendee.with_key
+  name: with_key
+  signature: 'with_key(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventAttendee.with_name
+  name: with_name
+  signature: 'with_name(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventAttendee.with_status
+  name: with_status
+  signature: 'with_status(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventAttendee.with_title
+  name: with_title
+  signature: 'with_title(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.cards.core.CalendarEventAttendee.with_type
+  name: with_type
+  signature: 'with_type(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.cards.core.CalendarEventAttendee.email
+  name: email
+  summary: The email address of the attendee.
+  signature: 'email: str | None'
+- uid: microsoft_teams.cards.core.CalendarEventAttendee.key
+  name: key
+  summary: Defines an optional key for the object. Keys are seldom needed, but in
+    some scenarios, specifying keys can help maintain visual state in the host application.
+  signature: 'key: str | None'
+- uid: microsoft_teams.cards.core.CalendarEventAttendee.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.cards.core.CalendarEventAttendee.name
+  name: name
+  summary: The name of the attendee.
+  signature: 'name: str | None'
+- uid: microsoft_teams.cards.core.CalendarEventAttendee.status
+  name: status
+  summary: The status of the attendee.
+  signature: 'status: str | None'
+- uid: microsoft_teams.cards.core.CalendarEventAttendee.title
+  name: title
+  summary: The title of the attendee.
+  signature: 'title: str | None'
+- uid: microsoft_teams.cards.core.CalendarEventAttendee.type
+  name: type
+  summary: The type of the attendee.
+  signature: 'type: str | None'

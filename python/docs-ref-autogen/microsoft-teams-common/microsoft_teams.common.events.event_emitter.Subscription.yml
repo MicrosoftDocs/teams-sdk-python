@@ -1,0 +1,15 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.common.events.event_emitter.Subscription
+name: Subscription
+fullName: microsoft_teams.common.events.event_emitter.Subscription
+module: microsoft_teams.common.events.event_emitter
+summary: A subscription entry for an event handler.
+constructor:
+  syntax: Subscription()
+attributes:
+- uid: microsoft_teams.common.events.event_emitter.Subscription.handler
+  name: handler
+  signature: 'handler: Callable[[Any], None] | Callable[[Any], Awaitable[Any]]'
+- uid: microsoft_teams.common.events.event_emitter.Subscription.id
+  name: id
+  signature: 'id: int'

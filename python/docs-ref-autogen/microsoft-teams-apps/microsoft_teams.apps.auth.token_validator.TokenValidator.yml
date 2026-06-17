@@ -1,0 +1,78 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.auth.token_validator.TokenValidator
+name: TokenValidator
+fullName: microsoft_teams.apps.auth.token_validator.TokenValidator
+module: microsoft_teams.apps.auth.token_validator
+summary: 'JWT token validator using PyJWKClient for simplified validation.
+
+
+  Initialize the token validator.'
+constructor:
+  syntax: 'TokenValidator(jwt_validation_options: JwtValidationOptions)'
+  parameters:
+  - name: jwt_validation_options
+    description: Configuration for JWT validation
+    isRequired: true
+methods:
+- uid: microsoft_teams.apps.auth.token_validator.TokenValidator.for_entra
+  name: for_entra
+  summary: Create a validator for Entra ID tokens.
+  signature: 'for_entra(app_id: str, tenant_id: str | None, scope: str | None = None,
+    application_id_uri: str | None = None, cloud: CloudEnvironment | None = None)
+    -> TokenValidator'
+  parameters:
+  - name: app_id
+    description: The app's Microsoft App ID (used for audience validation)
+    isRequired: true
+  - name: tenant_id
+    description: The Azure AD tenant ID
+    isRequired: true
+  - name: scope
+    description: Optional scope that must be present in the token
+    defaultValue: None
+  - name: application_id_uri
+    description: 'Optional Application ID URI from Azure portal.
+
+      Matches webApplicationInfo.resource in the app manifest.'
+    defaultValue: None
+  - name: cloud
+    description: Optional cloud environment for sovereign cloud support
+    defaultValue: None
+- uid: microsoft_teams.apps.auth.token_validator.TokenValidator.for_service
+  name: for_service
+  summary: 'Create a validator for Bot Framework service tokens.
+
+
+    Reference: [https://learn.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-authentication](https://learn.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-authentication)'
+  signature: 'for_service(app_id: str, service_url: str | None = None, cloud: CloudEnvironment
+    | None = None) -> TokenValidator'
+  parameters:
+  - name: app_id
+    description: The bot's Microsoft App ID (used for audience validation)
+    isRequired: true
+  - name: service_url
+    description: Optional service URL to validate against token claims
+    defaultValue: None
+  - name: cloud
+    description: Optional cloud environment for sovereign cloud support
+    defaultValue: None
+- uid: microsoft_teams.apps.auth.token_validator.TokenValidator.validate_token
+  name: validate_token
+  summary: Validate a JWT token.
+  signature: 'async validate_token(raw_token: str, service_url: str | None = None,
+    scope: str | None = None) -> Dict[str, Any]'
+  parameters:
+  - name: raw_token
+    description: The raw JWT token string
+    isRequired: true
+  - name: service_url
+    description: Optional service URL to validate against token claims
+    defaultValue: None
+  - name: scope
+    description: Optional scope that must be present in the token
+    defaultValue: None
+  return:
+    description: The decoded JWT payload if validation is successful
+  exceptions:
+  - type: jwt.InvalidTokenError
+    description: When token validation fails

@@ -1,0 +1,15 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.common.LocalStorageOptions
+name: LocalStorageOptions
+fullName: microsoft_teams.common.LocalStorageOptions
+module: microsoft_teams.common
+constructor:
+  syntax: 'LocalStorageOptions(max: int | None = None)'
+  parameters:
+  - name: max
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.common.LocalStorageOptions.max
+  name: max
+  summary: Maximum number of items in the storage
+  signature: 'max: int | None = None'
