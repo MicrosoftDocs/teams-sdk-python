@@ -1,0 +1,37 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.tab.TabEntityContext
+name: TabEntityContext
+fullName: microsoft_teams.api.models.tab.TabEntityContext
+module: microsoft_teams.api.models.tab
+summary: 'Current TabRequest entity context, or ''tabEntityId''.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'TabEntityContext(*, tabEntityId: str | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: tabEntityId
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.models.tab.TabEntityContext.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.tab.TabEntityContext.tab_entity_id
+  name: tab_entity_id
+  summary: The entity id of the tab.
+  signature: 'tab_entity_id: str | None'

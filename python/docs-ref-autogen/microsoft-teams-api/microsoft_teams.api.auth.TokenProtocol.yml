@@ -1,0 +1,41 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.auth.TokenProtocol
+name: TokenProtocol
+fullName: microsoft_teams.api.auth.TokenProtocol
+module: microsoft_teams.api.auth
+summary: Any authorized token.
+constructor:
+  syntax: TokenProtocol(*args, **kwargs)
+methods:
+- uid: microsoft_teams.api.auth.TokenProtocol.is_expired
+  name: is_expired
+  summary: Check if the token is expired.
+  signature: 'is_expired(buffer_ms: int = 300000) -> bool'
+  parameters:
+  - name: buffer_ms
+    description: Buffer time in milliseconds (default 5 minutes).
+    defaultValue: '300000'
+  return:
+    description: True if the token is expired, False otherwise.
+attributes:
+- uid: microsoft_teams.api.auth.TokenProtocol.app_display_name
+  name: app_display_name
+  summary: The app display name.
+- uid: microsoft_teams.api.auth.TokenProtocol.app_id
+  name: app_id
+  summary: The app id.
+- uid: microsoft_teams.api.auth.TokenProtocol.expiration
+  name: expiration
+  summary: The expiration of the token since epoch in milliseconds.
+- uid: microsoft_teams.api.auth.TokenProtocol.from_
+  name: from_
+  summary: Where the activity originated from.
+- uid: microsoft_teams.api.auth.TokenProtocol.from_id
+  name: from_id
+  summary: The id of the activity sender.
+- uid: microsoft_teams.api.auth.TokenProtocol.service_url
+  name: service_url
+  summary: The service url to send responses to.
+- uid: microsoft_teams.api.auth.TokenProtocol.tenant_id
+  name: tenant_id
+  summary: The tenant id.

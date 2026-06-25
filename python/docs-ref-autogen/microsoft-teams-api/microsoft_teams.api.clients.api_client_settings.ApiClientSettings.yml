@@ -1,0 +1,22 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.clients.api_client_settings.ApiClientSettings
+name: ApiClientSettings
+fullName: microsoft_teams.api.clients.api_client_settings.ApiClientSettings
+module: microsoft_teams.api.clients.api_client_settings
+summary: Settings for API clients.
+constructor:
+  syntax: 'ApiClientSettings(oauth_url: str | None = None)'
+  parameters:
+  - name: oauth_url
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.clients.api_client_settings.ApiClientSettings.oauth_url
+  name: oauth_url
+  summary: 'The URL to use for managing user OAuth tokens.
+
+    Specify this value if you are using a regional bot.
+
+    For example: [https://europe.token.botframework.com](https://europe.token.botframework.com)
+
+    Defaults to the cloud environment''s token service URL.'
+  signature: 'oauth_url: str | None = None'

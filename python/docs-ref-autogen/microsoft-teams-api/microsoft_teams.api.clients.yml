@@ -1,0 +1,64 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.clients
+name: clients
+fullName: microsoft_teams.api.clients
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+functions:
+- uid: microsoft_teams.api.clients.merge_api_client_settings
+  name: merge_api_client_settings
+  summary: Merge API client settings with environment variables and defaults.
+  signature: 'merge_api_client_settings(api_client_settings: ApiClientSettings | None
+    = None, cloud: CloudEnvironment = CloudEnvironment(login_endpoint=''https://login.microsoftonline.com'',
+    login_tenant=''botframework.com'', bot_scope=''https://api.botframework.com/.default'',
+    token_service_url=''https://token.botframework.com'', openid_metadata_url=''https://login.botframework.com/v1/.well-known/openidconfiguration'',
+    token_issuer=''https://api.botframework.com'', graph_scope=''https://graph.microsoft.com/.default''))
+    -> ApiClientSettings'
+  parameters:
+  - name: api_client_settings
+    description: Optional API client settings to merge.
+    defaultValue: None
+  - name: cloud
+    description: Cloud environment for default oauth_url. Defaults to PUBLIC.
+    defaultValue: CloudEnvironment(login_endpoint='https://login.microsoftonline.com',
+      login_tenant='botframework.com', bot_scope='https://api.botframework.com/.default',
+      token_service_url='https://token.botframework.com', openid_metadata_url='https://login.botframework.com/v1/.well-known/openidconfiguration',
+      token_issuer='https://api.botframework.com', graph_scope='https://graph.microsoft.com/.default')
+  return:
+    description: Merged API client settings.
+classes:
+- microsoft_teams.api.clients.ApiClient
+- microsoft_teams.api.clients.ApiClientSettings
+- microsoft_teams.api.clients.BotClient
+- microsoft_teams.api.clients.BotSignInClient
+- microsoft_teams.api.clients.BotTokenClient
+- microsoft_teams.api.clients.ConversationActivityClient
+- microsoft_teams.api.clients.ConversationClient
+- microsoft_teams.api.clients.ConversationMemberClient
+- microsoft_teams.api.clients.CreateConversationParams
+- microsoft_teams.api.clients.ExchangeUserTokenParams
+- microsoft_teams.api.clients.GetBotSignInResourceParams
+- microsoft_teams.api.clients.GetBotSignInUrlParams
+- microsoft_teams.api.clients.GetTeamConversationsResponse
+- microsoft_teams.api.clients.GetUserAADTokenParams
+- microsoft_teams.api.clients.GetUserTokenParams
+- microsoft_teams.api.clients.GetUserTokenStatusParams
+- microsoft_teams.api.clients.MeetingClient
+- microsoft_teams.api.clients.ReactionClient
+- microsoft_teams.api.clients.SignOutUserParams
+- microsoft_teams.api.clients.TeamClient
+- microsoft_teams.api.clients.UserClient
+- microsoft_teams.api.clients.UserTokenClient
+packages:
+- microsoft_teams.api.clients.bot
+- microsoft_teams.api.clients.conversation
+- microsoft_teams.api.clients.meeting
+- microsoft_teams.api.clients.reaction
+- microsoft_teams.api.clients.team
+- microsoft_teams.api.clients.user
+modules:
+- microsoft_teams.api.clients.api_client
+- microsoft_teams.api.clients.api_client_settings
+- microsoft_teams.api.clients.base_client

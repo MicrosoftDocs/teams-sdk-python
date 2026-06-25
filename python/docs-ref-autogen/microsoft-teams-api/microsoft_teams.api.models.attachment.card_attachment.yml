@@ -1,0 +1,39 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.models.attachment.card_attachment
+name: card_attachment
+fullName: microsoft_teams.api.models.attachment.card_attachment
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+functions:
+- uid: microsoft_teams.api.models.attachment.card_attachment.card_attachment
+  name: card_attachment
+  summary: Create a card attachment of the specified type
+  signature: 'card_attachment(attachment: AdaptiveCardAttachment | AnimationCardAttachment
+    | AudioCardAttachment | HeroCardAttachment | OAuthCardAttachment | SigninCardAttachment
+    | ThumbnailCardAttachment | VideoCardAttachment) -> Attachment'
+  parameters:
+  - name: type
+    description: The type of card attachment to create
+    isRequired: true
+  - name: content
+    description: The content for the card attachment (specific type based on card
+      type)
+    isRequired: true
+  - name: attachment
+    isRequired: true
+  return:
+    description: A card attachment of the specified type with the given content
+classes:
+- microsoft_teams.api.models.attachment.card_attachment.AdaptiveCardAttachment
+- microsoft_teams.api.models.attachment.card_attachment.AnimationCardAttachment
+- microsoft_teams.api.models.attachment.card_attachment.AudioCardAttachment
+- microsoft_teams.api.models.attachment.card_attachment.CardAttachmentData
+- microsoft_teams.api.models.attachment.card_attachment.HeroCardAttachment
+- microsoft_teams.api.models.attachment.card_attachment.OAuthCardAttachment
+- microsoft_teams.api.models.attachment.card_attachment.SigninCardAttachment
+- microsoft_teams.api.models.attachment.card_attachment.ThumbnailCardAttachment
+- microsoft_teams.api.models.attachment.card_attachment.VideoCardAttachment
+enums:
+- microsoft_teams.api.models.attachment.card_attachment.CardAttachmentType
+- microsoft_teams.api.models.attachment.card_attachment.CardAttachmentTypes

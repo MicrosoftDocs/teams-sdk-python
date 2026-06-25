@@ -1,0 +1,50 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.CardTaskModuleTaskInfo
+name: CardTaskModuleTaskInfo
+fullName: microsoft_teams.api.CardTaskModuleTaskInfo
+module: microsoft_teams.api
+summary: 'Task module info for card type.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'CardTaskModuleTaskInfo(*, title: str | None = None, height: int | Literal[''small'',
+    ''medium'', ''large''] | None = None, width: int | Literal[''small'', ''medium'',
+    ''large''] | None = None, fallbackUrl: str | None = None, completionBotId: str
+    | None = None, card: Attachment, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: title
+    defaultValue: None
+  - name: height
+    defaultValue: None
+  - name: width
+    defaultValue: None
+  - name: fallbackUrl
+    defaultValue: None
+  - name: completionBotId
+    defaultValue: None
+  - name: card
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.CardTaskModuleTaskInfo.card
+  name: card
+  summary: The JSON for the Adaptive card to appear in the task module.
+  signature: 'card: Attachment'
+- uid: microsoft_teams.api.CardTaskModuleTaskInfo.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'

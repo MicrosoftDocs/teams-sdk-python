@@ -1,0 +1,60 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.adaptive_card.AdaptiveCardInvokeValue
+name: AdaptiveCardInvokeValue
+fullName: microsoft_teams.api.models.adaptive_card.AdaptiveCardInvokeValue
+module: microsoft_teams.api.models.adaptive_card
+summary: 'Defines the structure that arrives in the Activity.Value for Invoke activity
+  with
+
+  Name of ''adaptiveCard/action''.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'AdaptiveCardInvokeValue(*, action: AdaptiveCardInvokeAction, authentication:
+    TokenExchangeInvokeRequest | None = None, state: str | None = None, trigger: Literal[''manual'']
+    | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: action
+    isRequired: true
+  - name: authentication
+    defaultValue: None
+  - name: state
+    defaultValue: None
+  - name: trigger
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.models.adaptive_card.AdaptiveCardInvokeValue.action
+  name: action
+  summary: The AdaptiveCardInvokeAction of this adaptive card invoke action value.
+  signature: 'action: AdaptiveCardInvokeAction'
+- uid: microsoft_teams.api.models.adaptive_card.AdaptiveCardInvokeValue.authentication
+  name: authentication
+  summary: The AdaptiveCardAuthentication for this adaptive card invoke action value.
+  signature: 'authentication: TokenExchangeInvokeRequest | None'
+- uid: microsoft_teams.api.models.adaptive_card.AdaptiveCardInvokeValue.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.adaptive_card.AdaptiveCardInvokeValue.state
+  name: state
+  summary: The 'state' or magic code for an OAuth flow.
+  signature: 'state: str | None'
+- uid: microsoft_teams.api.models.adaptive_card.AdaptiveCardInvokeValue.trigger
+  name: trigger
+  summary: What triggered the action
+  signature: 'trigger: Literal[''manual''] | None'

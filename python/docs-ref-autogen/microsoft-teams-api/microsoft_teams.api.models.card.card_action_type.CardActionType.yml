@@ -1,0 +1,29 @@
+### YamlMime:PythonEnum
+uid: microsoft_teams.api.models.card.card_action_type.CardActionType
+name: CardActionType
+fullName: microsoft_teams.api.models.card.card_action_type.CardActionType
+summary: Available card action types.
+module: microsoft_teams.api.models.card.card_action_type
+fields:
+- name: SUBMIT
+  uid: microsoft_teams.api.models.card.card_action_type.CardActionType.SUBMIT
+- name: CALL
+  uid: microsoft_teams.api.models.card.card_action_type.CardActionType.CALL
+- name: DOWNLOAD_FILE
+  uid: microsoft_teams.api.models.card.card_action_type.CardActionType.DOWNLOAD_FILE
+- name: IM_BACK
+  uid: microsoft_teams.api.models.card.card_action_type.CardActionType.IM_BACK
+- name: INVOKE
+  uid: microsoft_teams.api.models.card.card_action_type.CardActionType.INVOKE
+- name: OPEN_URL
+  uid: microsoft_teams.api.models.card.card_action_type.CardActionType.OPEN_URL
+- name: PLAY_AUDIO
+  uid: microsoft_teams.api.models.card.card_action_type.CardActionType.PLAY_AUDIO
+- name: PLAY_VIDEO
+  uid: microsoft_teams.api.models.card.card_action_type.CardActionType.PLAY_VIDEO
+- name: POST_BACK
+  uid: microsoft_teams.api.models.card.card_action_type.CardActionType.POST_BACK
+- name: SHOW_IMAGE
+  uid: microsoft_teams.api.models.card.card_action_type.CardActionType.SHOW_IMAGE
+- name: SIGN_IN
+  uid: microsoft_teams.api.models.card.card_action_type.CardActionType.SIGN_IN

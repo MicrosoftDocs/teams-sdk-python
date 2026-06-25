@@ -1,0 +1,9 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.models.action
+name: action
+fullName: microsoft_teams.api.models.action
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+enums:
+- microsoft_teams.api.models.action.Action

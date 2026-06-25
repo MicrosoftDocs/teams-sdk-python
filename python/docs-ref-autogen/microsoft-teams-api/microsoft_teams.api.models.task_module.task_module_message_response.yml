@@ -1,0 +1,9 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.models.task_module.task_module_message_response
+name: task_module_message_response
+fullName: microsoft_teams.api.models.task_module.task_module_message_response
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.api.models.task_module.task_module_message_response.TaskModuleMessageResponse

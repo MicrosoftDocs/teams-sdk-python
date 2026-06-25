@@ -1,0 +1,9 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.activities.event.meeting_participant_leave
+name: meeting_participant_leave
+fullName: microsoft_teams.api.activities.event.meeting_participant_leave
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.api.activities.event.meeting_participant_leave.MeetingParticipantLeaveEventActivity

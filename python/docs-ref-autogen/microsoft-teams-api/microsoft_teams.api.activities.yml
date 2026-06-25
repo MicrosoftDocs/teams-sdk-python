@@ -1,0 +1,76 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.activities
+name: activities
+fullName: microsoft_teams.api.activities
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.activities.AdaptiveCardInvokeActivity
+- microsoft_teams.api.activities.CommandResultActivity
+- microsoft_teams.api.activities.CommandResultValue
+- microsoft_teams.api.activities.CommandSendActivity
+- microsoft_teams.api.activities.CommandSendValue
+- microsoft_teams.api.activities.ConfigFetchInvokeActivity
+- microsoft_teams.api.activities.ConfigSubmitInvokeActivity
+- microsoft_teams.api.activities.ConversationChannelData
+- microsoft_teams.api.activities.ConversationUpdateActivity
+- microsoft_teams.api.activities.ExecuteActionInvokeActivity
+- microsoft_teams.api.activities.FileConsentInvokeActivity
+- microsoft_teams.api.activities.HandoffActionInvokeActivity
+- microsoft_teams.api.activities.InstalledActivity
+- microsoft_teams.api.activities.MeetingEndEventActivity
+- microsoft_teams.api.activities.MeetingParticipantEventActivity
+- microsoft_teams.api.activities.MeetingParticipantJoinEventActivity
+- microsoft_teams.api.activities.MeetingParticipantLeaveEventActivity
+- microsoft_teams.api.activities.MeetingStartEventActivity
+- microsoft_teams.api.activities.MessageActivity
+- microsoft_teams.api.activities.MessageActivityInput
+- microsoft_teams.api.activities.MessageDeleteActivity
+- microsoft_teams.api.activities.MessageDeleteChannelData
+- microsoft_teams.api.activities.MessageExtensionAnonQueryLinkInvokeActivity
+- microsoft_teams.api.activities.MessageExtensionCardButtonClickedInvokeActivity
+- microsoft_teams.api.activities.MessageExtensionFetchTaskInvokeActivity
+- microsoft_teams.api.activities.MessageExtensionQueryInvokeActivity
+- microsoft_teams.api.activities.MessageExtensionQueryLinkInvokeActivity
+- microsoft_teams.api.activities.MessageExtensionQuerySettingUrlInvokeActivity
+- microsoft_teams.api.activities.MessageExtensionSelectItemInvokeActivity
+- microsoft_teams.api.activities.MessageExtensionSettingInvokeActivity
+- microsoft_teams.api.activities.MessageExtensionSubmitActionInvokeActivity
+- microsoft_teams.api.activities.MessageFetchTaskActionValue
+- microsoft_teams.api.activities.MessageFetchTaskData
+- microsoft_teams.api.activities.MessageFetchTaskInvokeActivity
+- microsoft_teams.api.activities.MessageFetchTaskInvokeValue
+- microsoft_teams.api.activities.MessageReactionActivity
+- microsoft_teams.api.activities.MessageReactionActivityInput
+- microsoft_teams.api.activities.MessageSubmitActionInvokeActivity
+- microsoft_teams.api.activities.MessageUpdateActivity
+- microsoft_teams.api.activities.MessageUpdateChannelData
+- microsoft_teams.api.activities.ReadReceiptEventActivity
+- microsoft_teams.api.activities.SentActivity
+- microsoft_teams.api.activities.SignInFailureInvokeActivity
+- microsoft_teams.api.activities.SignInTokenExchangeInvokeActivity
+- microsoft_teams.api.activities.SignInVerifyStateInvokeActivity
+- microsoft_teams.api.activities.SuggestedActionSubmitInvokeActivity
+- microsoft_teams.api.activities.TabFetchInvokeActivity
+- microsoft_teams.api.activities.TabSubmitInvokeActivity
+- microsoft_teams.api.activities.TaskFetchInvokeActivity
+- microsoft_teams.api.activities.TaskSubmitInvokeActivity
+- microsoft_teams.api.activities.TypingActivity
+- microsoft_teams.api.activities.TypingActivityInput
+- microsoft_teams.api.activities.UninstalledActivity
+packages:
+- microsoft_teams.api.activities.command
+- microsoft_teams.api.activities.conversation
+- microsoft_teams.api.activities.event
+- microsoft_teams.api.activities.install_update
+- microsoft_teams.api.activities.invoke
+- microsoft_teams.api.activities.message
+- microsoft_teams.api.activities.utils
+modules:
+- microsoft_teams.api.activities.activity_params
+- microsoft_teams.api.activities.invoke_activity
+- microsoft_teams.api.activities.protocols
+- microsoft_teams.api.activities.sent_activity
+- microsoft_teams.api.activities.typing

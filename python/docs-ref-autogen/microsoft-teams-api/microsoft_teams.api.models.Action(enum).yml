@@ -1,0 +1,11 @@
+### YamlMime:PythonEnum
+uid: microsoft_teams.api.models.Action
+name: Action
+fullName: microsoft_teams.api.models.Action
+summary: Enum for the actions that can be taken on a file consent card.
+module: microsoft_teams.api.models
+fields:
+- name: ACCEPT
+  uid: microsoft_teams.api.models.Action.ACCEPT
+- name: DECLINE
+  uid: microsoft_teams.api.models.Action.DECLINE

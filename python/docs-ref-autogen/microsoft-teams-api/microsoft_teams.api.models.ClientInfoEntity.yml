@@ -1,0 +1,63 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.ClientInfoEntity
+name: ClientInfoEntity
+fullName: microsoft_teams.api.models.ClientInfoEntity
+module: microsoft_teams.api.models
+summary: 'Client information entity
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'ClientInfoEntity(*, type: Literal[''clientInfo''] = ''clientInfo'', locale:
+    str | None = None, country: str | None = None, platform: str | None = None, timezone:
+    str | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: type
+    defaultValue: clientInfo
+  - name: locale
+    defaultValue: None
+  - name: country
+    defaultValue: None
+  - name: platform
+    defaultValue: None
+  - name: timezone
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.models.ClientInfoEntity.country
+  name: country
+  summary: Client country code (ex US)
+  signature: 'country: str | None'
+- uid: microsoft_teams.api.models.ClientInfoEntity.locale
+  name: locale
+  summary: Client locale (ex en-US)
+  signature: 'locale: str | None'
+- uid: microsoft_teams.api.models.ClientInfoEntity.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.ClientInfoEntity.platform
+  name: platform
+  summary: Client platform (ex Web)
+  signature: 'platform: str | None'
+- uid: microsoft_teams.api.models.ClientInfoEntity.timezone
+  name: timezone
+  summary: Client timezone (ex America/New_York)
+  signature: 'timezone: str | None'
+- uid: microsoft_teams.api.models.ClientInfoEntity.type
+  name: type
+  summary: Type identifier for client info
+  signature: 'type: Literal[''clientInfo'']'

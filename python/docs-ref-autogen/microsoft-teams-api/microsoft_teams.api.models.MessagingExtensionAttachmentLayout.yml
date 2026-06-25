@@ -1,0 +1,11 @@
+### YamlMime:PythonEnum
+uid: microsoft_teams.api.models.MessagingExtensionAttachmentLayout
+name: MessagingExtensionAttachmentLayout
+fullName: microsoft_teams.api.models.MessagingExtensionAttachmentLayout
+summary: Enum for messaging extension attachment layout types.
+module: microsoft_teams.api.models
+fields:
+- name: GRID
+  uid: microsoft_teams.api.models.MessagingExtensionAttachmentLayout.GRID
+- name: LIST
+  uid: microsoft_teams.api.models.MessagingExtensionAttachmentLayout.LIST

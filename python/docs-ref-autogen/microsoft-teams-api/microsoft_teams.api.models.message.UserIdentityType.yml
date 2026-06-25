@@ -1,0 +1,15 @@
+### YamlMime:PythonEnum
+uid: microsoft_teams.api.models.message.UserIdentityType
+name: UserIdentityType
+fullName: microsoft_teams.api.models.message.UserIdentityType
+summary: Enum for user identity types.
+module: microsoft_teams.api.models.message
+fields:
+- name: AAD_USER
+  uid: microsoft_teams.api.models.message.UserIdentityType.AAD_USER
+- name: ANONYMOUS_GUEST
+  uid: microsoft_teams.api.models.message.UserIdentityType.ANONYMOUS_GUEST
+- name: FEDERATED_USER
+  uid: microsoft_teams.api.models.message.UserIdentityType.FEDERATED_USER
+- name: ON_PREMISE_AAD_USER
+  uid: microsoft_teams.api.models.message.UserIdentityType.ON_PREMISE_AAD_USER

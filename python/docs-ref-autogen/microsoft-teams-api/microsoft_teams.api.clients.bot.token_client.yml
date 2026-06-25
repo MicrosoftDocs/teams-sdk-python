@@ -1,0 +1,10 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.clients.bot.token_client
+name: token_client
+fullName: microsoft_teams.api.clients.bot.token_client
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.api.clients.bot.token_client.BotTokenClient
+- microsoft_teams.api.clients.bot.token_client.GetBotTokenResponse

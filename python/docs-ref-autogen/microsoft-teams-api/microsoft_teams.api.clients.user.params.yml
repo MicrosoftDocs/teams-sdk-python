@@ -1,0 +1,13 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.clients.user.params
+name: params
+fullName: microsoft_teams.api.clients.user.params
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.api.clients.user.params.ExchangeUserTokenParams
+- microsoft_teams.api.clients.user.params.GetUserAADTokenParams
+- microsoft_teams.api.clients.user.params.GetUserTokenParams
+- microsoft_teams.api.clients.user.params.GetUserTokenStatusParams
+- microsoft_teams.api.clients.user.params.SignOutUserParams

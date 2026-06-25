@@ -1,0 +1,14 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.clients.team
+name: team
+fullName: microsoft_teams.api.clients.team
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.clients.team.GetTeamConversationsResponse
+- microsoft_teams.api.clients.team.TeamClient
+modules:
+- microsoft_teams.api.clients.team.client
+- microsoft_teams.api.clients.team.params

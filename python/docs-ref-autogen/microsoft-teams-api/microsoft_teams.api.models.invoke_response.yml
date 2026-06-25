@@ -1,0 +1,20 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.models.invoke_response
+name: invoke_response
+fullName: microsoft_teams.api.models.invoke_response
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+functions:
+- uid: microsoft_teams.api.models.invoke_response.is_invoke_response
+  name: is_invoke_response
+  summary: Type guard to check if a value is an InvokeResponse.
+  signature: 'is_invoke_response(value: Any) -> bool'
+  parameters:
+  - name: value
+    description: Value to compare
+    isRequired: true
+  return:
+    description: True if value is type of InvokeResponse
+classes:
+- microsoft_teams.api.models.invoke_response.InvokeResponse

@@ -1,0 +1,24 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.clients.base_client.BaseClient
+name: BaseClient
+fullName: microsoft_teams.api.clients.base_client.BaseClient
+module: microsoft_teams.api.clients.base_client
+summary: 'Base client
+
+
+  Initialize the BaseClient.'
+constructor:
+  syntax: 'BaseClient(options: Client | ClientOptions | None = None, api_client_settings:
+    ApiClientSettings | None = None)'
+  parameters:
+  - name: options
+    description: Optional Client or ClientOptions instance. If not provided, a default
+      Client will be created.
+    defaultValue: None
+  - name: api_client_settings
+    description: Optional API client settings.
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.clients.base_client.BaseClient.http
+  name: http
+  summary: Get the HTTP client instance.

@@ -1,0 +1,12 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.activities.event.meeting_participant
+name: meeting_participant
+fullName: microsoft_teams.api.activities.event.meeting_participant
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.api.activities.event.meeting_participant.MeetingParticipant
+- microsoft_teams.api.activities.event.meeting_participant.MeetingParticipantEventActivity
+- microsoft_teams.api.activities.event.meeting_participant.MeetingParticipantEventValue
+- microsoft_teams.api.activities.event.meeting_participant.MeetingParticipantInfo

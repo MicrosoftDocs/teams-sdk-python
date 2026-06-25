@@ -1,0 +1,56 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.TokenExchangeState
+name: TokenExchangeState
+fullName: microsoft_teams.api.models.TokenExchangeState
+module: microsoft_teams.api.models
+summary: 'State object passed to the bot token service.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'TokenExchangeState(*, connectionName: str, conversation: ConversationReference,
+    relatesTo: ConversationReference | None = None, msAppId: str, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: connectionName
+    isRequired: true
+  - name: conversation
+    isRequired: true
+  - name: relatesTo
+    defaultValue: None
+  - name: msAppId
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.models.TokenExchangeState.connection_name
+  name: connection_name
+  summary: The name of the connection used for token exchange.
+  signature: 'connection_name: str'
+- uid: microsoft_teams.api.models.TokenExchangeState.conversation
+  name: conversation
+  summary: A reference to the conversation
+  signature: 'conversation: ConversationReference'
+- uid: microsoft_teams.api.models.TokenExchangeState.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.TokenExchangeState.ms_app_id
+  name: ms_app_id
+  summary: The URL of the bot messaging endpoint.
+  signature: 'ms_app_id: str'
+- uid: microsoft_teams.api.models.TokenExchangeState.relates_to
+  name: relates_to
+  summary: A reference to a related parent conversation.
+  signature: 'relates_to: ConversationReference | None'

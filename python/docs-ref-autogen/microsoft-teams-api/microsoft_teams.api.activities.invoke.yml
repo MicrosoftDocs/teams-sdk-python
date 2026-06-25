@@ -1,0 +1,50 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.activities.invoke
+name: invoke
+fullName: microsoft_teams.api.activities.invoke
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.activities.invoke.AdaptiveCardInvokeActivity
+- microsoft_teams.api.activities.invoke.ConfigFetchInvokeActivity
+- microsoft_teams.api.activities.invoke.ConfigSubmitInvokeActivity
+- microsoft_teams.api.activities.invoke.ExecuteActionInvokeActivity
+- microsoft_teams.api.activities.invoke.FileConsentInvokeActivity
+- microsoft_teams.api.activities.invoke.HandoffActionInvokeActivity
+- microsoft_teams.api.activities.invoke.MessageExtensionAnonQueryLinkInvokeActivity
+- microsoft_teams.api.activities.invoke.MessageExtensionCardButtonClickedInvokeActivity
+- microsoft_teams.api.activities.invoke.MessageExtensionFetchTaskInvokeActivity
+- microsoft_teams.api.activities.invoke.MessageExtensionQueryInvokeActivity
+- microsoft_teams.api.activities.invoke.MessageExtensionQueryLinkInvokeActivity
+- microsoft_teams.api.activities.invoke.MessageExtensionQuerySettingUrlInvokeActivity
+- microsoft_teams.api.activities.invoke.MessageExtensionSelectItemInvokeActivity
+- microsoft_teams.api.activities.invoke.MessageExtensionSettingInvokeActivity
+- microsoft_teams.api.activities.invoke.MessageExtensionSubmitActionInvokeActivity
+- microsoft_teams.api.activities.invoke.MessageFetchTaskActionValue
+- microsoft_teams.api.activities.invoke.MessageFetchTaskData
+- microsoft_teams.api.activities.invoke.MessageFetchTaskInvokeActivity
+- microsoft_teams.api.activities.invoke.MessageFetchTaskInvokeValue
+- microsoft_teams.api.activities.invoke.MessageSubmitActionInvokeActivity
+- microsoft_teams.api.activities.invoke.SignInFailureInvokeActivity
+- microsoft_teams.api.activities.invoke.SignInTokenExchangeInvokeActivity
+- microsoft_teams.api.activities.invoke.SignInVerifyStateInvokeActivity
+- microsoft_teams.api.activities.invoke.SuggestedActionSubmitInvokeActivity
+- microsoft_teams.api.activities.invoke.TabFetchInvokeActivity
+- microsoft_teams.api.activities.invoke.TabSubmitInvokeActivity
+- microsoft_teams.api.activities.invoke.TaskFetchInvokeActivity
+- microsoft_teams.api.activities.invoke.TaskSubmitInvokeActivity
+packages:
+- microsoft_teams.api.activities.invoke.adaptive_card
+- microsoft_teams.api.activities.invoke.config
+- microsoft_teams.api.activities.invoke.message
+- microsoft_teams.api.activities.invoke.message_extension
+- microsoft_teams.api.activities.invoke.sign_in
+- microsoft_teams.api.activities.invoke.tab
+- microsoft_teams.api.activities.invoke.task
+modules:
+- microsoft_teams.api.activities.invoke.execute_action
+- microsoft_teams.api.activities.invoke.file_consent
+- microsoft_teams.api.activities.invoke.handoff_action
+- microsoft_teams.api.activities.invoke.suggested_action_submit

@@ -1,0 +1,50 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.adaptive_card.adaptive_card_action_response.AdaptiveCardActionErrorResponse
+name: AdaptiveCardActionErrorResponse
+fullName: microsoft_teams.api.models.adaptive_card.adaptive_card_action_response.AdaptiveCardActionErrorResponse
+module: microsoft_teams.api.models.adaptive_card.adaptive_card_action_response
+summary: '*400*: The incoming request was invalid
+
+  *500*: An unexpected error occurred
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'AdaptiveCardActionErrorResponse(*, statusCode: Literal[400, 500], type:
+    Literal[''application/vnd.microsoft.error''] = ''application/vnd.microsoft.error'',
+    value: HttpError, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: statusCode
+    isRequired: true
+  - name: type
+    defaultValue: application/vnd.microsoft.error
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.models.adaptive_card.adaptive_card_action_response.AdaptiveCardActionErrorResponse.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.adaptive_card.adaptive_card_action_response.AdaptiveCardActionErrorResponse.status_code
+  name: status_code
+  signature: 'status_code: Literal[400, 500]'
+- uid: microsoft_teams.api.models.adaptive_card.adaptive_card_action_response.AdaptiveCardActionErrorResponse.type
+  name: type
+  signature: 'type: Literal[''application/vnd.microsoft.error'']'
+- uid: microsoft_teams.api.models.adaptive_card.adaptive_card_action_response.AdaptiveCardActionErrorResponse.value
+  name: value
+  signature: 'value: HttpError'

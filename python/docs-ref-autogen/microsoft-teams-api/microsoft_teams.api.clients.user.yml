@@ -1,0 +1,20 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.clients.user
+name: user
+fullName: microsoft_teams.api.clients.user
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.clients.user.ExchangeUserTokenParams
+- microsoft_teams.api.clients.user.GetUserAADTokenParams
+- microsoft_teams.api.clients.user.GetUserTokenParams
+- microsoft_teams.api.clients.user.GetUserTokenStatusParams
+- microsoft_teams.api.clients.user.SignOutUserParams
+- microsoft_teams.api.clients.user.UserClient
+- microsoft_teams.api.clients.user.UserTokenClient
+modules:
+- microsoft_teams.api.clients.user.client
+- microsoft_teams.api.clients.user.params
+- microsoft_teams.api.clients.user.token_client

@@ -1,0 +1,55 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.activities.SentActivity
+name: SentActivity
+fullName: microsoft_teams.api.activities.SentActivity
+module: microsoft_teams.api.activities
+summary: 'Represents an activity that was sent.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'SentActivity(*, id: str, activityParams: MessageActivityInput | MessageReactionActivityInput
+    | TypingActivityInput, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: id
+    isRequired: true
+  - name: activityParams
+    isRequired: true
+methods:
+- uid: microsoft_teams.api.activities.SentActivity.merge
+  name: merge
+  signature: 'merge(activity_params: MessageActivityInput | MessageReactionActivityInput
+    | TypingActivityInput, curr_activity: SentActivity) -> SentActivity'
+  parameters:
+  - name: activity_params
+    isRequired: true
+  - name: curr_activity
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.activities.SentActivity.activity_params
+  name: activity_params
+  summary: Additional parameters for the activity.
+  signature: 'activity_params: MessageActivityInput | MessageReactionActivityInput
+    | TypingActivityInput'
+- uid: microsoft_teams.api.activities.SentActivity.id
+  name: id
+  summary: Id of the activity.
+  signature: 'id: str'
+- uid: microsoft_teams.api.activities.SentActivity.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'

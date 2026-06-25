@@ -1,0 +1,51 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.SignInUrlResponse
+name: SignInUrlResponse
+fullName: microsoft_teams.api.models.SignInUrlResponse
+module: microsoft_teams.api.models
+summary: 'Response model for sign-in URL requests.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'SignInUrlResponse(*, signInLink: str | None = None, tokenExchangeResource:
+    TokenExchangeResource | None = None, tokenPostResource: TokenPostResource | None
+    = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: signInLink
+    defaultValue: None
+  - name: tokenExchangeResource
+    defaultValue: None
+  - name: tokenPostResource
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.models.SignInUrlResponse.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.SignInUrlResponse.sign_in_link
+  name: sign_in_link
+  summary: The sign in link.
+  signature: 'sign_in_link: str | None'
+- uid: microsoft_teams.api.models.SignInUrlResponse.token_exchange_resource
+  name: token_exchange_resource
+  summary: The token exchange resource.
+  signature: 'token_exchange_resource: TokenExchangeResource | None'
+- uid: microsoft_teams.api.models.SignInUrlResponse.token_post_resource
+  name: token_post_resource
+  summary: The token post resource.
+  signature: 'token_post_resource: TokenPostResource | None'

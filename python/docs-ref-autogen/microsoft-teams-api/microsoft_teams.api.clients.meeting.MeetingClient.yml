@@ -1,0 +1,73 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.clients.meeting.MeetingClient
+name: MeetingClient
+fullName: microsoft_teams.api.clients.meeting.MeetingClient
+module: microsoft_teams.api.clients.meeting
+summary: 'Client for managing Teams meetings.
+
+
+  Initialize the MeetingClient.'
+constructor:
+  syntax: 'MeetingClient(service_url: str, options: Client | ClientOptions | None
+    = None, api_client_settings: ApiClientSettings | None = None)'
+  parameters:
+  - name: service_url
+    description: The service URL for API calls.
+    isRequired: true
+  - name: options
+    description: Optional Client or ClientOptions instance. If not provided, a default
+      Client will be created.
+    defaultValue: None
+  - name: api_client_settings
+    description: Optional API client settings.
+    defaultValue: None
+methods:
+- uid: microsoft_teams.api.clients.meeting.MeetingClient.get_by_id
+  name: get_by_id
+  summary: Retrieves meeting information including details, organizer, and conversation.
+  signature: 'async get_by_id(id: str) -> MeetingInfo'
+  parameters:
+  - name: id
+    description: The meeting ID.
+    isRequired: true
+  return:
+    description: The meeting information.
+- uid: microsoft_teams.api.clients.meeting.MeetingClient.get_participant
+  name: get_participant
+  summary: Retrieves information about a specific participant in a meeting.
+  signature: 'async get_participant(meeting_id: str, id: str, tenant_id: str) -> MeetingParticipant'
+  parameters:
+  - name: meeting_id
+    description: The meeting ID.
+    isRequired: true
+  - name: id
+    description: The user AAD object ID.
+    isRequired: true
+  - name: tenant_id
+    description: The tenant ID of the meeting and user.
+    isRequired: true
+  return:
+    description: The meeting participant information.
+    types:
+    - <xref:microsoft_teams.api.MeetingParticipant>
+- uid: microsoft_teams.api.clients.meeting.MeetingClient.send_notification
+  name: send_notification
+  summary: 'Send a targeted meeting notification to participants.
+
+
+    Returns None on full success (HTTP 202). Returns a MeetingNotificationResponse
+
+    with failure details on partial success (HTTP 207).'
+  signature: 'async send_notification(meeting_id: str, params: MeetingNotificationParams)
+    -> MeetingNotificationResponse | None'
+  parameters:
+  - name: meeting_id
+    description: The BASE64-encoded meeting ID.
+    isRequired: true
+  - name: params
+    description: The notification parameters including recipients and surfaces.
+    isRequired: true
+  return:
+    description: 'None if all notifications were sent successfully, or a MeetingNotificationResponse
+
+      with per-recipient failure details on partial success.'

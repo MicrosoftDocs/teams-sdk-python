@@ -1,0 +1,9 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.auth.token
+name: token
+fullName: microsoft_teams.api.auth.token
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.api.auth.token.TokenProtocol

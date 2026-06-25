@@ -1,0 +1,19 @@
+### YamlMime:PythonEnum
+uid: microsoft_teams.api.models.MessagingExtensionResultType
+name: MessagingExtensionResultType
+fullName: microsoft_teams.api.models.MessagingExtensionResultType
+summary: Enum representing the type of result for a messaging extension.
+module: microsoft_teams.api.models
+fields:
+- name: AUTH
+  uid: microsoft_teams.api.models.MessagingExtensionResultType.AUTH
+- name: BOT_MESSAGE_PREVIEW
+  uid: microsoft_teams.api.models.MessagingExtensionResultType.BOT_MESSAGE_PREVIEW
+- name: CONFIG
+  uid: microsoft_teams.api.models.MessagingExtensionResultType.CONFIG
+- name: MESSAGE
+  uid: microsoft_teams.api.models.MessagingExtensionResultType.MESSAGE
+- name: RESULT
+  uid: microsoft_teams.api.models.MessagingExtensionResultType.RESULT
+- name: SILENT_AUTH
+  uid: microsoft_teams.api.models.MessagingExtensionResultType.SILENT_AUTH

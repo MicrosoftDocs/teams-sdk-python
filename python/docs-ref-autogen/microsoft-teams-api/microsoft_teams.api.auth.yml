@@ -1,0 +1,46 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.auth
+name: auth
+fullName: microsoft_teams.api.auth
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+functions:
+- uid: microsoft_teams.api.auth.config_from_cloud_name
+  name: config_from_cloud_name
+  summary: 'Resolve a cloud environment name (case-insensitive) to its corresponding
+    instance.
+
+    Valid names: "Public", "USGov", "USGovDoD", "China".'
+  signature: 'config_from_cloud_name(name: str) -> CloudEnvironment'
+  parameters:
+  - name: name
+    isRequired: true
+- uid: microsoft_teams.api.auth.with_overrides
+  name: with_overrides
+  summary: 'Create a new CloudEnvironment by applying non-None overrides on top of
+    a base.
+
+    Returns the same instance if all overrides are None (no allocation).'
+  signature: 'with_overrides(base: CloudEnvironment, **overrides: str | None) -> CloudEnvironment'
+  parameters:
+  - name: base
+    isRequired: true
+classes:
+- microsoft_teams.api.auth.ClientCredentials
+- microsoft_teams.api.auth.CloudEnvironment
+- microsoft_teams.api.auth.FederatedIdentityCredentials
+- microsoft_teams.api.auth.JsonWebToken
+- microsoft_teams.api.auth.JsonWebTokenPayload
+- microsoft_teams.api.auth.ManagedIdentityCredentials
+- microsoft_teams.api.auth.TokenCredentials
+- microsoft_teams.api.auth.TokenProtocol
+modules:
+- microsoft_teams.api.auth.caller
+- microsoft_teams.api.auth.cloud_environment
+- microsoft_teams.api.auth.credentials
+- microsoft_teams.api.auth.json_web_token
+- microsoft_teams.api.auth.token
+enums:
+- microsoft_teams.api.auth.CallerIds

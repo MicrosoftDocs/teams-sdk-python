@@ -1,0 +1,50 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.token_exchange.invoke_request.TokenExchangeInvokeRequest
+name: TokenExchangeInvokeRequest
+fullName: microsoft_teams.api.models.token_exchange.invoke_request.TokenExchangeInvokeRequest
+module: microsoft_teams.api.models.token_exchange.invoke_request
+summary: 'A request to exchange a token.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'TokenExchangeInvokeRequest(*, id: str, connectionName: str, token: str,
+    **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: id
+    isRequired: true
+  - name: connectionName
+    isRequired: true
+  - name: token
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.models.token_exchange.invoke_request.TokenExchangeInvokeRequest.connection_name
+  name: connection_name
+  summary: The connection name
+  signature: 'connection_name: str'
+- uid: microsoft_teams.api.models.token_exchange.invoke_request.TokenExchangeInvokeRequest.id
+  name: id
+  summary: The id from the OauthCard
+  signature: 'id: str'
+- uid: microsoft_teams.api.models.token_exchange.invoke_request.TokenExchangeInvokeRequest.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.token_exchange.invoke_request.TokenExchangeInvokeRequest.token
+  name: token
+  summary: The user token that can be exchanged.
+  signature: 'token: str'

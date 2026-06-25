@@ -1,0 +1,83 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.conversation.conversation_reference.ConversationReference
+name: ConversationReference
+fullName: microsoft_teams.api.models.conversation.conversation_reference.ConversationReference
+module: microsoft_teams.api.models.conversation.conversation_reference
+summary: 'An object relating to a particular point in a conversation
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'ConversationReference(*, activityId: str | None = None, user: Account |
+    None = None, locale: str | None = None, bot: Account, conversation: ConversationAccount,
+    channelId: Literal[''webchat'', ''msteams''] | str, serviceUrl: str, **extra_data:
+    Any)'
+  keywordOnlyParameters:
+  - name: activityId
+    defaultValue: None
+  - name: user
+    defaultValue: None
+  - name: locale
+    defaultValue: None
+  - name: bot
+    isRequired: true
+  - name: conversation
+    isRequired: true
+  - name: channelId
+    isRequired: true
+  - name: serviceUrl
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.models.conversation.conversation_reference.ConversationReference.activity_id
+  name: activity_id
+  summary: (Optional) ID of the activity to refer to
+  signature: 'activity_id: str | None'
+- uid: microsoft_teams.api.models.conversation.conversation_reference.ConversationReference.bot
+  name: bot
+  summary: Bot participating in this conversation
+  signature: 'bot: Account'
+- uid: microsoft_teams.api.models.conversation.conversation_reference.ConversationReference.channel_id
+  name: channel_id
+  summary: Channel ID
+  signature: 'channel_id: Literal[''webchat'', ''msteams''] | str'
+- uid: microsoft_teams.api.models.conversation.conversation_reference.ConversationReference.conversation
+  name: conversation
+  summary: Conversation reference
+  signature: 'conversation: ConversationAccount'
+- uid: microsoft_teams.api.models.conversation.conversation_reference.ConversationReference.locale
+  name: locale
+  summary: 'Combination of an ISO 639 two- or three-letter culture code associated
+    with a language
+
+    nd an ISO 3166 two-letter subculture code associated with a country or region.
+    The locale name
+
+    an also correspond to a valid BCP-47 language tag.'
+  signature: 'locale: str | None'
+- uid: microsoft_teams.api.models.conversation.conversation_reference.ConversationReference.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.conversation.conversation_reference.ConversationReference.service_url
+  name: service_url
+  summary: Service endpoint where operations concerning the referenced conversation
+    may be performed
+  signature: 'service_url: str'
+- uid: microsoft_teams.api.models.conversation.conversation_reference.ConversationReference.user
+  name: user
+  summary: (Optional) User participating in this conversation
+  signature: 'user: Account | None'

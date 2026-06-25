@@ -1,0 +1,69 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.clients.user.token_client.UserTokenClient
+name: UserTokenClient
+fullName: microsoft_teams.api.clients.user.token_client.UserTokenClient
+module: microsoft_teams.api.clients.user.token_client
+summary: 'Client for managing user tokens in Teams.
+
+
+  Initialize the UserTokenClient.'
+constructor:
+  syntax: 'UserTokenClient(options: Client | ClientOptions | None = None, api_client_settings:
+    ApiClientSettings | None = None)'
+  parameters:
+  - name: options
+    description: Optional Client or ClientOptions instance. If not provided, a default
+      Client will be created.
+    defaultValue: None
+  - name: api_client_settings
+    description: Optional API client settings.
+    defaultValue: None
+methods:
+- uid: microsoft_teams.api.clients.user.token_client.UserTokenClient.exchange
+  name: exchange
+  summary: Exchange a user token.
+  signature: 'async exchange(params: ExchangeUserTokenParams) -> TokenResponse'
+  parameters:
+  - name: params
+    description: Parameters for exchanging the token.
+    isRequired: true
+  return:
+    description: TokenResponse containing the exchanged token.
+- uid: microsoft_teams.api.clients.user.token_client.UserTokenClient.get
+  name: get
+  summary: Get a user token.
+  signature: 'async get(params: GetUserTokenParams) -> TokenResponse'
+  parameters:
+  - name: params
+    description: Parameters for getting the user token.
+    isRequired: true
+  return:
+    description: TokenResponse containing the user token.
+- uid: microsoft_teams.api.clients.user.token_client.UserTokenClient.get_aad
+  name: get_aad
+  summary: Get AAD tokens for a user.
+  signature: 'async get_aad(params: GetUserAADTokenParams) -> Dict[str, TokenResponse]'
+  parameters:
+  - name: params
+    description: Parameters for getting AAD tokens.
+    isRequired: true
+  return:
+    description: Dictionary mapping resource URLs to token responses.
+- uid: microsoft_teams.api.clients.user.token_client.UserTokenClient.get_status
+  name: get_status
+  summary: Get token status for a user.
+  signature: 'async get_status(params: GetUserTokenStatusParams) -> List[TokenStatus]'
+  parameters:
+  - name: params
+    description: Parameters for getting token status.
+    isRequired: true
+  return:
+    description: List of token statuses.
+- uid: microsoft_teams.api.clients.user.token_client.UserTokenClient.sign_out
+  name: sign_out
+  summary: Sign out a user.
+  signature: 'async sign_out(params: SignOutUserParams) -> None'
+  parameters:
+  - name: params
+    description: Parameters for signing out the user.
+    isRequired: true

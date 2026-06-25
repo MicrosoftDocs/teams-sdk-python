@@ -1,0 +1,14 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.models.config
+name: config
+fullName: microsoft_teams.api.models.config
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.models.config.ConfigAuth
+- microsoft_teams.api.models.config.ConfigResponse
+modules:
+- microsoft_teams.api.models.config.config_auth
+- microsoft_teams.api.models.config.config_response

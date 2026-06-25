@@ -1,0 +1,59 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.auth.cloud_environment
+name: cloud_environment
+fullName: microsoft_teams.api.auth.cloud_environment
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+functions:
+- uid: microsoft_teams.api.auth.cloud_environment.from_name
+  name: from_name
+  summary: 'Resolve a cloud environment name (case-insensitive) to its corresponding
+    instance.
+
+    Valid names: "Public", "USGov", "USGovDoD", "China".'
+  signature: 'from_name(name: str) -> CloudEnvironment'
+  parameters:
+  - name: name
+    isRequired: true
+- uid: microsoft_teams.api.auth.cloud_environment.with_overrides
+  name: with_overrides
+  summary: 'Create a new CloudEnvironment by applying non-None overrides on top of
+    a base.
+
+    Returns the same instance if all overrides are None (no allocation).'
+  signature: 'with_overrides(base: CloudEnvironment, **overrides: str | None) -> CloudEnvironment'
+  parameters:
+  - name: base
+    isRequired: true
+classes:
+- microsoft_teams.api.auth.cloud_environment.CloudEnvironment
+data:
+- uid: microsoft_teams.api.auth.cloud_environment.CHINA
+  name: CHINA
+  summary: China cloud (21Vianet).
+  signature: CHINA = CloudEnvironment(login_endpoint='https://login.partner.microsoftonline.cn',
+    login_tenant='microsoftservices.partner.onmschina.cn', bot_scope='https://api.botframework.azure.cn/.default',
+    token_service_url='https://token.botframework.azure.cn', openid_metadata_url='https://login.botframework.azure.cn/v1/.well-known/openidconfiguration',
+    token_issuer='https://api.botframework.azure.cn', graph_scope='https://microsoftgraph.chinacloudapi.cn/.default')
+- uid: microsoft_teams.api.auth.cloud_environment.PUBLIC
+  name: PUBLIC
+  summary: Microsoft public (commercial) cloud.
+  signature: PUBLIC = CloudEnvironment(login_endpoint='https://login.microsoftonline.com',
+    login_tenant='botframework.com', bot_scope='https://api.botframework.com/.default',
+    token_service_url='https://token.botframework.com', openid_metadata_url='https://login.botframework.com/v1/.well-known/openidconfiguration',
+    token_issuer='https://api.botframework.com', graph_scope='https://graph.microsoft.com/.default')
+- uid: microsoft_teams.api.auth.cloud_environment.US_GOV
+  name: US_GOV
+  summary: US Government Community Cloud High (GCCH).
+  signature: US_GOV = CloudEnvironment(login_endpoint='https://login.microsoftonline.us',
+    login_tenant='MicrosoftServices.onmicrosoft.us', bot_scope='https://api.botframework.us/.default',
+    token_service_url='https://tokengcch.botframework.azure.us', openid_metadata_url='https://login.botframework.azure.us/v1/.well-known/openidconfiguration',
+    token_issuer='https://api.botframework.us', graph_scope='https://graph.microsoft.us/.default')
+- uid: microsoft_teams.api.auth.cloud_environment.US_GOV_DOD
+  name: US_GOV_DOD
+  summary: US Government Department of Defense (DoD).
+  signature: US_GOV_DOD = CloudEnvironment(login_endpoint='https://login.microsoftonline.us',
+    login_tenant='MicrosoftServices.onmicrosoft.us', bot_scope='https://api.botframework.us/.default',
+    token_service_url='https://apiDoD.botframework.azure.us', openid_metadata_url='https://login.botframework.azure.us/v1/.well-known/openidconfiguration',
+    token_issuer='https://api.botframework.us', graph_scope='https://dod-graph.microsoft.us/.default')

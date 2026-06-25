@@ -1,0 +1,12 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.models.o365
+name: o365
+fullName: microsoft_teams.api.models.o365
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.models.o365.O365ConnectorCardActionQuery
+modules:
+- microsoft_teams.api.models.o365.o365_connector_card_action_query

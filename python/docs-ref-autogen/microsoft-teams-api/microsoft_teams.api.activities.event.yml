@@ -1,0 +1,22 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.activities.event
+name: event
+fullName: microsoft_teams.api.activities.event
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.activities.event.MeetingEndEventActivity
+- microsoft_teams.api.activities.event.MeetingParticipantEventActivity
+- microsoft_teams.api.activities.event.MeetingParticipantJoinEventActivity
+- microsoft_teams.api.activities.event.MeetingParticipantLeaveEventActivity
+- microsoft_teams.api.activities.event.MeetingStartEventActivity
+- microsoft_teams.api.activities.event.ReadReceiptEventActivity
+modules:
+- microsoft_teams.api.activities.event.meeting_end
+- microsoft_teams.api.activities.event.meeting_participant
+- microsoft_teams.api.activities.event.meeting_participant_join
+- microsoft_teams.api.activities.event.meeting_participant_leave
+- microsoft_teams.api.activities.event.meeting_start
+- microsoft_teams.api.activities.event.read_reciept

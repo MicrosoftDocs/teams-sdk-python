@@ -1,0 +1,59 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.adaptive_card.adaptive_card_invoke_action.AdaptiveCardInvokeAction
+name: AdaptiveCardInvokeAction
+fullName: microsoft_teams.api.models.adaptive_card.adaptive_card_invoke_action.AdaptiveCardInvokeAction
+module: microsoft_teams.api.models.adaptive_card.adaptive_card_invoke_action
+summary: 'Defines the structure that arrives in the Activity.Value.Action for Invoke
+
+  activity with Name of ''adaptiveCard/action''.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'AdaptiveCardInvokeAction(*, type: Literal[''Action.Execute'', ''Action.Submit''],
+    id: str | None = None, verb: str | None = None, data: Dict[str, Any], **extra_data:
+    Any)'
+  keywordOnlyParameters:
+  - name: type
+    isRequired: true
+  - name: id
+    defaultValue: None
+  - name: verb
+    defaultValue: None
+  - name: data
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.models.adaptive_card.adaptive_card_invoke_action.AdaptiveCardInvokeAction.data
+  name: data
+  summary: The data of this adaptive card action invoke.
+  signature: 'data: Dict[str, Any]'
+- uid: microsoft_teams.api.models.adaptive_card.adaptive_card_invoke_action.AdaptiveCardInvokeAction.id
+  name: id
+  summary: The id of this Adaptive Card Invoke Action.
+  signature: 'id: str | None'
+- uid: microsoft_teams.api.models.adaptive_card.adaptive_card_invoke_action.AdaptiveCardInvokeAction.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.adaptive_card.adaptive_card_invoke_action.AdaptiveCardInvokeAction.type
+  name: type
+  summary: The Type of this Adaptive Card Invoke Action.
+  signature: 'type: Literal[''Action.Execute'', ''Action.Submit'']'
+- uid: microsoft_teams.api.models.adaptive_card.adaptive_card_invoke_action.AdaptiveCardInvokeAction.verb
+  name: verb
+  summary: The verb of this adaptive card action invoke.
+  signature: 'verb: str | None'

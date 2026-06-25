@@ -1,0 +1,24 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.activities.utils.strip_mentions_text
+name: strip_mentions_text
+fullName: microsoft_teams.api.activities.utils.strip_mentions_text
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+functions:
+- uid: microsoft_teams.api.activities.utils.strip_mentions_text.strip_mentions_text
+  name: strip_mentions_text
+  summary: Remove "<at>...</at>" text from an activity
+  signature: 'strip_mentions_text(activity: TextActivityProtocol, options: StripMentionsTextOptions
+    | None = None) -> str | None'
+  parameters:
+  - name: activity
+    description: The activity containing text and entities
+    isRequired: true
+  - name: options
+    description: Configuration options for stripping mentions
+    defaultValue: None
+  return:
+    description: The text with mentions stripped, or None if no text
+classes:
+- microsoft_teams.api.activities.utils.strip_mentions_text.StripMentionsTextOptions

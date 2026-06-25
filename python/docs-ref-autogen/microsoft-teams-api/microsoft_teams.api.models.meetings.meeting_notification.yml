@@ -1,0 +1,13 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.models.meetings.meeting_notification
+name: meeting_notification
+fullName: microsoft_teams.api.models.meetings.meeting_notification
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.api.models.meetings.meeting_notification.MeetingNotificationParams
+- microsoft_teams.api.models.meetings.meeting_notification.MeetingNotificationRecipientFailure
+- microsoft_teams.api.models.meetings.meeting_notification.MeetingNotificationResponse
+- microsoft_teams.api.models.meetings.meeting_notification.MeetingNotificationSurface
+- microsoft_teams.api.models.meetings.meeting_notification.MeetingNotificationValue

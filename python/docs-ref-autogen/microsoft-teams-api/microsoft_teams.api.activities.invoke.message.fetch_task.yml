@@ -1,0 +1,12 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.activities.invoke.message.fetch_task
+name: fetch_task
+fullName: microsoft_teams.api.activities.invoke.message.fetch_task
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.api.activities.invoke.message.fetch_task.MessageFetchTaskActionValue
+- microsoft_teams.api.activities.invoke.message.fetch_task.MessageFetchTaskData
+- microsoft_teams.api.activities.invoke.message.fetch_task.MessageFetchTaskInvokeActivity
+- microsoft_teams.api.activities.invoke.message.fetch_task.MessageFetchTaskInvokeValue

@@ -1,0 +1,50 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.adaptive_card.AdaptiveCardActionCardResponse
+name: AdaptiveCardActionCardResponse
+fullName: microsoft_teams.api.models.adaptive_card.AdaptiveCardActionCardResponse
+module: microsoft_teams.api.models.adaptive_card
+summary: 'The request was successfully processed, and the response includes
+
+  an Adaptive Card that the client should display in place of the current one
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'AdaptiveCardActionCardResponse(*, statusCode: Literal[200] = 200, type:
+    Literal[''application/vnd.microsoft.card.adaptive''] = ''application/vnd.microsoft.card.adaptive'',
+    value: AdaptiveCard, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: statusCode
+    defaultValue: '200'
+  - name: type
+    defaultValue: application/vnd.microsoft.card.adaptive
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.models.adaptive_card.AdaptiveCardActionCardResponse.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.adaptive_card.AdaptiveCardActionCardResponse.status_code
+  name: status_code
+  signature: 'status_code: Literal[200]'
+- uid: microsoft_teams.api.models.adaptive_card.AdaptiveCardActionCardResponse.type
+  name: type
+  signature: 'type: Literal[''application/vnd.microsoft.card.adaptive'']'
+- uid: microsoft_teams.api.models.adaptive_card.AdaptiveCardActionCardResponse.value
+  name: value
+  signature: 'value: AdaptiveCard'

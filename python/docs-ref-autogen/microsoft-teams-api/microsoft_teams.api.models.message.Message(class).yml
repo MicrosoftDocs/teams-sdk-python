@@ -1,0 +1,142 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.message.Message
+name: Message
+fullName: microsoft_teams.api.models.message.Message
+module: microsoft_teams.api.models.message
+summary: 'Represents the individual message within a chat or channel where a message
+
+  actions is taken.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'Message(*, id: str, replyToId: str | None = None, messageType: Literal[''message'']
+    | None = ''message'', createdDateTime: str | None = None, lastModifiedDateTime:
+    str | None = None, deleted: bool | None = None, subject: str | None = None, summary:
+    str | None = None, importance: Importance | None = None, locale: str | None =
+    None, linkToMessage: str | None = None, from_: MessageFrom | None = None, body:
+    MessageBody | None = None, attachmentLayout: str | None = None, attachments: List[Attachment]
+    | None = None, mentions: List[MessageMention] | None = None, reactions: List[MessageReaction]
+    | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: id
+    isRequired: true
+  - name: replyToId
+    defaultValue: None
+  - name: messageType
+    defaultValue: message
+  - name: createdDateTime
+    defaultValue: None
+  - name: lastModifiedDateTime
+    defaultValue: None
+  - name: deleted
+    defaultValue: None
+  - name: subject
+    defaultValue: None
+  - name: summary
+    defaultValue: None
+  - name: importance
+    defaultValue: None
+  - name: locale
+    defaultValue: None
+  - name: linkToMessage
+    defaultValue: None
+  - name: from_
+    defaultValue: None
+  - name: body
+    defaultValue: None
+  - name: attachmentLayout
+    defaultValue: None
+  - name: attachments
+    defaultValue: None
+  - name: mentions
+    defaultValue: None
+  - name: reactions
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.models.message.Message.attachment_layout
+  name: attachment_layout
+  summary: How the attachment(s) are displayed in the message.
+  signature: 'attachment_layout: str | None'
+- uid: microsoft_teams.api.models.message.Message.attachments
+  name: attachments
+  summary: Attachments in the message - card, image, file, etc.
+  signature: 'attachments: List[Attachment] | None'
+- uid: microsoft_teams.api.models.message.Message.body
+  name: body
+  summary: Plaintext/HTML representation of the content of the message.
+  signature: 'body: MessageBody | None'
+- uid: microsoft_teams.api.models.message.Message.created_date_time
+  name: created_date_time
+  summary: Timestamp of when the message was created.
+  signature: 'created_date_time: str | None'
+- uid: microsoft_teams.api.models.message.Message.deleted
+  name: deleted
+  summary: Indicates whether a message has been soft deleted.
+  signature: 'deleted: bool | None'
+- uid: microsoft_teams.api.models.message.Message.from_
+  name: from_
+  summary: Sender of the message.
+  signature: 'from_: MessageFrom | None'
+- uid: microsoft_teams.api.models.message.Message.id
+  name: id
+  summary: Unique id of the message.
+  signature: 'id: str'
+- uid: microsoft_teams.api.models.message.Message.importance
+  name: importance
+  summary: The importance of the message.
+  signature: 'importance: Importance | None'
+- uid: microsoft_teams.api.models.message.Message.last_modified_date_time
+  name: last_modified_date_time
+  summary: Timestamp of when the message was edited or updated.
+  signature: 'last_modified_date_time: str | None'
+- uid: microsoft_teams.api.models.message.Message.link_to_message
+  name: link_to_message
+  summary: Link back to the message.
+  signature: 'link_to_message: str | None'
+- uid: microsoft_teams.api.models.message.Message.locale
+  name: locale
+  summary: Locale of the message set by the client.
+  signature: 'locale: str | None'
+- uid: microsoft_teams.api.models.message.Message.mentions
+  name: mentions
+  summary: List of entities mentioned in the message.
+  signature: 'mentions: List[MessageMention] | None'
+- uid: microsoft_teams.api.models.message.Message.message_type
+  name: message_type
+  summary: Type of message - automatically set to message.
+  signature: 'message_type: Literal[''message''] | None'
+- uid: microsoft_teams.api.models.message.Message.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.message.Message.reactions
+  name: reactions
+  summary: Reactions for the message.
+  signature: 'reactions: List[MessageReaction] | None'
+- uid: microsoft_teams.api.models.message.Message.reply_to_id
+  name: reply_to_id
+  summary: Id of the parent/root message of the thread.
+  signature: 'reply_to_id: str | None'
+- uid: microsoft_teams.api.models.message.Message.subject
+  name: subject
+  summary: Subject line of the message.
+  signature: 'subject: str | None'
+- uid: microsoft_teams.api.models.message.Message.summary
+  name: summary
+  summary: Summary text of the message that could be used for notifications.
+  signature: 'summary: str | None'

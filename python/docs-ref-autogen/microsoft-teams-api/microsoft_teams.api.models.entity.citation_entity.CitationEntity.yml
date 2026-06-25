@@ -1,0 +1,66 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.entity.citation_entity.CitationEntity
+name: CitationEntity
+fullName: microsoft_teams.api.models.entity.citation_entity.CitationEntity
+module: microsoft_teams.api.models.entity.citation_entity
+summary: 'Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'CitationEntity(*, type: Literal[''https://schema.org/Message''] = ''https://schema.org/Message'',
+    at_type: Literal[''Message''] = ''Message'', at_context: Literal[''https://schema.org'']
+    = ''https://schema.org'', at_id: Literal[''''] = '''', additionalType: List[str]
+    | None = None, citation: List[Claim] | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: type
+    defaultValue: https://schema.org/Message
+  - name: at_type
+    defaultValue: Message
+  - name: at_context
+    defaultValue: https://schema.org
+  - name: at_id
+  - name: additionalType
+    defaultValue: None
+  - name: citation
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.models.entity.citation_entity.CitationEntity.additional_type
+  name: additional_type
+  summary: Additional contnet type tags
+  signature: 'additional_type: List[str] | None'
+- uid: microsoft_teams.api.models.entity.citation_entity.CitationEntity.at_context
+  name: at_context
+  summary: Required as default value
+  signature: 'at_context: Literal[''https://schema.org'']'
+- uid: microsoft_teams.api.models.entity.citation_entity.CitationEntity.at_id
+  name: at_id
+  summary: Must be left blank. This is for the Bot Framework schema
+  signature: 'at_id: Literal['''']'
+- uid: microsoft_teams.api.models.entity.citation_entity.CitationEntity.at_type
+  name: at_type
+  summary: Required as default value
+  signature: 'at_type: Literal[''Message'']'
+- uid: microsoft_teams.api.models.entity.citation_entity.CitationEntity.citation
+  name: citation
+  summary: Required as 'Citation'
+  signature: 'citation: List[Claim] | None'
+- uid: microsoft_teams.api.models.entity.citation_entity.CitationEntity.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.entity.citation_entity.CitationEntity.type
+  name: type
+  summary: Type identifier for the entity.
+  signature: 'type: Literal[''https://schema.org/Message'']'

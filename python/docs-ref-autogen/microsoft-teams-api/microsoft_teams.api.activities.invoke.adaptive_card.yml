@@ -1,0 +1,12 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.activities.invoke.adaptive_card
+name: adaptive_card
+fullName: microsoft_teams.api.activities.invoke.adaptive_card
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.activities.invoke.adaptive_card.AdaptiveCardInvokeActivity
+modules:
+- microsoft_teams.api.activities.invoke.adaptive_card.action

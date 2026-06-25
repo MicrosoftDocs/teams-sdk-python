@@ -1,0 +1,44 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.PagedMembersResult
+name: PagedMembersResult
+fullName: microsoft_teams.api.models.PagedMembersResult
+module: microsoft_teams.api.models
+summary: 'Result of a paged members request.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'PagedMembersResult(*, members: ~typing.List[~microsoft_teams.api.models.account.TeamsChannelAccount]
+    = <factory>, continuationToken: str | None = None, **extra_data: ~typing.Any)'
+  keywordOnlyParameters:
+  - name: members
+    defaultValue: <factory>
+  - name: continuationToken
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.models.PagedMembersResult.continuation_token
+  name: continuation_token
+  summary: Token to fetch the next page of members. None if this is the last page.
+  signature: 'continuation_token: str | None'
+- uid: microsoft_teams.api.models.PagedMembersResult.members
+  name: members
+  summary: The members in this page.
+  signature: 'members: List[TeamsChannelAccount]'
+- uid: microsoft_teams.api.models.PagedMembersResult.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'

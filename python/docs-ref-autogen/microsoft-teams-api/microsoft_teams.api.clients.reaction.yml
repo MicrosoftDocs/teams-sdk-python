@@ -1,0 +1,12 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.clients.reaction
+name: reaction
+fullName: microsoft_teams.api.clients.reaction
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.clients.reaction.ReactionClient
+modules:
+- microsoft_teams.api.clients.reaction.client

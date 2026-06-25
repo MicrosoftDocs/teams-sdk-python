@@ -1,0 +1,83 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.messaging_extension.MessagingExtensionAction
+name: MessagingExtensionAction
+fullName: microsoft_teams.api.models.messaging_extension.MessagingExtensionAction
+module: microsoft_teams.api.models.messaging_extension
+summary: 'Messaging extension action
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'MessagingExtensionAction(*, data: Any | None = None, context: TaskModuleRequestContext
+    | None = None, tabContext: TabEntityContext | None = None, commandId: str | None
+    = None, commandContext: Literal[''message'', ''compose'', ''commandbox''], botMessagePreviewAction:
+    Literal[''edit'', ''send''] | None = None, botActivityPreview: List[Activity]
+    | None = None, messagePayload: Message | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: data
+    defaultValue: None
+  - name: context
+    defaultValue: None
+  - name: tabContext
+    defaultValue: None
+  - name: commandId
+    defaultValue: None
+  - name: commandContext
+    isRequired: true
+  - name: botMessagePreviewAction
+    defaultValue: None
+  - name: botActivityPreview
+    defaultValue: None
+  - name: messagePayload
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.models.messaging_extension.MessagingExtensionAction.bot_activity_preview
+  name: bot_activity_preview
+  summary: Bot activity preview
+  signature: 'bot_activity_preview: List[ActivityBase] | None'
+- uid: microsoft_teams.api.models.messaging_extension.MessagingExtensionAction.bot_message_preview_action
+  name: bot_message_preview_action
+  summary: Bot message preview action taken by user.
+  signature: 'bot_message_preview_action: Literal[''edit'', ''send''] | None'
+- uid: microsoft_teams.api.models.messaging_extension.MessagingExtensionAction.command_context
+  name: command_context
+  summary: The context from which the command originates.
+  signature: 'command_context: Literal[''message'', ''compose'', ''commandbox'']'
+- uid: microsoft_teams.api.models.messaging_extension.MessagingExtensionAction.command_id
+  name: command_id
+  summary: Id of the command assigned by Bot
+  signature: 'command_id: str | None'
+- uid: microsoft_teams.api.models.messaging_extension.MessagingExtensionAction.context
+  name: context
+  summary: Current user context, i.e., the current theme
+  signature: 'context: TaskModuleRequestContext | None'
+- uid: microsoft_teams.api.models.messaging_extension.MessagingExtensionAction.data
+  name: data
+  summary: User input data. Free payload with key-value pairs.
+  signature: 'data: Any | None'
+- uid: microsoft_teams.api.models.messaging_extension.MessagingExtensionAction.message_payload
+  name: message_payload
+  summary: Message content sent as part of the command request.
+  signature: 'message_payload: Message | None'
+- uid: microsoft_teams.api.models.messaging_extension.MessagingExtensionAction.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.messaging_extension.MessagingExtensionAction.tab_context
+  name: tab_context
+  summary: Tab request context.
+  signature: 'tab_context: TabEntityContext | None'

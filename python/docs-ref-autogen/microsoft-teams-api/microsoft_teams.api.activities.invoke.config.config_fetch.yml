@@ -1,0 +1,9 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.activities.invoke.config.config_fetch
+name: config_fetch
+fullName: microsoft_teams.api.activities.invoke.config.config_fetch
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.api.activities.invoke.config.config_fetch.ConfigFetchInvokeActivity

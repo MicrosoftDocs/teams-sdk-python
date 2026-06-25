@@ -1,0 +1,28 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.activities.invoke.message_extension
+name: message_extension
+fullName: microsoft_teams.api.activities.invoke.message_extension
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.activities.invoke.message_extension.MessageExtensionAnonQueryLinkInvokeActivity
+- microsoft_teams.api.activities.invoke.message_extension.MessageExtensionCardButtonClickedInvokeActivity
+- microsoft_teams.api.activities.invoke.message_extension.MessageExtensionFetchTaskInvokeActivity
+- microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryInvokeActivity
+- microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity
+- microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQuerySettingUrlInvokeActivity
+- microsoft_teams.api.activities.invoke.message_extension.MessageExtensionSelectItemInvokeActivity
+- microsoft_teams.api.activities.invoke.message_extension.MessageExtensionSettingInvokeActivity
+- microsoft_teams.api.activities.invoke.message_extension.MessageExtensionSubmitActionInvokeActivity
+modules:
+- microsoft_teams.api.activities.invoke.message_extension.anon_query_link
+- microsoft_teams.api.activities.invoke.message_extension.card_button_clicked
+- microsoft_teams.api.activities.invoke.message_extension.fetch_task
+- microsoft_teams.api.activities.invoke.message_extension.query
+- microsoft_teams.api.activities.invoke.message_extension.query_link
+- microsoft_teams.api.activities.invoke.message_extension.query_setting_url
+- microsoft_teams.api.activities.invoke.message_extension.select_item
+- microsoft_teams.api.activities.invoke.message_extension.setting
+- microsoft_teams.api.activities.invoke.message_extension.submit_action

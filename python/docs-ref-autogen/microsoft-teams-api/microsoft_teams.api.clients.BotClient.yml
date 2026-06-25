@@ -1,0 +1,27 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.clients.BotClient
+name: BotClient
+fullName: microsoft_teams.api.clients.BotClient
+module: microsoft_teams.api.clients
+summary: 'Client for managing bot operations.
+
+
+  Initialize the BotClient.'
+constructor:
+  syntax: 'BotClient(options: Client | ClientOptions | None = None, api_client_settings:
+    ApiClientSettings | None = None, cloud: CloudEnvironment | None = None)'
+  parameters:
+  - name: options
+    description: Optional Client or ClientOptions instance. If not provided, a default
+      Client will be created.
+    defaultValue: None
+  - name: api_client_settings
+    description: Optional API client settings.
+    defaultValue: None
+  - name: cloud
+    description: Optional cloud environment for sovereign cloud support.
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.clients.BotClient.http
+  name: http
+  summary: Get the HTTP client instance.

@@ -1,0 +1,14 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.activities.invoke.tab
+name: tab
+fullName: microsoft_teams.api.activities.invoke.tab
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.activities.invoke.tab.TabFetchInvokeActivity
+- microsoft_teams.api.activities.invoke.tab.TabSubmitInvokeActivity
+modules:
+- microsoft_teams.api.activities.invoke.tab.tab_fetch
+- microsoft_teams.api.activities.invoke.tab.tab_submit

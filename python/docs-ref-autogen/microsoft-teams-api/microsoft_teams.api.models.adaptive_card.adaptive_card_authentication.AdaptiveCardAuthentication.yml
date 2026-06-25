@@ -1,0 +1,10 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.adaptive_card.adaptive_card_authentication.AdaptiveCardAuthentication
+name: AdaptiveCardAuthentication
+fullName: microsoft_teams.api.models.adaptive_card.adaptive_card_authentication.AdaptiveCardAuthentication
+module: microsoft_teams.api.models.adaptive_card.adaptive_card_authentication
+constructor:
+  keywordOnlyParameters:
+  - name: id
+  - name: connectionName
+  - name: token

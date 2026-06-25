@@ -1,0 +1,65 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.file.file_consent_card.FileConsentCard
+name: FileConsentCard
+fullName: microsoft_teams.api.models.file.file_consent_card.FileConsentCard
+module: microsoft_teams.api.models.file.file_consent_card
+summary: 'File consent card attachment.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'FileConsentCard(*, description: str | None = None, sizeInBytes: int | None
+    = None, acceptContext: Any | None = None, declineContext: Any | None = None, **extra_data:
+    Any)'
+  keywordOnlyParameters:
+  - name: description
+    defaultValue: None
+  - name: sizeInBytes
+    defaultValue: None
+  - name: acceptContext
+    defaultValue: None
+  - name: declineContext
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.models.file.file_consent_card.FileConsentCard.accept_context
+  name: accept_context
+  summary: 'Context sent back to the Bot if user consented to
+
+    upload. This is free flow schema and is sent back
+
+    in Value field of Activity.'
+  signature: 'accept_context: Any | None'
+- uid: microsoft_teams.api.models.file.file_consent_card.FileConsentCard.decline_context
+  name: decline_context
+  summary: 'Context sent back to the Bot if user declined.
+
+    This is free flow schema and is sent back in Value
+
+    field of Activity.'
+  signature: 'decline_context: Any | None'
+- uid: microsoft_teams.api.models.file.file_consent_card.FileConsentCard.description
+  name: description
+  summary: File description.
+  signature: 'description: str | None'
+- uid: microsoft_teams.api.models.file.file_consent_card.FileConsentCard.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.file.file_consent_card.FileConsentCard.size_in_bytes
+  name: size_in_bytes
+  summary: Size of the file to be uploaded in Bytes.
+  signature: 'size_in_bytes: int | None'

@@ -1,0 +1,50 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.message.message_mention.MessageMention
+name: MessageMention
+fullName: microsoft_teams.api.models.message.message_mention.MessageMention
+module: microsoft_teams.api.models.message.message_mention
+summary: 'Represents the entity that was mentioned in the message.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'MessageMention(*, id: int, mentionText: str | None = None, mentioned: MessageFrom
+    | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: id
+    isRequired: true
+  - name: mentionText
+    defaultValue: None
+  - name: mentioned
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.models.message.message_mention.MessageMention.id
+  name: id
+  summary: The id of the mentioned entity.
+  signature: 'id: int'
+- uid: microsoft_teams.api.models.message.message_mention.MessageMention.mention_text
+  name: mention_text
+  summary: The plaintext display name of the mentioned entity.
+  signature: 'mention_text: str | None'
+- uid: microsoft_teams.api.models.message.message_mention.MessageMention.mentioned
+  name: mentioned
+  summary: Provides more details on the mentioned entity.
+  signature: 'mentioned: MessageFrom | None'
+- uid: microsoft_teams.api.models.message.message_mention.MessageMention.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'

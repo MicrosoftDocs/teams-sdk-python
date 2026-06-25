@@ -1,0 +1,64 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.clients.conversation.client.ConversationClient
+name: ConversationClient
+fullName: microsoft_teams.api.clients.conversation.client.ConversationClient
+module: microsoft_teams.api.clients.conversation.client
+summary: 'Client for managing Teams conversations.
+
+
+  Initialize the client.'
+constructor:
+  syntax: 'ConversationClient(service_url: str, options: Client | ClientOptions |
+    None = None, api_client_settings: ApiClientSettings | None = None)'
+  parameters:
+  - name: service_url
+    description: The Teams service URL.
+    isRequired: true
+  - name: options
+    description: Either an HTTP client instance or client options. If None, a default
+      client is created.
+    defaultValue: None
+  - name: api_client_settings
+    description: Optional API client settings.
+    defaultValue: None
+methods:
+- uid: microsoft_teams.api.clients.conversation.client.ConversationClient.activities
+  name: activities
+  summary: Get activity operations for a conversation.
+  signature: 'activities(conversation_id: str) -> ActivityOperations'
+  parameters:
+  - name: conversation_id
+    description: The ID of the conversation.
+    isRequired: true
+  return:
+    description: An operations object for managing activities in the conversation.
+- uid: microsoft_teams.api.clients.conversation.client.ConversationClient.create
+  name: create
+  summary: Create a new conversation.
+  signature: 'async create(params: CreateConversationParams) -> ConversationResource'
+  parameters:
+  - name: params
+    description: Parameters for creating the conversation.
+    isRequired: true
+  return:
+    description: The created conversation resource.
+- uid: microsoft_teams.api.clients.conversation.client.ConversationClient.members
+  name: members
+  summary: Get member operations for a conversation.
+  signature: 'members(conversation_id: str) -> MemberOperations'
+  parameters:
+  - name: conversation_id
+    description: The ID of the conversation.
+    isRequired: true
+  return:
+    description: An operations object for managing members in the conversation.
+attributes:
+- uid: microsoft_teams.api.clients.conversation.client.ConversationClient.activities_client
+  name: activities_client
+  summary: Get the activities client.
+- uid: microsoft_teams.api.clients.conversation.client.ConversationClient.http
+  name: http
+  summary: Get the HTTP client instance.
+- uid: microsoft_teams.api.clients.conversation.client.ConversationClient.members_client
+  name: members_client
+  summary: Get the members client.

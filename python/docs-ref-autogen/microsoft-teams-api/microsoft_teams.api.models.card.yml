@@ -1,0 +1,35 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.models.card
+name: card
+fullName: microsoft_teams.api.models.card
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.models.card.AnimationCard
+- microsoft_teams.api.models.card.AudioCard
+- microsoft_teams.api.models.card.BasicCard
+- microsoft_teams.api.models.card.CardAction
+- microsoft_teams.api.models.card.CardImage
+- microsoft_teams.api.models.card.HeroCard
+- microsoft_teams.api.models.card.MediaCard
+- microsoft_teams.api.models.card.MediaUrl
+- microsoft_teams.api.models.card.ThumbnailCard
+- microsoft_teams.api.models.card.ThumbnailUrl
+- microsoft_teams.api.models.card.VideoCard
+modules:
+- microsoft_teams.api.models.card.animation_card
+- microsoft_teams.api.models.card.audio_card
+- microsoft_teams.api.models.card.basic_card
+- microsoft_teams.api.models.card.card_action
+- microsoft_teams.api.models.card.card_action_type
+- microsoft_teams.api.models.card.card_image
+- microsoft_teams.api.models.card.hero_card
+- microsoft_teams.api.models.card.media_card
+- microsoft_teams.api.models.card.media_url
+- microsoft_teams.api.models.card.thumbnail_card
+- microsoft_teams.api.models.card.thumbnail_url
+- microsoft_teams.api.models.card.video_card
+enums:
+- microsoft_teams.api.models.card.CardActionType

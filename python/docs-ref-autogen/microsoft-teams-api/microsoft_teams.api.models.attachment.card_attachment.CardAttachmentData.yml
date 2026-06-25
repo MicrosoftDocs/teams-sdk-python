@@ -1,0 +1,41 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.attachment.card_attachment.CardAttachmentData
+name: CardAttachmentData
+fullName: microsoft_teams.api.models.attachment.card_attachment.CardAttachmentData
+module: microsoft_teams.api.models.attachment.card_attachment
+summary: 'Base model for a card attachment
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'CardAttachmentData(*, contentType: str, content: Any, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: contentType
+    isRequired: true
+  - name: content
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.models.attachment.card_attachment.CardAttachmentData.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.attachment.card_attachment.CardAttachmentData.content
+  name: content
+  signature: 'content: Any'
+- uid: microsoft_teams.api.models.attachment.card_attachment.CardAttachmentData.content_type
+  name: content_type
+  signature: 'content_type: str'

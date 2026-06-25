@@ -1,0 +1,50 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.task_module.task_module_request.TaskModuleRequest
+name: TaskModuleRequest
+fullName: microsoft_teams.api.models.task_module.task_module_request.TaskModuleRequest
+module: microsoft_teams.api.models.task_module.task_module_request
+summary: 'Task module invoke request value payload.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'TaskModuleRequest(*, data: Any | None = None, context: TaskModuleRequestContext
+    | None = None, tabContext: TabEntityContext | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: data
+    defaultValue: None
+  - name: context
+    defaultValue: None
+  - name: tabContext
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.models.task_module.task_module_request.TaskModuleRequest.context
+  name: context
+  summary: Current user context, i.e., the current theme.
+  signature: 'context: TaskModuleRequestContext | None'
+- uid: microsoft_teams.api.models.task_module.task_module_request.TaskModuleRequest.data
+  name: data
+  summary: User input data. Free payload with key-value pairs.
+  signature: 'data: Any | None'
+- uid: microsoft_teams.api.models.task_module.task_module_request.TaskModuleRequest.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.task_module.task_module_request.TaskModuleRequest.tab_context
+  name: tab_context
+  summary: Tab request context.
+  signature: 'tab_context: TabEntityContext | None'

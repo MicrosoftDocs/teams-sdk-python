@@ -1,0 +1,86 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.Account
+name: Account
+fullName: microsoft_teams.api.models.Account
+module: microsoft_teams.api.models
+summary: 'Represents a Teams account/user.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'Account(*, id: str, aadObjectId: str | None = None, type: Literal[''person'',
+    ''tag'', ''channel'', ''team'', ''bot''] | None = None, properties: Dict[str,
+    Any] | None = None, isTargeted: bool | None = None, name: str | None = None, **extra_data:
+    Any)'
+  keywordOnlyParameters:
+  - name: id
+    isRequired: true
+  - name: aadObjectId
+    defaultValue: None
+  - name: type
+    defaultValue: None
+  - name: properties
+    defaultValue: None
+  - name: isTargeted
+    defaultValue: None
+  - name: name
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.models.Account.aad_object_id
+  name: aad_object_id
+  summary: The Azure AD object ID.
+  signature: 'aad_object_id: str | None'
+- uid: microsoft_teams.api.models.Account.id
+  name: id
+  summary: The unique identifier for the account.
+  signature: 'id: str'
+- uid: microsoft_teams.api.models.Account.is_targeted
+  name: is_targeted
+  summary: 'Indicates targeted-message routing for this recipient.
+
+
+    > [!WARNING]
+
+    > Preview
+
+    >
+
+    > This field is in preview and may change in the future.
+
+    >
+
+    > Diagnostic: ExperimentalTeamsTargeted
+
+    >'
+  signature: 'is_targeted: bool | None'
+- uid: microsoft_teams.api.models.Account.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.Account.name
+  name: name
+  summary: The name of the account.
+  signature: 'name: str | None'
+- uid: microsoft_teams.api.models.Account.properties
+  name: properties
+  summary: Additional properties for the account.
+  signature: 'properties: Dict[str, Any] | None'
+- uid: microsoft_teams.api.models.Account.type
+  name: type
+  summary: The type of account.
+  signature: 'type: Literal[''person'', ''tag'', ''channel'', ''team'', ''bot''] |
+    None'

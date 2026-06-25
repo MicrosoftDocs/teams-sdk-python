@@ -1,0 +1,31 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.clients.api_client_settings
+name: api_client_settings
+fullName: microsoft_teams.api.clients.api_client_settings
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+functions:
+- uid: microsoft_teams.api.clients.api_client_settings.merge_api_client_settings
+  name: merge_api_client_settings
+  summary: Merge API client settings with environment variables and defaults.
+  signature: 'merge_api_client_settings(api_client_settings: ApiClientSettings | None
+    = None, cloud: CloudEnvironment = CloudEnvironment(login_endpoint=''https://login.microsoftonline.com'',
+    login_tenant=''botframework.com'', bot_scope=''https://api.botframework.com/.default'',
+    token_service_url=''https://token.botframework.com'', openid_metadata_url=''https://login.botframework.com/v1/.well-known/openidconfiguration'',
+    token_issuer=''https://api.botframework.com'', graph_scope=''https://graph.microsoft.com/.default''))
+    -> ApiClientSettings'
+  parameters:
+  - name: api_client_settings
+    description: Optional API client settings to merge.
+    defaultValue: None
+  - name: cloud
+    description: Cloud environment for default oauth_url. Defaults to PUBLIC.
+    defaultValue: CloudEnvironment(login_endpoint='https://login.microsoftonline.com',
+      login_tenant='botframework.com', bot_scope='https://api.botframework.com/.default',
+      token_service_url='https://token.botframework.com', openid_metadata_url='https://login.botframework.com/v1/.well-known/openidconfiguration',
+      token_issuer='https://api.botframework.com', graph_scope='https://graph.microsoft.com/.default')
+  return:
+    description: Merged API client settings.
+classes:
+- microsoft_teams.api.clients.api_client_settings.ApiClientSettings

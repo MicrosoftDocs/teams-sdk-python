@@ -1,0 +1,149 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity
+name: MessageExtensionQueryLinkInvokeActivity
+fullName: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity
+module: microsoft_teams.api.activities.invoke.message_extension
+summary: 'Message extension query link invoke activity for composeExtension/queryLink
+  invokes.
+
+
+  Represents an invoke activity when a user queries a link
+
+  in a messaging extension.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'MessageExtensionQueryLinkInvokeActivity(*, serviceUrl: str | None = None,
+    timestamp: datetime | None = None, locale: str | None = None, localTimestamp:
+    datetime | None = None, channelId: Literal[''webchat'', ''msteams''] | str = ''msteams'',
+    from_: Account, conversation: ConversationAccount, replyToId: str | None = None,
+    entities: List[ClientInfoEntity | MentionEntity | MessageEntity | AIMessageEntity
+    | StreamInfoEntity | CitationEntity | SensitiveUsageEntity | ProductInfoEntity
+    | QuotedReplyEntity | TargetedMessageInfoEntity | UnknownEntity] | None = None,
+    channelData: ChannelData | None = None, type: Literal[''invoke''] = ''invoke'',
+    id: str, recipient: Account, name: Literal[''composeExtension/queryLink''] = ''composeExtension/queryLink'',
+    value: AppBasedLinkQuery, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: serviceUrl
+    defaultValue: None
+  - name: timestamp
+    defaultValue: None
+  - name: locale
+    defaultValue: None
+  - name: localTimestamp
+    defaultValue: None
+  - name: channelId
+    defaultValue: msteams
+  - name: from_
+    isRequired: true
+  - name: conversation
+    isRequired: true
+  - name: replyToId
+    defaultValue: None
+  - name: entities
+    defaultValue: None
+  - name: channelData
+    defaultValue: None
+  - name: type
+    defaultValue: invoke
+  - name: id
+    isRequired: true
+  - name: recipient
+    isRequired: true
+  - name: name
+    defaultValue: composeExtension/queryLink
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity.channel_data
+  name: channel_data
+  summary: Contains channel-specific content.
+  signature: 'channel_data: ChannelData | None'
+- uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity.channel_id
+  name: channel_id
+  summary: Contains an ID that uniquely identifies the channel. Set by the channel.
+  signature: 'channel_id: ChannelID'
+- uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity.conversation
+  name: conversation
+  summary: Identifies the conversation to which the activity belongs.
+  signature: 'conversation: ConversationAccount'
+- uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity.entities
+  name: entities
+  summary: Represents the entities that were mentioned in the message.
+  signature: 'entities: List[Entity] | None'
+- uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity.from_
+  name: from_
+  summary: Identifies the sender of the message.
+  signature: 'from_: Account'
+- uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity.id
+  name: id
+  summary: Contains an ID that uniquely identifies the activity on the channel.
+  signature: 'id: str'
+- uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity.local_timestamp
+  name: local_timestamp
+  summary: 'Contains the local date and time of the message, expressed in ISO-8601
+    format.
+
+    For example, 2016-09-23T13:07:49.4714686-07:00.'
+  signature: 'local_timestamp: datetime | None'
+- uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity.locale
+  name: locale
+  summary: 'A locale name for the contents of the text field.
+
+    The locale name is a combination of an ISO 639 two- or three-letter culture code
+    associated
+
+    with a language and an ISO 3166 two-letter subculture code associated with a country
+    or region.
+
+    The locale name can also correspond to a valid BCP-47 language tag.'
+  signature: 'locale: str | None'
+- uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity.name
+  name: name
+  summary: The name of the operation associated with an invoke or event activity.
+  signature: 'name: Literal[''composeExtension/queryLink'']'
+- uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity.recipient
+  name: recipient
+  summary: Identifies the recipient of the message.
+  signature: 'recipient: Account'
+- uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity.reply_to_id
+  name: reply_to_id
+  summary: Contains the ID of the message to which this message is a reply.
+  signature: 'reply_to_id: str | None'
+- uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity.service_url
+  name: service_url
+  summary: Contains the URL that specifies the channel's service endpoint. Set by
+    the channel.
+  signature: 'service_url: str | None'
+- uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity.timestamp
+  name: timestamp
+  summary: Contains the date and time that the message was sent, in UTC, expressed
+    in ISO-8601 format.
+  signature: 'timestamp: datetime | None'
+- uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity.type
+  name: type
+  summary: The activity type is always 'invoke' for invoke activities.
+  signature: 'type: Literal[''invoke'']'
+- uid: microsoft_teams.api.activities.invoke.message_extension.MessageExtensionQueryLinkInvokeActivity.value
+  name: value
+  summary: A value that is associated with the activity.
+  signature: 'value: AppBasedLinkQuery'

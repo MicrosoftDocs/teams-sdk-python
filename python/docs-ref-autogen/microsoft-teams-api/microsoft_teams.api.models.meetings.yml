@@ -1,0 +1,24 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.models.meetings
+name: meetings
+fullName: microsoft_teams.api.models.meetings
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.models.meetings.Meeting
+- microsoft_teams.api.models.meetings.MeetingDetails
+- microsoft_teams.api.models.meetings.MeetingInfo
+- microsoft_teams.api.models.meetings.MeetingNotificationParams
+- microsoft_teams.api.models.meetings.MeetingNotificationRecipientFailure
+- microsoft_teams.api.models.meetings.MeetingNotificationResponse
+- microsoft_teams.api.models.meetings.MeetingNotificationSurface
+- microsoft_teams.api.models.meetings.MeetingNotificationValue
+- microsoft_teams.api.models.meetings.MeetingParticipant
+modules:
+- microsoft_teams.api.models.meetings.meeting
+- microsoft_teams.api.models.meetings.meeting_details
+- microsoft_teams.api.models.meetings.meeting_info
+- microsoft_teams.api.models.meetings.meeting_notification
+- microsoft_teams.api.models.meetings.meeting_participant

@@ -1,0 +1,35 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.clients.ApiClient
+name: ApiClient
+fullName: microsoft_teams.api.clients.ApiClient
+module: microsoft_teams.api.clients
+summary: 'Unified client for Microsoft Teams API operations.
+
+
+  Initialize the unified Teams API client.'
+constructor:
+  syntax: 'ApiClient(service_url: str, options: HttpClient | ClientOptions | None
+    = None, api_client_settings: ApiClientSettings | None = None, cloud: CloudEnvironment
+    | None = None)'
+  parameters:
+  - name: service_url
+    description: The Teams service URL for API calls.
+    isRequired: true
+  - name: options
+    description: Either an HTTP client instance or client options. If None, a default
+      client is created.
+    defaultValue: None
+  - name: api_client_settings
+    description: Optional API client settings.
+    defaultValue: None
+  - name: cloud
+    description: Optional cloud environment for sovereign cloud support.
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.clients.ApiClient.http
+  name: http
+  summary: Get the HTTP client instance.
+- uid: microsoft_teams.api.clients.ApiClient.reactions
+  name: reactions
+  summary: Get the reactions client (preview). Lazily instantiated to avoid warnings
+    for non-users.

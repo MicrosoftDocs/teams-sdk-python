@@ -1,0 +1,18 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.models.conversation
+name: conversation
+fullName: microsoft_teams.api.models.conversation
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.models.conversation.Conversation
+- microsoft_teams.api.models.conversation.ConversationReference
+- microsoft_teams.api.models.conversation.ConversationResource
+- microsoft_teams.api.models.conversation.PagedMembersResult
+modules:
+- microsoft_teams.api.models.conversation.conversation
+- microsoft_teams.api.models.conversation.conversation_reference
+- microsoft_teams.api.models.conversation.conversation_resource
+- microsoft_teams.api.models.conversation.paged_members_result

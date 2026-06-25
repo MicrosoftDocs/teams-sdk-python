@@ -1,0 +1,11 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.models.task_module.task_module_task_info
+name: task_module_task_info
+fullName: microsoft_teams.api.models.task_module.task_module_task_info
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.api.models.task_module.task_module_task_info.BaseTaskModuleTaskInfo
+- microsoft_teams.api.models.task_module.task_module_task_info.CardTaskModuleTaskInfo
+- microsoft_teams.api.models.task_module.task_module_task_info.UrlTaskModuleTaskInfo

@@ -1,0 +1,117 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.activities.message.MessageUpdateChannelData
+name: MessageUpdateChannelData
+fullName: microsoft_teams.api.activities.message.MessageUpdateChannelData
+module: microsoft_teams.api.activities.message
+summary: 'Channel data specific to message update activities.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'MessageUpdateChannelData(*, channel: ChannelInfo | None = None, eventType:
+    Literal[''undeleteMessage'', ''editMessage''], team: TeamInfo | None = None, notification:
+    NotificationInfo | None = None, tenant: TenantInfo | None = None, meeting: MeetingInfo
+    | None = None, settings: ChannelDataSettings | None = None, feedbackLoopEnabled:
+    bool | None = None, feedbackLoop: FeedbackLoop | None = None, streamId: str |
+    None = None, streamType: Literal[''informative'', ''streaming'', ''final''] |
+    None = None, streamSequence: int | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: channel
+    defaultValue: None
+  - name: eventType
+    isRequired: true
+  - name: team
+    defaultValue: None
+  - name: notification
+    defaultValue: None
+  - name: tenant
+    defaultValue: None
+  - name: meeting
+    defaultValue: None
+  - name: settings
+    defaultValue: None
+  - name: feedbackLoopEnabled
+    defaultValue: None
+  - name: feedbackLoop
+    defaultValue: None
+  - name: streamId
+    defaultValue: None
+  - name: streamType
+    defaultValue: None
+  - name: streamSequence
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.activities.message.MessageUpdateChannelData.channel
+  name: channel
+  summary: Information about the channel in which the message was sent.
+  signature: 'channel: ChannelInfo | None'
+- uid: microsoft_teams.api.activities.message.MessageUpdateChannelData.event_type
+  name: event_type
+  summary: The type of event for message update.
+  signature: 'event_type: Literal[''undeleteMessage'', ''editMessage'']'
+- uid: microsoft_teams.api.activities.message.MessageUpdateChannelData.feedback_loop
+  name: feedback_loop
+  summary: 'Feedback loop configuration. Set type to ''custom'' to show a task module
+    dialog.
+
+    Set to ''default'' otherwise for standard feedback handling.'
+  signature: 'feedback_loop: FeedbackLoop | None'
+- uid: microsoft_teams.api.activities.message.MessageUpdateChannelData.feedback_loop_enabled
+  name: feedback_loop_enabled
+  summary: 'Legacy feedback loop flag. Setting this to True is equivalent to feedback_loop=FeedbackLoop(type="default").
+
+    Recommended to use feedback_loop directly. This field is normalized on model creation.'
+  signature: 'feedback_loop_enabled: bool | None'
+- uid: microsoft_teams.api.activities.message.MessageUpdateChannelData.meeting
+  name: meeting
+  summary: Information about the tenant in which the message was sent.
+  signature: 'meeting: MeetingInfo | None'
+- uid: microsoft_teams.api.activities.message.MessageUpdateChannelData.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.activities.message.MessageUpdateChannelData.notification
+  name: notification
+  summary: Notification settings for the message.
+  signature: 'notification: NotificationInfo | None'
+- uid: microsoft_teams.api.activities.message.MessageUpdateChannelData.settings
+  name: settings
+  summary: Information about the settings in which the message was sent.
+  signature: 'settings: ChannelDataSettings | None'
+- uid: microsoft_teams.api.activities.message.MessageUpdateChannelData.stream_id
+  name: stream_id
+  summary: ID of the stream. Assigned after the initial update is sent.
+  signature: 'stream_id: str | None'
+- uid: microsoft_teams.api.activities.message.MessageUpdateChannelData.stream_sequence
+  name: stream_sequence
+  summary: 'Sequence number of the message in the stream. Starts at 1 for the first
+    message and
+
+    increments from there.'
+  signature: 'stream_sequence: int | None'
+- uid: microsoft_teams.api.activities.message.MessageUpdateChannelData.stream_type
+  name: stream_type
+  summary: The type of message being sent.
+  signature: 'stream_type: Literal[''informative'', ''streaming'', ''final''] | None'
+- uid: microsoft_teams.api.activities.message.MessageUpdateChannelData.team
+  name: team
+  summary: Information about the team in which the message was sent.
+  signature: 'team: TeamInfo | None'
+- uid: microsoft_teams.api.activities.message.MessageUpdateChannelData.tenant
+  name: tenant
+  summary: Information about the tenant in which the message was sent.
+  signature: 'tenant: TenantInfo | None'

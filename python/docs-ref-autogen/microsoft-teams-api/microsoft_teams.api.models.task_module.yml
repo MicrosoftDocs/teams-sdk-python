@@ -1,0 +1,27 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.models.task_module
+name: task_module
+fullName: microsoft_teams.api.models.task_module
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.models.task_module.BaseTaskModuleTaskInfo
+- microsoft_teams.api.models.task_module.CardTaskModuleTaskInfo
+- microsoft_teams.api.models.task_module.TaskModuleCardResponse
+- microsoft_teams.api.models.task_module.TaskModuleContinueResponse
+- microsoft_teams.api.models.task_module.TaskModuleMessageResponse
+- microsoft_teams.api.models.task_module.TaskModuleRequest
+- microsoft_teams.api.models.task_module.TaskModuleRequestContext
+- microsoft_teams.api.models.task_module.TaskModuleResponse
+- microsoft_teams.api.models.task_module.TaskModuleResponseBase
+- microsoft_teams.api.models.task_module.UrlTaskModuleTaskInfo
+modules:
+- microsoft_teams.api.models.task_module.task_module_card_response
+- microsoft_teams.api.models.task_module.task_module_continue_response
+- microsoft_teams.api.models.task_module.task_module_message_response
+- microsoft_teams.api.models.task_module.task_module_request
+- microsoft_teams.api.models.task_module.task_module_response
+- microsoft_teams.api.models.task_module.task_module_response_base
+- microsoft_teams.api.models.task_module.task_module_task_info

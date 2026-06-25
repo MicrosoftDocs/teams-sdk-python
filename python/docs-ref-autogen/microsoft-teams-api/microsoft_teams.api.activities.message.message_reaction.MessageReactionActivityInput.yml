@@ -1,0 +1,172 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput
+name: MessageReactionActivityInput
+fullName: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput
+module: microsoft_teams.api.activities.message.message_reaction
+summary: 'Input model for creating message reaction activities with builder methods.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'MessageReactionActivityInput(*, serviceUrl: str | None = None, timestamp:
+    datetime | None = None, locale: str | None = None, localTimestamp: datetime |
+    None = None, channelId: Literal[''webchat'', ''msteams''] | str | None = None,
+    from_: Account | None = None, conversation: ConversationAccount | None = None,
+    replyToId: str | None = None, entities: List[ClientInfoEntity | MentionEntity
+    | MessageEntity | AIMessageEntity | StreamInfoEntity | CitationEntity | SensitiveUsageEntity
+    | ProductInfoEntity | QuotedReplyEntity | TargetedMessageInfoEntity | UnknownEntity]
+    | None = None, channelData: ChannelData | None = None, type: Literal[''messageReaction'']
+    = ''messageReaction'', id: str | None = None, recipient: Account | None = None,
+    reactionsAdded: List[MessageReaction] | None = None, reactionsRemoved: List[MessageReaction]
+    | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: serviceUrl
+    defaultValue: None
+  - name: timestamp
+    defaultValue: None
+  - name: locale
+    defaultValue: None
+  - name: localTimestamp
+    defaultValue: None
+  - name: channelId
+    defaultValue: None
+  - name: from_
+    defaultValue: None
+  - name: conversation
+    defaultValue: None
+  - name: replyToId
+    defaultValue: None
+  - name: entities
+    defaultValue: None
+  - name: channelData
+    defaultValue: None
+  - name: type
+    defaultValue: messageReaction
+  - name: id
+    defaultValue: None
+  - name: recipient
+    defaultValue: None
+  - name: reactionsAdded
+    defaultValue: None
+  - name: reactionsRemoved
+    defaultValue: None
+methods:
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.add_reaction
+  name: add_reaction
+  summary: Add a message reaction to the added reactions list.
+  signature: 'add_reaction(reaction: MessageReaction) -> Self'
+  parameters:
+  - name: reaction
+    description: The reaction to add
+    isRequired: true
+  return:
+    description: Self for method chaining
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.remove_reaction
+  name: remove_reaction
+  summary: 'Remove a message reaction and add it to the removed reactions list.
+
+
+    This method will:
+
+    1. Remove the reaction from reactions_added if it exists
+
+    2. Add the reaction to reactions_removed'
+  signature: 'remove_reaction(reaction: MessageReaction) -> Self'
+  parameters:
+  - name: reaction
+    description: The reaction to remove
+    isRequired: true
+  return:
+    description: Self for method chaining
+attributes:
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.channel_data
+  name: channel_data
+  summary: Contains channel-specific content.
+  signature: 'channel_data: ChannelData | None'
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.channel_id
+  name: channel_id
+  summary: Contains an ID that uniquely identifies the channel. Set by the channel.
+  signature: 'channel_id: ChannelID | None'
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.conversation
+  name: conversation
+  summary: Identifies the conversation to which the activity belongs.
+  signature: 'conversation: ConversationAccount | None'
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.entities
+  name: entities
+  summary: Represents the entities that were mentioned in the message.
+  signature: 'entities: List[Entity] | None'
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.from_
+  name: from_
+  summary: Identifies the sender of the message.
+  signature: 'from_: Account | None'
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.id
+  name: id
+  summary: Contains an ID that uniquely identifies the activity on the channel.
+  signature: 'id: str | None'
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.local_timestamp
+  name: local_timestamp
+  summary: 'Contains the local date and time of the message, expressed in ISO-8601
+    format.
+
+    For example, 2016-09-23T13:07:49.4714686-07:00.'
+  signature: 'local_timestamp: datetime | None'
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.locale
+  name: locale
+  summary: 'A locale name for the contents of the text field.
+
+    The locale name is a combination of an ISO 639 two- or three-letter culture code
+    associated
+
+    with a language and an ISO 3166 two-letter subculture code associated with a country
+    or region.
+
+    The locale name can also correspond to a valid BCP-47 language tag.'
+  signature: 'locale: str | None'
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.reactions_added
+  name: reactions_added
+  summary: The collection of reactions added to the conversation.
+  signature: 'reactions_added: List[MessageReaction] | None'
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.reactions_removed
+  name: reactions_removed
+  summary: The collection of reactions removed from the conversation.
+  signature: 'reactions_removed: List[MessageReaction] | None'
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.recipient
+  name: recipient
+  summary: Identifies the recipient of the message.
+  signature: 'recipient: Account | None'
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.reply_to_id
+  name: reply_to_id
+  summary: Contains the ID of the message to which this message is a reply.
+  signature: 'reply_to_id: str | None'
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.service_url
+  name: service_url
+  summary: Contains the URL that specifies the channel's service endpoint. Set by
+    the channel.
+  signature: 'service_url: str | None'
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.timestamp
+  name: timestamp
+  summary: Contains the date and time that the message was sent, in UTC, expressed
+    in ISO-8601 format.
+  signature: 'timestamp: datetime | None'
+- uid: microsoft_teams.api.activities.message.message_reaction.MessageReactionActivityInput.type
+  name: type
+  summary: Contains the type of the activity.
+  signature: 'type: Literal[''messageReaction'']'

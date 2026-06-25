@@ -1,0 +1,44 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.activities.invoke.message.submit_action.MessageSubmitActionInvokeValue
+name: MessageSubmitActionInvokeValue
+fullName: microsoft_teams.api.activities.invoke.message.submit_action.MessageSubmitActionInvokeValue
+module: microsoft_teams.api.activities.invoke.message.submit_action
+summary: 'Represents the value associated with a message submit action.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'MessageSubmitActionInvokeValue(*, actionName: Literal[''feedback''] = ''feedback'',
+    actionValue: MessageSubmitActionValue, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: actionName
+    defaultValue: feedback
+  - name: actionValue
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.activities.invoke.message.submit_action.MessageSubmitActionInvokeValue.action_name
+  name: action_name
+  summary: Action name
+  signature: 'action_name: Literal[''feedback'']'
+- uid: microsoft_teams.api.activities.invoke.message.submit_action.MessageSubmitActionInvokeValue.action_value
+  name: action_value
+  summary: The value associated with the action.
+  signature: 'action_value: MessageSubmitActionValue'
+- uid: microsoft_teams.api.activities.invoke.message.submit_action.MessageSubmitActionInvokeValue.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'

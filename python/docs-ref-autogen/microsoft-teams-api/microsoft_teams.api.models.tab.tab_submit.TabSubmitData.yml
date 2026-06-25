@@ -1,0 +1,37 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.tab.tab_submit.TabSubmitData
+name: TabSubmitData
+fullName: microsoft_teams.api.models.tab.tab_submit.TabSubmitData
+module: microsoft_teams.api.models.tab.tab_submit
+summary: 'Invoke (''tab/submit'') request value payload data.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'TabSubmitData(*, type: str | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: type
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.models.tab.tab_submit.TabSubmitData.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.tab.tab_submit.TabSubmitData.type
+  name: type
+  summary: Should currently be *tab/submit*.
+  signature: 'type: str | None'

@@ -1,0 +1,10 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.api.activities.command.command_send
+name: command_send
+fullName: microsoft_teams.api.activities.command.command_send
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.api.activities.command.command_send.CommandSendActivity
+- microsoft_teams.api.activities.command.command_send.CommandSendValue

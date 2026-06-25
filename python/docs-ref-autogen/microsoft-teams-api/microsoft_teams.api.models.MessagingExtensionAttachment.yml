@@ -1,0 +1,69 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.MessagingExtensionAttachment
+name: MessagingExtensionAttachment
+fullName: microsoft_teams.api.models.MessagingExtensionAttachment
+module: microsoft_teams.api.models
+summary: 'Messaging extension attachment.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'MessagingExtensionAttachment(*, contentType: str, contentUrl: str | None
+    = None, content: Any | None = None, name: str | None = None, thumbnailUrl: str
+    | None = None, preview: Attachment | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: contentType
+    isRequired: true
+  - name: contentUrl
+    defaultValue: None
+  - name: content
+    defaultValue: None
+  - name: name
+    defaultValue: None
+  - name: thumbnailUrl
+    defaultValue: None
+  - name: preview
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.models.MessagingExtensionAttachment.content
+  name: content
+  summary: Embedded content
+  signature: 'content: Any | None'
+- uid: microsoft_teams.api.models.MessagingExtensionAttachment.content_type
+  name: content_type
+  summary: mimetype/Contenttype for the file
+  signature: 'content_type: str'
+- uid: microsoft_teams.api.models.MessagingExtensionAttachment.content_url
+  name: content_url
+  summary: Content Url
+  signature: 'content_url: str | None'
+- uid: microsoft_teams.api.models.MessagingExtensionAttachment.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.models.MessagingExtensionAttachment.name
+  name: name
+  summary: The name of the attachment
+  signature: 'name: str | None'
+- uid: microsoft_teams.api.models.MessagingExtensionAttachment.preview
+  name: preview
+  summary: Preview attachment
+  signature: 'preview: Attachment | None'
+- uid: microsoft_teams.api.models.MessagingExtensionAttachment.thumbnail_url
+  name: thumbnail_url
+  summary: Thumbnail associated with attachment
+  signature: 'thumbnail_url: str | None'

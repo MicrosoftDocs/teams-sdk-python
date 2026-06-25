@@ -1,0 +1,20 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.models.sign_in
+name: sign_in
+fullName: microsoft_teams.api.models.sign_in
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.models.sign_in.SignInCard
+- microsoft_teams.api.models.sign_in.SignInExchangeToken
+- microsoft_teams.api.models.sign_in.SignInFailure
+- microsoft_teams.api.models.sign_in.SignInStateVerifyQuery
+- microsoft_teams.api.models.sign_in.SignInUrlResponse
+modules:
+- microsoft_teams.api.models.sign_in.card
+- microsoft_teams.api.models.sign_in.exchange_token
+- microsoft_teams.api.models.sign_in.failure
+- microsoft_teams.api.models.sign_in.response
+- microsoft_teams.api.models.sign_in.state_verify_query

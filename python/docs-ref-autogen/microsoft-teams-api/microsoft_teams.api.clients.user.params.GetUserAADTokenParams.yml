@@ -1,0 +1,56 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.clients.user.params.GetUserAADTokenParams
+name: GetUserAADTokenParams
+fullName: microsoft_teams.api.clients.user.params.GetUserAADTokenParams
+module: microsoft_teams.api.clients.user.params
+summary: 'Parameters for getting AAD tokens for a user.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'GetUserAADTokenParams(*, userId: str, connectionName: str, resourceUrls:
+    List[str], channelId: Literal[''webchat'', ''msteams''] | str, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: userId
+    isRequired: true
+  - name: connectionName
+    isRequired: true
+  - name: resourceUrls
+    isRequired: true
+  - name: channelId
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.clients.user.params.GetUserAADTokenParams.channel_id
+  name: channel_id
+  summary: The channel ID.
+  signature: 'channel_id: Literal[''webchat'', ''msteams''] | str'
+- uid: microsoft_teams.api.clients.user.params.GetUserAADTokenParams.connection_name
+  name: connection_name
+  summary: The connection name.
+  signature: 'connection_name: str'
+- uid: microsoft_teams.api.clients.user.params.GetUserAADTokenParams.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.clients.user.params.GetUserAADTokenParams.resource_urls
+  name: resource_urls
+  summary: The resource URLs.
+  signature: 'resource_urls: List[str]'
+- uid: microsoft_teams.api.clients.user.params.GetUserAADTokenParams.user_id
+  name: user_id
+  summary: The user ID.
+  signature: 'user_id: str'

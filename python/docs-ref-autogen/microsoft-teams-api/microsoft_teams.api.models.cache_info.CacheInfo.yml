@@ -1,0 +1,45 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.models.cache_info.CacheInfo
+name: CacheInfo
+fullName: microsoft_teams.api.models.cache_info.CacheInfo
+module: microsoft_teams.api.models.cache_info
+summary: 'A cache info object which notifies Teams how long an object should be cached
+  for.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'CacheInfo(*, cacheType: str | None = None, cacheDuration: int | None =
+    None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: cacheType
+    defaultValue: None
+  - name: cacheDuration
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.models.cache_info.CacheInfo.cache_duration
+  name: cache_duration
+  summary: The time in seconds for which the cached object should remain in the cache.
+  signature: 'cache_duration: int | None'
+- uid: microsoft_teams.api.models.cache_info.CacheInfo.cache_type
+  name: cache_type
+  summary: The type of cache for this object.
+  signature: 'cache_type: str | None'
+- uid: microsoft_teams.api.models.cache_info.CacheInfo.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'

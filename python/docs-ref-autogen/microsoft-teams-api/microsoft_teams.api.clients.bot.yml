@@ -1,0 +1,19 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api.clients.bot
+name: bot
+fullName: microsoft_teams.api.clients.bot
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: import
+classes:
+- microsoft_teams.api.clients.bot.BotClient
+- microsoft_teams.api.clients.bot.BotSignInClient
+- microsoft_teams.api.clients.bot.BotTokenClient
+- microsoft_teams.api.clients.bot.GetBotSignInResourceParams
+- microsoft_teams.api.clients.bot.GetBotSignInUrlParams
+modules:
+- microsoft_teams.api.clients.bot.client
+- microsoft_teams.api.clients.bot.params
+- microsoft_teams.api.clients.bot.sign_in_client
+- microsoft_teams.api.clients.bot.token_client
