@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.api.models.adaptive_card.adaptive_card_invoke_action
-name: adaptive_card_invoke_action
-fullName: microsoft_teams.api.models.adaptive_card.adaptive_card_invoke_action
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-classes:
-- microsoft_teams.api.models.adaptive_card.adaptive_card_invoke_action.AdaptiveCardInvokeAction

@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.api.models.entity.message_entity
-name: message_entity
-fullName: microsoft_teams.api.models.entity.message_entity
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-classes:
-- microsoft_teams.api.models.entity.message_entity.MessageEntity

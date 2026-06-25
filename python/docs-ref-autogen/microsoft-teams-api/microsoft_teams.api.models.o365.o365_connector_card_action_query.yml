@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.api.models.o365.o365_connector_card_action_query
-name: o365_connector_card_action_query
-fullName: microsoft_teams.api.models.o365.o365_connector_card_action_query
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-classes:
-- microsoft_teams.api.models.o365.o365_connector_card_action_query.O365ConnectorCardActionQuery

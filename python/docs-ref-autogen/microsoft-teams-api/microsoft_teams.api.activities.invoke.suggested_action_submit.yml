@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.api.activities.invoke.suggested_action_submit
-name: suggested_action_submit
-fullName: microsoft_teams.api.activities.invoke.suggested_action_submit
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-classes:
-- microsoft_teams.api.activities.invoke.suggested_action_submit.SuggestedActionSubmitInvokeActivity

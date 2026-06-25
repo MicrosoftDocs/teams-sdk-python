@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.api.models.messaging_extension.messaging_extension_result_type
-name: messaging_extension_result_type
-fullName: microsoft_teams.api.models.messaging_extension.messaging_extension_result_type
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-enums:
-- microsoft_teams.api.models.messaging_extension.messaging_extension_result_type.MessagingExtensionResultType

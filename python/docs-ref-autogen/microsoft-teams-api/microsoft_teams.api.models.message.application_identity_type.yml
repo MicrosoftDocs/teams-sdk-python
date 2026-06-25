@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.api.models.message.application_identity_type
-name: application_identity_type
-fullName: microsoft_teams.api.models.message.application_identity_type
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-enums:
-- microsoft_teams.api.models.message.application_identity_type.ApplicationIdentityType

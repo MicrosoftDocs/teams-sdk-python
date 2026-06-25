@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.api.models.adaptive_card.adaptive_card_authentication
-name: adaptive_card_authentication
-fullName: microsoft_teams.api.models.adaptive_card.adaptive_card_authentication
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-classes:
-- microsoft_teams.api.models.adaptive_card.adaptive_card_authentication.AdaptiveCardAuthentication

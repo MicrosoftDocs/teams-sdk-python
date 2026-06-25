@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.api.clients.conversation.member
-name: member
-fullName: microsoft_teams.api.clients.conversation.member
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-classes:
-- microsoft_teams.api.clients.conversation.member.ConversationMemberClient

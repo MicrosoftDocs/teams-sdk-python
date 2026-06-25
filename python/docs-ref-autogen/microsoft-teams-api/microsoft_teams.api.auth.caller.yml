@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.api.auth.caller
-name: caller
-fullName: microsoft_teams.api.auth.caller
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-enums:
-- microsoft_teams.api.auth.caller.CallerIds

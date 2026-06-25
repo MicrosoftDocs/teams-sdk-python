@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.api.models.file.file_info_card
-name: file_info_card
-fullName: microsoft_teams.api.models.file.file_info_card
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-classes:
-- microsoft_teams.api.models.file.file_info_card.FileInfoCard

@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.api.models.attachment.attachment_layout
-name: attachment_layout
-fullName: microsoft_teams.api.models.attachment.attachment_layout
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-enums:
-- microsoft_teams.api.models.attachment.attachment_layout.AttachmentLayout

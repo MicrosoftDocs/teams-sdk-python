@@ -297,11 +297,6 @@ classes:
 - microsoft_teams.api.UserTokenClient
 - microsoft_teams.api.VideoCard
 - microsoft_teams.api.VideoCardAttachment
-packages:
-- microsoft_teams.api.activities
-- microsoft_teams.api.auth
-- microsoft_teams.api.clients
-- microsoft_teams.api.models
 enums:
 - microsoft_teams.api.Action
 - microsoft_teams.api.ApplicationIdentityType

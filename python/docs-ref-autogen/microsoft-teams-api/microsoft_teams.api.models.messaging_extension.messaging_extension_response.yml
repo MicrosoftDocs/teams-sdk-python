@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.api.models.messaging_extension.messaging_extension_response
-name: messaging_extension_response
-fullName: microsoft_teams.api.models.messaging_extension.messaging_extension_response
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-classes:
-- microsoft_teams.api.models.messaging_extension.messaging_extension_response.MessagingExtensionResponse

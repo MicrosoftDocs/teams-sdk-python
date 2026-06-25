@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.api.activities.install_update.remove
-name: remove
-fullName: microsoft_teams.api.activities.install_update.remove
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-classes:
-- microsoft_teams.api.activities.install_update.remove.UninstalledActivity
