@@ -1,0 +1,165 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.ActivityContext
+name: ActivityContext
+fullName: microsoft_teams.apps.ActivityContext
+module: microsoft_teams.apps
+summary: Context object passed to activity handlers with middleware support.
+constructor:
+  syntax: 'ActivityContext(activity: T, app_id: str, storage: Storage[str, Any], api:
+    ApiClient, user_token: str | None, conversation_ref: ConversationReference, is_signed_in:
+    bool, connection_name: str, activity_sender: ActivitySender, app_token: str |
+    StringLike | Callable[[], str | StringLike | None | Awaitable[str | StringLike
+    | None]] | None, cloud: CloudEnvironment = CloudEnvironment(login_endpoint=''https://login.microsoftonline.com'',
+    login_tenant=''botframework.com'', bot_scope=''https://api.botframework.com/.default'',
+    token_service_url=''https://token.botframework.com'', openid_metadata_url=''https://login.botframework.com/v1/.well-known/openidconfiguration'',
+    token_issuer=''https://api.botframework.com'', graph_scope=''https://graph.microsoft.com/.default''))'
+  parameters:
+  - name: activity
+    isRequired: true
+  - name: app_id
+    isRequired: true
+  - name: storage
+    isRequired: true
+  - name: api
+    isRequired: true
+  - name: user_token
+    isRequired: true
+  - name: conversation_ref
+    isRequired: true
+  - name: is_signed_in
+    isRequired: true
+  - name: connection_name
+    isRequired: true
+  - name: activity_sender
+    isRequired: true
+  - name: app_token
+    isRequired: true
+  - name: cloud
+    defaultValue: CloudEnvironment(login_endpoint='https://login.microsoftonline.com',
+      login_tenant='botframework.com', bot_scope='https://api.botframework.com/.default',
+      token_service_url='https://token.botframework.com', openid_metadata_url='https://login.botframework.com/v1/.well-known/openidconfiguration',
+      token_issuer='https://api.botframework.com', graph_scope='https://graph.microsoft.com/.default')
+methods:
+- uid: microsoft_teams.apps.ActivityContext.next
+  name: next
+  summary: Call the next middleware in the chain.
+  signature: async next() -> None
+- uid: microsoft_teams.apps.ActivityContext.quote
+  name: quote
+  summary: 'Send a message to the conversation with a quoted message reference prepended
+    to the text.
+
+    Teams renders the quoted message as a preview bubble above the response text.
+
+
+    > [!WARNING]
+
+    > Coming Soon
+
+    >
+
+    > This API is coming soon and may change in the future.
+
+    >
+
+    > Diagnostic: ExperimentalTeamsQuotedReplies
+
+    >'
+  signature: 'async quote(message_id: str, input: str | MessageActivityInput | MessageReactionActivityInput
+    | TypingActivityInput) -> SentActivity'
+  parameters:
+  - name: message_id
+    description: The ID of the message to quote
+    isRequired: true
+  - name: input
+    description: "The response text or activity \u2014 a quote placeholder for message_id\
+      \ will be prepended to its text"
+    isRequired: true
+  return:
+    description: The sent activity
+- uid: microsoft_teams.apps.ActivityContext.reply
+  name: reply
+  summary: 'Send a message in the current conversation with a visual quote of the
+    inbound message.
+
+
+    In channels, sends to the current thread with a quoted reply.
+
+    In other scopes, sends with a quoted reply.
+
+    To send without quoting, use <xref:microsoft_teams.apps.ActivityContext.send>.'
+  signature: 'async reply(input: str | MessageActivityInput | MessageReactionActivityInput
+    | TypingActivityInput) -> SentActivity'
+  parameters:
+  - name: input
+    isRequired: true
+- uid: microsoft_teams.apps.ActivityContext.send
+  name: send
+  summary: 'Send a message in the current conversation without quoting.
+
+
+    In channels, sends to the current thread. In scopes that do not
+
+    support threading (group chat, meetings), sends as a normal message.
+
+    To send with a visual quote of the inbound message, use <xref:microsoft_teams.apps.ActivityContext.reply>.'
+  signature: 'async send(message: str | MessageActivityInput | MessageReactionActivityInput
+    | TypingActivityInput | AdaptiveCard, conversation_ref: ConversationReference
+    | None = None) -> SentActivity'
+  parameters:
+  - name: message
+    description: The message to send, can be a string, ActivityParams, or AdaptiveCard
+    isRequired: true
+  - name: conversation_ref
+    description: Optional conversation reference to send to a different conversation
+      or thread
+    defaultValue: None
+- uid: microsoft_teams.apps.ActivityContext.set_next
+  name: set_next
+  summary: Set the next handler in the middleware chain.
+  signature: 'set_next(handler: Callable[[], Awaitable[None]]) -> None'
+  parameters:
+  - name: handler
+    isRequired: true
+- uid: microsoft_teams.apps.ActivityContext.sign_in
+  name: sign_in
+  summary: Initiate a sign-in flow for the user.
+  signature: 'async sign_in(options: SignInOptions | None = None) -> str | None'
+  parameters:
+  - name: options
+    description: Optional signin options to customize the flow
+    defaultValue: None
+  return:
+    description: The token if already available, otherwise None after sending OAuth
+      card
+- uid: microsoft_teams.apps.ActivityContext.sign_out
+  name: sign_out
+  summary: 'Sign out the user by clearing their token.
+
+
+    This method will remove the user''s token from the storage.'
+  signature: async sign_out() -> None
+attributes:
+- uid: microsoft_teams.apps.ActivityContext.app_graph
+  name: app_graph
+  summary: 'Get a Microsoft Graph client configured with the app''s token.
+
+
+    This client can be used for app-only operations that don''t require user context.'
+  exceptions:
+  - type: ValueError
+    description: If no app token is available.
+  - type: RuntimeError
+    description: If the graph client cannot be created.
+  - type: ImportError
+    description: If the graph dependencies are not installed.
+- uid: microsoft_teams.apps.ActivityContext.user_graph
+  name: user_graph
+  summary: Get a Microsoft Graph client configured with the user's token.
+  exceptions:
+  - type: ValueError
+    description: If the user is not signed in or doesn't have a valid token.
+  - type: RuntimeError
+    description: If the graph client cannot be created.
+  - type: ImportError
+    description: If the graph dependencies are not installed.

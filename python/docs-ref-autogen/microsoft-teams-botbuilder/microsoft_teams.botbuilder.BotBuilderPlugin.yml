@@ -1,0 +1,28 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.botbuilder.BotBuilderPlugin
+name: BotBuilderPlugin
+fullName: microsoft_teams.botbuilder.BotBuilderPlugin
+module: microsoft_teams.botbuilder
+summary: 'BotBuilder plugin that provides Microsoft Bot Framework integration.
+
+
+  Initialize the BotBuilder plugin.'
+constructor:
+  syntax: 'BotBuilderPlugin(**options: Unpack[BotBuilderPluginOptions])'
+  parameters:
+  - name: options
+    description: Configuration options for the plugin
+    isRequired: true
+methods:
+- uid: microsoft_teams.botbuilder.BotBuilderPlugin.on_init
+  name: on_init
+  summary: Initialize the plugin when the app starts.
+  signature: async on_init() -> None
+attributes:
+- uid: microsoft_teams.botbuilder.BotBuilderPlugin.credentials
+  name: credentials
+  signature: 'credentials: ClientCredentials | TokenCredentials | ManagedIdentityCredentials
+    | FederatedIdentityCredentials | None'
+- uid: microsoft_teams.botbuilder.BotBuilderPlugin.http_server
+  name: http_server
+  signature: 'http_server: HttpServer'

@@ -1,0 +1,16 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.EventMetadata
+name: EventMetadata
+fullName: microsoft_teams.apps.EventMetadata
+module: microsoft_teams.apps
+summary: Information associated with the plugin event
+constructor:
+  syntax: 'EventMetadata(name: Literal[''error'', ''activity'', ''custom''])'
+  parameters:
+  - name: name
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.EventMetadata.name
+  name: name
+  summary: The name of the event.
+  signature: 'name: Literal[''error'', ''activity'', ''custom'']'

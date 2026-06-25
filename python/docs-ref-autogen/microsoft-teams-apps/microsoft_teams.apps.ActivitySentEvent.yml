@@ -1,0 +1,20 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.ActivitySentEvent
+name: ActivitySentEvent
+fullName: microsoft_teams.apps.ActivitySentEvent
+module: microsoft_teams.apps
+summary: Event emitted when an activity is sent.
+constructor:
+  syntax: 'ActivitySentEvent(activity: SentActivity, conversation_ref: ConversationReference)'
+  parameters:
+  - name: activity
+    isRequired: true
+  - name: conversation_ref
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.ActivitySentEvent.activity
+  name: activity
+  signature: 'activity: SentActivity'
+- uid: microsoft_teams.apps.ActivitySentEvent.conversation_ref
+  name: conversation_ref
+  signature: 'conversation_ref: ConversationReference'

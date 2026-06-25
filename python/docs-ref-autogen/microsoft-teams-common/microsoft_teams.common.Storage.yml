@@ -1,0 +1,55 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.common.Storage
+name: Storage
+fullName: microsoft_teams.common.Storage
+module: microsoft_teams.common
+summary: A storage container that can get/set/delete items by a unique key.
+constructor:
+  syntax: Storage()
+methods:
+- uid: microsoft_teams.common.Storage.async_delete
+  name: async_delete
+  summary: Asynchronously delete a value by key.
+  signature: 'abstract async async_delete(key: K) -> None'
+  parameters:
+  - name: key
+    isRequired: true
+- uid: microsoft_teams.common.Storage.async_get
+  name: async_get
+  summary: Asynchronously get a value by key.
+  signature: 'abstract async async_get(key: K) -> V | None'
+  parameters:
+  - name: key
+    isRequired: true
+- uid: microsoft_teams.common.Storage.async_set
+  name: async_set
+  summary: Asynchronously set a value by key.
+  signature: 'abstract async async_set(key: K, value: V) -> None'
+  parameters:
+  - name: key
+    isRequired: true
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.common.Storage.delete
+  name: delete
+  summary: Synchronously delete a value by key.
+  signature: 'abstract delete(key: K) -> None'
+  parameters:
+  - name: key
+    isRequired: true
+- uid: microsoft_teams.common.Storage.get
+  name: get
+  summary: Synchronously get a value by key.
+  signature: 'abstract get(key: K) -> V | None'
+  parameters:
+  - name: key
+    isRequired: true
+- uid: microsoft_teams.common.Storage.set
+  name: set
+  summary: Synchronously set a value by key.
+  signature: 'abstract set(key: K, value: V) -> None'
+  parameters:
+  - name: key
+    isRequired: true
+  - name: value
+    isRequired: true

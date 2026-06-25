@@ -1,5 +1,131 @@
 - items:
   - name: Overview
+    uid: microsoft_teams.apps
+  - name: ActivityContext
+    no-loc:
+    - ActivityContext
+    uid: microsoft_teams.apps.ActivityContext
+  - name: ActivityEvent
+    no-loc:
+    - ActivityEvent
+    uid: microsoft_teams.apps.ActivityEvent
+  - name: ActivityResponseEvent
+    no-loc:
+    - ActivityResponseEvent
+    uid: microsoft_teams.apps.ActivityResponseEvent
+  - name: ActivitySentEvent
+    no-loc:
+    - ActivitySentEvent
+    uid: microsoft_teams.apps.ActivitySentEvent
+  - name: App
+    no-loc:
+    - App
+    uid: microsoft_teams.apps.App
+  - name: AppOptions
+    no-loc:
+    - AppOptions
+    uid: microsoft_teams.apps.AppOptions
+  - name: ClientContext
+    no-loc:
+    - ClientContext
+    uid: microsoft_teams.apps.ClientContext
+  - name: CoreActivity
+    no-loc:
+    - CoreActivity
+    uid: microsoft_teams.apps.CoreActivity
+  - name: DependencyMetadata
+    no-loc:
+    - DependencyMetadata
+    uid: microsoft_teams.apps.DependencyMetadata
+  - name: ErrorEvent
+    no-loc:
+    - ErrorEvent
+    uid: microsoft_teams.apps.ErrorEvent
+  - name: EventMetadata
+    no-loc:
+    - EventMetadata
+    uid: microsoft_teams.apps.EventMetadata
+  - name: EventProtocol
+    no-loc:
+    - EventProtocol
+    uid: microsoft_teams.apps.EventProtocol
+  - name: FastAPIAdapter
+    no-loc:
+    - FastAPIAdapter
+    uid: microsoft_teams.apps.FastAPIAdapter
+  - name: FunctionContext
+    no-loc:
+    - FunctionContext
+    uid: microsoft_teams.apps.FunctionContext
+  - name: HttpServer
+    no-loc:
+    - HttpServer
+    uid: microsoft_teams.apps.HttpServer
+  - name: HttpServerAdapter
+    no-loc:
+    - HttpServerAdapter
+    uid: microsoft_teams.apps.HttpServerAdapter
+  - name: HttpStream
+    no-loc:
+    - HttpStream
+    uid: microsoft_teams.apps.HttpStream
+  - name: PluginActivityEvent
+    no-loc:
+    - PluginActivityEvent
+    uid: microsoft_teams.apps.PluginActivityEvent
+  - name: PluginActivityResponseEvent
+    no-loc:
+    - PluginActivityResponseEvent
+    uid: microsoft_teams.apps.PluginActivityResponseEvent
+  - name: PluginActivitySentEvent
+    no-loc:
+    - PluginActivitySentEvent
+    uid: microsoft_teams.apps.PluginActivitySentEvent
+  - name: PluginBase
+    no-loc:
+    - PluginBase
+    uid: microsoft_teams.apps.PluginBase
+  - name: PluginErrorEvent
+    no-loc:
+    - PluginErrorEvent
+    uid: microsoft_teams.apps.PluginErrorEvent
+  - name: PluginOptions
+    no-loc:
+    - PluginOptions
+    uid: microsoft_teams.apps.PluginOptions
+  - name: PluginStartEvent
+    no-loc:
+    - PluginStartEvent
+    uid: microsoft_teams.apps.PluginStartEvent
+  - name: SignInEvent
+    no-loc:
+    - SignInEvent
+    uid: microsoft_teams.apps.SignInEvent
+  - name: StartEvent
+    no-loc:
+    - StartEvent
+    uid: microsoft_teams.apps.StartEvent
+  - name: StopEvent
+    no-loc:
+    - StopEvent
+    uid: microsoft_teams.apps.StopEvent
+  - name: StreamCancelledError
+    no-loc:
+    - StreamCancelledError
+    uid: microsoft_teams.apps.StreamCancelledError
+  - name: StreamerProtocol
+    no-loc:
+    - StreamerProtocol
+    uid: microsoft_teams.apps.StreamerProtocol
+  - name: TokenValidator
+    no-loc:
+    - TokenValidator
+    uid: microsoft_teams.apps.TokenValidator
+  name: microsoft_teams.apps
+  no-loc:
+  - microsoft_teams.apps
+- items:
+  - name: Overview
     uid: microsoft_teams.api
   - name: AIMessageEntity
     no-loc:
@@ -932,3 +1058,111 @@
   name: microsoft_teams.api
   no-loc:
   - microsoft_teams.api
+- items:
+  - name: Overview
+    uid: microsoft_teams.cards
+  - name: OpenDialogData
+    no-loc:
+    - OpenDialogData
+    uid: microsoft_teams.cards.OpenDialogData
+  - name: SubmitData
+    no-loc:
+    - SubmitData
+    uid: microsoft_teams.cards.SubmitData
+  name: microsoft_teams.cards
+  no-loc:
+  - microsoft_teams.cards
+- items:
+  - name: Overview
+    uid: microsoft_teams.common
+  - name: ANSI
+    no-loc:
+    - ANSI
+    uid: microsoft_teams.common.ANSI
+  - name: Client
+    no-loc:
+    - Client
+    uid: microsoft_teams.common.Client
+  - name: ClientOptions
+    no-loc:
+    - ClientOptions
+    uid: microsoft_teams.common.ClientOptions
+  - name: ConsoleFilter
+    no-loc:
+    - ConsoleFilter
+    uid: microsoft_teams.common.ConsoleFilter
+  - name: ConsoleFormatter
+    no-loc:
+    - ConsoleFormatter
+    uid: microsoft_teams.common.ConsoleFormatter
+  - name: EventEmitter
+    no-loc:
+    - EventEmitter
+    uid: microsoft_teams.common.EventEmitter
+  - name: EventEmitterProtocol
+    no-loc:
+    - EventEmitterProtocol
+    uid: microsoft_teams.common.EventEmitterProtocol
+  - name: ExperimentalWarning
+    no-loc:
+    - ExperimentalWarning
+    uid: microsoft_teams.common.ExperimentalWarning
+  - name: Interceptor
+    no-loc:
+    - Interceptor
+    uid: microsoft_teams.common.Interceptor
+  - name: InterceptorRequestContext
+    no-loc:
+    - InterceptorRequestContext
+    uid: microsoft_teams.common.InterceptorRequestContext
+  - name: InterceptorResponseContext
+    no-loc:
+    - InterceptorResponseContext
+    uid: microsoft_teams.common.InterceptorResponseContext
+  - name: ListLocalStorage
+    no-loc:
+    - ListLocalStorage
+    uid: microsoft_teams.common.ListLocalStorage
+  - name: ListStorage
+    no-loc:
+    - ListStorage
+    uid: microsoft_teams.common.ListStorage
+  - name: LocalStorage
+    no-loc:
+    - LocalStorage
+    uid: microsoft_teams.common.LocalStorage
+  - name: LocalStorageOptions
+    no-loc:
+    - LocalStorageOptions
+    uid: microsoft_teams.common.LocalStorageOptions
+  - name: Storage
+    no-loc:
+    - Storage
+    uid: microsoft_teams.common.Storage
+  name: microsoft_teams.common
+  no-loc:
+  - microsoft_teams.common
+- items:
+  - name: Overview
+    uid: microsoft_teams.graph
+  - name: AuthProvider
+    no-loc:
+    - AuthProvider
+    uid: microsoft_teams.graph.AuthProvider
+  name: microsoft_teams.graph
+  no-loc:
+  - microsoft_teams.graph
+- items:
+  - name: Overview
+    uid: microsoft_teams.botbuilder
+  - name: BotBuilderPlugin
+    no-loc:
+    - BotBuilderPlugin
+    uid: microsoft_teams.botbuilder.BotBuilderPlugin
+  - name: BotBuilderPluginOptions
+    no-loc:
+    - BotBuilderPluginOptions
+    uid: microsoft_teams.botbuilder.BotBuilderPluginOptions
+  name: microsoft_teams.botbuilder
+  no-loc:
+  - microsoft_teams.botbuilder
