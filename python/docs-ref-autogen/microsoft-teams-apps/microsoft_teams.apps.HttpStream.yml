@@ -1,0 +1,109 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.HttpStream
+name: HttpStream
+fullName: microsoft_teams.apps.HttpStream
+module: microsoft_teams.apps
+summary: 'HTTP-based streaming implementation for Microsoft Teams activities.
+
+
+  Flow:
+
+  1. emit() adds activities to a queue
+
+  2. _flush() drains the entire queue under a lock.
+
+  3. Informative typing updates are sent immediately if no message started.
+
+  4. Message text are combined into a typing chunk.
+
+  5. Another flush is scheduled if more items remain.
+
+  6. close() waits for queue to empty, then sends final message with stream_type=''stream_final''
+
+
+  The timeout cancellation ensures only one flush operation is scheduled at a time.
+
+  The delays between flushes is to ensure we dont hit API rate limits with Microsoft
+  Teams.
+
+
+  Initialize a new HttpStream instance.'
+constructor:
+  syntax: 'HttpStream(client: ApiClient, ref: ConversationReference)'
+  parameters:
+  - name: client
+    description: The API client used to send activities to Microsoft Teams.
+    isRequired: true
+    types:
+    - <xref:microsoft_teams.apps.ApiClient>
+  - name: ref
+    description: Reference to the Teams conversation.
+    isRequired: true
+    types:
+    - <xref:microsoft_teams.apps.ConversationReference>
+methods:
+- uid: microsoft_teams.apps.HttpStream.clear_text
+  name: clear_text
+  summary: 'Discard everything accumulated so far so the caller can emit a fresh
+
+    card-only final activity.
+
+
+    Clears the text buffer, drops queued message items so the next flush
+
+    doesn''t repopulate it, and discards the promoted final activity so any
+
+    previously-flushed attachments/suggested actions aren''t sent if the
+
+    caller never emits a replacement. The stream id and channel data are
+
+    kept intact so the new final activity still updates the stream in place.'
+  signature: clear_text() -> None
+- uid: microsoft_teams.apps.HttpStream.close
+  name: close
+  signature: async close() -> SentActivity | None
+- uid: microsoft_teams.apps.HttpStream.emit
+  name: emit
+  summary: Emit a new activity to the stream.
+  signature: 'emit(activity: MessageActivityInput | TypingActivityInput | str) ->
+    None'
+  parameters:
+  - name: activity
+    description: The activity to emit.
+    isRequired: true
+- uid: microsoft_teams.apps.HttpStream.on_chunk
+  name: on_chunk
+  signature: 'on_chunk(handler: Callable[[SentActivity], Awaitable[None]])'
+  parameters:
+  - name: handler
+    isRequired: true
+- uid: microsoft_teams.apps.HttpStream.on_close
+  name: on_close
+  signature: 'on_close(handler: Callable[[SentActivity], Awaitable[None]])'
+  parameters:
+  - name: handler
+    isRequired: true
+- uid: microsoft_teams.apps.HttpStream.update
+  name: update
+  summary: Send status updates before emitting (ex. "Thinking...").
+  signature: 'update(text: str) -> None'
+  parameters:
+  - name: text
+    description: The status text to send.
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.HttpStream.canceled
+  name: canceled
+  summary: 'Whether the stream has been canceled.
+
+    For example when the user pressed the Stop button or the 2-minute timeout has
+    exceeded.'
+- uid: microsoft_teams.apps.HttpStream.closed
+  name: closed
+  summary: Whether the final stream message has been sent.
+- uid: microsoft_teams.apps.HttpStream.count
+  name: count
+  summary: The total number of chunks queued to be sent.
+- uid: microsoft_teams.apps.HttpStream.sequence
+  name: sequence
+  summary: The sequence number, representing the number of stream activities sent.

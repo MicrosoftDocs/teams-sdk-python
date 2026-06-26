@@ -1,0 +1,67 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.ConversationMemberClient
+name: ConversationMemberClient
+fullName: microsoft_teams.api.ConversationMemberClient
+module: microsoft_teams.api
+summary: 'Client for managing members in a Teams conversation.
+
+
+  Initialize the conversation member client.'
+constructor:
+  syntax: 'ConversationMemberClient(service_url: str, http_client: Client | None =
+    None, api_client_settings: ApiClientSettings | None = None)'
+  parameters:
+  - name: service_url
+    description: The base URL for the Teams service
+    isRequired: true
+  - name: http_client
+    description: Optional HTTP client to use. If not provided, a new one will be created.
+    defaultValue: None
+  - name: api_client_settings
+    description: Optional API client settings.
+    defaultValue: None
+methods:
+- uid: microsoft_teams.api.ConversationMemberClient.get
+  name: get
+  summary: Get all members in a conversation.
+  signature: 'async get(conversation_id: str) -> List[TeamsChannelAccount]'
+  parameters:
+  - name: conversation_id
+    description: The ID of the conversation
+    isRequired: true
+  return:
+    description: List of TeamsChannelAccount objects representing the conversation
+      members
+- uid: microsoft_teams.api.ConversationMemberClient.get_by_id
+  name: get_by_id
+  summary: Get a specific member in a conversation.
+  signature: 'async get_by_id(conversation_id: str, member_id: str) -> TeamsChannelAccount'
+  parameters:
+  - name: conversation_id
+    description: The ID of the conversation
+    isRequired: true
+  - name: member_id
+    description: The ID of the member to get
+    isRequired: true
+  return:
+    description: TeamsChannelAccount object representing the conversation member
+- uid: microsoft_teams.api.ConversationMemberClient.get_paged
+  name: get_paged
+  summary: Get a page of members in a conversation.
+  signature: 'async get_paged(conversation_id: str, page_size: int | None = None,
+    continuation_token: str | None = None) -> PagedMembersResult'
+  parameters:
+  - name: conversation_id
+    description: The ID of the conversation.
+    isRequired: true
+  - name: page_size
+    description: Optional maximum number of members to return per page.
+    defaultValue: None
+  - name: continuation_token
+    description: Optional token from a previous call to fetch the next page.
+    defaultValue: None
+  return:
+    description: 'PagedMembersResult containing the members and an optional continuation
+      token
+
+      for fetching subsequent pages.'

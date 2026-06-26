@@ -1,0 +1,22 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.DependencyMetadata
+name: DependencyMetadata
+fullName: microsoft_teams.apps.DependencyMetadata
+module: microsoft_teams.apps
+summary: Information associated with a plugin dependency
+constructor:
+  syntax: 'DependencyMetadata(name: str | None = None, optional: bool | None = False)'
+  parameters:
+  - name: name
+    defaultValue: None
+  - name: optional
+    defaultValue: 'False'
+attributes:
+- uid: microsoft_teams.apps.DependencyMetadata.name
+  name: name
+  summary: The name used to resolve the dependency.
+  signature: 'name: str | None = None'
+- uid: microsoft_teams.apps.DependencyMetadata.optional
+  name: optional
+  summary: If optional, the app will not throw if the dependency is not found.
+  signature: 'optional: bool | None = False'

@@ -1,0 +1,29 @@
+### YamlMime:PythonEnum
+uid: microsoft_teams.api.CardActionType
+name: CardActionType
+fullName: microsoft_teams.api.CardActionType
+summary: Available card action types.
+module: microsoft_teams.api
+fields:
+- name: SUBMIT
+  uid: microsoft_teams.api.CardActionType.SUBMIT
+- name: CALL
+  uid: microsoft_teams.api.CardActionType.CALL
+- name: DOWNLOAD_FILE
+  uid: microsoft_teams.api.CardActionType.DOWNLOAD_FILE
+- name: IM_BACK
+  uid: microsoft_teams.api.CardActionType.IM_BACK
+- name: INVOKE
+  uid: microsoft_teams.api.CardActionType.INVOKE
+- name: OPEN_URL
+  uid: microsoft_teams.api.CardActionType.OPEN_URL
+- name: PLAY_AUDIO
+  uid: microsoft_teams.api.CardActionType.PLAY_AUDIO
+- name: PLAY_VIDEO
+  uid: microsoft_teams.api.CardActionType.PLAY_VIDEO
+- name: POST_BACK
+  uid: microsoft_teams.api.CardActionType.POST_BACK
+- name: SHOW_IMAGE
+  uid: microsoft_teams.api.CardActionType.SHOW_IMAGE
+- name: SIGN_IN
+  uid: microsoft_teams.api.CardActionType.SIGN_IN

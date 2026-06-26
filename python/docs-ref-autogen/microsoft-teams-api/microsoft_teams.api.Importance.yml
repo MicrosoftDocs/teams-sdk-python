@@ -1,0 +1,13 @@
+### YamlMime:PythonEnum
+uid: microsoft_teams.api.Importance
+name: Importance
+fullName: microsoft_teams.api.Importance
+summary: Enum for user identity types.
+module: microsoft_teams.api
+fields:
+- name: HIGH
+  uid: microsoft_teams.api.Importance.HIGH
+- name: LOW
+  uid: microsoft_teams.api.Importance.LOW
+- name: NORMAL
+  uid: microsoft_teams.api.Importance.NORMAL

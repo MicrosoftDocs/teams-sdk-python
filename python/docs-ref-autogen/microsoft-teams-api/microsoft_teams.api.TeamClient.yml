@@ -1,0 +1,44 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.TeamClient
+name: TeamClient
+fullName: microsoft_teams.api.TeamClient
+module: microsoft_teams.api
+summary: 'Client for managing Teams teams.
+
+
+  Initialize the TeamClient.'
+constructor:
+  syntax: 'TeamClient(service_url: str, options: Client | ClientOptions | None = None,
+    api_client_settings: ApiClientSettings | None = None)'
+  parameters:
+  - name: service_url
+    description: The service URL for API calls.
+    isRequired: true
+  - name: options
+    description: Optional Client or ClientOptions instance. If not provided, a default
+      Client will be created.
+    defaultValue: None
+  - name: api_client_settings
+    description: Optional API client settings.
+    defaultValue: None
+methods:
+- uid: microsoft_teams.api.TeamClient.get_by_id
+  name: get_by_id
+  summary: Get team details by ID.
+  signature: 'async get_by_id(id: str) -> TeamDetails'
+  parameters:
+  - name: id
+    description: The team ID.
+    isRequired: true
+  return:
+    description: The team details.
+- uid: microsoft_teams.api.TeamClient.get_conversations
+  name: get_conversations
+  summary: Get team conversations (channels).
+  signature: 'async get_conversations(id: str) -> List[ChannelInfo]'
+  parameters:
+  - name: id
+    description: The team ID.
+    isRequired: true
+  return:
+    description: List of channel information.

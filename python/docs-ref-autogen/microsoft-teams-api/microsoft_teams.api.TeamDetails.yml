@@ -1,0 +1,76 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.TeamDetails
+name: TeamDetails
+fullName: microsoft_teams.api.TeamDetails
+module: microsoft_teams.api
+summary: 'Details related to a team.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'TeamDetails(*, id: str, name: str | None = None, type: Literal[''standard'',
+    ''sharedChannel'', ''privateChannel''], aadGroupId: str | None = None, channelCount:
+    int | None = None, memberCount: int | None = None, tenantId: str | None = None,
+    **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: id
+    isRequired: true
+  - name: name
+    defaultValue: None
+  - name: type
+    isRequired: true
+  - name: aadGroupId
+    defaultValue: None
+  - name: channelCount
+    defaultValue: None
+  - name: memberCount
+    defaultValue: None
+  - name: tenantId
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.TeamDetails.aad_group_id
+  name: aad_group_id
+  summary: Azure Active Directory (AAD) Group Id for the team.
+  signature: 'aad_group_id: str | None'
+- uid: microsoft_teams.api.TeamDetails.channel_count
+  name: channel_count
+  summary: Count of channels in the team.
+  signature: 'channel_count: int | None'
+- uid: microsoft_teams.api.TeamDetails.id
+  name: id
+  summary: Unique identifier representing a team
+  signature: 'id: str'
+- uid: microsoft_teams.api.TeamDetails.member_count
+  name: member_count
+  summary: Count of members in the team.
+  signature: 'member_count: int | None'
+- uid: microsoft_teams.api.TeamDetails.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.TeamDetails.name
+  name: name
+  summary: Name of team.
+  signature: 'name: str | None'
+- uid: microsoft_teams.api.TeamDetails.tenant_id
+  name: tenant_id
+  summary: Azure Active Directory (AAD) tenant ID for the team.
+  signature: 'tenant_id: str | None'
+- uid: microsoft_teams.api.TeamDetails.type
+  name: type
+  summary: The type of the team. Valid values are standard, sharedChannel and privateChannel.
+  signature: 'type: Literal[''standard'', ''sharedChannel'', ''privateChannel'']'

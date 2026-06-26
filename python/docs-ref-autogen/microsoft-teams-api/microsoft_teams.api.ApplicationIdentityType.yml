@@ -1,0 +1,17 @@
+### YamlMime:PythonEnum
+uid: microsoft_teams.api.ApplicationIdentityType
+name: ApplicationIdentityType
+fullName: microsoft_teams.api.ApplicationIdentityType
+summary: Enum for application identity types.
+module: microsoft_teams.api
+fields:
+- name: AAD_APPLICATION
+  uid: microsoft_teams.api.ApplicationIdentityType.AAD_APPLICATION
+- name: BOT
+  uid: microsoft_teams.api.ApplicationIdentityType.BOT
+- name: OFFICE_365_CONNECTOR
+  uid: microsoft_teams.api.ApplicationIdentityType.OFFICE_365_CONNECTOR
+- name: TENANT_BOT
+  uid: microsoft_teams.api.ApplicationIdentityType.TENANT_BOT
+- name: WEBHOOK
+  uid: microsoft_teams.api.ApplicationIdentityType.WEBHOOK
