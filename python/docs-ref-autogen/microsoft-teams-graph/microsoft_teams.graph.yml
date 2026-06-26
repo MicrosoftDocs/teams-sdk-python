@@ -53,6 +53,3 @@ functions:
     '
 classes:
 - microsoft_teams.graph.AuthProvider
-modules:
-- microsoft_teams.graph.auth_provider
-- microsoft_teams.graph.graph

@@ -1,0 +1,13 @@
+### YamlMime:PythonEnum
+uid: microsoft_teams.api.CallerIds
+name: CallerIds
+fullName: microsoft_teams.api.CallerIds
+summary: Enum for caller ID types.
+module: microsoft_teams.api
+fields:
+- name: AZURE
+  uid: microsoft_teams.api.CallerIds.AZURE
+- name: BOT
+  uid: microsoft_teams.api.CallerIds.BOT
+- name: GOV
+  uid: microsoft_teams.api.CallerIds.GOV

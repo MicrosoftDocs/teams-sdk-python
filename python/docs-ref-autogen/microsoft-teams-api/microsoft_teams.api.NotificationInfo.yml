@@ -1,0 +1,51 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.NotificationInfo
+name: NotificationInfo
+fullName: microsoft_teams.api.NotificationInfo
+module: microsoft_teams.api
+summary: 'Specifies if a notification is to be sent for the mentions.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'NotificationInfo(*, alert: bool | None = None, alertInMeeting: bool | None
+    = None, externalResourceUrl: str | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: alert
+    defaultValue: None
+  - name: alertInMeeting
+    defaultValue: None
+  - name: externalResourceUrl
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.NotificationInfo.alert
+  name: alert
+  summary: true if notification is to be sent to the user, false otherwise.
+  signature: 'alert: bool | None'
+- uid: microsoft_teams.api.NotificationInfo.alert_in_meeting
+  name: alert_in_meeting
+  summary: true if a notification is to be shown to the user while in a meeting, false
+    otherwise.
+  signature: 'alert_in_meeting: bool | None'
+- uid: microsoft_teams.api.NotificationInfo.external_resource_url
+  name: external_resource_url
+  summary: the value of the notification's external resource url
+  signature: 'external_resource_url: str | None'
+- uid: microsoft_teams.api.NotificationInfo.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'

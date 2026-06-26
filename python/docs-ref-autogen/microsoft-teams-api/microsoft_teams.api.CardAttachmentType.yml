@@ -1,0 +1,22 @@
+### YamlMime:PythonEnum
+uid: microsoft_teams.api.CardAttachmentType
+name: CardAttachmentType
+fullName: microsoft_teams.api.CardAttachmentType
+module: microsoft_teams.api
+fields:
+- name: ADAPTIVE
+  uid: microsoft_teams.api.CardAttachmentType.ADAPTIVE
+- name: ANIMATION
+  uid: microsoft_teams.api.CardAttachmentType.ANIMATION
+- name: AUDIO
+  uid: microsoft_teams.api.CardAttachmentType.AUDIO
+- name: HERO
+  uid: microsoft_teams.api.CardAttachmentType.HERO
+- name: OAUTH
+  uid: microsoft_teams.api.CardAttachmentType.OAUTH
+- name: SIGN_IN
+  uid: microsoft_teams.api.CardAttachmentType.SIGN_IN
+- name: THUMBNAIL
+  uid: microsoft_teams.api.CardAttachmentType.THUMBNAIL
+- name: VIDEO
+  uid: microsoft_teams.api.CardAttachmentType.VIDEO

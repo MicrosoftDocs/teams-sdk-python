@@ -9,5 +9,3 @@ type: rootImport
 classes:
 - microsoft_teams.botbuilder.BotBuilderPlugin
 - microsoft_teams.botbuilder.BotBuilderPluginOptions
-modules:
-- microsoft_teams.botbuilder.botbuilder_plugin

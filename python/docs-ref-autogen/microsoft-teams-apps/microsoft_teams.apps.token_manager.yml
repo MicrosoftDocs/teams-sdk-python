@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.apps.token_manager
-name: token_manager
-fullName: microsoft_teams.apps.token_manager
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-classes:
-- microsoft_teams.apps.token_manager.TokenManager

@@ -1,8 +1,0 @@
-### YamlMime:PythonClass
-uid: microsoft_teams.apps.plugins.streamer.StreamCancelledError
-name: StreamCancelledError
-fullName: microsoft_teams.apps.plugins.streamer.StreamCancelledError
-module: microsoft_teams.apps.plugins.streamer
-summary: Raised when a stream operation is attempted after the stream has been cancelled.
-constructor:
-  syntax: StreamCancelledError()

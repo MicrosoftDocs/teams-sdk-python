@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.cards.utilities.submit_data
-name: submit_data
-fullName: microsoft_teams.cards.utilities.submit_data
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-classes:
-- microsoft_teams.cards.utilities.submit_data.SubmitData

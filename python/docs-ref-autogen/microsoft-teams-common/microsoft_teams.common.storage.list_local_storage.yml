@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.common.storage.list_local_storage
-name: list_local_storage
-fullName: microsoft_teams.common.storage.list_local_storage
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-classes:
-- microsoft_teams.common.storage.list_local_storage.ListLocalStorage

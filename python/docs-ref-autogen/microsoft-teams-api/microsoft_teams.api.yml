@@ -1,0 +1,312 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.api
+name: api
+fullName: microsoft_teams.api
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: rootImport
+functions:
+- uid: microsoft_teams.api.card_attachment
+  name: card_attachment
+  summary: Create a card attachment of the specified type
+  signature: 'card_attachment(attachment: AdaptiveCardAttachment | AnimationCardAttachment
+    | AudioCardAttachment | HeroCardAttachment | OAuthCardAttachment | SigninCardAttachment
+    | ThumbnailCardAttachment | VideoCardAttachment) -> Attachment'
+  parameters:
+  - name: type
+    description: The type of card attachment to create
+    isRequired: true
+  - name: content
+    description: The content for the card attachment (specific type based on card
+      type)
+    isRequired: true
+  - name: attachment
+    isRequired: true
+  return:
+    description: A card attachment of the specified type with the given content
+- uid: microsoft_teams.api.config_from_cloud_name
+  name: config_from_cloud_name
+  summary: 'Resolve a cloud environment name (case-insensitive) to its corresponding
+    instance.
+
+    Valid names: "Public", "USGov", "USGovDoD", "China".'
+  signature: 'config_from_cloud_name(name: str) -> CloudEnvironment'
+  parameters:
+  - name: name
+    isRequired: true
+- uid: microsoft_teams.api.is_invoke_response
+  name: is_invoke_response
+  summary: Type guard to check if a value is an InvokeResponse.
+  signature: 'is_invoke_response(value: Any) -> bool'
+  parameters:
+  - name: value
+    description: Value to compare
+    isRequired: true
+  return:
+    description: True if value is type of InvokeResponse
+- uid: microsoft_teams.api.merge_api_client_settings
+  name: merge_api_client_settings
+  summary: Merge API client settings with environment variables and defaults.
+  signature: 'merge_api_client_settings(api_client_settings: ApiClientSettings | None
+    = None, cloud: CloudEnvironment = CloudEnvironment(login_endpoint=''https://login.microsoftonline.com'',
+    login_tenant=''botframework.com'', bot_scope=''https://api.botframework.com/.default'',
+    token_service_url=''https://token.botframework.com'', openid_metadata_url=''https://login.botframework.com/v1/.well-known/openidconfiguration'',
+    token_issuer=''https://api.botframework.com'', graph_scope=''https://graph.microsoft.com/.default''))
+    -> ApiClientSettings'
+  parameters:
+  - name: api_client_settings
+    description: Optional API client settings to merge.
+    defaultValue: None
+  - name: cloud
+    description: Cloud environment for default oauth_url. Defaults to PUBLIC.
+    defaultValue: CloudEnvironment(login_endpoint='https://login.microsoftonline.com',
+      login_tenant='botframework.com', bot_scope='https://api.botframework.com/.default',
+      token_service_url='https://token.botframework.com', openid_metadata_url='https://login.botframework.com/v1/.well-known/openidconfiguration',
+      token_issuer='https://api.botframework.com', graph_scope='https://graph.microsoft.com/.default')
+  return:
+    description: Merged API client settings.
+- uid: microsoft_teams.api.with_overrides
+  name: with_overrides
+  summary: 'Create a new CloudEnvironment by applying non-None overrides on top of
+    a base.
+
+    Returns the same instance if all overrides are None (no allocation).'
+  signature: 'with_overrides(base: CloudEnvironment, **overrides: str | None) -> CloudEnvironment'
+  parameters:
+  - name: base
+    isRequired: true
+classes:
+- microsoft_teams.api.AIMessageEntity
+- microsoft_teams.api.Account
+- microsoft_teams.api.AdaptiveCardActionCardResponse
+- microsoft_teams.api.AdaptiveCardActionErrorResponse
+- microsoft_teams.api.AdaptiveCardActionIncorrectAuthCodeResponse
+- microsoft_teams.api.AdaptiveCardActionLoginResponse
+- microsoft_teams.api.AdaptiveCardActionMessageResponse
+- microsoft_teams.api.AdaptiveCardActionPreconditionFailedResponse
+- microsoft_teams.api.AdaptiveCardAttachment
+- microsoft_teams.api.AdaptiveCardInvokeAction
+- microsoft_teams.api.AdaptiveCardInvokeActivity
+- microsoft_teams.api.AdaptiveCardInvokeValue
+- microsoft_teams.api.AnimationCard
+- microsoft_teams.api.AnimationCardAttachment
+- microsoft_teams.api.ApiClient
+- microsoft_teams.api.ApiClientSettings
+- microsoft_teams.api.AppBasedLinkQuery
+- microsoft_teams.api.Appearance
+- microsoft_teams.api.Attachment
+- microsoft_teams.api.AudioCard
+- microsoft_teams.api.AudioCardAttachment
+- microsoft_teams.api.BaseTaskModuleTaskInfo
+- microsoft_teams.api.BasicCard
+- microsoft_teams.api.BotClient
+- microsoft_teams.api.BotSignInClient
+- microsoft_teams.api.BotTokenClient
+- microsoft_teams.api.CacheInfo
+- microsoft_teams.api.CardAction
+- microsoft_teams.api.CardImage
+- microsoft_teams.api.CardTaskModuleTaskInfo
+- microsoft_teams.api.ChannelData
+- microsoft_teams.api.ChannelDataSettings
+- microsoft_teams.api.ChannelInfo
+- microsoft_teams.api.CitationAppearance
+- microsoft_teams.api.CitationEntity
+- microsoft_teams.api.CitationUsageInfo
+- microsoft_teams.api.Claim
+- microsoft_teams.api.ClientCredentials
+- microsoft_teams.api.ClientInfoEntity
+- microsoft_teams.api.CloudEnvironment
+- microsoft_teams.api.CommandResultActivity
+- microsoft_teams.api.CommandResultValue
+- microsoft_teams.api.CommandSendActivity
+- microsoft_teams.api.CommandSendValue
+- microsoft_teams.api.ConfigAuth
+- microsoft_teams.api.ConfigFetchInvokeActivity
+- microsoft_teams.api.ConfigResponse
+- microsoft_teams.api.ConfigSubmitInvokeActivity
+- microsoft_teams.api.Conversation
+- microsoft_teams.api.ConversationAccount
+- microsoft_teams.api.ConversationActivityClient
+- microsoft_teams.api.ConversationChannelData
+- microsoft_teams.api.ConversationClient
+- microsoft_teams.api.ConversationMemberClient
+- microsoft_teams.api.ConversationReference
+- microsoft_teams.api.ConversationResource
+- microsoft_teams.api.ConversationUpdateActivity
+- microsoft_teams.api.CreateConversationParams
+- microsoft_teams.api.CustomBaseModel
+- microsoft_teams.api.EntityBase
+- microsoft_teams.api.ErrorResponse
+- microsoft_teams.api.ExchangeUserTokenParams
+- microsoft_teams.api.ExecuteActionInvokeActivity
+- microsoft_teams.api.FederatedIdentityCredentials
+- microsoft_teams.api.FeedbackLoop
+- microsoft_teams.api.FileConsentCard
+- microsoft_teams.api.FileConsentCardResponse
+- microsoft_teams.api.FileConsentInvokeActivity
+- microsoft_teams.api.FileInfoCard
+- microsoft_teams.api.FileUploadInfo
+- microsoft_teams.api.GetBotSignInResourceParams
+- microsoft_teams.api.GetBotSignInUrlParams
+- microsoft_teams.api.GetTeamConversationsResponse
+- microsoft_teams.api.GetUserAADTokenParams
+- microsoft_teams.api.GetUserTokenParams
+- microsoft_teams.api.GetUserTokenStatusParams
+- microsoft_teams.api.HandoffActionInvokeActivity
+- microsoft_teams.api.HeroCard
+- microsoft_teams.api.HeroCardAttachment
+- microsoft_teams.api.HttpError
+- microsoft_teams.api.Image
+- microsoft_teams.api.InnerHttpError
+- microsoft_teams.api.InstalledActivity
+- microsoft_teams.api.InvokeResponse
+- microsoft_teams.api.JsonWebToken
+- microsoft_teams.api.JsonWebTokenPayload
+- microsoft_teams.api.ManagedIdentityCredentials
+- microsoft_teams.api.MediaCard
+- microsoft_teams.api.MediaUrl
+- microsoft_teams.api.Meeting
+- microsoft_teams.api.MeetingClient
+- microsoft_teams.api.MeetingDetails
+- microsoft_teams.api.MeetingEndEventActivity
+- microsoft_teams.api.MeetingInfo
+- microsoft_teams.api.MeetingNotificationParams
+- microsoft_teams.api.MeetingNotificationRecipientFailure
+- microsoft_teams.api.MeetingNotificationResponse
+- microsoft_teams.api.MeetingNotificationSurface
+- microsoft_teams.api.MeetingNotificationValue
+- microsoft_teams.api.MeetingParticipant
+- microsoft_teams.api.MeetingParticipantEventActivity
+- microsoft_teams.api.MeetingParticipantJoinEventActivity
+- microsoft_teams.api.MeetingParticipantLeaveEventActivity
+- microsoft_teams.api.MeetingStartEventActivity
+- microsoft_teams.api.MentionEntity
+- microsoft_teams.api.Message
+- microsoft_teams.api.MessageActivity
+- microsoft_teams.api.MessageActivityInput
+- microsoft_teams.api.MessageApp
+- microsoft_teams.api.MessageBody
+- microsoft_teams.api.MessageConversation
+- microsoft_teams.api.MessageDeleteActivity
+- microsoft_teams.api.MessageDeleteChannelData
+- microsoft_teams.api.MessageEntity
+- microsoft_teams.api.MessageExtensionAnonQueryLinkInvokeActivity
+- microsoft_teams.api.MessageExtensionCardButtonClickedInvokeActivity
+- microsoft_teams.api.MessageExtensionFetchTaskInvokeActivity
+- microsoft_teams.api.MessageExtensionQueryInvokeActivity
+- microsoft_teams.api.MessageExtensionQueryLinkInvokeActivity
+- microsoft_teams.api.MessageExtensionQuerySettingUrlInvokeActivity
+- microsoft_teams.api.MessageExtensionSelectItemInvokeActivity
+- microsoft_teams.api.MessageExtensionSettingInvokeActivity
+- microsoft_teams.api.MessageExtensionSubmitActionInvokeActivity
+- microsoft_teams.api.MessageFetchTaskActionValue
+- microsoft_teams.api.MessageFetchTaskData
+- microsoft_teams.api.MessageFetchTaskInvokeActivity
+- microsoft_teams.api.MessageFetchTaskInvokeValue
+- microsoft_teams.api.MessageFrom
+- microsoft_teams.api.MessageMention
+- microsoft_teams.api.MessageReaction
+- microsoft_teams.api.MessageReactionActivity
+- microsoft_teams.api.MessageReactionActivityInput
+- microsoft_teams.api.MessageSubmitActionInvokeActivity
+- microsoft_teams.api.MessageUpdateActivity
+- microsoft_teams.api.MessageUpdateChannelData
+- microsoft_teams.api.MessageUser
+- microsoft_teams.api.MessagingExtensionAction
+- microsoft_teams.api.MessagingExtensionActionResponse
+- microsoft_teams.api.MessagingExtensionAttachment
+- microsoft_teams.api.MessagingExtensionParameter
+- microsoft_teams.api.MessagingExtensionQuery
+- microsoft_teams.api.MessagingExtensionQueryOptions
+- microsoft_teams.api.MessagingExtensionResponse
+- microsoft_teams.api.MessagingExtensionResult
+- microsoft_teams.api.MessagingExtensionSuggestedAction
+- microsoft_teams.api.NotificationInfo
+- microsoft_teams.api.O365ConnectorCardActionQuery
+- microsoft_teams.api.OAuthCardAttachment
+- microsoft_teams.api.PagedMembersResult
+- microsoft_teams.api.ProductInfoEntity
+- microsoft_teams.api.QuotedReplyData
+- microsoft_teams.api.QuotedReplyEntity
+- microsoft_teams.api.ReactionClient
+- microsoft_teams.api.ReadReceiptEventActivity
+- microsoft_teams.api.SensitiveUsage
+- microsoft_teams.api.SensitiveUsageEntity
+- microsoft_teams.api.SensitiveUsagePattern
+- microsoft_teams.api.SentActivity
+- microsoft_teams.api.SignInCard
+- microsoft_teams.api.SignInExchangeToken
+- microsoft_teams.api.SignInFailure
+- microsoft_teams.api.SignInFailureInvokeActivity
+- microsoft_teams.api.SignInStateVerifyQuery
+- microsoft_teams.api.SignInTokenExchangeInvokeActivity
+- microsoft_teams.api.SignInUrlResponse
+- microsoft_teams.api.SignInVerifyStateInvokeActivity
+- microsoft_teams.api.SignOutUserParams
+- microsoft_teams.api.SigninCardAttachment
+- microsoft_teams.api.StreamInfoEntity
+- microsoft_teams.api.SuggestedActionSubmitInvokeActivity
+- microsoft_teams.api.SuggestedActions
+- microsoft_teams.api.TabContext
+- microsoft_teams.api.TabEntityContext
+- microsoft_teams.api.TabFetchInvokeActivity
+- microsoft_teams.api.TabRequest
+- microsoft_teams.api.TabResponse
+- microsoft_teams.api.TabResponseCard
+- microsoft_teams.api.TabResponseCards
+- microsoft_teams.api.TabResponsePayload
+- microsoft_teams.api.TabSubmit
+- microsoft_teams.api.TabSubmitInvokeActivity
+- microsoft_teams.api.TabSuggestedActions
+- microsoft_teams.api.TargetedMessageInfoEntity
+- microsoft_teams.api.TaskFetchInvokeActivity
+- microsoft_teams.api.TaskModuleCardResponse
+- microsoft_teams.api.TaskModuleContinueResponse
+- microsoft_teams.api.TaskModuleMessageResponse
+- microsoft_teams.api.TaskModuleRequest
+- microsoft_teams.api.TaskModuleRequestContext
+- microsoft_teams.api.TaskModuleResponse
+- microsoft_teams.api.TaskModuleResponseBase
+- microsoft_teams.api.TaskSubmitInvokeActivity
+- microsoft_teams.api.TeamClient
+- microsoft_teams.api.TeamDetails
+- microsoft_teams.api.TeamInfo
+- microsoft_teams.api.TeamsChannelAccount
+- microsoft_teams.api.TenantInfo
+- microsoft_teams.api.ThumbnailCard
+- microsoft_teams.api.ThumbnailCardAttachment
+- microsoft_teams.api.ThumbnailUrl
+- microsoft_teams.api.TokenCredentials
+- microsoft_teams.api.TokenExchangeInvokeRequest
+- microsoft_teams.api.TokenExchangeInvokeResponse
+- microsoft_teams.api.TokenExchangeRequest
+- microsoft_teams.api.TokenExchangeResource
+- microsoft_teams.api.TokenExchangeState
+- microsoft_teams.api.TokenPostResource
+- microsoft_teams.api.TokenProtocol
+- microsoft_teams.api.TokenRequest
+- microsoft_teams.api.TokenResponse
+- microsoft_teams.api.TokenStatus
+- microsoft_teams.api.TypingActivity
+- microsoft_teams.api.TypingActivityInput
+- microsoft_teams.api.UninstalledActivity
+- microsoft_teams.api.UnknownEntity
+- microsoft_teams.api.UrlTaskModuleTaskInfo
+- microsoft_teams.api.UserClient
+- microsoft_teams.api.UserTokenClient
+- microsoft_teams.api.VideoCard
+- microsoft_teams.api.VideoCardAttachment
+enums:
+- microsoft_teams.api.Action
+- microsoft_teams.api.ApplicationIdentityType
+- microsoft_teams.api.AttachmentLayout
+- microsoft_teams.api.CallerIds
+- microsoft_teams.api.CardActionType
+- microsoft_teams.api.CardAttachmentType
+- microsoft_teams.api.CardAttachmentTypes
+- microsoft_teams.api.CitationIconName
+- microsoft_teams.api.Importance
+- microsoft_teams.api.MessagingExtensionAttachmentLayout
+- microsoft_teams.api.MessagingExtensionResultType
+- microsoft_teams.api.UserIdentityType

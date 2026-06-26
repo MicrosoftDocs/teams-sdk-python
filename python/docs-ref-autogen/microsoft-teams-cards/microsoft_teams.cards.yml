@@ -9,7 +9,3 @@ type: rootImport
 classes:
 - microsoft_teams.cards.OpenDialogData
 - microsoft_teams.cards.SubmitData
-packages:
-- microsoft_teams.cards.utilities
-modules:
-- microsoft_teams.cards.core

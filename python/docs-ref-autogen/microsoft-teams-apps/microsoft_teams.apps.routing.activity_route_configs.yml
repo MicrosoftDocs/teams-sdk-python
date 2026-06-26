@@ -1,9 +1,0 @@
-### YamlMime:PythonModule
-uid: microsoft_teams.apps.routing.activity_route_configs
-name: activity_route_configs
-fullName: microsoft_teams.apps.routing.activity_route_configs
-summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
-
-  Licensed under the MIT License.'
-classes:
-- microsoft_teams.apps.routing.activity_route_configs.ActivityConfig

@@ -1,0 +1,99 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.MessageReactionActivityInput
+name: MessageReactionActivityInput
+fullName: microsoft_teams.api.MessageReactionActivityInput
+module: microsoft_teams.api
+summary: 'Input model for creating message reaction activities with builder methods.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'MessageReactionActivityInput(*, serviceUrl: str | None = None, timestamp:
+    datetime | None = None, locale: str | None = None, localTimestamp: datetime |
+    None = None, channelId: Literal[''webchat'', ''msteams''] | str | None = None,
+    from_: Account | None = None, conversation: ConversationAccount | None = None,
+    replyToId: str | None = None, entities: List[ClientInfoEntity | MentionEntity
+    | MessageEntity | AIMessageEntity | StreamInfoEntity | CitationEntity | SensitiveUsageEntity
+    | ProductInfoEntity | QuotedReplyEntity | TargetedMessageInfoEntity | UnknownEntity]
+    | None = None, channelData: ChannelData | None = None, type: Literal[''messageReaction'']
+    = ''messageReaction'', id: str | None = None, recipient: Account | None = None,
+    reactionsAdded: List[MessageReaction] | None = None, reactionsRemoved: List[MessageReaction]
+    | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: serviceUrl
+    defaultValue: None
+  - name: timestamp
+    defaultValue: None
+  - name: locale
+    defaultValue: None
+  - name: localTimestamp
+    defaultValue: None
+  - name: channelId
+    defaultValue: None
+  - name: from_
+    defaultValue: None
+  - name: conversation
+    defaultValue: None
+  - name: replyToId
+    defaultValue: None
+  - name: entities
+    defaultValue: None
+  - name: channelData
+    defaultValue: None
+  - name: type
+    defaultValue: messageReaction
+  - name: id
+    defaultValue: None
+  - name: recipient
+    defaultValue: None
+  - name: reactionsAdded
+    defaultValue: None
+  - name: reactionsRemoved
+    defaultValue: None
+methods:
+- uid: microsoft_teams.api.MessageReactionActivityInput.add_reaction
+  name: add_reaction
+  summary: Add a message reaction to the added reactions list.
+  signature: 'add_reaction(reaction: MessageReaction) -> Self'
+  parameters:
+  - name: reaction
+    description: The reaction to add
+    isRequired: true
+  return:
+    description: Self for method chaining
+- uid: microsoft_teams.api.MessageReactionActivityInput.remove_reaction
+  name: remove_reaction
+  summary: 'Remove a message reaction and add it to the removed reactions list.
+
+
+    This method will:
+
+    1. Remove the reaction from reactions_added if it exists
+
+    2. Add the reaction to reactions_removed'
+  signature: 'remove_reaction(reaction: MessageReaction) -> Self'
+  parameters:
+  - name: reaction
+    description: The reaction to remove
+    isRequired: true
+  return:
+    description: Self for method chaining
+attributes:
+- uid: microsoft_teams.api.MessageReactionActivityInput.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'

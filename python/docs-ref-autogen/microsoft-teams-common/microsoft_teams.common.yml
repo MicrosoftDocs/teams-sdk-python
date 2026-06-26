@@ -41,30 +41,6 @@ functions:
   parameters:
   - name: token
     isRequired: true
-- uid: microsoft_teams.common.experimental
-  name: experimental
-  summary: "Mark a class or function as a preview API.\n\nEmits an ExperimentalWarning\
-    \ when the decorated class is instantiated\nor the decorated function is called.\n\
-    \nUsage:\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
-    dupnames\": [], \"backrefs\": [], \"xml:space\": \"preserve\", \"language\": \"\
-    default\", \"force\": false, \"linenos\": false} -->\n\n````default\n\n   @experimental(\"\
-    ExperimentalTeamsReactions\")\n   class ReactionClient:\n       ...\n\n   @experimental(\"\
-    ExperimentalTeamsTargeted\", message=\"Targeted messages are in preview.\")\n\
-    \   async def create_targeted(...):\n       ...\n   ````"
-  signature: 'experimental(diagnostic: str, *, message: str | None = None) -> Callable[[F],
-    F]'
-  parameters:
-  - name: diagnostic
-    description: The diagnostic code (e.g., "ExperimentalTeamsReactions") for granular
-      opt-in.
-    isRequired: true
-  - name: message
-    description: Optional custom warning message. If not provided, a default message
-      is used.
-    isRequired: true
-  keywordOnlyParameters:
-  - name: message
-    defaultValue: None
 classes:
 - microsoft_teams.common.Client
 - microsoft_teams.common.ClientOptions
@@ -81,13 +57,5 @@ classes:
 - microsoft_teams.common.LocalStorage
 - microsoft_teams.common.LocalStorageOptions
 - microsoft_teams.common.Storage
-packages:
-- microsoft_teams.common.events
-- microsoft_teams.common.http
-- microsoft_teams.common.logging
-- microsoft_teams.common.storage
-modules:
-- microsoft_teams.common.experimental
-- microsoft_teams.common.experimental
 enums:
 - microsoft_teams.common.ANSI

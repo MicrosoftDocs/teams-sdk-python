@@ -1,0 +1,82 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.ConfigFetchInvokeActivity
+name: ConfigFetchInvokeActivity
+fullName: microsoft_teams.api.ConfigFetchInvokeActivity
+module: microsoft_teams.api
+summary: 'Represents the config fetch invoke activity.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'ConfigFetchInvokeActivity(*, serviceUrl: str | None = None, timestamp:
+    datetime | None = None, locale: str | None = None, localTimestamp: datetime |
+    None = None, channelId: Literal[''webchat'', ''msteams''] | str = ''msteams'',
+    from_: Account, conversation: ConversationAccount, replyToId: str | None = None,
+    entities: List[ClientInfoEntity | MentionEntity | MessageEntity | AIMessageEntity
+    | StreamInfoEntity | CitationEntity | SensitiveUsageEntity | ProductInfoEntity
+    | QuotedReplyEntity | TargetedMessageInfoEntity | UnknownEntity] | None = None,
+    channelData: ChannelData | None = None, type: Literal[''invoke''] = ''invoke'',
+    id: str, recipient: Account, name: Literal[''config/fetch''] = ''config/fetch'',
+    value: Any, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: serviceUrl
+    defaultValue: None
+  - name: timestamp
+    defaultValue: None
+  - name: locale
+    defaultValue: None
+  - name: localTimestamp
+    defaultValue: None
+  - name: channelId
+    defaultValue: msteams
+  - name: from_
+    isRequired: true
+  - name: conversation
+    isRequired: true
+  - name: replyToId
+    defaultValue: None
+  - name: entities
+    defaultValue: None
+  - name: channelData
+    defaultValue: None
+  - name: type
+    defaultValue: invoke
+  - name: id
+    isRequired: true
+  - name: recipient
+    isRequired: true
+  - name: name
+    defaultValue: config/fetch
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.ConfigFetchInvokeActivity.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.ConfigFetchInvokeActivity.name
+  name: name
+  summary: The name of the operation associated with an invoke or event activity.
+  signature: 'name: Literal[''config/fetch'']'
+- uid: microsoft_teams.api.ConfigFetchInvokeActivity.type
+  name: type
+  summary: The activity type is always 'invoke' for invoke activities.
+  signature: 'type: Literal[''invoke'']'
+- uid: microsoft_teams.api.ConfigFetchInvokeActivity.value
+  name: value
+  summary: The value associated with the activity.
+  signature: 'value: Any'
