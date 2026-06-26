@@ -1,0 +1,52 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.FileConsentCardResponse
+name: FileConsentCardResponse
+fullName: microsoft_teams.api.FileConsentCardResponse
+module: microsoft_teams.api
+summary: 'Represents the value of the invoke activity sent when the user acts on a
+  file consent card
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'FileConsentCardResponse(*, action: Action, context: Any | None = None,
+    uploadInfo: FileUploadInfo | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: action
+    isRequired: true
+  - name: context
+    defaultValue: None
+  - name: uploadInfo
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.FileConsentCardResponse.action
+  name: action
+  summary: '''accept'', ''decline'''
+  signature: 'action: Action'
+- uid: microsoft_teams.api.FileConsentCardResponse.context
+  name: context
+  summary: The context associated with the action.
+  signature: 'context: Any | None'
+- uid: microsoft_teams.api.FileConsentCardResponse.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.FileConsentCardResponse.upload_info
+  name: upload_info
+  summary: If the user accepted the file, contains information about the file to be
+    uploaded.
+  signature: 'upload_info: FileUploadInfo | None'

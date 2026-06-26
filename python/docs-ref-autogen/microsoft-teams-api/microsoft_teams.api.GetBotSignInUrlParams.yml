@@ -1,0 +1,57 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.GetBotSignInUrlParams
+name: GetBotSignInUrlParams
+fullName: microsoft_teams.api.GetBotSignInUrlParams
+module: microsoft_teams.api
+summary: 'Parameters for getting a bot sign-in URL.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'GetBotSignInUrlParams(*, state: str, codeChallenge: str | None = None,
+    emulatorUrl: str | None = None, finalRedirect: str | None = None, **extra_data:
+    Any)'
+  keywordOnlyParameters:
+  - name: state
+    isRequired: true
+  - name: codeChallenge
+    defaultValue: None
+  - name: emulatorUrl
+    defaultValue: None
+  - name: finalRedirect
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.GetBotSignInUrlParams.code_challenge
+  name: code_challenge
+  summary: The code challenge.
+  signature: 'code_challenge: str | None'
+- uid: microsoft_teams.api.GetBotSignInUrlParams.emulator_url
+  name: emulator_url
+  summary: The emulator URL.
+  signature: 'emulator_url: str | None'
+- uid: microsoft_teams.api.GetBotSignInUrlParams.final_redirect
+  name: final_redirect
+  summary: The final redirect URL.
+  signature: 'final_redirect: str | None'
+- uid: microsoft_teams.api.GetBotSignInUrlParams.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.GetBotSignInUrlParams.state
+  name: state
+  summary: The state parameter.
+  signature: 'state: str'

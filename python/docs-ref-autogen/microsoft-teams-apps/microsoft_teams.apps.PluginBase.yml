@@ -1,0 +1,52 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.PluginBase
+name: PluginBase
+fullName: microsoft_teams.apps.PluginBase
+module: microsoft_teams.apps
+summary: The base plugin for Teams app plugins.
+constructor:
+  syntax: PluginBase()
+methods:
+- uid: microsoft_teams.apps.PluginBase.on_activity
+  name: on_activity
+  summary: Called by the App when an activity is received.
+  signature: 'async on_activity(event: PluginActivityEvent) -> None'
+  parameters:
+  - name: event
+    isRequired: true
+- uid: microsoft_teams.apps.PluginBase.on_activity_response
+  name: on_activity_response
+  summary: Called by the App when an activity response is sent.
+  signature: 'async on_activity_response(event: PluginActivityResponseEvent) -> None'
+  parameters:
+  - name: event
+    isRequired: true
+- uid: microsoft_teams.apps.PluginBase.on_activity_sent
+  name: on_activity_sent
+  summary: Called by the App when an activity is sent
+  signature: 'async on_activity_sent(event: PluginActivitySentEvent) -> None'
+  parameters:
+  - name: event
+    isRequired: true
+- uid: microsoft_teams.apps.PluginBase.on_error
+  name: on_error
+  summary: Called by the App when an error occurs.
+  signature: 'async on_error(event: PluginErrorEvent) -> None'
+  parameters:
+  - name: event
+    isRequired: true
+- uid: microsoft_teams.apps.PluginBase.on_init
+  name: on_init
+  summary: Lifecycle method called by the App when the plugin is initialized.
+  signature: async on_init() -> None
+- uid: microsoft_teams.apps.PluginBase.on_start
+  name: on_start
+  summary: Lifecycle method called by the App when the plugin is started.
+  signature: 'async on_start(event: PluginStartEvent) -> None'
+  parameters:
+  - name: event
+    isRequired: true
+- uid: microsoft_teams.apps.PluginBase.on_stop
+  name: on_stop
+  summary: Lifecycle method called by the App once during shutdown.
+  signature: async on_stop() -> None

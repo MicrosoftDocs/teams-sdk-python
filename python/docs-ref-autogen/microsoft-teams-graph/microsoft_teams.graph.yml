@@ -1,0 +1,55 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.graph
+name: graph
+fullName: microsoft_teams.graph
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: rootImport
+functions:
+- uid: microsoft_teams.graph.get_graph_client
+  name: get_graph_client
+  summary: Get a configured Microsoft Graph client using a Token.
+  signature: 'get_graph_client(token: str | StringLike | Callable[[], str | StringLike
+    | None | Awaitable[str | StringLike | None]] | None = None, *, base_url: str |
+    None = None) -> GraphServiceClient'
+  parameters:
+  - name: token
+    description: 'Token data (string, StringLike, callable, or None). If None,
+
+      will raise ClientAuthenticationError with a clear message.'
+    defaultValue: None
+  - name: base_url
+    description: 'Optional Graph API base URL override for sovereign clouds
+
+      (e.g. "[https://graph.microsoft.us](https://graph.microsoft.us)" for GCCH).
+      When provided,
+
+      the client routes HTTP calls to this endpoint + "/v1.0/". When
+
+      None, the public Graph endpoint is used.'
+    isRequired: true
+  keywordOnlyParameters:
+  - name: base_url
+    defaultValue: None
+  return:
+    description: A configured client ready for Microsoft Graph API calls
+    types:
+    - <xref:GraphServiceClient>
+  exceptions:
+  - type: ClientAuthenticationError
+    description: If the token is None, invalid, or authentication fails
+  examples:
+  - '>>``<<>>`<<python
+
+    # Public cloud (default)
+
+    graph = get_graph_client("eyJ0eXAiOiJKV1Qi...")# Sovereign cloud (GCCH)
+
+    graph = get_graph_client("eyJ0eXAiOiJKV1Qi...", base_url="[https://graph.microsoft.us](https://graph.microsoft.us)")
+
+    >>``<<>>`<<
+
+    '
+classes:
+- microsoft_teams.graph.AuthProvider

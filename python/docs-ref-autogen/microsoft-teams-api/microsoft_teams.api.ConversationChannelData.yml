@@ -1,0 +1,71 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.ConversationChannelData
+name: ConversationChannelData
+fullName: microsoft_teams.api.ConversationChannelData
+module: microsoft_teams.api
+summary: 'Extended ChannelData with event type.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'ConversationChannelData(*, channel: ChannelInfo | None = None, eventType:
+    Literal[''channelCreated'', ''channelDeleted'', ''channelRenamed'', ''channelRestored'',
+    ''teamArchived'', ''teamDeleted'', ''teamHardDeleted'', ''teamRenamed'', ''teamRestored'',
+    ''teamUnarchived'', ''teamMemberRemoved'', ''teamMemberAdded''] | None = None,
+    team: TeamInfo | None = None, notification: NotificationInfo | None = None, tenant:
+    TenantInfo | None = None, meeting: MeetingInfo | None = None, settings: ChannelDataSettings
+    | None = None, feedbackLoopEnabled: bool | None = None, feedbackLoop: FeedbackLoop
+    | None = None, streamId: str | None = None, streamType: Literal[''informative'',
+    ''streaming'', ''final''] | None = None, streamSequence: int | None = None, **extra_data:
+    Any)'
+  keywordOnlyParameters:
+  - name: channel
+    defaultValue: None
+  - name: eventType
+    defaultValue: None
+  - name: team
+    defaultValue: None
+  - name: notification
+    defaultValue: None
+  - name: tenant
+    defaultValue: None
+  - name: meeting
+    defaultValue: None
+  - name: settings
+    defaultValue: None
+  - name: feedbackLoopEnabled
+    defaultValue: None
+  - name: feedbackLoop
+    defaultValue: None
+  - name: streamId
+    defaultValue: None
+  - name: streamType
+    defaultValue: None
+  - name: streamSequence
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.ConversationChannelData.event_type
+  name: event_type
+  summary: The type of event that occurred.
+  signature: 'event_type: Literal[''channelCreated'', ''channelDeleted'', ''channelRenamed'',
+    ''channelRestored'', ''teamArchived'', ''teamDeleted'', ''teamHardDeleted'', ''teamRenamed'',
+    ''teamRestored'', ''teamUnarchived'', ''teamMemberRemoved'', ''teamMemberAdded'']
+    | None'
+- uid: microsoft_teams.api.ConversationChannelData.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'

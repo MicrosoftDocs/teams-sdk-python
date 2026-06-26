@@ -1,0 +1,53 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.PluginErrorEvent
+name: PluginErrorEvent
+fullName: microsoft_teams.apps.PluginErrorEvent
+module: microsoft_teams.apps
+summary: 'Event emitted when an error occurs.
+
+
+  Create new instance of PluginErrorEvent(error, activity)'
+constructor:
+  syntax: 'PluginErrorEvent(error: Exception, activity: TypingActivity | CommandSendActivity
+    | CommandResultActivity | ConversationUpdateActivity | MessageActivity | MessageDeleteActivity
+    | MessageReactionActivity | MessageUpdateActivity | ReadReceiptEventActivity |
+    MeetingStartEventActivity | MeetingEndEventActivity | MeetingParticipantJoinEventActivity
+    | MeetingParticipantLeaveEventActivity | FileConsentInvokeActivity | ExecuteActionInvokeActivity
+    | MessageExtensionAnonQueryLinkInvokeActivity | MessageExtensionCardButtonClickedInvokeActivity
+    | MessageExtensionFetchTaskInvokeActivity | MessageExtensionQueryInvokeActivity
+    | MessageExtensionQueryLinkInvokeActivity | MessageExtensionQuerySettingUrlInvokeActivity
+    | MessageExtensionSelectItemInvokeActivity | MessageExtensionSettingInvokeActivity
+    | MessageExtensionSubmitActionInvokeActivity | ConfigFetchInvokeActivity | ConfigSubmitInvokeActivity
+    | TabFetchInvokeActivity | TabSubmitInvokeActivity | TaskFetchInvokeActivity |
+    TaskSubmitInvokeActivity | MessageFetchTaskInvokeActivity | MessageSubmitActionInvokeActivity
+    | HandoffActionInvokeActivity | SignInTokenExchangeInvokeActivity | SignInVerifyStateInvokeActivity
+    | SignInFailureInvokeActivity | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity
+    | InstalledActivity | UninstalledActivity | None = None)'
+  parameters:
+  - name: error
+    isRequired: true
+  - name: activity
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.apps.PluginErrorEvent.activity
+  name: activity
+  summary: The activity
+  signature: 'activity: TypingActivity | CommandSendActivity | CommandResultActivity
+    | ConversationUpdateActivity | MessageActivity | MessageDeleteActivity | MessageReactionActivity
+    | MessageUpdateActivity | ReadReceiptEventActivity | MeetingStartEventActivity
+    | MeetingEndEventActivity | MeetingParticipantJoinEventActivity | MeetingParticipantLeaveEventActivity
+    | FileConsentInvokeActivity | ExecuteActionInvokeActivity | MessageExtensionAnonQueryLinkInvokeActivity
+    | MessageExtensionCardButtonClickedInvokeActivity | MessageExtensionFetchTaskInvokeActivity
+    | MessageExtensionQueryInvokeActivity | MessageExtensionQueryLinkInvokeActivity
+    | MessageExtensionQuerySettingUrlInvokeActivity | MessageExtensionSelectItemInvokeActivity
+    | MessageExtensionSettingInvokeActivity | MessageExtensionSubmitActionInvokeActivity
+    | ConfigFetchInvokeActivity | ConfigSubmitInvokeActivity | TabFetchInvokeActivity
+    | TabSubmitInvokeActivity | TaskFetchInvokeActivity | TaskSubmitInvokeActivity
+    | MessageFetchTaskInvokeActivity | MessageSubmitActionInvokeActivity | HandoffActionInvokeActivity
+    | SignInTokenExchangeInvokeActivity | SignInVerifyStateInvokeActivity | SignInFailureInvokeActivity
+    | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity | InstalledActivity
+    | UninstalledActivity | None'
+- uid: microsoft_teams.apps.PluginErrorEvent.error
+  name: error
+  summary: The error
+  signature: 'error: Exception'

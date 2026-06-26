@@ -1,0 +1,68 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.TypingActivity
+name: TypingActivity
+fullName: microsoft_teams.api.TypingActivity
+module: microsoft_teams.api
+summary: 'Output model for received typing activities with required fields and read-only
+  properties.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'TypingActivity(*, serviceUrl: str | None = None, timestamp: datetime |
+    None = None, locale: str | None = None, localTimestamp: datetime | None = None,
+    channelId: Literal[''webchat'', ''msteams''] | str = ''msteams'', from_: Account,
+    conversation: ConversationAccount, replyToId: str | None = None, entities: List[ClientInfoEntity
+    | MentionEntity | MessageEntity | AIMessageEntity | StreamInfoEntity | CitationEntity
+    | SensitiveUsageEntity | ProductInfoEntity | QuotedReplyEntity | TargetedMessageInfoEntity
+    | UnknownEntity] | None = None, channelData: ChannelData | None = None, type:
+    Literal[''typing''] = ''typing'', id: str, recipient: Account, text: str | None
+    = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: serviceUrl
+    defaultValue: None
+  - name: timestamp
+    defaultValue: None
+  - name: locale
+    defaultValue: None
+  - name: localTimestamp
+    defaultValue: None
+  - name: channelId
+    defaultValue: msteams
+  - name: from_
+    isRequired: true
+  - name: conversation
+    isRequired: true
+  - name: replyToId
+    defaultValue: None
+  - name: entities
+    defaultValue: None
+  - name: channelData
+    defaultValue: None
+  - name: type
+    defaultValue: typing
+  - name: id
+    isRequired: true
+  - name: recipient
+    isRequired: true
+  - name: text
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.TypingActivity.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'

@@ -1,172 +1,1168 @@
 - items:
   - name: Overview
-    uid: microsoft.teams.ai
-  - items:
-    - name: Overview
-      uid: microsoft.teams.ai.agent
-    - name: Agent
-      no-loc:
-      - Agent
-      uid: microsoft.teams.ai.agent.Agent
-    name: agent
+    uid: microsoft_teams.apps
+  - name: ActivityContext
     no-loc:
-    - agent
-  - items:
-    - name: Overview
-      uid: microsoft.teams.ai.ai_model
-    - name: AIModel
-      no-loc:
-      - AIModel
-      uid: microsoft.teams.ai.ai_model.AIModel
-    name: ai_model
+    - ActivityContext
+    uid: microsoft_teams.apps.ActivityContext
+  - name: ActivityEvent
     no-loc:
-    - ai_model
-  - items:
-    - name: Overview
-      uid: microsoft.teams.ai.chat_prompt
-    - name: ChatPrompt
-      no-loc:
-      - ChatPrompt
-      uid: microsoft.teams.ai.chat_prompt.ChatPrompt
-    - name: ChatSendResult
-      no-loc:
-      - ChatSendResult
-      uid: microsoft.teams.ai.chat_prompt.ChatSendResult
-    name: chat_prompt
+    - ActivityEvent
+    uid: microsoft_teams.apps.ActivityEvent
+  - name: ActivityResponseEvent
     no-loc:
-    - chat_prompt
-  - items:
-    - name: Overview
-      uid: microsoft.teams.ai.function
-    - name: Function
-      no-loc:
-      - Function
-      uid: microsoft.teams.ai.function.Function
-    - name: FunctionCall
-      no-loc:
-      - FunctionCall
-      uid: microsoft.teams.ai.function.FunctionCall
-    - name: FunctionHandler
-      no-loc:
-      - FunctionHandler
-      uid: microsoft.teams.ai.function.FunctionHandler
-    - name: FunctionHandlerWithNoParams
-      no-loc:
-      - FunctionHandlerWithNoParams
-      uid: microsoft.teams.ai.function.FunctionHandlerWithNoParams
-    - name: Params
-      no-loc:
-      - Params
-      uid: microsoft.teams.ai.function.Params
-    name: function
+    - ActivityResponseEvent
+    uid: microsoft_teams.apps.ActivityResponseEvent
+  - name: ActivitySentEvent
     no-loc:
-    - function
-  - items:
-    - name: Overview
-      uid: microsoft.teams.ai.memory
-    - name: ListMemory
-      no-loc:
-      - ListMemory
-      uid: microsoft.teams.ai.memory.ListMemory
-    - name: Memory
-      no-loc:
-      - Memory
-      uid: microsoft.teams.ai.memory.Memory
-    name: memory
+    - ActivitySentEvent
+    uid: microsoft_teams.apps.ActivitySentEvent
+  - name: App
     no-loc:
-    - memory
-  - items:
-    - name: Overview
-      uid: microsoft.teams.ai.message
-    - name: FunctionMessage
-      no-loc:
-      - FunctionMessage
-      uid: microsoft.teams.ai.message.FunctionMessage
-    - name: ModelMessage
-      no-loc:
-      - ModelMessage
-      uid: microsoft.teams.ai.message.ModelMessage
-    - name: SystemMessage
-      no-loc:
-      - SystemMessage
-      uid: microsoft.teams.ai.message.SystemMessage
-    - name: UserMessage
-      no-loc:
-      - UserMessage
-      uid: microsoft.teams.ai.message.UserMessage
-    name: message
+    - App
+    uid: microsoft_teams.apps.App
+  - name: AppOptions
     no-loc:
-    - message
-  - items:
-    - name: Overview
-      uid: microsoft.teams.ai.plugin
-    - name: AIPluginProtocol
-      no-loc:
-      - AIPluginProtocol
-      uid: microsoft.teams.ai.plugin.AIPluginProtocol
-    - name: BaseAIPlugin
-      no-loc:
-      - BaseAIPlugin
-      uid: microsoft.teams.ai.plugin.BaseAIPlugin
-    name: plugin
+    - AppOptions
+    uid: microsoft_teams.apps.AppOptions
+  - name: ClientContext
     no-loc:
-    - plugin
-  - name: AIModel
+    - ClientContext
+    uid: microsoft_teams.apps.ClientContext
+  - name: CoreActivity
     no-loc:
-    - AIModel
-    uid: microsoft.teams.ai.AIModel
-  - name: Agent
+    - CoreActivity
+    uid: microsoft_teams.apps.CoreActivity
+  - name: DependencyMetadata
     no-loc:
-    - Agent
-    uid: microsoft.teams.ai.Agent
-  - name: ChatPrompt
+    - DependencyMetadata
+    uid: microsoft_teams.apps.DependencyMetadata
+  - name: ErrorEvent
     no-loc:
-    - ChatPrompt
-    uid: microsoft.teams.ai.ChatPrompt
-  - name: ChatSendResult
+    - ErrorEvent
+    uid: microsoft_teams.apps.ErrorEvent
+  - name: EventMetadata
     no-loc:
-    - ChatSendResult
-    uid: microsoft.teams.ai.ChatSendResult
-  - name: Function
+    - EventMetadata
+    uid: microsoft_teams.apps.EventMetadata
+  - name: EventProtocol
     no-loc:
-    - Function
-    uid: microsoft.teams.ai.Function
-  - name: FunctionCall
+    - EventProtocol
+    uid: microsoft_teams.apps.EventProtocol
+  - name: FastAPIAdapter
     no-loc:
-    - FunctionCall
-    uid: microsoft.teams.ai.FunctionCall
-  - name: FunctionHandler
+    - FastAPIAdapter
+    uid: microsoft_teams.apps.FastAPIAdapter
+  - name: FunctionContext
     no-loc:
-    - FunctionHandler
-    uid: microsoft.teams.ai.FunctionHandler
-  - name: FunctionHandlerWithNoParams
+    - FunctionContext
+    uid: microsoft_teams.apps.FunctionContext
+  - name: HttpServer
     no-loc:
-    - FunctionHandlerWithNoParams
-    uid: microsoft.teams.ai.FunctionHandlerWithNoParams
-  - name: FunctionMessage
+    - HttpServer
+    uid: microsoft_teams.apps.HttpServer
+  - name: HttpServerAdapter
     no-loc:
-    - FunctionMessage
-    uid: microsoft.teams.ai.FunctionMessage
-  - name: ListMemory
+    - HttpServerAdapter
+    uid: microsoft_teams.apps.HttpServerAdapter
+  - name: HttpStream
     no-loc:
-    - ListMemory
-    uid: microsoft.teams.ai.ListMemory
-  - name: Memory
+    - HttpStream
+    uid: microsoft_teams.apps.HttpStream
+  - name: PluginActivityEvent
     no-loc:
-    - Memory
-    uid: microsoft.teams.ai.Memory
-  - name: ModelMessage
+    - PluginActivityEvent
+    uid: microsoft_teams.apps.PluginActivityEvent
+  - name: PluginActivityResponseEvent
     no-loc:
-    - ModelMessage
-    uid: microsoft.teams.ai.ModelMessage
-  - name: SystemMessage
+    - PluginActivityResponseEvent
+    uid: microsoft_teams.apps.PluginActivityResponseEvent
+  - name: PluginActivitySentEvent
     no-loc:
-    - SystemMessage
-    uid: microsoft.teams.ai.SystemMessage
-  - name: UserMessage
+    - PluginActivitySentEvent
+    uid: microsoft_teams.apps.PluginActivitySentEvent
+  - name: PluginBase
     no-loc:
-    - UserMessage
-    uid: microsoft.teams.ai.UserMessage
-  name: microsoft.teams.ai
+    - PluginBase
+    uid: microsoft_teams.apps.PluginBase
+  - name: PluginErrorEvent
+    no-loc:
+    - PluginErrorEvent
+    uid: microsoft_teams.apps.PluginErrorEvent
+  - name: PluginOptions
+    no-loc:
+    - PluginOptions
+    uid: microsoft_teams.apps.PluginOptions
+  - name: PluginStartEvent
+    no-loc:
+    - PluginStartEvent
+    uid: microsoft_teams.apps.PluginStartEvent
+  - name: SignInEvent
+    no-loc:
+    - SignInEvent
+    uid: microsoft_teams.apps.SignInEvent
+  - name: StartEvent
+    no-loc:
+    - StartEvent
+    uid: microsoft_teams.apps.StartEvent
+  - name: StopEvent
+    no-loc:
+    - StopEvent
+    uid: microsoft_teams.apps.StopEvent
+  - name: StreamCancelledError
+    no-loc:
+    - StreamCancelledError
+    uid: microsoft_teams.apps.StreamCancelledError
+  - name: StreamerProtocol
+    no-loc:
+    - StreamerProtocol
+    uid: microsoft_teams.apps.StreamerProtocol
+  - name: TokenValidator
+    no-loc:
+    - TokenValidator
+    uid: microsoft_teams.apps.TokenValidator
+  name: microsoft_teams.apps
   no-loc:
-  - microsoft.teams.ai
+  - microsoft_teams.apps
+- items:
+  - name: Overview
+    uid: microsoft_teams.api
+  - name: AIMessageEntity
+    no-loc:
+    - AIMessageEntity
+    uid: microsoft_teams.api.AIMessageEntity
+  - name: Account
+    no-loc:
+    - Account
+    uid: microsoft_teams.api.Account
+  - name: Action
+    no-loc:
+    - Action
+    uid: microsoft_teams.api.Action
+  - name: AdaptiveCardActionCardResponse
+    no-loc:
+    - AdaptiveCardActionCardResponse
+    uid: microsoft_teams.api.AdaptiveCardActionCardResponse
+  - name: AdaptiveCardActionErrorResponse
+    no-loc:
+    - AdaptiveCardActionErrorResponse
+    uid: microsoft_teams.api.AdaptiveCardActionErrorResponse
+  - name: AdaptiveCardActionIncorrectAuthCodeResponse
+    no-loc:
+    - AdaptiveCardActionIncorrectAuthCodeResponse
+    uid: microsoft_teams.api.AdaptiveCardActionIncorrectAuthCodeResponse
+  - name: AdaptiveCardActionLoginResponse
+    no-loc:
+    - AdaptiveCardActionLoginResponse
+    uid: microsoft_teams.api.AdaptiveCardActionLoginResponse
+  - name: AdaptiveCardActionMessageResponse
+    no-loc:
+    - AdaptiveCardActionMessageResponse
+    uid: microsoft_teams.api.AdaptiveCardActionMessageResponse
+  - name: AdaptiveCardActionPreconditionFailedResponse
+    no-loc:
+    - AdaptiveCardActionPreconditionFailedResponse
+    uid: microsoft_teams.api.AdaptiveCardActionPreconditionFailedResponse
+  - name: AdaptiveCardAttachment
+    no-loc:
+    - AdaptiveCardAttachment
+    uid: microsoft_teams.api.AdaptiveCardAttachment
+  - name: AdaptiveCardInvokeAction
+    no-loc:
+    - AdaptiveCardInvokeAction
+    uid: microsoft_teams.api.AdaptiveCardInvokeAction
+  - name: AdaptiveCardInvokeActivity
+    no-loc:
+    - AdaptiveCardInvokeActivity
+    uid: microsoft_teams.api.AdaptiveCardInvokeActivity
+  - name: AdaptiveCardInvokeValue
+    no-loc:
+    - AdaptiveCardInvokeValue
+    uid: microsoft_teams.api.AdaptiveCardInvokeValue
+  - name: AnimationCard
+    no-loc:
+    - AnimationCard
+    uid: microsoft_teams.api.AnimationCard
+  - name: AnimationCardAttachment
+    no-loc:
+    - AnimationCardAttachment
+    uid: microsoft_teams.api.AnimationCardAttachment
+  - name: ApiClient
+    no-loc:
+    - ApiClient
+    uid: microsoft_teams.api.ApiClient
+  - name: ApiClientSettings
+    no-loc:
+    - ApiClientSettings
+    uid: microsoft_teams.api.ApiClientSettings
+  - name: AppBasedLinkQuery
+    no-loc:
+    - AppBasedLinkQuery
+    uid: microsoft_teams.api.AppBasedLinkQuery
+  - name: Appearance
+    no-loc:
+    - Appearance
+    uid: microsoft_teams.api.Appearance
+  - name: ApplicationIdentityType
+    no-loc:
+    - ApplicationIdentityType
+    uid: microsoft_teams.api.ApplicationIdentityType
+  - name: Attachment
+    no-loc:
+    - Attachment
+    uid: microsoft_teams.api.Attachment
+  - name: AttachmentLayout
+    no-loc:
+    - AttachmentLayout
+    uid: microsoft_teams.api.AttachmentLayout
+  - name: AudioCard
+    no-loc:
+    - AudioCard
+    uid: microsoft_teams.api.AudioCard
+  - name: AudioCardAttachment
+    no-loc:
+    - AudioCardAttachment
+    uid: microsoft_teams.api.AudioCardAttachment
+  - name: BaseTaskModuleTaskInfo
+    no-loc:
+    - BaseTaskModuleTaskInfo
+    uid: microsoft_teams.api.BaseTaskModuleTaskInfo
+  - name: BasicCard
+    no-loc:
+    - BasicCard
+    uid: microsoft_teams.api.BasicCard
+  - name: BotClient
+    no-loc:
+    - BotClient
+    uid: microsoft_teams.api.BotClient
+  - name: BotSignInClient
+    no-loc:
+    - BotSignInClient
+    uid: microsoft_teams.api.BotSignInClient
+  - name: BotTokenClient
+    no-loc:
+    - BotTokenClient
+    uid: microsoft_teams.api.BotTokenClient
+  - name: CacheInfo
+    no-loc:
+    - CacheInfo
+    uid: microsoft_teams.api.CacheInfo
+  - name: CallerIds
+    no-loc:
+    - CallerIds
+    uid: microsoft_teams.api.CallerIds
+  - name: CardAction
+    no-loc:
+    - CardAction
+    uid: microsoft_teams.api.CardAction
+  - name: CardActionType
+    no-loc:
+    - CardActionType
+    uid: microsoft_teams.api.CardActionType
+  - name: CardAttachmentType
+    no-loc:
+    - CardAttachmentType
+    uid: microsoft_teams.api.CardAttachmentType
+  - name: CardAttachmentTypes
+    no-loc:
+    - CardAttachmentTypes
+    uid: microsoft_teams.api.CardAttachmentTypes
+  - name: CardImage
+    no-loc:
+    - CardImage
+    uid: microsoft_teams.api.CardImage
+  - name: CardTaskModuleTaskInfo
+    no-loc:
+    - CardTaskModuleTaskInfo
+    uid: microsoft_teams.api.CardTaskModuleTaskInfo
+  - name: ChannelData
+    no-loc:
+    - ChannelData
+    uid: microsoft_teams.api.ChannelData
+  - name: ChannelDataSettings
+    no-loc:
+    - ChannelDataSettings
+    uid: microsoft_teams.api.ChannelDataSettings
+  - name: ChannelInfo
+    no-loc:
+    - ChannelInfo
+    uid: microsoft_teams.api.ChannelInfo
+  - name: CitationAppearance
+    no-loc:
+    - CitationAppearance
+    uid: microsoft_teams.api.CitationAppearance
+  - name: CitationEntity
+    no-loc:
+    - CitationEntity
+    uid: microsoft_teams.api.CitationEntity
+  - name: CitationIconName
+    no-loc:
+    - CitationIconName
+    uid: microsoft_teams.api.CitationIconName
+  - name: CitationUsageInfo
+    no-loc:
+    - CitationUsageInfo
+    uid: microsoft_teams.api.CitationUsageInfo
+  - name: Claim
+    no-loc:
+    - Claim
+    uid: microsoft_teams.api.Claim
+  - name: ClientCredentials
+    no-loc:
+    - ClientCredentials
+    uid: microsoft_teams.api.ClientCredentials
+  - name: ClientInfoEntity
+    no-loc:
+    - ClientInfoEntity
+    uid: microsoft_teams.api.ClientInfoEntity
+  - name: CloudEnvironment
+    no-loc:
+    - CloudEnvironment
+    uid: microsoft_teams.api.CloudEnvironment
+  - name: CommandResultActivity
+    no-loc:
+    - CommandResultActivity
+    uid: microsoft_teams.api.CommandResultActivity
+  - name: CommandResultValue
+    no-loc:
+    - CommandResultValue
+    uid: microsoft_teams.api.CommandResultValue
+  - name: CommandSendActivity
+    no-loc:
+    - CommandSendActivity
+    uid: microsoft_teams.api.CommandSendActivity
+  - name: CommandSendValue
+    no-loc:
+    - CommandSendValue
+    uid: microsoft_teams.api.CommandSendValue
+  - name: ConfigAuth
+    no-loc:
+    - ConfigAuth
+    uid: microsoft_teams.api.ConfigAuth
+  - name: ConfigFetchInvokeActivity
+    no-loc:
+    - ConfigFetchInvokeActivity
+    uid: microsoft_teams.api.ConfigFetchInvokeActivity
+  - name: ConfigResponse
+    no-loc:
+    - ConfigResponse
+    uid: microsoft_teams.api.ConfigResponse
+  - name: ConfigSubmitInvokeActivity
+    no-loc:
+    - ConfigSubmitInvokeActivity
+    uid: microsoft_teams.api.ConfigSubmitInvokeActivity
+  - name: Conversation
+    no-loc:
+    - Conversation
+    uid: microsoft_teams.api.Conversation
+  - name: ConversationAccount
+    no-loc:
+    - ConversationAccount
+    uid: microsoft_teams.api.ConversationAccount
+  - name: ConversationActivityClient
+    no-loc:
+    - ConversationActivityClient
+    uid: microsoft_teams.api.ConversationActivityClient
+  - name: ConversationChannelData
+    no-loc:
+    - ConversationChannelData
+    uid: microsoft_teams.api.ConversationChannelData
+  - name: ConversationClient
+    no-loc:
+    - ConversationClient
+    uid: microsoft_teams.api.ConversationClient
+  - name: ConversationMemberClient
+    no-loc:
+    - ConversationMemberClient
+    uid: microsoft_teams.api.ConversationMemberClient
+  - name: ConversationReference
+    no-loc:
+    - ConversationReference
+    uid: microsoft_teams.api.ConversationReference
+  - name: ConversationResource
+    no-loc:
+    - ConversationResource
+    uid: microsoft_teams.api.ConversationResource
+  - name: ConversationUpdateActivity
+    no-loc:
+    - ConversationUpdateActivity
+    uid: microsoft_teams.api.ConversationUpdateActivity
+  - name: CreateConversationParams
+    no-loc:
+    - CreateConversationParams
+    uid: microsoft_teams.api.CreateConversationParams
+  - name: CustomBaseModel
+    no-loc:
+    - CustomBaseModel
+    uid: microsoft_teams.api.CustomBaseModel
+  - name: EntityBase
+    no-loc:
+    - EntityBase
+    uid: microsoft_teams.api.EntityBase
+  - name: ErrorResponse
+    no-loc:
+    - ErrorResponse
+    uid: microsoft_teams.api.ErrorResponse
+  - name: ExchangeUserTokenParams
+    no-loc:
+    - ExchangeUserTokenParams
+    uid: microsoft_teams.api.ExchangeUserTokenParams
+  - name: ExecuteActionInvokeActivity
+    no-loc:
+    - ExecuteActionInvokeActivity
+    uid: microsoft_teams.api.ExecuteActionInvokeActivity
+  - name: FederatedIdentityCredentials
+    no-loc:
+    - FederatedIdentityCredentials
+    uid: microsoft_teams.api.FederatedIdentityCredentials
+  - name: FeedbackLoop
+    no-loc:
+    - FeedbackLoop
+    uid: microsoft_teams.api.FeedbackLoop
+  - name: FileConsentCard
+    no-loc:
+    - FileConsentCard
+    uid: microsoft_teams.api.FileConsentCard
+  - name: FileConsentCardResponse
+    no-loc:
+    - FileConsentCardResponse
+    uid: microsoft_teams.api.FileConsentCardResponse
+  - name: FileConsentInvokeActivity
+    no-loc:
+    - FileConsentInvokeActivity
+    uid: microsoft_teams.api.FileConsentInvokeActivity
+  - name: FileInfoCard
+    no-loc:
+    - FileInfoCard
+    uid: microsoft_teams.api.FileInfoCard
+  - name: FileUploadInfo
+    no-loc:
+    - FileUploadInfo
+    uid: microsoft_teams.api.FileUploadInfo
+  - name: GetBotSignInResourceParams
+    no-loc:
+    - GetBotSignInResourceParams
+    uid: microsoft_teams.api.GetBotSignInResourceParams
+  - name: GetBotSignInUrlParams
+    no-loc:
+    - GetBotSignInUrlParams
+    uid: microsoft_teams.api.GetBotSignInUrlParams
+  - name: GetTeamConversationsResponse
+    no-loc:
+    - GetTeamConversationsResponse
+    uid: microsoft_teams.api.GetTeamConversationsResponse
+  - name: GetUserAADTokenParams
+    no-loc:
+    - GetUserAADTokenParams
+    uid: microsoft_teams.api.GetUserAADTokenParams
+  - name: GetUserTokenParams
+    no-loc:
+    - GetUserTokenParams
+    uid: microsoft_teams.api.GetUserTokenParams
+  - name: GetUserTokenStatusParams
+    no-loc:
+    - GetUserTokenStatusParams
+    uid: microsoft_teams.api.GetUserTokenStatusParams
+  - name: HandoffActionInvokeActivity
+    no-loc:
+    - HandoffActionInvokeActivity
+    uid: microsoft_teams.api.HandoffActionInvokeActivity
+  - name: HeroCard
+    no-loc:
+    - HeroCard
+    uid: microsoft_teams.api.HeroCard
+  - name: HeroCardAttachment
+    no-loc:
+    - HeroCardAttachment
+    uid: microsoft_teams.api.HeroCardAttachment
+  - name: HttpError
+    no-loc:
+    - HttpError
+    uid: microsoft_teams.api.HttpError
+  - name: Image
+    no-loc:
+    - Image
+    uid: microsoft_teams.api.Image
+  - name: Importance
+    no-loc:
+    - Importance
+    uid: microsoft_teams.api.Importance
+  - name: InnerHttpError
+    no-loc:
+    - InnerHttpError
+    uid: microsoft_teams.api.InnerHttpError
+  - name: InstalledActivity
+    no-loc:
+    - InstalledActivity
+    uid: microsoft_teams.api.InstalledActivity
+  - name: InvokeResponse
+    no-loc:
+    - InvokeResponse
+    uid: microsoft_teams.api.InvokeResponse
+  - name: JsonWebToken
+    no-loc:
+    - JsonWebToken
+    uid: microsoft_teams.api.JsonWebToken
+  - name: JsonWebTokenPayload
+    no-loc:
+    - JsonWebTokenPayload
+    uid: microsoft_teams.api.JsonWebTokenPayload
+  - name: ManagedIdentityCredentials
+    no-loc:
+    - ManagedIdentityCredentials
+    uid: microsoft_teams.api.ManagedIdentityCredentials
+  - name: MediaCard
+    no-loc:
+    - MediaCard
+    uid: microsoft_teams.api.MediaCard
+  - name: MediaUrl
+    no-loc:
+    - MediaUrl
+    uid: microsoft_teams.api.MediaUrl
+  - name: Meeting
+    no-loc:
+    - Meeting
+    uid: microsoft_teams.api.Meeting
+  - name: MeetingClient
+    no-loc:
+    - MeetingClient
+    uid: microsoft_teams.api.MeetingClient
+  - name: MeetingDetails
+    no-loc:
+    - MeetingDetails
+    uid: microsoft_teams.api.MeetingDetails
+  - name: MeetingEndEventActivity
+    no-loc:
+    - MeetingEndEventActivity
+    uid: microsoft_teams.api.MeetingEndEventActivity
+  - name: MeetingInfo
+    no-loc:
+    - MeetingInfo
+    uid: microsoft_teams.api.MeetingInfo
+  - name: MeetingNotificationParams
+    no-loc:
+    - MeetingNotificationParams
+    uid: microsoft_teams.api.MeetingNotificationParams
+  - name: MeetingNotificationRecipientFailure
+    no-loc:
+    - MeetingNotificationRecipientFailure
+    uid: microsoft_teams.api.MeetingNotificationRecipientFailure
+  - name: MeetingNotificationResponse
+    no-loc:
+    - MeetingNotificationResponse
+    uid: microsoft_teams.api.MeetingNotificationResponse
+  - name: MeetingNotificationSurface
+    no-loc:
+    - MeetingNotificationSurface
+    uid: microsoft_teams.api.MeetingNotificationSurface
+  - name: MeetingNotificationValue
+    no-loc:
+    - MeetingNotificationValue
+    uid: microsoft_teams.api.MeetingNotificationValue
+  - name: MeetingParticipant
+    no-loc:
+    - MeetingParticipant
+    uid: microsoft_teams.api.MeetingParticipant
+  - name: MeetingParticipantEventActivity
+    no-loc:
+    - MeetingParticipantEventActivity
+    uid: microsoft_teams.api.MeetingParticipantEventActivity
+  - name: MeetingParticipantJoinEventActivity
+    no-loc:
+    - MeetingParticipantJoinEventActivity
+    uid: microsoft_teams.api.MeetingParticipantJoinEventActivity
+  - name: MeetingParticipantLeaveEventActivity
+    no-loc:
+    - MeetingParticipantLeaveEventActivity
+    uid: microsoft_teams.api.MeetingParticipantLeaveEventActivity
+  - name: MeetingStartEventActivity
+    no-loc:
+    - MeetingStartEventActivity
+    uid: microsoft_teams.api.MeetingStartEventActivity
+  - name: MentionEntity
+    no-loc:
+    - MentionEntity
+    uid: microsoft_teams.api.MentionEntity
+  - name: Message
+    no-loc:
+    - Message
+    uid: microsoft_teams.api.Message
+  - name: MessageActivity
+    no-loc:
+    - MessageActivity
+    uid: microsoft_teams.api.MessageActivity
+  - name: MessageActivityInput
+    no-loc:
+    - MessageActivityInput
+    uid: microsoft_teams.api.MessageActivityInput
+  - name: MessageApp
+    no-loc:
+    - MessageApp
+    uid: microsoft_teams.api.MessageApp
+  - name: MessageBody
+    no-loc:
+    - MessageBody
+    uid: microsoft_teams.api.MessageBody
+  - name: MessageConversation
+    no-loc:
+    - MessageConversation
+    uid: microsoft_teams.api.MessageConversation
+  - name: MessageDeleteActivity
+    no-loc:
+    - MessageDeleteActivity
+    uid: microsoft_teams.api.MessageDeleteActivity
+  - name: MessageDeleteChannelData
+    no-loc:
+    - MessageDeleteChannelData
+    uid: microsoft_teams.api.MessageDeleteChannelData
+  - name: MessageEntity
+    no-loc:
+    - MessageEntity
+    uid: microsoft_teams.api.MessageEntity
+  - name: MessageExtensionAnonQueryLinkInvokeActivity
+    no-loc:
+    - MessageExtensionAnonQueryLinkInvokeActivity
+    uid: microsoft_teams.api.MessageExtensionAnonQueryLinkInvokeActivity
+  - name: MessageExtensionCardButtonClickedInvokeActivity
+    no-loc:
+    - MessageExtensionCardButtonClickedInvokeActivity
+    uid: microsoft_teams.api.MessageExtensionCardButtonClickedInvokeActivity
+  - name: MessageExtensionFetchTaskInvokeActivity
+    no-loc:
+    - MessageExtensionFetchTaskInvokeActivity
+    uid: microsoft_teams.api.MessageExtensionFetchTaskInvokeActivity
+  - name: MessageExtensionQueryInvokeActivity
+    no-loc:
+    - MessageExtensionQueryInvokeActivity
+    uid: microsoft_teams.api.MessageExtensionQueryInvokeActivity
+  - name: MessageExtensionQueryLinkInvokeActivity
+    no-loc:
+    - MessageExtensionQueryLinkInvokeActivity
+    uid: microsoft_teams.api.MessageExtensionQueryLinkInvokeActivity
+  - name: MessageExtensionQuerySettingUrlInvokeActivity
+    no-loc:
+    - MessageExtensionQuerySettingUrlInvokeActivity
+    uid: microsoft_teams.api.MessageExtensionQuerySettingUrlInvokeActivity
+  - name: MessageExtensionSelectItemInvokeActivity
+    no-loc:
+    - MessageExtensionSelectItemInvokeActivity
+    uid: microsoft_teams.api.MessageExtensionSelectItemInvokeActivity
+  - name: MessageExtensionSettingInvokeActivity
+    no-loc:
+    - MessageExtensionSettingInvokeActivity
+    uid: microsoft_teams.api.MessageExtensionSettingInvokeActivity
+  - name: MessageExtensionSubmitActionInvokeActivity
+    no-loc:
+    - MessageExtensionSubmitActionInvokeActivity
+    uid: microsoft_teams.api.MessageExtensionSubmitActionInvokeActivity
+  - name: MessageFetchTaskActionValue
+    no-loc:
+    - MessageFetchTaskActionValue
+    uid: microsoft_teams.api.MessageFetchTaskActionValue
+  - name: MessageFetchTaskData
+    no-loc:
+    - MessageFetchTaskData
+    uid: microsoft_teams.api.MessageFetchTaskData
+  - name: MessageFetchTaskInvokeActivity
+    no-loc:
+    - MessageFetchTaskInvokeActivity
+    uid: microsoft_teams.api.MessageFetchTaskInvokeActivity
+  - name: MessageFetchTaskInvokeValue
+    no-loc:
+    - MessageFetchTaskInvokeValue
+    uid: microsoft_teams.api.MessageFetchTaskInvokeValue
+  - name: MessageFrom
+    no-loc:
+    - MessageFrom
+    uid: microsoft_teams.api.MessageFrom
+  - name: MessageMention
+    no-loc:
+    - MessageMention
+    uid: microsoft_teams.api.MessageMention
+  - name: MessageReaction
+    no-loc:
+    - MessageReaction
+    uid: microsoft_teams.api.MessageReaction
+  - name: MessageReactionActivity
+    no-loc:
+    - MessageReactionActivity
+    uid: microsoft_teams.api.MessageReactionActivity
+  - name: MessageReactionActivityInput
+    no-loc:
+    - MessageReactionActivityInput
+    uid: microsoft_teams.api.MessageReactionActivityInput
+  - name: MessageSubmitActionInvokeActivity
+    no-loc:
+    - MessageSubmitActionInvokeActivity
+    uid: microsoft_teams.api.MessageSubmitActionInvokeActivity
+  - name: MessageUpdateActivity
+    no-loc:
+    - MessageUpdateActivity
+    uid: microsoft_teams.api.MessageUpdateActivity
+  - name: MessageUpdateChannelData
+    no-loc:
+    - MessageUpdateChannelData
+    uid: microsoft_teams.api.MessageUpdateChannelData
+  - name: MessageUser
+    no-loc:
+    - MessageUser
+    uid: microsoft_teams.api.MessageUser
+  - name: MessagingExtensionAction
+    no-loc:
+    - MessagingExtensionAction
+    uid: microsoft_teams.api.MessagingExtensionAction
+  - name: MessagingExtensionActionResponse
+    no-loc:
+    - MessagingExtensionActionResponse
+    uid: microsoft_teams.api.MessagingExtensionActionResponse
+  - name: MessagingExtensionAttachment
+    no-loc:
+    - MessagingExtensionAttachment
+    uid: microsoft_teams.api.MessagingExtensionAttachment
+  - name: MessagingExtensionAttachmentLayout
+    no-loc:
+    - MessagingExtensionAttachmentLayout
+    uid: microsoft_teams.api.MessagingExtensionAttachmentLayout
+  - name: MessagingExtensionParameter
+    no-loc:
+    - MessagingExtensionParameter
+    uid: microsoft_teams.api.MessagingExtensionParameter
+  - name: MessagingExtensionQuery
+    no-loc:
+    - MessagingExtensionQuery
+    uid: microsoft_teams.api.MessagingExtensionQuery
+  - name: MessagingExtensionQueryOptions
+    no-loc:
+    - MessagingExtensionQueryOptions
+    uid: microsoft_teams.api.MessagingExtensionQueryOptions
+  - name: MessagingExtensionResponse
+    no-loc:
+    - MessagingExtensionResponse
+    uid: microsoft_teams.api.MessagingExtensionResponse
+  - name: MessagingExtensionResult
+    no-loc:
+    - MessagingExtensionResult
+    uid: microsoft_teams.api.MessagingExtensionResult
+  - name: MessagingExtensionResultType
+    no-loc:
+    - MessagingExtensionResultType
+    uid: microsoft_teams.api.MessagingExtensionResultType
+  - name: MessagingExtensionSuggestedAction
+    no-loc:
+    - MessagingExtensionSuggestedAction
+    uid: microsoft_teams.api.MessagingExtensionSuggestedAction
+  - name: NotificationInfo
+    no-loc:
+    - NotificationInfo
+    uid: microsoft_teams.api.NotificationInfo
+  - name: O365ConnectorCardActionQuery
+    no-loc:
+    - O365ConnectorCardActionQuery
+    uid: microsoft_teams.api.O365ConnectorCardActionQuery
+  - name: OAuthCardAttachment
+    no-loc:
+    - OAuthCardAttachment
+    uid: microsoft_teams.api.OAuthCardAttachment
+  - name: PagedMembersResult
+    no-loc:
+    - PagedMembersResult
+    uid: microsoft_teams.api.PagedMembersResult
+  - name: ProductInfoEntity
+    no-loc:
+    - ProductInfoEntity
+    uid: microsoft_teams.api.ProductInfoEntity
+  - name: QuotedReplyData
+    no-loc:
+    - QuotedReplyData
+    uid: microsoft_teams.api.QuotedReplyData
+  - name: QuotedReplyEntity
+    no-loc:
+    - QuotedReplyEntity
+    uid: microsoft_teams.api.QuotedReplyEntity
+  - name: ReactionClient
+    no-loc:
+    - ReactionClient
+    uid: microsoft_teams.api.ReactionClient
+  - name: ReadReceiptEventActivity
+    no-loc:
+    - ReadReceiptEventActivity
+    uid: microsoft_teams.api.ReadReceiptEventActivity
+  - name: SensitiveUsage
+    no-loc:
+    - SensitiveUsage
+    uid: microsoft_teams.api.SensitiveUsage
+  - name: SensitiveUsageEntity
+    no-loc:
+    - SensitiveUsageEntity
+    uid: microsoft_teams.api.SensitiveUsageEntity
+  - name: SensitiveUsagePattern
+    no-loc:
+    - SensitiveUsagePattern
+    uid: microsoft_teams.api.SensitiveUsagePattern
+  - name: SentActivity
+    no-loc:
+    - SentActivity
+    uid: microsoft_teams.api.SentActivity
+  - name: SignInCard
+    no-loc:
+    - SignInCard
+    uid: microsoft_teams.api.SignInCard
+  - name: SignInExchangeToken
+    no-loc:
+    - SignInExchangeToken
+    uid: microsoft_teams.api.SignInExchangeToken
+  - name: SignInFailure
+    no-loc:
+    - SignInFailure
+    uid: microsoft_teams.api.SignInFailure
+  - name: SignInFailureInvokeActivity
+    no-loc:
+    - SignInFailureInvokeActivity
+    uid: microsoft_teams.api.SignInFailureInvokeActivity
+  - name: SignInStateVerifyQuery
+    no-loc:
+    - SignInStateVerifyQuery
+    uid: microsoft_teams.api.SignInStateVerifyQuery
+  - name: SignInTokenExchangeInvokeActivity
+    no-loc:
+    - SignInTokenExchangeInvokeActivity
+    uid: microsoft_teams.api.SignInTokenExchangeInvokeActivity
+  - name: SignInUrlResponse
+    no-loc:
+    - SignInUrlResponse
+    uid: microsoft_teams.api.SignInUrlResponse
+  - name: SignInVerifyStateInvokeActivity
+    no-loc:
+    - SignInVerifyStateInvokeActivity
+    uid: microsoft_teams.api.SignInVerifyStateInvokeActivity
+  - name: SignOutUserParams
+    no-loc:
+    - SignOutUserParams
+    uid: microsoft_teams.api.SignOutUserParams
+  - name: SigninCardAttachment
+    no-loc:
+    - SigninCardAttachment
+    uid: microsoft_teams.api.SigninCardAttachment
+  - name: StreamInfoEntity
+    no-loc:
+    - StreamInfoEntity
+    uid: microsoft_teams.api.StreamInfoEntity
+  - name: SuggestedActionSubmitInvokeActivity
+    no-loc:
+    - SuggestedActionSubmitInvokeActivity
+    uid: microsoft_teams.api.SuggestedActionSubmitInvokeActivity
+  - name: SuggestedActions
+    no-loc:
+    - SuggestedActions
+    uid: microsoft_teams.api.SuggestedActions
+  - name: TabContext
+    no-loc:
+    - TabContext
+    uid: microsoft_teams.api.TabContext
+  - name: TabEntityContext
+    no-loc:
+    - TabEntityContext
+    uid: microsoft_teams.api.TabEntityContext
+  - name: TabFetchInvokeActivity
+    no-loc:
+    - TabFetchInvokeActivity
+    uid: microsoft_teams.api.TabFetchInvokeActivity
+  - name: TabRequest
+    no-loc:
+    - TabRequest
+    uid: microsoft_teams.api.TabRequest
+  - name: TabResponse
+    no-loc:
+    - TabResponse
+    uid: microsoft_teams.api.TabResponse
+  - name: TabResponseCard
+    no-loc:
+    - TabResponseCard
+    uid: microsoft_teams.api.TabResponseCard
+  - name: TabResponseCards
+    no-loc:
+    - TabResponseCards
+    uid: microsoft_teams.api.TabResponseCards
+  - name: TabResponsePayload
+    no-loc:
+    - TabResponsePayload
+    uid: microsoft_teams.api.TabResponsePayload
+  - name: TabSubmit
+    no-loc:
+    - TabSubmit
+    uid: microsoft_teams.api.TabSubmit
+  - name: TabSubmitInvokeActivity
+    no-loc:
+    - TabSubmitInvokeActivity
+    uid: microsoft_teams.api.TabSubmitInvokeActivity
+  - name: TabSuggestedActions
+    no-loc:
+    - TabSuggestedActions
+    uid: microsoft_teams.api.TabSuggestedActions
+  - name: TargetedMessageInfoEntity
+    no-loc:
+    - TargetedMessageInfoEntity
+    uid: microsoft_teams.api.TargetedMessageInfoEntity
+  - name: TaskFetchInvokeActivity
+    no-loc:
+    - TaskFetchInvokeActivity
+    uid: microsoft_teams.api.TaskFetchInvokeActivity
+  - name: TaskModuleCardResponse
+    no-loc:
+    - TaskModuleCardResponse
+    uid: microsoft_teams.api.TaskModuleCardResponse
+  - name: TaskModuleContinueResponse
+    no-loc:
+    - TaskModuleContinueResponse
+    uid: microsoft_teams.api.TaskModuleContinueResponse
+  - name: TaskModuleMessageResponse
+    no-loc:
+    - TaskModuleMessageResponse
+    uid: microsoft_teams.api.TaskModuleMessageResponse
+  - name: TaskModuleRequest
+    no-loc:
+    - TaskModuleRequest
+    uid: microsoft_teams.api.TaskModuleRequest
+  - name: TaskModuleRequestContext
+    no-loc:
+    - TaskModuleRequestContext
+    uid: microsoft_teams.api.TaskModuleRequestContext
+  - name: TaskModuleResponse
+    no-loc:
+    - TaskModuleResponse
+    uid: microsoft_teams.api.TaskModuleResponse
+  - name: TaskModuleResponseBase
+    no-loc:
+    - TaskModuleResponseBase
+    uid: microsoft_teams.api.TaskModuleResponseBase
+  - name: TaskSubmitInvokeActivity
+    no-loc:
+    - TaskSubmitInvokeActivity
+    uid: microsoft_teams.api.TaskSubmitInvokeActivity
+  - name: TeamClient
+    no-loc:
+    - TeamClient
+    uid: microsoft_teams.api.TeamClient
+  - name: TeamDetails
+    no-loc:
+    - TeamDetails
+    uid: microsoft_teams.api.TeamDetails
+  - name: TeamInfo
+    no-loc:
+    - TeamInfo
+    uid: microsoft_teams.api.TeamInfo
+  - name: TeamsChannelAccount
+    no-loc:
+    - TeamsChannelAccount
+    uid: microsoft_teams.api.TeamsChannelAccount
+  - name: TenantInfo
+    no-loc:
+    - TenantInfo
+    uid: microsoft_teams.api.TenantInfo
+  - name: ThumbnailCard
+    no-loc:
+    - ThumbnailCard
+    uid: microsoft_teams.api.ThumbnailCard
+  - name: ThumbnailCardAttachment
+    no-loc:
+    - ThumbnailCardAttachment
+    uid: microsoft_teams.api.ThumbnailCardAttachment
+  - name: ThumbnailUrl
+    no-loc:
+    - ThumbnailUrl
+    uid: microsoft_teams.api.ThumbnailUrl
+  - name: TokenCredentials
+    no-loc:
+    - TokenCredentials
+    uid: microsoft_teams.api.TokenCredentials
+  - name: TokenExchangeInvokeRequest
+    no-loc:
+    - TokenExchangeInvokeRequest
+    uid: microsoft_teams.api.TokenExchangeInvokeRequest
+  - name: TokenExchangeInvokeResponse
+    no-loc:
+    - TokenExchangeInvokeResponse
+    uid: microsoft_teams.api.TokenExchangeInvokeResponse
+  - name: TokenExchangeRequest
+    no-loc:
+    - TokenExchangeRequest
+    uid: microsoft_teams.api.TokenExchangeRequest
+  - name: TokenExchangeResource
+    no-loc:
+    - TokenExchangeResource
+    uid: microsoft_teams.api.TokenExchangeResource
+  - name: TokenExchangeState
+    no-loc:
+    - TokenExchangeState
+    uid: microsoft_teams.api.TokenExchangeState
+  - name: TokenPostResource
+    no-loc:
+    - TokenPostResource
+    uid: microsoft_teams.api.TokenPostResource
+  - name: TokenProtocol
+    no-loc:
+    - TokenProtocol
+    uid: microsoft_teams.api.TokenProtocol
+  - name: TokenRequest
+    no-loc:
+    - TokenRequest
+    uid: microsoft_teams.api.TokenRequest
+  - name: TokenResponse
+    no-loc:
+    - TokenResponse
+    uid: microsoft_teams.api.TokenResponse
+  - name: TokenStatus
+    no-loc:
+    - TokenStatus
+    uid: microsoft_teams.api.TokenStatus
+  - name: TypingActivity
+    no-loc:
+    - TypingActivity
+    uid: microsoft_teams.api.TypingActivity
+  - name: TypingActivityInput
+    no-loc:
+    - TypingActivityInput
+    uid: microsoft_teams.api.TypingActivityInput
+  - name: UninstalledActivity
+    no-loc:
+    - UninstalledActivity
+    uid: microsoft_teams.api.UninstalledActivity
+  - name: UnknownEntity
+    no-loc:
+    - UnknownEntity
+    uid: microsoft_teams.api.UnknownEntity
+  - name: UrlTaskModuleTaskInfo
+    no-loc:
+    - UrlTaskModuleTaskInfo
+    uid: microsoft_teams.api.UrlTaskModuleTaskInfo
+  - name: UserClient
+    no-loc:
+    - UserClient
+    uid: microsoft_teams.api.UserClient
+  - name: UserIdentityType
+    no-loc:
+    - UserIdentityType
+    uid: microsoft_teams.api.UserIdentityType
+  - name: UserTokenClient
+    no-loc:
+    - UserTokenClient
+    uid: microsoft_teams.api.UserTokenClient
+  - name: VideoCard
+    no-loc:
+    - VideoCard
+    uid: microsoft_teams.api.VideoCard
+  - name: VideoCardAttachment
+    no-loc:
+    - VideoCardAttachment
+    uid: microsoft_teams.api.VideoCardAttachment
+  name: microsoft_teams.api
+  no-loc:
+  - microsoft_teams.api
+- items:
+  - name: Overview
+    uid: microsoft_teams.cards
+  - name: OpenDialogData
+    no-loc:
+    - OpenDialogData
+    uid: microsoft_teams.cards.OpenDialogData
+  - name: SubmitData
+    no-loc:
+    - SubmitData
+    uid: microsoft_teams.cards.SubmitData
+  name: microsoft_teams.cards
+  no-loc:
+  - microsoft_teams.cards
+- items:
+  - name: Overview
+    uid: microsoft_teams.common
+  - name: ANSI
+    no-loc:
+    - ANSI
+    uid: microsoft_teams.common.ANSI
+  - name: Client
+    no-loc:
+    - Client
+    uid: microsoft_teams.common.Client
+  - name: ClientOptions
+    no-loc:
+    - ClientOptions
+    uid: microsoft_teams.common.ClientOptions
+  - name: ConsoleFilter
+    no-loc:
+    - ConsoleFilter
+    uid: microsoft_teams.common.ConsoleFilter
+  - name: ConsoleFormatter
+    no-loc:
+    - ConsoleFormatter
+    uid: microsoft_teams.common.ConsoleFormatter
+  - name: EventEmitter
+    no-loc:
+    - EventEmitter
+    uid: microsoft_teams.common.EventEmitter
+  - name: EventEmitterProtocol
+    no-loc:
+    - EventEmitterProtocol
+    uid: microsoft_teams.common.EventEmitterProtocol
+  - name: ExperimentalWarning
+    no-loc:
+    - ExperimentalWarning
+    uid: microsoft_teams.common.ExperimentalWarning
+  - name: Interceptor
+    no-loc:
+    - Interceptor
+    uid: microsoft_teams.common.Interceptor
+  - name: InterceptorRequestContext
+    no-loc:
+    - InterceptorRequestContext
+    uid: microsoft_teams.common.InterceptorRequestContext
+  - name: InterceptorResponseContext
+    no-loc:
+    - InterceptorResponseContext
+    uid: microsoft_teams.common.InterceptorResponseContext
+  - name: ListLocalStorage
+    no-loc:
+    - ListLocalStorage
+    uid: microsoft_teams.common.ListLocalStorage
+  - name: ListStorage
+    no-loc:
+    - ListStorage
+    uid: microsoft_teams.common.ListStorage
+  - name: LocalStorage
+    no-loc:
+    - LocalStorage
+    uid: microsoft_teams.common.LocalStorage
+  - name: LocalStorageOptions
+    no-loc:
+    - LocalStorageOptions
+    uid: microsoft_teams.common.LocalStorageOptions
+  - name: Storage
+    no-loc:
+    - Storage
+    uid: microsoft_teams.common.Storage
+  name: microsoft_teams.common
+  no-loc:
+  - microsoft_teams.common
+- items:
+  - name: Overview
+    uid: microsoft_teams.graph
+  - name: AuthProvider
+    no-loc:
+    - AuthProvider
+    uid: microsoft_teams.graph.AuthProvider
+  name: microsoft_teams.graph
+  no-loc:
+  - microsoft_teams.graph
+- items:
+  - name: Overview
+    uid: microsoft_teams.botbuilder
+  - name: BotBuilderPlugin
+    no-loc:
+    - BotBuilderPlugin
+    uid: microsoft_teams.botbuilder.BotBuilderPlugin
+  - name: BotBuilderPluginOptions
+    no-loc:
+    - BotBuilderPluginOptions
+    uid: microsoft_teams.botbuilder.BotBuilderPluginOptions
+  name: microsoft_teams.botbuilder
+  no-loc:
+  - microsoft_teams.botbuilder

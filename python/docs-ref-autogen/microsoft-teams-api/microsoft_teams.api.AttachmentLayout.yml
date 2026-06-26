@@ -1,0 +1,11 @@
+### YamlMime:PythonEnum
+uid: microsoft_teams.api.AttachmentLayout
+name: AttachmentLayout
+fullName: microsoft_teams.api.AttachmentLayout
+summary: Enum for attachment layout types.
+module: microsoft_teams.api
+fields:
+- name: CAROUSEL
+  uid: microsoft_teams.api.AttachmentLayout.CAROUSEL
+- name: LIST
+  uid: microsoft_teams.api.AttachmentLayout.LIST

@@ -1,0 +1,90 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.TypingActivityInput
+name: TypingActivityInput
+fullName: microsoft_teams.api.TypingActivityInput
+module: microsoft_teams.api
+summary: 'Input model for creating typing activities with builder methods.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'TypingActivityInput(*, serviceUrl: str | None = None, timestamp: datetime
+    | None = None, locale: str | None = None, localTimestamp: datetime | None = None,
+    channelId: Literal[''webchat'', ''msteams''] | str | None = None, from_: Account
+    | None = None, conversation: ConversationAccount | None = None, replyToId: str
+    | None = None, entities: List[ClientInfoEntity | MentionEntity | MessageEntity
+    | AIMessageEntity | StreamInfoEntity | CitationEntity | SensitiveUsageEntity |
+    ProductInfoEntity | QuotedReplyEntity | TargetedMessageInfoEntity | UnknownEntity]
+    | None = None, channelData: ChannelData | None = None, type: Literal[''typing'']
+    = ''typing'', id: str | None = None, recipient: Account | None = None, text: str
+    | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: serviceUrl
+    defaultValue: None
+  - name: timestamp
+    defaultValue: None
+  - name: locale
+    defaultValue: None
+  - name: localTimestamp
+    defaultValue: None
+  - name: channelId
+    defaultValue: None
+  - name: from_
+    defaultValue: None
+  - name: conversation
+    defaultValue: None
+  - name: replyToId
+    defaultValue: None
+  - name: entities
+    defaultValue: None
+  - name: channelData
+    defaultValue: None
+  - name: type
+    defaultValue: typing
+  - name: id
+    defaultValue: None
+  - name: recipient
+    defaultValue: None
+  - name: text
+    defaultValue: None
+methods:
+- uid: microsoft_teams.api.TypingActivityInput.add_stream_update
+  name: add_stream_update
+  summary: Add stream informative update.
+  signature: 'add_stream_update(sequence: int = 1) -> Self'
+  parameters:
+  - name: sequence
+    defaultValue: '1'
+- uid: microsoft_teams.api.TypingActivityInput.add_text
+  name: add_text
+  summary: Append text.
+  signature: 'add_text(text: str) -> Self'
+  parameters:
+  - name: text
+    isRequired: true
+- uid: microsoft_teams.api.TypingActivityInput.with_text
+  name: with_text
+  summary: Set the text content of the message.
+  signature: 'with_text(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.TypingActivityInput.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'

@@ -1,0 +1,86 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.FunctionContext
+name: FunctionContext
+fullName: microsoft_teams.apps.FunctionContext
+module: microsoft_teams.apps
+summary: Context provided to a remote function execution in a Teams app.
+constructor:
+  syntax: 'FunctionContext(app_session_id: str, tenant_id: str, user_id: str, user_name:
+    str, page_id: str, auth_token: str, app_id: str | None = None, team_id: str |
+    None = None, message_id: str | None = None, channel_id: str | None = None, chat_id:
+    str | None = None, meeting_id: str | None = None, sub_page_id: str | None = None,
+    _resolved_conversation_id: str | None = None, *, id: str | None = None, name:
+    str | None = None, api: ApiClient, activity_sender: ActivitySender, data: T)'
+  parameters:
+  - name: app_session_id
+    isRequired: true
+  - name: tenant_id
+    isRequired: true
+  - name: user_id
+    isRequired: true
+  - name: user_name
+    isRequired: true
+  - name: page_id
+    isRequired: true
+  - name: auth_token
+    isRequired: true
+  - name: app_id
+    defaultValue: None
+  - name: team_id
+    defaultValue: None
+  - name: message_id
+    defaultValue: None
+  - name: channel_id
+    defaultValue: None
+  - name: chat_id
+    defaultValue: None
+  - name: meeting_id
+    defaultValue: None
+  - name: sub_page_id
+    defaultValue: None
+  - name: _resolved_conversation_id
+    defaultValue: None
+  keywordOnlyParameters:
+  - name: id
+    defaultValue: None
+  - name: name
+    defaultValue: None
+  - name: api
+    isRequired: true
+  - name: activity_sender
+    isRequired: true
+  - name: data
+    isRequired: true
+methods:
+- uid: microsoft_teams.apps.FunctionContext.send
+  name: send
+  summary: 'Send an activity to the current conversation.
+
+
+    Returns None if the conversation ID cannot be determined.'
+  signature: 'async send(activity: str | MessageActivityInput | MessageReactionActivityInput
+    | TypingActivityInput | AdaptiveCard) -> SentActivity | None'
+  parameters:
+  - name: activity
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.FunctionContext.activity_sender
+  name: activity_sender
+  summary: The activity sender instance for sending messages.
+  signature: 'activity_sender: ActivitySender'
+- uid: microsoft_teams.apps.FunctionContext.api
+  name: api
+  summary: The API client instance for conversation client.
+  signature: 'api: ApiClient'
+- uid: microsoft_teams.apps.FunctionContext.data
+  name: data
+  summary: The function payload.
+  signature: 'data: T'
+- uid: microsoft_teams.apps.FunctionContext.id
+  name: id
+  summary: The ID of the app.
+  signature: 'id: str | None = None'
+- uid: microsoft_teams.apps.FunctionContext.name
+  name: name
+  summary: The name of the app.
+  signature: 'name: str | None = None'

@@ -1,0 +1,20 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.ActivityEvent
+name: ActivityEvent
+fullName: microsoft_teams.apps.ActivityEvent
+module: microsoft_teams.apps
+summary: Event emitted when an activity is processed.
+constructor:
+  syntax: 'ActivityEvent(body: CoreActivity, token: TokenProtocol)'
+  parameters:
+  - name: body
+    isRequired: true
+  - name: token
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.ActivityEvent.body
+  name: body
+  signature: 'body: CoreActivity'
+- uid: microsoft_teams.apps.ActivityEvent.token
+  name: token
+  signature: 'token: TokenProtocol'

@@ -1,0 +1,64 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.StreamInfoEntity
+name: StreamInfoEntity
+fullName: microsoft_teams.api.StreamInfoEntity
+module: microsoft_teams.api
+summary: 'Entity containing streaming information
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'StreamInfoEntity(*, type: Literal[''streaminfo''] = ''streaminfo'', streamId:
+    str | None = None, streamType: Literal[''informative'', ''streaming'', ''final'']
+    | None = None, streamSequence: int | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: type
+    defaultValue: streaminfo
+  - name: streamId
+    defaultValue: None
+  - name: streamType
+    defaultValue: None
+  - name: streamSequence
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.StreamInfoEntity.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.StreamInfoEntity.stream_id
+  name: stream_id
+  summary: ID of the stream. Assigned after the initial update is sent.
+  signature: 'stream_id: str | None'
+- uid: microsoft_teams.api.StreamInfoEntity.stream_sequence
+  name: stream_sequence
+  summary: Sequence number of the message in the stream. Starts at 1 for the first
+    message and increments from there.
+  signature: 'stream_sequence: int | None'
+- uid: microsoft_teams.api.StreamInfoEntity.stream_type
+  name: stream_type
+  summary: 'The type of message being sent.
+
+    ''informative'' - An informative update.
+
+    ''streaming'' - A chunk of partial message text.
+
+    ''final'' - The final message.'
+  signature: 'stream_type: Literal[''informative'', ''streaming'', ''final''] | None'
+- uid: microsoft_teams.api.StreamInfoEntity.type
+  name: type
+  summary: Type identifier for stream info
+  signature: 'type: Literal[''streaminfo'']'

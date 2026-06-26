@@ -1,0 +1,10 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.common.InterceptorResponseContext
+name: InterceptorResponseContext
+fullName: microsoft_teams.common.InterceptorResponseContext
+module: microsoft_teams.common
+constructor:
+  syntax: 'InterceptorResponseContext(response: Response)'
+  parameters:
+  - name: response
+    isRequired: true

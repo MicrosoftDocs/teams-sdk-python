@@ -1,0 +1,61 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.common
+name: common
+fullName: microsoft_teams.common
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: rootImport
+functions:
+- uid: microsoft_teams.common.experimental
+  name: experimental
+  summary: "Mark a class or function as a preview API.\n\nEmits an ExperimentalWarning\
+    \ when the decorated class is instantiated\nor the decorated function is called.\n\
+    \nUsage:\n\n<!-- literal_block {\"ids\": [], \"classes\": [], \"names\": [], \"\
+    dupnames\": [], \"backrefs\": [], \"xml:space\": \"preserve\", \"language\": \"\
+    default\", \"force\": false, \"linenos\": false} -->\n\n````default\n\n   @experimental(\"\
+    ExperimentalTeamsReactions\")\n   class ReactionClient:\n       ...\n\n   @experimental(\"\
+    ExperimentalTeamsTargeted\", message=\"Targeted messages are in preview.\")\n\
+    \   async def create_targeted(...):\n       ...\n   ````"
+  signature: 'experimental(diagnostic: str, *, message: str | None = None) -> Callable[[F],
+    F]'
+  parameters:
+  - name: diagnostic
+    description: The diagnostic code (e.g., "ExperimentalTeamsReactions") for granular
+      opt-in.
+    isRequired: true
+  - name: message
+    description: Optional custom warning message. If not provided, a default message
+      is used.
+    isRequired: true
+  keywordOnlyParameters:
+  - name: message
+    defaultValue: None
+- uid: microsoft_teams.common.resolve_token
+  name: resolve_token
+  summary: 'Resolves a token value to a string, handling callables and awaitables.
+
+    Always used as an async function for uniform async usage.'
+  signature: 'async resolve_token(token: str | StringLike | Callable[[], str | StringLike
+    | None | Awaitable[str | StringLike | None]] | None) -> str | None'
+  parameters:
+  - name: token
+    isRequired: true
+classes:
+- microsoft_teams.common.Client
+- microsoft_teams.common.ClientOptions
+- microsoft_teams.common.ConsoleFilter
+- microsoft_teams.common.ConsoleFormatter
+- microsoft_teams.common.EventEmitter
+- microsoft_teams.common.EventEmitterProtocol
+- microsoft_teams.common.ExperimentalWarning
+- microsoft_teams.common.Interceptor
+- microsoft_teams.common.InterceptorRequestContext
+- microsoft_teams.common.InterceptorResponseContext
+- microsoft_teams.common.ListLocalStorage
+- microsoft_teams.common.ListStorage
+- microsoft_teams.common.LocalStorage
+- microsoft_teams.common.LocalStorageOptions
+- microsoft_teams.common.Storage
+enums:
+- microsoft_teams.common.ANSI

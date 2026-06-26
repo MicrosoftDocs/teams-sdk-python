@@ -1,0 +1,70 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.StreamerProtocol
+name: StreamerProtocol
+fullName: microsoft_teams.apps.StreamerProtocol
+module: microsoft_teams.apps
+summary: Component that can send streamed chunks of an activity.
+constructor:
+  syntax: StreamerProtocol(*args, **kwargs)
+methods:
+- uid: microsoft_teams.apps.StreamerProtocol.clear_text
+  name: clear_text
+  summary: Discard any text accumulated so far so the final activity is card-only.
+  signature: clear_text() -> None
+- uid: microsoft_teams.apps.StreamerProtocol.close
+  name: close
+  summary: Close the stream.
+  signature: async close() -> SentActivity | None
+- uid: microsoft_teams.apps.StreamerProtocol.emit
+  name: emit
+  summary: Emit an activity chunk.
+  signature: 'emit(activity: MessageActivityInput | TypingActivityInput | str) ->
+    None'
+  parameters:
+  - name: activity
+    isRequired: true
+- uid: microsoft_teams.apps.StreamerProtocol.on_chunk
+  name: on_chunk
+  summary: Register a handler for chunk events.
+  signature: 'on_chunk(handler: Callable[[SentActivity], Awaitable[None]]) -> None'
+  parameters:
+  - name: handler
+    description: Async function that will be called for each chunk activity
+    isRequired: true
+- uid: microsoft_teams.apps.StreamerProtocol.on_close
+  name: on_close
+  summary: Register a handler for close events.
+  signature: 'on_close(handler: Callable[[SentActivity], Awaitable[None]]) -> None'
+  parameters:
+  - name: handler
+    description: Async function that will be called when the stream closes
+    isRequired: true
+- uid: microsoft_teams.apps.StreamerProtocol.update
+  name: update
+  summary: Send status updates before emitting (ex. "Thinking...").
+  signature: 'update(text: str) -> None'
+  parameters:
+  - name: text
+    description: The status text to send.
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.StreamerProtocol.canceled
+  name: canceled
+  summary: 'Whether the stream has been canceled.
+
+    For example when the user pressed the Stop button or the 2-minute timeout has
+    exceeded.'
+- uid: microsoft_teams.apps.StreamerProtocol.closed
+  name: closed
+  summary: Whether the final stream message has been sent.
+- uid: microsoft_teams.apps.StreamerProtocol.count
+  name: count
+  summary: The total number of chunks queued to be sent.
+- uid: microsoft_teams.apps.StreamerProtocol.sequence
+  name: sequence
+  summary: 'The sequence number, representing the number of stream activities sent.
+
+
+    Several chunks can be aggregated into one stream activity
+
+    due to differences in Api rate limits.'
