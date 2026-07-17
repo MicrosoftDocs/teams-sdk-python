@@ -7,5 +7,7 @@ summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
   Licensed under the MIT License.'
 type: rootImport
 classes:
-- microsoft_teams.botbuilder.BotBuilderPlugin
-- microsoft_teams.botbuilder.BotBuilderPluginOptions
+- microsoft_teams.botbuilder.BotBuilderAdapter
+- microsoft_teams.botbuilder.BotBuilderAdapterOptions
+modules:
+- microsoft_teams.botbuilder.adapter

@@ -1,0 +1,10 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.botbuilder.adapter
+name: adapter
+fullName: microsoft_teams.botbuilder.adapter
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.botbuilder.adapter.BotBuilderAdapter
+- microsoft_teams.botbuilder.adapter.BotBuilderAdapterOptions

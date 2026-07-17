@@ -6,21 +6,6 @@ module: microsoft_teams.api
 summary: 'Entity containing quoted reply information
 
 
-  > [!WARNING]
-
-  > Coming Soon
-
-  >
-
-  > This API is coming soon and may change in the future.
-
-  >
-
-  > Diagnostic: ExperimentalTeamsQuotedReplies
-
-  >
-
-
   Create a new model by parsing and validating input data from keyword arguments.
 
 

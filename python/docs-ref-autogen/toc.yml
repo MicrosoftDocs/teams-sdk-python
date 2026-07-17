@@ -113,10 +113,18 @@
     no-loc:
     - StreamCancelledError
     uid: microsoft_teams.apps.StreamCancelledError
-  - name: StreamerProtocol
+  - name: StreamNotAllowedError
     no-loc:
-    - StreamerProtocol
-    uid: microsoft_teams.apps.StreamerProtocol
+    - StreamNotAllowedError
+    uid: microsoft_teams.apps.StreamNotAllowedError
+  - name: StreamTimedOutError
+    no-loc:
+    - StreamTimedOutError
+    uid: microsoft_teams.apps.StreamTimedOutError
+  - name: TerminalStreamError
+    no-loc:
+    - TerminalStreamError
+    uid: microsoft_teams.apps.TerminalStreamError
   - name: TokenValidator
     no-loc:
     - TokenValidator
@@ -1155,14 +1163,28 @@
 - items:
   - name: Overview
     uid: microsoft_teams.botbuilder
-  - name: BotBuilderPlugin
+  - items:
+    - name: Overview
+      uid: microsoft_teams.botbuilder.adapter
+    - name: BotBuilderAdapter
+      no-loc:
+      - BotBuilderAdapter
+      uid: microsoft_teams.botbuilder.adapter.BotBuilderAdapter
+    - name: BotBuilderAdapterOptions
+      no-loc:
+      - BotBuilderAdapterOptions
+      uid: microsoft_teams.botbuilder.adapter.BotBuilderAdapterOptions
+    name: adapter
     no-loc:
-    - BotBuilderPlugin
-    uid: microsoft_teams.botbuilder.BotBuilderPlugin
-  - name: BotBuilderPluginOptions
+    - adapter
+  - name: BotBuilderAdapter
     no-loc:
-    - BotBuilderPluginOptions
-    uid: microsoft_teams.botbuilder.BotBuilderPluginOptions
+    - BotBuilderAdapter
+    uid: microsoft_teams.botbuilder.BotBuilderAdapter
+  - name: BotBuilderAdapterOptions
+    no-loc:
+    - BotBuilderAdapterOptions
+    uid: microsoft_teams.botbuilder.BotBuilderAdapterOptions
   name: microsoft_teams.botbuilder
   no-loc:
   - microsoft_teams.botbuilder
