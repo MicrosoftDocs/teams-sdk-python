@@ -73,9 +73,8 @@
     "globalMetadata": {
       "feedback_system": "Standard",
       "ms.topic": "reference",
-      "author": "charlesprakash",
-      "ms.author": "o365devx",
-      "manager": "billbl",
+      "author": "nickwalkmsft",
+      "ms.author": "nickwalk",
       "ms.service": "msteams",
       "uhfHeaderId": "MSDocsHeader-MicrosoftTeams",
       "apiPlatform": "python",
