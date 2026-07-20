@@ -1,2 +1,4 @@
-- name: Python reference
+- name: Teams SDK for Python overview
   href: overview.md
+- name: Teams Platform documentation
+  href: /microsoftteams/platform/overview
