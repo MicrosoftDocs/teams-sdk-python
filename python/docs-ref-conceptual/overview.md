@@ -1,23 +1,23 @@
 ---
-title: Microsoft Teams SDK (Teams AI Library) for Python
-description: Python reference documentation for Microsoft Teams SDK (Teams AI Library).
-ms.date: 11/17/2025
+title: Microsoft Teams SDK for Python Reference
+description: Reference documentation for Microsoft Teams SDK for TypeScript.
+ms.date: 07/17/2026
 ms.topic: reference
-keywords: sdk msteams teams ai python library reference latest
 ---
 
-# Microsoft Teams SDK (Teams AI Library) for Python
+# Teams SDK for Python 2.0.14
 
-The Microsoft Teams SDK (formerly known as *Teams AI Library*) for Python provides a Teams-centric interface for integrating GPT-based language models and user intent engines. It simplifies the development process by reducing the need to write and maintain complex conversational bot logic. You can leverage prebuilt, reusable code snippets that allow you to quickly build intelligent apps. This capabilities-driven approach allows you to focus on business logic rather than learning the intricacies of Microsoft Teams conversational frameworks.
+Released 7/7/2026 ([release notes](https://github.com/microsoft/teams.py/releases/tag/v2.0.14))
 
-## Finding the library
+Report issues and explore the source on [GitHub](https://github.com/microsoft/teams.py).
 
-For more about the TypeScript version of Teams SDK, refer to the source repo at [Teams SDK: TypeScript](https://github.com/microsoft/teams.ts).
+## PyPI packages
 
-For more about the .NET version of Teams SDK, refer to the source repo at [Teams SDK: DotNet](https://github.com/microsoft/teams.net).
-
-For more about the Python version of Teams SDK, refer to the source repo at[Teams SDK: Python](https://github.com/microsoft/teams.py)
-
-### Library packages
-
-The Python version of the library is provided through a package available via [pypi](https://pypi.org/). 
+| Package                                                                                  | Description                                                                                                                                                                 |
+|------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [microsoft-teams-apps](https://pypi.org/project/microsoft-teams-apps/2.0.14)             | High-level framework for building Microsoft Teams applications. Handles activity routing, authentication, and provides Microsoft Graph integration.                         |
+| [microsoft-teams-api](https://pypi.org/project/microsoft-teams-api/2.0.14)               | Core API client library for Microsoft Teams Bot Framework integration. Provides HTTP clients, authentication, and typed models for Teams Bot Framework APIs.                |
+| [microsoft-teams-botbuilder](https://pypi.org/project/microsoft-teams-botbuilder/2.0.14) | A package used to make the microsoft-teams-apps package backwards compatible with legacy bots built using BotBuilder.                                                       |
+| [microsoft-teams-cards](https://pypi.org/project/microsoft-teams-cards/2.0.14)           | Adaptive Cards models and specialized action types for Microsoft Teams applications. Provides Pydantic-based models for creating Adaptive Cards and Teams-specific actions. |
+| [microsoft-teams-common](https://pypi.org/project/microsoft-teams-common/2.0.14)         | Shared utilities including HTTP client, logging, storage, and event handling. Provides common functionality used across other Teams SDK packages.                           |
+| [microsoft-teams-graph](https://pypi.org/project/microsoft-teams-graph/2.0.14)           | This package provides seamless access to Microsoft Graph APIs from Teams bots and agents built with the Microsoft Teams SDK for Python.                                     |
