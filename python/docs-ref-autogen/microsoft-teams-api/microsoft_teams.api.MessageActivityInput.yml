@@ -27,10 +27,11 @@ constructor:
     | None = None, channelData: ChannelData | None = None, type: Literal[''message'']
     = ''message'', id: str | None = None, recipient: Account | None = None, text:
     str | None = None, summary: str | None = None, textFormat: Literal[''markdown'',
-    ''plain'', ''xml''] | None = None, attachmentLayout: AttachmentLayout | None =
-    None, attachments: List[Attachment] | None = None, suggestedActions: SuggestedActions
-    | None = None, deliveryMode: Literal[''normal'', ''notification'', ''expectReplies'',
-    ''ephemeral''] | None = None, value: Any | None = None, **extra_data: Any)'
+    ''plain'', ''xml'', ''extendedmarkdown''] | None = None, attachmentLayout: AttachmentLayout
+    | None = None, attachments: List[Attachment] | None = None, suggestedActions:
+    SuggestedActions | None = None, deliveryMode: Literal[''normal'', ''notification'',
+    ''expectReplies'', ''ephemeral''] | None = None, value: Any | None = None, **extra_data:
+    Any)'
   keywordOnlyParameters:
   - name: serviceUrl
     defaultValue: None
@@ -147,22 +148,7 @@ methods:
 
     Teams renders the quoted message as a preview bubble above the response text.
 
-    If text is provided, it is appended to the quoted message placeholder.
-
-
-    > [!WARNING]
-
-    > Coming Soon
-
-    >
-
-    > This API is coming soon and may change in the future.
-
-    >
-
-    > Diagnostic: ExperimentalTeamsQuotedReplies
-
-    >'
+    If text is provided, it is appended to the quoted message placeholder.'
   signature: 'add_quote(message_id: str, text: str | None = None) -> Self'
   parameters:
   - name: message_id
@@ -231,22 +217,7 @@ methods:
   name: prepend_quote
   summary: 'Prepend a quotedReply entity and placeholder before existing text.
 
-    Used by reply()/quote() for quote-above-response.
-
-
-    > [!WARNING]
-
-    > Coming Soon
-
-    >
-
-    > This API is coming soon and may change in the future.
-
-    >
-
-    > Diagnostic: ExperimentalTeamsQuotedReplies
-
-    >'
+    Used by reply()/quote() for quote-above-response.'
   signature: 'prepend_quote(message_id: str) -> Self'
   parameters:
   - name: message_id
@@ -325,11 +296,11 @@ methods:
 - uid: microsoft_teams.api.MessageActivityInput.with_text_format
   name: with_text_format
   summary: Set the format of text fields.
-  signature: 'with_text_format(text_format: Literal[''markdown'', ''plain'', ''xml''])
-    -> Self'
+  signature: 'with_text_format(text_format: Literal[''markdown'', ''plain'', ''xml'',
+    ''extendedmarkdown'']) -> Self'
   parameters:
   - name: text_format
-    description: Text format (markdown, plain, xml)
+    description: Text format (markdown, plain, xml, extendedmarkdown)
     isRequired: true
   return:
     description: Self for method chaining

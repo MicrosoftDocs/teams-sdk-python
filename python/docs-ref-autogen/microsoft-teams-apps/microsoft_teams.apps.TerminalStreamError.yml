@@ -1,0 +1,10 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.TerminalStreamError
+name: TerminalStreamError
+fullName: microsoft_teams.apps.TerminalStreamError
+module: microsoft_teams.apps
+summary: 'Base class for terminal streaming errors (HTTP 403)
+
+  that should not be retried.'
+constructor:
+  syntax: TerminalStreamError()

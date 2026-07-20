@@ -49,22 +49,7 @@ methods:
   summary: 'Send a message to the conversation with a quoted message reference prepended
     to the text.
 
-    Teams renders the quoted message as a preview bubble above the response text.
-
-
-    > [!WARNING]
-
-    > Coming Soon
-
-    >
-
-    > This API is coming soon and may change in the future.
-
-    >
-
-    > Diagnostic: ExperimentalTeamsQuotedReplies
-
-    >'
+    Teams renders the quoted message as a preview bubble above the response text.'
   signature: 'async quote(message_id: str, input: str | MessageActivityInput | MessageReactionActivityInput
     | TypingActivityInput) -> SentActivity'
   parameters:

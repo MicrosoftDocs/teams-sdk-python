@@ -1,0 +1,8 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.StreamNotAllowedError
+name: StreamNotAllowedError
+fullName: microsoft_teams.apps.StreamNotAllowedError
+module: microsoft_teams.apps
+summary: Raised when streaming is not allowed for this user or bot.
+constructor:
+  syntax: StreamNotAllowedError()

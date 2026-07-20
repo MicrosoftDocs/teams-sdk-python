@@ -18,16 +18,16 @@ summary: 'Details related to a team.
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
   syntax: 'TeamDetails(*, id: str, name: str | None = None, type: Literal[''standard'',
-    ''sharedChannel'', ''privateChannel''], aadGroupId: str | None = None, channelCount:
-    int | None = None, memberCount: int | None = None, tenantId: str | None = None,
-    **extra_data: Any)'
+    ''sharedChannel'', ''privateChannel''] | None = None, aadGroupId: str | None =
+    None, channelCount: int | None = None, memberCount: int | None = None, tenantId:
+    str | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: id
     isRequired: true
   - name: name
     defaultValue: None
   - name: type
-    isRequired: true
+    defaultValue: None
   - name: aadGroupId
     defaultValue: None
   - name: channelCount
@@ -73,4 +73,5 @@ attributes:
 - uid: microsoft_teams.api.TeamDetails.type
   name: type
   summary: The type of the team. Valid values are standard, sharedChannel and privateChannel.
-  signature: 'type: Literal[''standard'', ''sharedChannel'', ''privateChannel'']'
+  signature: 'type: Literal[''standard'', ''sharedChannel'', ''privateChannel''] |
+    None'

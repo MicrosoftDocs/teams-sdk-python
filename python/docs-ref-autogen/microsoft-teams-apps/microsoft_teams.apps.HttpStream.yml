@@ -61,6 +61,14 @@ methods:
   signature: clear_text() -> None
 - uid: microsoft_teams.apps.HttpStream.close
   name: close
+  summary: 'Finalize the current streamed message.
+
+
+    Closing is idempotent until the next emit or update. Emitting or
+
+    updating after close starts a new streamed message using the same
+
+    stream instance.'
   signature: async close() -> SentActivity | None
 - uid: microsoft_teams.apps.HttpStream.emit
   name: emit
@@ -96,14 +104,18 @@ attributes:
   name: canceled
   summary: 'Whether the stream has been canceled.
 
-    For example when the user pressed the Stop button or the 2-minute timeout has
-    exceeded.'
+    For example when the user pressed the Stop button.'
 - uid: microsoft_teams.apps.HttpStream.closed
   name: closed
-  summary: Whether the final stream message has been sent.
+  summary: Whether the current streamed message has been finalized.
 - uid: microsoft_teams.apps.HttpStream.count
   name: count
   summary: The total number of chunks queued to be sent.
 - uid: microsoft_teams.apps.HttpStream.sequence
   name: sequence
   summary: The sequence number, representing the number of stream activities sent.
+- uid: microsoft_teams.apps.HttpStream.timed_out
+  name: timed_out
+  summary: 'Whether the stream has timed out.
+
+    For example when the streaming has exceeded two minutes.'
