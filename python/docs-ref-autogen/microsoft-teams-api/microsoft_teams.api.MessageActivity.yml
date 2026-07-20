@@ -26,11 +26,11 @@ constructor:
     | SensitiveUsageEntity | ProductInfoEntity | QuotedReplyEntity | TargetedMessageInfoEntity
     | UnknownEntity] | None = None, channelData: ChannelData | None = None, type:
     Literal[''message''] = ''message'', id: str, recipient: Account, text: str = '''',
-    summary: str | None = None, textFormat: Literal[''markdown'', ''plain'', ''xml'']
-    | None = None, attachmentLayout: AttachmentLayout | None = None, attachments:
-    List[Attachment] | None = None, suggestedActions: SuggestedActions | None = None,
-    deliveryMode: Literal[''normal'', ''notification'', ''expectReplies'', ''ephemeral'']
-    | None = None, value: Any | None = None, **extra_data: Any)'
+    summary: str | None = None, textFormat: Literal[''markdown'', ''plain'', ''xml'',
+    ''extendedmarkdown''] | None = None, attachmentLayout: AttachmentLayout | None
+    = None, attachments: List[Attachment] | None = None, suggestedActions: SuggestedActions
+    | None = None, deliveryMode: Literal[''normal'', ''notification'', ''expectReplies'',
+    ''ephemeral''] | None = None, value: Any | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: serviceUrl
     defaultValue: None
@@ -86,22 +86,7 @@ methods:
     description: The mention entity if found, None otherwise
 - uid: microsoft_teams.api.MessageActivity.get_quoted_messages
   name: get_quoted_messages
-  summary: 'Get all quoted reply entities from this message.
-
-
-    > [!WARNING]
-
-    > Coming Soon
-
-    >
-
-    > This API is coming soon and may change in the future.
-
-    >
-
-    > Diagnostic: ExperimentalTeamsQuotedReplies
-
-    >'
+  summary: Get all quoted reply entities from this message.
   signature: get_quoted_messages() -> list[microsoft_teams.api.models.entity.quoted_reply_entity.QuotedReplyEntity]
   return:
     description: List of quoted reply entities, empty if none

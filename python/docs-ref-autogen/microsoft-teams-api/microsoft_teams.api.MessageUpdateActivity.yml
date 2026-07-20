@@ -26,8 +26,9 @@ constructor:
     | SensitiveUsageEntity | ProductInfoEntity | QuotedReplyEntity | TargetedMessageInfoEntity
     | UnknownEntity] | None = None, channelData: MessageUpdateChannelData, type: Literal[''messageUpdate'']
     = ''messageUpdate'', id: str, recipient: Account, text: str = '''', speak: str
-    | None = None, summary: str | None = None, expiration: datetime | None = None,
-    value: Any | None = None, **extra_data: Any)'
+    | None = None, summary: str | None = None, attachmentLayout: AttachmentLayout
+    | None = None, attachments: List[Attachment] | None = None, expiration: datetime
+    | None = None, value: Any | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: serviceUrl
     defaultValue: None
@@ -59,6 +60,10 @@ constructor:
   - name: speak
     defaultValue: None
   - name: summary
+    defaultValue: None
+  - name: attachmentLayout
+    defaultValue: None
+  - name: attachments
     defaultValue: None
   - name: expiration
     defaultValue: None

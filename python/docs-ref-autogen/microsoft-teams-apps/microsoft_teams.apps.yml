@@ -115,5 +115,7 @@ classes:
 - microsoft_teams.apps.StartEvent
 - microsoft_teams.apps.StopEvent
 - microsoft_teams.apps.StreamCancelledError
-- microsoft_teams.apps.StreamerProtocol
+- microsoft_teams.apps.StreamNotAllowedError
+- microsoft_teams.apps.StreamTimedOutError
+- microsoft_teams.apps.TerminalStreamError
 - microsoft_teams.apps.TokenValidator

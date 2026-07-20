@@ -1,0 +1,22 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.botbuilder.BotBuilderAdapterOptions
+name: BotBuilderAdapterOptions
+fullName: microsoft_teams.botbuilder.BotBuilderAdapterOptions
+module: microsoft_teams.botbuilder
+summary: Options for configuring the BotBuilder HTTP adapter.
+constructor:
+  syntax: BotBuilderAdapterOptions()
+attributes:
+- uid: microsoft_teams.botbuilder.BotBuilderAdapterOptions.cloud_adapter
+  name: cloud_adapter
+  signature: 'cloud_adapter: CloudAdapter'
+- uid: microsoft_teams.botbuilder.BotBuilderAdapterOptions.credentials
+  name: credentials
+  signature: 'credentials: ClientCredentials | TokenCredentials | ManagedIdentityCredentials
+    | FederatedIdentityCredentials'
+- uid: microsoft_teams.botbuilder.BotBuilderAdapterOptions.handler
+  name: handler
+  signature: 'handler: ActivityHandler'
+- uid: microsoft_teams.botbuilder.BotBuilderAdapterOptions.http_server_adapter
+  name: http_server_adapter
+  signature: 'http_server_adapter: HttpServerAdapter'
