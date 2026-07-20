@@ -1163,20 +1163,6 @@
 - items:
   - name: Overview
     uid: microsoft_teams.botbuilder
-  - items:
-    - name: Overview
-      uid: microsoft_teams.botbuilder.adapter
-    - name: BotBuilderAdapter
-      no-loc:
-      - BotBuilderAdapter
-      uid: microsoft_teams.botbuilder.adapter.BotBuilderAdapter
-    - name: BotBuilderAdapterOptions
-      no-loc:
-      - BotBuilderAdapterOptions
-      uid: microsoft_teams.botbuilder.adapter.BotBuilderAdapterOptions
-    name: adapter
-    no-loc:
-    - adapter
   - name: BotBuilderAdapter
     no-loc:
     - BotBuilderAdapter
