@@ -57,10 +57,10 @@
     no-loc:
     - FunctionContext
     uid: microsoft_teams.apps.FunctionContext
-  - name: HttpServer
+  - name: HtmlWidgetMarkdownOptions
     no-loc:
-    - HttpServer
-    uid: microsoft_teams.apps.HttpServer
+    - HtmlWidgetMarkdownOptions
+    uid: microsoft_teams.apps.HtmlWidgetMarkdownOptions
   - name: HttpServerAdapter
     no-loc:
     - HttpServerAdapter
@@ -69,6 +69,10 @@
     no-loc:
     - HttpStream
     uid: microsoft_teams.apps.HttpStream
+  - name: InjectWidgetProtocolOptions
+    no-loc:
+    - InjectWidgetProtocolOptions
+    uid: microsoft_teams.apps.InjectWidgetProtocolOptions
   - name: PluginActivityEvent
     no-loc:
     - PluginActivityEvent
@@ -97,6 +101,10 @@
     no-loc:
     - PluginStartEvent
     uid: microsoft_teams.apps.PluginStartEvent
+  - name: SecurityPolicyWarning
+    no-loc:
+    - SecurityPolicyWarning
+    uid: microsoft_teams.apps.SecurityPolicyWarning
   - name: SignInEvent
     no-loc:
     - SignInEvent
@@ -207,6 +215,10 @@
     no-loc:
     - AppBasedLinkQuery
     uid: microsoft_teams.api.AppBasedLinkQuery
+  - name: AppInfo
+    no-loc:
+    - AppInfo
+    uid: microsoft_teams.api.AppInfo
   - name: Appearance
     no-loc:
     - Appearance
@@ -255,6 +267,10 @@
     no-loc:
     - CacheInfo
     uid: microsoft_teams.api.CacheInfo
+  - name: CallToolRequest
+    no-loc:
+    - CallToolRequest
+    uid: microsoft_teams.api.CallToolRequest
   - name: CallerIds
     no-loc:
     - CallerIds
@@ -483,6 +499,26 @@
     no-loc:
     - HeroCardAttachment
     uid: microsoft_teams.api.HeroCardAttachment
+  - name: HtmlWidgetCallToolInvokeActivity
+    no-loc:
+    - HtmlWidgetCallToolInvokeActivity
+    uid: microsoft_teams.api.HtmlWidgetCallToolInvokeActivity
+  - name: HtmlWidgetCallToolResponse
+    no-loc:
+    - HtmlWidgetCallToolResponse
+    uid: microsoft_teams.api.HtmlWidgetCallToolResponse
+  - name: HtmlWidgetPayload
+    no-loc:
+    - HtmlWidgetPayload
+    uid: microsoft_teams.api.HtmlWidgetPayload
+  - name: HtmlWidgetPermissions
+    no-loc:
+    - HtmlWidgetPermissions
+    uid: microsoft_teams.api.HtmlWidgetPermissions
+  - name: HtmlWidgetSecurityPolicy
+    no-loc:
+    - HtmlWidgetSecurityPolicy
+    uid: microsoft_teams.api.HtmlWidgetSecurityPolicy
   - name: HttpError
     no-loc:
     - HttpError
@@ -519,6 +555,34 @@
     no-loc:
     - ManagedIdentityCredentials
     uid: microsoft_teams.api.ManagedIdentityCredentials
+  - name: McpUiAudioContent
+    no-loc:
+    - McpUiAudioContent
+    uid: microsoft_teams.api.McpUiAudioContent
+  - name: McpUiCallToolResult
+    no-loc:
+    - McpUiCallToolResult
+    uid: microsoft_teams.api.McpUiCallToolResult
+  - name: McpUiImageContent
+    no-loc:
+    - McpUiImageContent
+    uid: microsoft_teams.api.McpUiImageContent
+  - name: McpUiResourceContent
+    no-loc:
+    - McpUiResourceContent
+    uid: microsoft_teams.api.McpUiResourceContent
+  - name: McpUiTextContent
+    no-loc:
+    - McpUiTextContent
+    uid: microsoft_teams.api.McpUiTextContent
+  - name: McpUiUpdateModelContextParams
+    no-loc:
+    - McpUiUpdateModelContextParams
+    uid: microsoft_teams.api.McpUiUpdateModelContextParams
+  - name: McpUiUpdateModelContextRequest
+    no-loc:
+    - McpUiUpdateModelContextRequest
+    uid: microsoft_teams.api.McpUiUpdateModelContextRequest
   - name: MediaCard
     no-loc:
     - MediaCard
@@ -795,6 +859,30 @@
     no-loc:
     - ReadReceiptEventActivity
     uid: microsoft_teams.api.ReadReceiptEventActivity
+  - name: SearchInvokeActivity
+    no-loc:
+    - SearchInvokeActivity
+    uid: microsoft_teams.api.SearchInvokeActivity
+  - name: SearchInvokeOptions
+    no-loc:
+    - SearchInvokeOptions
+    uid: microsoft_teams.api.SearchInvokeOptions
+  - name: SearchInvokeResponseValue
+    no-loc:
+    - SearchInvokeResponseValue
+    uid: microsoft_teams.api.SearchInvokeResponseValue
+  - name: SearchInvokeResult
+    no-loc:
+    - SearchInvokeResult
+    uid: microsoft_teams.api.SearchInvokeResult
+  - name: SearchInvokeValue
+    no-loc:
+    - SearchInvokeValue
+    uid: microsoft_teams.api.SearchInvokeValue
+  - name: SearchResponse
+    no-loc:
+    - SearchResponse
+    uid: microsoft_teams.api.SearchResponse
   - name: SensitiveUsage
     no-loc:
     - SensitiveUsage

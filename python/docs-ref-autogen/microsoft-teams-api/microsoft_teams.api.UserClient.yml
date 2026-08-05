@@ -18,7 +18,46 @@ constructor:
   - name: api_client_settings
     description: Optional API client settings.
     defaultValue: None
+methods:
+- uid: microsoft_teams.api.UserClient.exchange_token
+  name: exchange_token
+  summary: Exchange a user token for the given connection.
+  signature: 'async exchange_token(params: ExchangeUserTokenParams) -> TokenResponse'
+  parameters:
+  - name: params
+    isRequired: true
+- uid: microsoft_teams.api.UserClient.get_aad_tokens
+  name: get_aad_tokens
+  summary: Get AAD tokens for the given connection and resource urls.
+  signature: 'async get_aad_tokens(params: GetUserAADTokenParams) -> Dict[str, TokenResponse]'
+  parameters:
+  - name: params
+    isRequired: true
+- uid: microsoft_teams.api.UserClient.get_token
+  name: get_token
+  summary: Get a user token for the given connection.
+  signature: 'async get_token(params: GetUserTokenParams) -> TokenResponse'
+  parameters:
+  - name: params
+    isRequired: true
+- uid: microsoft_teams.api.UserClient.get_token_status
+  name: get_token_status
+  summary: Get the token status for a user.
+  signature: 'async get_token_status(params: GetUserTokenStatusParams) -> List[TokenStatus]'
+  parameters:
+  - name: params
+    isRequired: true
+- uid: microsoft_teams.api.UserClient.sign_out
+  name: sign_out
+  summary: Sign a user out of the given connection.
+  signature: 'async sign_out(params: SignOutUserParams) -> None'
+  parameters:
+  - name: params
+    isRequired: true
 attributes:
 - uid: microsoft_teams.api.UserClient.http
   name: http
   summary: Get the HTTP client instance.
+- uid: microsoft_teams.api.UserClient.token
+  name: token
+  summary: Get the user token client.

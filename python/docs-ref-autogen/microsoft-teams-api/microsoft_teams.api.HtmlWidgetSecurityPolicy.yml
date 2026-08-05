@@ -1,0 +1,62 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.HtmlWidgetSecurityPolicy
+name: HtmlWidgetSecurityPolicy
+fullName: microsoft_teams.api.HtmlWidgetSecurityPolicy
+module: microsoft_teams.api
+summary: 'The security policy for an HTML widget, controlling allowed origins
+
+  for network requests, static resources, nested iframes, and base URIs.
+
+
+  Diagnostic: ExperimentalTeamsHtmlWidget
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'HtmlWidgetSecurityPolicy(*, connectDomains: list[str] | None = None, resourceDomains:
+    list[str] | None = None, frameDomains: list[str] | None = None, baseUriDomains:
+    list[str] | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: connectDomains
+    defaultValue: None
+  - name: resourceDomains
+    defaultValue: None
+  - name: frameDomains
+    defaultValue: None
+  - name: baseUriDomains
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.HtmlWidgetSecurityPolicy.base_uri_domains
+  name: base_uri_domains
+  summary: Allowed base URIs for the document.
+  signature: 'base_uri_domains: list[str] | None'
+- uid: microsoft_teams.api.HtmlWidgetSecurityPolicy.connect_domains
+  name: connect_domains
+  summary: Allowed origins for network requests.
+  signature: 'connect_domains: list[str] | None'
+- uid: microsoft_teams.api.HtmlWidgetSecurityPolicy.frame_domains
+  name: frame_domains
+  summary: Allowed origins for nested iframes.
+  signature: 'frame_domains: list[str] | None'
+- uid: microsoft_teams.api.HtmlWidgetSecurityPolicy.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.HtmlWidgetSecurityPolicy.resource_domains
+  name: resource_domains
+  summary: Allowed origins for static resources.
+  signature: 'resource_domains: list[str] | None'

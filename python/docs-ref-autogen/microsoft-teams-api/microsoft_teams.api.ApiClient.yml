@@ -26,6 +26,9 @@ constructor:
     description: Optional cloud environment for sovereign cloud support.
     defaultValue: None
 attributes:
+- uid: microsoft_teams.api.ApiClient.bots
+  name: bots
+  summary: Get the bot client.
 - uid: microsoft_teams.api.ApiClient.http
   name: http
   summary: Get the HTTP client instance.

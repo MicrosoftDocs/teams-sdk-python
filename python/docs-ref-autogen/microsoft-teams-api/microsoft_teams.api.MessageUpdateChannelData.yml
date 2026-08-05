@@ -17,15 +17,18 @@ summary: 'Channel data specific to message update activities.
 
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
-  syntax: 'MessageUpdateChannelData(*, channel: ChannelInfo | None = None, eventType:
-    Literal[''undeleteMessage'', ''editMessage''], team: TeamInfo | None = None, notification:
-    NotificationInfo | None = None, tenant: TenantInfo | None = None, meeting: MeetingInfo
-    | None = None, settings: ChannelDataSettings | None = None, feedbackLoopEnabled:
-    bool | None = None, feedbackLoop: FeedbackLoop | None = None, streamId: str |
-    None = None, streamType: Literal[''informative'', ''streaming'', ''final''] |
-    None = None, streamSequence: int | None = None, **extra_data: Any)'
+  syntax: 'MessageUpdateChannelData(*, channel: ChannelInfo | None = None, app: AppInfo
+    | None = None, eventType: Literal[''undeleteMessage'', ''editMessage''], team:
+    TeamInfo | None = None, notification: NotificationInfo | None = None, tenant:
+    TenantInfo | None = None, meeting: MeetingInfo | None = None, settings: ChannelDataSettings
+    | None = None, feedbackLoopEnabled: bool | None = None, feedbackLoop: FeedbackLoop
+    | None = None, streamId: str | None = None, streamType: Literal[''informative'',
+    ''streaming'', ''final''] | None = None, streamSequence: int | None = None, **extra_data:
+    Any)'
   keywordOnlyParameters:
   - name: channel
+    defaultValue: None
+  - name: app
     defaultValue: None
   - name: eventType
     isRequired: true

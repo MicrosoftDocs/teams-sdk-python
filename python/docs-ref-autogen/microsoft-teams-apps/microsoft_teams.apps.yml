@@ -19,6 +19,35 @@ functions:
     defaultValue: None
   - name: description
     defaultValue: None
+- uid: microsoft_teams.apps.build_html_widget_markdown
+  name: build_html_widget_markdown
+  summary: 'Wraps an HTML widget payload in the >>``<<>>`<<html-widget markdown code
+    fence
+
+    format required by Teams to render the widget in a message.
+
+
+    Diagnostic: ExperimentalTeamsHtmlWidget'
+  signature: 'build_html_widget_markdown(payload: HtmlWidgetPayload, options: HtmlWidgetMarkdownOptions
+    | None = None) -> str'
+  parameters:
+  - name: payload
+    isRequired: true
+  - name: options
+    defaultValue: None
+- uid: microsoft_teams.apps.build_html_widget_message
+  name: build_html_widget_message
+  summary: 'Builds a message activity containing an HTML widget, ready to be sent.
+
+
+    Diagnostic: ExperimentalTeamsHtmlWidget'
+  signature: 'build_html_widget_message(payload: HtmlWidgetPayload, options: HtmlWidgetMarkdownOptions
+    | None = None) -> MessageActivityInput'
+  parameters:
+  - name: payload
+    isRequired: true
+  - name: options
+    defaultValue: None
 - uid: microsoft_teams.apps.get_event_type_from_signature
   name: get_event_type_from_signature
   summary: Extract event type from function signature by inspecting the first parameter's
@@ -39,6 +68,32 @@ functions:
   parameters:
   - name: cls
     isRequired: true
+- uid: microsoft_teams.apps.inject_widget_protocol
+  name: inject_widget_protocol
+  summary: 'Injects the MCP Apps protocol script into widget HTML.
+
+
+    This sets up:
+
+    - The ui/initialize handshake (required for rendering)
+
+    - Size reporting via ui/notifications/size-changed
+
+    - Optional notification hooks (opt-in via notifications option)
+
+
+    If the HTML already contains the protocol (detected by ''ui/initialize''), it
+    is returned unchanged.
+
+
+    Diagnostic: ExperimentalTeamsHtmlWidget'
+  signature: 'inject_widget_protocol(html: str, options: InjectWidgetProtocolOptions
+    | None = None) -> str'
+  parameters:
+  - name: html
+    isRequired: true
+  - name: options
+    defaultValue: None
 - uid: microsoft_teams.apps.is_registered_event
   name: is_registered_event
   summary: Check if an event name is registered.
@@ -69,6 +124,26 @@ functions:
     description: <xref:mailto:abc@thread.skype>;messageid=123`)
     types:
     - <xref:The> <xref:threaded> <xref:conversation> <xref:ID> (<xref:e.g.> `<xref:19>
+- uid: microsoft_teams.apps.try_get_widget_model_context
+  name: try_get_widget_model_context
+  summary: "Attempt to extract an MCP UI update-model-context request from a message\
+    \ activity's value.\n\nA widget can request that content be added to the model\
+    \ context by reusing the messageBack\nmechanism (like Action.Submit for adaptive\
+    \ cards).\nSuch a request arrives as a normal message activity whose value carries\
+    \ the\nMcpUiUpdateModelContextRequest payload.\nThis is fire-and-forget: the bot\
+    \ does not respond.\n\nThis helper is tolerant of two wire shapes:\n   1. The\
+    \ raw request object ({\"method\": \"ui/update-model-context\", \"params\": ...}).\
+    \ \n\n   2. An envelope of the form {\"type\": \"widgetModelContext\", \"data\"\
+    : <request>}. \n\nDiagnostic: ExperimentalTeamsHtmlWidget"
+  signature: 'try_get_widget_model_context(activity: Any) -> McpUiUpdateModelContextRequest
+    | None'
+  parameters:
+  - name: activity
+    description: A message activity (or any object with a value attribute).
+    isRequired: true
+  return:
+    description: The parsed request, or None if value is not a valid update-model-context
+      request.
 - uid: microsoft_teams.apps.validate_remote_function_request
   name: validate_remote_function_request
   summary: Validate JWT and extract client context from request headers for remote
@@ -86,6 +161,28 @@ functions:
   return:
     description: Tuple of (ClientContext, None) on success or (None, error_message)
       on failure.
+- uid: microsoft_teams.apps.validate_security_policy
+  name: validate_security_policy
+  summary: 'Validates that external references in widget HTML are covered by the
+
+    declared security policy. Returns a list of warnings for any references
+
+    to origins not present in the appropriate policy field.
+
+
+    This is a static analysis tool - it cannot catch dynamically constructed URLs.
+
+    Use the debug_csp_violations option on inject_widget_protocol for runtime detection.
+
+
+    Diagnostic: ExperimentalTeamsHtmlWidget'
+  signature: 'validate_security_policy(html: str, policy: HtmlWidgetSecurityPolicy)
+    -> list[microsoft_teams.apps.utils.html_widget.SecurityPolicyWarning]'
+  parameters:
+  - name: html
+    isRequired: true
+  - name: policy
+    isRequired: true
 classes:
 - microsoft_teams.apps.ActivityContext
 - microsoft_teams.apps.ActivityEvent
@@ -101,9 +198,10 @@ classes:
 - microsoft_teams.apps.EventProtocol
 - microsoft_teams.apps.FastAPIAdapter
 - microsoft_teams.apps.FunctionContext
-- microsoft_teams.apps.HttpServer
+- microsoft_teams.apps.HtmlWidgetMarkdownOptions
 - microsoft_teams.apps.HttpServerAdapter
 - microsoft_teams.apps.HttpStream
+- microsoft_teams.apps.InjectWidgetProtocolOptions
 - microsoft_teams.apps.PluginActivityEvent
 - microsoft_teams.apps.PluginActivityResponseEvent
 - microsoft_teams.apps.PluginActivitySentEvent
@@ -111,6 +209,7 @@ classes:
 - microsoft_teams.apps.PluginErrorEvent
 - microsoft_teams.apps.PluginOptions
 - microsoft_teams.apps.PluginStartEvent
+- microsoft_teams.apps.SecurityPolicyWarning
 - microsoft_teams.apps.SignInEvent
 - microsoft_teams.apps.StartEvent
 - microsoft_teams.apps.StopEvent

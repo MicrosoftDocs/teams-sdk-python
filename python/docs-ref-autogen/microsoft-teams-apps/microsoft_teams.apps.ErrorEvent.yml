@@ -19,8 +19,9 @@ constructor:
     | TabSubmitInvokeActivity | TaskFetchInvokeActivity | TaskSubmitInvokeActivity
     | MessageFetchTaskInvokeActivity | MessageSubmitActionInvokeActivity | HandoffActionInvokeActivity
     | SignInTokenExchangeInvokeActivity | SignInVerifyStateInvokeActivity | SignInFailureInvokeActivity
-    | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity | InstalledActivity
-    | UninstalledActivity | None = None)'
+    | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity | SearchInvokeActivity
+    | HtmlWidgetCallToolInvokeActivity | InstalledActivity | UninstalledActivity |
+    None = None)'
   parameters:
   - name: error
     isRequired: true
@@ -44,8 +45,9 @@ attributes:
     | TabSubmitInvokeActivity | TaskFetchInvokeActivity | TaskSubmitInvokeActivity
     | MessageFetchTaskInvokeActivity | MessageSubmitActionInvokeActivity | HandoffActionInvokeActivity
     | SignInTokenExchangeInvokeActivity | SignInVerifyStateInvokeActivity | SignInFailureInvokeActivity
-    | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity | InstalledActivity
-    | UninstalledActivity | None = None'
+    | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity | SearchInvokeActivity
+    | HtmlWidgetCallToolInvokeActivity | InstalledActivity | UninstalledActivity |
+    None = None'
 - uid: microsoft_teams.apps.ErrorEvent.context
   name: context
   signature: 'context: Dict[str, Any] | None = None'

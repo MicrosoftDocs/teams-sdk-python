@@ -1,0 +1,45 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.SearchInvokeOptions
+name: SearchInvokeOptions
+fullName: microsoft_teams.api.SearchInvokeOptions
+module: microsoft_teams.api
+summary: 'Defines the query options for an Invoke activity with Name of ''application/search''.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'SearchInvokeOptions(*, skip: int | None = None, top: int | None = None,
+    **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: skip
+    defaultValue: None
+  - name: top
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.SearchInvokeOptions.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.SearchInvokeOptions.skip
+  name: skip
+  summary: The starting reference number from which ordered search results should
+    be returned.
+  signature: 'skip: int | None'
+- uid: microsoft_teams.api.SearchInvokeOptions.top
+  name: top
+  summary: The number of search results that should be returned.
+  signature: 'top: int | None'

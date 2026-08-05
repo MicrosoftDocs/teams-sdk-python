@@ -14,13 +14,13 @@ constructor:
   - name: options
     description: Optional Client or ClientOptions instance. If not provided, a default
       Client will be created.
-    defaultValue: None
+    isRequired: true
   - name: api_client_settings
     description: Optional API client settings.
-    defaultValue: None
+    isRequired: true
   - name: cloud
     description: Optional cloud environment for sovereign cloud support.
-    defaultValue: None
+    isRequired: true
 attributes:
 - uid: microsoft_teams.api.BotClient.http
   name: http

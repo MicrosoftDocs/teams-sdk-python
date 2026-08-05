@@ -1,0 +1,47 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.InjectWidgetProtocolOptions
+name: InjectWidgetProtocolOptions
+fullName: microsoft_teams.apps.InjectWidgetProtocolOptions
+module: microsoft_teams.apps
+summary: Options for injecting the MCP Apps protocol into widget HTML.
+constructor:
+  syntax: 'InjectWidgetProtocolOptions(name: str | None = None, version: str | None
+    = None, available_display_modes: list[Union[Literal[''inline'', ''fullscreen'',
+    ''pip''], str]] | None = None, notifications: list[Union[Literal[''tool-result'',
+    ''tool-input'', ''tool-input-partial'', ''tool-cancelled'', ''host-context-changed'',
+    ''resource-teardown''], str]] | None = None, debug_csp_violations: bool = False)'
+  parameters:
+  - name: name
+    defaultValue: None
+  - name: version
+    defaultValue: None
+  - name: available_display_modes
+    defaultValue: None
+  - name: notifications
+    defaultValue: None
+  - name: debug_csp_violations
+    defaultValue: 'False'
+attributes:
+- uid: microsoft_teams.apps.InjectWidgetProtocolOptions.available_display_modes
+  name: available_display_modes
+  summary: Display modes this widget supports (e.g. ['inline', 'fullscreen']).
+  signature: 'available_display_modes: list[Union[Literal[''inline'', ''fullscreen'',
+    ''pip''], str]] | None = None'
+- uid: microsoft_teams.apps.InjectWidgetProtocolOptions.debug_csp_violations
+  name: debug_csp_violations
+  summary: When true, injects a CSP violation listener for dev-time debugging.
+  signature: 'debug_csp_violations: bool = False'
+- uid: microsoft_teams.apps.InjectWidgetProtocolOptions.name
+  name: name
+  summary: The widget app name sent during ui/initialize. Defaults to 'widget'.
+  signature: 'name: str | None = None'
+- uid: microsoft_teams.apps.InjectWidgetProtocolOptions.notifications
+  name: notifications
+  summary: Host notifications to listen for (e.g. ['tool-result', 'tool-input']).
+  signature: 'notifications: list[Union[Literal[''tool-result'', ''tool-input'', ''tool-input-partial'',
+    ''tool-cancelled'', ''host-context-changed'', ''resource-teardown''], str]] |
+    None = None'
+- uid: microsoft_teams.apps.InjectWidgetProtocolOptions.version
+  name: version
+  summary: The widget app version sent during ui/initialize. Defaults to '1.0.0'.
+  signature: 'version: str | None = None'

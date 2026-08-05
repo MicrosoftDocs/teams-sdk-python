@@ -22,8 +22,9 @@ constructor:
     TaskSubmitInvokeActivity | MessageFetchTaskInvokeActivity | MessageSubmitActionInvokeActivity
     | HandoffActionInvokeActivity | SignInTokenExchangeInvokeActivity | SignInVerifyStateInvokeActivity
     | SignInFailureInvokeActivity | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity
-    | InstalledActivity | UninstalledActivity, conversation_ref: ConversationReference,
-    response: InvokeResponse[Any] | None)'
+    | SearchInvokeActivity | HtmlWidgetCallToolInvokeActivity | InstalledActivity
+    | UninstalledActivity, conversation_ref: ConversationReference, response: InvokeResponse[Any]
+    | None)'
   parameters:
   - name: activity
     isRequired: true
@@ -48,8 +49,8 @@ attributes:
     | TabSubmitInvokeActivity | TaskFetchInvokeActivity | TaskSubmitInvokeActivity
     | MessageFetchTaskInvokeActivity | MessageSubmitActionInvokeActivity | HandoffActionInvokeActivity
     | SignInTokenExchangeInvokeActivity | SignInVerifyStateInvokeActivity | SignInFailureInvokeActivity
-    | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity | InstalledActivity
-    | UninstalledActivity'
+    | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity | SearchInvokeActivity
+    | HtmlWidgetCallToolInvokeActivity | InstalledActivity | UninstalledActivity'
 - uid: microsoft_teams.apps.PluginActivityResponseEvent.conversation_ref
   name: conversation_ref
   summary: The conversation reference for the activity
