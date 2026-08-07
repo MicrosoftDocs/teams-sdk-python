@@ -32,6 +32,19 @@ methods:
     isRequired: true
   return:
     description: An operations object for managing activities in the conversation.
+- uid: microsoft_teams.api.ConversationClient.add_reaction
+  name: add_reaction
+  summary: Add a reaction to an activity in a conversation.
+  signature: 'async add_reaction(conversation_id: str, activity_id: str, reaction_type:
+    Literal[''like'', ''heart'', ''1f440_eyes'', ''2705_whiteheavycheckmark'', ''launch'',
+    ''1f4cc_pushpin''] | str) -> None'
+  parameters:
+  - name: conversation_id
+    isRequired: true
+  - name: activity_id
+    isRequired: true
+  - name: reaction_type
+    isRequired: true
 - uid: microsoft_teams.api.ConversationClient.create
   name: create
   summary: Create a new conversation.
@@ -42,6 +55,94 @@ methods:
     isRequired: true
   return:
     description: The created conversation resource.
+- uid: microsoft_teams.api.ConversationClient.create_activity
+  name: create_activity
+  summary: Create an activity in a conversation.
+  signature: 'async create_activity(conversation_id: str, activity: MessageActivityInput
+    | MessageReactionActivityInput | TypingActivityInput)'
+  parameters:
+  - name: conversation_id
+    isRequired: true
+  - name: activity
+    isRequired: true
+- uid: microsoft_teams.api.ConversationClient.create_targeted_activity
+  name: create_targeted_activity
+  summary: Create a targeted activity in a conversation.
+  signature: 'async create_targeted_activity(conversation_id: str, activity: MessageActivityInput
+    | MessageReactionActivityInput | TypingActivityInput)'
+  parameters:
+  - name: conversation_id
+    isRequired: true
+  - name: activity
+    isRequired: true
+- uid: microsoft_teams.api.ConversationClient.delete_activity
+  name: delete_activity
+  summary: Delete an activity in a conversation.
+  signature: 'async delete_activity(conversation_id: str, activity_id: str)'
+  parameters:
+  - name: conversation_id
+    isRequired: true
+  - name: activity_id
+    isRequired: true
+- uid: microsoft_teams.api.ConversationClient.delete_reaction
+  name: delete_reaction
+  summary: Delete a reaction from an activity in a conversation.
+  signature: 'async delete_reaction(conversation_id: str, activity_id: str, reaction_type:
+    Literal[''like'', ''heart'', ''1f440_eyes'', ''2705_whiteheavycheckmark'', ''launch'',
+    ''1f4cc_pushpin''] | str) -> None'
+  parameters:
+  - name: conversation_id
+    isRequired: true
+  - name: activity_id
+    isRequired: true
+  - name: reaction_type
+    isRequired: true
+- uid: microsoft_teams.api.ConversationClient.delete_targeted_activity
+  name: delete_targeted_activity
+  summary: Delete a targeted activity in a conversation.
+  signature: 'async delete_targeted_activity(conversation_id: str, activity_id: str)'
+  parameters:
+  - name: conversation_id
+    isRequired: true
+  - name: activity_id
+    isRequired: true
+- uid: microsoft_teams.api.ConversationClient.get_activity_members
+  name: get_activity_members
+  summary: Get the members of an activity in a conversation.
+  signature: 'async get_activity_members(conversation_id: str, activity_id: str)'
+  parameters:
+  - name: conversation_id
+    isRequired: true
+  - name: activity_id
+    isRequired: true
+- uid: microsoft_teams.api.ConversationClient.get_member_by_id
+  name: get_member_by_id
+  summary: Get a member of a conversation by id.
+  signature: 'async get_member_by_id(conversation_id: str, member_id: str)'
+  parameters:
+  - name: conversation_id
+    isRequired: true
+  - name: member_id
+    isRequired: true
+- uid: microsoft_teams.api.ConversationClient.get_members
+  name: get_members
+  summary: Get the members of a conversation.
+  signature: 'async get_members(conversation_id: str)'
+  parameters:
+  - name: conversation_id
+    isRequired: true
+- uid: microsoft_teams.api.ConversationClient.get_paged_members
+  name: get_paged_members
+  summary: Get paged members of a conversation.
+  signature: 'async get_paged_members(conversation_id: str, page_size: int | None
+    = None, continuation_token: str | None = None)'
+  parameters:
+  - name: conversation_id
+    isRequired: true
+  - name: page_size
+    defaultValue: None
+  - name: continuation_token
+    defaultValue: None
 - uid: microsoft_teams.api.ConversationClient.members
   name: members
   summary: Get member operations for a conversation.
@@ -52,6 +153,42 @@ methods:
     isRequired: true
   return:
     description: An operations object for managing members in the conversation.
+- uid: microsoft_teams.api.ConversationClient.reply_to_activity
+  name: reply_to_activity
+  summary: Reply to an activity in a conversation.
+  signature: 'async reply_to_activity(conversation_id: str, activity_id: str, activity:
+    MessageActivityInput | MessageReactionActivityInput | TypingActivityInput)'
+  parameters:
+  - name: conversation_id
+    isRequired: true
+  - name: activity_id
+    isRequired: true
+  - name: activity
+    isRequired: true
+- uid: microsoft_teams.api.ConversationClient.update_activity
+  name: update_activity
+  summary: Update an activity in a conversation.
+  signature: 'async update_activity(conversation_id: str, activity_id: str, activity:
+    MessageActivityInput | MessageReactionActivityInput | TypingActivityInput)'
+  parameters:
+  - name: conversation_id
+    isRequired: true
+  - name: activity_id
+    isRequired: true
+  - name: activity
+    isRequired: true
+- uid: microsoft_teams.api.ConversationClient.update_targeted_activity
+  name: update_targeted_activity
+  summary: Update a targeted activity in a conversation.
+  signature: 'async update_targeted_activity(conversation_id: str, activity_id: str,
+    activity: MessageActivityInput | MessageReactionActivityInput | TypingActivityInput)'
+  parameters:
+  - name: conversation_id
+    isRequired: true
+  - name: activity_id
+    isRequired: true
+  - name: activity
+    isRequired: true
 attributes:
 - uid: microsoft_teams.api.ConversationClient.activities_client
   name: activities_client

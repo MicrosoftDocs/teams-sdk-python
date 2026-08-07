@@ -94,6 +94,7 @@ classes:
 - microsoft_teams.api.ApiClient
 - microsoft_teams.api.ApiClientSettings
 - microsoft_teams.api.AppBasedLinkQuery
+- microsoft_teams.api.AppInfo
 - microsoft_teams.api.Appearance
 - microsoft_teams.api.Attachment
 - microsoft_teams.api.AudioCard
@@ -104,6 +105,7 @@ classes:
 - microsoft_teams.api.BotSignInClient
 - microsoft_teams.api.BotTokenClient
 - microsoft_teams.api.CacheInfo
+- microsoft_teams.api.CallToolRequest
 - microsoft_teams.api.CardAction
 - microsoft_teams.api.CardImage
 - microsoft_teams.api.CardTaskModuleTaskInfo
@@ -156,6 +158,11 @@ classes:
 - microsoft_teams.api.HandoffActionInvokeActivity
 - microsoft_teams.api.HeroCard
 - microsoft_teams.api.HeroCardAttachment
+- microsoft_teams.api.HtmlWidgetCallToolInvokeActivity
+- microsoft_teams.api.HtmlWidgetCallToolResponse
+- microsoft_teams.api.HtmlWidgetPayload
+- microsoft_teams.api.HtmlWidgetPermissions
+- microsoft_teams.api.HtmlWidgetSecurityPolicy
 - microsoft_teams.api.HttpError
 - microsoft_teams.api.Image
 - microsoft_teams.api.InnerHttpError
@@ -164,6 +171,13 @@ classes:
 - microsoft_teams.api.JsonWebToken
 - microsoft_teams.api.JsonWebTokenPayload
 - microsoft_teams.api.ManagedIdentityCredentials
+- microsoft_teams.api.McpUiAudioContent
+- microsoft_teams.api.McpUiCallToolResult
+- microsoft_teams.api.McpUiImageContent
+- microsoft_teams.api.McpUiResourceContent
+- microsoft_teams.api.McpUiTextContent
+- microsoft_teams.api.McpUiUpdateModelContextParams
+- microsoft_teams.api.McpUiUpdateModelContextRequest
 - microsoft_teams.api.MediaCard
 - microsoft_teams.api.MediaUrl
 - microsoft_teams.api.Meeting
@@ -231,6 +245,12 @@ classes:
 - microsoft_teams.api.QuotedReplyEntity
 - microsoft_teams.api.ReactionClient
 - microsoft_teams.api.ReadReceiptEventActivity
+- microsoft_teams.api.SearchInvokeActivity
+- microsoft_teams.api.SearchInvokeOptions
+- microsoft_teams.api.SearchInvokeResponseValue
+- microsoft_teams.api.SearchInvokeResult
+- microsoft_teams.api.SearchInvokeValue
+- microsoft_teams.api.SearchResponse
 - microsoft_teams.api.SensitiveUsage
 - microsoft_teams.api.SensitiveUsageEntity
 - microsoft_teams.api.SensitiveUsagePattern

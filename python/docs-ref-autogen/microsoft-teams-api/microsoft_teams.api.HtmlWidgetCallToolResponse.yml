@@ -1,0 +1,52 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.HtmlWidgetCallToolResponse
+name: HtmlWidgetCallToolResponse
+fullName: microsoft_teams.api.HtmlWidgetCallToolResponse
+module: microsoft_teams.api
+summary: 'The wire-format response body for an htmlwidget/calltool invoke.
+
+  Teams expects this shape (with responseType discriminator) rather than
+
+  a bare McpUiCallToolResult.
+
+
+  Diagnostic: ExperimentalTeamsHtmlWidget
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'HtmlWidgetCallToolResponse(*, responseType: Literal[''htmlwidget/calltoolresult'']
+    = ''htmlwidget/calltoolresult'', callToolResult: McpUiCallToolResult, **extra_data:
+    Any)'
+  keywordOnlyParameters:
+  - name: responseType
+    defaultValue: htmlwidget/calltoolresult
+  - name: callToolResult
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.HtmlWidgetCallToolResponse.call_tool_result
+  name: call_tool_result
+  summary: The tool call result payload.
+  signature: 'call_tool_result: McpUiCallToolResult'
+- uid: microsoft_teams.api.HtmlWidgetCallToolResponse.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.HtmlWidgetCallToolResponse.response_type
+  name: response_type
+  summary: Discriminator that tells Teams how to interpret the response.
+  signature: 'response_type: Literal[''htmlwidget/calltoolresult'']'
