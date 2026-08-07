@@ -17,18 +17,21 @@ summary: 'Extended ChannelData with event type.
 
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
-  syntax: 'ConversationChannelData(*, channel: ChannelInfo | None = None, eventType:
-    Literal[''channelCreated'', ''channelDeleted'', ''channelRenamed'', ''channelRestored'',
-    ''teamArchived'', ''teamDeleted'', ''teamHardDeleted'', ''teamRenamed'', ''teamRestored'',
-    ''teamUnarchived'', ''teamMemberRemoved'', ''teamMemberAdded''] | None = None,
-    team: TeamInfo | None = None, notification: NotificationInfo | None = None, tenant:
-    TenantInfo | None = None, meeting: MeetingInfo | None = None, settings: ChannelDataSettings
-    | None = None, feedbackLoopEnabled: bool | None = None, feedbackLoop: FeedbackLoop
-    | None = None, streamId: str | None = None, streamType: Literal[''informative'',
-    ''streaming'', ''final''] | None = None, streamSequence: int | None = None, **extra_data:
-    Any)'
+  syntax: 'ConversationChannelData(*, channel: ChannelInfo | None = None, app: AppInfo
+    | None = None, eventType: Literal[''channelCreated'', ''channelDeleted'', ''channelRenamed'',
+    ''channelRestored'', ''channelShared'', ''channelUnshared'', ''channelMemberAdded'',
+    ''channelMemberRemoved'', ''teamArchived'', ''teamDeleted'', ''teamHardDeleted'',
+    ''teamRenamed'', ''teamRestored'', ''teamUnarchived'', ''teamMemberRemoved'',
+    ''teamMemberAdded''] | str | None = None, team: TeamInfo | None = None, notification:
+    NotificationInfo | None = None, tenant: TenantInfo | None = None, meeting: MeetingInfo
+    | None = None, settings: ChannelDataSettings | None = None, feedbackLoopEnabled:
+    bool | None = None, feedbackLoop: FeedbackLoop | None = None, streamId: str |
+    None = None, streamType: Literal[''informative'', ''streaming'', ''final''] |
+    None = None, streamSequence: int | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: channel
+    defaultValue: None
+  - name: app
     defaultValue: None
   - name: eventType
     defaultValue: None
@@ -55,11 +58,21 @@ constructor:
 attributes:
 - uid: microsoft_teams.api.ConversationChannelData.event_type
   name: event_type
-  summary: The type of event that occurred.
+  summary: 'The type of event that occurred.
+
+
+    Known values are enumerated by `ConversationEventType`, which preserves
+
+    IDE completion for recognized event types while still accepting any string
+
+    so that unrecognized or newly introduced event types (e.g. from
+
+    private/shared channels) do not fail validation.'
   signature: 'event_type: Literal[''channelCreated'', ''channelDeleted'', ''channelRenamed'',
-    ''channelRestored'', ''teamArchived'', ''teamDeleted'', ''teamHardDeleted'', ''teamRenamed'',
-    ''teamRestored'', ''teamUnarchived'', ''teamMemberRemoved'', ''teamMemberAdded'']
-    | None'
+    ''channelRestored'', ''channelShared'', ''channelUnshared'', ''channelMemberAdded'',
+    ''channelMemberRemoved'', ''teamArchived'', ''teamDeleted'', ''teamHardDeleted'',
+    ''teamRenamed'', ''teamRestored'', ''teamUnarchived'', ''teamMemberRemoved'',
+    ''teamMemberAdded''] | str | None'
 - uid: microsoft_teams.api.ConversationChannelData.model_config
   name: model_config
   summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].

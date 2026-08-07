@@ -1,0 +1,40 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.SecurityPolicyWarning
+name: SecurityPolicyWarning
+fullName: microsoft_teams.apps.SecurityPolicyWarning
+module: microsoft_teams.apps
+summary: 'A warning produced by validate_security_policy when the widget HTML
+
+  references an external origin not present in the declared security policy.
+
+
+  Diagnostic: ExperimentalTeamsHtmlWidget'
+constructor:
+  syntax: 'SecurityPolicyWarning(url: str, source: str, policy_field: str, message:
+    str)'
+  parameters:
+  - name: url
+    isRequired: true
+  - name: source
+    isRequired: true
+  - name: policy_field
+    isRequired: true
+  - name: message
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.SecurityPolicyWarning.message
+  name: message
+  summary: A human-readable description of the issue.
+  signature: 'message: str'
+- uid: microsoft_teams.apps.SecurityPolicyWarning.policy_field
+  name: policy_field
+  summary: The security_policy field that should include this origin.
+  signature: 'policy_field: str'
+- uid: microsoft_teams.apps.SecurityPolicyWarning.source
+  name: source
+  summary: The HTML element or API where the reference was found.
+  signature: 'source: str'
+- uid: microsoft_teams.apps.SecurityPolicyWarning.url
+  name: url
+  summary: The URL or origin found in the HTML.
+  signature: 'url: str'

@@ -42,10 +42,35 @@ attributes:
 
     Defaults to PUBLIC (commercial cloud).'
   signature: 'cloud: CloudEnvironment | None'
+- uid: microsoft_teams.apps.AppOptions.dangerously_allow_unauthenticated_requests
+  name: dangerously_allow_unauthenticated_requests
+  summary: 'Whether to accept incoming requests without JWT validation.
+
+    Defaults to the DANGEROUSLY_ALLOW_UNAUTHENTICATED_REQUESTS environment variable,
+    or False.'
+  signature: 'dangerously_allow_unauthenticated_requests: bool | None'
 - uid: microsoft_teams.apps.AppOptions.default_connection_name
   name: default_connection_name
   summary: The OAuth connection name to use for authentication. Defaults to 'graph'.
   signature: 'default_connection_name: str | None'
+- uid: microsoft_teams.apps.AppOptions.fetch_user_token
+  name: fetch_user_token
+  summary: 'Whether to eagerly look up the user''s OAuth token on every inbound activity.
+
+    The token is used to compute `ctx.is_signed_in` and `ctx.user_token`, and to authenticate
+
+    `ctx.user_graph` (which is always constructed regardless of this setting).
+
+    When left unset, this is auto-detected: enabled only when an OAuth connection
+    is
+
+    explicitly configured via `default_connection_name`, so apps that never use user
+    OAuth
+
+    do not pay for a wasted token request on every turn.
+
+    Set explicitly to `True` or `False` to override the auto-detection.'
+  signature: 'fetch_user_token: bool | None'
 - uid: microsoft_teams.apps.AppOptions.http_server_adapter
   name: http_server_adapter
   summary: Custom HTTP server adapter. Defaults to FastAPIAdapter if not provided.
@@ -74,6 +99,10 @@ attributes:
 
     and defaults to [https://smba.trafficmanager.net/teams](https://smba.trafficmanager.net/teams)'
   signature: 'service_url: str | None'
+- uid: microsoft_teams.apps.AppOptions.skip_auth
+  name: skip_auth
+  summary: Deprecated. Use dangerously_allow_unauthenticated_requests instead.
+  signature: 'skip_auth: bool | None'
 - uid: microsoft_teams.apps.AppOptions.tenant_id
   name: tenant_id
   summary: The tenant ID. Required for single-tenant apps.
@@ -87,9 +116,6 @@ attributes:
 - uid: microsoft_teams.apps.AppOptions.plugins
   name: plugins
   signature: 'plugins: List[PluginBase] | None'
-- uid: microsoft_teams.apps.AppOptions.skip_auth
-  name: skip_auth
-  signature: 'skip_auth: bool | None'
 - uid: microsoft_teams.apps.AppOptions.storage
   name: storage
   signature: 'storage: Storage[str, Any] | None'

@@ -1,0 +1,54 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.SearchResponse
+name: SearchResponse
+fullName: microsoft_teams.api.SearchResponse
+module: microsoft_teams.api
+summary: 'Defines the structure returned as the result of an Invoke activity with
+  Name of
+
+  ''application/search''.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'SearchResponse(*, statusCode: int = 200, type: Literal[''application/vnd.microsoft.search.searchResponse'']
+    = ''application/vnd.microsoft.search.searchResponse'', value: SearchInvokeResponseValue,
+    **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: statusCode
+    defaultValue: '200'
+  - name: type
+    defaultValue: application/vnd.microsoft.search.searchResponse
+  - name: value
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.SearchResponse.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.SearchResponse.status_code
+  name: status_code
+  summary: The response status code.
+  signature: 'status_code: int'
+- uid: microsoft_teams.api.SearchResponse.type
+  name: type
+  summary: The type of this response.
+  signature: 'type: Literal[''application/vnd.microsoft.search.searchResponse'']'
+- uid: microsoft_teams.api.SearchResponse.value
+  name: value
+  summary: The response value.
+  signature: 'value: SearchInvokeResponseValue'

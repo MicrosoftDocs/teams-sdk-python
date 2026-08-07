@@ -1,0 +1,29 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.HtmlWidgetMarkdownOptions
+name: HtmlWidgetMarkdownOptions
+fullName: microsoft_teams.apps.HtmlWidgetMarkdownOptions
+module: microsoft_teams.apps
+summary: Options for building an HTML widget markdown string.
+constructor:
+  syntax: 'HtmlWidgetMarkdownOptions(before: str | None = None, after: str | None
+    = None, protocol_options: InjectWidgetProtocolOptions | None = None)'
+  parameters:
+  - name: before
+    defaultValue: None
+  - name: after
+    defaultValue: None
+  - name: protocol_options
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.apps.HtmlWidgetMarkdownOptions.after
+  name: after
+  summary: Text to include after the widget code block.
+  signature: 'after: str | None = None'
+- uid: microsoft_teams.apps.HtmlWidgetMarkdownOptions.before
+  name: before
+  summary: Text to include before the widget code block.
+  signature: 'before: str | None = None'
+- uid: microsoft_teams.apps.HtmlWidgetMarkdownOptions.protocol_options
+  name: protocol_options
+  summary: Options forwarded to inject_widget_protocol.
+  signature: 'protocol_options: InjectWidgetProtocolOptions | None = None'

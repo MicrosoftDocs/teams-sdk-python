@@ -26,12 +26,10 @@ constructor:
     ProductInfoEntity | QuotedReplyEntity | TargetedMessageInfoEntity | UnknownEntity]
     | None = None, channelData: ChannelData | None = None, type: Literal[''message'']
     = ''message'', id: str | None = None, recipient: Account | None = None, text:
-    str | None = None, summary: str | None = None, textFormat: Literal[''markdown'',
-    ''plain'', ''xml'', ''extendedmarkdown''] | None = None, attachmentLayout: AttachmentLayout
-    | None = None, attachments: List[Attachment] | None = None, suggestedActions:
-    SuggestedActions | None = None, deliveryMode: Literal[''normal'', ''notification'',
-    ''expectReplies'', ''ephemeral''] | None = None, value: Any | None = None, **extra_data:
-    Any)'
+    str | None = None, textFormat: Literal[''markdown'', ''plain'', ''xml'', ''extendedmarkdown'']
+    | None = None, attachmentLayout: AttachmentLayout | None = None, attachments:
+    List[Attachment] | None = None, suggestedActions: SuggestedActions | None = None,
+    **extra_data: Any)'
   keywordOnlyParameters:
   - name: serviceUrl
     defaultValue: None
@@ -61,8 +59,6 @@ constructor:
     defaultValue: None
   - name: text
     defaultValue: None
-  - name: summary
-    defaultValue: None
   - name: textFormat
     defaultValue: None
   - name: attachmentLayout
@@ -70,10 +66,6 @@ constructor:
   - name: attachments
     defaultValue: None
   - name: suggestedActions
-    defaultValue: None
-  - name: deliveryMode
-    defaultValue: None
-  - name: value
     defaultValue: None
 methods:
 - uid: microsoft_teams.api.MessageActivityInput.add_ai_generated
@@ -235,17 +227,6 @@ methods:
     isRequired: true
   return:
     description: Self for method chaining
-- uid: microsoft_teams.api.MessageActivityInput.with_delivery_mode
-  name: with_delivery_mode
-  summary: Set the delivery mode for the activity.
-  signature: 'with_delivery_mode(delivery_mode: Literal[''normal'', ''notification'',
-    ''expectReplies'', ''ephemeral'']) -> Self'
-  parameters:
-  - name: delivery_mode
-    description: Delivery mode (normal, notification)
-    isRequired: true
-  return:
-    description: Self for method chaining
 - uid: microsoft_teams.api.MessageActivityInput.with_recipient
   name: with_recipient
   summary: Set the recipient.
@@ -270,16 +251,6 @@ methods:
   parameters:
   - name: suggested_actions
     description: Suggested actions
-    isRequired: true
-  return:
-    description: Self for method chaining
-- uid: microsoft_teams.api.MessageActivityInput.with_summary
-  name: with_summary
-  summary: Set the text to display if the channel cannot render cards.
-  signature: 'with_summary(summary: str) -> Self'
-  parameters:
-  - name: summary
-    description: Summary text
     isRequired: true
   return:
     description: Self for method chaining

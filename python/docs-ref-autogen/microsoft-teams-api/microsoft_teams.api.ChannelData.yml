@@ -17,15 +17,17 @@ summary: 'Channel data specific to messages received in Microsoft Teams
 
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
-  syntax: 'ChannelData(*, channel: ChannelInfo | None = None, eventType: str | None
-    = None, team: TeamInfo | None = None, notification: NotificationInfo | None =
-    None, tenant: TenantInfo | None = None, meeting: MeetingInfo | None = None, settings:
-    ChannelDataSettings | None = None, feedbackLoopEnabled: bool | None = None, feedbackLoop:
-    FeedbackLoop | None = None, streamId: str | None = None, streamType: Literal[''informative'',
-    ''streaming'', ''final''] | None = None, streamSequence: int | None = None, **extra_data:
-    Any)'
+  syntax: 'ChannelData(*, channel: ChannelInfo | None = None, app: AppInfo | None
+    = None, eventType: str | None = None, team: TeamInfo | None = None, notification:
+    NotificationInfo | None = None, tenant: TenantInfo | None = None, meeting: MeetingInfo
+    | None = None, settings: ChannelDataSettings | None = None, feedbackLoopEnabled:
+    bool | None = None, feedbackLoop: FeedbackLoop | None = None, streamId: str |
+    None = None, streamType: Literal[''informative'', ''streaming'', ''final''] |
+    None = None, streamSequence: int | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: channel
+    defaultValue: None
+  - name: app
     defaultValue: None
   - name: eventType
     defaultValue: None
@@ -57,6 +59,10 @@ methods:
     This is necessary as the client only accepts either/or.'
   signature: normalize_feedback() -> Self
 attributes:
+- uid: microsoft_teams.api.ChannelData.app
+  name: app
+  summary: Information about the app that sent the message.
+  signature: 'app: AppInfo | None'
 - uid: microsoft_teams.api.ChannelData.channel
   name: channel
   summary: Information about the channel in which the message was sent.

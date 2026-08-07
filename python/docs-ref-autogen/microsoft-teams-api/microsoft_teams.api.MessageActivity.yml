@@ -26,9 +26,9 @@ constructor:
     | SensitiveUsageEntity | ProductInfoEntity | QuotedReplyEntity | TargetedMessageInfoEntity
     | UnknownEntity] | None = None, channelData: ChannelData | None = None, type:
     Literal[''message''] = ''message'', id: str, recipient: Account, text: str = '''',
-    summary: str | None = None, textFormat: Literal[''markdown'', ''plain'', ''xml'',
-    ''extendedmarkdown''] | None = None, attachmentLayout: AttachmentLayout | None
-    = None, attachments: List[Attachment] | None = None, suggestedActions: SuggestedActions
+    textFormat: Literal[''markdown'', ''plain'', ''xml'', ''extendedmarkdown''] |
+    None = None, attachmentLayout: AttachmentLayout | None = None, attachments: List[Attachment]
+    | None = None, suggestedActions: SuggestedActions | None = None, summary: str
     | None = None, deliveryMode: Literal[''normal'', ''notification'', ''expectReplies'',
     ''ephemeral''] | None = None, value: Any | None = None, **extra_data: Any)'
   keywordOnlyParameters:
@@ -59,8 +59,6 @@ constructor:
   - name: recipient
     isRequired: true
   - name: text
-  - name: summary
-    defaultValue: None
   - name: textFormat
     defaultValue: None
   - name: attachmentLayout
@@ -68,6 +66,8 @@ constructor:
   - name: attachments
     defaultValue: None
   - name: suggestedActions
+    defaultValue: None
+  - name: summary
     defaultValue: None
   - name: deliveryMode
     defaultValue: None
@@ -108,6 +108,12 @@ methods:
   return:
     description: Self for method chaining
 attributes:
+- uid: microsoft_teams.api.MessageActivity.delivery_mode
+  name: delivery_mode
+  summary: A delivery hint to signal to the recipient alternate delivery paths for
+    the activity.
+  signature: 'delivery_mode: Literal[''normal'', ''notification'', ''expectReplies'',
+    ''ephemeral''] | None'
 - uid: microsoft_teams.api.MessageActivity.model_config
   name: model_config
   summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
@@ -117,7 +123,15 @@ attributes:
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
     True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
     True}'
+- uid: microsoft_teams.api.MessageActivity.summary
+  name: summary
+  summary: The text to display if the channel cannot render cards.
+  signature: 'summary: str | None'
 - uid: microsoft_teams.api.MessageActivity.text
   name: text
   summary: The text content of the message.
   signature: 'text: str'
+- uid: microsoft_teams.api.MessageActivity.value
+  name: value
+  summary: A value that is associated with the activity.
+  signature: 'value: Any | None'

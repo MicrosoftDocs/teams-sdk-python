@@ -1,0 +1,73 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.SearchInvokeValue
+name: SearchInvokeValue
+fullName: microsoft_teams.api.SearchInvokeValue
+module: microsoft_teams.api
+summary: 'Defines the structure that arrives in the Activity.Value for an Invoke activity
+  with
+
+  Name of ''application/search''. Sent by Adaptive Card dynamic typeahead ''Input.ChoiceSet''
+
+  inputs (via ''choices.data'' / ''Data.Query'').
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'SearchInvokeValue(*, kind: Literal[''search'', ''searchAnswer'', ''typeahead'']
+    | None = None, queryText: str, queryOptions: SearchInvokeOptions | None = None,
+    context: Any | None = None, dataset: str | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: kind
+    defaultValue: None
+  - name: queryText
+    isRequired: true
+  - name: queryOptions
+    defaultValue: None
+  - name: context
+    defaultValue: None
+  - name: dataset
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.SearchInvokeValue.context
+  name: context
+  summary: Context information about the query, such as the UI control that issued
+    the query.
+  signature: 'context: Any | None'
+- uid: microsoft_teams.api.SearchInvokeValue.dataset
+  name: dataset
+  summary: The identifier of the dataset from which to fetch the choices, as authored
+    on the Adaptive Card 'Data.Query'.
+  signature: 'dataset: str | None'
+- uid: microsoft_teams.api.SearchInvokeValue.kind
+  name: kind
+  summary: 'The kind for this search invoke value (search, searchAnswer, or typeahead).
+    Omitted by
+
+    Adaptive Card dynamic typeahead ''Input.ChoiceSet'' inputs, so this may be None.'
+  signature: 'kind: Literal[''search'', ''searchAnswer'', ''typeahead''] | None'
+- uid: microsoft_teams.api.SearchInvokeValue.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.SearchInvokeValue.query_options
+  name: query_options
+  summary: The query options for this search invoke.
+  signature: 'query_options: SearchInvokeOptions | None'
+- uid: microsoft_teams.api.SearchInvokeValue.query_text
+  name: query_text
+  summary: The query text of this search invoke value.
+  signature: 'query_text: str'

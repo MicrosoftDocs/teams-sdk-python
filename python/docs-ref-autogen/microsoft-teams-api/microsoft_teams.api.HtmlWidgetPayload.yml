@@ -1,0 +1,90 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.HtmlWidgetPayload
+name: HtmlWidgetPayload
+fullName: microsoft_teams.api.HtmlWidgetPayload
+module: microsoft_teams.api
+summary: 'Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'HtmlWidgetPayload(*, type: Literal[''widget/mcp-ui''] = ''widget/mcp-ui'',
+    name: str, description: str | None = None, html: str, domain: str, securityPolicy:
+    HtmlWidgetSecurityPolicy | None = None, toolInput: Any | None = None, toolOutput:
+    Any | None = None, permissions: HtmlWidgetPermissions | None = None, **extra_data:
+    Any)'
+  keywordOnlyParameters:
+  - name: type
+    defaultValue: widget/mcp-ui
+  - name: name
+    isRequired: true
+  - name: description
+    defaultValue: None
+  - name: html
+    isRequired: true
+  - name: domain
+    isRequired: true
+  - name: securityPolicy
+    defaultValue: None
+  - name: toolInput
+    defaultValue: None
+  - name: toolOutput
+    defaultValue: None
+  - name: permissions
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.HtmlWidgetPayload.description
+  name: description
+  summary: A description of the MCP app.
+  signature: 'description: str | None'
+- uid: microsoft_teams.api.HtmlWidgetPayload.domain
+  name: domain
+  summary: '//''.
+
+    This is informational metadata, not a verified identity claim.
+
+    The platform does not authenticate this value.'
+  signature: 'domain: str'
+- uid: microsoft_teams.api.HtmlWidgetPayload.html
+  name: html
+  summary: The HTML content that makes up the widget.
+  signature: 'html: str'
+- uid: microsoft_teams.api.HtmlWidgetPayload.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.HtmlWidgetPayload.name
+  name: name
+  summary: The display name of the MCP app.
+  signature: 'name: str'
+- uid: microsoft_teams.api.HtmlWidgetPayload.permissions
+  name: permissions
+  summary: Optional permissions the widget requests from the host.
+  signature: 'permissions: HtmlWidgetPermissions | None'
+- uid: microsoft_teams.api.HtmlWidgetPayload.security_policy
+  name: security_policy
+  summary: Optional security policy controlling allowed origins.
+  signature: 'security_policy: HtmlWidgetSecurityPolicy | None'
+- uid: microsoft_teams.api.HtmlWidgetPayload.tool_input
+  name: tool_input
+  summary: Optional data that was passed as input to the tool that produced this widget.
+  signature: 'tool_input: Any | None'
+- uid: microsoft_teams.api.HtmlWidgetPayload.tool_output
+  name: tool_output
+  summary: Optional data that the tool produced alongside this widget.
+  signature: 'tool_output: Any | None'
+- uid: microsoft_teams.api.HtmlWidgetPayload.type
+  name: type
+  summary: The widget type identifier. Currently only "widget/mcp-ui" is supported.
+  signature: 'type: Literal[''widget/mcp-ui'']'

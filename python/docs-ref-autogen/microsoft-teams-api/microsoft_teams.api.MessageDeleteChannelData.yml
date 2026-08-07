@@ -17,16 +17,18 @@ summary: 'Channel data specific to message delete activities.
 
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
-  syntax: 'MessageDeleteChannelData(*, channel: ChannelInfo | None = None, eventType:
-    Literal[''softDeleteMessage''] = ''softDeleteMessage'', team: TeamInfo | None
-    = None, notification: NotificationInfo | None = None, tenant: TenantInfo | None
-    = None, meeting: MeetingInfo | None = None, settings: ChannelDataSettings | None
-    = None, feedbackLoopEnabled: bool | None = None, feedbackLoop: FeedbackLoop |
-    None = None, streamId: str | None = None, streamType: Literal[''informative'',
+  syntax: 'MessageDeleteChannelData(*, channel: ChannelInfo | None = None, app: AppInfo
+    | None = None, eventType: Literal[''softDeleteMessage''] = ''softDeleteMessage'',
+    team: TeamInfo | None = None, notification: NotificationInfo | None = None, tenant:
+    TenantInfo | None = None, meeting: MeetingInfo | None = None, settings: ChannelDataSettings
+    | None = None, feedbackLoopEnabled: bool | None = None, feedbackLoop: FeedbackLoop
+    | None = None, streamId: str | None = None, streamType: Literal[''informative'',
     ''streaming'', ''final''] | None = None, streamSequence: int | None = None, **extra_data:
     Any)'
   keywordOnlyParameters:
   - name: channel
+    defaultValue: None
+  - name: app
     defaultValue: None
   - name: eventType
     defaultValue: softDeleteMessage

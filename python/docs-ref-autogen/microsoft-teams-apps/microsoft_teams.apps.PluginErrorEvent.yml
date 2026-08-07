@@ -22,7 +22,8 @@ constructor:
     TaskSubmitInvokeActivity | MessageFetchTaskInvokeActivity | MessageSubmitActionInvokeActivity
     | HandoffActionInvokeActivity | SignInTokenExchangeInvokeActivity | SignInVerifyStateInvokeActivity
     | SignInFailureInvokeActivity | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity
-    | InstalledActivity | UninstalledActivity | None = None)'
+    | SearchInvokeActivity | HtmlWidgetCallToolInvokeActivity | InstalledActivity
+    | UninstalledActivity | None = None)'
   parameters:
   - name: error
     isRequired: true
@@ -45,8 +46,9 @@ attributes:
     | TabSubmitInvokeActivity | TaskFetchInvokeActivity | TaskSubmitInvokeActivity
     | MessageFetchTaskInvokeActivity | MessageSubmitActionInvokeActivity | HandoffActionInvokeActivity
     | SignInTokenExchangeInvokeActivity | SignInVerifyStateInvokeActivity | SignInFailureInvokeActivity
-    | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity | InstalledActivity
-    | UninstalledActivity | None'
+    | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity | SearchInvokeActivity
+    | HtmlWidgetCallToolInvokeActivity | InstalledActivity | UninstalledActivity |
+    None'
 - uid: microsoft_teams.apps.PluginErrorEvent.error
   name: error
   summary: The error
