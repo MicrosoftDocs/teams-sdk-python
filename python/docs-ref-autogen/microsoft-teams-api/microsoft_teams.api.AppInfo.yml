@@ -17,17 +17,18 @@ summary: 'Describes an app
 
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
-  syntax: 'AppInfo(*, id: str, version: str | None = None, **extra_data: Any)'
+  syntax: 'AppInfo(*, id: str | None = None, version: str | None = None, **extra_data:
+    Any)'
   keywordOnlyParameters:
   - name: id
-    isRequired: true
+    defaultValue: None
   - name: version
     defaultValue: None
 attributes:
 - uid: microsoft_teams.api.AppInfo.id
   name: id
   summary: Unique identifier representing an app
-  signature: 'id: str'
+  signature: 'id: str | None'
 - uid: microsoft_teams.api.AppInfo.model_config
   name: model_config
   summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
