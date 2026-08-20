@@ -17,15 +17,15 @@ summary: 'Describes a tenant
 
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
-  syntax: 'TenantInfo(*, id: str, **extra_data: Any)'
+  syntax: 'TenantInfo(*, id: str | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: id
-    isRequired: true
+    defaultValue: None
 attributes:
 - uid: microsoft_teams.api.TenantInfo.id
   name: id
   summary: Unique identifier representing a tenant
-  signature: 'id: str'
+  signature: 'id: str | None'
 - uid: microsoft_teams.api.TenantInfo.model_config
   name: model_config
   summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].

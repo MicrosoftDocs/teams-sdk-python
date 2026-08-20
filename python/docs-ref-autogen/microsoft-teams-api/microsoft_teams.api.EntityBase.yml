@@ -17,10 +17,10 @@ summary: 'Base entity for entity types.
 
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
-  syntax: 'EntityBase(*, type: str, **extra_data: Any)'
+  syntax: 'EntityBase(*, type: str | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: type
-    isRequired: true
+    defaultValue: None
 attributes:
 - uid: microsoft_teams.api.EntityBase.model_config
   name: model_config
@@ -34,4 +34,4 @@ attributes:
 - uid: microsoft_teams.api.EntityBase.type
   name: type
   summary: Type identifier for the entity.
-  signature: 'type: str'
+  signature: 'type: str | None'

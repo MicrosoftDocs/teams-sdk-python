@@ -19,13 +19,13 @@ summary: 'An interface representing TeamInfo.
 
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
-  syntax: 'TeamInfo(*, id: str, name: str | None = None, teamType: Literal[''standard'',
+  syntax: 'TeamInfo(*, id: str | None = None, name: str | None = None, teamType: Literal[''standard'',
     ''sharedChannel'', ''privateChannel''] | None = None, memberCount: int | None
     = None, channelCount: int | None = None, aadGroupId: str | None = None, **extra_data:
     Any)'
   keywordOnlyParameters:
   - name: id
-    isRequired: true
+    defaultValue: None
   - name: name
     defaultValue: None
   - name: teamType
@@ -48,7 +48,7 @@ attributes:
 - uid: microsoft_teams.api.TeamInfo.id
   name: id
   summary: Unique identifier representing a team
-  signature: 'id: str'
+  signature: 'id: str | None'
 - uid: microsoft_teams.api.TeamInfo.member_count
   name: member_count
   summary: The number of members in the team.
