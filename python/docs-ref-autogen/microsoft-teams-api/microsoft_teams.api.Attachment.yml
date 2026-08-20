@@ -17,12 +17,12 @@ summary: 'A model representing an attachment.
 
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
-  syntax: 'Attachment(*, contentType: str, contentUrl: str | None = None, content:
-    Any | None = None, name: str | None = None, thumbnailUrl: str | None = None, **extra_data:
-    Any)'
+  syntax: 'Attachment(*, contentType: str | None = None, contentUrl: str | None =
+    None, content: Any | None = None, name: str | None = None, thumbnailUrl: str |
+    None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: contentType
-    isRequired: true
+    defaultValue: None
   - name: contentUrl
     defaultValue: None
   - name: content
@@ -39,7 +39,7 @@ attributes:
 - uid: microsoft_teams.api.Attachment.content_type
   name: content_type
   summary: mimetype/Contenttype for the file
-  signature: 'content_type: str'
+  signature: 'content_type: str | None'
 - uid: microsoft_teams.api.Attachment.content_url
   name: content_url
   summary: Content Url

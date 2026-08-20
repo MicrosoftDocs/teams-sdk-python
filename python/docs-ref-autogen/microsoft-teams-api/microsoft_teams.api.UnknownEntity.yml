@@ -17,10 +17,10 @@ summary: 'Entity for unknown or forward-compatible types.
 
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
-  syntax: 'UnknownEntity(*, type: str, **extra_data: Any)'
+  syntax: 'UnknownEntity(*, type: str | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: type
-    isRequired: true
+    defaultValue: None
 attributes:
 - uid: microsoft_teams.api.UnknownEntity.model_config
   name: model_config

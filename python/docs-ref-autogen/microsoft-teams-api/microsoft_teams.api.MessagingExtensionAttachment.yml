@@ -17,12 +17,12 @@ summary: 'Messaging extension attachment.
 
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
-  syntax: 'MessagingExtensionAttachment(*, contentType: str, contentUrl: str | None
-    = None, content: Any | None = None, name: str | None = None, thumbnailUrl: str
-    | None = None, preview: Attachment | None = None, **extra_data: Any)'
+  syntax: 'MessagingExtensionAttachment(*, contentType: str | None = None, contentUrl:
+    str | None = None, content: Any | None = None, name: str | None = None, thumbnailUrl:
+    str | None = None, preview: Attachment | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: contentType
-    isRequired: true
+    defaultValue: None
   - name: contentUrl
     defaultValue: None
   - name: content
