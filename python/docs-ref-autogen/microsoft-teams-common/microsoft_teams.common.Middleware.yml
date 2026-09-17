@@ -1,0 +1,25 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.common.Middleware
+name: Middleware
+fullName: microsoft_teams.common.Middleware
+module: microsoft_teams.common
+summary: 'Protocol for HTTP middleware.
+
+
+  Middleware wraps the full terminal dispatch, including token resolution,
+
+  existing interceptor/event-hook execution, response status handling, and
+
+  response JSON wrapping.'
+constructor:
+  syntax: Middleware(*args, **kwargs)
+methods:
+- uid: microsoft_teams.common.Middleware.send
+  name: send
+  signature: 'send(context: MiddlewareContext, next: Callable[[], Awaitable[Response]])
+    -> Response | Awaitable[Response]'
+  parameters:
+  - name: context
+    isRequired: true
+  - name: next
+    isRequired: true

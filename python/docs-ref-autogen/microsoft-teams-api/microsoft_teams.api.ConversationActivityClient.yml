@@ -9,7 +9,8 @@ summary: 'Client for managing activities in a Teams conversation.
   Initialize the conversation activity client.'
 constructor:
   syntax: 'ConversationActivityClient(service_url: str, http_client: Client | None
-    = None, api_client_settings: ApiClientSettings | None = None)'
+    = None, api_client_settings: ApiClientSettings | None = None, scope_factory: Callable[[str
+    | None, AgenticIdentity | None], ConversationActivityClient] | None = None)'
   parameters:
   - name: service_url
     description: The base URL for the Teams service
@@ -20,12 +21,15 @@ constructor:
   - name: api_client_settings
     description: Optional API client settings.
     defaultValue: None
+  - name: scope_factory
+    defaultValue: None
 methods:
 - uid: microsoft_teams.api.ConversationActivityClient.create
   name: create
   summary: Create a new activity in a conversation.
   signature: 'async create(conversation_id: str, activity: MessageActivityInput |
-    MessageReactionActivityInput | TypingActivityInput) -> SentActivity'
+    MessageReactionActivityInput | TypingActivityInput, *, service_url: str | None
+    = None, agentic_identity: AgenticIdentity | None = None) -> SentActivity'
   parameters:
   - name: conversation_id
     description: The ID of the conversation
@@ -33,6 +37,11 @@ methods:
   - name: activity
     description: The activity to create
     isRequired: true
+  keywordOnlyParameters:
+  - name: service_url
+    defaultValue: None
+  - name: agentic_identity
+    defaultValue: None
   return:
     description: The created activity
 - uid: microsoft_teams.api.ConversationActivityClient.create_targeted
@@ -57,7 +66,8 @@ methods:
 
     >'
   signature: 'async create_targeted(conversation_id: str, activity: MessageActivityInput
-    | MessageReactionActivityInput | TypingActivityInput) -> SentActivity'
+    | MessageReactionActivityInput | TypingActivityInput, *, service_url: str | None
+    = None, agentic_identity: AgenticIdentity | None = None) -> SentActivity'
   parameters:
   - name: conversation_id
     description: The ID of the conversation
@@ -65,12 +75,18 @@ methods:
   - name: activity
     description: The activity to create
     isRequired: true
+  keywordOnlyParameters:
+  - name: service_url
+    defaultValue: None
+  - name: agentic_identity
+    defaultValue: None
   return:
     description: The created activity
 - uid: microsoft_teams.api.ConversationActivityClient.delete
   name: delete
   summary: Delete an activity from a conversation.
-  signature: 'async delete(conversation_id: str, activity_id: str) -> None'
+  signature: 'async delete(conversation_id: str, activity_id: str, *, service_url:
+    str | None = None, agentic_identity: AgenticIdentity | None = None) -> None'
   parameters:
   - name: conversation_id
     description: The ID of the conversation
@@ -78,6 +94,11 @@ methods:
   - name: activity_id
     description: The ID of the activity to delete
     isRequired: true
+  keywordOnlyParameters:
+  - name: service_url
+    defaultValue: None
+  - name: agentic_identity
+    defaultValue: None
 - uid: microsoft_teams.api.ConversationActivityClient.delete_targeted
   name: delete_targeted
   summary: 'Delete a targeted activity from a conversation.
@@ -96,7 +117,8 @@ methods:
     > Diagnostic: ExperimentalTeamsTargeted
 
     >'
-  signature: 'async delete_targeted(conversation_id: str, activity_id: str) -> None'
+  signature: 'async delete_targeted(conversation_id: str, activity_id: str, *, service_url:
+    str | None = None, agentic_identity: AgenticIdentity | None = None) -> None'
   parameters:
   - name: conversation_id
     description: The ID of the conversation
@@ -104,10 +126,16 @@ methods:
   - name: activity_id
     description: The ID of the activity to delete
     isRequired: true
+  keywordOnlyParameters:
+  - name: service_url
+    defaultValue: None
+  - name: agentic_identity
+    defaultValue: None
 - uid: microsoft_teams.api.ConversationActivityClient.get_members
   name: get_members
   summary: Get the members associated with an activity.
-  signature: 'async get_members(conversation_id: str, activity_id: str) -> List[TeamsChannelAccount]'
+  signature: 'async get_members(conversation_id: str, activity_id: str, *, service_url:
+    str | None = None, agentic_identity: AgenticIdentity | None = None) -> List[TeamsChannelAccount]'
   parameters:
   - name: conversation_id
     description: The ID of the conversation
@@ -115,13 +143,19 @@ methods:
   - name: activity_id
     description: The ID of the activity
     isRequired: true
+  keywordOnlyParameters:
+  - name: service_url
+    defaultValue: None
+  - name: agentic_identity
+    defaultValue: None
   return:
     description: List of TeamsChannelAccount objects representing the activity members
 - uid: microsoft_teams.api.ConversationActivityClient.reply
   name: reply
   summary: Reply to an activity in a conversation.
   signature: 'async reply(conversation_id: str, activity_id: str, activity: MessageActivityInput
-    | MessageReactionActivityInput | TypingActivityInput) -> SentActivity'
+    | MessageReactionActivityInput | TypingActivityInput, *, service_url: str | None
+    = None, agentic_identity: AgenticIdentity | None = None) -> SentActivity'
   parameters:
   - name: conversation_id
     description: The ID of the conversation
@@ -132,13 +166,19 @@ methods:
   - name: activity
     description: The reply activity
     isRequired: true
+  keywordOnlyParameters:
+  - name: service_url
+    defaultValue: None
+  - name: agentic_identity
+    defaultValue: None
   return:
     description: The created reply activity
 - uid: microsoft_teams.api.ConversationActivityClient.update
   name: update
   summary: Update an existing activity in a conversation.
   signature: 'async update(conversation_id: str, activity_id: str, activity: MessageActivityInput
-    | MessageReactionActivityInput | TypingActivityInput) -> SentActivity'
+    | MessageReactionActivityInput | TypingActivityInput, *, service_url: str | None
+    = None, agentic_identity: AgenticIdentity | None = None) -> SentActivity'
   parameters:
   - name: conversation_id
     description: The ID of the conversation
@@ -149,6 +189,11 @@ methods:
   - name: activity
     description: The updated activity data
     isRequired: true
+  keywordOnlyParameters:
+  - name: service_url
+    defaultValue: None
+  - name: agentic_identity
+    defaultValue: None
   return:
     description: The updated activity
 - uid: microsoft_teams.api.ConversationActivityClient.update_targeted
@@ -170,8 +215,9 @@ methods:
 
     >'
   signature: 'async update_targeted(conversation_id: str, activity_id: str, activity:
-    MessageActivityInput | MessageReactionActivityInput | TypingActivityInput) ->
-    SentActivity'
+    MessageActivityInput | MessageReactionActivityInput | TypingActivityInput, *,
+    service_url: str | None = None, agentic_identity: AgenticIdentity | None = None)
+    -> SentActivity'
   parameters:
   - name: conversation_id
     description: The ID of the conversation
@@ -182,5 +228,10 @@ methods:
   - name: activity
     description: The updated activity data
     isRequired: true
+  keywordOnlyParameters:
+  - name: service_url
+    defaultValue: None
+  - name: agentic_identity
+    defaultValue: None
   return:
     description: The updated activity

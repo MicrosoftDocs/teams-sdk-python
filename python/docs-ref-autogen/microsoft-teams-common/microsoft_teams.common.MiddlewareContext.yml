@@ -1,0 +1,98 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.common.MiddlewareContext
+name: MiddlewareContext
+fullName: microsoft_teams.common.MiddlewareContext
+module: microsoft_teams.common
+summary: Context passed to HTTP middleware around terminal dispatch.
+constructor:
+  syntax: 'MiddlewareContext(method: str, url: str, headers: ~typing.Dict[str, str],
+    token: str | ~microsoft_teams.common.http.client_token.StringLike | ~typing.Callable[[],
+    str | ~microsoft_teams.common.http.client_token.StringLike | None | ~typing.Awaitable[str
+    | ~microsoft_teams.common.http.client_token.StringLike | None]] | None, params:
+    QueryParams | ~typing.Mapping[str, str | int | float | bool | None | ~typing.Sequence[str
+    | int | float | bool | None]] | ~typing.List[~typing.Tuple[str, str | int | float
+    | bool | None]] | ~typing.Tuple[~typing.Tuple[str, str | int | float | bool |
+    None], ...] | str | bytes | None = None, content: str | bytes | ~typing.Iterable[bytes]
+    | ~typing.AsyncIterable[bytes] | None = None, data: ~typing.Mapping[str, ~typing.Any]
+    | None = None, files: ~typing.Mapping[str, ~typing.IO[bytes] | bytes | str | ~typing.Tuple[str
+    | None, ~typing.IO[bytes] | bytes | str] | ~typing.Tuple[str | None, ~typing.IO[bytes]
+    | bytes | str, str | None] | ~typing.Tuple[str | None, ~typing.IO[bytes] | bytes
+    | str, str | None, ~typing.Mapping[str, str]]] | ~typing.Sequence[~typing.Tuple[str,
+    ~typing.IO[bytes] | bytes | str | ~typing.Tuple[str | None, ~typing.IO[bytes]
+    | bytes | str] | ~typing.Tuple[str | None, ~typing.IO[bytes] | bytes | str, str
+    | None] | ~typing.Tuple[str | None, ~typing.IO[bytes] | bytes | str, str | None,
+    ~typing.Mapping[str, str]]]] | None = None, json: object | None = None, kwargs:
+    ~typing.Dict[str, ~typing.Any] = <factory>, logger: ~logging.Logger = <Logger
+    microsoft_teams.common.http.client (WARNING)>, metadata: object | None = None)'
+  parameters:
+  - name: method
+    isRequired: true
+  - name: url
+    isRequired: true
+  - name: headers
+    isRequired: true
+  - name: token
+    isRequired: true
+  - name: params
+    defaultValue: None
+  - name: content
+    defaultValue: None
+  - name: data
+    defaultValue: None
+  - name: files
+    defaultValue: None
+  - name: json
+    defaultValue: None
+  - name: kwargs
+    defaultValue: <factory>
+  - name: logger
+    defaultValue: <Logger microsoft_teams.common.http.client (WARNING)>
+  - name: metadata
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.common.MiddlewareContext.content
+  name: content
+  signature: 'content: str | bytes | Iterable[bytes] | AsyncIterable[bytes] | None
+    = None'
+- uid: microsoft_teams.common.MiddlewareContext.data
+  name: data
+  signature: 'data: Mapping[str, Any] | None = None'
+- uid: microsoft_teams.common.MiddlewareContext.files
+  name: files
+  signature: 'files: Mapping[str, IO[bytes] | bytes | str | Tuple[str | None, IO[bytes]
+    | bytes | str] | Tuple[str | None, IO[bytes] | bytes | str, str | None] | Tuple[str
+    | None, IO[bytes] | bytes | str, str | None, Mapping[str, str]]] | Sequence[Tuple[str,
+    IO[bytes] | bytes | str | Tuple[str | None, IO[bytes] | bytes | str] | Tuple[str
+    | None, IO[bytes] | bytes | str, str | None] | Tuple[str | None, IO[bytes] | bytes
+    | str, str | None, Mapping[str, str]]]] | None = None'
+- uid: microsoft_teams.common.MiddlewareContext.headers
+  name: headers
+  signature: 'headers: Dict[str, str]'
+- uid: microsoft_teams.common.MiddlewareContext.json
+  name: json
+  signature: 'json: object | None = None'
+- uid: microsoft_teams.common.MiddlewareContext.kwargs
+  name: kwargs
+  signature: 'kwargs: Dict[str, Any]'
+- uid: microsoft_teams.common.MiddlewareContext.logger
+  name: logger
+  signature: 'logger: Logger = <Logger microsoft_teams.common.http.client (WARNING)>'
+- uid: microsoft_teams.common.MiddlewareContext.metadata
+  name: metadata
+  signature: 'metadata: object | None = None'
+- uid: microsoft_teams.common.MiddlewareContext.method
+  name: method
+  signature: 'method: str'
+- uid: microsoft_teams.common.MiddlewareContext.params
+  name: params
+  signature: 'params: QueryParams | Mapping[str, str | int | float | bool | None |
+    Sequence[str | int | float | bool | None]] | List[Tuple[str, str | int | float
+    | bool | None]] | Tuple[Tuple[str, str | int | float | bool | None], ...] | str
+    | bytes | None = None'
+- uid: microsoft_teams.common.MiddlewareContext.token
+  name: token
+  signature: 'token: str | StringLike | Callable[[], str | StringLike | None | Awaitable[str
+    | StringLike | None]] | None'
+- uid: microsoft_teams.common.MiddlewareContext.url
+  name: url
+  signature: 'url: str'

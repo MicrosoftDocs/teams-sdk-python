@@ -1,0 +1,18 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.TeamsApiTelemetry
+name: TeamsApiTelemetry
+fullName: microsoft_teams.api.TeamsApiTelemetry
+module: microsoft_teams.api
+summary: OpenTelemetry source names for the Teams API package.
+constructor:
+  syntax: TeamsApiTelemetry()
+attributes:
+- uid: microsoft_teams.api.TeamsApiTelemetry.instrumentation_version
+  name: instrumentation_version
+  signature: instrumentation_version = '2.1.0'
+- uid: microsoft_teams.api.TeamsApiTelemetry.meter_name
+  name: meter_name
+  signature: meter_name = 'Microsoft.Teams.Api'
+- uid: microsoft_teams.api.TeamsApiTelemetry.tracer_name
+  name: tracer_name
+  signature: tracer_name = 'Microsoft.Teams.Api'

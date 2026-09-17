@@ -1,0 +1,20 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.AgenticAppTokenProviderProtocol
+name: AgenticAppTokenProviderProtocol
+fullName: microsoft_teams.api.AgenticAppTokenProviderProtocol
+module: microsoft_teams.api
+summary: Optional named capability for acquiring agentic app-scoped tokens.
+constructor:
+  syntax: AgenticAppTokenProviderProtocol(*args, **kwargs)
+methods:
+- uid: microsoft_teams.api.AgenticAppTokenProviderProtocol.get_agentic_app_token
+  name: get_agentic_app_token
+  signature: 'get_agentic_app_token(scope: str, agentic_app_id: str, tenant_id: str
+    | None) -> str | TokenProtocol | None | Awaitable[str | TokenProtocol | None]'
+  parameters:
+  - name: scope
+    isRequired: true
+  - name: agentic_app_id
+    isRequired: true
+  - name: tenant_id
+    isRequired: true

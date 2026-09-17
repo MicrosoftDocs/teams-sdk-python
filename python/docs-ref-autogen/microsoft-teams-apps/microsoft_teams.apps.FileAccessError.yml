@@ -1,0 +1,53 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.FileAccessError
+name: FileAccessError
+fullName: microsoft_teams.apps.FileAccessError
+module: microsoft_teams.apps
+summary: 'Raised when the identity used was refused by the storage service.
+
+
+  Distinct from *FileUrlExpiredError*, which means a pre-authorized URL lapsed and
+  no usable Graph route existed.
+
+  This error means the Graph route was the one that failed, refused by the service
+  after the request was made.'
+constructor:
+  syntax: 'FileAccessError(status: int, actor: Literal[''app'', ''agentic_user'']
+    | None = None, details: str | None = None)'
+  parameters:
+  - name: status
+    isRequired: true
+  - name: actor
+    defaultValue: None
+  - name: details
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.apps.FileAccessError.actor
+  name: actor
+  summary: The identity the fetch was attempted as, when one was selected. *None*
+    when the failure preceded selection.
+  signature: 'actor: Literal[''app'', ''agentic_user''] | None'
+- uid: microsoft_teams.apps.FileAccessError.details
+  name: details
+  summary: 'What the storage service itself said, verbatim and truncated, when it
+    said anything.
+
+
+    A *403* covers an unconsented scope, a file the identity was never granted, and
+    a drive item that does not exist,
+
+    which are indistinguishable on the wire: Graph answers all three with *403*, because
+    telling an unauthorized
+
+    caller whether a resource exists would disclose it. That collapse is right for
+    branching and wrong for diagnosis,
+
+    so the original text is kept here rather than discarded.'
+  signature: 'details: str | None'
+- uid: microsoft_teams.apps.FileAccessError.status
+  name: status
+  summary: 'Lets callers branch without string-matching the message. *401* means the
+    token itself was rejected; *403* means
+
+    the identity lacks the grant, and the two have different remedies.'
+  signature: 'status: int'

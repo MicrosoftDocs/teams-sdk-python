@@ -1,0 +1,9 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.TurnStateSealedError
+name: TurnStateSealedError
+fullName: microsoft_teams.apps.TurnStateSealedError
+module: microsoft_teams.apps
+summary: Raised when a sealed <xref:microsoft_teams.apps.TurnState> is accessed after
+  its turn ends.
+constructor:
+  syntax: TurnStateSealedError()

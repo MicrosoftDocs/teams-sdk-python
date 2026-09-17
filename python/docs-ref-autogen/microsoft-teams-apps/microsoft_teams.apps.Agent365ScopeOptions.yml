@@ -1,0 +1,31 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.Agent365ScopeOptions
+name: Agent365ScopeOptions
+fullName: microsoft_teams.apps.Agent365ScopeOptions
+module: microsoft_teams.apps
+summary: Host-wide defaults for proactive Agent365 baggage scopes.
+constructor:
+  syntax: Agent365ScopeOptions()
+attributes:
+- uid: microsoft_teams.apps.Agent365ScopeOptions.additional_baggage
+  name: additional_baggage
+  signature: 'additional_baggage: Mapping[str, str | int | float | None]'
+- uid: microsoft_teams.apps.Agent365ScopeOptions.agent_id
+  name: agent_id
+  signature: 'agent_id: str | int | float | None'
+- uid: microsoft_teams.apps.Agent365ScopeOptions.channel_link
+  name: channel_link
+  signature: 'channel_link: str | int | float | None'
+- uid: microsoft_teams.apps.Agent365ScopeOptions.channel_name
+  name: channel_name
+  signature: 'channel_name: str | int | float | None'
+- uid: microsoft_teams.apps.Agent365ScopeOptions.include
+  name: include
+  signature: 'include: Collection[Literal[''senderName'', ''agentName'', ''agentDescription'',
+    ''senderEmail'', ''agentEmail'']]'
+- uid: microsoft_teams.apps.Agent365ScopeOptions.operation_source
+  name: operation_source
+  signature: 'operation_source: str | int | float | None'
+- uid: microsoft_teams.apps.Agent365ScopeOptions.service_url
+  name: service_url
+  signature: 'service_url: str | int | float | None'

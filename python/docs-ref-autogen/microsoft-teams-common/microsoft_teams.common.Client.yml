@@ -8,7 +8,8 @@ summary: 'HTTP Client abstraction for making requests with configurable options.
 
   Initialize the HTTP Client.'
 constructor:
-  syntax: 'Client(options: ClientOptions | None = None)'
+  syntax: 'Client(options: ClientOptions | None = None, *, _http: AsyncClient | None
+    = None)'
   parameters:
   - name: options
     description: ClientOptions dataclass with configuration for the client.
@@ -16,15 +17,22 @@ constructor:
   - name: options
     description: Optional ClientOptions dataclass with configuration for the client.
     isRequired: true
+  keywordOnlyParameters:
+  - name: _http
+    defaultValue: None
 methods:
 - uid: microsoft_teams.common.Client.clone
   name: clone
   summary: Create a new Client instance with merged configuration.
-  signature: 'clone(overrides: ClientOptions | None = None) -> Client'
+  signature: 'clone(overrides: ClientOptions | None = None, *, share_http: bool =
+    False) -> Client'
   parameters:
   - name: overrides
     description: Optional ClientOptions object to override fields.
     defaultValue: None
+  keywordOnlyParameters:
+  - name: share_http
+    defaultValue: 'False'
   return:
     description: A new Client instance with merged options and a cloned interceptor
       list.
@@ -344,6 +352,18 @@ methods:
     defaultValue: None
   return:
     description: httpx.Response
+- uid: microsoft_teams.common.Client.use
+  name: use
+  summary: 'Register middleware for terminal request dispatch.
+
+
+    Middleware runs in insertion order, with the first registered
+
+    middleware as the outermost wrapper.'
+  signature: 'use(middleware: Middleware) -> None'
+  parameters:
+  - name: middleware
+    isRequired: true
 - uid: microsoft_teams.common.Client.use_interceptor
   name: use_interceptor
   summary: Register an interceptor for request/response middleware.
@@ -352,3 +372,13 @@ methods:
   - name: interceptor
     description: An object with optional request/response methods.
     isRequired: true
+attributes:
+- uid: microsoft_teams.common.Client.interceptors
+  name: interceptors
+  summary: Get the registered interceptors.
+- uid: microsoft_teams.common.Client.middlewares
+  name: middlewares
+  summary: Get the registered middleware.
+- uid: microsoft_teams.common.Client.token
+  name: token
+  summary: Get the default authorization token.

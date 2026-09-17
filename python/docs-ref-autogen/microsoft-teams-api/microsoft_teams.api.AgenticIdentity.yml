@@ -1,0 +1,38 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.AgenticIdentity
+name: AgenticIdentity
+fullName: microsoft_teams.api.AgenticIdentity
+module: microsoft_teams.api
+summary: 'Identifies the Agent 365 identity scope used for SDK operations.
+
+
+  AgenticIdentity is the SDK operation/request scope for the Agent 365
+
+  program. It encompasses an agentic app blueprint, which can instantiate
+
+  agentic apps, and each app can optionally have associated agentic users.'
+constructor:
+  syntax: 'AgenticIdentity(*, agentic_app_blueprint_id: str, agentic_app_id: str |
+    None = None, agentic_user_id: str | None = None, tenant_id: str | None = None)'
+  keywordOnlyParameters:
+  - name: agentic_app_blueprint_id
+    isRequired: true
+  - name: agentic_app_id
+    defaultValue: None
+  - name: agentic_user_id
+    defaultValue: None
+  - name: tenant_id
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.AgenticIdentity.agentic_app_blueprint_id
+  name: agentic_app_blueprint_id
+  signature: 'agentic_app_blueprint_id: str'
+- uid: microsoft_teams.api.AgenticIdentity.agentic_app_id
+  name: agentic_app_id
+  signature: 'agentic_app_id: str | None = None'
+- uid: microsoft_teams.api.AgenticIdentity.agentic_user_id
+  name: agentic_user_id
+  signature: 'agentic_user_id: str | None = None'
+- uid: microsoft_teams.api.AgenticIdentity.tenant_id
+  name: tenant_id
+  signature: 'tenant_id: str | None = None'

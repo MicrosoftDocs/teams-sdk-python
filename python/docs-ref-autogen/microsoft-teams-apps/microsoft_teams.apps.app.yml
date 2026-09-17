@@ -10,6 +10,34 @@ summary: 'The main Teams application orchestrator.
 constructor:
   syntax: 'App(**options: Unpack[AppOptions])'
 methods:
+- uid: microsoft_teams.apps.App.add_oauth_flow
+  name: add_oauth_flow
+  summary: "Register an OAuth connection and return its object.\n\n-[ Notes ]-\n\n\
+    Registering a flow turns on per-turn state automatically when the\n`state` option\
+    \ was omitted, because connection-less callbacks need\nsomewhere to record which\
+    \ connection a sign-in started on. Pass\n`state=True` or a `StateOptions` to choose\
+    \ the storage yourself,\nor `state=False` to opt out \u2014 an explicit choice\
+    \ is never\noverridden. With state off, pending hints fall back to a bounded\n\
+    process-local cache, so a callback handled by another instance\ncannot be attributed.\n\
+    \nConnection-less verify-state callbacks probe hinted flows first,\nthen the remaining\
+    \ registered flows and legacy default connection.\nSign-in failures use pending\
+    \ silent-SSO hints for attribution and\nnotify registered flows as a fallback.\
+    \ Token-exchange callbacks\ncarry their connection name and route correctly without\
+    \ state."
+  signature: 'add_oauth_flow(connection_name: str, *, oauth_card_text: str = ''Please
+    Sign In...'', sign_in_button_text: str = ''Sign In'') -> OAuthFlow'
+  parameters:
+  - name: connection_name
+    isRequired: true
+  keywordOnlyParameters:
+  - name: oauth_card_text
+    defaultValue: Please Sign In...
+  - name: sign_in_button_text
+    defaultValue: Sign In
+  exceptions:
+  - type: ValueError
+    description: "if a flow for this connection is already registered\n    (connection\
+      \ names are case-insensitive)."
 - uid: microsoft_teams.apps.App.event
   name: event
   summary: 'Decorator to register event handlers with automatic type inference.
@@ -57,6 +85,27 @@ methods:
   examples:
   - ">>``<<>>`<<python\n@app.func\nasync def post_to_chat(ctx: FunctionContext[Any]):\n\
     \n   await ctx.send(ctx.data[\"message\"])\n\n>>``<<>>`<<\n"
+- uid: microsoft_teams.apps.App.get_agentic_identity
+  name: get_agentic_identity
+  summary: 'Get an AgenticIdentity for API calls.
+
+
+    When `agentic_app_blueprint_id` is omitted, it defaults to the app''s own
+
+    client/app id (`self.id`).'
+  signature: 'get_agentic_identity(agentic_app_id: str | None = None, agentic_user_id:
+    str | None = None, *, tenant_id: str | None = None, agentic_app_blueprint_id:
+    str | None = None) -> AgenticIdentity'
+  parameters:
+  - name: agentic_app_id
+    defaultValue: None
+  - name: agentic_user_id
+    defaultValue: None
+  keywordOnlyParameters:
+  - name: tenant_id
+    defaultValue: None
+  - name: agentic_app_blueprint_id
+    defaultValue: None
 - uid: microsoft_teams.apps.App.get_app_graph
   name: get_app_graph
   summary: 'Get a Microsoft Graph client configured with the app''s token.
@@ -73,6 +122,19 @@ methods:
   exceptions:
   - type: ImportError
     description: If the graph dependencies are not installed.
+- uid: microsoft_teams.apps.App.get_oauth_flow
+  name: get_oauth_flow
+  summary: Retrieve a previously registered OAuth flow by connection name.
+  signature: 'get_oauth_flow(connection_name: str) -> OAuthFlow'
+  parameters:
+  - name: connection_name
+    description: The OAuth connection name (case-insensitive).
+    isRequired: true
+  return:
+    description: The registered `OAuthFlow`.
+  exceptions:
+  - type: ValueError
+    description: if no flow is registered for this connection.
 - uid: microsoft_teams.apps.App.initialize
   name: initialize
   summary: 'Initialize the Teams application without starting the HTTP server.
@@ -125,7 +187,8 @@ methods:
 
     `;messageid=`, flat otherwise.'
   signature: 'async reply(conversation_id: str, message_id: str, activity: str | ActivityParams
-    | AdaptiveCard) -> SentActivity'
+    | AdaptiveCard, *, service_url: str | None = None, agentic_identity: AgenticIdentity
+    | None = None) -> SentActivity'
   parameters:
   - name: conversation_id
     description: The conversation ID
@@ -135,6 +198,11 @@ methods:
     isRequired: true
   - name: activity
     description: The activity to send (only in 3-arg form)
+    defaultValue: None
+  keywordOnlyParameters:
+  - name: service_url
+    defaultValue: None
+  - name: agentic_identity
     defaultValue: None
 - uid: microsoft_teams.apps.App.send
   name: send
@@ -148,12 +216,18 @@ methods:
     to construct it, or use <xref:microsoft_teams.apps.App.reply> which handles this
     automatically.'
   signature: 'async send(conversation_id: str, activity: str | MessageActivityInput
-    | MessageReactionActivityInput | TypingActivityInput | AdaptiveCard)'
+    | MessageReactionActivityInput | TypingActivityInput | AdaptiveCard, *, service_url:
+    str | None = None, agentic_identity: AgenticIdentity | None = None) -> SentActivity'
   parameters:
   - name: conversation_id
     isRequired: true
   - name: activity
     isRequired: true
+  keywordOnlyParameters:
+  - name: service_url
+    defaultValue: None
+  - name: agentic_identity
+    defaultValue: None
 - uid: microsoft_teams.apps.App.start
   name: start
   summary: 'Start the Teams application and begin serving HTTP requests.
@@ -215,3 +289,6 @@ attributes:
 - uid: microsoft_teams.apps.App.router
   name: router
   summary: The activity router instance.
+- uid: microsoft_teams.apps.App.token_provider
+  name: token_provider
+  summary: Token source for resources the SDK does not call automatically.

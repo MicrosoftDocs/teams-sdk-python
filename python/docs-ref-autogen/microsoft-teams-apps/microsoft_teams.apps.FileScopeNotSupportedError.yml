@@ -1,0 +1,27 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.FileScopeNotSupportedError
+name: FileScopeNotSupportedError
+fullName: microsoft_teams.apps.FileScopeNotSupportedError
+module: microsoft_teams.apps
+summary: 'Raised when file bytes are requested for a conversation scope whose download
+  path is not implemented.
+
+
+  Only *personal* (1:1) uploaded files download directly.
+
+  *groupChat* files are surfaced by *list()*, but fetching their bytes needs Graph;
+
+  *download()*/*stream()* throws until that path lands.'
+constructor:
+  syntax: 'FileScopeNotSupportedError(scope: Literal[''personal'', ''groupChat'',
+    ''channel''] | str, message: str | None = None)'
+  parameters:
+  - name: scope
+    isRequired: true
+  - name: message
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.apps.FileScopeNotSupportedError.scope
+  name: scope
+  summary: The conversation scope that is not yet fetchable.
+  signature: 'scope: Literal[''personal'', ''groupChat'', ''channel''] | str'

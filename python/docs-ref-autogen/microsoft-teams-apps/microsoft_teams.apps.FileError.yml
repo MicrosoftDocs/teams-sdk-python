@@ -1,0 +1,20 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.FileError
+name: FileError
+fullName: microsoft_teams.apps.FileError
+module: microsoft_teams.apps
+summary: 'Base class for the diagnosable failures on the inbound-file path: an expired
+  URL, an unsupported scope, and a
+
+  refused Graph read.
+
+
+  Lets a caller catch those with one *except* clause, so a new one can be added without
+  callers changing. A
+
+  transport or service failure the SDK cannot attribute, such as a Graph 5xx, is not
+  one of these and surfaces as
+
+  a plain *RuntimeError*.'
+constructor:
+  syntax: FileError()

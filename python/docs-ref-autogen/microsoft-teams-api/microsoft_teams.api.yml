@@ -51,7 +51,8 @@ functions:
   signature: 'merge_api_client_settings(api_client_settings: ApiClientSettings | None
     = None, cloud: CloudEnvironment = CloudEnvironment(login_endpoint=''https://login.microsoftonline.com'',
     login_tenant=''botframework.com'', bot_scope=''https://api.botframework.com/.default'',
-    token_service_url=''https://token.botframework.com'', openid_metadata_url=''https://login.botframework.com/v1/.well-known/openidconfiguration'',
+    agent_bot_scope=''https://botapi.skype.com/.default'', token_service_url=''https://token.botframework.com'',
+    openid_metadata_url=''https://login.botframework.com/v1/.well-known/openidconfiguration'',
     token_issuer=''https://api.botframework.com'', graph_scope=''https://graph.microsoft.com/.default''))
     -> ApiClientSettings'
   parameters:
@@ -62,7 +63,8 @@ functions:
     description: Cloud environment for default oauth_url. Defaults to PUBLIC.
     defaultValue: CloudEnvironment(login_endpoint='https://login.microsoftonline.com',
       login_tenant='botframework.com', bot_scope='https://api.botframework.com/.default',
-      token_service_url='https://token.botframework.com', openid_metadata_url='https://login.botframework.com/v1/.well-known/openidconfiguration',
+      agent_bot_scope='https://botapi.skype.com/.default', token_service_url='https://token.botframework.com',
+      openid_metadata_url='https://login.botframework.com/v1/.well-known/openidconfiguration',
       token_issuer='https://api.botframework.com', graph_scope='https://graph.microsoft.com/.default')
   return:
     description: Merged API client settings.
@@ -89,6 +91,30 @@ classes:
 - microsoft_teams.api.AdaptiveCardInvokeAction
 - microsoft_teams.api.AdaptiveCardInvokeActivity
 - microsoft_teams.api.AdaptiveCardInvokeValue
+- microsoft_teams.api.AgentLifecycleEventActivityBase
+- microsoft_teams.api.AgentLifecycleManager
+- microsoft_teams.api.AgentLifecycleManagerRef
+- microsoft_teams.api.AgentLifecycleUpdatedProperty
+- microsoft_teams.api.AgentLifecycleValueBase
+- microsoft_teams.api.AgenticAppTokenProviderProtocol
+- microsoft_teams.api.AgenticIdentity
+- microsoft_teams.api.AgenticUserDeletedActivity
+- microsoft_teams.api.AgenticUserDeletedValue
+- microsoft_teams.api.AgenticUserDisabledActivity
+- microsoft_teams.api.AgenticUserDisabledValue
+- microsoft_teams.api.AgenticUserEnabledActivity
+- microsoft_teams.api.AgenticUserEnabledValue
+- microsoft_teams.api.AgenticUserIdentityCreatedActivity
+- microsoft_teams.api.AgenticUserIdentityCreatedValue
+- microsoft_teams.api.AgenticUserIdentityUpdatedActivity
+- microsoft_teams.api.AgenticUserIdentityUpdatedValue
+- microsoft_teams.api.AgenticUserManagerUpdatedActivity
+- microsoft_teams.api.AgenticUserManagerUpdatedValue
+- microsoft_teams.api.AgenticUserTokenProviderProtocol
+- microsoft_teams.api.AgenticUserUndeletedActivity
+- microsoft_teams.api.AgenticUserUndeletedValue
+- microsoft_teams.api.AgenticUserWorkloadOnboardingUpdatedActivity
+- microsoft_teams.api.AgenticUserWorkloadOnboardingUpdatedValue
 - microsoft_teams.api.AnimationCard
 - microsoft_teams.api.AnimationCardAttachment
 - microsoft_teams.api.ApiClient
@@ -147,6 +173,7 @@ classes:
 - microsoft_teams.api.FileConsentCard
 - microsoft_teams.api.FileConsentCardResponse
 - microsoft_teams.api.FileConsentInvokeActivity
+- microsoft_teams.api.FileDownloadInfo
 - microsoft_teams.api.FileInfoCard
 - microsoft_teams.api.FileUploadInfo
 - microsoft_teams.api.GetBotSignInResourceParams
@@ -167,6 +194,7 @@ classes:
 - microsoft_teams.api.Image
 - microsoft_teams.api.InnerHttpError
 - microsoft_teams.api.InstalledActivity
+- microsoft_teams.api.InstalledUpgradeActivity
 - microsoft_teams.api.InvokeResponse
 - microsoft_teams.api.JsonWebToken
 - microsoft_teams.api.JsonWebTokenPayload
@@ -292,6 +320,7 @@ classes:
 - microsoft_teams.api.TeamClient
 - microsoft_teams.api.TeamDetails
 - microsoft_teams.api.TeamInfo
+- microsoft_teams.api.TeamsApiTelemetry
 - microsoft_teams.api.TeamsChannelAccount
 - microsoft_teams.api.TenantInfo
 - microsoft_teams.api.ThumbnailCard
@@ -305,6 +334,7 @@ classes:
 - microsoft_teams.api.TokenExchangeState
 - microsoft_teams.api.TokenPostResource
 - microsoft_teams.api.TokenProtocol
+- microsoft_teams.api.TokenProviderProtocol
 - microsoft_teams.api.TokenRequest
 - microsoft_teams.api.TokenResponse
 - microsoft_teams.api.TokenStatus

@@ -10,7 +10,7 @@ constructor:
     None = None, message_id: str | None = None, channel_id: str | None = None, chat_id:
     str | None = None, meeting_id: str | None = None, sub_page_id: str | None = None,
     _resolved_conversation_id: str | None = None, *, id: str | None = None, name:
-    str | None = None, api: ApiClient, activity_sender: ActivitySender, data: T)'
+    str | None = None, api: ApiClient, data: T)'
   parameters:
   - name: app_session_id
     isRequired: true
@@ -47,8 +47,6 @@ constructor:
     defaultValue: None
   - name: api
     isRequired: true
-  - name: activity_sender
-    isRequired: true
   - name: data
     isRequired: true
 methods:
@@ -64,10 +62,6 @@ methods:
   - name: activity
     isRequired: true
 attributes:
-- uid: microsoft_teams.apps.FunctionContext.activity_sender
-  name: activity_sender
-  summary: The activity sender instance for sending messages.
-  signature: 'activity_sender: ActivitySender'
 - uid: microsoft_teams.apps.FunctionContext.api
   name: api
   summary: The API client instance for conversation client.

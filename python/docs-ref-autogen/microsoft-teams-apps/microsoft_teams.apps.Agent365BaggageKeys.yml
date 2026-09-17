@@ -1,0 +1,92 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.Agent365BaggageKeys
+name: Agent365BaggageKeys
+fullName: microsoft_teams.apps.Agent365BaggageKeys
+module: microsoft_teams.apps
+summary: Agent365-compatible OpenTelemetry baggage keys.
+constructor:
+  syntax: 'Agent365BaggageKeys(agent_blueprint_id: str = ''microsoft.a365.agent.blueprint.id'',
+    agent_description: str = ''gen_ai.agent.description'', agent_id: str = ''gen_ai.agent.id'',
+    agent_name: str = ''gen_ai.agent.name'', agentic_user_email: str = ''microsoft.agent.user.email'',
+    agentic_user_id: str = ''microsoft.agent.user.id'', channel_link: str = ''microsoft.channel.link'',
+    channel_name: str = ''microsoft.channel.name'', conversation_id: str = ''gen_ai.conversation.id'',
+    conversation_item_link: str = ''microsoft.conversation.item.link'', operation_source:
+    str = ''service.name'', tenant_id: str = ''microsoft.tenant.id'', user_email:
+    str = ''user.email'', user_id: str = ''user.id'', user_name: str = ''user.name'')'
+  parameters:
+  - name: agent_blueprint_id
+    defaultValue: microsoft.a365.agent.blueprint.id
+  - name: agent_description
+    defaultValue: gen_ai.agent.description
+  - name: agent_id
+    defaultValue: gen_ai.agent.id
+  - name: agent_name
+    defaultValue: gen_ai.agent.name
+  - name: agentic_user_email
+    defaultValue: microsoft.agent.user.email
+  - name: agentic_user_id
+    defaultValue: microsoft.agent.user.id
+  - name: channel_link
+    defaultValue: microsoft.channel.link
+  - name: channel_name
+    defaultValue: microsoft.channel.name
+  - name: conversation_id
+    defaultValue: gen_ai.conversation.id
+  - name: conversation_item_link
+    defaultValue: microsoft.conversation.item.link
+  - name: operation_source
+    defaultValue: service.name
+  - name: tenant_id
+    defaultValue: microsoft.tenant.id
+  - name: user_email
+    defaultValue: user.email
+  - name: user_id
+    defaultValue: user.id
+  - name: user_name
+    defaultValue: user.name
+attributes:
+- uid: microsoft_teams.apps.Agent365BaggageKeys.agent_blueprint_id
+  name: agent_blueprint_id
+  signature: 'agent_blueprint_id: str = ''microsoft.a365.agent.blueprint.id'''
+- uid: microsoft_teams.apps.Agent365BaggageKeys.agent_description
+  name: agent_description
+  signature: 'agent_description: str = ''gen_ai.agent.description'''
+- uid: microsoft_teams.apps.Agent365BaggageKeys.agent_id
+  name: agent_id
+  signature: 'agent_id: str = ''gen_ai.agent.id'''
+- uid: microsoft_teams.apps.Agent365BaggageKeys.agent_name
+  name: agent_name
+  signature: 'agent_name: str = ''gen_ai.agent.name'''
+- uid: microsoft_teams.apps.Agent365BaggageKeys.agentic_user_email
+  name: agentic_user_email
+  signature: 'agentic_user_email: str = ''microsoft.agent.user.email'''
+- uid: microsoft_teams.apps.Agent365BaggageKeys.agentic_user_id
+  name: agentic_user_id
+  signature: 'agentic_user_id: str = ''microsoft.agent.user.id'''
+- uid: microsoft_teams.apps.Agent365BaggageKeys.channel_link
+  name: channel_link
+  signature: 'channel_link: str = ''microsoft.channel.link'''
+- uid: microsoft_teams.apps.Agent365BaggageKeys.channel_name
+  name: channel_name
+  signature: 'channel_name: str = ''microsoft.channel.name'''
+- uid: microsoft_teams.apps.Agent365BaggageKeys.conversation_id
+  name: conversation_id
+  signature: 'conversation_id: str = ''gen_ai.conversation.id'''
+- uid: microsoft_teams.apps.Agent365BaggageKeys.conversation_item_link
+  name: conversation_item_link
+  signature: 'conversation_item_link: str = ''microsoft.conversation.item.link'''
+- uid: microsoft_teams.apps.Agent365BaggageKeys.operation_source
+  name: operation_source
+  signature: 'operation_source: str = ''service.name'''
+- uid: microsoft_teams.apps.Agent365BaggageKeys.tenant_id
+  name: tenant_id
+  signature: 'tenant_id: str = ''microsoft.tenant.id'''
+- uid: microsoft_teams.apps.Agent365BaggageKeys.user_email
+  name: user_email
+  signature: 'user_email: str = ''user.email'''
+- uid: microsoft_teams.apps.Agent365BaggageKeys.user_id
+  name: user_id
+  signature: 'user_id: str = ''user.id'''
+- uid: microsoft_teams.apps.Agent365BaggageKeys.user_name
+  name: user_name
+  signature: 'user_name: str = ''user.name'''
