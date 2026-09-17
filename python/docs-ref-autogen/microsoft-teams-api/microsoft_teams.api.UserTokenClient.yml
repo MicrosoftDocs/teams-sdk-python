@@ -9,7 +9,7 @@ summary: 'Client for managing user tokens in Teams.
   Initialize the UserTokenClient.'
 constructor:
   syntax: 'UserTokenClient(options: Client | ClientOptions | None = None, api_client_settings:
-    ApiClientSettings | None = None)'
+    ApiClientSettings | None = None, *, cloud: CloudEnvironment | None = None)'
   parameters:
   - name: options
     description: Optional Client or ClientOptions instance. If not provided, a default
@@ -17,6 +17,9 @@ constructor:
     defaultValue: None
   - name: api_client_settings
     description: Optional API client settings.
+    defaultValue: None
+  keywordOnlyParameters:
+  - name: cloud
     defaultValue: None
 methods:
 - uid: microsoft_teams.api.UserTokenClient.exchange

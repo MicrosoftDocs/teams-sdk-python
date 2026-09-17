@@ -1,0 +1,83 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.TurnStateContainer
+name: TurnStateContainer
+fullName: microsoft_teams.apps.TurnStateContainer
+module: microsoft_teams.apps
+summary: 'The state scopes loaded for one turn, together with the identity they
+
+  were loaded for.
+
+
+  `conversation` is always present. `user` is `None` when the activity has
+
+  no `from` identity, so there is no per-user scope to load or persist.
+
+
+  `conversation_id`/`user_id` record the identity this container was loaded
+
+  for. The loader reads them back off the container when saving, so a save can
+
+  never be told to persist under a different key than it was loaded from. That
+
+  guarantee is why they are read-only properties: rebinding either one mid-turn
+
+  would redirect the save to a different conversation or user while the scopes
+
+  still hold the original identity''s data.
+
+
+  Only the identity is bound. `conversation`/`user` and the injected
+
+  deleter/saver remain ordinary mutable attributes, and the `TurnState` scopes
+
+  stay mutable for the whole turn, which is how `seal()` and `delete()` work.
+
+
+  Constructor arguments are keyword-only so the public constructor is not tied to
+
+  positional order and can evolve without breaking callers.'
+constructor:
+  syntax: 'TurnStateContainer(*, conversation: TurnState, conversation_id: str, user:
+    TurnState | None = None, user_id: str | None = None, _deleter: Callable[[], Awaitable[None]]
+    | None = None, _saver: Callable[[TurnStateContainer], Awaitable[None]] | None
+    = None)'
+  keywordOnlyParameters:
+  - name: conversation
+    isRequired: true
+  - name: conversation_id
+    isRequired: true
+  - name: user
+    defaultValue: None
+  - name: user_id
+    defaultValue: None
+  - name: _deleter
+    defaultValue: None
+  - name: _saver
+    defaultValue: None
+methods:
+- uid: microsoft_teams.apps.TurnStateContainer.delete
+  name: delete
+  summary: 'Clear both scopes and remove them from the backing store.
+
+
+    The injected deleter removes the keys immediately, then in-memory scopes
+
+    are cleared so state reflects the deletion during the current turn.'
+  signature: async delete() -> None
+- uid: microsoft_teams.apps.TurnStateContainer.seal
+  name: seal
+  summary: Seal every scope so post-turn access raises.
+  signature: seal() -> None
+attributes:
+- uid: microsoft_teams.apps.TurnStateContainer.conversation_id
+  name: conversation_id
+  summary: Conversation this container was loaded for. Fixed at construction.
+- uid: microsoft_teams.apps.TurnStateContainer.user_id
+  name: user_id
+  summary: User this container was loaded for, if any. Fixed at construction.
+- uid: microsoft_teams.apps.TurnStateContainer.conversation
+  name: conversation
+  signature: 'conversation: TurnState'
+- uid: microsoft_teams.apps.TurnStateContainer.user
+  name: user
+  signature: 'user: TurnState | None'

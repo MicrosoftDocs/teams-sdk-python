@@ -1,0 +1,34 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.SignInFailureEvent
+name: SignInFailureEvent
+fullName: microsoft_teams.apps.SignInFailureEvent
+module: microsoft_teams.apps
+constructor:
+  syntax: 'SignInFailureEvent(activity_ctx: microsoft_teams.apps.routing.activity_context.ActivityContext[microsoft_teams.api.activities.invoke.sign_in.failure.SignInFailureInvokeActivity]
+    | microsoft_teams.apps.routing.activity_context.ActivityContext[microsoft_teams.api.activities.invoke.sign_in.verify_state.SignInVerifyStateInvokeActivity]
+    | microsoft_teams.apps.routing.activity_context.ActivityContext[microsoft_teams.api.activities.invoke.sign_in.token_exchange.SignInTokenExchangeInvokeActivity],
+    connection_name: str | None = None, code: str | None = None, message: str | None
+    = None)'
+  parameters:
+  - name: activity_ctx
+    isRequired: true
+  - name: connection_name
+    defaultValue: None
+  - name: code
+    defaultValue: None
+  - name: message
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.apps.SignInFailureEvent.activity_ctx
+  name: activity_ctx
+  signature: 'activity_ctx: ActivityContext[SignInFailureInvokeActivity] | ActivityContext[SignInVerifyStateInvokeActivity]
+    | ActivityContext[SignInTokenExchangeInvokeActivity]'
+- uid: microsoft_teams.apps.SignInFailureEvent.code
+  name: code
+  signature: 'code: str | None = None'
+- uid: microsoft_teams.apps.SignInFailureEvent.connection_name
+  name: connection_name
+  signature: 'connection_name: str | None = None'
+- uid: microsoft_teams.apps.SignInFailureEvent.message
+  name: message
+  signature: 'message: str | None = None'

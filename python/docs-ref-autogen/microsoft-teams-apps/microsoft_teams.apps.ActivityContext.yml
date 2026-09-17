@@ -3,16 +3,24 @@ uid: microsoft_teams.apps.ActivityContext
 name: ActivityContext
 fullName: microsoft_teams.apps.ActivityContext
 module: microsoft_teams.apps
-summary: Context object passed to activity handlers with middleware support.
+summary: "Context object passed to activity handlers with middleware support.\n\n\
+  > [!NOTE]\n> The single-connection OAuth surface here - <xref:is_signed_in>,\n>\n\
+  > <xref:user_token>, <xref:microsoft_teams.apps.ActivityContext.user_graph>, <xref:microsoft_teams.apps.ActivityContext.sign_in>,\n\
+  >\n> <xref:microsoft_teams.apps.ActivityContext.sign_out> and <xref:microsoft_teams.apps.ActivityContext.get_user_token>\
+  \ - predates\n>\n> multi-connection support and is deprecated.\n>\n> \n>\n> Register\
+  \ connections with\n>\n> app.add_oauth_flow(name) and use the returned OAuthFlow,\
+  \ which\n>\n> pins every operation to the connection that owns it.\n>"
 constructor:
   syntax: 'ActivityContext(activity: T, app_id: str, storage: Storage[str, Any], api:
     ApiClient, user_token: str | None, conversation_ref: ConversationReference, is_signed_in:
-    bool, connection_name: str, activity_sender: ActivitySender, app_token: str |
-    StringLike | Callable[[], str | StringLike | None | Awaitable[str | StringLike
-    | None]] | None, cloud: CloudEnvironment = CloudEnvironment(login_endpoint=''https://login.microsoftonline.com'',
-    login_tenant=''botframework.com'', bot_scope=''https://api.botframework.com/.default'',
+    bool, connection_name: str, app_token: str | StringLike | Callable[[], str | StringLike
+    | None | Awaitable[str | StringLike | None]] | None, cloud: CloudEnvironment =
+    CloudEnvironment(login_endpoint=''https://login.microsoftonline.com'', login_tenant=''botframework.com'',
+    bot_scope=''https://api.botframework.com/.default'', agent_bot_scope=''https://botapi.skype.com/.default'',
     token_service_url=''https://token.botframework.com'', openid_metadata_url=''https://login.botframework.com/v1/.well-known/openidconfiguration'',
-    token_issuer=''https://api.botframework.com'', graph_scope=''https://graph.microsoft.com/.default''))'
+    token_issuer=''https://api.botframework.com'', graph_scope=''https://graph.microsoft.com/.default''),
+    oauth_connection_names: Sequence[str] | None = None, files_credential: GraphCredential
+    | None = None)'
   parameters:
   - name: activity
     isRequired: true
@@ -30,16 +38,68 @@ constructor:
     isRequired: true
   - name: connection_name
     isRequired: true
-  - name: activity_sender
-    isRequired: true
   - name: app_token
     isRequired: true
   - name: cloud
     defaultValue: CloudEnvironment(login_endpoint='https://login.microsoftonline.com',
       login_tenant='botframework.com', bot_scope='https://api.botframework.com/.default',
-      token_service_url='https://token.botframework.com', openid_metadata_url='https://login.botframework.com/v1/.well-known/openidconfiguration',
+      agent_bot_scope='https://botapi.skype.com/.default', token_service_url='https://token.botframework.com',
+      openid_metadata_url='https://login.botframework.com/v1/.well-known/openidconfiguration',
       token_issuer='https://api.botframework.com', graph_scope='https://graph.microsoft.com/.default')
+  - name: oauth_connection_names
+    defaultValue: None
+  - name: files_credential
+    defaultValue: None
 methods:
+- uid: microsoft_teams.apps.ActivityContext.get_connection_status
+  name: get_connection_status
+  summary: 'Get the token status for every OAuth connection registered on the bot.
+
+
+    A single Token Service call returns the status for all connections, so
+
+    the developer never needs to enumerate connection names manually.
+
+    Service failures propagate rather than being reported as signed out.
+
+
+    The bulk call reports only connections the Token Service knows about, and
+
+    it can lag a token that was just written. Any registered OAuth flow that
+
+    comes back missing or `has_token=False` is therefore re-checked with a
+
+    direct per-connection lookup, so a freshly signed-in flow is never
+
+    reported as signed out. Connections that are not registered are passed
+
+    through untouched, and a non-404 lookup failure propagates.'
+  signature: async get_connection_status() -> List[TokenStatus]
+- uid: microsoft_teams.apps.ActivityContext.get_user_token
+  name: get_user_token
+  summary: 'Get the user''s token for a connection.
+
+
+    *Deprecated since version Use:* `app.get_oauth_flow(name).get_token(ctx)`, which
+    reads the
+
+    token from the flow that owns the connection.'
+  signature: 'async get_user_token(connection_name: str | None = None) -> str | None'
+  parameters:
+  - name: connection_name
+    description: 'The connection to read. Defaults to the app''s
+
+      default connection.'
+    defaultValue: None
+  return:
+    description: 'The token if the user is signed in, or `None` if they are not
+
+      (the Token Service returns 404 when no token is cached).'
+  exceptions:
+  - type: HTTPStatusError
+    description: "for any non-404 failure (e.g. the Token Service is\n    unavailable).\
+      \ Such errors are surfaced rather than being masked\n    as \"not signed in\"\
+      , so a genuine outage is not mistaken for a\n    logged-out user."
 - uid: microsoft_teams.apps.ActivityContext.next
   name: next
   summary: Call the next middleware in the chain.
@@ -108,7 +168,17 @@ methods:
     isRequired: true
 - uid: microsoft_teams.apps.ActivityContext.sign_in
   name: sign_in
-  summary: Initiate a sign-in flow for the user.
+  summary: 'Initiate a sign-in flow for the user.
+
+
+    *Deprecated since version Targets:* the app''s single `connection_name`, which
+    does not
+
+    generalize past one connection. Use
+
+    `app.get_oauth_flow(name).sign_in(ctx, options)`, which pins the
+
+    connection to the flow that owns it.'
   signature: 'async sign_in(options: SignInOptions | None = None) -> str | None'
   parameters:
   - name: options
@@ -122,8 +192,25 @@ methods:
   summary: 'Sign out the user by clearing their token.
 
 
-    This method will remove the user''s token from the storage.'
-  signature: async sign_out() -> None
+    This method will remove the user''s token from the storage.
+
+
+    *Deprecated since version Use:* `app.get_oauth_flow(name).sign_out(ctx)`, which
+    cannot sign
+
+    out of the wrong connection.'
+  signature: 'async sign_out(connection_name: str | None = None) -> None'
+  parameters:
+  - name: connection_name
+    description: 'The connection to sign out of. Defaults to the
+
+      app''s default connection.'
+    defaultValue: None
+  exceptions:
+  - type: HTTPStatusError
+    description: "if the Token Service rejects the request. A failed\n    sign-out\
+      \ leaves the token in place, so callers must be able to\n    see that it did\
+      \ not happen."
 attributes:
 - uid: microsoft_teams.apps.ActivityContext.app_graph
   name: app_graph
@@ -138,9 +225,20 @@ attributes:
     description: If the graph client cannot be created.
   - type: ImportError
     description: If the graph dependencies are not installed.
+- uid: microsoft_teams.apps.ActivityContext.files
+  name: files
+  summary: 'file.download.info` subset of
+
+    *activity.attachments*, mapped to *IncomingFile*. See *FilesAccessor*.'
+- uid: microsoft_teams.apps.ActivityContext.stream
+  name: stream
 - uid: microsoft_teams.apps.ActivityContext.user_graph
   name: user_graph
-  summary: Get a Microsoft Graph client configured with the user's token.
+  summary: "Get a Microsoft Graph client configured with the user's token.\n\n*Deprecated\
+    \ since version Built:* from <xref:user_token>, which holds the token for whichever\n\
+    connection signed in most recently rather than the one that talks to\nMicrosoft\
+    \ Graph.\n\nRead the token from the owning flow instead::\n   token = await app.get_oauth_flow(\"\
+    graph\").get_token(ctx)"
   exceptions:
   - type: ValueError
     description: If the user is not signed in or doesn't have a valid token.

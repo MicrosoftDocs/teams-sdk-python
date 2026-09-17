@@ -10,14 +10,16 @@ summary: 'Bundles all cloud-specific service endpoints for a given Azure environ
   or construct a custom one via with_overrides().'
 constructor:
   syntax: 'CloudEnvironment(login_endpoint: str, login_tenant: str, bot_scope: str,
-    token_service_url: str, openid_metadata_url: str, token_issuer: str, graph_scope:
-    str)'
+    agent_bot_scope: str, token_service_url: str, openid_metadata_url: str, token_issuer:
+    str, graph_scope: str)'
   parameters:
   - name: login_endpoint
     isRequired: true
   - name: login_tenant
     isRequired: true
   - name: bot_scope
+    isRequired: true
+  - name: agent_bot_scope
     isRequired: true
   - name: token_service_url
     isRequired: true
@@ -28,6 +30,10 @@ constructor:
   - name: graph_scope
     isRequired: true
 attributes:
+- uid: microsoft_teams.api.CloudEnvironment.agent_bot_scope
+  name: agent_bot_scope
+  summary: The Teams Bot API scope for Agent ID user-token calls.
+  signature: 'agent_bot_scope: str'
 - uid: microsoft_teams.api.CloudEnvironment.bot_scope
   name: bot_scope
   summary: //api.botframework.com/.default").

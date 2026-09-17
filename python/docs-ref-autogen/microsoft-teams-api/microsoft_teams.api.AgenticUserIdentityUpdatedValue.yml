@@ -1,0 +1,56 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.AgenticUserIdentityUpdatedValue
+name: AgenticUserIdentityUpdatedValue
+fullName: microsoft_teams.api.AgenticUserIdentityUpdatedValue
+module: microsoft_teams.api
+summary: 'Payload for the `agenticUserIdentityUpdated` event.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'AgenticUserIdentityUpdatedValue(*, tenantId: str | None = None, agenticUserId:
+    str | None = None, agenticAppInstanceId: str | None = None, agentIdentityBlueprintId:
+    str | None = None, version: int | None = None, eventType: Literal[''agenticUserIdentityUpdated'']
+    = ''agenticUserIdentityUpdated'', updatedProperty: AgentLifecycleUpdatedProperty,
+    **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: tenantId
+    defaultValue: None
+  - name: agenticUserId
+    defaultValue: None
+  - name: agenticAppInstanceId
+    defaultValue: None
+  - name: agentIdentityBlueprintId
+    defaultValue: None
+  - name: version
+    defaultValue: None
+  - name: eventType
+    defaultValue: agenticUserIdentityUpdated
+  - name: updatedProperty
+    isRequired: true
+attributes:
+- uid: microsoft_teams.api.AgenticUserIdentityUpdatedValue.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.AgenticUserIdentityUpdatedValue.updated_property
+  name: updated_property
+  summary: The property that changed.
+  signature: 'updated_property: AgentLifecycleUpdatedProperty'
+- uid: microsoft_teams.api.AgenticUserIdentityUpdatedValue.event_type
+  name: event_type
+  signature: 'event_type: Literal[''agenticUserIdentityUpdated'']'

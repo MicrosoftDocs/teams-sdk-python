@@ -1,0 +1,23 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.m365extensions.TeamsMiddleware
+name: TeamsMiddleware
+fullName: microsoft_teams.m365extensions.TeamsMiddleware
+module: microsoft_teams.m365extensions
+constructor:
+  syntax: 'TeamsMiddleware(teams_app: App, should_bypass_teams: Callable[[TurnContext],
+    bool] | None = None)'
+  parameters:
+  - name: teams_app
+    isRequired: true
+  - name: should_bypass_teams
+    defaultValue: None
+methods:
+- uid: microsoft_teams.m365extensions.TeamsMiddleware.on_turn
+  name: on_turn
+  signature: 'async on_turn(context: TurnContext, logic: Callable[[TurnContext], Awaitable[None]])
+    -> None'
+  parameters:
+  - name: context
+    isRequired: true
+  - name: logic
+    isRequired: true

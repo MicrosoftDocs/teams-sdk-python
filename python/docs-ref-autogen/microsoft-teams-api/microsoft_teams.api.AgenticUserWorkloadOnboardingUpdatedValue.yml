@@ -1,0 +1,62 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.AgenticUserWorkloadOnboardingUpdatedValue
+name: AgenticUserWorkloadOnboardingUpdatedValue
+fullName: microsoft_teams.api.AgenticUserWorkloadOnboardingUpdatedValue
+module: microsoft_teams.api
+summary: 'Payload for the `agenticUserWorkloadOnboardingUpdated` event.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'AgenticUserWorkloadOnboardingUpdatedValue(*, tenantId: str | None = None,
+    agenticUserId: str | None = None, agenticAppInstanceId: str | None = None, agentIdentityBlueprintId:
+    str | None = None, version: int | None = None, eventType: Literal[''agenticUserWorkloadOnboardingUpdated'']
+    = ''agenticUserWorkloadOnboardingUpdated'', workloadName: str | None = None, workloadOnboardingState:
+    str | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: tenantId
+    defaultValue: None
+  - name: agenticUserId
+    defaultValue: None
+  - name: agenticAppInstanceId
+    defaultValue: None
+  - name: agentIdentityBlueprintId
+    defaultValue: None
+  - name: version
+    defaultValue: None
+  - name: eventType
+    defaultValue: agenticUserWorkloadOnboardingUpdated
+  - name: workloadName
+    defaultValue: None
+  - name: workloadOnboardingState
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.AgenticUserWorkloadOnboardingUpdatedValue.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.AgenticUserWorkloadOnboardingUpdatedValue.workload_name
+  name: workload_name
+  summary: The workload being onboarded (e.g. `Teams`).
+  signature: 'workload_name: str | None'
+- uid: microsoft_teams.api.AgenticUserWorkloadOnboardingUpdatedValue.workload_onboarding_state
+  name: workload_onboarding_state
+  summary: The onboarding state for the workload (e.g. `succeeded`).
+  signature: 'workload_onboarding_state: str | None'
+- uid: microsoft_teams.api.AgenticUserWorkloadOnboardingUpdatedValue.event_type
+  name: event_type
+  signature: 'event_type: Literal[''agenticUserWorkloadOnboardingUpdated'']'

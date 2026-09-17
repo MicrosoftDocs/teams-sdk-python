@@ -1,0 +1,153 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.IncomingFile
+name: IncomingFile
+fullName: microsoft_teams.apps.IncomingFile
+module: microsoft_teams.apps
+summary: 'A lazy handle to a file attached to the current inbound activity.
+
+
+  Nothing is downloaded until a byte method is called. The handle stays live and holds
+  no memoized bytes, so each of
+
+  *stream()*/*download()*/*text()*/*save_as()* fetches afresh. For a personal file
+  that re-fetch is bounded by the
+
+  short-lived download URL lifetime and may hit its expiry; to read the same file
+  several ways, call *download()*
+
+  once and reuse the returned *DownloadedFile*.'
+constructor:
+  syntax: 'IncomingFile(*, name: str, scope: Literal[''personal'', ''groupChat'',
+    ''channel''] | str, source: Literal[''botActivity'', ''graph''], unique_id: str
+    | None = None, content_type: str | None = None, extension: str | None = None,
+    content_url: str | None = None, raw: Any = None, download_url: str | None = None,
+    client: AsyncClient | None = None, credential: GraphCredential | None = None)'
+  keywordOnlyParameters:
+  - name: name
+    isRequired: true
+  - name: scope
+    isRequired: true
+  - name: source
+    isRequired: true
+  - name: unique_id
+    defaultValue: None
+  - name: content_type
+    defaultValue: None
+  - name: extension
+    defaultValue: None
+  - name: content_url
+    defaultValue: None
+  - name: raw
+    defaultValue: None
+  - name: download_url
+    defaultValue: None
+  - name: client
+    defaultValue: None
+  - name: credential
+    defaultValue: None
+methods:
+- uid: microsoft_teams.apps.IncomingFile.download
+  name: download
+  summary: 'Fetch the whole file and buffer it into a *DownloadedFile* snapshot you
+    own. Lazy and not memoized: calling
+
+    again re-fetches. If you already hold a *DownloadedFile*, call its *save_as()*
+    rather than this handle''s, which
+
+    would re-fetch.'
+  signature: async download() -> DownloadedFile
+- uid: microsoft_teams.apps.IncomingFile.save_as
+  name: save_as
+  summary: Stream the bytes straight to a local file path, so saving a large file
+    never materializes it in memory.
+  signature: 'async save_as(path: str) -> None'
+  parameters:
+  - name: path
+    isRequired: true
+- uid: microsoft_teams.apps.IncomingFile.stream
+  name: stream
+  summary: 'Stream the bytes. Low-level primitive: yields the response body chunks
+    directly from the fetch,
+
+    single-consumption, not buffered or retained. Use for large files and pipelines
+    (parse-as-you-go, pipe to
+
+    disk). *download()* is built on this. Uncapped: the consumer bounds it by how
+    much it reads.'
+  signature: async stream() -> AsyncIterator[bytes]
+- uid: microsoft_teams.apps.IncomingFile.text
+  name: text
+  summary: 'Convenience: run *download()* then decode the bytes as UTF-8 (or a provided
+    encoding). Re-fetches on each call
+
+    (no memoized bytes); to read bytes several ways hold one *DownloadedFile* instead.
+    No content-type check;
+
+    decoding is lossy (invalid bytes become U+FFFD and never throw). For strict or
+    binary-safe reads, use
+
+    *download().bytes*.'
+  signature: 'async text(encoding: str = ''utf-8'') -> str'
+  parameters:
+  - name: encoding
+    defaultValue: utf-8
+attributes:
+- uid: microsoft_teams.apps.IncomingFile.content_type
+  name: content_type
+  summary: 'a *file.download.info*
+
+    attachment carries no MIME type, only the *file_type* extension surfaced as *extension*.
+    Populated for sources
+
+    that do carry one, such as a *graph* drive item. To learn the type of the bytes
+    you actually received, read
+
+    *DownloadedFile.content_type*, which is resolved from the download response.'
+  signature: 'content_type: str | None'
+- uid: microsoft_teams.apps.IncomingFile.content_url
+  name: content_url
+  summary: 'Browsable URL to the file in OneDrive/SharePoint, as sent on the attachment''s
+    *content_url*.
+
+
+    Not fetchable for bytes despite the name, but it is the locator a Graph */shares*
+    resolution keys off; bytes
+
+    come from *download()* or *stream()*.'
+  signature: 'content_url: str | None'
+- uid: microsoft_teams.apps.IncomingFile.extension
+  name: extension
+  summary: 'File extension without the dot (e.g. *pdf*), taken from the platform-supplied
+    *file_type*. Absent when the wire
+
+    omits it.'
+  signature: 'extension: str | None'
+- uid: microsoft_teams.apps.IncomingFile.name
+  name: name
+  summary: Display name including extension when known.
+  signature: 'name: str'
+- uid: microsoft_teams.apps.IncomingFile.raw
+  name: raw
+  summary: The raw underlying attachment/graph object for escape-hatch access.
+  signature: 'raw: Any'
+- uid: microsoft_teams.apps.IncomingFile.scope
+  name: scope
+  summary: Conversation scope the file arrived in (the SDK's *ConversationType*).
+  signature: 'scope: Literal[''personal'', ''groupChat'', ''channel''] | str'
+- uid: microsoft_teams.apps.IncomingFile.source
+  name: source
+  summary: Where the SDK found the file. Only *botActivity* is produced today.
+  signature: 'source: Literal[''botActivity'', ''graph'']'
+- uid: microsoft_teams.apps.IncomingFile.unique_id
+  name: unique_id
+  summary: 'The ODSP/OneDrive identifier for the file when the platform reports it
+    (*content.uniqueId*). Useful for
+
+    correlation, dedup and logging, but not for retrieval: the Graph fetch resolves
+    bytes from *content_url* through
+
+    */shares*, and this value arrives as a GUID, which is a SharePoint *listItemUniqueId*
+    shape rather than a Graph
+
+    *driveItem.id*. Present only when the wire provided it.'
+  signature: 'unique_id: str | None'

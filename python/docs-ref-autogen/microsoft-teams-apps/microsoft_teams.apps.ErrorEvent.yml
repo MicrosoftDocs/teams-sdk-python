@@ -10,7 +10,10 @@ constructor:
     | MessageActivity | MessageDeleteActivity | MessageReactionActivity | MessageUpdateActivity
     | ReadReceiptEventActivity | MeetingStartEventActivity | MeetingEndEventActivity
     | MeetingParticipantJoinEventActivity | MeetingParticipantLeaveEventActivity |
-    FileConsentInvokeActivity | ExecuteActionInvokeActivity | MessageExtensionAnonQueryLinkInvokeActivity
+    AgenticUserIdentityCreatedActivity | AgenticUserIdentityUpdatedActivity | AgenticUserManagerUpdatedActivity
+    | AgenticUserEnabledActivity | AgenticUserDisabledActivity | AgenticUserDeletedActivity
+    | AgenticUserUndeletedActivity | AgenticUserWorkloadOnboardingUpdatedActivity
+    | FileConsentInvokeActivity | ExecuteActionInvokeActivity | MessageExtensionAnonQueryLinkInvokeActivity
     | MessageExtensionCardButtonClickedInvokeActivity | MessageExtensionFetchTaskInvokeActivity
     | MessageExtensionQueryInvokeActivity | MessageExtensionQueryLinkInvokeActivity
     | MessageExtensionQuerySettingUrlInvokeActivity | MessageExtensionSelectItemInvokeActivity
@@ -21,7 +24,7 @@ constructor:
     | SignInTokenExchangeInvokeActivity | SignInVerifyStateInvokeActivity | SignInFailureInvokeActivity
     | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity | SearchInvokeActivity
     | HtmlWidgetCallToolInvokeActivity | InstalledActivity | UninstalledActivity |
-    None = None)'
+    InstalledUpgradeActivity | None = None)'
   parameters:
   - name: error
     isRequired: true
@@ -36,6 +39,9 @@ attributes:
     | ConversationUpdateActivity | MessageActivity | MessageDeleteActivity | MessageReactionActivity
     | MessageUpdateActivity | ReadReceiptEventActivity | MeetingStartEventActivity
     | MeetingEndEventActivity | MeetingParticipantJoinEventActivity | MeetingParticipantLeaveEventActivity
+    | AgenticUserIdentityCreatedActivity | AgenticUserIdentityUpdatedActivity | AgenticUserManagerUpdatedActivity
+    | AgenticUserEnabledActivity | AgenticUserDisabledActivity | AgenticUserDeletedActivity
+    | AgenticUserUndeletedActivity | AgenticUserWorkloadOnboardingUpdatedActivity
     | FileConsentInvokeActivity | ExecuteActionInvokeActivity | MessageExtensionAnonQueryLinkInvokeActivity
     | MessageExtensionCardButtonClickedInvokeActivity | MessageExtensionFetchTaskInvokeActivity
     | MessageExtensionQueryInvokeActivity | MessageExtensionQueryLinkInvokeActivity
@@ -47,7 +53,7 @@ attributes:
     | SignInTokenExchangeInvokeActivity | SignInVerifyStateInvokeActivity | SignInFailureInvokeActivity
     | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity | SearchInvokeActivity
     | HtmlWidgetCallToolInvokeActivity | InstalledActivity | UninstalledActivity |
-    None = None'
+    InstalledUpgradeActivity | None = None'
 - uid: microsoft_teams.apps.ErrorEvent.context
   name: context
   signature: 'context: Dict[str, Any] | None = None'

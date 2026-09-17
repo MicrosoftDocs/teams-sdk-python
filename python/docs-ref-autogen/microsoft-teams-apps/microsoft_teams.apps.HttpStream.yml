@@ -94,11 +94,17 @@ methods:
 - uid: microsoft_teams.apps.HttpStream.update
   name: update
   summary: Send status updates before emitting (ex. "Thinking...").
-  signature: 'update(text: str) -> None'
+  signature: 'update(text: str, text_format: Literal[''markdown'', ''plain'', ''xml'',
+    ''extendedmarkdown''] | None = None) -> None'
   parameters:
   - name: text
     description: The status text to send.
     isRequired: true
+  - name: text_format
+    description: 'Format of `text` (ex. `''extendedmarkdown''`). Omit or pass
+
+      `None` to use the Teams default (`''markdown''`).'
+    defaultValue: None
 attributes:
 - uid: microsoft_teams.apps.HttpStream.canceled
   name: canceled

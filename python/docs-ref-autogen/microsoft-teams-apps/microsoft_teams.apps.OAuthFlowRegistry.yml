@@ -1,0 +1,21 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.OAuthFlowRegistry
+name: OAuthFlowRegistry
+fullName: microsoft_teams.apps.OAuthFlowRegistry
+module: microsoft_teams.apps
+summary: 'Case-insensitive, insertion-ordered collection of `OAuthFlow`.
+
+
+  Subclasses `Mapping`, so `in`, `.get()`, `.values()`, `len()` and
+
+  truthiness all work without extra code.'
+constructor:
+  syntax: OAuthFlowRegistry()
+methods:
+- uid: microsoft_teams.apps.OAuthFlowRegistry.add
+  name: add
+  summary: Register a flow. Raises `ValueError` if the connection already exists.
+  signature: 'add(flow: OAuthFlow) -> OAuthFlow'
+  parameters:
+  - name: flow
+    isRequired: true

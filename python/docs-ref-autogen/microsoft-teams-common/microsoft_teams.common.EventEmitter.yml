@@ -26,6 +26,15 @@ methods:
   - name: value
     description: Data to pass to event handlers
     defaultValue: None
+- uid: microsoft_teams.common.EventEmitter.emit_async
+  name: emit_async
+  summary: Emit an event and wait for all synchronous and asynchronous handlers.
+  signature: 'async emit_async(event: EventTypeT, value: Any = None) -> None'
+  parameters:
+  - name: event
+    isRequired: true
+  - name: value
+    defaultValue: None
 - uid: microsoft_teams.common.EventEmitter.event_names
   name: event_names
   summary: Get list of event names that have listeners.

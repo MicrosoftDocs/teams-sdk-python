@@ -3,7 +3,12 @@ uid: microsoft_teams.api.BotTokenClient
 name: BotTokenClient
 fullName: microsoft_teams.api.BotTokenClient
 module: microsoft_teams.api
-summary: 'Client for managing bot tokens.
+summary: 'Deprecated client for managing bot tokens.
+
+
+  Token minting for Teams apps now happens through the MSAL-backed TokenManager
+
+  in microsoft-teams-apps.
 
 
   Initialize the bot token client.'

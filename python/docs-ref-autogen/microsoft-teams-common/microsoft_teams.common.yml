@@ -56,6 +56,8 @@ classes:
 - microsoft_teams.common.ListStorage
 - microsoft_teams.common.LocalStorage
 - microsoft_teams.common.LocalStorageOptions
+- microsoft_teams.common.Middleware
+- microsoft_teams.common.MiddlewareContext
 - microsoft_teams.common.Storage
 enums:
 - microsoft_teams.common.ANSI

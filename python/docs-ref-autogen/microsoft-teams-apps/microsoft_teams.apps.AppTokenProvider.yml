@@ -1,0 +1,58 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.AppTokenProvider
+name: AppTokenProvider
+fullName: microsoft_teams.apps.AppTokenProvider
+module: microsoft_teams.apps
+summary: Public token source backed by the credentials configured on an App.
+constructor:
+  syntax: 'AppTokenProvider(token_manager: TokenManager, cloud: CloudEnvironment =
+    CloudEnvironment(login_endpoint=''https://login.microsoftonline.com'', login_tenant=''botframework.com'',
+    bot_scope=''https://api.botframework.com/.default'', agent_bot_scope=''https://botapi.skype.com/.default'',
+    token_service_url=''https://token.botframework.com'', openid_metadata_url=''https://login.botframework.com/v1/.well-known/openidconfiguration'',
+    token_issuer=''https://api.botframework.com'', graph_scope=''https://graph.microsoft.com/.default''))'
+  parameters:
+  - name: token_manager
+    isRequired: true
+  - name: cloud
+    defaultValue: CloudEnvironment(login_endpoint='https://login.microsoftonline.com',
+      login_tenant='botframework.com', bot_scope='https://api.botframework.com/.default',
+      agent_bot_scope='https://botapi.skype.com/.default', token_service_url='https://token.botframework.com',
+      openid_metadata_url='https://login.botframework.com/v1/.well-known/openidconfiguration',
+      token_issuer='https://api.botframework.com', graph_scope='https://graph.microsoft.com/.default')
+methods:
+- uid: microsoft_teams.apps.AppTokenProvider.get_agentic_app_token
+  name: get_agentic_app_token
+  summary: Acquire an app-only token for an agentic app.
+  signature: 'async get_agentic_app_token(scope: str, agentic_app_id: str, tenant_id:
+    str | None = None) -> TokenProtocol | None'
+  parameters:
+  - name: scope
+    isRequired: true
+  - name: agentic_app_id
+    isRequired: true
+  - name: tenant_id
+    defaultValue: None
+- uid: microsoft_teams.apps.AppTokenProvider.get_agentic_user_token
+  name: get_agentic_user_token
+  summary: Acquire a token carrying an agentic user identity.
+  signature: 'async get_agentic_user_token(scope: str | None, agentic_app_id: str,
+    agentic_user_id: str, tenant_id: str | None = None) -> TokenProtocol | None'
+  parameters:
+  - name: scope
+    isRequired: true
+  - name: agentic_app_id
+    isRequired: true
+  - name: agentic_user_id
+    isRequired: true
+  - name: tenant_id
+    defaultValue: None
+- uid: microsoft_teams.apps.AppTokenProvider.get_app_token
+  name: get_app_token
+  summary: Acquire an app-only token.
+  signature: 'async get_app_token(scope: str | None = None, tenant_id: str | None
+    = None) -> TokenProtocol | None'
+  parameters:
+  - name: scope
+    defaultValue: None
+  - name: tenant_id
+    defaultValue: None

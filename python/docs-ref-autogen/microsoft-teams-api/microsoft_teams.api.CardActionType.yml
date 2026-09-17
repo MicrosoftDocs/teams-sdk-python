@@ -5,6 +5,8 @@ fullName: microsoft_teams.api.CardActionType
 summary: Available card action types.
 module: microsoft_teams.api
 fields:
+- name: SET_CACHE_POLICY
+  uid: microsoft_teams.api.CardActionType.SET_CACHE_POLICY
 - name: SUBMIT
   uid: microsoft_teams.api.CardActionType.SUBMIT
 - name: CALL

@@ -1,0 +1,33 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.FileUrlExpiredError
+name: FileUrlExpiredError
+fullName: microsoft_teams.apps.FileUrlExpiredError
+module: microsoft_teams.apps
+summary: "Raised when an inbound file's short-lived download URL has expired and can\
+  \ no longer fetch bytes.\n\nA personal file's pre-authorized *tempauth* download\
+  \ URL is valid only briefly.\nA fetch after it lapses gets a *401*/*403* from the\
+  \ platform. A handler that downloads once (and does not keep the\nhandle) should\
+  \ not hit this.\n*reason* distinguishes the two cases:\n- *first_fetch*: the first\
+  \ fetch came after the URL lapsed, so no bytes were retrieved. There is no recovery:\
+  \ the\n\n   URL carried its own credential, and the SDK does not fall back to Graph\
+  \ with an app identity. The file has to be\n   sent again.\n\n* *reread*: edge case.\
+  \ An earlier download succeeded, then a later re-fetch through the same handle lapsed.\
+  \ Avoid it by calling *download()* once and reusing the returned *DownloadedFile*\
+  \ rather than re-reading the handle."
+constructor:
+  syntax: 'FileUrlExpiredError(reason: Literal[''first_fetch'', ''reread''], message:
+    str | None = None)'
+  parameters:
+  - name: reason
+    isRequired: true
+  - name: message
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.apps.FileUrlExpiredError.reason
+  name: reason
+  summary: 'Lets callers branch without string-matching the message.
+
+    *first_fetch*: no bytes were ever fetched.
+
+    *reread*: the uncommon case, a previously successful handle re-fetched too late.'
+  signature: 'reason: Literal[''first_fetch'', ''reread'']'

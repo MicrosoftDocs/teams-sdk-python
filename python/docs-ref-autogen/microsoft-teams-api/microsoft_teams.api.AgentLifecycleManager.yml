@@ -1,0 +1,50 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.AgentLifecycleManager
+name: AgentLifecycleManager
+fullName: microsoft_teams.api.AgentLifecycleManager
+module: microsoft_teams.api
+summary: 'Manager profile carried by the `AgenticUserIdentityCreated` service event.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'AgentLifecycleManager(*, userId: str | None = None, email: str | None =
+    None, displayName: str | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: userId
+    defaultValue: None
+  - name: email
+    defaultValue: None
+  - name: displayName
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.AgentLifecycleManager.display_name
+  name: display_name
+  summary: The manager's display name.
+  signature: 'display_name: str | None'
+- uid: microsoft_teams.api.AgentLifecycleManager.email
+  name: email
+  summary: The manager's email address.
+  signature: 'email: str | None'
+- uid: microsoft_teams.api.AgentLifecycleManager.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.AgentLifecycleManager.user_id
+  name: user_id
+  summary: The Entra object ID of the manager.
+  signature: 'user_id: str | None'

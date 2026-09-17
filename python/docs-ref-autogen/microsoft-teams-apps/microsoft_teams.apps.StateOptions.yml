@@ -1,0 +1,28 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.StateOptions
+name: StateOptions
+fullName: microsoft_teams.apps.StateOptions
+module: microsoft_teams.apps
+summary: 'Configuration for the per-turn state layer.
+
+
+  Scope keys are namespaced under `key_prefix`. Storage-specific behavior,
+
+  including expiry, is configured directly on the selected storage provider.'
+constructor:
+  syntax: 'StateOptions(storage: Storage[str, Any] | None = None, key_prefix: str
+    = ''ts'')'
+  parameters:
+  - name: storage
+    defaultValue: None
+  - name: key_prefix
+    defaultValue: ts
+attributes:
+- uid: microsoft_teams.apps.StateOptions.key_prefix
+  name: key_prefix
+  summary: Namespace prefix for scope keys (`{prefix}:conv:...` / `{prefix}:user:...`).
+  signature: 'key_prefix: str = ''ts'''
+- uid: microsoft_teams.apps.StateOptions.storage
+  name: storage
+  summary: Backing store for state blobs. When `None` the loader must be given one.
+  signature: 'storage: Storage[str, Any] | None = None'

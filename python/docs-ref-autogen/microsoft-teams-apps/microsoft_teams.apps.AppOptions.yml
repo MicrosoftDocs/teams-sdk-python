@@ -51,7 +51,19 @@ attributes:
   signature: 'dangerously_allow_unauthenticated_requests: bool | None'
 - uid: microsoft_teams.apps.AppOptions.default_connection_name
   name: default_connection_name
-  summary: The OAuth connection name to use for authentication. Defaults to 'graph'.
+  summary: 'The OAuth connection name to use for authentication. Defaults to ''graph''.
+
+
+    *Deprecated since version Names:* a single connection for the whole app, which
+    does not generalize
+
+    past one. Register each connection with `app.add_oauth_flow(name)` and
+
+    hold on to the returned `OAuthFlow` instead. Still honoured as the
+
+    default for the deprecated `ctx.sign_in` / `ctx.sign_out` /
+
+    `ctx.get_user_token` surface.'
   signature: 'default_connection_name: str | None'
 - uid: microsoft_teams.apps.AppOptions.fetch_user_token
   name: fetch_user_token
@@ -103,6 +115,23 @@ attributes:
   name: skip_auth
   summary: Deprecated. Use dangerously_allow_unauthenticated_requests instead.
   signature: 'skip_auth: bool | None'
+- uid: microsoft_teams.apps.AppOptions.state
+  name: state
+  summary: "Per-turn state opt-in. Off by default (`None`/`False`).\n\n`state=True`\
+    \ enables state on the app's shared `storage` (in-memory by\ndefault). Pass a\
+    \ `StateOptions` to configure the\nkey prefix or a dedicated `Storage` backend.\
+    \ When enabled, handlers\nread/write `ctx.state.conversation` and `ctx.state.user`;\
+    \ when off,\n`ctx.state` is `None`.\n\nOmitting this option leaves the decision\
+    \ open: registering an OAuth flow with\n`add_oauth_flow` then enables state automatically,\
+    \ because connection-less\n`signin/verifyState` and `signin/failure` callbacks\
+    \ need durable pending\nattribution to reach the right flow. Pass `state=False`\
+    \ to opt out\nexplicitly \u2014 an explicit value is never overridden."
+  signature: 'state: bool | StateOptions | None'
+- uid: microsoft_teams.apps.AppOptions.telemetry
+  name: telemetry
+  summary: Telemetry configuration. Agent365 baggage is enabled by default; pass False
+    to disable it.
+  signature: 'telemetry: AppTelemetryOptions | None'
 - uid: microsoft_teams.apps.AppOptions.tenant_id
   name: tenant_id
   summary: The tenant ID. Required for single-tenant apps.
@@ -111,8 +140,8 @@ attributes:
   name: token
   summary: Custom token provider function. If provided with client_id (no client_secret),
     uses TokenCredentials.
-  signature: 'token: Callable[[str | list[str], str | None], str | Awaitable[str]]
-    | None'
+  signature: 'token: Callable[[str | list[str], str | None], str | TokenProtocol |
+    None | Awaitable[str | TokenProtocol | None]] | TokenProviderProtocol | None'
 - uid: microsoft_teams.apps.AppOptions.plugins
   name: plugins
   signature: 'plugins: List[PluginBase] | None'

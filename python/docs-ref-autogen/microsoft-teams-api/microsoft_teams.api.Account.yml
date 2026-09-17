@@ -19,8 +19,11 @@ summary: 'Represents a Teams account/user.
 constructor:
   syntax: 'Account(*, id: str, aadObjectId: str | None = None, type: Literal[''person'',
     ''tag'', ''channel'', ''team'', ''bot''] | None = None, properties: Dict[str,
-    Any] | None = None, isTargeted: bool | None = None, name: str | None = None, **extra_data:
-    Any)'
+    Any] | None = None, isTargeted: bool | None = None, name: str | None = None, email:
+    str | None = None, userRole: str | None = None, role: Literal[''agenticUser'']
+    | str | None = None, agenticUserId: str | None = None, agenticAppId: str | None
+    = None, agenticAppBlueprintId: str | None = None, callbackUri: str | None = None,
+    tenantId: str | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: id
     isRequired: true
@@ -34,11 +37,49 @@ constructor:
     defaultValue: None
   - name: name
     defaultValue: None
+  - name: email
+    defaultValue: None
+  - name: userRole
+    defaultValue: None
+  - name: role
+    defaultValue: None
+  - name: agenticUserId
+    defaultValue: None
+  - name: agenticAppId
+    defaultValue: None
+  - name: agenticAppBlueprintId
+    defaultValue: None
+  - name: callbackUri
+    defaultValue: None
+  - name: tenantId
+    defaultValue: None
 attributes:
 - uid: microsoft_teams.api.Account.aad_object_id
   name: aad_object_id
   summary: The Azure AD object ID.
   signature: 'aad_object_id: str | None'
+- uid: microsoft_teams.api.Account.agentic_app_blueprint_id
+  name: agentic_app_blueprint_id
+  summary: The Agent 365 app blueprint ID.
+  signature: 'agentic_app_blueprint_id: str | None'
+- uid: microsoft_teams.api.Account.agentic_app_id
+  name: agentic_app_id
+  summary: The Agent 365 app/client ID.
+  signature: 'agentic_app_id: str | None'
+- uid: microsoft_teams.api.Account.agentic_identity
+  name: agentic_identity
+- uid: microsoft_teams.api.Account.agentic_user_id
+  name: agentic_user_id
+  summary: The Agent ID user-shaped identity object ID.
+  signature: 'agentic_user_id: str | None'
+- uid: microsoft_teams.api.Account.callback_uri
+  name: callback_uri
+  summary: The callback URI associated with the agentic identity.
+  signature: 'callback_uri: str | None'
+- uid: microsoft_teams.api.Account.email
+  name: email
+  summary: Email address for the account, when provided by the channel.
+  signature: 'email: str | None'
 - uid: microsoft_teams.api.Account.id
   name: id
   summary: The unique identifier for the account.
@@ -79,8 +120,20 @@ attributes:
   name: properties
   summary: Additional properties for the account.
   signature: 'properties: Dict[str, Any] | None'
+- uid: microsoft_teams.api.Account.role
+  name: role
+  summary: The role of the account in the activity.
+  signature: 'role: Literal[''agenticUser''] | str | None'
+- uid: microsoft_teams.api.Account.tenant_id
+  name: tenant_id
+  summary: The tenant ID associated with the account.
+  signature: 'tenant_id: str | None'
 - uid: microsoft_teams.api.Account.type
   name: type
   summary: The type of account.
   signature: 'type: Literal[''person'', ''tag'', ''channel'', ''team'', ''bot''] |
     None'
+- uid: microsoft_teams.api.Account.user_role
+  name: user_role
+  summary: Role description for the account, when provided by the channel.
+  signature: 'user_role: str | None'

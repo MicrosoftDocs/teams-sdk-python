@@ -10,7 +10,7 @@ constructor:
     | ~typing.Callable[[], str | ~microsoft_teams.common.http.client_token.StringLike
     | None | ~typing.Awaitable[str | ~microsoft_teams.common.http.client_token.StringLike
     | None]] | None = None, interceptors: ~typing.List[~microsoft_teams.common.http.interceptor.Interceptor]
-    | None = <factory>)'
+    | None = None)'
   parameters:
   - name: base_url
     defaultValue: None
@@ -21,7 +21,7 @@ constructor:
   - name: token
     defaultValue: None
   - name: interceptors
-    defaultValue: <factory>
+    defaultValue: None
 attributes:
 - uid: microsoft_teams.common.ClientOptions.base_url
   name: base_url
@@ -43,4 +43,4 @@ attributes:
 - uid: microsoft_teams.common.ClientOptions.interceptors
   name: interceptors
   summary: List of interceptors for request/response middleware.
-  signature: 'interceptors: List[Interceptor] | None'
+  signature: 'interceptors: List[Interceptor] | None = None'

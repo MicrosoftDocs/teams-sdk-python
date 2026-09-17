@@ -1,0 +1,12 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.AppTelemetryOptions
+name: AppTelemetryOptions
+fullName: microsoft_teams.apps.AppTelemetryOptions
+module: microsoft_teams.apps
+summary: Telemetry options applied across SDK-owned app flows.
+constructor:
+  syntax: AppTelemetryOptions()
+attributes:
+- uid: microsoft_teams.apps.AppTelemetryOptions.agent365
+  name: agent365
+  signature: 'agent365: Agent365BaggageOptions | Literal[False]'

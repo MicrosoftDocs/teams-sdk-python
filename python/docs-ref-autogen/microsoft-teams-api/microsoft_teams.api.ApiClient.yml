@@ -8,9 +8,10 @@ summary: 'Unified client for Microsoft Teams API operations.
 
   Initialize the unified Teams API client.'
 constructor:
-  syntax: 'ApiClient(service_url: str, options: HttpClient | ClientOptions | None
-    = None, api_client_settings: ApiClientSettings | None = None, cloud: CloudEnvironment
-    | None = None)'
+  syntax: 'ApiClient(service_url: str, options: Client | ClientOptions | None = None,
+    api_client_settings: ApiClientSettings | None = None, cloud: CloudEnvironment
+    | None = None, *, token_provider: TokenProviderProtocol | None = None, agentic_identity:
+    AgenticIdentity | None = None)'
   parameters:
   - name: service_url
     description: The Teams service URL for API calls.
@@ -25,6 +26,41 @@ constructor:
   - name: cloud
     description: Optional cloud environment for sovereign cloud support.
     defaultValue: None
+  keywordOnlyParameters:
+  - name: token_provider
+    defaultValue: None
+  - name: agentic_identity
+    defaultValue: None
+methods:
+- uid: microsoft_teams.api.ApiClient.clone
+  name: clone
+  summary: 'Create a scoped API client.
+
+
+    Omitting agentic_identity, or passing None, preserves the existing scoped identity.
+
+    Pass AGENTIC_IDENTITY_CLEAR to clear it, or an AgenticIdentity to override it.'
+  signature: 'clone(*, service_url: str | None = None, agentic_identity: AgenticIdentity
+    | None | Literal[''clear''] = None) -> ApiClient'
+  keywordOnlyParameters:
+  - name: service_url
+    defaultValue: None
+  - name: agentic_identity
+    defaultValue: None
+- uid: microsoft_teams.api.ApiClient.for_agentic_identity
+  name: for_agentic_identity
+  summary: Create a scoped API client for an agentic identity.
+  signature: 'for_agentic_identity(agentic_identity: AgenticIdentity) -> ApiClient'
+  parameters:
+  - name: agentic_identity
+    isRequired: true
+- uid: microsoft_teams.api.ApiClient.from_service_url
+  name: from_service_url
+  summary: Create a scoped API client for a different Teams service URL.
+  signature: 'from_service_url(service_url: str) -> ApiClient'
+  parameters:
+  - name: service_url
+    isRequired: true
 attributes:
 - uid: microsoft_teams.api.ApiClient.bots
   name: bots

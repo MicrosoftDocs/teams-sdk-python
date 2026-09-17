@@ -1,0 +1,64 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.FileDownloadInfo
+name: FileDownloadInfo
+fullName: microsoft_teams.api.FileDownloadInfo
+module: microsoft_teams.api
+summary: 'The content of a *file.download.info* attachment, describing an uploaded
+  file received in a personal (1:1) chat.
+
+  The file is fetched from the short-lived, pre-authorized *download_url* with a plain
+  GET (no bearer token).
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'FileDownloadInfo(*, downloadUrl: str | None = None, uniqueId: str | None
+    = None, fileType: str | None = None, etag: str | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: downloadUrl
+    defaultValue: None
+  - name: uniqueId
+    defaultValue: None
+  - name: fileType
+    defaultValue: None
+  - name: etag
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.FileDownloadInfo.download_url
+  name: download_url
+  summary: Pre-authorized, short-lived URL the file can be fetched from with a plain
+    GET (no bearer token).
+  signature: 'download_url: str | None'
+- uid: microsoft_teams.api.FileDownloadInfo.etag
+  name: etag
+  summary: 'A server-assigned version tag identifying this version of the file''s
+    contents, for detecting whether the file
+
+    changed between reads. Read-only; populated when Teams provides it with the file.'
+  signature: 'etag: str | None'
+- uid: microsoft_teams.api.FileDownloadInfo.file_type
+  name: file_type
+  summary: Type of file (extension, e.g. *pdf*, *docx*).
+  signature: 'file_type: str | None'
+- uid: microsoft_teams.api.FileDownloadInfo.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.FileDownloadInfo.unique_id
+  name: unique_id
+  summary: a
+  signature: 'unique_id: str | None'

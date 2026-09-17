@@ -26,6 +26,7 @@ constructor:
     ProductInfoEntity | QuotedReplyEntity | TargetedMessageInfoEntity | UnknownEntity]
     | None = None, channelData: ChannelData | None = None, type: Literal[''typing'']
     = ''typing'', id: str | None = None, recipient: Account | None = None, text: str
+    | None = None, textFormat: Literal[''markdown'', ''plain'', ''xml'', ''extendedmarkdown'']
     | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: serviceUrl
@@ -56,6 +57,8 @@ constructor:
     defaultValue: None
   - name: text
     defaultValue: None
+  - name: textFormat
+    defaultValue: None
 methods:
 - uid: microsoft_teams.api.TypingActivityInput.add_stream_update
   name: add_stream_update
@@ -75,6 +78,14 @@ methods:
   name: with_text
   summary: Set the text content of the message.
   signature: 'with_text(value: str) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.api.TypingActivityInput.with_text_format
+  name: with_text_format
+  summary: Set the format of the *text* field.
+  signature: 'with_text_format(value: Literal[''markdown'', ''plain'', ''xml'', ''extendedmarkdown''])
+    -> Self'
   parameters:
   - name: value
     isRequired: true
