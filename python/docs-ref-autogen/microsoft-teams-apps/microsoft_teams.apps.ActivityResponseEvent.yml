@@ -9,7 +9,10 @@ constructor:
     CommandResultActivity | ConversationUpdateActivity | MessageActivity | MessageDeleteActivity
     | MessageReactionActivity | MessageUpdateActivity | ReadReceiptEventActivity |
     MeetingStartEventActivity | MeetingEndEventActivity | MeetingParticipantJoinEventActivity
-    | MeetingParticipantLeaveEventActivity | FileConsentInvokeActivity | ExecuteActionInvokeActivity
+    | MeetingParticipantLeaveEventActivity | AgenticUserIdentityCreatedActivity |
+    AgenticUserIdentityUpdatedActivity | AgenticUserManagerUpdatedActivity | AgenticUserEnabledActivity
+    | AgenticUserDisabledActivity | AgenticUserDeletedActivity | AgenticUserUndeletedActivity
+    | AgenticUserWorkloadOnboardingUpdatedActivity | FileConsentInvokeActivity | ExecuteActionInvokeActivity
     | MessageExtensionAnonQueryLinkInvokeActivity | MessageExtensionCardButtonClickedInvokeActivity
     | MessageExtensionFetchTaskInvokeActivity | MessageExtensionQueryInvokeActivity
     | MessageExtensionQueryLinkInvokeActivity | MessageExtensionQuerySettingUrlInvokeActivity
@@ -20,7 +23,8 @@ constructor:
     | HandoffActionInvokeActivity | SignInTokenExchangeInvokeActivity | SignInVerifyStateInvokeActivity
     | SignInFailureInvokeActivity | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity
     | SearchInvokeActivity | HtmlWidgetCallToolInvokeActivity | InstalledActivity
-    | UninstalledActivity, response: InvokeResponse[Any], conversation_ref: ConversationReference)'
+    | UninstalledActivity | InstalledUpgradeActivity, response: InvokeResponse[Any],
+    conversation_ref: ConversationReference)'
   parameters:
   - name: activity
     isRequired: true
@@ -35,6 +39,9 @@ attributes:
     | ConversationUpdateActivity | MessageActivity | MessageDeleteActivity | MessageReactionActivity
     | MessageUpdateActivity | ReadReceiptEventActivity | MeetingStartEventActivity
     | MeetingEndEventActivity | MeetingParticipantJoinEventActivity | MeetingParticipantLeaveEventActivity
+    | AgenticUserIdentityCreatedActivity | AgenticUserIdentityUpdatedActivity | AgenticUserManagerUpdatedActivity
+    | AgenticUserEnabledActivity | AgenticUserDisabledActivity | AgenticUserDeletedActivity
+    | AgenticUserUndeletedActivity | AgenticUserWorkloadOnboardingUpdatedActivity
     | FileConsentInvokeActivity | ExecuteActionInvokeActivity | MessageExtensionAnonQueryLinkInvokeActivity
     | MessageExtensionCardButtonClickedInvokeActivity | MessageExtensionFetchTaskInvokeActivity
     | MessageExtensionQueryInvokeActivity | MessageExtensionQueryLinkInvokeActivity
@@ -45,7 +52,8 @@ attributes:
     | MessageFetchTaskInvokeActivity | MessageSubmitActionInvokeActivity | HandoffActionInvokeActivity
     | SignInTokenExchangeInvokeActivity | SignInVerifyStateInvokeActivity | SignInFailureInvokeActivity
     | AdaptiveCardInvokeActivity | SuggestedActionSubmitInvokeActivity | SearchInvokeActivity
-    | HtmlWidgetCallToolInvokeActivity | InstalledActivity | UninstalledActivity'
+    | HtmlWidgetCallToolInvokeActivity | InstalledActivity | UninstalledActivity |
+    InstalledUpgradeActivity'
 - uid: microsoft_teams.apps.ActivityResponseEvent.conversation_ref
   name: conversation_ref
   signature: 'conversation_ref: ConversationReference'

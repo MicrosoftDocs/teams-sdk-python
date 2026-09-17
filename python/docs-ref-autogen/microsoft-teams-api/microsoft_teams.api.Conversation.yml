@@ -18,8 +18,9 @@ summary: 'Represents a Teams conversation.
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
   syntax: 'Conversation(*, id: str, tenantId: str | None = None, conversationType:
-    Literal[''personal'', ''groupChat''], name: str | None = None, isGroup: bool |
-    None = None, members: List[Account] | None = None, **extra_data: Any)'
+    Literal[''personal'', ''groupChat'', ''channel''] | str, name: str | None = None,
+    isGroup: bool | None = None, members: List[Account] | None = None, **extra_data:
+    Any)'
   keywordOnlyParameters:
   - name: id
     isRequired: true
@@ -37,7 +38,8 @@ attributes:
 - uid: microsoft_teams.api.Conversation.conversation_type
   name: conversation_type
   summary: The Conversations Type
-  signature: 'conversation_type: Literal[''personal'', ''groupChat'']'
+  signature: 'conversation_type: Literal[''personal'', ''groupChat'', ''channel'']
+    | str'
 - uid: microsoft_teams.api.Conversation.id
   name: id
   summary: Conversation ID

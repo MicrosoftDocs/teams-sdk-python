@@ -1,0 +1,48 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.TurnState
+name: TurnState
+fullName: microsoft_teams.apps.TurnState
+module: microsoft_teams.apps
+summary: "One state scope for a single turn.\n\nBehaves like a `dict` but adds two\
+  \ things the loader relies on:\n\n* **Dirty tracking** \u2014 the loader compares\
+  \ the current contents to the loaded snapshot, so nested mutations are persisted\
+  \ without dirtying reads. \n\n* **Sealing** \u2014 at the end of a turn the scope\
+  \ is sealed; any later access raises <xref:microsoft_teams.apps.TurnStateSealedError>.\
+  \ \n\n**Values must be JSON-serializable.** Each scope is encoded with\n`json.dumps`\
+  \ when it is saved, so store only JSON-native types (`str`,\n`int`, `float`, `bool`,\
+  \ `None`, `list`, `dict`). A non-serializable\nvalue (e.g. a `datetime` or a custom\
+  \ object) is accepted on assignment but\nraises `TypeError` later, when the turn\
+  \ is saved."
+constructor:
+  syntax: 'TurnState(data: Mapping[str, Any] | None = None)'
+  parameters:
+  - name: data
+    defaultValue: None
+methods:
+- uid: microsoft_teams.apps.TurnState.mark_clean
+  name: mark_clean
+  summary: Mark the current contents as clean after a successful save.
+  signature: mark_clean() -> None
+- uid: microsoft_teams.apps.TurnState.seal
+  name: seal
+  summary: Seal the scope; subsequent access raises <xref:microsoft_teams.apps.TurnStateSealedError>.
+  signature: seal() -> None
+- uid: microsoft_teams.apps.TurnState.to_dict
+  name: to_dict
+  summary: 'Return a shallow copy of the raw contents (used for serialization).
+
+
+    Intentionally does not check the seal: the loader serializes a scope just
+
+    before sealing it, and callers should not reach for this directly.'
+  signature: to_dict() -> Dict[str, Any]
+attributes:
+- uid: microsoft_teams.apps.TurnState.is_dirty
+  name: is_dirty
+  summary: Whether the scope has been mutated since it was loaded.
+- uid: microsoft_teams.apps.TurnState.is_empty
+  name: is_empty
+  summary: Whether the scope currently holds no keys.
+- uid: microsoft_teams.apps.TurnState.is_sealed
+  name: is_sealed
+  summary: Whether the scope has been sealed for the turn.

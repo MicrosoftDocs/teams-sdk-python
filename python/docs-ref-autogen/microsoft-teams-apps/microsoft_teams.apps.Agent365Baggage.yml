@@ -1,0 +1,46 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.Agent365Baggage
+name: Agent365Baggage
+fullName: microsoft_teams.apps.Agent365Baggage
+module: microsoft_teams.apps
+summary: Opt-in Agent365 OpenTelemetry baggage bridge for Teams activity context.
+constructor:
+  syntax: 'Agent365Baggage(values: Mapping[str, str | int | float | None] | None =
+    None)'
+  parameters:
+  - name: values
+    defaultValue: None
+methods:
+- uid: microsoft_teams.apps.Agent365Baggage.from_activity
+  name: from_activity
+  signature: 'from_activity(source: Activity | _ActivityContextSource | None, *, include:
+    Iterable[Literal[''senderName'', ''agentName'', ''agentDescription'', ''senderEmail'',
+    ''agentEmail'']] | None = None, operation_source: str | int | float | None = None,
+    channel_link: str | int | float | None = None, additional_baggage: Mapping[str,
+    str | int | float | None] | None = None) -> Self'
+  parameters:
+  - name: source
+    isRequired: true
+  keywordOnlyParameters:
+  - name: include
+    defaultValue: None
+  - name: operation_source
+    defaultValue: None
+  - name: channel_link
+    defaultValue: None
+  - name: additional_baggage
+    defaultValue: None
+- uid: microsoft_teams.apps.Agent365Baggage.operation_source
+  name: operation_source
+  signature: 'operation_source(value: str | int | float | None) -> Self'
+  parameters:
+  - name: value
+    isRequired: true
+- uid: microsoft_teams.apps.Agent365Baggage.set
+  name: set
+  signature: 'set(key: str, value: str | int | float | None) -> Self'
+  parameters:
+  - name: key
+    isRequired: true
+  - name: value
+    isRequired: true

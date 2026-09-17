@@ -1,0 +1,22 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.Agent365BaggageOptions
+name: Agent365BaggageOptions
+fullName: microsoft_teams.apps.Agent365BaggageOptions
+module: microsoft_teams.apps
+summary: Host-wide options for Agent365 baggage derived from inbound activities.
+constructor:
+  syntax: Agent365BaggageOptions()
+attributes:
+- uid: microsoft_teams.apps.Agent365BaggageOptions.additional_baggage
+  name: additional_baggage
+  signature: 'additional_baggage: Mapping[str, str | int | float | None]'
+- uid: microsoft_teams.apps.Agent365BaggageOptions.channel_link
+  name: channel_link
+  signature: 'channel_link: str | int | float | None'
+- uid: microsoft_teams.apps.Agent365BaggageOptions.include
+  name: include
+  signature: 'include: Collection[Literal[''senderName'', ''agentName'', ''agentDescription'',
+    ''senderEmail'', ''agentEmail'']]'
+- uid: microsoft_teams.apps.Agent365BaggageOptions.operation_source
+  name: operation_source
+  signature: 'operation_source: str | int | float | None'

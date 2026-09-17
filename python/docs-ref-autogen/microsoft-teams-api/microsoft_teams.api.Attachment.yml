@@ -59,5 +59,7 @@ attributes:
   signature: 'name: str | None'
 - uid: microsoft_teams.api.Attachment.thumbnail_url
   name: thumbnail_url
-  summary: Thumbnail associated with attachment
+  summary: 'Thumbnail associated with attachment.
+
+    Not set by Teams when a bot receives an upload.'
   signature: 'thumbnail_url: str | None'

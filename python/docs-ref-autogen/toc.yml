@@ -17,6 +17,26 @@
     no-loc:
     - ActivitySentEvent
     uid: microsoft_teams.apps.ActivitySentEvent
+  - name: Agent365Baggage
+    no-loc:
+    - Agent365Baggage
+    uid: microsoft_teams.apps.Agent365Baggage
+  - name: Agent365BaggageKeys
+    no-loc:
+    - Agent365BaggageKeys
+    uid: microsoft_teams.apps.Agent365BaggageKeys
+  - name: Agent365BaggageOptions
+    no-loc:
+    - Agent365BaggageOptions
+    uid: microsoft_teams.apps.Agent365BaggageOptions
+  - name: Agent365ScopeOpener
+    no-loc:
+    - Agent365ScopeOpener
+    uid: microsoft_teams.apps.Agent365ScopeOpener
+  - name: Agent365ScopeOptions
+    no-loc:
+    - Agent365ScopeOptions
+    uid: microsoft_teams.apps.Agent365ScopeOptions
   - name: App
     no-loc:
     - App
@@ -25,6 +45,14 @@
     no-loc:
     - AppOptions
     uid: microsoft_teams.apps.AppOptions
+  - name: AppTelemetryOptions
+    no-loc:
+    - AppTelemetryOptions
+    uid: microsoft_teams.apps.AppTelemetryOptions
+  - name: AppTokenProvider
+    no-loc:
+    - AppTokenProvider
+    uid: microsoft_teams.apps.AppTokenProvider
   - name: ClientContext
     no-loc:
     - ClientContext
@@ -37,6 +65,10 @@
     no-loc:
     - DependencyMetadata
     uid: microsoft_teams.apps.DependencyMetadata
+  - name: DownloadedFile
+    no-loc:
+    - DownloadedFile
+    uid: microsoft_teams.apps.DownloadedFile
   - name: ErrorEvent
     no-loc:
     - ErrorEvent
@@ -53,6 +85,30 @@
     no-loc:
     - FastAPIAdapter
     uid: microsoft_teams.apps.FastAPIAdapter
+  - name: FileAccessError
+    no-loc:
+    - FileAccessError
+    uid: microsoft_teams.apps.FileAccessError
+  - name: FileCredentialError
+    no-loc:
+    - FileCredentialError
+    uid: microsoft_teams.apps.FileCredentialError
+  - name: FileError
+    no-loc:
+    - FileError
+    uid: microsoft_teams.apps.FileError
+  - name: FileScopeNotSupportedError
+    no-loc:
+    - FileScopeNotSupportedError
+    uid: microsoft_teams.apps.FileScopeNotSupportedError
+  - name: FileUrlExpiredError
+    no-loc:
+    - FileUrlExpiredError
+    uid: microsoft_teams.apps.FileUrlExpiredError
+  - name: FilesAccessor
+    no-loc:
+    - FilesAccessor
+    uid: microsoft_teams.apps.FilesAccessor
   - name: FunctionContext
     no-loc:
     - FunctionContext
@@ -61,6 +117,10 @@
     no-loc:
     - HtmlWidgetMarkdownOptions
     uid: microsoft_teams.apps.HtmlWidgetMarkdownOptions
+  - name: HttpServer
+    no-loc:
+    - HttpServer
+    uid: microsoft_teams.apps.HttpServer
   - name: HttpServerAdapter
     no-loc:
     - HttpServerAdapter
@@ -69,10 +129,26 @@
     no-loc:
     - HttpStream
     uid: microsoft_teams.apps.HttpStream
+  - name: InboundActivityTokenValidator
+    no-loc:
+    - InboundActivityTokenValidator
+    uid: microsoft_teams.apps.InboundActivityTokenValidator
+  - name: IncomingFile
+    no-loc:
+    - IncomingFile
+    uid: microsoft_teams.apps.IncomingFile
   - name: InjectWidgetProtocolOptions
     no-loc:
     - InjectWidgetProtocolOptions
     uid: microsoft_teams.apps.InjectWidgetProtocolOptions
+  - name: OAuthFlow
+    no-loc:
+    - OAuthFlow
+    uid: microsoft_teams.apps.OAuthFlow
+  - name: OAuthFlowRegistry
+    no-loc:
+    - OAuthFlowRegistry
+    uid: microsoft_teams.apps.OAuthFlowRegistry
   - name: PluginActivityEvent
     no-loc:
     - PluginActivityEvent
@@ -109,10 +185,18 @@
     no-loc:
     - SignInEvent
     uid: microsoft_teams.apps.SignInEvent
+  - name: SignInFailureEvent
+    no-loc:
+    - SignInFailureEvent
+    uid: microsoft_teams.apps.SignInFailureEvent
   - name: StartEvent
     no-loc:
     - StartEvent
     uid: microsoft_teams.apps.StartEvent
+  - name: StateOptions
+    no-loc:
+    - StateOptions
+    uid: microsoft_teams.apps.StateOptions
   - name: StopEvent
     no-loc:
     - StopEvent
@@ -129,6 +213,10 @@
     no-loc:
     - StreamTimedOutError
     uid: microsoft_teams.apps.StreamTimedOutError
+  - name: TeamsBotApplicationTelemetry
+    no-loc:
+    - TeamsBotApplicationTelemetry
+    uid: microsoft_teams.apps.TeamsBotApplicationTelemetry
   - name: TerminalStreamError
     no-loc:
     - TerminalStreamError
@@ -137,6 +225,18 @@
     no-loc:
     - TokenValidator
     uid: microsoft_teams.apps.TokenValidator
+  - name: TurnState
+    no-loc:
+    - TurnState
+    uid: microsoft_teams.apps.TurnState
+  - name: TurnStateContainer
+    no-loc:
+    - TurnStateContainer
+    uid: microsoft_teams.apps.TurnStateContainer
+  - name: TurnStateSealedError
+    no-loc:
+    - TurnStateSealedError
+    uid: microsoft_teams.apps.TurnStateSealedError
   name: microsoft_teams.apps
   no-loc:
   - microsoft_teams.apps
@@ -195,6 +295,102 @@
     no-loc:
     - AdaptiveCardInvokeValue
     uid: microsoft_teams.api.AdaptiveCardInvokeValue
+  - name: AgentLifecycleEventActivityBase
+    no-loc:
+    - AgentLifecycleEventActivityBase
+    uid: microsoft_teams.api.AgentLifecycleEventActivityBase
+  - name: AgentLifecycleManager
+    no-loc:
+    - AgentLifecycleManager
+    uid: microsoft_teams.api.AgentLifecycleManager
+  - name: AgentLifecycleManagerRef
+    no-loc:
+    - AgentLifecycleManagerRef
+    uid: microsoft_teams.api.AgentLifecycleManagerRef
+  - name: AgentLifecycleUpdatedProperty
+    no-loc:
+    - AgentLifecycleUpdatedProperty
+    uid: microsoft_teams.api.AgentLifecycleUpdatedProperty
+  - name: AgentLifecycleValueBase
+    no-loc:
+    - AgentLifecycleValueBase
+    uid: microsoft_teams.api.AgentLifecycleValueBase
+  - name: AgenticAppTokenProviderProtocol
+    no-loc:
+    - AgenticAppTokenProviderProtocol
+    uid: microsoft_teams.api.AgenticAppTokenProviderProtocol
+  - name: AgenticIdentity
+    no-loc:
+    - AgenticIdentity
+    uid: microsoft_teams.api.AgenticIdentity
+  - name: AgenticUserDeletedActivity
+    no-loc:
+    - AgenticUserDeletedActivity
+    uid: microsoft_teams.api.AgenticUserDeletedActivity
+  - name: AgenticUserDeletedValue
+    no-loc:
+    - AgenticUserDeletedValue
+    uid: microsoft_teams.api.AgenticUserDeletedValue
+  - name: AgenticUserDisabledActivity
+    no-loc:
+    - AgenticUserDisabledActivity
+    uid: microsoft_teams.api.AgenticUserDisabledActivity
+  - name: AgenticUserDisabledValue
+    no-loc:
+    - AgenticUserDisabledValue
+    uid: microsoft_teams.api.AgenticUserDisabledValue
+  - name: AgenticUserEnabledActivity
+    no-loc:
+    - AgenticUserEnabledActivity
+    uid: microsoft_teams.api.AgenticUserEnabledActivity
+  - name: AgenticUserEnabledValue
+    no-loc:
+    - AgenticUserEnabledValue
+    uid: microsoft_teams.api.AgenticUserEnabledValue
+  - name: AgenticUserIdentityCreatedActivity
+    no-loc:
+    - AgenticUserIdentityCreatedActivity
+    uid: microsoft_teams.api.AgenticUserIdentityCreatedActivity
+  - name: AgenticUserIdentityCreatedValue
+    no-loc:
+    - AgenticUserIdentityCreatedValue
+    uid: microsoft_teams.api.AgenticUserIdentityCreatedValue
+  - name: AgenticUserIdentityUpdatedActivity
+    no-loc:
+    - AgenticUserIdentityUpdatedActivity
+    uid: microsoft_teams.api.AgenticUserIdentityUpdatedActivity
+  - name: AgenticUserIdentityUpdatedValue
+    no-loc:
+    - AgenticUserIdentityUpdatedValue
+    uid: microsoft_teams.api.AgenticUserIdentityUpdatedValue
+  - name: AgenticUserManagerUpdatedActivity
+    no-loc:
+    - AgenticUserManagerUpdatedActivity
+    uid: microsoft_teams.api.AgenticUserManagerUpdatedActivity
+  - name: AgenticUserManagerUpdatedValue
+    no-loc:
+    - AgenticUserManagerUpdatedValue
+    uid: microsoft_teams.api.AgenticUserManagerUpdatedValue
+  - name: AgenticUserTokenProviderProtocol
+    no-loc:
+    - AgenticUserTokenProviderProtocol
+    uid: microsoft_teams.api.AgenticUserTokenProviderProtocol
+  - name: AgenticUserUndeletedActivity
+    no-loc:
+    - AgenticUserUndeletedActivity
+    uid: microsoft_teams.api.AgenticUserUndeletedActivity
+  - name: AgenticUserUndeletedValue
+    no-loc:
+    - AgenticUserUndeletedValue
+    uid: microsoft_teams.api.AgenticUserUndeletedValue
+  - name: AgenticUserWorkloadOnboardingUpdatedActivity
+    no-loc:
+    - AgenticUserWorkloadOnboardingUpdatedActivity
+    uid: microsoft_teams.api.AgenticUserWorkloadOnboardingUpdatedActivity
+  - name: AgenticUserWorkloadOnboardingUpdatedValue
+    no-loc:
+    - AgenticUserWorkloadOnboardingUpdatedValue
+    uid: microsoft_teams.api.AgenticUserWorkloadOnboardingUpdatedValue
   - name: AnimationCard
     no-loc:
     - AnimationCard
@@ -455,6 +651,10 @@
     no-loc:
     - FileConsentInvokeActivity
     uid: microsoft_teams.api.FileConsentInvokeActivity
+  - name: FileDownloadInfo
+    no-loc:
+    - FileDownloadInfo
+    uid: microsoft_teams.api.FileDownloadInfo
   - name: FileInfoCard
     no-loc:
     - FileInfoCard
@@ -539,6 +739,10 @@
     no-loc:
     - InstalledActivity
     uid: microsoft_teams.api.InstalledActivity
+  - name: InstalledUpgradeActivity
+    no-loc:
+    - InstalledUpgradeActivity
+    uid: microsoft_teams.api.InstalledUpgradeActivity
   - name: InvokeResponse
     no-loc:
     - InvokeResponse
@@ -1047,6 +1251,10 @@
     no-loc:
     - TeamInfo
     uid: microsoft_teams.api.TeamInfo
+  - name: TeamsApiTelemetry
+    no-loc:
+    - TeamsApiTelemetry
+    uid: microsoft_teams.api.TeamsApiTelemetry
   - name: TeamsChannelAccount
     no-loc:
     - TeamsChannelAccount
@@ -1099,6 +1307,10 @@
     no-loc:
     - TokenProtocol
     uid: microsoft_teams.api.TokenProtocol
+  - name: TokenProviderProtocol
+    no-loc:
+    - TokenProviderProtocol
+    uid: microsoft_teams.api.TokenProviderProtocol
   - name: TokenRequest
     no-loc:
     - TokenRequest
@@ -1231,6 +1443,14 @@
     no-loc:
     - LocalStorageOptions
     uid: microsoft_teams.common.LocalStorageOptions
+  - name: Middleware
+    no-loc:
+    - Middleware
+    uid: microsoft_teams.common.Middleware
+  - name: MiddlewareContext
+    no-loc:
+    - MiddlewareContext
+    uid: microsoft_teams.common.MiddlewareContext
   - name: Storage
     no-loc:
     - Storage
@@ -1262,3 +1482,13 @@
   name: microsoft_teams.botbuilder
   no-loc:
   - microsoft_teams.botbuilder
+- items:
+  - name: Overview
+    uid: microsoft_teams.m365extensions
+  - name: TeamsMiddleware
+    no-loc:
+    - TeamsMiddleware
+    uid: microsoft_teams.m365extensions.TeamsMiddleware
+  name: microsoft_teams.m365extensions
+  no-loc:
+  - microsoft_teams.m365extensions

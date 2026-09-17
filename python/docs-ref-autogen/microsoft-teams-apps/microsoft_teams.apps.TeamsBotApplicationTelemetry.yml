@@ -1,0 +1,18 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.TeamsBotApplicationTelemetry
+name: TeamsBotApplicationTelemetry
+fullName: microsoft_teams.apps.TeamsBotApplicationTelemetry
+module: microsoft_teams.apps
+summary: OpenTelemetry source names for the Teams app orchestration package.
+constructor:
+  syntax: TeamsBotApplicationTelemetry()
+attributes:
+- uid: microsoft_teams.apps.TeamsBotApplicationTelemetry.instrumentation_version
+  name: instrumentation_version
+  signature: instrumentation_version = '2.1.0'
+- uid: microsoft_teams.apps.TeamsBotApplicationTelemetry.meter_name
+  name: meter_name
+  signature: meter_name = 'Microsoft.Teams.Apps'
+- uid: microsoft_teams.apps.TeamsBotApplicationTelemetry.tracer_name
+  name: tracer_name
+  signature: tracer_name = 'Microsoft.Teams.Apps'

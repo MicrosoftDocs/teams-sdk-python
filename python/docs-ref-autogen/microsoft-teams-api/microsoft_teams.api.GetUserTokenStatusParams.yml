@@ -18,14 +18,14 @@ summary: 'Parameters for getting token status for a user.
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
   syntax: 'GetUserTokenStatusParams(*, userId: str, channelId: Literal[''webchat'',
-    ''msteams''] | str, includeFilter: str, **extra_data: Any)'
+    ''msteams''] | str, includeFilter: str | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: userId
     isRequired: true
   - name: channelId
     isRequired: true
   - name: includeFilter
-    isRequired: true
+    defaultValue: None
 attributes:
 - uid: microsoft_teams.api.GetUserTokenStatusParams.channel_id
   name: channel_id
@@ -33,8 +33,11 @@ attributes:
   signature: 'channel_id: Literal[''webchat'', ''msteams''] | str'
 - uid: microsoft_teams.api.GetUserTokenStatusParams.include_filter
   name: include_filter
-  summary: The include filter.
-  signature: 'include_filter: str'
+  summary: 'The include filter. When omitted, status for every connection registered
+    on
+
+    the bot is returned.'
+  signature: 'include_filter: str | None'
 - uid: microsoft_teams.api.GetUserTokenStatusParams.model_config
   name: model_config
   summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].

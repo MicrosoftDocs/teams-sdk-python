@@ -1,0 +1,90 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.OAuthFlow
+name: OAuthFlow
+fullName: microsoft_teams.apps.OAuthFlow
+module: microsoft_teams.apps
+summary: "One named OAuth connection, plus the handlers attached to it.\n\nCreated\
+  \ via `app.add_oauth_flow(...)` \u2014 not constructed directly."
+constructor:
+  syntax: 'OAuthFlow(connection_name: str, *, oauth_card_text: str = ''Please Sign
+    In...'', sign_in_button_text: str = ''Sign In'')'
+  parameters:
+  - name: connection_name
+    isRequired: true
+  keywordOnlyParameters:
+  - name: oauth_card_text
+    defaultValue: Please Sign In...
+  - name: sign_in_button_text
+    defaultValue: Sign In
+methods:
+- uid: microsoft_teams.apps.OAuthFlow.get_token
+  name: get_token
+  summary: The user's token for this connection, or `None` if not signed in.
+  signature: 'async get_token(ctx: ActivityContext[Any]) -> str | None'
+  parameters:
+  - name: ctx
+    isRequired: true
+- uid: microsoft_teams.apps.OAuthFlow.is_signed_in
+  name: is_signed_in
+  summary: Whether the user currently has a token for this connection.
+  signature: 'async is_signed_in(ctx: ActivityContext[Any]) -> bool'
+  parameters:
+  - name: ctx
+    isRequired: true
+- uid: microsoft_teams.apps.OAuthFlow.on_signin
+  name: on_signin
+  summary: 'Register a handler for a successful sign-in on this connection.
+
+
+    The handler may be synchronous or asynchronous, and may be registered more
+
+    than once. Handlers run in registration order and are isolated from one
+
+    another: if one raises, the error is logged and the rest still run.'
+  signature: 'on_signin(func: SignInHandlerT) -> SignInHandlerT'
+  parameters:
+  - name: func
+    isRequired: true
+- uid: microsoft_teams.apps.OAuthFlow.on_signin_failure
+  name: on_signin_failure
+  summary: "Register a handler for a failed silent-SSO attempt on this connection.\n\
+    \nThe handler may be synchronous or asynchronous, and may be registered more\n\
+    than once. Handlers run in registration order and are isolated from one\nanother:\
+    \ if one raises, the error is logged and the rest still run.\n\nA `signin/failure`\
+    \ callback carries no connection name, so the app matches\nit against the pending\
+    \ sign-in recorded when the flow started. That record\nlives in durable state\
+    \ when state is enabled, and otherwise in a short-lived\nprocess-local cache.\
+    \ If neither resolves \u2014 most commonly because the callback\nreached a different\
+    \ process than the one that started the sign-in \u2014 the\nfailure cannot be\
+    \ attributed, and **every** registered flow's failure\nhandlers are notified rather\
+    \ than none. Handlers that must act on only their\nown connection should enable\
+    \ state, which makes attribution reliable across\nprocesses."
+  signature: 'on_signin_failure(func: SignInFailureHandlerT) -> SignInFailureHandlerT'
+  parameters:
+  - name: func
+    isRequired: true
+- uid: microsoft_teams.apps.OAuthFlow.sign_in
+  name: sign_in
+  summary: "Start sign-in.\n\nReturns a token immediately if one already exists, otherwise\
+    \ sends an\nOAuth card and returns `None`. If the caller passes their own\n`SignInOptions`\
+    \ their card text wins, but the connection name is\nalways forced to this flow's\
+    \ \u2014 you cannot accidentally sign in on the\nwrong connection through a flow\
+    \ object. When per-turn state is enabled,\na pending hint is recorded so connection-less\
+    \ verify-state callbacks\nprobe likely flows first and silent-SSO failures can\
+    \ be attributed to\nthis flow. Without state, verify-state probes the registered\
+    \ flows and\nlegacy default connection, while failures use the registered-flow\n\
+    fallback."
+  signature: 'async sign_in(ctx: ActivityContext[Any], options: SignInOptions | None
+    = None) -> str | None'
+  parameters:
+  - name: ctx
+    isRequired: true
+  - name: options
+    defaultValue: None
+- uid: microsoft_teams.apps.OAuthFlow.sign_out
+  name: sign_out
+  summary: Sign the user out of this connection.
+  signature: 'async sign_out(ctx: ActivityContext[Any]) -> None'
+  parameters:
+  - name: ctx
+    isRequired: true

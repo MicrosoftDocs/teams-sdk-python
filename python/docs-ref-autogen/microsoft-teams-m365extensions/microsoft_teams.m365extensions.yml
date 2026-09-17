@@ -1,0 +1,37 @@
+### YamlMime:PythonPackage
+uid: microsoft_teams.m365extensions
+name: m365extensions
+fullName: microsoft_teams.m365extensions
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+type: rootImport
+functions:
+- uid: microsoft_teams.m365extensions.is_teams_channel
+  name: is_teams_channel
+  summary: True for Teams turns, including sub-channels like `msteams:COPILOT`.
+  signature: 'is_teams_channel(activity: Activity) -> bool'
+  parameters:
+  - name: activity
+    isRequired: true
+- uid: microsoft_teams.m365extensions.make_agent_sdk_token_provider
+  name: make_agent_sdk_token_provider
+  signature: 'make_agent_sdk_token_provider(connection_manager: Any) -> Callable[[...],
+    Awaitable[str]]'
+  parameters:
+  - name: connection_manager
+    isRequired: true
+- uid: microsoft_teams.m365extensions.use_teams_sdk
+  name: use_teams_sdk
+  signature: 'use_teams_sdk(app: AgentApplication[Any], connection_manager: Connections,
+    should_bypass_teams: Callable[[TurnContext], bool] | None = None, **teams_app_kwargs:
+    Any) -> App'
+  parameters:
+  - name: app
+    isRequired: true
+  - name: connection_manager
+    isRequired: true
+  - name: should_bypass_teams
+    defaultValue: None
+classes:
+- microsoft_teams.m365extensions.TeamsMiddleware

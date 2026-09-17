@@ -1,0 +1,8 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.Agent365ScopeOpener
+name: Agent365ScopeOpener
+fullName: microsoft_teams.apps.Agent365ScopeOpener
+module: microsoft_teams.apps
+summary: Opens a proactive Agent365 baggage scope with bound host policy.
+constructor:
+  syntax: Agent365ScopeOpener(*args, **kwargs)

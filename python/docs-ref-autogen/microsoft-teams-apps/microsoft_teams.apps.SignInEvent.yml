@@ -6,16 +6,22 @@ module: microsoft_teams.apps
 constructor:
   syntax: 'SignInEvent(activity_ctx: microsoft_teams.apps.routing.activity_context.ActivityContext[microsoft_teams.api.activities.invoke.sign_in.verify_state.SignInVerifyStateInvokeActivity]
     | microsoft_teams.apps.routing.activity_context.ActivityContext[microsoft_teams.api.activities.invoke.sign_in.token_exchange.SignInTokenExchangeInvokeActivity],
-    token_response: microsoft_teams.api.models.token.response.TokenResponse)'
+    token_response: microsoft_teams.api.models.token.response.TokenResponse, connection_name:
+    str | None = None)'
   parameters:
   - name: activity_ctx
     isRequired: true
   - name: token_response
     isRequired: true
+  - name: connection_name
+    defaultValue: None
 attributes:
 - uid: microsoft_teams.apps.SignInEvent.activity_ctx
   name: activity_ctx
   signature: 'activity_ctx: ActivityContext[SignInVerifyStateInvokeActivity] | ActivityContext[SignInTokenExchangeInvokeActivity]'
+- uid: microsoft_teams.apps.SignInEvent.connection_name
+  name: connection_name
+  signature: 'connection_name: str | None = None'
 - uid: microsoft_teams.apps.SignInEvent.token_response
   name: token_response
   signature: 'token_response: TokenResponse'

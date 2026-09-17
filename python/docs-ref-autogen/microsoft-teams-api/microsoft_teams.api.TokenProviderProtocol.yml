@@ -1,0 +1,18 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.TokenProviderProtocol
+name: TokenProviderProtocol
+fullName: microsoft_teams.api.TokenProviderProtocol
+module: microsoft_teams.api
+summary: Named token capabilities for apps that need more than app-only tokens.
+constructor:
+  syntax: TokenProviderProtocol(*args, **kwargs)
+methods:
+- uid: microsoft_teams.api.TokenProviderProtocol.get_app_token
+  name: get_app_token
+  signature: 'get_app_token(scope: str, tenant_id: str | None) -> str | TokenProtocol
+    | None | Awaitable[str | TokenProtocol | None]'
+  parameters:
+  - name: scope
+    isRequired: true
+  - name: tenant_id
+    isRequired: true

@@ -1,0 +1,55 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.AgenticUserDeletedValue
+name: AgenticUserDeletedValue
+fullName: microsoft_teams.api.AgenticUserDeletedValue
+module: microsoft_teams.api
+summary: 'Payload for the `agenticUserDeleted` event.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'AgenticUserDeletedValue(*, tenantId: str | None = None, agenticUserId:
+    str | None = None, agenticAppInstanceId: str | None = None, agentIdentityBlueprintId:
+    str | None = None, version: int | None = None, eventType: Literal[''agenticUserDeleted'']
+    = ''agenticUserDeleted'', deletionReason: str | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: tenantId
+    defaultValue: None
+  - name: agenticUserId
+    defaultValue: None
+  - name: agenticAppInstanceId
+    defaultValue: None
+  - name: agentIdentityBlueprintId
+    defaultValue: None
+  - name: version
+    defaultValue: None
+  - name: eventType
+    defaultValue: agenticUserDeleted
+  - name: deletionReason
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.AgenticUserDeletedValue.deletion_reason
+  name: deletion_reason
+  summary: The reason the agentic user was deleted (e.g. `UserSoftDelete`, `UserHardDelete`).
+  signature: 'deletion_reason: str | None'
+- uid: microsoft_teams.api.AgenticUserDeletedValue.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True}'
+- uid: microsoft_teams.api.AgenticUserDeletedValue.event_type
+  name: event_type
+  signature: 'event_type: Literal[''agenticUserDeleted'']'
