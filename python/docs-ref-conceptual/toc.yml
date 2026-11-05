@@ -1,4 +1,6 @@
 - name: Teams SDK for Python overview
   href: index.md
+- name: Migrate to HTTPX2
+  href: update-httpx2.md
 - name: Teams Platform documentation
   href: /microsoftteams/platform/overview
