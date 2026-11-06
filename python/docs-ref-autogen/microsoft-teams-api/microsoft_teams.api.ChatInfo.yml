@@ -1,0 +1,57 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.ChatInfo
+name: ChatInfo
+fullName: microsoft_teams.api.ChatInfo
+module: microsoft_teams.api
+summary: 'Identifies the chat scope that contains an inbound activity.
+
+
+  This API is in preview and may change in the future.
+
+  Diagnostic: ExperimentalTeamsThreading
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'ChatInfo(*, id: str | None = None, encrypted: EncryptedChatInfo | None
+    = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: id
+    defaultValue: None
+  - name: encrypted
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.ChatInfo.encrypted
+  name: encrypted
+  summary: The encrypted form of the chat scope's id.
+  signature: 'encrypted: EncryptedChatInfo | None'
+- uid: microsoft_teams.api.ChatInfo.id
+  name: id
+  summary: '1 chat)
+
+    or *19:<id>@thread.v2* (group chat).
+
+    This is the unencrypted id, and it can differ from *conversation.id*.
+
+    It is not sent for channels, where *channel_data.channel.id* plays this role.
+
+    Use it as the conversation id to send a top-level message to the chat scope, or
+    to reply in a reply chain.'
+  signature: 'id: str | None'
+- uid: microsoft_teams.api.ChatInfo.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''frozen'': True, ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'

@@ -17,8 +17,9 @@ summary: 'Plaintext/HTML representation of the content of the message.
 
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
-  syntax: 'MessageBody(*, contentType: Literal[''html'', ''text''] | None = None,
-    content: str | None = None, textContent: str | None = None, **extra_data: Any)'
+  syntax: 'MessageBody(*, contentType: Literal[''html'', ''text''] | str | None =
+    None, content: str | None = None, textContent: str | None = None, **extra_data:
+    Any)'
   keywordOnlyParameters:
   - name: contentType
     defaultValue: None
@@ -34,7 +35,7 @@ attributes:
 - uid: microsoft_teams.api.MessageBody.content_type
   name: content_type
   summary: Type of the content.
-  signature: 'content_type: Literal[''html'', ''text''] | None'
+  signature: 'content_type: Literal[''html'', ''text''] | str | None'
 - uid: microsoft_teams.api.MessageBody.model_config
   name: model_config
   summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
@@ -42,8 +43,7 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.MessageBody.text_content
   name: text_content
   summary: The text content of the body after stripping HTML tags.

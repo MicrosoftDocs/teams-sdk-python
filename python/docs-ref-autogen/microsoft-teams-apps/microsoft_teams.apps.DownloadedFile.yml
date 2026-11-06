@@ -58,16 +58,32 @@ attributes:
 - uid: microsoft_teams.apps.DownloadedFile.content_type
   name: content_type
   summary: 'MIME type resolved from the download response header, or the incoming
-    file''s metadata type if the
+    file''s metadata type if the response omits
 
-    response omits one. Falls back to *application/octet-stream* when neither provides
-    a type, so this is
+    one.
 
-    never empty.'
+    Falls back to *application/octet-stream* when neither provides a type, so this
+    is never empty.
+
+    For an inline image, the response header is ignored and the type is detected from
+    the bytes.
+
+    If the bytes are not PNG, JPEG, GIF, or WebP, it falls back to *IncomingFile.content_type*.'
   signature: 'content_type: str'
 - uid: microsoft_teams.apps.DownloadedFile.filename
   name: filename
-  summary: Resolved filename.
+  summary: 'Resolved filename.
+
+    For an inline image, the extension follows *content_type*, meaning the filename
+    can differ from
+
+    *IncomingFile.name*.
+
+    For an uploaded file, the name comes from the sender and can contain path separators,
+    so reduce it to its last
+
+    segment (for example with *ntpath.basename(name)*) before using it in a local
+    path.'
   signature: 'filename: str'
 - uid: microsoft_teams.apps.DownloadedFile.source_url
   name: source_url

@@ -1,0 +1,15 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.SocketModeReconnectedEvent
+name: SocketModeReconnectedEvent
+fullName: microsoft_teams.apps.SocketModeReconnectedEvent
+module: microsoft_teams.apps
+summary: 'Experimental event: a geo''s socket recovered from an unexpected drop.'
+constructor:
+  syntax: 'SocketModeReconnectedEvent(geo: str)'
+  parameters:
+  - name: geo
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.SocketModeReconnectedEvent.geo
+  name: geo
+  signature: 'geo: str'

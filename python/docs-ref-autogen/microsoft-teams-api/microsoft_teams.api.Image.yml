@@ -17,8 +17,8 @@ summary: 'Information about the citation''s icon
 
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
-  syntax: 'Image(*, at_type: Literal[''ImageObject''] = ''ImageObject'', name: CitationIconName,
-    **extra_data: Any)'
+  syntax: 'Image(*, at_type: Literal[''ImageObject''] = ''ImageObject'', name: CitationIconName
+    | str, **extra_data: Any)'
   keywordOnlyParameters:
   - name: at_type
     defaultValue: ImageObject
@@ -36,9 +36,8 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.Image.name
   name: name
   summary: The image/icon name
-  signature: 'name: CitationIconName'
+  signature: 'name: CitationIconName | str'

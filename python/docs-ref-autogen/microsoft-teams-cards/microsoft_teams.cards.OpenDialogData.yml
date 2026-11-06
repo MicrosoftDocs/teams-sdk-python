@@ -59,5 +59,4 @@ attributes:
     validation_alias=<staticmethod(<function SerializableObject.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function SerializableObject.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'

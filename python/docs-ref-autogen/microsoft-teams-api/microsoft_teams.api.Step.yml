@@ -1,0 +1,78 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.Step
+name: Step
+fullName: microsoft_teams.api.Step
+module: microsoft_teams.api
+summary: 'A versioned step describing work in a Plan.
+
+
+  Keep the same `id` when updating a step and increment `version` for
+
+  every change, including changes to its status, title, description, or sources.
+
+  The application is responsible for incrementing the version.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'Step(*, id: str, version: int, title: str, status: Literal[''active'',
+    ''proposed'', ''completed'', ''blocked'', ''error''], description: str | None
+    = None, sources: list[microsoft_teams.api.models.entity.plan_info_entity.StepSource]
+    | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: id
+    isRequired: true
+  - name: version
+    isRequired: true
+  - name: title
+    isRequired: true
+  - name: status
+    isRequired: true
+  - name: description
+    defaultValue: None
+  - name: sources
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.Step.description
+  name: description
+  summary: Optional details describing the step's work or current state.
+  signature: 'description: str | None'
+- uid: microsoft_teams.api.Step.id
+  name: id
+  summary: Stable identifier for the step within the Plan.
+  signature: 'id: str'
+- uid: microsoft_teams.api.Step.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
+- uid: microsoft_teams.api.Step.sources
+  name: sources
+  summary: Optional reference sources associated with the step.
+  signature: 'sources: list[microsoft_teams.api.models.entity.plan_info_entity.StepSource]
+    | None'
+- uid: microsoft_teams.api.Step.status
+  name: status
+  summary: active, proposed, completed, blocked, or error.
+  signature: 'status: Literal[''active'', ''proposed'', ''completed'', ''blocked'',
+    ''error'']'
+- uid: microsoft_teams.api.Step.title
+  name: title
+  summary: Display title of the step.
+  signature: 'title: str'
+- uid: microsoft_teams.api.Step.version
+  name: version
+  summary: Step revision number. Increment for every update to the same step.
+  signature: 'version: int'

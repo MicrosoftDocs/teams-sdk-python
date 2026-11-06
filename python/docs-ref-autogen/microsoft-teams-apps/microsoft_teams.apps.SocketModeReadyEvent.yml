@@ -1,0 +1,21 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.SocketModeReadyEvent
+name: SocketModeReadyEvent
+fullName: microsoft_teams.apps.SocketModeReadyEvent
+module: microsoft_teams.apps
+summary: 'Experimental event: a geo''s socket connected and the service confirmed
+  readiness.'
+constructor:
+  syntax: 'SocketModeReadyEvent(geo: str, frame: SocketReadyFrame)'
+  parameters:
+  - name: geo
+    isRequired: true
+  - name: frame
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.SocketModeReadyEvent.frame
+  name: frame
+  signature: 'frame: SocketReadyFrame'
+- uid: microsoft_teams.apps.SocketModeReadyEvent.geo
+  name: geo
+  signature: 'geo: str'

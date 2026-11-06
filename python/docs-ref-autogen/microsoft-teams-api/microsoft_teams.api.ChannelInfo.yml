@@ -18,7 +18,7 @@ summary: 'A channel info object which describes the channel.
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
   syntax: 'ChannelInfo(*, id: str | None = None, name: str | None = None, type: Literal[''standard'',
-    ''shared'', ''private''] | None = None, **extra_data: Any)'
+    ''shared'', ''private''] | str | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: id
     defaultValue: None
@@ -38,8 +38,7 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.ChannelInfo.name
   name: name
   summary: Name of the channel
@@ -47,4 +46,4 @@ attributes:
 - uid: microsoft_teams.api.ChannelInfo.type
   name: type
   summary: The type of the channel. Valid values are standard, shared and private.
-  signature: 'type: Literal[''standard'', ''shared'', ''private''] | None'
+  signature: 'type: Literal[''standard'', ''shared'', ''private''] | str | None'

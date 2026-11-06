@@ -168,33 +168,45 @@ methods:
     '
 - uid: microsoft_teams.apps.App.reply
   name: reply
-  summary: 'Send an activity proactively to a conversation, optionally as a threaded
-    reply.
+  summary: 'Send an activity proactively as a reply in a reply chain (thread).
 
 
     **3-arg form** `reply(conversation_id, message_id, activity)`:
 
-    Constructs a threaded conversation ID via <xref:microsoft_teams.apps.to_threaded_conversation_id>
+    Posts to the reply chain of the message `message_id`, in the chat or channel `conversation_id`.
 
-    and sends to that thread. The service determines whether threading is
+    Any error is raised, including HTTP 404 and 400.
 
-    supported for the given conversation type.
+    An activity that has an `id` updates that message instead, exactly like <xref:microsoft_teams.apps.App.send>.
+
+    The SDK does not state where a client shows the message in a group chat.
 
 
     **2-arg form** `reply(conversation_id, activity)`:
 
-    Sends to the exact conversation ID provided - threaded if it contains
+    Sends to the exact conversation ID provided.
 
-    `;messageid=`, flat otherwise.'
+
+    *Deprecated since version The:* 2-arg form is deprecated and will be removed in
+    a future release.
+
+    Use `send(conversation_id, activity)` for a top-level message,
+
+    or `reply(conversation_id, message_id, activity)` to reply in a reply chain.'
   signature: 'async reply(conversation_id: str, message_id: str, activity: str | ActivityParams
     | AdaptiveCard, *, service_url: str | None = None, agentic_identity: AgenticIdentity
     | None = None) -> SentActivity'
   parameters:
   - name: conversation_id
-    description: The conversation ID
+    description: 'The id of the chat or channel: `channel_data.chat.id` or `channel_data.channel.id`,
+
+      **not** `conversation.id`.'
     isRequired: true
   - name: message_id
-    description: The thread root message ID (3-arg form) or the activity (2-arg form)
+    description: 'The id of the message at the root of the reply chain (3-arg form),
+      or the activity (2-arg form).
+
+      Use `channel_data.reply_chain.id`.'
     isRequired: true
   - name: activity
     description: The activity to send (only in 3-arg form)
@@ -204,17 +216,17 @@ methods:
     defaultValue: None
   - name: agentic_identity
     defaultValue: None
+  exceptions:
+  - type: ValueError
+    description: If `conversation_id` or `message_id` is blank (3-arg form).
 - uid: microsoft_teams.apps.App.send
   name: send
   summary: 'Send an activity proactively to a conversation.
 
 
-    Sends to the exact conversation ID provided. For channel threads,
+    Sends to the exact conversation ID provided.
 
-    the conversation ID must include `;messageid=` - use <xref:microsoft_teams.apps.to_threaded_conversation_id>
-
-    to construct it, or use <xref:microsoft_teams.apps.App.reply> which handles this
-    automatically.'
+    To reply in a reply chain (thread), use <xref:microsoft_teams.apps.App.reply>.'
   signature: 'async send(conversation_id: str, activity: str | MessageActivityInput
     | MessageReactionActivityInput | TypingActivityInput | AdaptiveCard, *, service_url:
     str | None = None, agentic_identity: AgenticIdentity | None = None) -> SentActivity'
@@ -289,6 +301,18 @@ attributes:
 - uid: microsoft_teams.apps.App.router
   name: router
   summary: The activity router instance.
+- uid: microsoft_teams.apps.App.socket_mode
+  name: socket_mode
+  summary: 'The experimental Socket Mode adapter when enabled, else `None`.
+
+
+    Exposes `status`, `geo_statuses`, and `events` for observing the connection.
+
+    Socket Mode is currently only available for new bots.
+
+    This API is in preview and may change in the future; recommended only for development.
+
+    Diagnostic: ExperimentalTeamsSocketMode'
 - uid: microsoft_teams.apps.App.token_provider
   name: token_provider
   summary: Token source for resources the SDK does not call automatically.

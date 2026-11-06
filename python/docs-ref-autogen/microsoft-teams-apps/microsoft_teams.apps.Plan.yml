@@ -1,0 +1,135 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.Plan
+name: Plan
+fullName: microsoft_teams.apps.Plan
+module: microsoft_teams.apps
+summary: 'Send prompt-bound Plan activities; the application owns ordering and concurrency.
+
+
+  A Plan is bound to a single conversation and a single originating prompt
+
+  (`reply_to_id`), and it does not hold a mutable conversation reference or a hidden
+
+  live session object. The runtime client is injected separately and is scoped to
+  the
+
+  conversation''s service URL before use.
+
+
+  Targeted Plan scenarios are not supported. Plan activities use ordinary create routing.
+
+
+  Preview API. Diagnostic: ExperimentalTeamsPlan'
+constructor:
+  syntax: 'Plan(*, conversationId: str, replyToId: str, replyChain: PlanReplyChain
+    | None = None, **options: Unpack[PlanOptions])'
+  keywordOnlyParameters:
+  - name: conversationId
+    isRequired: true
+  - name: replyToId
+    isRequired: true
+  - name: replyChain
+    defaultValue: None
+methods:
+- uid: microsoft_teams.apps.Plan.complete
+  name: complete
+  summary: Complete the Plan and send the final response.
+  signature: 'async complete(message: str | MessageActivityInput) -> SentActivity'
+  parameters:
+  - name: message
+    description: 'Final response text or a full `MessageActivityInput` payload. If
+      the
+
+      payload already contains a `planInfo` entity, it must be a `complete`
+
+      operation; other plan operations are rejected.'
+    isRequired: true
+  return:
+    description: The `SentActivity` returned by the underlying conversation API call.
+  exceptions:
+  - type: ValueError
+    description: If the supplied message includes any `PlanInfoEntity` whose `plan_type`
+      is not `"complete"`
+  - type: Any API/network exceptions raised by the underlying conversation client.
+- uid: microsoft_teams.apps.Plan.completion
+  name: completion
+  summary: 'Build a fresh completion message for this Plan''s prompt without sending
+    or emitting events.
+
+
+    Emit it last on a stream targeting the same conversation, then close the stream.'
+  signature: completion() -> MessageActivityInput
+- uid: microsoft_teams.apps.Plan.error
+  name: error
+  summary: Signal an error state for the active Plan.
+  signature: async error() -> None
+  return:
+    description: 'None. This sends a `planInfo` entity with `planType` of `"error"`
+      and
+
+      emits `sent` after success.'
+  exceptions:
+  - type: Any API/network exceptions raised by the underlying conversation client.
+- uid: microsoft_teams.apps.Plan.start
+  name: start
+  summary: Start a new Plan for the bound prompt.
+  signature: 'async start(steps: Sequence[Step]) -> None'
+  parameters:
+  - name: steps
+    description: Ordered step list to include in the start payload.
+    isRequired: true
+  return:
+    description: None. The send result is exposed via the `sent` event.
+  exceptions:
+  - type: Any API/network exceptions raised by the underlying conversation client.
+- uid: microsoft_teams.apps.Plan.stop
+  name: stop
+  summary: Stop the active Plan for the bound prompt.
+  signature: async stop() -> None
+  return:
+    description: 'None. This sends a `planInfo` entity with `planType` of `"stop"`
+      and
+
+      emits `sent` after success.'
+  exceptions:
+  - type: Any API/network exceptions raised by the underlying conversation client.
+- uid: microsoft_teams.apps.Plan.update
+  name: update
+  summary: Send a continuing Plan update for the current prompt.
+  signature: 'async update(steps: Sequence[Step]) -> None'
+  parameters:
+  - name: steps
+    description: New or updated plan steps describing the current state.
+    isRequired: true
+  return:
+    description: None. This method emits the `sent` event on a successful response.
+  exceptions:
+  - type: Any API/network exceptions raised by the underlying conversation client.
+attributes:
+- uid: microsoft_teams.apps.Plan.events
+  name: events
+  summary: 'Emit lifecycle notifications for successfully sent Plan activities.
+
+
+    The emitter exposes a single event named `"sent"`. The payload is the
+
+    `SentActivity` returned from the API after the activity is created. The event
+
+    fires once the underlying create request succeeds and before the method returns.'
+- uid: microsoft_teams.apps.Plan.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
+- uid: microsoft_teams.apps.Plan.conversation_id
+  name: conversation_id
+  signature: 'conversation_id: str'
+- uid: microsoft_teams.apps.Plan.reply_chain
+  name: reply_chain
+  signature: 'reply_chain: PlanReplyChain | None'
+- uid: microsoft_teams.apps.Plan.reply_to_id
+  name: reply_to_id
+  signature: 'reply_to_id: str'

@@ -1,0 +1,37 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.InlineImageAccessError
+name: InlineImageAccessError
+fullName: microsoft_teams.apps.InlineImageAccessError
+module: microsoft_teams.apps
+summary: 'Raised when the Bot API refused the token presented for an inline image,
+  answering *401* or *403*.
+
+
+  Inline images are read with the same Bot API token the app uses to reply in that
+  conversation (an agentic user
+
+  token for agentic identities), not Graph, so this is distinct from *FileAccessError*.'
+constructor:
+  syntax: 'InlineImageAccessError(status: int, actor: Literal[''app'', ''agentic_user'']
+    | None = None, details: str | None = None)'
+  parameters:
+  - name: status
+    isRequired: true
+  - name: actor
+    defaultValue: None
+  - name: details
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.apps.InlineImageAccessError.actor
+  name: actor
+  summary: The identity the fetch was attempted as.
+  signature: 'actor: Literal[''app'', ''agentic_user''] | None'
+- uid: microsoft_teams.apps.InlineImageAccessError.details
+  name: details
+  summary: The service's message, verbatim and truncated, when present.
+  signature: 'details: str | None'
+- uid: microsoft_teams.apps.InlineImageAccessError.status
+  name: status
+  summary: '*401* means the token itself was rejected; *403* means the identity is
+    not allowed to read the image.'
+  signature: 'status: int'

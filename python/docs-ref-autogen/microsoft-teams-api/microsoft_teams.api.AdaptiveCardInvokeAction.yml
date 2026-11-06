@@ -19,8 +19,8 @@ summary: 'Defines the structure that arrives in the Activity.Value.Action for In
 
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
-  syntax: 'AdaptiveCardInvokeAction(*, type: Literal[''Action.Execute'', ''Action.Submit''],
-    id: str | None = None, verb: str | None = None, data: Dict[str, Any], **extra_data:
+  syntax: 'AdaptiveCardInvokeAction(*, type: Literal[''Action.Execute'', ''Action.Submit'']
+    | str, id: str | None = None, verb: str | None = None, data: Dict[str, Any], **extra_data:
     Any)'
   keywordOnlyParameters:
   - name: type
@@ -47,12 +47,11 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.AdaptiveCardInvokeAction.type
   name: type
   summary: The Type of this Adaptive Card Invoke Action.
-  signature: 'type: Literal[''Action.Execute'', ''Action.Submit'']'
+  signature: 'type: Literal[''Action.Execute'', ''Action.Submit''] | str'
 - uid: microsoft_teams.api.AdaptiveCardInvokeAction.verb
   name: verb
   summary: The verb of this adaptive card action invoke.

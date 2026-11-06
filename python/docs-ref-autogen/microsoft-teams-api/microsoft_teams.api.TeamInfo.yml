@@ -20,8 +20,8 @@ summary: 'An interface representing TeamInfo.
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
   syntax: 'TeamInfo(*, id: str | None = None, name: str | None = None, teamType: Literal[''standard'',
-    ''sharedChannel'', ''privateChannel''] | None = None, memberCount: int | None
-    = None, channelCount: int | None = None, aadGroupId: str | None = None, **extra_data:
+    ''sharedChannel'', ''privateChannel''] | str | None = None, memberCount: int |
+    None = None, channelCount: int | None = None, aadGroupId: str | None = None, **extra_data:
     Any)'
   keywordOnlyParameters:
   - name: id
@@ -60,8 +60,7 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.TeamInfo.name
   name: name
   summary: Name of team.
@@ -70,4 +69,4 @@ attributes:
   name: team_type
   summary: The type of the team
   signature: 'team_type: Literal[''standard'', ''sharedChannel'', ''privateChannel'']
-    | None'
+    | str | None'

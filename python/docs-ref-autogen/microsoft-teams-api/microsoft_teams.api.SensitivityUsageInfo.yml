@@ -1,0 +1,70 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.SensitivityUsageInfo
+name: SensitivityUsageInfo
+fullName: microsoft_teams.api.SensitivityUsageInfo
+module: microsoft_teams.api
+summary: 'Microsoft Purview sensitivity label information.
+
+  Used both as the message-level label on the root message entity and as a citation''s
+  usage info.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'SensitivityUsageInfo(*, at_type: str = ''CreativeWork'', at_id: str, name:
+    str | None = None, description: str | None = None, position: int | None = None,
+    **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: at_type
+    defaultValue: CreativeWork
+  - name: at_id
+    isRequired: true
+  - name: name
+    defaultValue: None
+  - name: description
+    defaultValue: None
+  - name: position
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.SensitivityUsageInfo.at_id
+  name: at_id
+  summary: 'The Purview sensitivity label ID, a GUID such as *00000000-0000-0000-0000-000000000000*.
+
+    Teams resolves the label''s display name and description from this ID.'
+  signature: 'at_id: str'
+- uid: microsoft_teams.api.SensitivityUsageInfo.at_type
+  name: at_type
+  summary: The schema.org type. Defaults to 'CreativeWork'.
+  signature: 'at_type: str'
+- uid: microsoft_teams.api.SensitivityUsageInfo.description
+  name: description
+  summary: Description of the label.
+  signature: 'description: str | None'
+- uid: microsoft_teams.api.SensitivityUsageInfo.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
+- uid: microsoft_teams.api.SensitivityUsageInfo.name
+  name: name
+  summary: Display name of the label. Used as a fallback when Teams cannot resolve
+    *at_id*.
+  signature: 'name: str | None'
+- uid: microsoft_teams.api.SensitivityUsageInfo.position
+  name: position
+  summary: 'Priority of the label, used to pick the most restrictive label.
+
+    Applies to the message-level label and requires *at_id*.'
+  signature: 'position: int | None'

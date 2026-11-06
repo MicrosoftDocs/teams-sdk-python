@@ -103,6 +103,10 @@ references:
   href: https://docs.python.org/3/builtins/exceptions.html#IOError
   name: IOError
   uid: IOError
+- fullName: ImportCycleError
+  href: https://docs.python.org/3/builtins/exceptions.html#ImportCycleError
+  name: ImportCycleError
+  uid: ImportCycleError
 - fullName: ImportError
   href: https://docs.python.org/3/builtins/exceptions.html#ImportError
   name: ImportError
@@ -403,14 +407,14 @@ references:
   href: https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.NotShareableError
   name: NotShareableError
   uid: concurrent.interpreters.NotShareableError
-- fullName: concurrent.interpreters.QueueEmptyError
-  href: https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.QueueEmptyError
-  name: QueueEmptyError
-  uid: concurrent.interpreters.QueueEmptyError
-- fullName: concurrent.interpreters.QueueFullError
-  href: https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.QueueFullError
-  name: QueueFullError
-  uid: concurrent.interpreters.QueueFullError
+- fullName: concurrent.interpreters.QueueEmpty
+  href: https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.QueueEmpty
+  name: QueueEmpty
+  uid: concurrent.interpreters.QueueEmpty
+- fullName: concurrent.interpreters.QueueFull
+  href: https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.QueueFull
+  name: QueueFull
+  uid: concurrent.interpreters.QueueFull
 - fullName: configparser.DuplicateOptionError
   href: https://docs.python.org/3/library/configparser.html#configparser.DuplicateOptionError
   name: DuplicateOptionError
@@ -715,6 +719,10 @@ references:
   href: https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.readonly
   name: readonly
   uid: imaplib.IMAP4.readonly
+- fullName: importlib.metadata.MetadataNotFound
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.MetadataNotFound
+  name: MetadataNotFound
+  uid: importlib.metadata.MetadataNotFound
 - fullName: importlib.metadata.PackageNotFoundError
   href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.PackageNotFoundError
   name: PackageNotFoundError
@@ -863,6 +871,10 @@ references:
   href: https://docs.python.org/3/library/select.html#select.error
   name: error
   uid: select.error
+- fullName: shelve.ShelveError
+  href: https://docs.python.org/3/library/shelve.html#shelve.ShelveError
+  name: ShelveError
+  uid: shelve.ShelveError
 - fullName: shutil.Error
   href: https://docs.python.org/3/library/shutil.html#shutil.Error
   name: Error
@@ -1107,6 +1119,10 @@ references:
   href: https://docs.python.org/3/library/tomllib.html#tomllib.TOMLDecodeError
   name: TOMLDecodeError
   uid: tomllib.TOMLDecodeError
+- fullName: turtle.TurtleGraphicsError
+  href: https://docs.python.org/3/library/turtle.html#turtle.TurtleGraphicsError
+  name: TurtleGraphicsError
+  uid: turtle.TurtleGraphicsError
 - fullName: unittest.SkipTest
   href: https://docs.python.org/3/library/unittest.html#unittest.SkipTest
   name: SkipTest
@@ -1723,10 +1739,10 @@ references:
   href: https://docs.python.org/3/reference/datamodel.html#codeobject.co_kwonlyargcount
   name: co_kwonlyargcount
   uid: codeobject.co_kwonlyargcount
-- fullName: codeobject.co_lnotab
-  href: https://docs.python.org/3/reference/datamodel.html#codeobject.co_lnotab
-  name: co_lnotab
-  uid: codeobject.co_lnotab
+- fullName: codeobject.co_linetable
+  href: https://docs.python.org/3/reference/datamodel.html#codeobject.co_linetable
+  name: co_linetable
+  uid: codeobject.co_linetable
 - fullName: codeobject.co_name
   href: https://docs.python.org/3/reference/datamodel.html#codeobject.co_name
   name: co_name
@@ -2843,10 +2859,6 @@ references:
   href: https://docs.python.org/3/reference/datamodel.html#frame.f_trace_opcodes
   name: f_trace_opcodes
   uid: frame.f_trace_opcodes
-- fullName: ftplib.FTP_TLS.ssl_version
-  href: https://docs.python.org/3/library/ftplib.html#ftplib.FTP_TLS.ssl_version
-  name: ssl_version
-  uid: ftplib.FTP_TLS.ssl_version
 - fullName: function.__annotate__
   href: https://docs.python.org/3/reference/datamodel.html#function.__annotate__
   name: __annotate__
@@ -2963,6 +2975,10 @@ references:
   href: https://docs.python.org/3/library/http.client.html#http.client.HTTPConnection.blocksize
   name: blocksize
   uid: http.client.HTTPConnection.blocksize
+- fullName: http.client.HTTPConnection.max_response_headers
+  href: https://docs.python.org/3/library/http.client.html#http.client.HTTPConnection.max_response_headers
+  name: max_response_headers
+  uid: http.client.HTTPConnection.max_response_headers
 - fullName: http.client.HTTPResponse.closed
   href: https://docs.python.org/3/library/http.client.html#http.client.HTTPResponse.closed
   name: closed
@@ -3239,10 +3255,6 @@ references:
   href: https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.wfile
   name: wfile
   uid: http.server.BaseHTTPRequestHandler.wfile
-- fullName: http.server.CGIHTTPRequestHandler.cgi_directories
-  href: https://docs.python.org/3/library/http.server.html#http.server.CGIHTTPRequestHandler.cgi_directories
-  name: cgi_directories
-  uid: http.server.CGIHTTPRequestHandler.cgi_directories
 - fullName: http.server.HTTPServer.server_name
   href: https://docs.python.org/3/library/http.server.html#http.server.HTTPServer.server_name
   name: server_name
@@ -3251,10 +3263,18 @@ references:
   href: https://docs.python.org/3/library/http.server.html#http.server.HTTPServer.server_port
   name: server_port
   uid: http.server.HTTPServer.server_port
+- fullName: http.server.SimpleHTTPRequestHandler.default_content_type
+  href: https://docs.python.org/3/library/http.server.html#http.server.SimpleHTTPRequestHandler.default_content_type
+  name: default_content_type
+  uid: http.server.SimpleHTTPRequestHandler.default_content_type
 - fullName: http.server.SimpleHTTPRequestHandler.extensions_map
   href: https://docs.python.org/3/library/http.server.html#http.server.SimpleHTTPRequestHandler.extensions_map
   name: extensions_map
   uid: http.server.SimpleHTTPRequestHandler.extensions_map
+- fullName: http.server.SimpleHTTPRequestHandler.extra_response_headers
+  href: https://docs.python.org/3/library/http.server.html#http.server.SimpleHTTPRequestHandler.extra_response_headers
+  name: extra_response_headers
+  uid: http.server.SimpleHTTPRequestHandler.extra_response_headers
 - fullName: http.server.SimpleHTTPRequestHandler.index_pages
   href: https://docs.python.org/3/library/http.server.html#http.server.SimpleHTTPRequestHandler.index_pages
   name: index_pages
@@ -3355,6 +3375,42 @@ references:
   href: https://docs.python.org/3/library/importlib.html#importlib.machinery.SourcelessFileLoader.path
   name: path
   uid: importlib.machinery.SourcelessFileLoader.path
+- fullName: importlib.metadata.Distribution.entry_points
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.Distribution.entry_points
+  name: entry_points
+  uid: importlib.metadata.Distribution.entry_points
+- fullName: importlib.metadata.Distribution.files
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.Distribution.files
+  name: files
+  uid: importlib.metadata.Distribution.files
+- fullName: importlib.metadata.Distribution.metadata
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.Distribution.metadata
+  name: metadata
+  uid: importlib.metadata.Distribution.metadata
+- fullName: importlib.metadata.Distribution.name
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.Distribution.name
+  name: name
+  uid: importlib.metadata.Distribution.name
+- fullName: importlib.metadata.Distribution.origin
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.Distribution.origin
+  name: origin
+  uid: importlib.metadata.Distribution.origin
+- fullName: importlib.metadata.Distribution.requires
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.Distribution.requires
+  name: requires
+  uid: importlib.metadata.Distribution.requires
+- fullName: importlib.metadata.Distribution.version
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.Distribution.version
+  name: version
+  uid: importlib.metadata.Distribution.version
+- fullName: importlib.metadata.DistributionFinder.Context.name
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.DistributionFinder.Context.name
+  name: name
+  uid: importlib.metadata.DistributionFinder.Context.name
+- fullName: importlib.metadata.DistributionFinder.Context.path
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.DistributionFinder.Context.path
+  name: path
+  uid: importlib.metadata.DistributionFinder.Context.path
 - fullName: importlib.resources.abc.Traversable.name
   href: https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.name
   name: name
@@ -4099,10 +4155,6 @@ references:
   href: https://docs.python.org/3/reference/datamodel.html#module.__annotations__
   name: __annotations__
   uid: module.__annotations__
-- fullName: module.__cached__
-  href: https://docs.python.org/3/reference/datamodel.html#module.__cached__
-  name: __cached__
-  uid: module.__cached__
 - fullName: module.__class__
   href: https://docs.python.org/3/reference/datamodel.html#module.__class__
   name: __class__
@@ -4119,6 +4171,10 @@ references:
   href: https://docs.python.org/3/reference/datamodel.html#module.__file__
   name: __file__
   uid: module.__file__
+- fullName: module.__lazy_modules__
+  href: https://docs.python.org/3/reference/datamodel.html#module.__lazy_modules__
+  name: __lazy_modules__
+  uid: module.__lazy_modules__
 - fullName: module.__loader__
   href: https://docs.python.org/3/reference/datamodel.html#module.__loader__
   name: __loader__
@@ -4487,6 +4543,142 @@ references:
   href: https://docs.python.org/3/library/os.html#os.statvfs_result.f_namemax
   name: f_namemax
   uid: os.statvfs_result.f_namemax
+- fullName: os.statx_result.stx_atime
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_atime
+  name: stx_atime
+  uid: os.statx_result.stx_atime
+- fullName: os.statx_result.stx_atime_ns
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_atime_ns
+  name: stx_atime_ns
+  uid: os.statx_result.stx_atime_ns
+- fullName: os.statx_result.stx_atomic_write_segments_max
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_atomic_write_segments_max
+  name: stx_atomic_write_segments_max
+  uid: os.statx_result.stx_atomic_write_segments_max
+- fullName: os.statx_result.stx_atomic_write_unit_max
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_atomic_write_unit_max
+  name: stx_atomic_write_unit_max
+  uid: os.statx_result.stx_atomic_write_unit_max
+- fullName: os.statx_result.stx_atomic_write_unit_max_opt
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_atomic_write_unit_max_opt
+  name: stx_atomic_write_unit_max_opt
+  uid: os.statx_result.stx_atomic_write_unit_max_opt
+- fullName: os.statx_result.stx_atomic_write_unit_min
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_atomic_write_unit_min
+  name: stx_atomic_write_unit_min
+  uid: os.statx_result.stx_atomic_write_unit_min
+- fullName: os.statx_result.stx_attributes
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_attributes
+  name: stx_attributes
+  uid: os.statx_result.stx_attributes
+- fullName: os.statx_result.stx_attributes_mask
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_attributes_mask
+  name: stx_attributes_mask
+  uid: os.statx_result.stx_attributes_mask
+- fullName: os.statx_result.stx_blksize
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_blksize
+  name: stx_blksize
+  uid: os.statx_result.stx_blksize
+- fullName: os.statx_result.stx_blocks
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_blocks
+  name: stx_blocks
+  uid: os.statx_result.stx_blocks
+- fullName: os.statx_result.stx_btime
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_btime
+  name: stx_btime
+  uid: os.statx_result.stx_btime
+- fullName: os.statx_result.stx_btime_ns
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_btime_ns
+  name: stx_btime_ns
+  uid: os.statx_result.stx_btime_ns
+- fullName: os.statx_result.stx_ctime
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_ctime
+  name: stx_ctime
+  uid: os.statx_result.stx_ctime
+- fullName: os.statx_result.stx_ctime_ns
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_ctime_ns
+  name: stx_ctime_ns
+  uid: os.statx_result.stx_ctime_ns
+- fullName: os.statx_result.stx_dev
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_dev
+  name: stx_dev
+  uid: os.statx_result.stx_dev
+- fullName: os.statx_result.stx_dev_major
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_dev_major
+  name: stx_dev_major
+  uid: os.statx_result.stx_dev_major
+- fullName: os.statx_result.stx_dev_minor
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_dev_minor
+  name: stx_dev_minor
+  uid: os.statx_result.stx_dev_minor
+- fullName: os.statx_result.stx_dio_mem_align
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_dio_mem_align
+  name: stx_dio_mem_align
+  uid: os.statx_result.stx_dio_mem_align
+- fullName: os.statx_result.stx_dio_offset_align
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_dio_offset_align
+  name: stx_dio_offset_align
+  uid: os.statx_result.stx_dio_offset_align
+- fullName: os.statx_result.stx_dio_read_offset_align
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_dio_read_offset_align
+  name: stx_dio_read_offset_align
+  uid: os.statx_result.stx_dio_read_offset_align
+- fullName: os.statx_result.stx_gid
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_gid
+  name: stx_gid
+  uid: os.statx_result.stx_gid
+- fullName: os.statx_result.stx_ino
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_ino
+  name: stx_ino
+  uid: os.statx_result.stx_ino
+- fullName: os.statx_result.stx_mask
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_mask
+  name: stx_mask
+  uid: os.statx_result.stx_mask
+- fullName: os.statx_result.stx_mnt_id
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_mnt_id
+  name: stx_mnt_id
+  uid: os.statx_result.stx_mnt_id
+- fullName: os.statx_result.stx_mode
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_mode
+  name: stx_mode
+  uid: os.statx_result.stx_mode
+- fullName: os.statx_result.stx_mtime
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_mtime
+  name: stx_mtime
+  uid: os.statx_result.stx_mtime
+- fullName: os.statx_result.stx_mtime_ns
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_mtime_ns
+  name: stx_mtime_ns
+  uid: os.statx_result.stx_mtime_ns
+- fullName: os.statx_result.stx_nlink
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_nlink
+  name: stx_nlink
+  uid: os.statx_result.stx_nlink
+- fullName: os.statx_result.stx_rdev
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_rdev
+  name: stx_rdev
+  uid: os.statx_result.stx_rdev
+- fullName: os.statx_result.stx_rdev_major
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_rdev_major
+  name: stx_rdev_major
+  uid: os.statx_result.stx_rdev_major
+- fullName: os.statx_result.stx_rdev_minor
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_rdev_minor
+  name: stx_rdev_minor
+  uid: os.statx_result.stx_rdev_minor
+- fullName: os.statx_result.stx_size
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_size
+  name: stx_size
+  uid: os.statx_result.stx_size
+- fullName: os.statx_result.stx_subvol
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_subvol
+  name: stx_subvol
+  uid: os.statx_result.stx_subvol
+- fullName: os.statx_result.stx_uid
+  href: https://docs.python.org/3/library/os.html#os.statx_result.stx_uid
+  name: stx_uid
+  uid: os.statx_result.stx_uid
 - fullName: os.terminal_size.columns
   href: https://docs.python.org/3/library/os.html#os.terminal_size.columns
   name: columns
@@ -4579,6 +4771,42 @@ references:
   href: https://docs.python.org/3/builtins/functions.html#property.__name__
   name: __name__
   uid: property.__name__
+- fullName: pstats.SortKey.CALLS
+  href: https://docs.python.org/3/library/pstats.html#pstats.SortKey.CALLS
+  name: CALLS
+  uid: pstats.SortKey.CALLS
+- fullName: pstats.SortKey.CUMULATIVE
+  href: https://docs.python.org/3/library/pstats.html#pstats.SortKey.CUMULATIVE
+  name: CUMULATIVE
+  uid: pstats.SortKey.CUMULATIVE
+- fullName: pstats.SortKey.FILENAME
+  href: https://docs.python.org/3/library/pstats.html#pstats.SortKey.FILENAME
+  name: FILENAME
+  uid: pstats.SortKey.FILENAME
+- fullName: pstats.SortKey.LINE
+  href: https://docs.python.org/3/library/pstats.html#pstats.SortKey.LINE
+  name: LINE
+  uid: pstats.SortKey.LINE
+- fullName: pstats.SortKey.NAME
+  href: https://docs.python.org/3/library/pstats.html#pstats.SortKey.NAME
+  name: NAME
+  uid: pstats.SortKey.NAME
+- fullName: pstats.SortKey.NFL
+  href: https://docs.python.org/3/library/pstats.html#pstats.SortKey.NFL
+  name: NFL
+  uid: pstats.SortKey.NFL
+- fullName: pstats.SortKey.PCALLS
+  href: https://docs.python.org/3/library/pstats.html#pstats.SortKey.PCALLS
+  name: PCALLS
+  uid: pstats.SortKey.PCALLS
+- fullName: pstats.SortKey.STDNAME
+  href: https://docs.python.org/3/library/pstats.html#pstats.SortKey.STDNAME
+  name: STDNAME
+  uid: pstats.SortKey.STDNAME
+- fullName: pstats.SortKey.TIME
+  href: https://docs.python.org/3/library/pstats.html#pstats.SortKey.TIME
+  name: TIME
+  uid: pstats.SortKey.TIME
 - fullName: py_compile.PycInvalidationMode.CHECKED_HASH
   href: https://docs.python.org/3/library/py_compile.html#py_compile.PycInvalidationMode.CHECKED_HASH
   name: CHECKED_HASH
@@ -4831,6 +5059,14 @@ references:
   href: https://docs.python.org/3/library/selectors.html#selectors.SelectorKey.fileobj
   name: fileobj
   uid: selectors.SelectorKey.fileobj
+- fullName: sentinel.__module__
+  href: https://docs.python.org/3/builtins/functions.html#sentinel.__module__
+  name: __module__
+  uid: sentinel.__module__
+- fullName: sentinel.__name__
+  href: https://docs.python.org/3/builtins/functions.html#sentinel.__name__
+  name: __name__
+  uid: sentinel.__name__
 - fullName: shlex.shlex.commenters
   href: https://docs.python.org/3/library/shlex.html#shlex.shlex.commenters
   name: commenters
@@ -4907,6 +5143,10 @@ references:
   href: https://docs.python.org/3/builtins/functions.html#slice.stop
   name: stop
   uid: slice.stop
+- fullName: smtplib.SMTP.default_port
+  href: https://docs.python.org/3/library/smtplib.html#smtplib.SMTP.default_port
+  name: default_port
+  uid: smtplib.SMTP.default_port
 - fullName: smtplib.SMTP.does_esmtp
   href: https://docs.python.org/3/library/smtplib.html#smtplib.SMTP.does_esmtp
   name: does_esmtp
@@ -4935,6 +5175,10 @@ references:
   href: https://docs.python.org/3/library/smtplib.html#smtplib.SMTPResponseException.smtp_error
   name: smtp_error
   uid: smtplib.SMTPResponseException.smtp_error
+- fullName: smtplib.SMTP_SSL.default_port
+  href: https://docs.python.org/3/library/smtplib.html#smtplib.SMTP_SSL.default_port
+  name: default_port
+  uid: smtplib.SMTP_SSL.default_port
 - fullName: socket.socket.family
   href: https://docs.python.org/3/library/socket.html#socket.socket.family
   name: family
@@ -5427,6 +5671,22 @@ references:
   href: https://docs.python.org/3/library/sys.html#sys._emscripten_info.shared_memory
   name: shared_memory
   uid: sys._emscripten_info.shared_memory
+- fullName: sys.abi_info.byteorder
+  href: https://docs.python.org/3/library/sys.html#sys.abi_info.byteorder
+  name: byteorder
+  uid: sys.abi_info.byteorder
+- fullName: sys.abi_info.debug
+  href: https://docs.python.org/3/library/sys.html#sys.abi_info.debug
+  name: debug
+  uid: sys.abi_info.debug
+- fullName: sys.abi_info.free_threaded
+  href: https://docs.python.org/3/library/sys.html#sys.abi_info.free_threaded
+  name: free_threaded
+  uid: sys.abi_info.free_threaded
+- fullName: sys.abi_info.pointer_bits
+  href: https://docs.python.org/3/library/sys.html#sys.abi_info.pointer_bits
+  name: pointer_bits
+  uid: sys.abi_info.pointer_bits
 - fullName: sys.flags.bytes_warning
   href: https://docs.python.org/3/library/sys.html#sys.flags.bytes_warning
   name: bytes_warning
@@ -5475,6 +5735,10 @@ references:
   href: https://docs.python.org/3/library/sys.html#sys.flags.isolated
   name: isolated
   uid: sys.flags.isolated
+- fullName: sys.flags.lazy_imports
+  href: https://docs.python.org/3/library/sys.html#sys.flags.lazy_imports
+  name: lazy_imports
+  uid: sys.flags.lazy_imports
 - fullName: sys.flags.no_site
   href: https://docs.python.org/3/library/sys.html#sys.flags.no_site
   name: no_site
@@ -5707,6 +5971,10 @@ references:
   href: https://docs.python.org/3/library/tempfile.html#tempfile.TemporaryDirectory.name
   name: name
   uid: tempfile.TemporaryDirectory.name
+- fullName: test.support.warnings_helper.WarningsRecorder.warnings
+  href: https://docs.python.org/3/library/test.html#test.support.warnings_helper.WarningsRecorder.warnings
+  name: warnings
+  uid: test.support.warnings_helper.WarningsRecorder.warnings
 - fullName: textwrap.TextWrapper.break_long_words
   href: https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.break_long_words
   name: break_long_words
@@ -5835,6 +6103,10 @@ references:
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Event.delta
   name: delta
   uid: tkinter.Event.delta
+- fullName: tkinter.Event.detail
+  href: https://docs.python.org/3/library/tkinter.html#tkinter.Event.detail
+  name: detail
+  uid: tkinter.Event.detail
 - fullName: tkinter.Event.focus
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Event.focus
   name: focus
@@ -5879,6 +6151,10 @@ references:
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Event.type
   name: type
   uid: tkinter.Event.type
+- fullName: tkinter.Event.user_data
+  href: https://docs.python.org/3/library/tkinter.html#tkinter.Event.user_data
+  name: user_data
+  uid: tkinter.Event.user_data
 - fullName: tkinter.Event.widget
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Event.widget
   name: widget
@@ -5927,6 +6203,30 @@ references:
   href: https://docs.python.org/3/library/dialog.html#tkinter.simpledialog.Dialog.result
   name: result
   uid: tkinter.simpledialog.Dialog.result
+- fullName: tokenize.TokenInfo.end
+  href: https://docs.python.org/3/library/tokenize.html#tokenize.TokenInfo.end
+  name: end
+  uid: tokenize.TokenInfo.end
+- fullName: tokenize.TokenInfo.exact_type
+  href: https://docs.python.org/3/library/tokenize.html#tokenize.TokenInfo.exact_type
+  name: exact_type
+  uid: tokenize.TokenInfo.exact_type
+- fullName: tokenize.TokenInfo.line
+  href: https://docs.python.org/3/library/tokenize.html#tokenize.TokenInfo.line
+  name: line
+  uid: tokenize.TokenInfo.line
+- fullName: tokenize.TokenInfo.start
+  href: https://docs.python.org/3/library/tokenize.html#tokenize.TokenInfo.start
+  name: start
+  uid: tokenize.TokenInfo.start
+- fullName: tokenize.TokenInfo.string
+  href: https://docs.python.org/3/library/tokenize.html#tokenize.TokenInfo.string
+  name: string
+  uid: tokenize.TokenInfo.string
+- fullName: tokenize.TokenInfo.type
+  href: https://docs.python.org/3/library/tokenize.html#tokenize.TokenInfo.type
+  name: type
+  uid: tokenize.TokenInfo.type
 - fullName: tomllib.TOMLDecodeError.colno
   href: https://docs.python.org/3/library/tomllib.html#tomllib.TOMLDecodeError.colno
   name: colno
@@ -6203,10 +6503,22 @@ references:
   href: https://docs.python.org/3/library/typing.html#typing.NewType.__supertype__
   name: __supertype__
   uid: typing.NewType.__supertype__
+- fullName: typing.ParamSpec.__contravariant__
+  href: https://docs.python.org/3/library/typing.html#typing.ParamSpec.__contravariant__
+  name: __contravariant__
+  uid: typing.ParamSpec.__contravariant__
+- fullName: typing.ParamSpec.__covariant__
+  href: https://docs.python.org/3/library/typing.html#typing.ParamSpec.__covariant__
+  name: __covariant__
+  uid: typing.ParamSpec.__covariant__
 - fullName: typing.ParamSpec.__default__
   href: https://docs.python.org/3/library/typing.html#typing.ParamSpec.__default__
   name: __default__
   uid: typing.ParamSpec.__default__
+- fullName: typing.ParamSpec.__infer_variance__
+  href: https://docs.python.org/3/library/typing.html#typing.ParamSpec.__infer_variance__
+  name: __infer_variance__
+  uid: typing.ParamSpec.__infer_variance__
 - fullName: typing.ParamSpec.__name__
   href: https://docs.python.org/3/library/typing.html#typing.ParamSpec.__name__
   name: __name__
@@ -6227,6 +6539,10 @@ references:
   href: https://docs.python.org/3/library/typing.html#typing.TypeAliasType.__name__
   name: __name__
   uid: typing.TypeAliasType.__name__
+- fullName: typing.TypeAliasType.__qualname__
+  href: https://docs.python.org/3/library/typing.html#typing.TypeAliasType.__qualname__
+  name: __qualname__
+  uid: typing.TypeAliasType.__qualname__
 - fullName: typing.TypeAliasType.__type_params__
   href: https://docs.python.org/3/library/typing.html#typing.TypeAliasType.__type_params__
   name: __type_params__
@@ -6263,14 +6579,34 @@ references:
   href: https://docs.python.org/3/library/typing.html#typing.TypeVar.__name__
   name: __name__
   uid: typing.TypeVar.__name__
+- fullName: typing.TypeVarTuple.__contravariant__
+  href: https://docs.python.org/3/library/typing.html#typing.TypeVarTuple.__contravariant__
+  name: __contravariant__
+  uid: typing.TypeVarTuple.__contravariant__
+- fullName: typing.TypeVarTuple.__covariant__
+  href: https://docs.python.org/3/library/typing.html#typing.TypeVarTuple.__covariant__
+  name: __covariant__
+  uid: typing.TypeVarTuple.__covariant__
 - fullName: typing.TypeVarTuple.__default__
   href: https://docs.python.org/3/library/typing.html#typing.TypeVarTuple.__default__
   name: __default__
   uid: typing.TypeVarTuple.__default__
+- fullName: typing.TypeVarTuple.__infer_variance__
+  href: https://docs.python.org/3/library/typing.html#typing.TypeVarTuple.__infer_variance__
+  name: __infer_variance__
+  uid: typing.TypeVarTuple.__infer_variance__
 - fullName: typing.TypeVarTuple.__name__
   href: https://docs.python.org/3/library/typing.html#typing.TypeVarTuple.__name__
   name: __name__
   uid: typing.TypeVarTuple.__name__
+- fullName: typing.TypedDict.__closed__
+  href: https://docs.python.org/3/library/typing.html#typing.TypedDict.__closed__
+  name: __closed__
+  uid: typing.TypedDict.__closed__
+- fullName: typing.TypedDict.__extra_items__
+  href: https://docs.python.org/3/library/typing.html#typing.TypedDict.__extra_items__
+  name: __extra_items__
+  uid: typing.TypedDict.__extra_items__
 - fullName: typing.TypedDict.__mutable_keys__
   href: https://docs.python.org/3/library/typing.html#typing.TypedDict.__mutable_keys__
   name: __mutable_keys__
@@ -7128,19 +7464,19 @@ references:
   name: register
   uid: abc.ABCMeta.register
 - fullName: agen.__anext__
-  href: https://docs.python.org/3/reference/expressions.html#agen.__anext__
+  href: https://docs.python.org/3/builtins/stdtypes.html#agen.__anext__
   name: __anext__
   uid: agen.__anext__
 - fullName: agen.aclose
-  href: https://docs.python.org/3/reference/expressions.html#agen.aclose
+  href: https://docs.python.org/3/builtins/stdtypes.html#agen.aclose
   name: aclose
   uid: agen.aclose
 - fullName: agen.asend
-  href: https://docs.python.org/3/reference/expressions.html#agen.asend
+  href: https://docs.python.org/3/builtins/stdtypes.html#agen.asend
   name: asend
   uid: agen.asend
 - fullName: agen.athrow
-  href: https://docs.python.org/3/reference/expressions.html#agen.athrow
+  href: https://docs.python.org/3/builtins/stdtypes.html#agen.athrow
   name: athrow
   uid: agen.athrow
 - fullName: annotationlib.ForwardRef.evaluate
@@ -7227,6 +7563,10 @@ references:
   href: https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.set_defaults
   name: set_defaults
   uid: argparse.ArgumentParser.set_defaults
+- fullName: argparse._SubParsersAction.add_parser
+  href: https://docs.python.org/3/library/argparse.html#argparse._SubParsersAction.add_parser
+  name: add_parser
+  uid: argparse._SubParsersAction.add_parser
 - fullName: array.array.append
   href: https://docs.python.org/3/library/array.html#array.array.append
   name: append
@@ -7799,6 +8139,10 @@ references:
   href: https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.uncancel
   name: uncancel
   uid: asyncio.Task.uncancel
+- fullName: asyncio.TaskGroup.cancel
+  href: https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.cancel
+  name: cancel
+  uid: asyncio.TaskGroup.cancel
 - fullName: asyncio.TaskGroup.create_task
   href: https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task
   name: create_task
@@ -8467,6 +8811,10 @@ references:
   href: https://docs.python.org/3/builtins/stdtypes.html#bytearray.swapcase
   name: swapcase
   uid: bytearray.swapcase
+- fullName: bytearray.take_bytes
+  href: https://docs.python.org/3/builtins/stdtypes.html#bytearray.take_bytes
+  name: take_bytes
+  uid: bytearray.take_bytes
 - fullName: bytearray.title
   href: https://docs.python.org/3/builtins/stdtypes.html#bytearray.title
   name: title
@@ -8795,6 +9143,10 @@ references:
   href: https://docs.python.org/3/library/calendar.html#calendar.TextCalendar.prmonth
   name: prmonth
   uid: calendar.TextCalendar.prmonth
+- fullName: calendar.TextCalendar.prweek
+  href: https://docs.python.org/3/library/calendar.html#calendar.TextCalendar.prweek
+  name: prweek
+  uid: calendar.TextCalendar.prweek
 - fullName: calendar.TextCalendar.pryear
   href: https://docs.python.org/3/library/calendar.html#calendar.TextCalendar.pryear
   name: pryear
@@ -8995,6 +9347,10 @@ references:
   href: https://docs.python.org/3/library/collections.html#collections.OrderedDict.popitem
   name: popitem
   uid: collections.OrderedDict.popitem
+- fullName: collections.UserDict.popitem
+  href: https://docs.python.org/3/library/collections.html#collections.UserDict.popitem
+  name: popitem
+  uid: collections.UserDict.popitem
 - fullName: collections.abc.ByteString.index
   href: https://docs.python.org/3/library/collections.abc.html#collections.abc.ByteString.index
   name: index
@@ -9163,6 +9519,10 @@ references:
   href: https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor.terminate_workers
   name: terminate_workers
   uid: concurrent.futures.ProcessPoolExecutor.terminate_workers
+- fullName: concurrent.futures.ThreadPoolExecutor.prepare_context
+  href: https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ThreadPoolExecutor.prepare_context
+  name: prepare_context
+  uid: concurrent.futures.ThreadPoolExecutor.prepare_context
 - fullName: concurrent.interpreters.Interpreter.call
   href: https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.call
   name: call
@@ -9187,6 +9547,34 @@ references:
   href: https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.prepare_main
   name: prepare_main
   uid: concurrent.interpreters.Interpreter.prepare_main
+- fullName: concurrent.interpreters.Queue.empty
+  href: https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Queue.empty
+  name: empty
+  uid: concurrent.interpreters.Queue.empty
+- fullName: concurrent.interpreters.Queue.full
+  href: https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Queue.full
+  name: full
+  uid: concurrent.interpreters.Queue.full
+- fullName: concurrent.interpreters.Queue.get
+  href: https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Queue.get
+  name: get
+  uid: concurrent.interpreters.Queue.get
+- fullName: concurrent.interpreters.Queue.get_nowait
+  href: https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Queue.get_nowait
+  name: get_nowait
+  uid: concurrent.interpreters.Queue.get_nowait
+- fullName: concurrent.interpreters.Queue.put
+  href: https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Queue.put
+  name: put
+  uid: concurrent.interpreters.Queue.put
+- fullName: concurrent.interpreters.Queue.put_nowait
+  href: https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Queue.put_nowait
+  name: put_nowait
+  uid: concurrent.interpreters.Queue.put_nowait
+- fullName: concurrent.interpreters.Queue.qsize
+  href: https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Queue.qsize
+  name: qsize
+  uid: concurrent.interpreters.Queue.qsize
 - fullName: configparser.ConfigParser.add_section
   href: https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.add_section
   name: add_section
@@ -10043,6 +10431,10 @@ references:
   href: https://docs.python.org/3/library/dbm.html#dbm.dumb.dumbdbm.close
   name: close
   uid: dbm.dumb.dumbdbm.close
+- fullName: dbm.dumb.dumbdbm.reorganize
+  href: https://docs.python.org/3/library/dbm.html#dbm.dumb.dumbdbm.reorganize
+  name: reorganize
+  uid: dbm.dumb.dumbdbm.reorganize
 - fullName: dbm.dumb.dumbdbm.sync
   href: https://docs.python.org/3/library/dbm.html#dbm.dumb.dumbdbm.sync
   name: sync
@@ -10075,6 +10467,10 @@ references:
   href: https://docs.python.org/3/library/dbm.html#dbm.sqlite3.sqlite3.close
   name: close
   uid: dbm.sqlite3.sqlite3.close
+- fullName: dbm.sqlite3.sqlite3.reorganize
+  href: https://docs.python.org/3/library/dbm.html#dbm.sqlite3.sqlite3.reorganize
+  name: reorganize
+  uid: dbm.sqlite3.sqlite3.reorganize
 - fullName: decimal.Context.Etiny
   href: https://docs.python.org/3/library/decimal.html#decimal.Context.Etiny
   name: Etiny
@@ -10691,6 +11087,10 @@ references:
   href: https://docs.python.org/3/library/doctest.html#doctest.DocTestRunner.report_failure
   name: report_failure
   uid: doctest.DocTestRunner.report_failure
+- fullName: doctest.DocTestRunner.report_skip
+  href: https://docs.python.org/3/library/doctest.html#doctest.DocTestRunner.report_skip
+  name: report_skip
+  uid: doctest.DocTestRunner.report_skip
 - fullName: doctest.DocTestRunner.report_start
   href: https://docs.python.org/3/library/doctest.html#doctest.DocTestRunner.report_start
   name: report_start
@@ -11495,6 +11895,10 @@ references:
   href: https://docs.python.org/3/reference/datamodel.html#frame.clear
   name: clear
   uid: frame.clear
+- fullName: frozendict.fromkeys
+  href: https://docs.python.org/3/builtins/stdtypes.html#frozendict.fromkeys
+  name: fromkeys
+  uid: frozendict.fromkeys
 - fullName: frozenset.copy
   href: https://docs.python.org/3/builtins/stdtypes.html#frozenset.copy
   name: copy
@@ -11660,19 +12064,19 @@ references:
   name: register
   uid: functools.singledispatch.register
 - fullName: generator.__next__
-  href: https://docs.python.org/3/reference/expressions.html#generator.__next__
+  href: https://docs.python.org/3/builtins/stdtypes.html#generator.__next__
   name: __next__
   uid: generator.__next__
 - fullName: generator.close
-  href: https://docs.python.org/3/reference/expressions.html#generator.close
+  href: https://docs.python.org/3/builtins/stdtypes.html#generator.close
   name: close
   uid: generator.close
 - fullName: generator.send
-  href: https://docs.python.org/3/reference/expressions.html#generator.send
+  href: https://docs.python.org/3/builtins/stdtypes.html#generator.send
   name: send
   uid: generator.send
 - fullName: generator.throw
-  href: https://docs.python.org/3/reference/expressions.html#generator.throw
+  href: https://docs.python.org/3/builtins/stdtypes.html#generator.throw
   name: throw
   uid: generator.throw
 - fullName: gettext.GNUTranslations.gettext
@@ -12147,10 +12551,6 @@ references:
   href: https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler.version_string
   name: version_string
   uid: http.server.BaseHTTPRequestHandler.version_string
-- fullName: http.server.CGIHTTPRequestHandler.do_POST
-  href: https://docs.python.org/3/library/http.server.html#http.server.CGIHTTPRequestHandler.do_POST
-  name: do_POST
-  uid: http.server.CGIHTTPRequestHandler.do_POST
 - fullName: http.server.SimpleHTTPRequestHandler.do_GET
   href: https://docs.python.org/3/library/http.server.html#http.server.SimpleHTTPRequestHandler.do_GET
   name: do_GET
@@ -12383,10 +12783,6 @@ references:
   href: https://docs.python.org/3/library/importlib.html#importlib.abc.FileLoader.get_filename
   name: get_filename
   uid: importlib.abc.FileLoader.get_filename
-- fullName: importlib.abc.FileLoader.load_module
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.FileLoader.load_module
-  name: load_module
-  uid: importlib.abc.FileLoader.load_module
 - fullName: importlib.abc.InspectLoader.exec_module
   href: https://docs.python.org/3/library/importlib.html#importlib.abc.InspectLoader.exec_module
   name: exec_module
@@ -12403,10 +12799,6 @@ references:
   href: https://docs.python.org/3/library/importlib.html#importlib.abc.InspectLoader.is_package
   name: is_package
   uid: importlib.abc.InspectLoader.is_package
-- fullName: importlib.abc.InspectLoader.load_module
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.InspectLoader.load_module
-  name: load_module
-  uid: importlib.abc.InspectLoader.load_module
 - fullName: importlib.abc.InspectLoader.source_to_code
   href: https://docs.python.org/3/library/importlib.html#importlib.abc.InspectLoader.source_to_code
   name: source_to_code
@@ -12419,10 +12811,10 @@ references:
   href: https://docs.python.org/3/library/importlib.html#importlib.abc.Loader.exec_module
   name: exec_module
   uid: importlib.abc.Loader.exec_module
-- fullName: importlib.abc.Loader.load_module
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.Loader.load_module
-  name: load_module
-  uid: importlib.abc.Loader.load_module
+- fullName: importlib.abc.MetaPathFinder.discover
+  href: https://docs.python.org/3/library/importlib.html#importlib.abc.MetaPathFinder.discover
+  name: discover
+  uid: importlib.abc.MetaPathFinder.discover
 - fullName: importlib.abc.MetaPathFinder.find_spec
   href: https://docs.python.org/3/library/importlib.html#importlib.abc.MetaPathFinder.find_spec
   name: find_spec
@@ -12431,6 +12823,10 @@ references:
   href: https://docs.python.org/3/library/importlib.html#importlib.abc.MetaPathFinder.invalidate_caches
   name: invalidate_caches
   uid: importlib.abc.MetaPathFinder.invalidate_caches
+- fullName: importlib.abc.PathEntryFinder.discover
+  href: https://docs.python.org/3/library/importlib.html#importlib.abc.PathEntryFinder.discover
+  name: discover
+  uid: importlib.abc.PathEntryFinder.discover
 - fullName: importlib.abc.PathEntryFinder.find_spec
   href: https://docs.python.org/3/library/importlib.html#importlib.abc.PathEntryFinder.find_spec
   name: find_spec
@@ -12459,10 +12855,6 @@ references:
   href: https://docs.python.org/3/library/importlib.html#importlib.abc.SourceLoader.is_package
   name: is_package
   uid: importlib.abc.SourceLoader.is_package
-- fullName: importlib.abc.SourceLoader.load_module
-  href: https://docs.python.org/3/library/importlib.html#importlib.abc.SourceLoader.load_module
-  name: load_module
-  uid: importlib.abc.SourceLoader.load_module
 - fullName: importlib.abc.SourceLoader.path_mtime
   href: https://docs.python.org/3/library/importlib.html#importlib.abc.SourceLoader.path_mtime
   name: path_mtime
@@ -12523,10 +12915,6 @@ references:
   href: https://docs.python.org/3/library/importlib.html#importlib.machinery.SourceFileLoader.is_package
   name: is_package
   uid: importlib.machinery.SourceFileLoader.is_package
-- fullName: importlib.machinery.SourceFileLoader.load_module
-  href: https://docs.python.org/3/library/importlib.html#importlib.machinery.SourceFileLoader.load_module
-  name: load_module
-  uid: importlib.machinery.SourceFileLoader.load_module
 - fullName: importlib.machinery.SourceFileLoader.path_stats
   href: https://docs.python.org/3/library/importlib.html#importlib.machinery.SourceFileLoader.path_stats
   name: path_stats
@@ -12547,10 +12935,30 @@ references:
   href: https://docs.python.org/3/library/importlib.html#importlib.machinery.SourcelessFileLoader.is_package
   name: is_package
   uid: importlib.machinery.SourcelessFileLoader.is_package
-- fullName: importlib.machinery.SourcelessFileLoader.load_module
-  href: https://docs.python.org/3/library/importlib.html#importlib.machinery.SourcelessFileLoader.load_module
-  name: load_module
-  uid: importlib.machinery.SourcelessFileLoader.load_module
+- fullName: importlib.metadata.Distribution.at
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.Distribution.at
+  name: at
+  uid: importlib.metadata.Distribution.at
+- fullName: importlib.metadata.Distribution.discover
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.Distribution.discover
+  name: discover
+  uid: importlib.metadata.Distribution.discover
+- fullName: importlib.metadata.Distribution.from_name
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.Distribution.from_name
+  name: from_name
+  uid: importlib.metadata.Distribution.from_name
+- fullName: importlib.metadata.Distribution.locate_file
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.Distribution.locate_file
+  name: locate_file
+  uid: importlib.metadata.Distribution.locate_file
+- fullName: importlib.metadata.Distribution.read_text
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.Distribution.read_text
+  name: read_text
+  uid: importlib.metadata.Distribution.read_text
+- fullName: importlib.metadata.PackagePath.locate
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.PackagePath.locate
+  name: locate
+  uid: importlib.metadata.PackagePath.locate
 - fullName: importlib.resources.abc.ResourceReader.contents
   href: https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.ResourceReader.contents
   name: contents
@@ -13975,6 +14383,10 @@ references:
   href: https://docs.python.org/3/library/mmap.html#mmap.mmap.seekable
   name: seekable
   uid: mmap.mmap.seekable
+- fullName: mmap.mmap.set_name
+  href: https://docs.python.org/3/library/mmap.html#mmap.mmap.set_name
+  name: set_name
+  uid: mmap.mmap.set_name
 - fullName: mmap.mmap.size
   href: https://docs.python.org/3/library/mmap.html#mmap.mmap.size
   name: size
@@ -15091,10 +15503,6 @@ references:
   href: https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.is_relative_to
   name: is_relative_to
   uid: pathlib.PurePath.is_relative_to
-- fullName: pathlib.PurePath.is_reserved
-  href: https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.is_reserved
-  name: is_reserved
-  uid: pathlib.PurePath.is_reserved
 - fullName: pathlib.PurePath.joinpath
   href: https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.joinpath
   name: joinpath
@@ -15315,40 +15723,72 @@ references:
   href: https://docs.python.org/3/library/profile.html#profile.Profile.runctx
   name: runctx
   uid: profile.Profile.runctx
+- fullName: profiling.tracing.Profile.create_stats
+  href: https://docs.python.org/3/library/profiling.tracing.html#profiling.tracing.Profile.create_stats
+  name: create_stats
+  uid: profiling.tracing.Profile.create_stats
+- fullName: profiling.tracing.Profile.disable
+  href: https://docs.python.org/3/library/profiling.tracing.html#profiling.tracing.Profile.disable
+  name: disable
+  uid: profiling.tracing.Profile.disable
+- fullName: profiling.tracing.Profile.dump_stats
+  href: https://docs.python.org/3/library/profiling.tracing.html#profiling.tracing.Profile.dump_stats
+  name: dump_stats
+  uid: profiling.tracing.Profile.dump_stats
+- fullName: profiling.tracing.Profile.enable
+  href: https://docs.python.org/3/library/profiling.tracing.html#profiling.tracing.Profile.enable
+  name: enable
+  uid: profiling.tracing.Profile.enable
+- fullName: profiling.tracing.Profile.print_stats
+  href: https://docs.python.org/3/library/profiling.tracing.html#profiling.tracing.Profile.print_stats
+  name: print_stats
+  uid: profiling.tracing.Profile.print_stats
+- fullName: profiling.tracing.Profile.run
+  href: https://docs.python.org/3/library/profiling.tracing.html#profiling.tracing.Profile.run
+  name: run
+  uid: profiling.tracing.Profile.run
+- fullName: profiling.tracing.Profile.runcall
+  href: https://docs.python.org/3/library/profiling.tracing.html#profiling.tracing.Profile.runcall
+  name: runcall
+  uid: profiling.tracing.Profile.runcall
+- fullName: profiling.tracing.Profile.runctx
+  href: https://docs.python.org/3/library/profiling.tracing.html#profiling.tracing.Profile.runctx
+  name: runctx
+  uid: profiling.tracing.Profile.runctx
 - fullName: pstats.Stats.add
-  href: https://docs.python.org/3/library/profile.html#pstats.Stats.add
+  href: https://docs.python.org/3/library/pstats.html#pstats.Stats.add
   name: add
   uid: pstats.Stats.add
 - fullName: pstats.Stats.dump_stats
-  href: https://docs.python.org/3/library/profile.html#pstats.Stats.dump_stats
+  href: https://docs.python.org/3/library/pstats.html#pstats.Stats.dump_stats
   name: dump_stats
   uid: pstats.Stats.dump_stats
 - fullName: pstats.Stats.get_stats_profile
-  href: https://docs.python.org/3/library/profile.html#pstats.Stats.get_stats_profile
+  href: https://docs.python.org/3/library/pstats.html#pstats.Stats.get_stats_profile
   name: get_stats_profile
   uid: pstats.Stats.get_stats_profile
 - fullName: pstats.Stats.print_callees
-  href: https://docs.python.org/3/library/profile.html#pstats.Stats.print_callees
+  href: https://docs.python.org/3/library/pstats.html#pstats.Stats.print_callees
   name: print_callees
   uid: pstats.Stats.print_callees
 - fullName: pstats.Stats.print_callers
-  href: https://docs.python.org/3/library/profile.html#pstats.Stats.print_callers
+  href: https://docs.python.org/3/library/pstats.html#pstats.Stats.print_callers
   name: print_callers
   uid: pstats.Stats.print_callers
 - fullName: pstats.Stats.print_stats
-  href: https://docs.python.org/3/library/profile.html#pstats.Stats.print_stats
+  href: https://docs.python.org/3/library/pstats.html#pstats.Stats.print_stats
   name: print_stats
   uid: pstats.Stats.print_stats
 - fullName: pstats.Stats.reverse_order
-  href: https://docs.python.org/3/library/profile.html#pstats.Stats.reverse_order
+  href: https://docs.python.org/3/library/pstats.html#pstats.Stats.reverse_order
   name: reverse_order
   uid: pstats.Stats.reverse_order
 - fullName: pstats.Stats.sort_stats
-  href: https://docs.python.org/3/library/profile.html#pstats.Stats.sort_stats
+  href: https://docs.python.org/3/library/pstats.html#pstats.Stats.sort_stats
   name: sort_stats
   uid: pstats.Stats.sort_stats
 - fullName: pstats.Stats.strip_dirs
-  href: https://docs.python.org/3/library/profile.html#pstats.Stats.strip_dirs
+  href: https://docs.python.org/3/library/pstats.html#pstats.Stats.strip_dirs
   name: strip_dirs
   uid: pstats.Stats.strip_dirs
 - fullName: queue.Queue.empty
@@ -15495,6 +15935,10 @@ references:
   href: https://docs.python.org/3/library/re.html#re.Pattern.match
   name: match
   uid: re.Pattern.match
+- fullName: re.Pattern.prefixmatch
+  href: https://docs.python.org/3/library/re.html#re.Pattern.prefixmatch
+  name: prefixmatch
+  uid: re.Pattern.prefixmatch
 - fullName: re.Pattern.search
   href: https://docs.python.org/3/library/re.html#re.Pattern.search
   name: search
@@ -15779,6 +16223,10 @@ references:
   href: https://docs.python.org/3/library/shelve.html#shelve.Shelf.close
   name: close
   uid: shelve.Shelf.close
+- fullName: shelve.Shelf.reorganize
+  href: https://docs.python.org/3/library/shelve.html#shelve.Shelf.reorganize
+  name: reorganize
+  uid: shelve.Shelf.reorganize
 - fullName: shelve.Shelf.sync
   href: https://docs.python.org/3/library/shelve.html#shelve.Shelf.sync
   name: sync
@@ -15811,6 +16259,22 @@ references:
   href: https://docs.python.org/3/library/shlex.html#shlex.shlex.sourcehook
   name: sourcehook
   uid: shlex.shlex.sourcehook
+- fullName: site.StartupState.addsitedir
+  href: https://docs.python.org/3/library/site.html#site.StartupState.addsitedir
+  name: addsitedir
+  uid: site.StartupState.addsitedir
+- fullName: site.StartupState.addsitepackages
+  href: https://docs.python.org/3/library/site.html#site.StartupState.addsitepackages
+  name: addsitepackages
+  uid: site.StartupState.addsitepackages
+- fullName: site.StartupState.addusersitepackages
+  href: https://docs.python.org/3/library/site.html#site.StartupState.addusersitepackages
+  name: addusersitepackages
+  uid: site.StartupState.addusersitepackages
+- fullName: site.StartupState.process
+  href: https://docs.python.org/3/library/site.html#site.StartupState.process
+  name: process
+  uid: site.StartupState.process
 - fullName: slice.indices
   href: https://docs.python.org/3/reference/datamodel.html#slice.indices
   name: indices
@@ -16267,6 +16731,10 @@ references:
   href: https://docs.python.org/3/library/ssl.html#ssl.SSLContext.get_ciphers
   name: get_ciphers
   uid: ssl.SSLContext.get_ciphers
+- fullName: ssl.SSLContext.get_groups
+  href: https://docs.python.org/3/library/ssl.html#ssl.SSLContext.get_groups
+  name: get_groups
+  uid: ssl.SSLContext.get_groups
 - fullName: ssl.SSLContext.load_cert_chain
   href: https://docs.python.org/3/library/ssl.html#ssl.SSLContext.load_cert_chain
   name: load_cert_chain
@@ -16295,6 +16763,14 @@ references:
   href: https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_ciphers
   name: set_ciphers
   uid: ssl.SSLContext.set_ciphers
+- fullName: ssl.SSLContext.set_ciphersuites
+  href: https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_ciphersuites
+  name: set_ciphersuites
+  uid: ssl.SSLContext.set_ciphersuites
+- fullName: ssl.SSLContext.set_client_sigalgs
+  href: https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_client_sigalgs
+  name: set_client_sigalgs
+  uid: ssl.SSLContext.set_client_sigalgs
 - fullName: ssl.SSLContext.set_default_verify_paths
   href: https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_default_verify_paths
   name: set_default_verify_paths
@@ -16303,6 +16779,10 @@ references:
   href: https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_ecdh_curve
   name: set_ecdh_curve
   uid: ssl.SSLContext.set_ecdh_curve
+- fullName: ssl.SSLContext.set_groups
+  href: https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_groups
+  name: set_groups
+  uid: ssl.SSLContext.set_groups
 - fullName: ssl.SSLContext.set_npn_protocols
   href: https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_npn_protocols
   name: set_npn_protocols
@@ -16315,6 +16795,10 @@ references:
   href: https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_psk_server_callback
   name: set_psk_server_callback
   uid: ssl.SSLContext.set_psk_server_callback
+- fullName: ssl.SSLContext.set_server_sigalgs
+  href: https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_server_sigalgs
+  name: set_server_sigalgs
+  uid: ssl.SSLContext.set_server_sigalgs
 - fullName: ssl.SSLContext.set_servername_callback
   href: https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_servername_callback
   name: set_servername_callback
@@ -16331,6 +16815,10 @@ references:
   href: https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.cipher
   name: cipher
   uid: ssl.SSLSocket.cipher
+- fullName: ssl.SSLSocket.client_sigalg
+  href: https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.client_sigalg
+  name: client_sigalg
+  uid: ssl.SSLSocket.client_sigalg
 - fullName: ssl.SSLSocket.compression
   href: https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.compression
   name: compression
@@ -16355,6 +16843,10 @@ references:
   href: https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.getpeercert
   name: getpeercert
   uid: ssl.SSLSocket.getpeercert
+- fullName: ssl.SSLSocket.group
+  href: https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.group
+  name: group
+  uid: ssl.SSLSocket.group
 - fullName: ssl.SSLSocket.pending
   href: https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.pending
   name: pending
@@ -16371,6 +16863,10 @@ references:
   href: https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.selected_npn_protocol
   name: selected_npn_protocol
   uid: ssl.SSLSocket.selected_npn_protocol
+- fullName: ssl.SSLSocket.server_sigalg
+  href: https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.server_sigalg
+  name: server_sigalg
+  uid: ssl.SSLSocket.server_sigalg
 - fullName: ssl.SSLSocket.shared_ciphers
   href: https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.shared_ciphers
   name: shared_ciphers
@@ -16719,6 +17215,10 @@ references:
   href: https://docs.python.org/3/library/symtable.html#symtable.Class.get_methods
   name: get_methods
   uid: symtable.Class.get_methods
+- fullName: symtable.Function.get_cells
+  href: https://docs.python.org/3/library/symtable.html#symtable.Function.get_cells
+  name: get_cells
+  uid: symtable.Function.get_cells
 - fullName: symtable.Function.get_frees
   href: https://docs.python.org/3/library/symtable.html#symtable.Function.get_frees
   name: get_frees
@@ -16759,6 +17259,10 @@ references:
   href: https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_assigned
   name: is_assigned
   uid: symtable.Symbol.is_assigned
+- fullName: symtable.Symbol.is_cell
+  href: https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_cell
+  name: is_cell
+  uid: symtable.Symbol.is_cell
 - fullName: symtable.Symbol.is_comp_cell
   href: https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_comp_cell
   name: is_comp_cell
@@ -17003,6 +17507,10 @@ references:
   href: https://docs.python.org/3/library/test.html#test.support.os_helper.EnvironmentVarGuard.unset
   name: unset
   uid: test.support.os_helper.EnvironmentVarGuard.unset
+- fullName: test.support.warnings_helper.WarningsRecorder.reset
+  href: https://docs.python.org/3/library/test.html#test.support.warnings_helper.WarningsRecorder.reset
+  name: reset
+  uid: test.support.warnings_helper.WarningsRecorder.reset
 - fullName: textwrap.TextWrapper.fill
   href: https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper.fill
   name: fill
@@ -17527,6 +18035,10 @@ references:
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Grid.configure
   name: configure
   uid: tkinter.Grid.configure
+- fullName: tkinter.Grid.content
+  href: https://docs.python.org/3/library/tkinter.html#tkinter.Grid.content
+  name: content
+  uid: tkinter.Grid.content
 - fullName: tkinter.Grid.forget
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Grid.forget
   name: forget
@@ -17547,6 +18059,10 @@ references:
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Grid.grid_configure
   name: grid_configure
   uid: tkinter.Grid.grid_configure
+- fullName: tkinter.Grid.grid_content
+  href: https://docs.python.org/3/library/tkinter.html#tkinter.Grid.grid_content
+  name: grid_content
+  uid: tkinter.Grid.grid_content
 - fullName: tkinter.Grid.grid_forget
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Grid.grid_forget
   name: grid_forget
@@ -17923,6 +18439,10 @@ references:
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Misc.configure
   name: configure
   uid: tkinter.Misc.configure
+- fullName: tkinter.Misc.content
+  href: https://docs.python.org/3/library/tkinter.html#tkinter.Misc.content
+  name: content
+  uid: tkinter.Misc.content
 - fullName: tkinter.Misc.deletecommand
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Misc.deletecommand
   name: deletecommand
@@ -18019,6 +18539,10 @@ references:
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Misc.grid_columnconfigure
   name: grid_columnconfigure
   uid: tkinter.Misc.grid_columnconfigure
+- fullName: tkinter.Misc.grid_content
+  href: https://docs.python.org/3/library/tkinter.html#tkinter.Misc.grid_content
+  name: grid_content
+  uid: tkinter.Misc.grid_content
 - fullName: tkinter.Misc.grid_location
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Misc.grid_location
   name: grid_location
@@ -18087,6 +18611,10 @@ references:
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Misc.option_readfile
   name: option_readfile
   uid: tkinter.Misc.option_readfile
+- fullName: tkinter.Misc.pack_content
+  href: https://docs.python.org/3/library/tkinter.html#tkinter.Misc.pack_content
+  name: pack_content
+  uid: tkinter.Misc.pack_content
 - fullName: tkinter.Misc.pack_propagate
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Misc.pack_propagate
   name: pack_propagate
@@ -18095,6 +18623,10 @@ references:
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Misc.pack_slaves
   name: pack_slaves
   uid: tkinter.Misc.pack_slaves
+- fullName: tkinter.Misc.place_content
+  href: https://docs.python.org/3/library/tkinter.html#tkinter.Misc.place_content
+  name: place_content
+  uid: tkinter.Misc.place_content
 - fullName: tkinter.Misc.place_slaves
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Misc.place_slaves
   name: place_slaves
@@ -18455,6 +18987,10 @@ references:
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Pack.configure
   name: configure
   uid: tkinter.Pack.configure
+- fullName: tkinter.Pack.content
+  href: https://docs.python.org/3/library/tkinter.html#tkinter.Pack.content
+  name: content
+  uid: tkinter.Pack.content
 - fullName: tkinter.Pack.forget
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Pack.forget
   name: forget
@@ -18471,6 +19007,10 @@ references:
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Pack.pack_configure
   name: pack_configure
   uid: tkinter.Pack.pack_configure
+- fullName: tkinter.Pack.pack_content
+  href: https://docs.python.org/3/library/tkinter.html#tkinter.Pack.pack_content
+  name: pack_content
+  uid: tkinter.Pack.pack_content
 - fullName: tkinter.Pack.pack_forget
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Pack.pack_forget
   name: pack_forget
@@ -18619,6 +19159,10 @@ references:
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Place.configure
   name: configure
   uid: tkinter.Place.configure
+- fullName: tkinter.Place.content
+  href: https://docs.python.org/3/library/tkinter.html#tkinter.Place.content
+  name: content
+  uid: tkinter.Place.content
 - fullName: tkinter.Place.forget
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Place.forget
   name: forget
@@ -18635,6 +19179,10 @@ references:
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Place.place_configure
   name: place_configure
   uid: tkinter.Place.place_configure
+- fullName: tkinter.Place.place_content
+  href: https://docs.python.org/3/library/tkinter.html#tkinter.Place.place_content
+  name: place_content
+  uid: tkinter.Place.place_content
 - fullName: tkinter.Place.place_forget
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Place.place_forget
   name: place_forget
@@ -18915,6 +19463,10 @@ references:
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Text.search
   name: search
   uid: tkinter.Text.search
+- fullName: tkinter.Text.search_all
+  href: https://docs.python.org/3/library/tkinter.html#tkinter.Text.search_all
+  name: search_all
+  uid: tkinter.Text.search_all
 - fullName: tkinter.Text.see
   href: https://docs.python.org/3/library/tkinter.html#tkinter.Text.see
   name: see
@@ -19915,6 +20467,10 @@ references:
   href: https://docs.python.org/3/reference/datamodel.html#type.mro
   name: mro
   uid: type.mro
+- fullName: types.LazyImportType.resolve
+  href: https://docs.python.org/3/library/types.html#types.LazyImportType.resolve
+  name: resolve
+  uid: types.LazyImportType.resolve
 - fullName: types.MappingProxyType.copy
   href: https://docs.python.org/3/library/types.html#types.MappingProxyType.copy
   name: copy
@@ -20723,18 +21279,14 @@ references:
   href: https://docs.python.org/3/library/wave.html#wave.Wave_read.getcomptype
   name: getcomptype
   uid: wave.Wave_read.getcomptype
+- fullName: wave.Wave_read.getformat
+  href: https://docs.python.org/3/library/wave.html#wave.Wave_read.getformat
+  name: getformat
+  uid: wave.Wave_read.getformat
 - fullName: wave.Wave_read.getframerate
   href: https://docs.python.org/3/library/wave.html#wave.Wave_read.getframerate
   name: getframerate
   uid: wave.Wave_read.getframerate
-- fullName: wave.Wave_read.getmark
-  href: https://docs.python.org/3/library/wave.html#wave.Wave_read.getmark
-  name: getmark
-  uid: wave.Wave_read.getmark
-- fullName: wave.Wave_read.getmarkers
-  href: https://docs.python.org/3/library/wave.html#wave.Wave_read.getmarkers
-  name: getmarkers
-  uid: wave.Wave_read.getmarkers
 - fullName: wave.Wave_read.getnchannels
   href: https://docs.python.org/3/library/wave.html#wave.Wave_read.getnchannels
   name: getnchannels
@@ -20779,6 +21331,10 @@ references:
   href: https://docs.python.org/3/library/wave.html#wave.Wave_write.getcomptype
   name: getcomptype
   uid: wave.Wave_write.getcomptype
+- fullName: wave.Wave_write.getformat
+  href: https://docs.python.org/3/library/wave.html#wave.Wave_write.getformat
+  name: getformat
+  uid: wave.Wave_write.getformat
 - fullName: wave.Wave_write.getframerate
   href: https://docs.python.org/3/library/wave.html#wave.Wave_write.getframerate
   name: getframerate
@@ -20803,6 +21359,10 @@ references:
   href: https://docs.python.org/3/library/wave.html#wave.Wave_write.setcomptype
   name: setcomptype
   uid: wave.Wave_write.setcomptype
+- fullName: wave.Wave_write.setformat
+  href: https://docs.python.org/3/library/wave.html#wave.Wave_write.setformat
+  name: setformat
+  uid: wave.Wave_write.setformat
 - fullName: wave.Wave_write.setframerate
   href: https://docs.python.org/3/library/wave.html#wave.Wave_write.setframerate
   name: setframerate
@@ -22047,10 +22607,6 @@ references:
   href: https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.is_package
   name: is_package
   uid: zipimport.zipimporter.is_package
-- fullName: zipimport.zipimporter.load_module
-  href: https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module
-  name: load_module
-  uid: zipimport.zipimporter.load_module
 - fullName: zlib.Compress.compress
   href: https://docs.python.org/3/library/zlib.html#zlib.Compress.compress
   name: compress
@@ -22195,6 +22751,46 @@ references:
   href: https://docs.python.org/3/library/asyncio-subprocess.html#asyncio.subprocess.STDOUT
   name: STDOUT
   uid: asyncio.subprocess.STDOUT
+- fullName: binascii.ASCII85_ALPHABET
+  href: https://docs.python.org/3/library/binascii.html#binascii.ASCII85_ALPHABET
+  name: ASCII85_ALPHABET
+  uid: binascii.ASCII85_ALPHABET
+- fullName: binascii.BASE32HEX_ALPHABET
+  href: https://docs.python.org/3/library/binascii.html#binascii.BASE32HEX_ALPHABET
+  name: BASE32HEX_ALPHABET
+  uid: binascii.BASE32HEX_ALPHABET
+- fullName: binascii.BASE32_ALPHABET
+  href: https://docs.python.org/3/library/binascii.html#binascii.BASE32_ALPHABET
+  name: BASE32_ALPHABET
+  uid: binascii.BASE32_ALPHABET
+- fullName: binascii.BASE64_ALPHABET
+  href: https://docs.python.org/3/library/binascii.html#binascii.BASE64_ALPHABET
+  name: BASE64_ALPHABET
+  uid: binascii.BASE64_ALPHABET
+- fullName: binascii.BASE85_ALPHABET
+  href: https://docs.python.org/3/library/binascii.html#binascii.BASE85_ALPHABET
+  name: BASE85_ALPHABET
+  uid: binascii.BASE85_ALPHABET
+- fullName: binascii.BINHEX_ALPHABET
+  href: https://docs.python.org/3/library/binascii.html#binascii.BINHEX_ALPHABET
+  name: BINHEX_ALPHABET
+  uid: binascii.BINHEX_ALPHABET
+- fullName: binascii.CRYPT_ALPHABET
+  href: https://docs.python.org/3/library/binascii.html#binascii.CRYPT_ALPHABET
+  name: CRYPT_ALPHABET
+  uid: binascii.CRYPT_ALPHABET
+- fullName: binascii.URLSAFE_BASE64_ALPHABET
+  href: https://docs.python.org/3/library/binascii.html#binascii.URLSAFE_BASE64_ALPHABET
+  name: URLSAFE_BASE64_ALPHABET
+  uid: binascii.URLSAFE_BASE64_ALPHABET
+- fullName: binascii.UU_ALPHABET
+  href: https://docs.python.org/3/library/binascii.html#binascii.UU_ALPHABET
+  name: UU_ALPHABET
+  uid: binascii.UU_ALPHABET
+- fullName: binascii.Z85_ALPHABET
+  href: https://docs.python.org/3/library/binascii.html#binascii.Z85_ALPHABET
+  name: Z85_ALPHABET
+  uid: binascii.Z85_ALPHABET
 - fullName: calendar.APRIL
   href: https://docs.python.org/3/library/calendar.html#calendar.APRIL
   name: APRIL
@@ -22287,6 +22883,14 @@ references:
   href: https://docs.python.org/3/library/calendar.html#calendar.month_name
   name: month_name
   uid: calendar.month_name
+- fullName: calendar.standalone_month_abbr
+  href: https://docs.python.org/3/library/calendar.html#calendar.standalone_month_abbr
+  name: standalone_month_abbr
+  uid: calendar.standalone_month_abbr
+- fullName: calendar.standalone_month_name
+  href: https://docs.python.org/3/library/calendar.html#calendar.standalone_month_name
+  name: standalone_month_name
+  uid: calendar.standalone_month_name
 - fullName: cmath.e
   href: https://docs.python.org/3/library/cmath.html#cmath.e
   name: e
@@ -22439,6 +23043,10 @@ references:
   href: https://docs.python.org/3/library/ctypes.html#ctypes.windll
   name: windll
   uid: ctypes.windll
+- fullName: ctypes.wintypes.MAX_PATH
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.MAX_PATH
+  name: MAX_PATH
+  uid: ctypes.wintypes.MAX_PATH
 - fullName: curses.ACS_BBSS
   href: https://docs.python.org/3/library/curses.html#curses.ACS_BBSS
   name: ACS_BBSS
@@ -23411,6 +24019,10 @@ references:
   href: https://docs.python.org/3/library/decimal.html#decimal.ROUND_UP
   name: ROUND_UP
   uid: decimal.ROUND_UP
+- fullName: decimal.SPEC_VERSION
+  href: https://docs.python.org/3/library/decimal.html#decimal.SPEC_VERSION
+  name: SPEC_VERSION
+  uid: decimal.SPEC_VERSION
 - fullName: dis.Bytecode.codeobj
   href: https://docs.python.org/3/library/dis.html#dis.Bytecode.codeobj
   name: codeobj
@@ -24895,6 +25507,26 @@ references:
   href: https://docs.python.org/3/library/mimetypes.html#mimetypes.types_map
   name: types_map
   uid: mimetypes.types_map
+- fullName: mmap.ACCESS_COPY
+  href: https://docs.python.org/3/library/mmap.html#mmap.ACCESS_COPY
+  name: ACCESS_COPY
+  uid: mmap.ACCESS_COPY
+- fullName: mmap.ACCESS_DEFAULT
+  href: https://docs.python.org/3/library/mmap.html#mmap.ACCESS_DEFAULT
+  name: ACCESS_DEFAULT
+  uid: mmap.ACCESS_DEFAULT
+- fullName: mmap.ACCESS_READ
+  href: https://docs.python.org/3/library/mmap.html#mmap.ACCESS_READ
+  name: ACCESS_READ
+  uid: mmap.ACCESS_READ
+- fullName: mmap.ACCESS_WRITE
+  href: https://docs.python.org/3/library/mmap.html#mmap.ACCESS_WRITE
+  name: ACCESS_WRITE
+  uid: mmap.ACCESS_WRITE
+- fullName: mmap.ALLOCATIONGRANULARITY
+  href: https://docs.python.org/3/library/mmap.html#mmap.ALLOCATIONGRANULARITY
+  name: ALLOCATIONGRANULARITY
+  uid: mmap.ALLOCATIONGRANULARITY
 - fullName: mmap.MADV_AUTOSYNC
   href: https://docs.python.org/3/library/mmap.html#mmap.MADV_AUTOSYNC
   name: MADV_AUTOSYNC
@@ -25075,6 +25707,34 @@ references:
   href: https://docs.python.org/3/library/mmap.html#mmap.MAP_UNIX03
   name: MAP_UNIX03
   uid: mmap.MAP_UNIX03
+- fullName: mmap.MS_ASYNC
+  href: https://docs.python.org/3/library/mmap.html#mmap.MS_ASYNC
+  name: MS_ASYNC
+  uid: mmap.MS_ASYNC
+- fullName: mmap.MS_INVALIDATE
+  href: https://docs.python.org/3/library/mmap.html#mmap.MS_INVALIDATE
+  name: MS_INVALIDATE
+  uid: mmap.MS_INVALIDATE
+- fullName: mmap.MS_SYNC
+  href: https://docs.python.org/3/library/mmap.html#mmap.MS_SYNC
+  name: MS_SYNC
+  uid: mmap.MS_SYNC
+- fullName: mmap.PAGESIZE
+  href: https://docs.python.org/3/library/mmap.html#mmap.PAGESIZE
+  name: PAGESIZE
+  uid: mmap.PAGESIZE
+- fullName: mmap.PROT_EXEC
+  href: https://docs.python.org/3/library/mmap.html#mmap.PROT_EXEC
+  name: PROT_EXEC
+  uid: mmap.PROT_EXEC
+- fullName: mmap.PROT_READ
+  href: https://docs.python.org/3/library/mmap.html#mmap.PROT_READ
+  name: PROT_READ
+  uid: mmap.PROT_READ
+- fullName: mmap.PROT_WRITE
+  href: https://docs.python.org/3/library/mmap.html#mmap.PROT_WRITE
+  name: PROT_WRITE
+  uid: mmap.PROT_WRITE
 - fullName: msvcrt.CRTDBG_MODE_DEBUG
   href: https://docs.python.org/3/library/msvcrt.html#msvcrt.CRTDBG_MODE_DEBUG
   name: CRTDBG_MODE_DEBUG
@@ -25159,6 +25819,22 @@ references:
   href: https://docs.python.org/3/reference/datamodel.html#object.__slots__
   name: __slots__
   uid: object.__slots__
+- fullName: os.AT_NO_AUTOMOUNT
+  href: https://docs.python.org/3/library/os.html#os.AT_NO_AUTOMOUNT
+  name: AT_NO_AUTOMOUNT
+  uid: os.AT_NO_AUTOMOUNT
+- fullName: os.AT_STATX_DONT_SYNC
+  href: https://docs.python.org/3/library/os.html#os.AT_STATX_DONT_SYNC
+  name: AT_STATX_DONT_SYNC
+  uid: os.AT_STATX_DONT_SYNC
+- fullName: os.AT_STATX_FORCE_SYNC
+  href: https://docs.python.org/3/library/os.html#os.AT_STATX_FORCE_SYNC
+  name: AT_STATX_FORCE_SYNC
+  uid: os.AT_STATX_FORCE_SYNC
+- fullName: os.AT_STATX_SYNC_AS_STAT
+  href: https://docs.python.org/3/library/os.html#os.AT_STATX_SYNC_AS_STAT
+  name: AT_STATX_SYNC_AS_STAT
+  uid: os.AT_STATX_SYNC_AS_STAT
 - fullName: os.CLD_CONTINUED
   href: https://docs.python.org/3/library/os.html#os.CLD_CONTINUED
   name: CLD_CONTINUED
@@ -25415,6 +26091,10 @@ references:
   href: https://docs.python.org/3/library/os.html#os.MFD_HUGE_SHIFT
   name: MFD_HUGE_SHIFT
   uid: os.MFD_HUGE_SHIFT
+- fullName: os.NODEV
+  href: https://docs.python.org/3/library/os.html#os.NODEV
+  name: NODEV
+  uid: os.NODEV
 - fullName: os.O_APPEND
   href: https://docs.python.org/3/library/os.html#os.O_APPEND
   name: O_APPEND
@@ -25691,6 +26371,14 @@ references:
   href: https://docs.python.org/3/library/os.html#os.RWF_APPEND
   name: RWF_APPEND
   uid: os.RWF_APPEND
+- fullName: os.RWF_ATOMIC
+  href: https://docs.python.org/3/library/os.html#os.RWF_ATOMIC
+  name: RWF_ATOMIC
+  uid: os.RWF_ATOMIC
+- fullName: os.RWF_DONTCACHE
+  href: https://docs.python.org/3/library/os.html#os.RWF_DONTCACHE
+  name: RWF_DONTCACHE
+  uid: os.RWF_DONTCACHE
 - fullName: os.RWF_DSYNC
   href: https://docs.python.org/3/library/os.html#os.RWF_DSYNC
   name: RWF_DSYNC
@@ -25795,6 +26483,82 @@ references:
   href: https://docs.python.org/3/library/os.html#os.SPLICE_F_NONBLOCK
   name: SPLICE_F_NONBLOCK
   uid: os.SPLICE_F_NONBLOCK
+- fullName: os.STATX_ATIME
+  href: https://docs.python.org/3/library/os.html#os.STATX_ATIME
+  name: STATX_ATIME
+  uid: os.STATX_ATIME
+- fullName: os.STATX_BASIC_STATS
+  href: https://docs.python.org/3/library/os.html#os.STATX_BASIC_STATS
+  name: STATX_BASIC_STATS
+  uid: os.STATX_BASIC_STATS
+- fullName: os.STATX_BLOCKS
+  href: https://docs.python.org/3/library/os.html#os.STATX_BLOCKS
+  name: STATX_BLOCKS
+  uid: os.STATX_BLOCKS
+- fullName: os.STATX_BTIME
+  href: https://docs.python.org/3/library/os.html#os.STATX_BTIME
+  name: STATX_BTIME
+  uid: os.STATX_BTIME
+- fullName: os.STATX_CTIME
+  href: https://docs.python.org/3/library/os.html#os.STATX_CTIME
+  name: STATX_CTIME
+  uid: os.STATX_CTIME
+- fullName: os.STATX_DIOALIGN
+  href: https://docs.python.org/3/library/os.html#os.STATX_DIOALIGN
+  name: STATX_DIOALIGN
+  uid: os.STATX_DIOALIGN
+- fullName: os.STATX_DIO_READ_ALIGN
+  href: https://docs.python.org/3/library/os.html#os.STATX_DIO_READ_ALIGN
+  name: STATX_DIO_READ_ALIGN
+  uid: os.STATX_DIO_READ_ALIGN
+- fullName: os.STATX_GID
+  href: https://docs.python.org/3/library/os.html#os.STATX_GID
+  name: STATX_GID
+  uid: os.STATX_GID
+- fullName: os.STATX_INO
+  href: https://docs.python.org/3/library/os.html#os.STATX_INO
+  name: STATX_INO
+  uid: os.STATX_INO
+- fullName: os.STATX_MNT_ID
+  href: https://docs.python.org/3/library/os.html#os.STATX_MNT_ID
+  name: STATX_MNT_ID
+  uid: os.STATX_MNT_ID
+- fullName: os.STATX_MNT_ID_UNIQUE
+  href: https://docs.python.org/3/library/os.html#os.STATX_MNT_ID_UNIQUE
+  name: STATX_MNT_ID_UNIQUE
+  uid: os.STATX_MNT_ID_UNIQUE
+- fullName: os.STATX_MODE
+  href: https://docs.python.org/3/library/os.html#os.STATX_MODE
+  name: STATX_MODE
+  uid: os.STATX_MODE
+- fullName: os.STATX_MTIME
+  href: https://docs.python.org/3/library/os.html#os.STATX_MTIME
+  name: STATX_MTIME
+  uid: os.STATX_MTIME
+- fullName: os.STATX_NLINK
+  href: https://docs.python.org/3/library/os.html#os.STATX_NLINK
+  name: STATX_NLINK
+  uid: os.STATX_NLINK
+- fullName: os.STATX_SIZE
+  href: https://docs.python.org/3/library/os.html#os.STATX_SIZE
+  name: STATX_SIZE
+  uid: os.STATX_SIZE
+- fullName: os.STATX_SUBVOL
+  href: https://docs.python.org/3/library/os.html#os.STATX_SUBVOL
+  name: STATX_SUBVOL
+  uid: os.STATX_SUBVOL
+- fullName: os.STATX_TYPE
+  href: https://docs.python.org/3/library/os.html#os.STATX_TYPE
+  name: STATX_TYPE
+  uid: os.STATX_TYPE
+- fullName: os.STATX_UID
+  href: https://docs.python.org/3/library/os.html#os.STATX_UID
+  name: STATX_UID
+  uid: os.STATX_UID
+- fullName: os.STATX_WRITE_ATOMIC
+  href: https://docs.python.org/3/library/os.html#os.STATX_WRITE_ATOMIC
+  name: STATX_WRITE_ATOMIC
+  uid: os.STATX_WRITE_ATOMIC
 - fullName: os.ST_APPEND
   href: https://docs.python.org/3/library/os.html#os.ST_APPEND
   name: ST_APPEND
@@ -25951,6 +26715,10 @@ references:
   href: https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING
   name: ALLOW_MISSING
   uid: os.path.ALLOW_MISSING
+- fullName: os.path.ALL_BUT_LAST
+  href: https://docs.python.org/3/library/os.path.html#os.path.ALL_BUT_LAST
+  name: ALL_BUT_LAST
+  uid: os.path.ALL_BUT_LAST
 - fullName: os.path.supports_unicode_filenames
   href: https://docs.python.org/3/library/os.path.html#os.path.supports_unicode_filenames
   name: supports_unicode_filenames
@@ -26135,10 +26903,18 @@ references:
   href: https://docs.python.org/3/library/resource.html#resource.RLIMIT_NPTS
   name: RLIMIT_NPTS
   uid: resource.RLIMIT_NPTS
+- fullName: resource.RLIMIT_NTHR
+  href: https://docs.python.org/3/library/resource.html#resource.RLIMIT_NTHR
+  name: RLIMIT_NTHR
+  uid: resource.RLIMIT_NTHR
 - fullName: resource.RLIMIT_OFILE
   href: https://docs.python.org/3/library/resource.html#resource.RLIMIT_OFILE
   name: RLIMIT_OFILE
   uid: resource.RLIMIT_OFILE
+- fullName: resource.RLIMIT_PIPEBUF
+  href: https://docs.python.org/3/library/resource.html#resource.RLIMIT_PIPEBUF
+  name: RLIMIT_PIPEBUF
+  uid: resource.RLIMIT_PIPEBUF
 - fullName: resource.RLIMIT_RSS
   href: https://docs.python.org/3/library/resource.html#resource.RLIMIT_RSS
   name: RLIMIT_RSS
@@ -26167,6 +26943,14 @@ references:
   href: https://docs.python.org/3/library/resource.html#resource.RLIMIT_SWAP
   name: RLIMIT_SWAP
   uid: resource.RLIMIT_SWAP
+- fullName: resource.RLIMIT_THREADS
+  href: https://docs.python.org/3/library/resource.html#resource.RLIMIT_THREADS
+  name: RLIMIT_THREADS
+  uid: resource.RLIMIT_THREADS
+- fullName: resource.RLIMIT_UMTXP
+  href: https://docs.python.org/3/library/resource.html#resource.RLIMIT_UMTXP
+  name: RLIMIT_UMTXP
+  uid: resource.RLIMIT_UMTXP
 - fullName: resource.RLIMIT_VMEM
   href: https://docs.python.org/3/library/resource.html#resource.RLIMIT_VMEM
   name: RLIMIT_VMEM
@@ -26175,6 +26959,14 @@ references:
   href: https://docs.python.org/3/library/resource.html#resource.RLIM_INFINITY
   name: RLIM_INFINITY
   uid: resource.RLIM_INFINITY
+- fullName: resource.RLIM_SAVED_CUR
+  href: https://docs.python.org/3/library/resource.html#resource.RLIM_SAVED_CUR
+  name: RLIM_SAVED_CUR
+  uid: resource.RLIM_SAVED_CUR
+- fullName: resource.RLIM_SAVED_MAX
+  href: https://docs.python.org/3/library/resource.html#resource.RLIM_SAVED_MAX
+  name: RLIM_SAVED_MAX
+  uid: resource.RLIM_SAVED_MAX
 - fullName: resource.RUSAGE_BOTH
   href: https://docs.python.org/3/library/resource.html#resource.RUSAGE_BOTH
   name: RUSAGE_BOTH
@@ -26799,6 +27591,10 @@ references:
   href: https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_IGNORE
   name: SQLITE_IGNORE
   uid: sqlite3.SQLITE_IGNORE
+- fullName: sqlite3.SQLITE_KEYWORDS
+  href: https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_KEYWORDS
+  name: SQLITE_KEYWORDS
+  uid: sqlite3.SQLITE_KEYWORDS
 - fullName: sqlite3.SQLITE_OK
   href: https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_OK
   name: SQLITE_OK
@@ -26871,6 +27667,10 @@ references:
   href: https://docs.python.org/3/library/ssl.html#ssl.HAS_PSK
   name: HAS_PSK
   uid: ssl.HAS_PSK
+- fullName: ssl.HAS_PSK_TLS13
+  href: https://docs.python.org/3/library/ssl.html#ssl.HAS_PSK_TLS13
+  name: HAS_PSK_TLS13
+  uid: ssl.HAS_PSK_TLS13
 - fullName: ssl.HAS_SNI
   href: https://docs.python.org/3/library/ssl.html#ssl.HAS_SNI
   name: HAS_SNI
@@ -27171,6 +27971,46 @@ references:
   href: https://docs.python.org/3/library/stat.html#stat.SF_SYNTHETIC
   name: SF_SYNTHETIC
   uid: stat.SF_SYNTHETIC
+- fullName: stat.STATX_ATTR_APPEND
+  href: https://docs.python.org/3/library/stat.html#stat.STATX_ATTR_APPEND
+  name: STATX_ATTR_APPEND
+  uid: stat.STATX_ATTR_APPEND
+- fullName: stat.STATX_ATTR_AUTOMOUNT
+  href: https://docs.python.org/3/library/stat.html#stat.STATX_ATTR_AUTOMOUNT
+  name: STATX_ATTR_AUTOMOUNT
+  uid: stat.STATX_ATTR_AUTOMOUNT
+- fullName: stat.STATX_ATTR_COMPRESSED
+  href: https://docs.python.org/3/library/stat.html#stat.STATX_ATTR_COMPRESSED
+  name: STATX_ATTR_COMPRESSED
+  uid: stat.STATX_ATTR_COMPRESSED
+- fullName: stat.STATX_ATTR_DAX
+  href: https://docs.python.org/3/library/stat.html#stat.STATX_ATTR_DAX
+  name: STATX_ATTR_DAX
+  uid: stat.STATX_ATTR_DAX
+- fullName: stat.STATX_ATTR_ENCRYPTED
+  href: https://docs.python.org/3/library/stat.html#stat.STATX_ATTR_ENCRYPTED
+  name: STATX_ATTR_ENCRYPTED
+  uid: stat.STATX_ATTR_ENCRYPTED
+- fullName: stat.STATX_ATTR_IMMUTABLE
+  href: https://docs.python.org/3/library/stat.html#stat.STATX_ATTR_IMMUTABLE
+  name: STATX_ATTR_IMMUTABLE
+  uid: stat.STATX_ATTR_IMMUTABLE
+- fullName: stat.STATX_ATTR_MOUNT_ROOT
+  href: https://docs.python.org/3/library/stat.html#stat.STATX_ATTR_MOUNT_ROOT
+  name: STATX_ATTR_MOUNT_ROOT
+  uid: stat.STATX_ATTR_MOUNT_ROOT
+- fullName: stat.STATX_ATTR_NODUMP
+  href: https://docs.python.org/3/library/stat.html#stat.STATX_ATTR_NODUMP
+  name: STATX_ATTR_NODUMP
+  uid: stat.STATX_ATTR_NODUMP
+- fullName: stat.STATX_ATTR_VERITY
+  href: https://docs.python.org/3/library/stat.html#stat.STATX_ATTR_VERITY
+  name: STATX_ATTR_VERITY
+  uid: stat.STATX_ATTR_VERITY
+- fullName: stat.STATX_ATTR_WRITE_ATOMIC
+  href: https://docs.python.org/3/library/stat.html#stat.STATX_ATTR_WRITE_ATOMIC
+  name: STATX_ATTR_WRITE_ATOMIC
+  uid: stat.STATX_ATTR_WRITE_ATOMIC
 - fullName: stat.ST_ATIME
   href: https://docs.python.org/3/library/stat.html#stat.ST_ATIME
   name: ST_ATIME
@@ -27539,6 +28379,10 @@ references:
   href: https://docs.python.org/3/library/sys.html#sys._xoptions
   name: _xoptions
   uid: sys._xoptions
+- fullName: sys.abi_info
+  href: https://docs.python.org/3/library/sys.html#sys.abi_info
+  name: abi_info
+  uid: sys.abi_info
 - fullName: sys.abiflags
   href: https://docs.python.org/3/library/sys.html#sys.abiflags
   name: abiflags
@@ -27631,6 +28475,10 @@ references:
   href: https://docs.python.org/3/library/sys.html#sys.last_value
   name: last_value
   uid: sys.last_value
+- fullName: sys.lazy_modules
+  href: https://docs.python.org/3/library/sys.html#sys.lazy_modules
+  name: lazy_modules
+  uid: sys.lazy_modules
 - fullName: sys.maxsize
   href: https://docs.python.org/3/library/sys.html#sys.maxsize
   name: maxsize
@@ -27971,6 +28819,34 @@ references:
   href: https://docs.python.org/3/library/tempfile.html#tempfile.tempdir
   name: tempdir
   uid: tempfile.tempdir
+- fullName: termios.TCIFLUSH
+  href: https://docs.python.org/3/library/termios.html#termios.TCIFLUSH
+  name: TCIFLUSH
+  uid: termios.TCIFLUSH
+- fullName: termios.TCIOFF
+  href: https://docs.python.org/3/library/termios.html#termios.TCIOFF
+  name: TCIOFF
+  uid: termios.TCIOFF
+- fullName: termios.TCIOFLUSH
+  href: https://docs.python.org/3/library/termios.html#termios.TCIOFLUSH
+  name: TCIOFLUSH
+  uid: termios.TCIOFLUSH
+- fullName: termios.TCION
+  href: https://docs.python.org/3/library/termios.html#termios.TCION
+  name: TCION
+  uid: termios.TCION
+- fullName: termios.TCOFLUSH
+  href: https://docs.python.org/3/library/termios.html#termios.TCOFLUSH
+  name: TCOFLUSH
+  uid: termios.TCOFLUSH
+- fullName: termios.TCOOFF
+  href: https://docs.python.org/3/library/termios.html#termios.TCOOFF
+  name: TCOOFF
+  uid: termios.TCOOFF
+- fullName: termios.TCOON
+  href: https://docs.python.org/3/library/termios.html#termios.TCOON
+  name: TCOON
+  uid: termios.TCOON
 - fullName: termios.TCSADRAIN
   href: https://docs.python.org/3/library/termios.html#termios.TCSADRAIN
   name: TCSADRAIN
@@ -27983,6 +28859,30 @@ references:
   href: https://docs.python.org/3/library/termios.html#termios.TCSANOW
   name: TCSANOW
   uid: termios.TCSANOW
+- fullName: termios.TIOCGSIZE
+  href: https://docs.python.org/3/library/termios.html#termios.TIOCGSIZE
+  name: TIOCGSIZE
+  uid: termios.TIOCGSIZE
+- fullName: termios.TIOCGWINSZ
+  href: https://docs.python.org/3/library/termios.html#termios.TIOCGWINSZ
+  name: TIOCGWINSZ
+  uid: termios.TIOCGWINSZ
+- fullName: termios.TIOCSSIZE
+  href: https://docs.python.org/3/library/termios.html#termios.TIOCSSIZE
+  name: TIOCSSIZE
+  uid: termios.TIOCSSIZE
+- fullName: termios.TIOCSWINSZ
+  href: https://docs.python.org/3/library/termios.html#termios.TIOCSWINSZ
+  name: TIOCSWINSZ
+  uid: termios.TIOCSWINSZ
+- fullName: termios.VMIN
+  href: https://docs.python.org/3/library/termios.html#termios.VMIN
+  name: VMIN
+  uid: termios.VMIN
+- fullName: termios.VTIME
+  href: https://docs.python.org/3/library/termios.html#termios.VTIME
+  name: VTIME
+  uid: termios.VTIME
 - fullName: test.support.ALWAYS_EQ
   href: https://docs.python.org/3/library/test.html#test.support.ALWAYS_EQ
   name: ALWAYS_EQ
@@ -28947,6 +29847,10 @@ references:
   href: https://docs.python.org/3/library/typing.html#typing.NoDefault
   name: NoDefault
   uid: typing.NoDefault
+- fullName: typing.NoExtraItems
+  href: https://docs.python.org/3/library/typing.html#typing.NoExtraItems
+  name: NoExtraItems
+  uid: typing.NoExtraItems
 - fullName: typing.NoReturn
   href: https://docs.python.org/3/library/typing.html#typing.NoReturn
   name: NoReturn
@@ -28983,6 +29887,10 @@ references:
   href: https://docs.python.org/3/library/typing.html#typing.TypeAlias
   name: TypeAlias
   uid: typing.TypeAlias
+- fullName: typing.TypeForm
+  href: https://docs.python.org/3/library/typing.html#typing.TypeForm
+  name: TypeForm
+  uid: typing.TypeForm
 - fullName: typing.TypeGuard
   href: https://docs.python.org/3/library/typing.html#typing.TypeGuard
   name: TypeGuard
@@ -29063,6 +29971,18 @@ references:
   href: https://docs.python.org/3/library/uuid.html#uuid.RFC_4122
   name: RFC_4122
   uid: uuid.RFC_4122
+- fullName: wave.WAVE_FORMAT_EXTENSIBLE
+  href: https://docs.python.org/3/library/wave.html#wave.WAVE_FORMAT_EXTENSIBLE
+  name: WAVE_FORMAT_EXTENSIBLE
+  uid: wave.WAVE_FORMAT_EXTENSIBLE
+- fullName: wave.WAVE_FORMAT_IEEE_FLOAT
+  href: https://docs.python.org/3/library/wave.html#wave.WAVE_FORMAT_IEEE_FLOAT
+  name: WAVE_FORMAT_IEEE_FLOAT
+  uid: wave.WAVE_FORMAT_IEEE_FLOAT
+- fullName: wave.WAVE_FORMAT_PCM
+  href: https://docs.python.org/3/library/wave.html#wave.WAVE_FORMAT_PCM
+  name: WAVE_FORMAT_PCM
+  uid: wave.WAVE_FORMAT_PCM
 - fullName: weakref.ProxyTypes
   href: https://docs.python.org/3/library/weakref.html#weakref.ProxyTypes
   name: ProxyTypes
@@ -29971,10 +30891,6 @@ references:
   href: https://docs.python.org/3/library/bz2.html#module-bz2
   name: bz2
   uid: bz2
-- fullName: cProfile
-  href: https://docs.python.org/3/library/profile.html#module-cProfile
-  name: cProfile
-  uid: cProfile
 - fullName: calendar
   href: https://docs.python.org/3/library/calendar.html#module-calendar
   name: calendar
@@ -30075,6 +30991,10 @@ references:
   href: https://docs.python.org/3/library/ctypes.html#module-ctypes
   name: ctypes
   uid: ctypes
+- fullName: ctypes.wintypes
+  href: https://docs.python.org/3/library/ctypes.html#module-ctypes.wintypes
+  name: wintypes
+  uid: ctypes.wintypes
 - fullName: curses
   href: https://docs.python.org/3/library/curses.html#module-curses
   name: curses
@@ -30475,6 +31395,10 @@ references:
   href: https://docs.python.org/3/library/math.html#module-math
   name: math
   uid: math
+- fullName: math.integer
+  href: https://docs.python.org/3/library/math.integer.html#module-math.integer
+  name: integer
+  uid: math.integer
 - fullName: mimetypes
   href: https://docs.python.org/3/library/mimetypes.html#module-mimetypes
   name: mimetypes
@@ -30611,8 +31535,20 @@ references:
   href: https://docs.python.org/3/library/profile.html#module-profile
   name: profile
   uid: profile
+- fullName: profiling
+  href: https://docs.python.org/3/library/profiling.html#module-profiling
+  name: profiling
+  uid: profiling
+- fullName: profiling.sampling
+  href: https://docs.python.org/3/library/profiling.sampling.html#module-profiling.sampling
+  name: sampling
+  uid: profiling.sampling
+- fullName: profiling.tracing
+  href: https://docs.python.org/3/library/profiling.tracing.html#module-profiling.tracing
+  name: tracing
+  uid: profiling.tracing
 - fullName: pstats
-  href: https://docs.python.org/3/library/profile.html#module-pstats
+  href: https://docs.python.org/3/library/pstats.html#module-pstats
   name: pstats
   uid: pstats
 - fullName: pty
@@ -31691,6 +32627,10 @@ references:
   href: https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier
   name: Barrier
   uid: asyncio.Barrier
+- fullName: asyncio.BaseEventLoop
+  href: https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.BaseEventLoop
+  name: BaseEventLoop
+  uid: asyncio.BaseEventLoop
 - fullName: asyncio.BaseProtocol
   href: https://docs.python.org/3/library/asyncio-protocol.html#asyncio.BaseProtocol
   name: BaseProtocol
@@ -32435,6 +33375,566 @@ references:
   href: https://docs.python.org/3/library/ctypes.html#ctypes.py_object
   name: py_object
   uid: ctypes.py_object
+- fullName: ctypes.wintypes.ATOM
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.ATOM
+  name: ATOM
+  uid: ctypes.wintypes.ATOM
+- fullName: ctypes.wintypes.BOOL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.BOOL
+  name: BOOL
+  uid: ctypes.wintypes.BOOL
+- fullName: ctypes.wintypes.BOOLEAN
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.BOOLEAN
+  name: BOOLEAN
+  uid: ctypes.wintypes.BOOLEAN
+- fullName: ctypes.wintypes.BYTE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.BYTE
+  name: BYTE
+  uid: ctypes.wintypes.BYTE
+- fullName: ctypes.wintypes.CHAR
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.CHAR
+  name: CHAR
+  uid: ctypes.wintypes.CHAR
+- fullName: ctypes.wintypes.COLORREF
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.COLORREF
+  name: COLORREF
+  uid: ctypes.wintypes.COLORREF
+- fullName: ctypes.wintypes.DOUBLE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.DOUBLE
+  name: DOUBLE
+  uid: ctypes.wintypes.DOUBLE
+- fullName: ctypes.wintypes.DWORD
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.DWORD
+  name: DWORD
+  uid: ctypes.wintypes.DWORD
+- fullName: ctypes.wintypes.FILETIME
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.FILETIME
+  name: FILETIME
+  uid: ctypes.wintypes.FILETIME
+- fullName: ctypes.wintypes.FLOAT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.FLOAT
+  name: FLOAT
+  uid: ctypes.wintypes.FLOAT
+- fullName: ctypes.wintypes.HACCEL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HACCEL
+  name: HACCEL
+  uid: ctypes.wintypes.HACCEL
+- fullName: ctypes.wintypes.HANDLE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HANDLE
+  name: HANDLE
+  uid: ctypes.wintypes.HANDLE
+- fullName: ctypes.wintypes.HBITMAP
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HBITMAP
+  name: HBITMAP
+  uid: ctypes.wintypes.HBITMAP
+- fullName: ctypes.wintypes.HBRUSH
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HBRUSH
+  name: HBRUSH
+  uid: ctypes.wintypes.HBRUSH
+- fullName: ctypes.wintypes.HCOLORSPACE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HCOLORSPACE
+  name: HCOLORSPACE
+  uid: ctypes.wintypes.HCOLORSPACE
+- fullName: ctypes.wintypes.HCONV
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HCONV
+  name: HCONV
+  uid: ctypes.wintypes.HCONV
+- fullName: ctypes.wintypes.HCONVLIST
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HCONVLIST
+  name: HCONVLIST
+  uid: ctypes.wintypes.HCONVLIST
+- fullName: ctypes.wintypes.HCURSOR
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HCURSOR
+  name: HCURSOR
+  uid: ctypes.wintypes.HCURSOR
+- fullName: ctypes.wintypes.HDC
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HDC
+  name: HDC
+  uid: ctypes.wintypes.HDC
+- fullName: ctypes.wintypes.HDDEDATA
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HDDEDATA
+  name: HDDEDATA
+  uid: ctypes.wintypes.HDDEDATA
+- fullName: ctypes.wintypes.HDESK
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HDESK
+  name: HDESK
+  uid: ctypes.wintypes.HDESK
+- fullName: ctypes.wintypes.HDROP
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HDROP
+  name: HDROP
+  uid: ctypes.wintypes.HDROP
+- fullName: ctypes.wintypes.HDWP
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HDWP
+  name: HDWP
+  uid: ctypes.wintypes.HDWP
+- fullName: ctypes.wintypes.HENHMETAFILE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HENHMETAFILE
+  name: HENHMETAFILE
+  uid: ctypes.wintypes.HENHMETAFILE
+- fullName: ctypes.wintypes.HFILE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HFILE
+  name: HFILE
+  uid: ctypes.wintypes.HFILE
+- fullName: ctypes.wintypes.HFONT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HFONT
+  name: HFONT
+  uid: ctypes.wintypes.HFONT
+- fullName: ctypes.wintypes.HGDIOBJ
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HGDIOBJ
+  name: HGDIOBJ
+  uid: ctypes.wintypes.HGDIOBJ
+- fullName: ctypes.wintypes.HGLOBAL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HGLOBAL
+  name: HGLOBAL
+  uid: ctypes.wintypes.HGLOBAL
+- fullName: ctypes.wintypes.HHOOK
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HHOOK
+  name: HHOOK
+  uid: ctypes.wintypes.HHOOK
+- fullName: ctypes.wintypes.HICON
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HICON
+  name: HICON
+  uid: ctypes.wintypes.HICON
+- fullName: ctypes.wintypes.HINSTANCE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HINSTANCE
+  name: HINSTANCE
+  uid: ctypes.wintypes.HINSTANCE
+- fullName: ctypes.wintypes.HKEY
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HKEY
+  name: HKEY
+  uid: ctypes.wintypes.HKEY
+- fullName: ctypes.wintypes.HKL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HKL
+  name: HKL
+  uid: ctypes.wintypes.HKL
+- fullName: ctypes.wintypes.HLOCAL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HLOCAL
+  name: HLOCAL
+  uid: ctypes.wintypes.HLOCAL
+- fullName: ctypes.wintypes.HMENU
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HMENU
+  name: HMENU
+  uid: ctypes.wintypes.HMENU
+- fullName: ctypes.wintypes.HMETAFILE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HMETAFILE
+  name: HMETAFILE
+  uid: ctypes.wintypes.HMETAFILE
+- fullName: ctypes.wintypes.HMODULE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HMODULE
+  name: HMODULE
+  uid: ctypes.wintypes.HMODULE
+- fullName: ctypes.wintypes.HMONITOR
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HMONITOR
+  name: HMONITOR
+  uid: ctypes.wintypes.HMONITOR
+- fullName: ctypes.wintypes.HPALETTE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HPALETTE
+  name: HPALETTE
+  uid: ctypes.wintypes.HPALETTE
+- fullName: ctypes.wintypes.HPEN
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HPEN
+  name: HPEN
+  uid: ctypes.wintypes.HPEN
+- fullName: ctypes.wintypes.HRESULT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HRESULT
+  name: HRESULT
+  uid: ctypes.wintypes.HRESULT
+- fullName: ctypes.wintypes.HRGN
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HRGN
+  name: HRGN
+  uid: ctypes.wintypes.HRGN
+- fullName: ctypes.wintypes.HRSRC
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HRSRC
+  name: HRSRC
+  uid: ctypes.wintypes.HRSRC
+- fullName: ctypes.wintypes.HSTR
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HSTR
+  name: HSTR
+  uid: ctypes.wintypes.HSTR
+- fullName: ctypes.wintypes.HSZ
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HSZ
+  name: HSZ
+  uid: ctypes.wintypes.HSZ
+- fullName: ctypes.wintypes.HTASK
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HTASK
+  name: HTASK
+  uid: ctypes.wintypes.HTASK
+- fullName: ctypes.wintypes.HWINSTA
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HWINSTA
+  name: HWINSTA
+  uid: ctypes.wintypes.HWINSTA
+- fullName: ctypes.wintypes.HWND
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.HWND
+  name: HWND
+  uid: ctypes.wintypes.HWND
+- fullName: ctypes.wintypes.INT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.INT
+  name: INT
+  uid: ctypes.wintypes.INT
+- fullName: ctypes.wintypes.LANGID
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LANGID
+  name: LANGID
+  uid: ctypes.wintypes.LANGID
+- fullName: ctypes.wintypes.LARGE_INTEGER
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LARGE_INTEGER
+  name: LARGE_INTEGER
+  uid: ctypes.wintypes.LARGE_INTEGER
+- fullName: ctypes.wintypes.LCID
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LCID
+  name: LCID
+  uid: ctypes.wintypes.LCID
+- fullName: ctypes.wintypes.LCTYPE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LCTYPE
+  name: LCTYPE
+  uid: ctypes.wintypes.LCTYPE
+- fullName: ctypes.wintypes.LGRPID
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LGRPID
+  name: LGRPID
+  uid: ctypes.wintypes.LGRPID
+- fullName: ctypes.wintypes.LONG
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LONG
+  name: LONG
+  uid: ctypes.wintypes.LONG
+- fullName: ctypes.wintypes.LPARAM
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPARAM
+  name: LPARAM
+  uid: ctypes.wintypes.LPARAM
+- fullName: ctypes.wintypes.LPBOOL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPBOOL
+  name: LPBOOL
+  uid: ctypes.wintypes.LPBOOL
+- fullName: ctypes.wintypes.LPBYTE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPBYTE
+  name: LPBYTE
+  uid: ctypes.wintypes.LPBYTE
+- fullName: ctypes.wintypes.LPCOLESTR
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPCOLESTR
+  name: LPCOLESTR
+  uid: ctypes.wintypes.LPCOLESTR
+- fullName: ctypes.wintypes.LPCOLORREF
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPCOLORREF
+  name: LPCOLORREF
+  uid: ctypes.wintypes.LPCOLORREF
+- fullName: ctypes.wintypes.LPCSTR
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPCSTR
+  name: LPCSTR
+  uid: ctypes.wintypes.LPCSTR
+- fullName: ctypes.wintypes.LPCVOID
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPCVOID
+  name: LPCVOID
+  uid: ctypes.wintypes.LPCVOID
+- fullName: ctypes.wintypes.LPCWSTR
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPCWSTR
+  name: LPCWSTR
+  uid: ctypes.wintypes.LPCWSTR
+- fullName: ctypes.wintypes.LPDWORD
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPDWORD
+  name: LPDWORD
+  uid: ctypes.wintypes.LPDWORD
+- fullName: ctypes.wintypes.LPFILETIME
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPFILETIME
+  name: LPFILETIME
+  uid: ctypes.wintypes.LPFILETIME
+- fullName: ctypes.wintypes.LPHANDLE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPHANDLE
+  name: LPHANDLE
+  uid: ctypes.wintypes.LPHANDLE
+- fullName: ctypes.wintypes.LPHKL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPHKL
+  name: LPHKL
+  uid: ctypes.wintypes.LPHKL
+- fullName: ctypes.wintypes.LPINT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPINT
+  name: LPINT
+  uid: ctypes.wintypes.LPINT
+- fullName: ctypes.wintypes.LPLONG
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPLONG
+  name: LPLONG
+  uid: ctypes.wintypes.LPLONG
+- fullName: ctypes.wintypes.LPMSG
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPMSG
+  name: LPMSG
+  uid: ctypes.wintypes.LPMSG
+- fullName: ctypes.wintypes.LPOLESTR
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPOLESTR
+  name: LPOLESTR
+  uid: ctypes.wintypes.LPOLESTR
+- fullName: ctypes.wintypes.LPPOINT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPPOINT
+  name: LPPOINT
+  uid: ctypes.wintypes.LPPOINT
+- fullName: ctypes.wintypes.LPRECT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPRECT
+  name: LPRECT
+  uid: ctypes.wintypes.LPRECT
+- fullName: ctypes.wintypes.LPRECTL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPRECTL
+  name: LPRECTL
+  uid: ctypes.wintypes.LPRECTL
+- fullName: ctypes.wintypes.LPSC_HANDLE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPSC_HANDLE
+  name: LPSC_HANDLE
+  uid: ctypes.wintypes.LPSC_HANDLE
+- fullName: ctypes.wintypes.LPSIZE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPSIZE
+  name: LPSIZE
+  uid: ctypes.wintypes.LPSIZE
+- fullName: ctypes.wintypes.LPSIZEL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPSIZEL
+  name: LPSIZEL
+  uid: ctypes.wintypes.LPSIZEL
+- fullName: ctypes.wintypes.LPSTR
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPSTR
+  name: LPSTR
+  uid: ctypes.wintypes.LPSTR
+- fullName: ctypes.wintypes.LPUINT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPUINT
+  name: LPUINT
+  uid: ctypes.wintypes.LPUINT
+- fullName: ctypes.wintypes.LPVOID
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPVOID
+  name: LPVOID
+  uid: ctypes.wintypes.LPVOID
+- fullName: ctypes.wintypes.LPWIN32_FIND_DATAA
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPWIN32_FIND_DATAA
+  name: LPWIN32_FIND_DATAA
+  uid: ctypes.wintypes.LPWIN32_FIND_DATAA
+- fullName: ctypes.wintypes.LPWIN32_FIND_DATAW
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPWIN32_FIND_DATAW
+  name: LPWIN32_FIND_DATAW
+  uid: ctypes.wintypes.LPWIN32_FIND_DATAW
+- fullName: ctypes.wintypes.LPWORD
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPWORD
+  name: LPWORD
+  uid: ctypes.wintypes.LPWORD
+- fullName: ctypes.wintypes.LPWSTR
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.LPWSTR
+  name: LPWSTR
+  uid: ctypes.wintypes.LPWSTR
+- fullName: ctypes.wintypes.MSG
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.MSG
+  name: MSG
+  uid: ctypes.wintypes.MSG
+- fullName: ctypes.wintypes.OLESTR
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.OLESTR
+  name: OLESTR
+  uid: ctypes.wintypes.OLESTR
+- fullName: ctypes.wintypes.PBOOL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PBOOL
+  name: PBOOL
+  uid: ctypes.wintypes.PBOOL
+- fullName: ctypes.wintypes.PBOOLEAN
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PBOOLEAN
+  name: PBOOLEAN
+  uid: ctypes.wintypes.PBOOLEAN
+- fullName: ctypes.wintypes.PBYTE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PBYTE
+  name: PBYTE
+  uid: ctypes.wintypes.PBYTE
+- fullName: ctypes.wintypes.PCHAR
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PCHAR
+  name: PCHAR
+  uid: ctypes.wintypes.PCHAR
+- fullName: ctypes.wintypes.PDWORD
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PDWORD
+  name: PDWORD
+  uid: ctypes.wintypes.PDWORD
+- fullName: ctypes.wintypes.PFILETIME
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PFILETIME
+  name: PFILETIME
+  uid: ctypes.wintypes.PFILETIME
+- fullName: ctypes.wintypes.PFLOAT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PFLOAT
+  name: PFLOAT
+  uid: ctypes.wintypes.PFLOAT
+- fullName: ctypes.wintypes.PHANDLE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PHANDLE
+  name: PHANDLE
+  uid: ctypes.wintypes.PHANDLE
+- fullName: ctypes.wintypes.PHKEY
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PHKEY
+  name: PHKEY
+  uid: ctypes.wintypes.PHKEY
+- fullName: ctypes.wintypes.PINT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PINT
+  name: PINT
+  uid: ctypes.wintypes.PINT
+- fullName: ctypes.wintypes.PLARGE_INTEGER
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PLARGE_INTEGER
+  name: PLARGE_INTEGER
+  uid: ctypes.wintypes.PLARGE_INTEGER
+- fullName: ctypes.wintypes.PLCID
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PLCID
+  name: PLCID
+  uid: ctypes.wintypes.PLCID
+- fullName: ctypes.wintypes.PLONG
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PLONG
+  name: PLONG
+  uid: ctypes.wintypes.PLONG
+- fullName: ctypes.wintypes.PMSG
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PMSG
+  name: PMSG
+  uid: ctypes.wintypes.PMSG
+- fullName: ctypes.wintypes.POINT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.POINT
+  name: POINT
+  uid: ctypes.wintypes.POINT
+- fullName: ctypes.wintypes.POINTL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.POINTL
+  name: POINTL
+  uid: ctypes.wintypes.POINTL
+- fullName: ctypes.wintypes.PPOINT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PPOINT
+  name: PPOINT
+  uid: ctypes.wintypes.PPOINT
+- fullName: ctypes.wintypes.PPOINTL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PPOINTL
+  name: PPOINTL
+  uid: ctypes.wintypes.PPOINTL
+- fullName: ctypes.wintypes.PRECT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PRECT
+  name: PRECT
+  uid: ctypes.wintypes.PRECT
+- fullName: ctypes.wintypes.PRECTL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PRECTL
+  name: PRECTL
+  uid: ctypes.wintypes.PRECTL
+- fullName: ctypes.wintypes.PSHORT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PSHORT
+  name: PSHORT
+  uid: ctypes.wintypes.PSHORT
+- fullName: ctypes.wintypes.PSIZE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PSIZE
+  name: PSIZE
+  uid: ctypes.wintypes.PSIZE
+- fullName: ctypes.wintypes.PSIZEL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PSIZEL
+  name: PSIZEL
+  uid: ctypes.wintypes.PSIZEL
+- fullName: ctypes.wintypes.PSMALL_RECT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PSMALL_RECT
+  name: PSMALL_RECT
+  uid: ctypes.wintypes.PSMALL_RECT
+- fullName: ctypes.wintypes.PUINT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PUINT
+  name: PUINT
+  uid: ctypes.wintypes.PUINT
+- fullName: ctypes.wintypes.PULARGE_INTEGER
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PULARGE_INTEGER
+  name: PULARGE_INTEGER
+  uid: ctypes.wintypes.PULARGE_INTEGER
+- fullName: ctypes.wintypes.PULONG
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PULONG
+  name: PULONG
+  uid: ctypes.wintypes.PULONG
+- fullName: ctypes.wintypes.PUSHORT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PUSHORT
+  name: PUSHORT
+  uid: ctypes.wintypes.PUSHORT
+- fullName: ctypes.wintypes.PWCHAR
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PWCHAR
+  name: PWCHAR
+  uid: ctypes.wintypes.PWCHAR
+- fullName: ctypes.wintypes.PWIN32_FIND_DATAA
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PWIN32_FIND_DATAA
+  name: PWIN32_FIND_DATAA
+  uid: ctypes.wintypes.PWIN32_FIND_DATAA
+- fullName: ctypes.wintypes.PWIN32_FIND_DATAW
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PWIN32_FIND_DATAW
+  name: PWIN32_FIND_DATAW
+  uid: ctypes.wintypes.PWIN32_FIND_DATAW
+- fullName: ctypes.wintypes.PWORD
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.PWORD
+  name: PWORD
+  uid: ctypes.wintypes.PWORD
+- fullName: ctypes.wintypes.RECT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.RECT
+  name: RECT
+  uid: ctypes.wintypes.RECT
+- fullName: ctypes.wintypes.RECTL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.RECTL
+  name: RECTL
+  uid: ctypes.wintypes.RECTL
+- fullName: ctypes.wintypes.SC_HANDLE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.SC_HANDLE
+  name: SC_HANDLE
+  uid: ctypes.wintypes.SC_HANDLE
+- fullName: ctypes.wintypes.SERVICE_STATUS_HANDLE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.SERVICE_STATUS_HANDLE
+  name: SERVICE_STATUS_HANDLE
+  uid: ctypes.wintypes.SERVICE_STATUS_HANDLE
+- fullName: ctypes.wintypes.SHORT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.SHORT
+  name: SHORT
+  uid: ctypes.wintypes.SHORT
+- fullName: ctypes.wintypes.SIZE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.SIZE
+  name: SIZE
+  uid: ctypes.wintypes.SIZE
+- fullName: ctypes.wintypes.SIZEL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.SIZEL
+  name: SIZEL
+  uid: ctypes.wintypes.SIZEL
+- fullName: ctypes.wintypes.SMALL_RECT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.SMALL_RECT
+  name: SMALL_RECT
+  uid: ctypes.wintypes.SMALL_RECT
+- fullName: ctypes.wintypes.UINT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.UINT
+  name: UINT
+  uid: ctypes.wintypes.UINT
+- fullName: ctypes.wintypes.ULARGE_INTEGER
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.ULARGE_INTEGER
+  name: ULARGE_INTEGER
+  uid: ctypes.wintypes.ULARGE_INTEGER
+- fullName: ctypes.wintypes.ULONG
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.ULONG
+  name: ULONG
+  uid: ctypes.wintypes.ULONG
+- fullName: ctypes.wintypes.USHORT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.USHORT
+  name: USHORT
+  uid: ctypes.wintypes.USHORT
+- fullName: ctypes.wintypes.VARIANT_BOOL
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.VARIANT_BOOL
+  name: VARIANT_BOOL
+  uid: ctypes.wintypes.VARIANT_BOOL
+- fullName: ctypes.wintypes.WCHAR
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.WCHAR
+  name: WCHAR
+  uid: ctypes.wintypes.WCHAR
+- fullName: ctypes.wintypes.WIN32_FIND_DATAA
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.WIN32_FIND_DATAA
+  name: WIN32_FIND_DATAA
+  uid: ctypes.wintypes.WIN32_FIND_DATAA
+- fullName: ctypes.wintypes.WIN32_FIND_DATAW
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.WIN32_FIND_DATAW
+  name: WIN32_FIND_DATAW
+  uid: ctypes.wintypes.WIN32_FIND_DATAW
+- fullName: ctypes.wintypes.WORD
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.WORD
+  name: WORD
+  uid: ctypes.wintypes.WORD
+- fullName: ctypes.wintypes.WPARAM
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.WPARAM
+  name: WPARAM
+  uid: ctypes.wintypes.WPARAM
+- fullName: ctypes.wintypes.tagMSG
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.tagMSG
+  name: tagMSG
+  uid: ctypes.wintypes.tagMSG
+- fullName: ctypes.wintypes.tagPOINT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.tagPOINT
+  name: tagPOINT
+  uid: ctypes.wintypes.tagPOINT
+- fullName: ctypes.wintypes.tagRECT
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.tagRECT
+  name: tagRECT
+  uid: ctypes.wintypes.tagRECT
+- fullName: ctypes.wintypes.tagSIZE
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.tagSIZE
+  name: tagSIZE
+  uid: ctypes.wintypes.tagSIZE
 - fullName: curses.panel.panel
   href: https://docs.python.org/3/library/curses.panel.html#curses.panel.panel
   name: panel
@@ -32803,6 +34303,10 @@ references:
   href: https://docs.python.org/3/library/fractions.html#fractions.Fraction
   name: Fraction
   uid: fractions.Fraction
+- fullName: frozendict
+  href: https://docs.python.org/3/builtins/stdtypes.html#frozendict
+  name: frozendict
+  uid: frozendict
 - fullName: frozenset
   href: https://docs.python.org/3/builtins/stdtypes.html#frozenset
   name: frozenset
@@ -32915,10 +34419,6 @@ references:
   href: https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler
   name: BaseHTTPRequestHandler
   uid: http.server.BaseHTTPRequestHandler
-- fullName: http.server.CGIHTTPRequestHandler
-  href: https://docs.python.org/3/library/http.server.html#http.server.CGIHTTPRequestHandler
-  name: CGIHTTPRequestHandler
-  uid: http.server.CGIHTTPRequestHandler
 - fullName: http.server.HTTPSServer
   href: https://docs.python.org/3/library/http.server.html#http.server.HTTPSServer
   name: HTTPSServer
@@ -33011,6 +34511,10 @@ references:
   href: https://docs.python.org/3/library/importlib.html#importlib.machinery.NamespaceLoader
   name: NamespaceLoader
   uid: importlib.machinery.NamespaceLoader
+- fullName: importlib.machinery.NamespacePath
+  href: https://docs.python.org/3/library/importlib.html#importlib.machinery.NamespacePath
+  name: NamespacePath
+  uid: importlib.machinery.NamespacePath
 - fullName: importlib.machinery.PathFinder
   href: https://docs.python.org/3/library/importlib.html#importlib.machinery.PathFinder
   name: PathFinder
@@ -33031,6 +34535,14 @@ references:
   href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.Distribution
   name: Distribution
   uid: importlib.metadata.Distribution
+- fullName: importlib.metadata.DistributionFinder
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.DistributionFinder
+  name: DistributionFinder
+  uid: importlib.metadata.DistributionFinder
+- fullName: importlib.metadata.DistributionFinder.Context
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.DistributionFinder.Context
+  name: Context
+  uid: importlib.metadata.DistributionFinder.Context
 - fullName: importlib.metadata.EntryPoint
   href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.EntryPoint
   name: EntryPoint
@@ -33047,6 +34559,10 @@ references:
   href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.PackagePath
   name: PackagePath
   uid: importlib.metadata.PackagePath
+- fullName: importlib.metadata.SimplePath
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.SimplePath
+  name: SimplePath
+  uid: importlib.metadata.SimplePath
 - fullName: importlib.resources.Anchor
   href: https://docs.python.org/3/library/importlib.resources.html#importlib.resources.Anchor
   name: Anchor
@@ -33519,6 +35035,10 @@ references:
   href: https://docs.python.org/3/library/os.html#os.statvfs_result
   name: statvfs_result
   uid: os.statvfs_result
+- fullName: os.statx_result
+  href: https://docs.python.org/3/library/os.html#os.statx_result
+  name: statx_result
+  uid: os.statx_result
 - fullName: os.terminal_size
   href: https://docs.python.org/3/library/os.html#os.terminal_size
   name: terminal_size
@@ -33595,12 +35115,20 @@ references:
   href: https://docs.python.org/3/library/profile.html#profile.Profile
   name: Profile
   uid: profile.Profile
+- fullName: profiling.tracing.Profile
+  href: https://docs.python.org/3/library/profiling.tracing.html#profiling.tracing.Profile
+  name: Profile
+  uid: profiling.tracing.Profile
 - fullName: property
   href: https://docs.python.org/3/builtins/functions.html#property
   name: property
   uid: property
+- fullName: pstats.SortKey
+  href: https://docs.python.org/3/library/pstats.html#pstats.SortKey
+  name: SortKey
+  uid: pstats.SortKey
 - fullName: pstats.Stats
-  href: https://docs.python.org/3/library/profile.html#pstats.Stats
+  href: https://docs.python.org/3/library/pstats.html#pstats.Stats
   name: Stats
   uid: pstats.Stats
 - fullName: py_compile.PycInvalidationMode
@@ -33703,6 +35231,10 @@ references:
   href: https://docs.python.org/3/library/selectors.html#selectors.SelectorKey
   name: SelectorKey
   uid: selectors.SelectorKey
+- fullName: sentinel
+  href: https://docs.python.org/3/builtins/functions.html#sentinel
+  name: sentinel
+  uid: sentinel
 - fullName: set
   href: https://docs.python.org/3/builtins/stdtypes.html#set
   name: set
@@ -33735,6 +35267,10 @@ references:
   href: https://docs.python.org/3/library/signal.html#signal.Signals
   name: Signals
   uid: signal.Signals
+- fullName: site.StartupState
+  href: https://docs.python.org/3/library/site.html#site.StartupState
+  name: StartupState
+  uid: site.StartupState
 - fullName: slice
   href: https://docs.python.org/3/builtins/functions.html#slice
   name: slice
@@ -34007,6 +35543,10 @@ references:
   href: https://docs.python.org/3/library/test.html#test.support.os_helper.FakePath
   name: FakePath
   uid: test.support.os_helper.FakePath
+- fullName: test.support.os_helper.SourceDateEpochTestMeta
+  href: https://docs.python.org/3/library/test.html#test.support.os_helper.SourceDateEpochTestMeta
+  name: SourceDateEpochTestMeta
+  uid: test.support.os_helper.SourceDateEpochTestMeta
 - fullName: test.support.warnings_helper.WarningsRecorder
   href: https://docs.python.org/3/library/test.html#test.support.warnings_helper.WarningsRecorder
   name: WarningsRecorder
@@ -34055,6 +35595,10 @@ references:
   href: https://docs.python.org/3/library/threading.html#threading.local
   name: local
   uid: threading.local
+- fullName: threading.serialize_iterator
+  href: https://docs.python.org/3/library/threading.html#threading.serialize_iterator
+  name: serialize_iterator
+  uid: threading.serialize_iterator
 - fullName: time.struct_time
   href: https://docs.python.org/3/library/time.html#time.struct_time
   name: struct_time
@@ -34379,6 +35923,10 @@ references:
   href: https://docs.python.org/3/library/tkinter.ttk.html#tkinter.ttk.Widget
   name: Widget
   uid: tkinter.ttk.Widget
+- fullName: tokenize.TokenInfo
+  href: https://docs.python.org/3/library/tokenize.html#tokenize.TokenInfo
+  name: TokenInfo
+  uid: tokenize.TokenInfo
 - fullName: trace.CoverageResults
   href: https://docs.python.org/3/library/trace.html#trace.CoverageResults
   name: CoverageResults
@@ -34507,6 +36055,10 @@ references:
   href: https://docs.python.org/3/library/types.html#types.EllipsisType
   name: EllipsisType
   uid: types.EllipsisType
+- fullName: types.FrameLocalsProxyType
+  href: https://docs.python.org/3/library/types.html#types.FrameLocalsProxyType
+  name: FrameLocalsProxyType
+  uid: types.FrameLocalsProxyType
 - fullName: types.FrameType
   href: https://docs.python.org/3/library/types.html#types.FrameType
   name: FrameType
@@ -34531,6 +36083,10 @@ references:
   href: https://docs.python.org/3/library/types.html#types.LambdaType
   name: LambdaType
   uid: types.LambdaType
+- fullName: types.LazyImportType
+  href: https://docs.python.org/3/library/types.html#types.LazyImportType
+  name: LazyImportType
+  uid: types.LazyImportType
 - fullName: types.MappingProxyType
   href: https://docs.python.org/3/library/types.html#types.MappingProxyType
   name: MappingProxyType
@@ -35791,10 +37347,22 @@ references:
   href: https://docs.python.org/3/builtins/functions.html#bin
   name: bin
   uid: bin
+- fullName: binascii.a2b_ascii85
+  href: https://docs.python.org/3/library/binascii.html#binascii.a2b_ascii85
+  name: a2b_ascii85
+  uid: binascii.a2b_ascii85
+- fullName: binascii.a2b_base32
+  href: https://docs.python.org/3/library/binascii.html#binascii.a2b_base32
+  name: a2b_base32
+  uid: binascii.a2b_base32
 - fullName: binascii.a2b_base64
   href: https://docs.python.org/3/library/binascii.html#binascii.a2b_base64
   name: a2b_base64
   uid: binascii.a2b_base64
+- fullName: binascii.a2b_base85
+  href: https://docs.python.org/3/library/binascii.html#binascii.a2b_base85
+  name: a2b_base85
+  uid: binascii.a2b_base85
 - fullName: binascii.a2b_hex
   href: https://docs.python.org/3/library/binascii.html#binascii.a2b_hex
   name: a2b_hex
@@ -35807,10 +37375,22 @@ references:
   href: https://docs.python.org/3/library/binascii.html#binascii.a2b_uu
   name: a2b_uu
   uid: binascii.a2b_uu
+- fullName: binascii.b2a_ascii85
+  href: https://docs.python.org/3/library/binascii.html#binascii.b2a_ascii85
+  name: b2a_ascii85
+  uid: binascii.b2a_ascii85
+- fullName: binascii.b2a_base32
+  href: https://docs.python.org/3/library/binascii.html#binascii.b2a_base32
+  name: b2a_base32
+  uid: binascii.b2a_base32
 - fullName: binascii.b2a_base64
   href: https://docs.python.org/3/library/binascii.html#binascii.b2a_base64
   name: b2a_base64
   uid: binascii.b2a_base64
+- fullName: binascii.b2a_base85
+  href: https://docs.python.org/3/library/binascii.html#binascii.b2a_base85
+  name: b2a_base85
+  uid: binascii.b2a_base85
 - fullName: binascii.b2a_hex
   href: https://docs.python.org/3/library/binascii.html#binascii.b2a_hex
   name: b2a_hex
@@ -36463,6 +38043,10 @@ references:
   href: https://docs.python.org/3/library/ctypes.html#ctypes.util.find_msvcrt
   name: find_msvcrt
   uid: ctypes.util.find_msvcrt
+- fullName: ctypes.wintypes.RGB
+  href: https://docs.python.org/3/library/ctypes.html#ctypes.wintypes.RGB
+  name: RGB
+  uid: ctypes.wintypes.RGB
 - fullName: ctypes.wstring_at
   href: https://docs.python.org/3/library/ctypes.html#ctypes.wstring_at
   name: wstring_at
@@ -37867,6 +39451,10 @@ references:
   href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.distribution
   name: distribution
   uid: importlib.metadata.distribution
+- fullName: importlib.metadata.distributions
+  href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.distributions
+  name: distributions
+  uid: importlib.metadata.distributions
 - fullName: importlib.metadata.entry_points
   href: https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.entry_points
   name: entry_points
@@ -38719,6 +40307,14 @@ references:
   href: https://docs.python.org/3/library/math.html#math.fma
   name: fma
   uid: math.fma
+- fullName: math.fmax
+  href: https://docs.python.org/3/library/math.html#math.fmax
+  name: fmax
+  uid: math.fmax
+- fullName: math.fmin
+  href: https://docs.python.org/3/library/math.html#math.fmin
+  name: fmin
+  uid: math.fmin
 - fullName: math.fmod
   href: https://docs.python.org/3/library/math.html#math.fmod
   name: fmod
@@ -38743,6 +40339,30 @@ references:
   href: https://docs.python.org/3/library/math.html#math.hypot
   name: hypot
   uid: math.hypot
+- fullName: math.integer.comb
+  href: https://docs.python.org/3/library/math.integer.html#math.integer.comb
+  name: comb
+  uid: math.integer.comb
+- fullName: math.integer.factorial
+  href: https://docs.python.org/3/library/math.integer.html#math.integer.factorial
+  name: factorial
+  uid: math.integer.factorial
+- fullName: math.integer.gcd
+  href: https://docs.python.org/3/library/math.integer.html#math.integer.gcd
+  name: gcd
+  uid: math.integer.gcd
+- fullName: math.integer.isqrt
+  href: https://docs.python.org/3/library/math.integer.html#math.integer.isqrt
+  name: isqrt
+  uid: math.integer.isqrt
+- fullName: math.integer.lcm
+  href: https://docs.python.org/3/library/math.integer.html#math.integer.lcm
+  name: lcm
+  uid: math.integer.lcm
+- fullName: math.integer.perm
+  href: https://docs.python.org/3/library/math.integer.html#math.integer.perm
+  name: perm
+  uid: math.integer.perm
 - fullName: math.isclose
   href: https://docs.python.org/3/library/math.html#math.isclose
   name: isclose
@@ -38759,10 +40379,18 @@ references:
   href: https://docs.python.org/3/library/math.html#math.isnan
   name: isnan
   uid: math.isnan
+- fullName: math.isnormal
+  href: https://docs.python.org/3/library/math.html#math.isnormal
+  name: isnormal
+  uid: math.isnormal
 - fullName: math.isqrt
   href: https://docs.python.org/3/library/math.html#math.isqrt
   name: isqrt
   uid: math.isqrt
+- fullName: math.issubnormal
+  href: https://docs.python.org/3/library/math.html#math.issubnormal
+  name: issubnormal
+  uid: math.issubnormal
 - fullName: math.lcm
   href: https://docs.python.org/3/library/math.html#math.lcm
   name: lcm
@@ -38819,6 +40447,10 @@ references:
   href: https://docs.python.org/3/library/math.html#math.remainder
   name: remainder
   uid: math.remainder
+- fullName: math.signbit
+  href: https://docs.python.org/3/library/math.html#math.signbit
+  name: signbit
+  uid: math.signbit
 - fullName: math.sin
   href: https://docs.python.org/3/library/math.html#math.sin
   name: sin
@@ -40359,6 +41991,10 @@ references:
   href: https://docs.python.org/3/library/os.html#os.statvfs
   name: statvfs
   uid: os.statvfs
+- fullName: os.statx
+  href: https://docs.python.org/3/library/os.html#os.statx
+  name: statx
+  uid: os.statx
 - fullName: os.strerror
   href: https://docs.python.org/3/library/os.html#os.strerror
   name: strerror
@@ -40599,10 +42235,6 @@ references:
   href: https://docs.python.org/3/library/platform.html#platform.ios_ver
   name: ios_ver
   uid: platform.ios_ver
-- fullName: platform.java_ver
-  href: https://docs.python.org/3/library/platform.html#platform.java_ver
-  name: java_ver
-  uid: platform.java_ver
 - fullName: platform.libc_ver
   href: https://docs.python.org/3/library/platform.html#platform.libc_ver
   name: libc_ver
@@ -40743,6 +42375,14 @@ references:
   href: https://docs.python.org/3/library/profile.html#profile.runctx
   name: runctx
   uid: profile.runctx
+- fullName: profiling.tracing.run
+  href: https://docs.python.org/3/library/profiling.tracing.html#profiling.tracing.run
+  name: run
+  uid: profiling.tracing.run
+- fullName: profiling.tracing.runctx
+  href: https://docs.python.org/3/library/profiling.tracing.html#profiling.tracing.runctx
+  name: runctx
+  uid: profiling.tracing.runctx
 - fullName: property.deleter
   href: https://docs.python.org/3/builtins/functions.html#property.deleter
   name: deleter
@@ -40927,6 +42567,10 @@ references:
   href: https://docs.python.org/3/library/re.html#re.match
   name: match
   uid: re.match
+- fullName: re.prefixmatch
+  href: https://docs.python.org/3/library/re.html#re.prefixmatch
+  name: prefixmatch
+  uid: re.prefixmatch
 - fullName: re.purge
   href: https://docs.python.org/3/library/re.html#re.purge
   name: purge
@@ -40995,6 +42639,10 @@ references:
   href: https://docs.python.org/3/library/readline.html#readline.get_line_buffer
   name: get_line_buffer
   uid: readline.get_line_buffer
+- fullName: readline.get_pre_input_hook
+  href: https://docs.python.org/3/library/readline.html#readline.get_pre_input_hook
+  name: get_pre_input_hook
+  uid: readline.get_pre_input_hook
 - fullName: readline.insert_text
   href: https://docs.python.org/3/library/readline.html#readline.insert_text
   name: insert_text
@@ -41355,6 +43003,10 @@ references:
   href: https://docs.python.org/3/library/site.html#site.main
   name: main
   uid: site.main
+- fullName: site.makepath
+  href: https://docs.python.org/3/library/site.html#site.makepath
+  name: makepath
+  uid: site.makepath
 - fullName: socket.CMSG_LEN
   href: https://docs.python.org/3/library/socket.html#socket.CMSG_LEN
   name: CMSG_LEN
@@ -41563,6 +43215,10 @@ references:
   href: https://docs.python.org/3/library/ssl.html#ssl.get_server_certificate
   name: get_server_certificate
   uid: ssl.get_server_certificate
+- fullName: ssl.get_sigalgs
+  href: https://docs.python.org/3/library/ssl.html#ssl.get_sigalgs
+  name: get_sigalgs
+  uid: ssl.get_sigalgs
 - fullName: stat.S_IFMT
   href: https://docs.python.org/3/library/stat.html#stat.S_IFMT
   name: S_IFMT
@@ -41951,6 +43607,14 @@ references:
   href: https://docs.python.org/3/library/sys.html#sys.get_int_max_str_digits
   name: get_int_max_str_digits
   uid: sys.get_int_max_str_digits
+- fullName: sys.get_lazy_imports
+  href: https://docs.python.org/3/library/sys.html#sys.get_lazy_imports
+  name: get_lazy_imports
+  uid: sys.get_lazy_imports
+- fullName: sys.get_lazy_imports_filter
+  href: https://docs.python.org/3/library/sys.html#sys.get_lazy_imports_filter
+  name: get_lazy_imports_filter
+  uid: sys.get_lazy_imports_filter
 - fullName: sys.getallocatedblocks
   href: https://docs.python.org/3/library/sys.html#sys.getallocatedblocks
   name: getallocatedblocks
@@ -42079,6 +43743,14 @@ references:
   href: https://docs.python.org/3/library/sys.html#sys.set_int_max_str_digits
   name: set_int_max_str_digits
   uid: sys.set_int_max_str_digits
+- fullName: sys.set_lazy_imports
+  href: https://docs.python.org/3/library/sys.html#sys.set_lazy_imports
+  name: set_lazy_imports
+  uid: sys.set_lazy_imports
+- fullName: sys.set_lazy_imports_filter
+  href: https://docs.python.org/3/library/sys.html#sys.set_lazy_imports_filter
+  name: set_lazy_imports_filter
+  uid: sys.set_lazy_imports_filter
 - fullName: sys.setdlopenflags
   href: https://docs.python.org/3/library/sys.html#sys.setdlopenflags
   name: setdlopenflags
@@ -42515,6 +44187,14 @@ references:
   href: https://docs.python.org/3/library/test.html#test.support.os_helper.unlink
   name: unlink
   uid: test.support.os_helper.unlink
+- fullName: test.support.os_helper.with_source_date_epoch
+  href: https://docs.python.org/3/library/test.html#test.support.os_helper.with_source_date_epoch
+  name: with_source_date_epoch
+  uid: test.support.os_helper.with_source_date_epoch
+- fullName: test.support.os_helper.without_source_date_epoch
+  href: https://docs.python.org/3/library/test.html#test.support.os_helper.without_source_date_epoch
+  name: without_source_date_epoch
+  uid: test.support.os_helper.without_source_date_epoch
 - fullName: test.support.patch
   href: https://docs.python.org/3/library/test.html#test.support.patch
   name: patch
@@ -42779,6 +44459,10 @@ references:
   href: https://docs.python.org/3/library/threading.html#threading.active_count
   name: active_count
   uid: threading.active_count
+- fullName: threading.concurrent_tee
+  href: https://docs.python.org/3/library/threading.html#threading.concurrent_tee
+  name: concurrent_tee
+  uid: threading.concurrent_tee
 - fullName: threading.current_thread
   href: https://docs.python.org/3/library/threading.html#threading.current_thread
   name: current_thread
@@ -42831,6 +44515,10 @@ references:
   href: https://docs.python.org/3/library/threading.html#threading.stack_size
   name: stack_size
   uid: threading.stack_size
+- fullName: threading.synchronized_iterator
+  href: https://docs.python.org/3/library/threading.html#threading.synchronized_iterator
+  name: synchronized_iterator
+  uid: threading.synchronized_iterator
 - fullName: time.asctime
   href: https://docs.python.org/3/library/time.html#time.asctime
   name: asctime
@@ -43743,6 +45431,10 @@ references:
   href: https://docs.python.org/3/library/typing.html#typing.dataclass_transform
   name: dataclass_transform
   uid: typing.dataclass_transform
+- fullName: typing.disjoint_base
+  href: https://docs.python.org/3/library/typing.html#typing.disjoint_base
+  name: disjoint_base
+  uid: typing.disjoint_base
 - fullName: typing.evaluate_forward_ref
   href: https://docs.python.org/3/library/typing.html#typing.evaluate_forward_ref
   name: evaluate_forward_ref
@@ -43783,10 +45475,6 @@ references:
   href: https://docs.python.org/3/library/typing.html#typing.no_type_check
   name: no_type_check
   uid: typing.no_type_check
-- fullName: typing.no_type_check_decorator
-  href: https://docs.python.org/3/library/typing.html#typing.no_type_check_decorator
-  name: no_type_check_decorator
-  uid: typing.no_type_check_decorator
 - fullName: typing.overload
   href: https://docs.python.org/3/library/typing.html#typing.overload
   name: overload
@@ -43811,6 +45499,10 @@ references:
   href: https://docs.python.org/3/library/unicodedata.html#unicodedata.bidirectional
   name: bidirectional
   uid: unicodedata.bidirectional
+- fullName: unicodedata.block
+  href: https://docs.python.org/3/library/unicodedata.html#unicodedata.block
+  name: block
+  uid: unicodedata.block
 - fullName: unicodedata.category
   href: https://docs.python.org/3/library/unicodedata.html#unicodedata.category
   name: category
@@ -43835,10 +45527,34 @@ references:
   href: https://docs.python.org/3/library/unicodedata.html#unicodedata.east_asian_width
   name: east_asian_width
   uid: unicodedata.east_asian_width
+- fullName: unicodedata.extended_pictographic
+  href: https://docs.python.org/3/library/unicodedata.html#unicodedata.extended_pictographic
+  name: extended_pictographic
+  uid: unicodedata.extended_pictographic
+- fullName: unicodedata.grapheme_cluster_break
+  href: https://docs.python.org/3/library/unicodedata.html#unicodedata.grapheme_cluster_break
+  name: grapheme_cluster_break
+  uid: unicodedata.grapheme_cluster_break
+- fullName: unicodedata.indic_conjunct_break
+  href: https://docs.python.org/3/library/unicodedata.html#unicodedata.indic_conjunct_break
+  name: indic_conjunct_break
+  uid: unicodedata.indic_conjunct_break
 - fullName: unicodedata.is_normalized
   href: https://docs.python.org/3/library/unicodedata.html#unicodedata.is_normalized
   name: is_normalized
   uid: unicodedata.is_normalized
+- fullName: unicodedata.isxidcontinue
+  href: https://docs.python.org/3/library/unicodedata.html#unicodedata.isxidcontinue
+  name: isxidcontinue
+  uid: unicodedata.isxidcontinue
+- fullName: unicodedata.isxidstart
+  href: https://docs.python.org/3/library/unicodedata.html#unicodedata.isxidstart
+  name: isxidstart
+  uid: unicodedata.isxidstart
+- fullName: unicodedata.iter_graphemes
+  href: https://docs.python.org/3/library/unicodedata.html#unicodedata.iter_graphemes
+  name: iter_graphemes
+  uid: unicodedata.iter_graphemes
 - fullName: unicodedata.lookup
   href: https://docs.python.org/3/library/unicodedata.html#unicodedata.lookup
   name: lookup
@@ -44179,6 +45895,10 @@ references:
   href: https://docs.python.org/3/library/winreg.html#winreg.DeleteKeyEx
   name: DeleteKeyEx
   uid: winreg.DeleteKeyEx
+- fullName: winreg.DeleteTree
+  href: https://docs.python.org/3/library/winreg.html#winreg.DeleteTree
+  name: DeleteTree
+  uid: winreg.DeleteTree
 - fullName: winreg.DeleteValue
   href: https://docs.python.org/3/library/winreg.html#winreg.DeleteValue
   name: DeleteValue
@@ -44395,6 +46115,14 @@ references:
   href: https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.tostringlist
   name: tostringlist
   uid: xml.etree.ElementTree.tostringlist
+- fullName: xml.is_valid_name
+  href: https://docs.python.org/3/library/xml.html#xml.is_valid_name
+  name: is_valid_name
+  uid: xml.is_valid_name
+- fullName: xml.is_valid_text
+  href: https://docs.python.org/3/library/xml.html#xml.is_valid_text
+  name: is_valid_text
+  uid: xml.is_valid_text
 - fullName: xml.parsers.expat.ErrorString
   href: https://docs.python.org/3/library/pyexpat.html#xml.parsers.expat.ErrorString
   name: ErrorString
@@ -44459,6 +46187,10 @@ references:
   href: https://docs.python.org/3/library/zlib.html#zlib.adler32
   name: adler32
   uid: zlib.adler32
+- fullName: zlib.adler32_combine
+  href: https://docs.python.org/3/library/zlib.html#zlib.adler32_combine
+  name: adler32_combine
+  uid: zlib.adler32_combine
 - fullName: zlib.compress
   href: https://docs.python.org/3/library/zlib.html#zlib.compress
   name: compress
@@ -44471,6 +46203,10 @@ references:
   href: https://docs.python.org/3/library/zlib.html#zlib.crc32
   name: crc32
   uid: zlib.crc32
+- fullName: zlib.crc32_combine
+  href: https://docs.python.org/3/library/zlib.html#zlib.crc32_combine
+  name: crc32_combine
+  uid: zlib.crc32_combine
 - fullName: zlib.decompress
   href: https://docs.python.org/3/library/zlib.html#zlib.decompress
   name: decompress
@@ -44487,3 +46223,7 @@ references:
   href: https://docs.python.org/3/library/zoneinfo.html#zoneinfo.reset_tzpath
   name: reset_tzpath
   uid: zoneinfo.reset_tzpath
+- fullName: imaplib.IMAP4.file
+  href: https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.file
+  name: file
+  uid: imaplib.IMAP4.file

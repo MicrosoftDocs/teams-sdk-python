@@ -8,6 +8,12 @@ summary: 'The result of a widget''s tools/call request, returned by the bot
   in response to an htmlwidget/calltool invoke activity.
 
 
+  The result is always serialized with content, structuredContent and isError set
+  (defaults [], {} and false),
+
+  because omitted fields can reach the widget as null.
+
+
   Diagnostic: ExperimentalTeamsHtmlWidget
 
 
@@ -25,16 +31,16 @@ constructor:
   syntax: 'McpUiCallToolResult(*, content: list[typing.Annotated[typing.Union[microsoft_teams.api.models.html_widget.call_tool_result.McpUiTextContent,
     microsoft_teams.api.models.html_widget.call_tool_result.McpUiImageContent, microsoft_teams.api.models.html_widget.call_tool_result.McpUiAudioContent,
     microsoft_teams.api.models.html_widget.call_tool_result.McpUiResourceContent],
-    FieldInfo(annotation=NoneType, required=True, discriminator=''type'')]] | None
-    = None, structuredContent: Any | None = None, isError: bool | None = None, **extra_data:
-    Any)'
+    FieldInfo(annotation=NoneType, required=True, discriminator=''type'')]] = <factory>,
+    structuredContent: ~typing.Any = <factory>, isError: bool = False, **extra_data:
+    ~typing.Any)'
   keywordOnlyParameters:
   - name: content
-    defaultValue: None
+    defaultValue: <factory>
   - name: structuredContent
-    defaultValue: None
+    defaultValue: <factory>
   - name: isError
-    defaultValue: None
+    defaultValue: 'False'
 attributes:
 - uid: microsoft_teams.api.McpUiCallToolResult.content
   name: content
@@ -42,11 +48,11 @@ attributes:
   signature: 'content: list[typing.Annotated[typing.Union[microsoft_teams.api.models.html_widget.call_tool_result.McpUiTextContent,
     microsoft_teams.api.models.html_widget.call_tool_result.McpUiImageContent, microsoft_teams.api.models.html_widget.call_tool_result.McpUiAudioContent,
     microsoft_teams.api.models.html_widget.call_tool_result.McpUiResourceContent],
-    FieldInfo(annotation=NoneType, required=True, discriminator=''type'')]] | None'
+    FieldInfo(annotation=NoneType, required=True, discriminator=''type'')]]'
 - uid: microsoft_teams.api.McpUiCallToolResult.is_error
   name: is_error
   summary: Whether the tool call resulted in an error.
-  signature: 'is_error: bool | None'
+  signature: 'is_error: bool'
 - uid: microsoft_teams.api.McpUiCallToolResult.model_config
   name: model_config
   summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
@@ -54,9 +60,9 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_assignment'': True, ''validate_by_alias'':
     True}'
 - uid: microsoft_teams.api.McpUiCallToolResult.structured_content
   name: structured_content
   summary: Structured data that the widget can render from.
-  signature: 'structured_content: Any | None'
+  signature: 'structured_content: Any'

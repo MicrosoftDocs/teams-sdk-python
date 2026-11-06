@@ -1,0 +1,57 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.PlanOptions
+name: PlanOptions
+fullName: microsoft_teams.apps.PlanOptions
+module: microsoft_teams.apps
+summary: 'Metadata for a prompt-bound Plan continuation.
+
+
+  A Plan belongs to a single conversation and prompt. `reply_to_id` should be the
+  activity ID of the
+
+  prompt that launched the Plan, not a later event ID. For an incoming activity, this
+  is
+
+  typically the current activity''s ID, which matches the inbound
+
+  `conversation_ref.activity_id` for the prompt being continued.
+
+
+  `conversation_id` identifies the Teams conversation and is used as the outbound
+
+  conversation target for each Plan send. The runtime client is scoped to the matching
+
+  service URL before sends, while the serialized Plan itself remains a lightweight
+  record
+
+  of the conversation and prompt binding.
+
+
+  `reply_chain` is the reply chain (thread) of a chat that `complete` posts to, as
+  `ctx.send` does.
+
+  Omit it when `conversation_id` already identifies the thread, as in a channel, or
+  when the prompt is not
+
+  inside a thread. Typing updates (start, update, stop, error) are sent to the conversation,
+  as `ctx.send`
+
+  does for typing activities.
+
+
+  `api_client` is runtime-only and intentionally excluded from model serialization.'
+constructor:
+  syntax: PlanOptions()
+attributes:
+- uid: microsoft_teams.apps.PlanOptions.api_client
+  name: api_client
+  signature: 'api_client: ApiClient'
+- uid: microsoft_teams.apps.PlanOptions.conversation_id
+  name: conversation_id
+  signature: 'conversation_id: str'
+- uid: microsoft_teams.apps.PlanOptions.reply_chain
+  name: reply_chain
+  signature: 'reply_chain: PlanReplyChain | None'
+- uid: microsoft_teams.apps.PlanOptions.reply_to_id
+  name: reply_to_id
+  signature: 'reply_to_id: str'
