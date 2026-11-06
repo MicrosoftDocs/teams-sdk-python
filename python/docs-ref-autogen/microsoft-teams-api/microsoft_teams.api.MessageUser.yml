@@ -17,8 +17,8 @@ summary: 'Represents a user entity.
 
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
-  syntax: 'MessageUser(*, userIdentityType: UserIdentityType | None = None, id: str,
-    displayName: str | None = None, **extra_data: Any)'
+  syntax: 'MessageUser(*, userIdentityType: UserIdentityType | str | None = None,
+    id: str, displayName: str | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: userIdentityType
     defaultValue: None
@@ -42,9 +42,8 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.MessageUser.user_identity_type
   name: user_identity_type
   summary: The identity type of the user.
-  signature: 'user_identity_type: UserIdentityType | None'
+  signature: 'user_identity_type: UserIdentityType | str | None'

@@ -20,8 +20,10 @@ constructor:
   syntax: 'IncomingFile(*, name: str, scope: Literal[''personal'', ''groupChat'',
     ''channel''] | str, source: Literal[''botActivity'', ''graph''], unique_id: str
     | None = None, content_type: str | None = None, extension: str | None = None,
-    content_url: str | None = None, raw: Any = None, download_url: str | None = None,
-    client: AsyncClient | None = None, credential: GraphCredential | None = None)'
+    attachment_style: Literal[''file'', ''inlineImage''] = ''file'', content_url:
+    str | None = None, raw: Any = None, inline_image_base_name: str | None = None,
+    download_url: str | None = None, client: AsyncClient | None = None, credential:
+    GraphCredential | None = None, bot_api_credential: BotApiCredential | None = None)'
   keywordOnlyParameters:
   - name: name
     isRequired: true
@@ -35,15 +37,21 @@ constructor:
     defaultValue: None
   - name: extension
     defaultValue: None
+  - name: attachment_style
+    defaultValue: file
   - name: content_url
     defaultValue: None
   - name: raw
+    defaultValue: None
+  - name: inline_image_base_name
     defaultValue: None
   - name: download_url
     defaultValue: None
   - name: client
     defaultValue: None
   - name: credential
+    defaultValue: None
+  - name: bot_api_credential
     defaultValue: None
 methods:
 - uid: microsoft_teams.apps.IncomingFile.download
@@ -92,17 +100,35 @@ methods:
   - name: encoding
     defaultValue: utf-8
 attributes:
+- uid: microsoft_teams.apps.IncomingFile.attachment_style
+  name: attachment_style
+  summary: 'sent as a file, or pasted inline as an image.
+
+    See *AttachmentStyle*.'
+  signature: 'attachment_style: Literal[''file'', ''inlineImage'']'
 - uid: microsoft_teams.apps.IncomingFile.content_type
   name: content_type
-  summary: 'a *file.download.info*
+  summary: 'a
 
-    attachment carries no MIME type, only the *file_type* extension surfaced as *extension*.
-    Populated for sources
+    *file.download.info* attachment carries no MIME type, only the *file_type* extension
+    surfaced as *extension*.
 
-    that do carry one, such as a *graph* drive item. To learn the type of the bytes
-    you actually received, read
+    Populated for sources that do carry one, such as a *graph* drive item. To learn
+    the type of the bytes you actually
 
-    *DownloadedFile.content_type*, which is resolved from the download response.'
+    received, read *DownloadedFile.content_type*, which is resolved from the download
+    response.
+
+
+    For an inline image, it is the type named by the format hint when that is PNG,
+    JPEG, GIF, or WebP, otherwise
+
+    *application/octet-stream*.
+
+    Teams saves a pasted GIF as a static PNG, so the SDK cannot name or type it with
+    confidence: it is listed as
+
+    *.gif* and *image/gif* but downloads as a PNG.'
   signature: 'content_type: str | None'
 - uid: microsoft_teams.apps.IncomingFile.content_url
   name: content_url
@@ -113,22 +139,40 @@ attributes:
     Not fetchable for bytes despite the name, but it is the locator a Graph */shares*
     resolution keys off; bytes
 
-    come from *download()* or *stream()*.'
+    come from *download()* or *stream()*.
+
+    For an inline image, it is the image''s Bot API location instead.'
   signature: 'content_url: str | None'
 - uid: microsoft_teams.apps.IncomingFile.extension
   name: extension
   summary: 'File extension without the dot (e.g. *pdf*), taken from the platform-supplied
     *file_type*. Absent when the wire
 
-    omits it.'
+    omits it.
+
+    For an inline image, it is taken from *name* and is absent when the name has none.'
   signature: 'extension: str | None'
 - uid: microsoft_teams.apps.IncomingFile.name
   name: name
-  summary: Display name including extension when known.
+  summary: 'Display name including extension when known.
+
+    An inline image has no name, so it is named *image-<attachment id>*.
+
+    An extension is added only for PNG, JPEG, GIF, or WebP.
+
+    Teams saves a pasted GIF as a static PNG, so the SDK cannot name or type it with
+    confidence: it is listed as
+
+    *.gif* and *image/gif* but downloads as a PNG.'
   signature: 'name: str'
 - uid: microsoft_teams.apps.IncomingFile.raw
   name: raw
-  summary: The raw underlying attachment/graph object for escape-hatch access.
+  summary: 'The raw underlying attachment/graph object for escape-hatch access.
+
+    For an inline image, only the image attachment is included; the HTML attachment
+    that supplies its format hint
+
+    stays in *ctx.activity.attachments*.'
   signature: 'raw: Any'
 - uid: microsoft_teams.apps.IncomingFile.scope
   name: scope
@@ -149,5 +193,7 @@ attributes:
     */shares*, and this value arrives as a GUID, which is a SharePoint *listItemUniqueId*
     shape rather than a Graph
 
-    *driveItem.id*. Present only when the wire provided it.'
+    *driveItem.id*. Present only when the wire provided it.
+
+    Always *None* for inline images, which are not stored in OneDrive or SharePoint.'
   signature: 'unique_id: str | None'

@@ -22,8 +22,8 @@ constructor:
   syntax: 'Message(*, id: str, replyToId: str | None = None, messageType: Literal[''message'']
     | None = ''message'', createdDateTime: str | None = None, lastModifiedDateTime:
     str | None = None, deleted: bool | None = None, subject: str | None = None, summary:
-    str | None = None, importance: Importance | None = None, locale: str | None =
-    None, linkToMessage: str | None = None, from_: MessageFrom | None = None, body:
+    str | None = None, importance: Importance | str | None = None, locale: str | None
+    = None, linkToMessage: str | None = None, from_: MessageFrom | None = None, body:
     MessageBody | None = None, attachmentLayout: str | None = None, attachments: List[Attachment]
     | None = None, mentions: List[MessageMention] | None = None, reactions: List[MessageReaction]
     | None = None, **extra_data: Any)'
@@ -94,7 +94,7 @@ attributes:
 - uid: microsoft_teams.api.Message.importance
   name: importance
   summary: The importance of the message.
-  signature: 'importance: Importance | None'
+  signature: 'importance: Importance | str | None'
 - uid: microsoft_teams.api.Message.last_modified_date_time
   name: last_modified_date_time
   summary: Timestamp of when the message was edited or updated.
@@ -122,8 +122,7 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.Message.reactions
   name: reactions
   summary: Reactions for the message.

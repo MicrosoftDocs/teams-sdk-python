@@ -15,8 +15,8 @@ summary: 'Create a new model by parsing and validating input data from keyword a
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
   syntax: 'CitationAppearance(*, name: str, text: str | None = None, url: str | None
-    = None, abstract: str, icon: CitationIconName | None = None, keywords: List[str]
-    | None = None, usageInfo: CitationUsageInfo | None = None, **extra_data: Any)'
+    = None, abstract: str, icon: CitationIconName | str | None = None, keywords: List[str]
+    | None = None, usageInfo: SensitivityUsageInfo | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: name
     isRequired: true
@@ -59,7 +59,7 @@ attributes:
 - uid: microsoft_teams.api.CitationAppearance.icon
   name: icon
   summary: Information about the citation's icon
-  signature: 'icon: CitationIconName | None'
+  signature: 'icon: CitationIconName | str | None'
 - uid: microsoft_teams.api.CitationAppearance.keywords
   name: keywords
   summary: Keywords (max length 3) (max keyword length 28)
@@ -71,8 +71,7 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.CitationAppearance.name
   name: name
   summary: Name of the document (max length 80)
@@ -90,4 +89,4 @@ attributes:
 - uid: microsoft_teams.api.CitationAppearance.usage_info
   name: usage_info
   summary: Sensitivity content information
-  signature: 'usage_info: CitationUsageInfo | None'
+  signature: 'usage_info: SensitivityUsageInfo | None'

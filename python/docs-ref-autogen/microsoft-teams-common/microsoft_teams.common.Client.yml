@@ -42,8 +42,8 @@ methods:
   signature: 'async delete(url: str, *, headers: Dict[str, str] | None = None, token:
     str | StringLike | Callable[[], str | StringLike | None | Awaitable[str | StringLike
     | None]] | None = None, params: QueryParams | Mapping[str, str | int | float |
-    bool | None | Sequence[str | int | float | bool | None]] | List[Tuple[str, str
-    | int | float | bool | None]] | Tuple[Tuple[str, str | int | float | bool | None],
+    bool | None | Sequence[str | int | float | bool | None]] | list[tuple[str, str
+    | int | float | bool | None]] | tuple[tuple[str, str | int | float | bool | None],
     ...] | str | bytes | None = None, **kwargs: Any) -> Response'
   parameters:
   - name: url
@@ -59,7 +59,7 @@ methods:
     description: Optional per-request token (overrides default).
     isRequired: true
   - name: '**kwargs'
-    description: Additional httpx.AsyncClient.delete arguments.
+    description: Additional httpx2.AsyncClient.delete arguments.
     isRequired: true
   keywordOnlyParameters:
   - name: headers
@@ -69,15 +69,15 @@ methods:
   - name: params
     defaultValue: None
   return:
-    description: httpx.Response
+    description: httpx2.Response
 - uid: microsoft_teams.common.Client.get
   name: get
   summary: Send a GET request.
   signature: 'async get(url: str, *, headers: Dict[str, str] | None = None, token:
     str | StringLike | Callable[[], str | StringLike | None | Awaitable[str | StringLike
     | None]] | None = None, params: QueryParams | Mapping[str, str | int | float |
-    bool | None | Sequence[str | int | float | bool | None]] | List[Tuple[str, str
-    | int | float | bool | None]] | Tuple[Tuple[str, str | int | float | bool | None],
+    bool | None | Sequence[str | int | float | bool | None]] | list[tuple[str, str
+    | int | float | bool | None]] | tuple[tuple[str, str | int | float | bool | None],
     ...] | str | bytes | None = None, **kwargs: Any) -> Response'
   parameters:
   - name: url
@@ -93,7 +93,7 @@ methods:
     description: Optional per-request token (overrides default).
     isRequired: true
   - name: '**kwargs'
-    description: Additional httpx.AsyncClient.get arguments.
+    description: Additional httpx2.AsyncClient.get arguments.
     isRequired: true
   keywordOnlyParameters:
   - name: headers
@@ -103,23 +103,24 @@ methods:
   - name: params
     defaultValue: None
   return:
-    description: httpx.Response
+    description: httpx2.Response
 - uid: microsoft_teams.common.Client.patch
   name: patch
   summary: Send a PATCH request.
   signature: 'async patch(url: str, *, content: str | bytes | Iterable[bytes] | AsyncIterable[bytes]
-    | None = None, data: Mapping[str, Any] | None = None, files: Mapping[str, IO[bytes]
-    | bytes | str | Tuple[str | None, IO[bytes] | bytes | str] | Tuple[str | None,
-    IO[bytes] | bytes | str, str | None] | Tuple[str | None, IO[bytes] | bytes | str,
-    str | None, Mapping[str, str]]] | Sequence[Tuple[str, IO[bytes] | bytes | str
-    | Tuple[str | None, IO[bytes] | bytes | str] | Tuple[str | None, IO[bytes] | bytes
-    | str, str | None] | Tuple[str | None, IO[bytes] | bytes | str, str | None, Mapping[str,
-    str]]]] | None = None, json: Any | None = None, params: QueryParams | Mapping[str,
-    str | int | float | bool | None | Sequence[str | int | float | bool | None]] |
-    List[Tuple[str, str | int | float | bool | None]] | Tuple[Tuple[str, str | int
-    | float | bool | None], ...] | str | bytes | None = None, headers: Dict[str, str]
-    | None = None, token: str | StringLike | Callable[[], str | StringLike | None
-    | Awaitable[str | StringLike | None]] | None = None, **kwargs: Any) -> Response'
+    | None = None, data: Mapping[str, object] | None = None, files: Mapping[str, IO[bytes]
+    | bytes | str | tuple[str | None, Union[IO[bytes], bytes, str]] | tuple[str |
+    None, Union[IO[bytes], bytes, str], str | None] | tuple[str | None, Union[IO[bytes],
+    bytes, str], str | None, collections.abc.Mapping[str, str]]] | Sequence[tuple[str,
+    Union[IO[bytes], bytes, str, tuple[str | None, Union[IO[bytes], bytes, str]],
+    tuple[str | None, Union[IO[bytes], bytes, str], str | None], tuple[str | None,
+    Union[IO[bytes], bytes, str], str | None, collections.abc.Mapping[str, str]]]]]
+    | None = None, json: Any | None = None, params: QueryParams | Mapping[str, str
+    | int | float | bool | None | Sequence[str | int | float | bool | None]] | list[tuple[str,
+    str | int | float | bool | None]] | tuple[tuple[str, str | int | float | bool
+    | None], ...] | str | bytes | None = None, headers: Dict[str, str] | None = None,
+    token: str | StringLike | Callable[[], str | StringLike | None | Awaitable[str
+    | StringLike | None]] | None = None, **kwargs: Any) -> Response'
   parameters:
   - name: url
     description: The URL path or full URL.
@@ -146,7 +147,7 @@ methods:
     description: Optional per-request token (overrides default).
     isRequired: true
   - name: '**kwargs'
-    description: Additional httpx.AsyncClient.patch arguments.
+    description: Additional httpx2.AsyncClient.patch arguments.
     isRequired: true
   keywordOnlyParameters:
   - name: content
@@ -164,23 +165,24 @@ methods:
   - name: token
     defaultValue: None
   return:
-    description: httpx.Response
+    description: httpx2.Response
 - uid: microsoft_teams.common.Client.post
   name: post
   summary: Send a POST request.
   signature: 'async post(url: str, *, content: str | bytes | Iterable[bytes] | AsyncIterable[bytes]
-    | None = None, data: Mapping[str, Any] | None = None, files: Mapping[str, IO[bytes]
-    | bytes | str | Tuple[str | None, IO[bytes] | bytes | str] | Tuple[str | None,
-    IO[bytes] | bytes | str, str | None] | Tuple[str | None, IO[bytes] | bytes | str,
-    str | None, Mapping[str, str]]] | Sequence[Tuple[str, IO[bytes] | bytes | str
-    | Tuple[str | None, IO[bytes] | bytes | str] | Tuple[str | None, IO[bytes] | bytes
-    | str, str | None] | Tuple[str | None, IO[bytes] | bytes | str, str | None, Mapping[str,
-    str]]]] | None = None, json: Any | None = None, params: QueryParams | Mapping[str,
-    str | int | float | bool | None | Sequence[str | int | float | bool | None]] |
-    List[Tuple[str, str | int | float | bool | None]] | Tuple[Tuple[str, str | int
-    | float | bool | None], ...] | str | bytes | None = None, headers: Dict[str, str]
-    | None = None, token: str | StringLike | Callable[[], str | StringLike | None
-    | Awaitable[str | StringLike | None]] | None = None, **kwargs: Any) -> Response'
+    | None = None, data: Mapping[str, object] | None = None, files: Mapping[str, IO[bytes]
+    | bytes | str | tuple[str | None, Union[IO[bytes], bytes, str]] | tuple[str |
+    None, Union[IO[bytes], bytes, str], str | None] | tuple[str | None, Union[IO[bytes],
+    bytes, str], str | None, collections.abc.Mapping[str, str]]] | Sequence[tuple[str,
+    Union[IO[bytes], bytes, str, tuple[str | None, Union[IO[bytes], bytes, str]],
+    tuple[str | None, Union[IO[bytes], bytes, str], str | None], tuple[str | None,
+    Union[IO[bytes], bytes, str], str | None, collections.abc.Mapping[str, str]]]]]
+    | None = None, json: Any | None = None, params: QueryParams | Mapping[str, str
+    | int | float | bool | None | Sequence[str | int | float | bool | None]] | list[tuple[str,
+    str | int | float | bool | None]] | tuple[tuple[str, str | int | float | bool
+    | None], ...] | str | bytes | None = None, headers: Dict[str, str] | None = None,
+    token: str | StringLike | Callable[[], str | StringLike | None | Awaitable[str
+    | StringLike | None]] | None = None, **kwargs: Any) -> Response'
   parameters:
   - name: url
     description: The URL path or full URL.
@@ -207,7 +209,7 @@ methods:
     description: Optional per-request token (overrides default).
     isRequired: true
   - name: '**kwargs'
-    description: Additional httpx.AsyncClient.post arguments.
+    description: Additional httpx2.AsyncClient.post arguments.
     isRequired: true
   keywordOnlyParameters:
   - name: content
@@ -225,23 +227,24 @@ methods:
   - name: token
     defaultValue: None
   return:
-    description: httpx.Response
+    description: httpx2.Response
 - uid: microsoft_teams.common.Client.put
   name: put
   summary: Send a PUT request.
   signature: 'async put(url: str, *, content: str | bytes | Iterable[bytes] | AsyncIterable[bytes]
-    | None = None, data: Mapping[str, Any] | None = None, files: Mapping[str, IO[bytes]
-    | bytes | str | Tuple[str | None, IO[bytes] | bytes | str] | Tuple[str | None,
-    IO[bytes] | bytes | str, str | None] | Tuple[str | None, IO[bytes] | bytes | str,
-    str | None, Mapping[str, str]]] | Sequence[Tuple[str, IO[bytes] | bytes | str
-    | Tuple[str | None, IO[bytes] | bytes | str] | Tuple[str | None, IO[bytes] | bytes
-    | str, str | None] | Tuple[str | None, IO[bytes] | bytes | str, str | None, Mapping[str,
-    str]]]] | None = None, json: Any | None = None, params: QueryParams | Mapping[str,
-    str | int | float | bool | None | Sequence[str | int | float | bool | None]] |
-    List[Tuple[str, str | int | float | bool | None]] | Tuple[Tuple[str, str | int
-    | float | bool | None], ...] | str | bytes | None = None, headers: Dict[str, str]
-    | None = None, token: str | StringLike | Callable[[], str | StringLike | None
-    | Awaitable[str | StringLike | None]] | None = None, **kwargs: Any) -> Response'
+    | None = None, data: Mapping[str, object] | None = None, files: Mapping[str, IO[bytes]
+    | bytes | str | tuple[str | None, Union[IO[bytes], bytes, str]] | tuple[str |
+    None, Union[IO[bytes], bytes, str], str | None] | tuple[str | None, Union[IO[bytes],
+    bytes, str], str | None, collections.abc.Mapping[str, str]]] | Sequence[tuple[str,
+    Union[IO[bytes], bytes, str, tuple[str | None, Union[IO[bytes], bytes, str]],
+    tuple[str | None, Union[IO[bytes], bytes, str], str | None], tuple[str | None,
+    Union[IO[bytes], bytes, str], str | None, collections.abc.Mapping[str, str]]]]]
+    | None = None, json: Any | None = None, params: QueryParams | Mapping[str, str
+    | int | float | bool | None | Sequence[str | int | float | bool | None]] | list[tuple[str,
+    str | int | float | bool | None]] | tuple[tuple[str, str | int | float | bool
+    | None], ...] | str | bytes | None = None, headers: Dict[str, str] | None = None,
+    token: str | StringLike | Callable[[], str | StringLike | None | Awaitable[str
+    | StringLike | None]] | None = None, **kwargs: Any) -> Response'
   parameters:
   - name: url
     description: The URL path or full URL.
@@ -268,7 +271,7 @@ methods:
     description: Optional per-request token (overrides default).
     isRequired: true
   - name: '**kwargs'
-    description: Additional httpx.AsyncClient.put arguments.
+    description: Additional httpx2.AsyncClient.put arguments.
     isRequired: true
   keywordOnlyParameters:
   - name: content
@@ -286,24 +289,24 @@ methods:
   - name: token
     defaultValue: None
   return:
-    description: httpx.Response
+    description: httpx2.Response
 - uid: microsoft_teams.common.Client.request
   name: request
   summary: Send a custom HTTP request.
   signature: 'async request(method: str, url: str, *, params: QueryParams | Mapping[str,
     str | int | float | bool | None | Sequence[str | int | float | bool | None]] |
-    List[Tuple[str, str | int | float | bool | None]] | Tuple[Tuple[str, str | int
+    list[tuple[str, str | int | float | bool | None]] | tuple[tuple[str, str | int
     | float | bool | None], ...] | str | bytes | None = None, headers: Dict[str, str]
     | None = None, token: str | StringLike | Callable[[], str | StringLike | None
     | Awaitable[str | StringLike | None]] | None = None, content: str | bytes | Iterable[bytes]
-    | AsyncIterable[bytes] | None = None, data: Mapping[str, Any] | None = None, files:
-    Mapping[str, IO[bytes] | bytes | str | Tuple[str | None, IO[bytes] | bytes | str]
-    | Tuple[str | None, IO[bytes] | bytes | str, str | None] | Tuple[str | None, IO[bytes]
-    | bytes | str, str | None, Mapping[str, str]]] | Sequence[Tuple[str, IO[bytes]
-    | bytes | str | Tuple[str | None, IO[bytes] | bytes | str] | Tuple[str | None,
-    IO[bytes] | bytes | str, str | None] | Tuple[str | None, IO[bytes] | bytes | str,
-    str | None, Mapping[str, str]]]] | None = None, json: Any | None = None, **kwargs:
-    Any) -> Response'
+    | AsyncIterable[bytes] | None = None, data: Mapping[str, object] | None = None,
+    files: Mapping[str, IO[bytes] | bytes | str | tuple[str | None, Union[IO[bytes],
+    bytes, str]] | tuple[str | None, Union[IO[bytes], bytes, str], str | None] | tuple[str
+    | None, Union[IO[bytes], bytes, str], str | None, collections.abc.Mapping[str,
+    str]]] | Sequence[tuple[str, Union[IO[bytes], bytes, str, tuple[str | None, Union[IO[bytes],
+    bytes, str]], tuple[str | None, Union[IO[bytes], bytes, str], str | None], tuple[str
+    | None, Union[IO[bytes], bytes, str], str | None, collections.abc.Mapping[str,
+    str]]]]] | None = None, json: Any | None = None, **kwargs: Any) -> Response'
   parameters:
   - name: method
     description: HTTP method (GET, POST, etc).
@@ -333,7 +336,7 @@ methods:
     description: Optional per-request token (overrides default).
     isRequired: true
   - name: '**kwargs'
-    description: Additional httpx.AsyncClient.request arguments.
+    description: Additional httpx2.AsyncClient.request arguments.
     isRequired: true
   keywordOnlyParameters:
   - name: params
@@ -351,7 +354,7 @@ methods:
   - name: json
     defaultValue: None
   return:
-    description: httpx.Response
+    description: httpx2.Response
 - uid: microsoft_teams.common.Client.use
   name: use
   summary: 'Register middleware for terminal request dispatch.

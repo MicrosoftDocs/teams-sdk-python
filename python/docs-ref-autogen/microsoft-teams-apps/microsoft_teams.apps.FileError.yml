@@ -4,9 +4,10 @@ name: FileError
 fullName: microsoft_teams.apps.FileError
 module: microsoft_teams.apps
 summary: 'Base class for the diagnosable failures on the inbound-file path: an expired
-  URL, an unsupported scope, and a
+  URL, an unsupported scope, a
 
-  refused Graph read.
+  missing Graph credential, a refused Graph read, and an inline image that was refused
+  or could not be converted.
 
 
   Lets a caller catch those with one *except* clause, so a new one can be added without

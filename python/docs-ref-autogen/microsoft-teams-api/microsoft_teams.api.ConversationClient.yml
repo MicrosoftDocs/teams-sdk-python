@@ -74,6 +74,43 @@ methods:
     defaultValue: None
   - name: agentic_identity
     defaultValue: None
+- uid: microsoft_teams.api.ConversationClient.create_reply_chain_activity
+  name: create_reply_chain_activity
+  summary: 'Create an activity inside a reply chain (thread).
+
+
+    This API is in preview and may change in the future.
+
+    Diagnostic: ExperimentalTeamsThreading'
+  signature: 'async create_reply_chain_activity(conversation_id: str, activity_id:
+    str, activity: MessageActivityInput | MessageReactionActivityInput | TypingActivityInput,
+    *, service_url: str | None = None, agentic_identity: AgenticIdentity | None =
+    None) -> SentActivity'
+  parameters:
+  - name: conversation_id
+    description: 'The id of the chat or channel: *channel_data.chat.id* or *channel_data.channel.id*,
+
+      **not** *conversation.id*.'
+    isRequired: true
+  - name: activity_id
+    description: 'The id of the message at the root of the reply chain.
+
+      Use *channel_data.reply_chain.id*.'
+    isRequired: true
+  - name: activity
+    description: The activity to create
+    isRequired: true
+  keywordOnlyParameters:
+  - name: service_url
+    defaultValue: None
+  - name: agentic_identity
+    defaultValue: None
+  return:
+    description: The created activity
+  exceptions:
+  - type: ValueError
+    description: If *conversation_id* or *activity_id* is blank, or is a dot segment
+      ( *.* or *..*
 - uid: microsoft_teams.api.ConversationClient.create_targeted_activity
   name: create_targeted_activity
   summary: Create a targeted activity in a conversation.
@@ -90,6 +127,44 @@ methods:
     defaultValue: None
   - name: agentic_identity
     defaultValue: None
+- uid: microsoft_teams.api.ConversationClient.create_targeted_reply_chain_activity
+  name: create_targeted_reply_chain_activity
+  summary: 'Create an activity inside a reply chain (thread) that is visible only
+    to the specified recipient.
+
+
+    This API is in preview and may change in the future.
+
+    Diagnostic: ExperimentalTeamsThreading'
+  signature: 'async create_targeted_reply_chain_activity(conversation_id: str, activity_id:
+    str, activity: MessageActivityInput | MessageReactionActivityInput | TypingActivityInput,
+    *, service_url: str | None = None, agentic_identity: AgenticIdentity | None =
+    None) -> SentActivity'
+  parameters:
+  - name: conversation_id
+    description: 'The id of the chat or channel: *channel_data.chat.id* or *channel_data.channel.id*,
+
+      **not** *conversation.id*.'
+    isRequired: true
+  - name: activity_id
+    description: 'The id of the message at the root of the reply chain.
+
+      Use *channel_data.reply_chain.id*.'
+    isRequired: true
+  - name: activity
+    description: The activity to create
+    isRequired: true
+  keywordOnlyParameters:
+  - name: service_url
+    defaultValue: None
+  - name: agentic_identity
+    defaultValue: None
+  return:
+    description: The created activity
+  exceptions:
+  - type: ValueError
+    description: If *conversation_id* or *activity_id* is blank, or is a dot segment
+      ( *.* or *..*
 - uid: microsoft_teams.api.ConversationClient.delete_activity
   name: delete_activity
   summary: Delete an activity in a conversation.

@@ -22,12 +22,12 @@ constructor:
     channelId: Literal[''webchat'', ''msteams''] | str | None = None, from_: Account
     | None = None, conversation: ConversationAccount | None = None, replyToId: str
     | None = None, entities: List[ClientInfoEntity | MentionEntity | MessageEntity
-    | AIMessageEntity | StreamInfoEntity | CitationEntity | SensitiveUsageEntity |
-    ProductInfoEntity | QuotedReplyEntity | TargetedMessageInfoEntity | UnknownEntity]
+    | AIMessageEntity | StreamInfoEntity | PlanInfoEntity | CitationEntity | SensitiveUsageEntity
+    | ProductInfoEntity | QuotedReplyEntity | TargetedMessageInfoEntity | UnknownEntity]
     | None = None, channelData: ChannelData | None = None, type: Literal[''message'']
     = ''message'', id: str | None = None, recipient: Account | None = None, text:
     str | None = None, textFormat: Literal[''markdown'', ''plain'', ''xml'', ''extendedmarkdown'']
-    | None = None, attachmentLayout: AttachmentLayout | None = None, attachments:
+    | str | None = None, attachmentLayout: AttachmentLayout | str | None = None, attachments:
     List[Attachment] | None = None, suggestedActions: SuggestedActions | None = None,
     **extra_data: Any)'
   keywordOnlyParameters:
@@ -97,13 +97,20 @@ methods:
     description: Self for method chaining
 - uid: microsoft_teams.api.MessageActivityInput.add_citation
   name: add_citation
-  summary: Add citations.
+  summary: 'Add a citation to the message.
+
+    Copies *appearance.usage_info* onto the citation, defaulting its *@type* to ''CreativeWork''.'
   signature: 'add_citation(position: int, appearance: CitationAppearance) -> Self'
   parameters:
   - name: position
+    description: The citation's position, matching its *[n]* marker in the message
+      text.
     isRequired: true
   - name: appearance
+    description: How the citation is displayed.
     isRequired: true
+  return:
+    description: Self for method chaining
 - uid: microsoft_teams.api.MessageActivityInput.add_feedback
   name: add_feedback
   summary: Enable message feedback.
@@ -149,6 +156,18 @@ methods:
   - name: text
     description: Optional text, appended to the quoted message placeholder
     defaultValue: None
+  return:
+    description: Self for method chaining
+- uid: microsoft_teams.api.MessageActivityInput.add_sensitivity_label
+  name: add_sensitivity_label
+  summary: 'Add a Microsoft Purview sensitivity label to the message.
+
+    Replaces any label previously added.'
+  signature: 'add_sensitivity_label(label: SensitivityUsageInfo) -> Self'
+  parameters:
+  - name: label
+    description: The sensitivity label, identified by its Purview label ID.
+    isRequired: true
   return:
     description: Self for method chaining
 - uid: microsoft_teams.api.MessageActivityInput.add_stream_final
@@ -220,7 +239,8 @@ methods:
 - uid: microsoft_teams.api.MessageActivityInput.with_attachment_layout
   name: with_attachment_layout
   summary: Set the layout hint for multiple attachments.
-  signature: 'with_attachment_layout(attachment_layout: AttachmentLayout) -> Self'
+  signature: 'with_attachment_layout(attachment_layout: AttachmentLayout | str) ->
+    Self'
   parameters:
   - name: attachment_layout
     description: Attachment layout (list, carousel)
@@ -268,7 +288,7 @@ methods:
   name: with_text_format
   summary: Set the format of text fields.
   signature: 'with_text_format(text_format: Literal[''markdown'', ''plain'', ''xml'',
-    ''extendedmarkdown'']) -> Self'
+    ''extendedmarkdown''] | str) -> Self'
   parameters:
   - name: text_format
     description: Text format (markdown, plain, xml, extendedmarkdown)
@@ -283,5 +303,4 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'

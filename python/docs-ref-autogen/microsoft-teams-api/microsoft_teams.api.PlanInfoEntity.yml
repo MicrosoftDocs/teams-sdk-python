@@ -1,0 +1,57 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.PlanInfoEntity
+name: PlanInfoEntity
+fullName: microsoft_teams.api.PlanInfoEntity
+module: microsoft_teams.api
+summary: 'Activity entity carrying a Plan lifecycle operation and optional steps.
+
+
+  `start` begins a Plan, `continue` adds or updates steps, and `complete`,
+
+  `stop`, and `error` signal the corresponding terminal state.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'PlanInfoEntity(*, type: Literal[''planInfo''] = ''planInfo'', planType:
+    Literal[''start'', ''continue'', ''complete'', ''stop'', ''error''], steps: list[microsoft_teams.api.models.entity.plan_info_entity.Step]
+    | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: type
+    defaultValue: planInfo
+  - name: planType
+    isRequired: true
+  - name: steps
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.PlanInfoEntity.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
+- uid: microsoft_teams.api.PlanInfoEntity.plan_type
+  name: plan_type
+  summary: Plan lifecycle operation to send.
+  signature: 'plan_type: Literal[''start'', ''continue'', ''complete'', ''stop'',
+    ''error'']'
+- uid: microsoft_teams.api.PlanInfoEntity.steps
+  name: steps
+  summary: Optional steps for the operation; updated steps must increment their version.
+  signature: 'steps: list[microsoft_teams.api.models.entity.plan_info_entity.Step]
+    | None'
+- uid: microsoft_teams.api.PlanInfoEntity.type
+  name: type
+  summary: Type identifier for a Plan information entity.
+  signature: 'type: Literal[''planInfo'']'

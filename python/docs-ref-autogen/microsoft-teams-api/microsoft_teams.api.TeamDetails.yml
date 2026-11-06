@@ -18,9 +18,9 @@ summary: 'Details related to a team.
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
   syntax: 'TeamDetails(*, id: str, name: str | None = None, type: Literal[''standard'',
-    ''sharedChannel'', ''privateChannel''] | None = None, aadGroupId: str | None =
-    None, channelCount: int | None = None, memberCount: int | None = None, tenantId:
-    str | None = None, **extra_data: Any)'
+    ''sharedChannel'', ''privateChannel''] | str | None = None, aadGroupId: str |
+    None = None, channelCount: int | None = None, memberCount: int | None = None,
+    tenantId: str | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: id
     isRequired: true
@@ -60,8 +60,7 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.TeamDetails.name
   name: name
   summary: Name of team.
@@ -74,4 +73,4 @@ attributes:
   name: type
   summary: The type of the team. Valid values are standard, sharedChannel and privateChannel.
   signature: 'type: Literal[''standard'', ''sharedChannel'', ''privateChannel''] |
-    None'
+    str | None'

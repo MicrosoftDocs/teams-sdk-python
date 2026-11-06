@@ -3,45 +3,51 @@ uid: microsoft_teams.apps.FilesAccessor
 name: FilesAccessor
 fullName: microsoft_teams.apps.FilesAccessor
 module: microsoft_teams.apps
-summary: 'Accessor for the uploaded files on the current inbound activity, exposed
-  as *ctx.files*.
+summary: 'Accessor for the uploaded files and inline images on the current inbound
+  activity, exposed as *ctx.files*.
 
 
-  "Files" is the uploaded-file view over the raw *ctx.activity.attachments* array.
-  Uploaded files arrive as
+  "Files" is a filter over the raw *ctx.activity.attachments* array. Uploaded files
+  arrive as attachments where
 
-  attachments where *content_type* is *file.download.info*, carrying file metadata
-  rather than the bytes themselves.
+  *content_type* is *file.download.info*, carrying file metadata rather than the bytes
+  themselves. The metadata
 
-  The metadata names where the bytes live: a pre-authorized *download_url* when the
-  platform issues one, otherwise a
+  names where the bytes live: a pre-authorized *download_url* when the platform issues
+  one, otherwise a
 
-  *content_url* that locates the item so Graph can resolve it. This accessor maps
-  each to an
-
-  *IncomingFile*, and skips everything else in *attachments* (adaptive cards, mentions,
-  other non-file content) as
-
-  well as malformed file entries, never throwing. For each file it returns, the original
-  wire attachment (the
-
-  metadata object, not the bytes) is retained on *IncomingFile.raw*. A malformed or
-  non-file attachment is reachable
-
-  only through the raw *activity.attachments* array.
-
-
-  This covers the file-upload path, not "any uploaded media". What matters is how
+  *content_url* that locates the item so Graph can resolve it. What matters is how
   the content arrived, not the
 
-  file''s MIME type, so file *type* is unrestricted (pdf, docx, png, etc.) as long
-  as it was sent as an uploaded
-
-  file. An image sent as a file appears here, but the same image pasted inline does
-  not.
+  file''s MIME type, so any file type (pdf, docx, png, etc.) sent as an uploaded file
+  is listed.
 
 
-  The optional *client* is the app''s shared *httpx.AsyncClient*, threaded into every
+  Images pasted inline into the message are included, with *IncomingFile.attachment_style*
+  set to *inlineImage*. An
+
+  inline image not hosted on the activity''s service URL is skipped with a warning.
+  See *AttachmentStyle* for image
+
+  formats that cannot be downloaded.
+
+
+  This accessor maps each listed attachment to an *IncomingFile*, and skips everything
+  else in *attachments*
+
+  (adaptive cards, mentions, other non-file content) as well as malformed file entries,
+  never throwing. For each
+
+  file it returns, the original wire attachment (the metadata object, not the bytes)
+  is retained on
+
+  *IncomingFile.raw*. A malformed or non-file attachment is reachable only through
+  the raw *activity.attachments*
+
+  array.
+
+
+  The optional *client* is the app''s shared *httpx2.AsyncClient*, threaded into every
   *IncomingFile* so downloads
 
   reuse one connection pool instead of building and tearing down a client per file.
@@ -54,7 +60,7 @@ summary: 'Accessor for the uploaded files on the current inbound activity, expos
   closes its own client.'
 constructor:
   syntax: 'FilesAccessor(activity: Activity, client: AsyncClient | None = None, credential:
-    GraphCredential | None = None)'
+    GraphCredential | None = None, bot_api_credential: BotApiCredential | None = None)'
   parameters:
   - name: activity
     isRequired: true
@@ -62,14 +68,23 @@ constructor:
     defaultValue: None
   - name: credential
     defaultValue: None
+  - name: bot_api_credential
+    defaultValue: None
 methods:
 - uid: microsoft_teams.apps.FilesAccessor.first
   name: first
-  summary: 'Convenience: the first attached file, or *None* when none. Sugar over
-    *list()[0]*; shares *list()*''s
+  summary: 'Convenience: the first listed file or inline image, or *None* when none.
+    Sugar over *list()[0]*; shares
 
-    resolution so it stays correct when later scopes hydrate through Graph.'
-  signature: async first() -> IncomingFile | None
+    *list()*''s resolution so it stays correct when later scopes hydrate through Graph.
+    Filter by attachment style
+
+    using the *attachment_style* option.'
+  signature: 'async first(*, attachment_style: Literal[''file'', ''inlineImage'']
+    | None = None) -> IncomingFile | None'
+  keywordOnlyParameters:
+  - name: attachment_style
+    defaultValue: None
 - uid: microsoft_teams.apps.FilesAccessor.list
   name: list
   summary: 'The files attached to the current inbound activity. Async because later
@@ -81,11 +96,12 @@ methods:
     breaks.
 
 
-    Currently takes no arguments and returns only uploaded files. The signature is
-    reserved to grow options later
+    Returns uploaded files and inline images, and makes no network requests. Filter
+    by attachment style using the
 
-    (e.g. *include_inline_images*, *content_types*, *include_raw*) so coverage can
-    widen opt-in without a break;
-
-    the default stays narrow.'
-  signature: async list() -> list[microsoft_teams.apps.files.incoming_file.IncomingFile]
+    *attachment_style* option.'
+  signature: 'async list(*, attachment_style: Literal[''file'', ''inlineImage''] |
+    None = None) -> list[microsoft_teams.apps.files.incoming_file.IncomingFile]'
+  keywordOnlyParameters:
+  - name: attachment_style
+    defaultValue: None

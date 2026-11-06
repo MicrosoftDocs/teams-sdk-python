@@ -22,7 +22,7 @@ summary: 'Defines the structure that arrives in the Activity.Value for Invoke ac
 constructor:
   syntax: 'AdaptiveCardInvokeValue(*, action: AdaptiveCardInvokeAction, authentication:
     TokenExchangeInvokeRequest | None = None, state: str | None = None, trigger: Literal[''manual'']
-    | None = None, **extra_data: Any)'
+    | str | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: action
     isRequired: true
@@ -48,8 +48,7 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.AdaptiveCardInvokeValue.state
   name: state
   summary: The 'state' or magic code for an OAuth flow.
@@ -57,4 +56,4 @@ attributes:
 - uid: microsoft_teams.api.AdaptiveCardInvokeValue.trigger
   name: trigger
   summary: What triggered the action
-  signature: 'trigger: Literal[''manual''] | None'
+  signature: 'trigger: Literal[''manual''] | str | None'

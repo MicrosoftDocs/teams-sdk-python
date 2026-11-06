@@ -1,0 +1,28 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.NegotiateError
+name: NegotiateError
+fullName: microsoft_teams.apps.NegotiateError
+module: microsoft_teams.apps
+summary: 'Experimental error for a failed negotiate step; may change in the future.
+
+
+  `retry_after` carries the service''s `Retry-After` when it sent one, so the
+
+  supervisor can honour throttling instead of applying its own backoff.
+
+  `status_code` carries the HTTP status when a negotiate endpoint rejected the request.
+
+  `terminal` marks service-negotiate authentication failures that must not be retried.'
+constructor:
+  syntax: 'NegotiateError(message: str, retry_after: float | None = None, *, terminal:
+    bool = False, status_code: int | None = None)'
+  parameters:
+  - name: message
+    isRequired: true
+  - name: retry_after
+    defaultValue: None
+  keywordOnlyParameters:
+  - name: terminal
+    defaultValue: 'False'
+  - name: status_code
+    defaultValue: None

@@ -6,21 +6,6 @@ module: microsoft_teams.api
 summary: 'Entity containing targeted message information for prompt preview.
 
 
-  > [!WARNING]
-
-  > Preview
-
-  >
-
-  > This class is in preview and may change in the future.
-
-  >
-
-  > Diagnostic: ExperimentalTeamsTargeted
-
-  >
-
-
   Create a new model by parsing and validating input data from keyword arguments.
 
 
@@ -51,8 +36,7 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.TargetedMessageInfoEntity.type
   name: type
   summary: Type identifier for targeted message info

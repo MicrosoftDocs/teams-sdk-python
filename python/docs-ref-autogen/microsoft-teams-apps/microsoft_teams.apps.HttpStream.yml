@@ -29,7 +29,8 @@ summary: 'HTTP-based streaming implementation for Microsoft Teams activities.
 
   Initialize a new HttpStream instance.'
 constructor:
-  syntax: 'HttpStream(client: ApiClient, ref: ConversationReference)'
+  syntax: 'HttpStream(client: ApiClient, ref: ConversationReference, options: StreamOptions
+    | None = None)'
   parameters:
   - name: client
     description: The API client used to send activities to Microsoft Teams.
@@ -41,6 +42,18 @@ constructor:
     isRequired: true
     types:
     - <xref:microsoft_teams.apps.ConversationReference>
+  - name: options
+    description: 'Options for the stream.
+
+      When *options.reply_chain* is set, the first message of the stream is created
+      as a reply in that
+
+      reply chain (thread).
+
+      Later chunks, updates and the final message always use the conversation of *ref*.'
+    defaultValue: None
+    types:
+    - <xref:Optional>[<xref:StreamOptions>]
 methods:
 - uid: microsoft_teams.apps.HttpStream.clear_text
   name: clear_text
@@ -68,11 +81,21 @@ methods:
 
     updating after close starts a new streamed message using the same
 
-    stream instance.'
+    stream instance.
+
+
+    A Plan timeout or final Plan conflict raises once and retires the failed
+
+    cycle. Further closes return None until the next emit or update.'
   signature: async close() -> SentActivity | None
 - uid: microsoft_teams.apps.HttpStream.emit
   name: emit
-  summary: Emit a new activity to the stream.
+  summary: 'Emit a new activity to the stream.
+
+
+    An explicit reply_to_id on the final message is preserved. Otherwise,
+
+    the conversation reference''s activity ID is used.'
   signature: 'emit(activity: MessageActivityInput | TypingActivityInput | str) ->
     None'
   parameters:
@@ -95,7 +118,7 @@ methods:
   name: update
   summary: Send status updates before emitting (ex. "Thinking...").
   signature: 'update(text: str, text_format: Literal[''markdown'', ''plain'', ''xml'',
-    ''extendedmarkdown''] | None = None) -> None'
+    ''extendedmarkdown''] | str | None = None) -> None'
   parameters:
   - name: text
     description: The status text to send.
@@ -108,9 +131,8 @@ methods:
 attributes:
 - uid: microsoft_teams.apps.HttpStream.canceled
   name: canceled
-  summary: 'Whether the stream has been canceled.
-
-    For example when the user pressed the Stop button.'
+  summary: Always return False; the SDK no longer sets this deprecated cancellation
+    flag.
 - uid: microsoft_teams.apps.HttpStream.closed
   name: closed
   summary: Whether the current streamed message has been finalized.
@@ -124,4 +146,4 @@ attributes:
   name: timed_out
   summary: 'Whether the stream has timed out.
 
-    For example when the streaming has exceeded two minutes.'
+    Teams enforces a ten-minute limit from the first informative or content chunk.'

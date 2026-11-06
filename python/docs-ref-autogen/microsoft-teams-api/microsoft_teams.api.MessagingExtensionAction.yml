@@ -19,9 +19,10 @@ summary: 'Messaging extension action
 constructor:
   syntax: 'MessagingExtensionAction(*, data: Any | None = None, context: TaskModuleRequestContext
     | None = None, tabContext: TabEntityContext | None = None, commandId: str | None
-    = None, commandContext: Literal[''message'', ''compose'', ''commandbox''], botMessagePreviewAction:
-    Literal[''edit'', ''send''] | None = None, botActivityPreview: List[Activity]
-    | None = None, messagePayload: Message | None = None, **extra_data: Any)'
+    = None, commandContext: Literal[''message'', ''compose'', ''commandbox''] | str,
+    botMessagePreviewAction: Literal[''edit'', ''send''] | str | None = None, botActivityPreview:
+    List[Activity] | None = None, messagePayload: Message | None = None, **extra_data:
+    Any)'
   keywordOnlyParameters:
   - name: data
     defaultValue: None
@@ -47,11 +48,11 @@ attributes:
 - uid: microsoft_teams.api.MessagingExtensionAction.bot_message_preview_action
   name: bot_message_preview_action
   summary: Bot message preview action taken by user.
-  signature: 'bot_message_preview_action: Literal[''edit'', ''send''] | None'
+  signature: 'bot_message_preview_action: BotMessagePreviewAction | None'
 - uid: microsoft_teams.api.MessagingExtensionAction.command_context
   name: command_context
   summary: The context from which the command originates.
-  signature: 'command_context: Literal[''message'', ''compose'', ''commandbox'']'
+  signature: 'command_context: MessagingExtensionCommandContext'
 - uid: microsoft_teams.api.MessagingExtensionAction.command_id
   name: command_id
   summary: Id of the command assigned by Bot
@@ -67,5 +68,4 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'

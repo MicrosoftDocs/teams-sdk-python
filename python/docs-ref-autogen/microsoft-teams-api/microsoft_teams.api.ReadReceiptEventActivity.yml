@@ -21,11 +21,12 @@ constructor:
     | None = None, locale: str | None = None, localTimestamp: datetime | None = None,
     channelId: Literal[''webchat'', ''msteams''] | str = ''msteams'', from_: Account,
     conversation: ConversationAccount, replyToId: str | None = None, entities: List[ClientInfoEntity
-    | MentionEntity | MessageEntity | AIMessageEntity | StreamInfoEntity | CitationEntity
-    | SensitiveUsageEntity | ProductInfoEntity | QuotedReplyEntity | TargetedMessageInfoEntity
-    | UnknownEntity] | None = None, channelData: ChannelData | None = None, type:
-    Literal[''event''] = ''event'', id: str, recipient: Account, name: Literal[''application/vnd.microsoft.readReceipt'']
-    = ''application/vnd.microsoft.readReceipt'', **extra_data: Any)'
+    | MentionEntity | MessageEntity | AIMessageEntity | StreamInfoEntity | PlanInfoEntity
+    | CitationEntity | SensitiveUsageEntity | ProductInfoEntity | QuotedReplyEntity
+    | TargetedMessageInfoEntity | UnknownEntity] | None = None, channelData: ChannelData
+    | None = None, type: Literal[''event''] = ''event'', id: str, recipient: Account,
+    name: Literal[''application/vnd.microsoft.readReceipt''] = ''application/vnd.microsoft.readReceipt'',
+    **extra_data: Any)'
   keywordOnlyParameters:
   - name: serviceUrl
     defaultValue: None
@@ -63,8 +64,7 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.ReadReceiptEventActivity.name
   name: name
   summary: The name of the operation associated with an invoke or event activity.

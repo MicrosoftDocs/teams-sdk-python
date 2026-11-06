@@ -20,8 +20,8 @@ constructor:
   syntax: 'Appearance(*, at_type: Literal[''DigitalDocument''] = ''DigitalDocument'',
     name: str, text: str | None = None, url: str | None = None, abstract: str, encodingFormat:
     Literal[''application/vnd.microsoft.card.adaptive''] | None = ''application/vnd.microsoft.card.adaptive'',
-    image: Image | None = None, keywords: List[str] | None = None, usageInfo: CitationUsageInfo
-    | None = None, **extra_data: Any)'
+    image: Image | None = None, keywords: List[str] | None = None, usageInfo: SensitivityUsageInfo
+    | SensitiveUsage | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: at_type
     defaultValue: DigitalDocument
@@ -89,8 +89,7 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.Appearance.name
   name: name
   summary: Name of the document (max length 80)
@@ -107,5 +106,7 @@ attributes:
   signature: 'url: str | None'
 - uid: microsoft_teams.api.Appearance.usage_info
   name: usage_info
-  summary: Sensitivity content information
-  signature: 'usage_info: CitationUsageInfo | None'
+  summary: 'Sensitivity content information.
+
+    An inbound label without *@id* parses as *SensitiveUsage*.'
+  signature: 'usage_info: SensitivityUsageInfo | SensitiveUsage | None'

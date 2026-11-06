@@ -1,0 +1,22 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.StreamOptions
+name: StreamOptions
+fullName: microsoft_teams.apps.StreamOptions
+module: microsoft_teams.apps
+summary: 'Options for creating a stream.
+
+
+  This API is in preview and may change in the future.
+
+  Diagnostic: ExperimentalTeamsThreading'
+constructor:
+  syntax: 'StreamOptions(reply_chain: StreamReplyChain | None = None)'
+  parameters:
+  - name: reply_chain
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.apps.StreamOptions.reply_chain
+  name: reply_chain
+  summary: When set, the first message of the stream is created as a reply in this
+    reply chain.
+  signature: 'reply_chain: StreamReplyChain | None = None'
