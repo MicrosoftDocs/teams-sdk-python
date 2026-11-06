@@ -10,7 +10,7 @@ ms.topic: reference
 
 # Teams SDK for Python reference
 
-**Current version: 2.2.0**, released September 15 2026 ([release notes](https://github.com/microsoft/teams.py/releases/tag/v2.2.0))
+**Current version: 2.2.0**, released November 5 2026 ([release notes](https://github.com/microsoft/teams.py/releases/tag/v2.2.0))
 
 Report issues and explore the source on [GitHub](https://github.com/microsoft/teams.py).
 
