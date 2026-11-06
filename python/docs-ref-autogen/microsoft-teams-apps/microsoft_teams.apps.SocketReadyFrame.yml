@@ -1,0 +1,40 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.SocketReadyFrame
+name: SocketReadyFrame
+fullName: microsoft_teams.apps.SocketReadyFrame
+module: microsoft_teams.apps
+summary: 'Experimental readiness frame, pushed once inbound delivery can begin; may
+  change in the future.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'SocketReadyFrame(*, bot_key: str | None = None, connection_id: str | None
+    = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: bot_key
+    defaultValue: None
+  - name: connection_id
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.apps.SocketReadyFrame.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<function _inbound_aliases>, serialization_alias=None), ''extra'':
+    ''allow'', ''frozen'': True, ''populate_by_name'': True}'
+- uid: microsoft_teams.apps.SocketReadyFrame.bot_key
+  name: bot_key
+  signature: 'bot_key: str | None'
+- uid: microsoft_teams.apps.SocketReadyFrame.connection_id
+  name: connection_id
+  signature: 'connection_id: str | None'

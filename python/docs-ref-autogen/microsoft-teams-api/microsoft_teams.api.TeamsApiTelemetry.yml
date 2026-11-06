@@ -9,7 +9,7 @@ constructor:
 attributes:
 - uid: microsoft_teams.api.TeamsApiTelemetry.instrumentation_version
   name: instrumentation_version
-  signature: instrumentation_version = '2.1.0'
+  signature: instrumentation_version = '2.2.0'
 - uid: microsoft_teams.api.TeamsApiTelemetry.meter_name
   name: meter_name
   signature: meter_name = 'Microsoft.Teams.Api'

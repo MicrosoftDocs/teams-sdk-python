@@ -19,7 +19,7 @@ summary: 'Entity containing streaming information
 constructor:
   syntax: 'StreamInfoEntity(*, type: Literal[''streaminfo''] = ''streaminfo'', streamId:
     str | None = None, streamType: Literal[''informative'', ''streaming'', ''final'']
-    | None = None, streamSequence: int | None = None, **extra_data: Any)'
+    | str | None = None, streamSequence: int | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: type
     defaultValue: streaminfo
@@ -37,8 +37,7 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.StreamInfoEntity.stream_id
   name: stream_id
   summary: ID of the stream. Assigned after the initial update is sent.
@@ -57,7 +56,8 @@ attributes:
     ''streaming'' - A chunk of partial message text.
 
     ''final'' - The final message.'
-  signature: 'stream_type: Literal[''informative'', ''streaming'', ''final''] | None'
+  signature: 'stream_type: Literal[''informative'', ''streaming'', ''final''] | str
+    | None'
 - uid: microsoft_teams.api.StreamInfoEntity.type
   name: type
   summary: Type identifier for stream info

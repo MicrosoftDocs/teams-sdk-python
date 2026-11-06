@@ -18,17 +18,22 @@ summary: 'Channel data specific to message update activities.
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
   syntax: 'MessageUpdateChannelData(*, channel: ChannelInfo | None = None, app: AppInfo
-    | None = None, eventType: Literal[''undeleteMessage'', ''editMessage''], team:
+    | None = None, chat: ChatInfo | None = None, replyChain: ReplyChainInfo | None
+    = None, eventType: Literal[''undeleteMessage'', ''editMessage''] | str, team:
     TeamInfo | None = None, notification: NotificationInfo | None = None, tenant:
     TenantInfo | None = None, meeting: MeetingInfo | None = None, settings: ChannelDataSettings
-    | None = None, feedbackLoopEnabled: bool | None = None, feedbackLoop: FeedbackLoop
-    | None = None, streamId: str | None = None, streamType: Literal[''informative'',
-    ''streaming'', ''final''] | None = None, streamSequence: int | None = None, **extra_data:
-    Any)'
+    | None = None, source: SourceInfo | None = None, feedbackLoopEnabled: bool | None
+    = None, feedbackLoop: FeedbackLoop | None = None, streamId: str | None = None,
+    streamType: Literal[''informative'', ''streaming'', ''final''] | str | None =
+    None, streamSequence: int | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: channel
     defaultValue: None
   - name: app
+    defaultValue: None
+  - name: chat
+    defaultValue: None
+  - name: replyChain
     defaultValue: None
   - name: eventType
     isRequired: true
@@ -41,6 +46,8 @@ constructor:
   - name: meeting
     defaultValue: None
   - name: settings
+    defaultValue: None
+  - name: source
     defaultValue: None
   - name: feedbackLoopEnabled
     defaultValue: None
@@ -56,7 +63,7 @@ attributes:
 - uid: microsoft_teams.api.MessageUpdateChannelData.event_type
   name: event_type
   summary: The type of event for message update.
-  signature: 'event_type: Literal[''undeleteMessage'', ''editMessage'']'
+  signature: 'event_type: Literal[''undeleteMessage'', ''editMessage''] | str'
 - uid: microsoft_teams.api.MessageUpdateChannelData.model_config
   name: model_config
   summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
@@ -64,5 +71,4 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'

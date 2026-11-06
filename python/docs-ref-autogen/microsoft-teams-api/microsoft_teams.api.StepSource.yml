@@ -1,0 +1,49 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.StepSource
+name: StepSource
+fullName: microsoft_teams.api.StepSource
+module: microsoft_teams.api
+summary: 'A reference source associated with a Plan step.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'StepSource(*, title: str, url: str, icon: CitationIconName | None = None,
+    **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: title
+    isRequired: true
+  - name: url
+    isRequired: true
+  - name: icon
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.StepSource.icon
+  name: icon
+  summary: Optional icon used to represent the source.
+  signature: 'icon: CitationIconName | None'
+- uid: microsoft_teams.api.StepSource.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
+- uid: microsoft_teams.api.StepSource.title
+  name: title
+  summary: Display title of the source.
+  signature: 'title: str'
+- uid: microsoft_teams.api.StepSource.url
+  name: url
+  summary: URL of the source.
+  signature: 'url: str'

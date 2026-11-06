@@ -115,6 +115,18 @@ attributes:
   name: skip_auth
   summary: Deprecated. Use dangerously_allow_unauthenticated_requests instead.
   signature: 'skip_auth: bool | None'
+- uid: microsoft_teams.apps.AppOptions.socket_mode
+  name: socket_mode
+  summary: "receive activities over an outbound WebSocket instead of an inbound HTTPS\
+    \ endpoint.\n\n`True` enables it with defaults; pass a `SocketModeOptions` to\
+    \ configure\n`negotiate_base_url` and `geos`. The bot dials the Teams service,\
+    \ so no public endpoint or dev tunnel is\nneeded \u2014 but HTTP-only features\
+    \ (`app.function()`, tabs, OAuth redirect routes)\nhave no listener to serve them.\
+    \ Mutually exclusive with `http_server_adapter`,\nand supported only in the public\
+    \ cloud.\n\nSocket Mode is currently only available for new bots.\nThis API is\
+    \ in preview and may change in the future; recommended only for development.\n\
+    Diagnostic: ExperimentalTeamsSocketMode"
+  signature: 'socket_mode: bool | SocketModeOptions | None'
 - uid: microsoft_teams.apps.AppOptions.state
   name: state
   summary: "Per-turn state opt-in. Off by default (`None`/`False`).\n\n`state=True`\

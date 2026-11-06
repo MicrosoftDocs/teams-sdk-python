@@ -15,8 +15,8 @@ functions:
     dupnames\": [], \"backrefs\": [], \"xml:space\": \"preserve\", \"language\": \"\
     default\", \"force\": false, \"linenos\": false} -->\n\n````default\n\n   @experimental(\"\
     ExperimentalTeamsReactions\")\n   class ReactionClient:\n       ...\n\n   @experimental(\"\
-    ExperimentalTeamsTargeted\", message=\"Targeted messages are in preview.\")\n\
-    \   async def create_targeted(...):\n       ...\n   ````"
+    ExperimentalTeamsSocketMode\", message=\"Socket mode is in preview.\")\n   async\
+    \ def connect(...):\n       ...\n   ````"
   signature: 'experimental(diagnostic: str, *, message: str | None = None) -> Callable[[F],
     F]'
   parameters:

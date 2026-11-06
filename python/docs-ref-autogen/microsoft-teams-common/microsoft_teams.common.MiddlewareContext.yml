@@ -9,21 +9,22 @@ constructor:
     token: str | ~microsoft_teams.common.http.client_token.StringLike | ~typing.Callable[[],
     str | ~microsoft_teams.common.http.client_token.StringLike | None | ~typing.Awaitable[str
     | ~microsoft_teams.common.http.client_token.StringLike | None]] | None, params:
-    QueryParams | ~typing.Mapping[str, str | int | float | bool | None | ~typing.Sequence[str
-    | int | float | bool | None]] | ~typing.List[~typing.Tuple[str, str | int | float
-    | bool | None]] | ~typing.Tuple[~typing.Tuple[str, str | int | float | bool |
-    None], ...] | str | bytes | None = None, content: str | bytes | ~typing.Iterable[bytes]
-    | ~typing.AsyncIterable[bytes] | None = None, data: ~typing.Mapping[str, ~typing.Any]
-    | None = None, files: ~typing.Mapping[str, ~typing.IO[bytes] | bytes | str | ~typing.Tuple[str
-    | None, ~typing.IO[bytes] | bytes | str] | ~typing.Tuple[str | None, ~typing.IO[bytes]
-    | bytes | str, str | None] | ~typing.Tuple[str | None, ~typing.IO[bytes] | bytes
-    | str, str | None, ~typing.Mapping[str, str]]] | ~typing.Sequence[~typing.Tuple[str,
-    ~typing.IO[bytes] | bytes | str | ~typing.Tuple[str | None, ~typing.IO[bytes]
-    | bytes | str] | ~typing.Tuple[str | None, ~typing.IO[bytes] | bytes | str, str
-    | None] | ~typing.Tuple[str | None, ~typing.IO[bytes] | bytes | str, str | None,
-    ~typing.Mapping[str, str]]]] | None = None, json: object | None = None, kwargs:
-    ~typing.Dict[str, ~typing.Any] = <factory>, logger: ~logging.Logger = <Logger
-    microsoft_teams.common.http.client (WARNING)>, metadata: object | None = None)'
+    ~httpx2.QueryParams | ~collections.abc.Mapping[str, str | int | float | bool |
+    None | ~collections.abc.Sequence[str | int | float | bool | None]] | list[tuple[str,
+    str | int | float | bool | None]] | tuple[tuple[str, str | int | float | bool
+    | None], ...] | str | bytes | None = None, content: str | bytes | ~collections.abc.Iterable[bytes]
+    | ~collections.abc.AsyncIterable[bytes] | None = None, data: ~collections.abc.Mapping[str,
+    object] | None = None, files: ~collections.abc.Mapping[str, ~typing.IO[bytes]
+    | bytes | str | tuple[str | None, typing.Union[typing.IO[bytes], bytes, str]]
+    | tuple[str | None, typing.Union[typing.IO[bytes], bytes, str], str | None] |
+    tuple[str | None, typing.Union[typing.IO[bytes], bytes, str], str | None, collections.abc.Mapping[str,
+    str]]] | ~collections.abc.Sequence[tuple[str, typing.Union[typing.IO[bytes], bytes,
+    str, tuple[str | None, typing.Union[typing.IO[bytes], bytes, str]], tuple[str
+    | None, typing.Union[typing.IO[bytes], bytes, str], str | None], tuple[str | None,
+    typing.Union[typing.IO[bytes], bytes, str], str | None, collections.abc.Mapping[str,
+    str]]]]] | None = None, json: object | None = None, kwargs: ~typing.Dict[str,
+    ~typing.Any] = <factory>, logger: ~logging.Logger = <Logger microsoft_teams.common.http.client
+    (WARNING)>, metadata: object | None = None)'
   parameters:
   - name: method
     isRequired: true
@@ -56,15 +57,16 @@ attributes:
     = None'
 - uid: microsoft_teams.common.MiddlewareContext.data
   name: data
-  signature: 'data: Mapping[str, Any] | None = None'
+  signature: 'data: Mapping[str, object] | None = None'
 - uid: microsoft_teams.common.MiddlewareContext.files
   name: files
-  signature: 'files: Mapping[str, IO[bytes] | bytes | str | Tuple[str | None, IO[bytes]
-    | bytes | str] | Tuple[str | None, IO[bytes] | bytes | str, str | None] | Tuple[str
-    | None, IO[bytes] | bytes | str, str | None, Mapping[str, str]]] | Sequence[Tuple[str,
-    IO[bytes] | bytes | str | Tuple[str | None, IO[bytes] | bytes | str] | Tuple[str
-    | None, IO[bytes] | bytes | str, str | None] | Tuple[str | None, IO[bytes] | bytes
-    | str, str | None, Mapping[str, str]]]] | None = None'
+  signature: 'files: Mapping[str, IO[bytes] | bytes | str | tuple[str | None, Union[IO[bytes],
+    bytes, str]] | tuple[str | None, Union[IO[bytes], bytes, str], str | None] | tuple[str
+    | None, Union[IO[bytes], bytes, str], str | None, collections.abc.Mapping[str,
+    str]]] | Sequence[tuple[str, Union[IO[bytes], bytes, str, tuple[str | None, Union[IO[bytes],
+    bytes, str]], tuple[str | None, Union[IO[bytes], bytes, str], str | None], tuple[str
+    | None, Union[IO[bytes], bytes, str], str | None, collections.abc.Mapping[str,
+    str]]]]] | None = None'
 - uid: microsoft_teams.common.MiddlewareContext.headers
   name: headers
   signature: 'headers: Dict[str, str]'
@@ -86,8 +88,8 @@ attributes:
 - uid: microsoft_teams.common.MiddlewareContext.params
   name: params
   signature: 'params: QueryParams | Mapping[str, str | int | float | bool | None |
-    Sequence[str | int | float | bool | None]] | List[Tuple[str, str | int | float
-    | bool | None]] | Tuple[Tuple[str, str | int | float | bool | None], ...] | str
+    Sequence[str | int | float | bool | None]] | list[tuple[str, str | int | float
+    | bool | None]] | tuple[tuple[str, str | int | float | bool | None], ...] | str
     | bytes | None = None'
 - uid: microsoft_teams.common.MiddlewareContext.token
   name: token

@@ -1,0 +1,41 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.api.EncryptedChatInfo
+name: EncryptedChatInfo
+fullName: microsoft_teams.api.EncryptedChatInfo
+module: microsoft_teams.api
+summary: 'The encrypted form of the id of a chat scope.
+
+
+  This API is in preview and may change in the future.
+
+  Diagnostic: ExperimentalTeamsThreading
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'EncryptedChatInfo(*, id: str | None = None, **extra_data: Any)'
+  keywordOnlyParameters:
+  - name: id
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.api.EncryptedChatInfo.id
+  name: id
+  summary: The encrypted id of the chat scope.
+  signature: 'id: str | None'
+- uid: microsoft_teams.api.EncryptedChatInfo.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''frozen'': True, ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'

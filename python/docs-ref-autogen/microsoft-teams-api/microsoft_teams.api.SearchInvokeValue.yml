@@ -23,8 +23,9 @@ summary: 'Defines the structure that arrives in the Activity.Value for an Invoke
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
   syntax: 'SearchInvokeValue(*, kind: Literal[''search'', ''searchAnswer'', ''typeahead'']
-    | None = None, queryText: str, queryOptions: SearchInvokeOptions | None = None,
-    context: Any | None = None, dataset: str | None = None, **extra_data: Any)'
+    | str | None = None, queryText: str, queryOptions: SearchInvokeOptions | None
+    = None, context: Any | None = None, dataset: str | None = None, **extra_data:
+    Any)'
   keywordOnlyParameters:
   - name: kind
     defaultValue: None
@@ -53,7 +54,7 @@ attributes:
     Omitted by
 
     Adaptive Card dynamic typeahead ''Input.ChoiceSet'' inputs, so this may be None.'
-  signature: 'kind: Literal[''search'', ''searchAnswer'', ''typeahead''] | None'
+  signature: 'kind: Literal[''search'', ''searchAnswer'', ''typeahead''] | str | None'
 - uid: microsoft_teams.api.SearchInvokeValue.model_config
   name: model_config
   summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
@@ -61,8 +62,7 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.SearchInvokeValue.query_options
   name: query_options
   summary: The query options for this search invoke.

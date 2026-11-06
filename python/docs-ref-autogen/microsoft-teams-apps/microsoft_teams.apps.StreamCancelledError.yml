@@ -3,6 +3,6 @@ uid: microsoft_teams.apps.StreamCancelledError
 name: StreamCancelledError
 fullName: microsoft_teams.apps.StreamCancelledError
 module: microsoft_teams.apps
-summary: Raised when a stream operation is attempted after the stream has been cancelled.
+summary: Deprecated exception; no longer raised for streaming operations.
 constructor:
-  syntax: StreamCancelledError()
+  syntax: StreamCancelledError(*args, **kwargs)

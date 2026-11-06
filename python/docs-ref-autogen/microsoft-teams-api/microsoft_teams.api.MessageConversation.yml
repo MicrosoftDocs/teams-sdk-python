@@ -18,7 +18,7 @@ summary: 'Represents a team or channel entity.
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
   syntax: 'MessageConversation(*, conversationIdentityType: Literal[''team'', ''channel'']
-    | None = None, id: str, displayName: str | None = None, **extra_data: Any)'
+    | str | None = None, id: str, displayName: str | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: conversationIdentityType
     defaultValue: None
@@ -30,7 +30,7 @@ attributes:
 - uid: microsoft_teams.api.MessageConversation.conversation_identity_type
   name: conversation_identity_type
   summary: The type of conversation, whether a team or channel.
-  signature: 'conversation_identity_type: Literal[''team'', ''channel''] | None'
+  signature: 'conversation_identity_type: Literal[''team'', ''channel''] | str | None'
 - uid: microsoft_teams.api.MessageConversation.display_name
   name: display_name
   summary: The plaintext display name of the team or channel entity.
@@ -46,5 +46,4 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'

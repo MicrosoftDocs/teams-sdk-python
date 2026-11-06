@@ -4,10 +4,10 @@ name: SignInEvent
 fullName: microsoft_teams.apps.SignInEvent
 module: microsoft_teams.apps
 constructor:
-  syntax: 'SignInEvent(activity_ctx: microsoft_teams.apps.routing.activity_context.ActivityContext[microsoft_teams.api.activities.invoke.sign_in.verify_state.SignInVerifyStateInvokeActivity]
-    | microsoft_teams.apps.routing.activity_context.ActivityContext[microsoft_teams.api.activities.invoke.sign_in.token_exchange.SignInTokenExchangeInvokeActivity],
-    token_response: microsoft_teams.api.models.token.response.TokenResponse, connection_name:
-    str | None = None)'
+  syntax: 'SignInEvent(activity_ctx: Union[ForwardRef(''ActivityContext[SignInVerifyStateInvokeActivity]''),
+    ForwardRef(''ActivityContext[SignInTokenExchangeInvokeActivity]'')], token_response:
+    microsoft_teams.api.models.token.response.TokenResponse, connection_name: str
+    | None = None)'
   parameters:
   - name: activity_ctx
     isRequired: true

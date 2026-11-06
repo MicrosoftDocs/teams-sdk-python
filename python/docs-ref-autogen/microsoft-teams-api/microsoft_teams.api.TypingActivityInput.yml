@@ -22,12 +22,12 @@ constructor:
     channelId: Literal[''webchat'', ''msteams''] | str | None = None, from_: Account
     | None = None, conversation: ConversationAccount | None = None, replyToId: str
     | None = None, entities: List[ClientInfoEntity | MentionEntity | MessageEntity
-    | AIMessageEntity | StreamInfoEntity | CitationEntity | SensitiveUsageEntity |
-    ProductInfoEntity | QuotedReplyEntity | TargetedMessageInfoEntity | UnknownEntity]
+    | AIMessageEntity | StreamInfoEntity | PlanInfoEntity | CitationEntity | SensitiveUsageEntity
+    | ProductInfoEntity | QuotedReplyEntity | TargetedMessageInfoEntity | UnknownEntity]
     | None = None, channelData: ChannelData | None = None, type: Literal[''typing'']
     = ''typing'', id: str | None = None, recipient: Account | None = None, text: str
     | None = None, textFormat: Literal[''markdown'', ''plain'', ''xml'', ''extendedmarkdown'']
-    | None = None, **extra_data: Any)'
+    | str | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: serviceUrl
     defaultValue: None
@@ -84,8 +84,8 @@ methods:
 - uid: microsoft_teams.api.TypingActivityInput.with_text_format
   name: with_text_format
   summary: Set the format of the *text* field.
-  signature: 'with_text_format(value: Literal[''markdown'', ''plain'', ''xml'', ''extendedmarkdown''])
-    -> Self'
+  signature: 'with_text_format(value: Literal[''markdown'', ''plain'', ''xml'', ''extendedmarkdown'']
+    | str) -> Self'
   parameters:
   - name: value
     isRequired: true
@@ -97,5 +97,4 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'

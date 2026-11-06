@@ -17,8 +17,8 @@ constructor:
   syntax: 'HtmlWidgetPayload(*, type: Literal[''widget/mcp-ui''] = ''widget/mcp-ui'',
     name: str, description: str | None = None, html: str, domain: str, securityPolicy:
     HtmlWidgetSecurityPolicy | None = None, toolInput: Any | None = None, toolOutput:
-    Any | None = None, permissions: HtmlWidgetPermissions | None = None, **extra_data:
-    Any)'
+    Any | None = None, permissions: HtmlWidgetPermissions | None = None, mcpUrl: str
+    | None = None, correlationId: str | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: type
     defaultValue: widget/mcp-ui
@@ -38,7 +38,17 @@ constructor:
     defaultValue: None
   - name: permissions
     defaultValue: None
+  - name: mcpUrl
+    defaultValue: None
+  - name: correlationId
+    defaultValue: None
 attributes:
+- uid: microsoft_teams.api.HtmlWidgetPayload.correlation_id
+  name: correlation_id
+  summary: 'Optional correlation vector for the widget.
+
+    The Teams client reads it as correlationId and also returns it to the bot.'
+  signature: 'correlation_id: str | None'
 - uid: microsoft_teams.api.HtmlWidgetPayload.description
   name: description
   summary: A description of the MCP app.
@@ -55,6 +65,18 @@ attributes:
   name: html
   summary: The HTML content that makes up the widget.
   signature: 'html: str'
+- uid: microsoft_teams.api.HtmlWidgetPayload.mcp_url
+  name: mcp_url
+  summary: 'Optional MCP server URL for the widget.
+
+    The Teams client reads it as mcpUrl.
+
+    The client combines it with the owner id (<ownerId>-<mcpUrl>) as the input for
+    deriving the hosting origin.
+
+    A widget produced by an MCP server must set it to that server''s URL to get its
+    own hosting scope.'
+  signature: 'mcp_url: str | None'
 - uid: microsoft_teams.api.HtmlWidgetPayload.model_config
   name: model_config
   summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
@@ -62,8 +84,7 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.HtmlWidgetPayload.name
   name: name
   summary: The display name of the MCP app.

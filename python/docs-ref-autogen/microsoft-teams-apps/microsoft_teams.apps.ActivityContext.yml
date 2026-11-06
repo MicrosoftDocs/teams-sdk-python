@@ -20,7 +20,7 @@ constructor:
     token_service_url=''https://token.botframework.com'', openid_metadata_url=''https://login.botframework.com/v1/.well-known/openidconfiguration'',
     token_issuer=''https://api.botframework.com'', graph_scope=''https://graph.microsoft.com/.default''),
     oauth_connection_names: Sequence[str] | None = None, files_credential: GraphCredential
-    | None = None)'
+    | None = None, files_bot_api_credential: BotApiCredential | None = None)'
   parameters:
   - name: activity
     isRequired: true
@@ -49,6 +49,8 @@ constructor:
   - name: oauth_connection_names
     defaultValue: None
   - name: files_credential
+    defaultValue: None
+  - name: files_bot_api_credential
     defaultValue: None
 methods:
 - uid: microsoft_teams.apps.ActivityContext.get_connection_status
@@ -104,6 +106,20 @@ methods:
   name: next
   summary: Call the next middleware in the chain.
   signature: async next() -> None
+- uid: microsoft_teams.apps.ActivityContext.plan
+  name: plan
+  summary: 'Create or reference the existing Plan for the incoming activity.
+
+
+    In a chat thread, a standalone `complete()` is posted to the reply chain, as `ctx.send`
+    does.
+
+    Typing updates, completions in a channel, and prompts outside a thread use the
+    conversation.
+
+
+    Diagnostic: ExperimentalTeamsPlan'
+  signature: plan() -> Plan
 - uid: microsoft_teams.apps.ActivityContext.quote
   name: quote
   summary: 'Send a message to the conversation with a quoted message reference prepended
@@ -124,40 +140,91 @@ methods:
     description: The sent activity
 - uid: microsoft_teams.apps.ActivityContext.reply
   name: reply
-  summary: 'Send a message in the current conversation with a visual quote of the
-    inbound message.
+  summary: 'Send a message in the current conversation, quoting the inbound message
+    when its id allows it.
 
 
-    In channels, sends to the current thread with a quoted reply.
+    In a chat, sends into the reply chain (thread) of the inbound activity when it
+    is inside one.
 
-    In other scopes, sends with a quoted reply.
+    Otherwise it sends at top level.
+
+    The inbound activity can be a message, a card action, an invoke, a reaction, an
+    edit or a delete.
+
+    In a channel, sends into the reply chain of the inbound message.
+
+    In a channel, when the service answers HTTP 404, sends to the inbound conversation
+    instead.
+
+    An inbound activity without *channel_data.reply_chain* is not placed,
+
+    and the activity is sent to the inbound conversation.
+
+    The response is automatically quoted only when the inbound activity id is a plain
+    numeric message id.
+
+    Otherwise, such as an invoke or a card action whose id is `f:<guid>`, the activity
+    is sent without a quote.
+
+    It is then sent exactly like <xref:microsoft_teams.apps.ActivityContext.send>.
+
+    To quote a specific message, use <xref:microsoft_teams.apps.ActivityContext.quote>
+    with that message''s id.
 
     To send without quoting, use <xref:microsoft_teams.apps.ActivityContext.send>.'
   signature: 'async reply(input: str | MessageActivityInput | MessageReactionActivityInput
     | TypingActivityInput) -> SentActivity'
   parameters:
   - name: input
+    description: The response text or activity to send.
     isRequired: true
+  return:
+    description: The `SentActivity` returned by the conversation API call.
 - uid: microsoft_teams.apps.ActivityContext.send
   name: send
   summary: 'Send a message in the current conversation without quoting.
 
 
-    In channels, sends to the current thread. In scopes that do not
+    In a chat, sends into the reply chain (thread) of the inbound activity when it
+    is inside one.
 
-    support threading (group chat, meetings), sends as a normal message.
+    Otherwise it sends at top level.
+
+    The inbound activity can be a message, a card action, an invoke, a reaction, an
+    edit or a delete.
+
+    In a channel, sends into the reply chain of the inbound message.
+
+    In a channel, when the service answers HTTP 404, sends to the inbound conversation
+    instead.
+
+    An inbound activity without *channel_data.reply_chain* is not placed,
+
+    and the activity is sent to the inbound conversation.
 
     To send with a visual quote of the inbound message, use <xref:microsoft_teams.apps.ActivityContext.reply>.'
-  signature: 'async send(message: str | MessageActivityInput | MessageReactionActivityInput
-    | TypingActivityInput | AdaptiveCard, conversation_ref: ConversationReference
-    | None = None) -> SentActivity'
+  signature: 'async send(message: str | ActivityParams | AdaptiveCard, conversation_ref:
+    None = None) -> SentActivity'
   parameters:
   - name: message
     description: The message to send, can be a string, ActivityParams, or AdaptiveCard
     isRequired: true
   - name: conversation_ref
-    description: Optional conversation reference to send to a different conversation
-      or thread
+    description: 'Conversation reference to send to a different conversation.
+
+
+      *Deprecated since version Passing:* a conversation reference is deprecated and
+      will be removed in a future release.
+
+      Use `App.send()` to send to a different conversation.
+
+      `App.send()` uses the service URL the app is configured with unless `service_url`
+      is passed,
+
+      unlike the context methods, which use the service URL of the conversation reference
+
+      (by default, the inbound activity''s).'
     defaultValue: None
 - uid: microsoft_teams.apps.ActivityContext.set_next
   name: set_next
@@ -229,9 +296,28 @@ attributes:
   name: files
   summary: 'file.download.info` subset of
 
-    *activity.attachments*, mapped to *IncomingFile*. See *FilesAccessor*.'
+    *activity.attachments*, plus images pasted inline, mapped to *IncomingFile*. See
+    *FilesAccessor*.'
 - uid: microsoft_teams.apps.ActivityContext.stream
   name: stream
+  summary: 'The stream for the current conversation.
+
+
+    The first message of the stream goes to the reply chain (thread) where `send`
+    would place a response.
+
+    In a chat the stream goes into the reply chain when the inbound activity is inside
+    one,
+
+    and at top level otherwise.
+
+    In a channel the stream goes into the reply chain of the inbound message.
+
+    In a channel, when the service answers HTTP 404, the first message is created
+    in the inbound conversation.
+
+    An inbound activity without *channel_data.reply_chain* is not placed in a reply
+    chain.'
 - uid: microsoft_teams.apps.ActivityContext.user_graph
   name: user_graph
   summary: "Get a Microsoft Graph client configured with the user's token.\n\n*Deprecated\

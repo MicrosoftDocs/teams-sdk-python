@@ -22,10 +22,10 @@ constructor:
     None = None, channelId: Literal[''webchat'', ''msteams''] | str = ''msteams'',
     from_: Account, conversation: ConversationAccount, replyToId: str | None = None,
     entities: List[ClientInfoEntity | MentionEntity | MessageEntity | AIMessageEntity
-    | StreamInfoEntity | CitationEntity | SensitiveUsageEntity | ProductInfoEntity
-    | QuotedReplyEntity | TargetedMessageInfoEntity | UnknownEntity] | None = None,
-    channelData: ChannelData | None = None, type: Literal[''event''] = ''event'',
-    id: str | None = None, recipient: Account, value: MeetingParticipantEventValue,
+    | StreamInfoEntity | PlanInfoEntity | CitationEntity | SensitiveUsageEntity |
+    ProductInfoEntity | QuotedReplyEntity | TargetedMessageInfoEntity | UnknownEntity]
+    | None = None, channelData: ChannelData | None = None, type: Literal[''event'']
+    = ''event'', id: str | None = None, recipient: Account, value: MeetingParticipantEventValue,
     **extra_data: Any)'
   keywordOnlyParameters:
   - name: serviceUrl
@@ -69,8 +69,7 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.MeetingParticipantEventActivity.type
   name: type
   summary: Contains the type of the activity.

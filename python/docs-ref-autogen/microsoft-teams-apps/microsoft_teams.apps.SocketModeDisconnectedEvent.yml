@@ -1,0 +1,31 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.SocketModeDisconnectedEvent
+name: SocketModeDisconnectedEvent
+fullName: microsoft_teams.apps.SocketModeDisconnectedEvent
+module: microsoft_teams.apps
+summary: 'Experimental event: a geo disconnected temporarily or after a terminal negotiate
+  failure.
+
+
+  Not emitted for a successful planned credential rotation.'
+constructor:
+  syntax: 'SocketModeDisconnectedEvent(geo: str, error: Exception | None = None, terminal:
+    bool = False)'
+  parameters:
+  - name: geo
+    isRequired: true
+  - name: error
+    defaultValue: None
+  - name: terminal
+    defaultValue: 'False'
+attributes:
+- uid: microsoft_teams.apps.SocketModeDisconnectedEvent.terminal
+  name: terminal
+  summary: Whether automatic recovery has stopped for this geo.
+  signature: 'terminal: bool = False'
+- uid: microsoft_teams.apps.SocketModeDisconnectedEvent.error
+  name: error
+  signature: 'error: Exception | None = None'
+- uid: microsoft_teams.apps.SocketModeDisconnectedEvent.geo
+  name: geo
+  signature: 'geo: str'
