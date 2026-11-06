@@ -1,0 +1,102 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.SocketModeAdapter
+name: SocketModeAdapter
+fullName: microsoft_teams.apps.SocketModeAdapter
+module: microsoft_teams.apps
+summary: 'Receives activities over an outbound WebSocket instead of an inbound HTTPS
+  endpoint.
+
+
+  Implements <xref:microsoft_teams.apps.http.adapter.HttpServerAdapter> so the App
+  can
+
+  treat it as any other server: `start`/`stop` drive the sockets, and the route
+
+  registration the App performs at startup is accepted and ignored because a socket
+
+  serves only the messaging endpoint.
+
+
+  This API is in preview and may change in the future.
+
+  WebSocket is only recommended for use when developing agents.
+
+  Socket Mode is currently only available for new bots.
+
+  Diagnostic: ExperimentalTeamsSocketMode'
+constructor:
+  syntax: 'SocketModeAdapter(options: SocketModeOptions | None = None, *, process_activity:
+    Callable[[ActivityEvent], Awaitable[InvokeResponse[Any]]], get_app_token: Callable[[],
+    Awaitable[TokenProtocol | None]], messaging_endpoint: str = ''/api/messages'',
+    client_id: str | None = None, on_error: Callable[[Exception], None | Awaitable[None]]
+    | None = None, connection_factory: Callable[[str, SocketConnectionHandlers], SocketConnection]
+    | None = None)'
+  parameters:
+  - name: options
+    defaultValue: None
+  keywordOnlyParameters:
+  - name: process_activity
+    isRequired: true
+  - name: get_app_token
+    isRequired: true
+  - name: messaging_endpoint
+    defaultValue: /api/messages
+  - name: client_id
+    defaultValue: None
+  - name: on_error
+    defaultValue: None
+  - name: connection_factory
+    defaultValue: None
+methods:
+- uid: microsoft_teams.apps.SocketModeAdapter.register_route
+  name: register_route
+  summary: "Accept the App's messaging route as a no-op \u2013 inbound frames are\
+    \ dispatched\ninternally, so nothing needs to be mounted. Any other route is warned\
+    \ about\nbecause the HTTP-only feature behind it will not work over a socket."
+  signature: 'register_route(method: Literal[''POST''], path: str, handler: HttpRouteHandler)
+    -> None'
+  parameters:
+  - name: method
+    isRequired: true
+  - name: path
+    isRequired: true
+  - name: handler
+    isRequired: true
+- uid: microsoft_teams.apps.SocketModeAdapter.serve_static
+  name: serve_static
+  signature: 'serve_static(path: str, directory: str) -> None'
+  parameters:
+  - name: path
+    isRequired: true
+  - name: directory
+    isRequired: true
+- uid: microsoft_teams.apps.SocketModeAdapter.start
+  name: start
+  summary: "Open one socket per geo, then serve until stopped.\n\n`port` is part of\
+    \ the server contract and ignored: Socket Mode dials out rather\nthan listening.\
+    \ A geo that cannot connect within the startup budget fails the\nwhole start,\
+    \ leaving nothing running.\n\nLike the HTTP adapters this replaces, it does not\
+    \ return while serving \u2013 the\nApp awaits it for the lifetime of the process.\
+    \ Connecting is not the end of the\nwork, so returning once the sockets were up\
+    \ would let `App.start()` fall\nthrough and tear down the event loop that the\
+    \ sockets are running on."
+  signature: 'async start(port: int = 0) -> None'
+  parameters:
+  - name: port
+    defaultValue: '0'
+- uid: microsoft_teams.apps.SocketModeAdapter.stop
+  name: stop
+  signature: async stop() -> None
+attributes:
+- uid: microsoft_teams.apps.SocketModeAdapter.geo_list
+  name: geo_list
+  summary: The geos this adapter connects to.
+- uid: microsoft_teams.apps.SocketModeAdapter.geo_statuses
+  name: geo_statuses
+  summary: Per-geo status snapshot, for diagnostics.
+- uid: microsoft_teams.apps.SocketModeAdapter.negotiate_url
+  name: negotiate_url
+  summary: Resolved negotiate URL for the first geo. Each geo dials its own.
+- uid: microsoft_teams.apps.SocketModeAdapter.status
+  name: status
+  summary: ready only when all are, disconnected when any has dropped.

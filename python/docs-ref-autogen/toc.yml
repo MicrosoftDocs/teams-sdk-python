@@ -1,6 +1,24 @@
 - items:
   - name: Overview
     uid: microsoft_teams.apps
+  - items:
+    - name: Overview
+      uid: microsoft_teams.apps.plan
+    - name: Plan
+      no-loc:
+      - Plan
+      uid: microsoft_teams.apps.plan.Plan
+    - name: PlanOptions
+      no-loc:
+      - PlanOptions
+      uid: microsoft_teams.apps.plan.PlanOptions
+    - name: PlanReplyChain
+      no-loc:
+      - PlanReplyChain
+      uid: microsoft_teams.apps.plan.PlanReplyChain
+    name: plan
+    no-loc:
+    - plan
   - name: ActivityContext
     no-loc:
     - ActivityContext
@@ -137,10 +155,18 @@
     no-loc:
     - IncomingFile
     uid: microsoft_teams.apps.IncomingFile
-  - name: InjectWidgetProtocolOptions
+  - name: InlineImageAccessError
     no-loc:
-    - InjectWidgetProtocolOptions
-    uid: microsoft_teams.apps.InjectWidgetProtocolOptions
+    - InlineImageAccessError
+    uid: microsoft_teams.apps.InlineImageAccessError
+  - name: InlineImageTransformationError
+    no-loc:
+    - InlineImageTransformationError
+    uid: microsoft_teams.apps.InlineImageTransformationError
+  - name: NegotiateError
+    no-loc:
+    - NegotiateError
+    uid: microsoft_teams.apps.NegotiateError
   - name: OAuthFlow
     no-loc:
     - OAuthFlow
@@ -149,6 +175,18 @@
     no-loc:
     - OAuthFlowRegistry
     uid: microsoft_teams.apps.OAuthFlowRegistry
+  - name: Plan
+    no-loc:
+    - Plan
+    uid: microsoft_teams.apps.Plan
+  - name: PlanOptions
+    no-loc:
+    - PlanOptions
+    uid: microsoft_teams.apps.PlanOptions
+  - name: PlanReplyChain
+    no-loc:
+    - PlanReplyChain
+    uid: microsoft_teams.apps.PlanReplyChain
   - name: PluginActivityEvent
     no-loc:
     - PluginActivityEvent
@@ -189,6 +227,34 @@
     no-loc:
     - SignInFailureEvent
     uid: microsoft_teams.apps.SignInFailureEvent
+  - name: SocketModeAdapter
+    no-loc:
+    - SocketModeAdapter
+    uid: microsoft_teams.apps.SocketModeAdapter
+  - name: SocketModeDisconnectedEvent
+    no-loc:
+    - SocketModeDisconnectedEvent
+    uid: microsoft_teams.apps.SocketModeDisconnectedEvent
+  - name: SocketModeOptions
+    no-loc:
+    - SocketModeOptions
+    uid: microsoft_teams.apps.SocketModeOptions
+  - name: SocketModeReadyEvent
+    no-loc:
+    - SocketModeReadyEvent
+    uid: microsoft_teams.apps.SocketModeReadyEvent
+  - name: SocketModeReconnectedEvent
+    no-loc:
+    - SocketModeReconnectedEvent
+    uid: microsoft_teams.apps.SocketModeReconnectedEvent
+  - name: SocketModeStatus
+    no-loc:
+    - SocketModeStatus
+    uid: microsoft_teams.apps.SocketModeStatus
+  - name: SocketReadyFrame
+    no-loc:
+    - SocketReadyFrame
+    uid: microsoft_teams.apps.SocketReadyFrame
   - name: StartEvent
     no-loc:
     - StartEvent
@@ -209,6 +275,14 @@
     no-loc:
     - StreamNotAllowedError
     uid: microsoft_teams.apps.StreamNotAllowedError
+  - name: StreamOptions
+    no-loc:
+    - StreamOptions
+    uid: microsoft_teams.apps.StreamOptions
+  - name: StreamReplyChain
+    no-loc:
+    - StreamReplyChain
+    uid: microsoft_teams.apps.StreamReplyChain
   - name: StreamTimedOutError
     no-loc:
     - StreamTimedOutError
@@ -507,6 +581,10 @@
     no-loc:
     - ChannelInfo
     uid: microsoft_teams.api.ChannelInfo
+  - name: ChatInfo
+    no-loc:
+    - ChatInfo
+    uid: microsoft_teams.api.ChatInfo
   - name: CitationAppearance
     no-loc:
     - CitationAppearance
@@ -615,6 +693,10 @@
     no-loc:
     - CustomBaseModel
     uid: microsoft_teams.api.CustomBaseModel
+  - name: EncryptedChatInfo
+    no-loc:
+    - EncryptedChatInfo
+    uid: microsoft_teams.api.EncryptedChatInfo
   - name: EntityBase
     no-loc:
     - EntityBase
@@ -1043,6 +1125,10 @@
     no-loc:
     - PagedMembersResult
     uid: microsoft_teams.api.PagedMembersResult
+  - name: PlanInfoEntity
+    no-loc:
+    - PlanInfoEntity
+    uid: microsoft_teams.api.PlanInfoEntity
   - name: ProductInfoEntity
     no-loc:
     - ProductInfoEntity
@@ -1063,6 +1149,10 @@
     no-loc:
     - ReadReceiptEventActivity
     uid: microsoft_teams.api.ReadReceiptEventActivity
+  - name: ReplyChainInfo
+    no-loc:
+    - ReplyChainInfo
+    uid: microsoft_teams.api.ReplyChainInfo
   - name: SearchInvokeActivity
     no-loc:
     - SearchInvokeActivity
@@ -1099,6 +1189,10 @@
     no-loc:
     - SensitiveUsagePattern
     uid: microsoft_teams.api.SensitiveUsagePattern
+  - name: SensitivityUsageInfo
+    no-loc:
+    - SensitivityUsageInfo
+    uid: microsoft_teams.api.SensitivityUsageInfo
   - name: SentActivity
     no-loc:
     - SentActivity
@@ -1143,6 +1237,18 @@
     no-loc:
     - SigninCardAttachment
     uid: microsoft_teams.api.SigninCardAttachment
+  - name: SourceInfo
+    no-loc:
+    - SourceInfo
+    uid: microsoft_teams.api.SourceInfo
+  - name: Step
+    no-loc:
+    - Step
+    uid: microsoft_teams.api.Step
+  - name: StepSource
+    no-loc:
+    - StepSource
+    uid: microsoft_teams.api.StepSource
   - name: StreamInfoEntity
     no-loc:
     - StreamInfoEntity

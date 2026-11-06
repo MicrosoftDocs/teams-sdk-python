@@ -18,9 +18,9 @@ summary: 'Base class for task module task info.
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
   syntax: 'BaseTaskModuleTaskInfo(*, title: str | None = None, height: int | Literal[''small'',
-    ''medium'', ''large''] | None = None, width: int | Literal[''small'', ''medium'',
-    ''large''] | None = None, fallbackUrl: str | None = None, completionBotId: str
-    | None = None, **extra_data: Any)'
+    ''medium'', ''large''] | str | None = None, width: int | Literal[''small'', ''medium'',
+    ''large''] | str | None = None, fallbackUrl: str | None = None, completionBotId:
+    str | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: title
     defaultValue: None
@@ -44,7 +44,7 @@ attributes:
 - uid: microsoft_teams.api.BaseTaskModuleTaskInfo.height
   name: height
   summary: Can be a number (pixels) or string ('small', 'medium', 'large').
-  signature: 'height: int | Literal[''small'', ''medium'', ''large''] | None'
+  signature: 'height: int | Literal[''small'', ''medium'', ''large''] | str | None'
 - uid: microsoft_teams.api.BaseTaskModuleTaskInfo.model_config
   name: model_config
   summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
@@ -52,8 +52,7 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.BaseTaskModuleTaskInfo.title
   name: title
   summary: Appears below the app name and to the right of the app icon.
@@ -61,4 +60,4 @@ attributes:
 - uid: microsoft_teams.api.BaseTaskModuleTaskInfo.width
   name: width
   summary: Can be a number (pixels) or string ('small', 'medium', 'large').
-  signature: 'width: int | Literal[''small'', ''medium'', ''large''] | None'
+  signature: 'width: int | Literal[''small'', ''medium'', ''large''] | str | None'

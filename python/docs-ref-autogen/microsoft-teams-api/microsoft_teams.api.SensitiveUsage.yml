@@ -17,21 +17,34 @@ summary: 'Sensitive usage information
 
   *self* is explicitly positional-only to allow *self* as a field name.'
 constructor:
-  syntax: 'SensitiveUsage(*, type: Literal[''https://schema.org/Message''] = ''https://schema.org/Message'',
-    at_type: Literal[''CreativeWork''], name: str, description: str | None = None,
-    pattern: SensitiveUsagePattern | None = None, **extra_data: Any)'
+  syntax: 'SensitiveUsage(*, type: Literal[''https://schema.org/Message''] | None
+    = None, at_type: str = ''CreativeWork'', at_id: str | None = None, name: str |
+    None = None, description: str | None = None, position: int | None = None, pattern:
+    SensitiveUsagePattern | None = None, **extra_data: Any)'
   keywordOnlyParameters:
   - name: type
-    defaultValue: https://schema.org/Message
+    defaultValue: None
   - name: at_type
-    isRequired: true
+    defaultValue: CreativeWork
+  - name: at_id
+    defaultValue: None
   - name: name
-    isRequired: true
+    defaultValue: None
   - name: description
+    defaultValue: None
+  - name: position
     defaultValue: None
   - name: pattern
     defaultValue: None
 attributes:
+- uid: microsoft_teams.api.SensitiveUsage.at_id
+  name: at_id
+  summary: The Purview sensitivity label ID
+  signature: 'at_id: str | None'
+- uid: microsoft_teams.api.SensitiveUsage.at_type
+  name: at_type
+  summary: The schema.org type. Defaults to 'CreativeWork'.
+  signature: 'at_type: str'
 - uid: microsoft_teams.api.SensitiveUsage.description
   name: description
   summary: Description of the content
@@ -43,19 +56,20 @@ attributes:
     validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
     serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
     ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
-    True, ''serialize_by_alias'': True, ''validate_by_alias'': True, ''validate_by_name'':
-    True}'
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
 - uid: microsoft_teams.api.SensitiveUsage.name
   name: name
   summary: Title of the content
-  signature: 'name: str'
+  signature: 'name: str | None'
 - uid: microsoft_teams.api.SensitiveUsage.pattern
   name: pattern
   summary: The pattern
   signature: 'pattern: SensitiveUsagePattern | None'
-- uid: microsoft_teams.api.SensitiveUsage.at_type
-  name: at_type
-  signature: 'at_type: Literal[''CreativeWork'']'
+- uid: microsoft_teams.api.SensitiveUsage.position
+  name: position
+  summary: Priority of the label, used to pick the most restrictive label.
+  signature: 'position: int | None'
 - uid: microsoft_teams.api.SensitiveUsage.type
   name: type
-  signature: 'type: Literal[''https://schema.org/Message'']'
+  summary: '*Deprecated since version Not:* part of the usageInfo contract.'
+  signature: 'type: Literal[''https://schema.org/Message''] | None'

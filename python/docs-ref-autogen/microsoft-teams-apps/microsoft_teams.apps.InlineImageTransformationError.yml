@@ -1,0 +1,40 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.InlineImageTransformationError
+name: InlineImageTransformationError
+fullName: microsoft_teams.apps.InlineImageTransformationError
+module: microsoft_teams.apps
+summary: 'Raised when the Teams service could not convert an inline image for download,
+  answering *415*.
+
+
+  The same image sent as a file attachment downloads normally.'
+constructor:
+  syntax: 'InlineImageTransformationError(status: int, actor: Literal[''app'', ''agentic_user'']
+    | None = None, details: str | None = None, code: str | None = None)'
+  parameters:
+  - name: status
+    isRequired: true
+  - name: actor
+    defaultValue: None
+  - name: details
+    defaultValue: None
+  - name: code
+    defaultValue: None
+attributes:
+- uid: microsoft_teams.apps.InlineImageTransformationError.actor
+  name: actor
+  summary: The identity the fetch was attempted as.
+  signature: 'actor: Literal[''app'', ''agentic_user''] | None'
+- uid: microsoft_teams.apps.InlineImageTransformationError.code
+  name: code
+  summary: The service's error code, such as *TransformationFailed*, when the response
+    carried one.
+  signature: 'code: str | None'
+- uid: microsoft_teams.apps.InlineImageTransformationError.details
+  name: details
+  summary: The service's message, verbatim and truncated, when present.
+  signature: 'details: str | None'
+- uid: microsoft_teams.apps.InlineImageTransformationError.status
+  name: status
+  summary: The HTTP status, *415*.
+  signature: 'status: int'

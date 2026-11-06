@@ -1,0 +1,30 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.SocketModeStatus
+name: SocketModeStatus
+fullName: microsoft_teams.apps.SocketModeStatus
+module: microsoft_teams.apps
+summary: 'Experimental lifecycle status of a socket; may change in the future.
+
+
+  `READY` requires more than an open socket: the service must also have pushed
+
+  the `SocketReady` frame, which is what admits inbound activities.'
+constructor:
+  syntax: SocketModeStatus(value, names=<not given>, *values, module=None, qualname=None,
+    type=None, start=1, boundary=None)
+attributes:
+- uid: microsoft_teams.apps.SocketModeStatus.CONNECTING
+  name: CONNECTING
+  signature: CONNECTING = 'connecting'
+- uid: microsoft_teams.apps.SocketModeStatus.DISCONNECTED
+  name: DISCONNECTED
+  signature: DISCONNECTED = 'disconnected'
+- uid: microsoft_teams.apps.SocketModeStatus.IDLE
+  name: IDLE
+  signature: IDLE = 'idle'
+- uid: microsoft_teams.apps.SocketModeStatus.READY
+  name: READY
+  signature: READY = 'ready'
+- uid: microsoft_teams.apps.SocketModeStatus.STOPPED
+  name: STOPPED
+  signature: STOPPED = 'stopped'

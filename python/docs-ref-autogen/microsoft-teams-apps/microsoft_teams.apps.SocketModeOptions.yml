@@ -1,0 +1,43 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.SocketModeOptions
+name: SocketModeOptions
+fullName: microsoft_teams.apps.SocketModeOptions
+module: microsoft_teams.apps
+summary: 'Preview configuration for the Socket Mode negotiate URL and geographies;
+  may change in the future.
+
+
+  WebSocket is only recommended for use when developing agents.
+
+  Socket Mode is currently only available for new bots.
+
+  Diagnostic: ExperimentalTeamsSocketMode'
+constructor:
+  syntax: 'SocketModeOptions(negotiate_base_url: str = ''https://botapi.skype.com'',
+    geos: Sequence[str] = (''amer'', ''emea'', ''apac''))'
+  parameters:
+  - name: negotiate_base_url
+    defaultValue: https://botapi.skype.com
+  - name: geos
+    defaultValue: ('amer', 'emea', 'apac')
+methods:
+- uid: microsoft_teams.apps.SocketModeOptions.to_transport_options
+  name: to_transport_options
+  signature: to_transport_options() -> SocketModeTransportOptions
+attributes:
+- uid: microsoft_teams.apps.SocketModeOptions.geos
+  name: geos
+  summary: 'Geographies to connect, one independent socket each. Defaults to `("amer",
+    "emea", "apac")`;
+
+    override this to select the geographies to connect to. Every one must connect
+    for
+
+    `start()` to succeed, after which each is supervised on its own.'
+  signature: 'geos: Sequence[str] = (''amer'', ''emea'', ''apac'')'
+- uid: microsoft_teams.apps.SocketModeOptions.negotiate_base_url
+  name: negotiate_base_url
+  summary: 'Service host used to negotiate the connection. Defaults to `https://botapi.skype.com`.
+
+    Override this to target a different Teams backend service ring.'
+  signature: 'negotiate_base_url: str = ''https://botapi.skype.com'''

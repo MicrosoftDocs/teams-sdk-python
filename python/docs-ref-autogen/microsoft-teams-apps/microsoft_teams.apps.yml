@@ -45,6 +45,16 @@ functions:
 
     format required by Teams to render the widget in a message.
 
+    The widget HTML is sent as authored.
+
+    The widget owns the ui/initialize handshake and the ui/notifications/size-changed
+    reporting.
+
+    Without a size reporter, Teams renders the widget at about 150px tall.
+
+    The optional mcp_url and correlation_id payload fields are serialized only when
+    set.
+
 
     Diagnostic: ExperimentalTeamsHtmlWidget'
   signature: 'build_html_widget_markdown(payload: HtmlWidgetPayload, options: HtmlWidgetMarkdownOptions
@@ -57,6 +67,11 @@ functions:
 - uid: microsoft_teams.apps.build_html_widget_message
   name: build_html_widget_message
   summary: 'Builds a message activity containing an HTML widget, ready to be sent.
+
+    The widget HTML is sent as authored.
+
+    The widget owns the ui/initialize handshake and the ui/notifications/size-changed
+    reporting.
 
 
     Diagnostic: ExperimentalTeamsHtmlWidget'
@@ -114,32 +129,6 @@ functions:
   parameters:
   - name: cls
     isRequired: true
-- uid: microsoft_teams.apps.inject_widget_protocol
-  name: inject_widget_protocol
-  summary: 'Injects the MCP Apps protocol script into widget HTML.
-
-
-    This sets up:
-
-    - The ui/initialize handshake (required for rendering)
-
-    - Size reporting via ui/notifications/size-changed
-
-    - Optional notification hooks (opt-in via notifications option)
-
-
-    If the HTML already contains the protocol (detected by ''ui/initialize''), it
-    is returned unchanged.
-
-
-    Diagnostic: ExperimentalTeamsHtmlWidget'
-  signature: 'inject_widget_protocol(html: str, options: InjectWidgetProtocolOptions
-    | None = None) -> str'
-  parameters:
-  - name: html
-    isRequired: true
-  - name: options
-    defaultValue: None
 - uid: microsoft_teams.apps.is_registered_event
   name: is_registered_event
   summary: Check if an event name is registered.
@@ -154,9 +143,12 @@ functions:
   name: to_threaded_conversation_id
   summary: 'Construct a threaded conversation ID by appending *;messageid={message_id}*
 
-    to the conversation ID. This is the format the service uses to route messages
+    to the conversation ID.
 
-    to a specific thread.'
+
+    Sending to the result of this function posts to the reply chain (thread) of *message_id*.
+
+    *App.reply()* posts to the *replyChains* route.'
   signature: 'to_threaded_conversation_id(conversation_id: str, message_id: str) ->
     str'
   parameters:
@@ -219,7 +211,8 @@ functions:
 
     This is a static analysis tool - it cannot catch dynamically constructed URLs.
 
-    Use the debug_csp_violations option on inject_widget_protocol for runtime detection.
+    Dynamically built URLs are only visible at runtime, in the widget''s CSP violation
+    reports.
 
 
     Diagnostic: ExperimentalTeamsHtmlWidget'
@@ -265,9 +258,14 @@ classes:
 - microsoft_teams.apps.HttpStream
 - microsoft_teams.apps.InboundActivityTokenValidator
 - microsoft_teams.apps.IncomingFile
-- microsoft_teams.apps.InjectWidgetProtocolOptions
+- microsoft_teams.apps.InlineImageAccessError
+- microsoft_teams.apps.InlineImageTransformationError
+- microsoft_teams.apps.NegotiateError
 - microsoft_teams.apps.OAuthFlow
 - microsoft_teams.apps.OAuthFlowRegistry
+- microsoft_teams.apps.Plan
+- microsoft_teams.apps.PlanOptions
+- microsoft_teams.apps.PlanReplyChain
 - microsoft_teams.apps.PluginActivityEvent
 - microsoft_teams.apps.PluginActivityResponseEvent
 - microsoft_teams.apps.PluginActivitySentEvent
@@ -278,11 +276,20 @@ classes:
 - microsoft_teams.apps.SecurityPolicyWarning
 - microsoft_teams.apps.SignInEvent
 - microsoft_teams.apps.SignInFailureEvent
+- microsoft_teams.apps.SocketModeAdapter
+- microsoft_teams.apps.SocketModeDisconnectedEvent
+- microsoft_teams.apps.SocketModeOptions
+- microsoft_teams.apps.SocketModeReadyEvent
+- microsoft_teams.apps.SocketModeReconnectedEvent
+- microsoft_teams.apps.SocketModeStatus
+- microsoft_teams.apps.SocketReadyFrame
 - microsoft_teams.apps.StartEvent
 - microsoft_teams.apps.StateOptions
 - microsoft_teams.apps.StopEvent
 - microsoft_teams.apps.StreamCancelledError
 - microsoft_teams.apps.StreamNotAllowedError
+- microsoft_teams.apps.StreamOptions
+- microsoft_teams.apps.StreamReplyChain
 - microsoft_teams.apps.StreamTimedOutError
 - microsoft_teams.apps.TeamsBotApplicationTelemetry
 - microsoft_teams.apps.TerminalStreamError
@@ -290,3 +297,5 @@ classes:
 - microsoft_teams.apps.TurnState
 - microsoft_teams.apps.TurnStateContainer
 - microsoft_teams.apps.TurnStateSealedError
+modules:
+- microsoft_teams.apps.plan

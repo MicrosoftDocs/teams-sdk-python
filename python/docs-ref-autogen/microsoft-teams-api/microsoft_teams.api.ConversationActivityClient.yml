@@ -44,33 +44,88 @@ methods:
     defaultValue: None
   return:
     description: The created activity
+- uid: microsoft_teams.api.ConversationActivityClient.create_reply_chain
+  name: create_reply_chain
+  summary: 'Create an activity inside a reply chain (thread).
+
+
+    This API is in preview and may change in the future.
+
+    Diagnostic: ExperimentalTeamsThreading'
+  signature: 'async create_reply_chain(conversation_id: str, activity_id: str, activity:
+    MessageActivityInput | MessageReactionActivityInput | TypingActivityInput, *,
+    service_url: str | None = None, agentic_identity: AgenticIdentity | None = None)
+    -> SentActivity'
+  parameters:
+  - name: conversation_id
+    description: 'The id of the chat or channel: *channel_data.chat.id* or *channel_data.channel.id*,
+
+      **not** *conversation.id*.'
+    isRequired: true
+  - name: activity_id
+    description: 'The id of the message at the root of the reply chain.
+
+      Use *channel_data.reply_chain.id*.'
+    isRequired: true
+  - name: activity
+    description: The activity to create
+    isRequired: true
+  keywordOnlyParameters:
+  - name: service_url
+    defaultValue: None
+  - name: agentic_identity
+    defaultValue: None
+  return:
+    description: The created activity
 - uid: microsoft_teams.api.ConversationActivityClient.create_targeted
   name: create_targeted
   summary: 'Create a new targeted activity in a conversation.
 
 
-    Targeted activities are only visible to the specified recipient.
-
-
-    > [!WARNING]
-
-    > Preview
-
-    >
-
-    > This API is in preview and may change in the future.
-
-    >
-
-    > Diagnostic: ExperimentalTeamsTargeted
-
-    >'
+    Targeted activities are only visible to the specified recipient.'
   signature: 'async create_targeted(conversation_id: str, activity: MessageActivityInput
     | MessageReactionActivityInput | TypingActivityInput, *, service_url: str | None
     = None, agentic_identity: AgenticIdentity | None = None) -> SentActivity'
   parameters:
   - name: conversation_id
     description: The ID of the conversation
+    isRequired: true
+  - name: activity
+    description: The activity to create
+    isRequired: true
+  keywordOnlyParameters:
+  - name: service_url
+    defaultValue: None
+  - name: agentic_identity
+    defaultValue: None
+  return:
+    description: The created activity
+- uid: microsoft_teams.api.ConversationActivityClient.create_targeted_reply_chain
+  name: create_targeted_reply_chain
+  summary: 'Create an activity inside a reply chain (thread) that is visible only
+    to the specified recipient.
+
+
+    Takes the same arguments as <xref:microsoft_teams.api.ConversationActivityClient.create_reply_chain>.
+
+
+    This API is in preview and may change in the future.
+
+    Diagnostic: ExperimentalTeamsThreading'
+  signature: 'async create_targeted_reply_chain(conversation_id: str, activity_id:
+    str, activity: MessageActivityInput | MessageReactionActivityInput | TypingActivityInput,
+    *, service_url: str | None = None, agentic_identity: AgenticIdentity | None =
+    None) -> SentActivity'
+  parameters:
+  - name: conversation_id
+    description: 'The id of the chat or channel: *channel_data.chat.id* or *channel_data.channel.id*,
+
+      **not** *conversation.id*.'
+    isRequired: true
+  - name: activity_id
+    description: 'The id of the message at the root of the reply chain.
+
+      Use *channel_data.reply_chain.id*.'
     isRequired: true
   - name: activity
     description: The activity to create
@@ -101,22 +156,7 @@ methods:
     defaultValue: None
 - uid: microsoft_teams.api.ConversationActivityClient.delete_targeted
   name: delete_targeted
-  summary: 'Delete a targeted activity from a conversation.
-
-
-    > [!WARNING]
-
-    > Preview
-
-    >
-
-    > This API is in preview and may change in the future.
-
-    >
-
-    > Diagnostic: ExperimentalTeamsTargeted
-
-    >'
+  summary: Delete a targeted activity from a conversation.
   signature: 'async delete_targeted(conversation_id: str, activity_id: str, *, service_url:
     str | None = None, agentic_identity: AgenticIdentity | None = None) -> None'
   parameters:
@@ -198,22 +238,7 @@ methods:
     description: The updated activity
 - uid: microsoft_teams.api.ConversationActivityClient.update_targeted
   name: update_targeted
-  summary: 'Update an existing targeted activity in a conversation.
-
-
-    > [!WARNING]
-
-    > Preview
-
-    >
-
-    > This API is in preview and may change in the future.
-
-    >
-
-    > Diagnostic: ExperimentalTeamsTargeted
-
-    >'
+  summary: Update an existing targeted activity in a conversation.
   signature: 'async update_targeted(conversation_id: str, activity_id: str, activity:
     MessageActivityInput | MessageReactionActivityInput | TypingActivityInput, *,
     service_url: str | None = None, agentic_identity: AgenticIdentity | None = None)

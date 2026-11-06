@@ -138,6 +138,7 @@ classes:
 - microsoft_teams.api.ChannelData
 - microsoft_teams.api.ChannelDataSettings
 - microsoft_teams.api.ChannelInfo
+- microsoft_teams.api.ChatInfo
 - microsoft_teams.api.CitationAppearance
 - microsoft_teams.api.CitationEntity
 - microsoft_teams.api.CitationUsageInfo
@@ -164,6 +165,7 @@ classes:
 - microsoft_teams.api.ConversationUpdateActivity
 - microsoft_teams.api.CreateConversationParams
 - microsoft_teams.api.CustomBaseModel
+- microsoft_teams.api.EncryptedChatInfo
 - microsoft_teams.api.EntityBase
 - microsoft_teams.api.ErrorResponse
 - microsoft_teams.api.ExchangeUserTokenParams
@@ -268,11 +270,13 @@ classes:
 - microsoft_teams.api.O365ConnectorCardActionQuery
 - microsoft_teams.api.OAuthCardAttachment
 - microsoft_teams.api.PagedMembersResult
+- microsoft_teams.api.PlanInfoEntity
 - microsoft_teams.api.ProductInfoEntity
 - microsoft_teams.api.QuotedReplyData
 - microsoft_teams.api.QuotedReplyEntity
 - microsoft_teams.api.ReactionClient
 - microsoft_teams.api.ReadReceiptEventActivity
+- microsoft_teams.api.ReplyChainInfo
 - microsoft_teams.api.SearchInvokeActivity
 - microsoft_teams.api.SearchInvokeOptions
 - microsoft_teams.api.SearchInvokeResponseValue
@@ -282,6 +286,7 @@ classes:
 - microsoft_teams.api.SensitiveUsage
 - microsoft_teams.api.SensitiveUsageEntity
 - microsoft_teams.api.SensitiveUsagePattern
+- microsoft_teams.api.SensitivityUsageInfo
 - microsoft_teams.api.SentActivity
 - microsoft_teams.api.SignInCard
 - microsoft_teams.api.SignInExchangeToken
@@ -293,6 +298,9 @@ classes:
 - microsoft_teams.api.SignInVerifyStateInvokeActivity
 - microsoft_teams.api.SignOutUserParams
 - microsoft_teams.api.SigninCardAttachment
+- microsoft_teams.api.SourceInfo
+- microsoft_teams.api.Step
+- microsoft_teams.api.StepSource
 - microsoft_teams.api.StreamInfoEntity
 - microsoft_teams.api.SuggestedActionSubmitInvokeActivity
 - microsoft_teams.api.SuggestedActions

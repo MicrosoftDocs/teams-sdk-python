@@ -1,0 +1,47 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.plan.PlanReplyChain
+name: PlanReplyChain
+fullName: microsoft_teams.apps.plan.PlanReplyChain
+module: microsoft_teams.apps.plan
+summary: 'Reply chain (thread) of a chat that a Plan completion is posted to, as for
+  `ctx.send`.
+
+
+  `chat_or_channel_id` is `channel_data.chat.id` and `reply_chain_id` is `channel_data.reply_chain.id`.
+
+
+  Create a new model by parsing and validating input data from keyword arguments.
+
+
+  Raises [*ValidationError*][pydantic_core.ValidationError] if the input data cannot
+  be
+
+  validated to form a valid model.
+
+
+  *self* is explicitly positional-only to allow *self* as a field name.'
+constructor:
+  syntax: 'PlanReplyChain(*, chatOrChannelId: str, replyChainId: str, **extra_data:
+    Any)'
+  keywordOnlyParameters:
+  - name: chatOrChannelId
+    isRequired: true
+  - name: replyChainId
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.plan.PlanReplyChain.chat_or_channel_id
+  name: chat_or_channel_id
+  summary: The chat id, `channel_data.chat.id`. Not `conversation.id`.
+  signature: 'chat_or_channel_id: str'
+- uid: microsoft_teams.apps.plan.PlanReplyChain.model_config
+  name: model_config
+  summary: Configuration for the model, should be a dictionary conforming to [*ConfigDict*][pydantic.config.ConfigDict].
+  signature: 'model_config: ClassVar[ConfigDict] = {''alias_generator'': AliasGenerator(alias=None,
+    validation_alias=<staticmethod(<function CustomBaseModel.validation_alias_generator>)>,
+    serialization_alias=<staticmethod(<function CustomBaseModel.serialization_alias_generator>)>),
+    ''arbitrary_types_allowed'': True, ''extra'': ''allow'', ''populate_by_name'':
+    True, ''serialize_by_alias'': True, ''validate_by_alias'': True}'
+- uid: microsoft_teams.apps.plan.PlanReplyChain.reply_chain_id
+  name: reply_chain_id
+  summary: The id of the message at the root of the reply chain, `channel_data.reply_chain.id`.
+  signature: 'reply_chain_id: str'

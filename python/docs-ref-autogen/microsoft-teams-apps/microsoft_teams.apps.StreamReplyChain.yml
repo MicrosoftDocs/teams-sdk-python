@@ -1,0 +1,38 @@
+### YamlMime:PythonClass
+uid: microsoft_teams.apps.StreamReplyChain
+name: StreamReplyChain
+fullName: microsoft_teams.apps.StreamReplyChain
+module: microsoft_teams.apps
+summary: 'Where the first message of a stream is created, as a reply in a reply chain
+  (thread).
+
+
+  This API is in preview and may change in the future.
+
+  Diagnostic: ExperimentalTeamsThreading
+
+
+  Create new instance of StreamReplyChain(chat_or_channel_id, reply_chain_id)'
+constructor:
+  syntax: 'StreamReplyChain(chat_or_channel_id: str, reply_chain_id: str)'
+  parameters:
+  - name: chat_or_channel_id
+    isRequired: true
+  - name: reply_chain_id
+    isRequired: true
+attributes:
+- uid: microsoft_teams.apps.StreamReplyChain.chat_or_channel_id
+  name: chat_or_channel_id
+  summary: 'The id of the chat or channel the reply chain is in, from *channel_data.chat.id*
+    or *channel_data.channel.id*.
+
+
+    Only the first message of the stream is created here.
+
+    The stream''s conversation reference must be for the same conversation, because
+    later chunks are sent to it.'
+  signature: 'chat_or_channel_id: str'
+- uid: microsoft_teams.apps.StreamReplyChain.reply_chain_id
+  name: reply_chain_id
+  summary: The id of the message at the root of the reply chain, from *channel_data.reply_chain.id*.
+  signature: 'reply_chain_id: str'

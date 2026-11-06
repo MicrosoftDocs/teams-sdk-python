@@ -4,9 +4,8 @@ name: SignInFailureEvent
 fullName: microsoft_teams.apps.SignInFailureEvent
 module: microsoft_teams.apps
 constructor:
-  syntax: 'SignInFailureEvent(activity_ctx: microsoft_teams.apps.routing.activity_context.ActivityContext[microsoft_teams.api.activities.invoke.sign_in.failure.SignInFailureInvokeActivity]
-    | microsoft_teams.apps.routing.activity_context.ActivityContext[microsoft_teams.api.activities.invoke.sign_in.verify_state.SignInVerifyStateInvokeActivity]
-    | microsoft_teams.apps.routing.activity_context.ActivityContext[microsoft_teams.api.activities.invoke.sign_in.token_exchange.SignInTokenExchangeInvokeActivity],
+  syntax: 'SignInFailureEvent(activity_ctx: Union[ForwardRef(''ActivityContext[SignInFailureInvokeActivity]''),
+    ForwardRef(''ActivityContext[SignInVerifyStateInvokeActivity]''), ForwardRef(''ActivityContext[SignInTokenExchangeInvokeActivity]'')],
     connection_name: str | None = None, code: str | None = None, message: str | None
     = None)'
   parameters:

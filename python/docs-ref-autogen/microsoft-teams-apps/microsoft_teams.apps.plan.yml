@@ -1,0 +1,11 @@
+### YamlMime:PythonModule
+uid: microsoft_teams.apps.plan
+name: plan
+fullName: microsoft_teams.apps.plan
+summary: 'Copyright (c) Microsoft Corporation. All rights reserved.
+
+  Licensed under the MIT License.'
+classes:
+- microsoft_teams.apps.plan.Plan
+- microsoft_teams.apps.plan.PlanOptions
+- microsoft_teams.apps.plan.PlanReplyChain
